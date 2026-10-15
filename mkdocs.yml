@@ -214,6 +214,7 @@ extra_css:
 exclude_docs: |
   **/image-prompt*.md
   **/image-prompts*.md
+  **/cover-image-prompt.md
   **/cover-prompt.md
   **/TODO.md
   **/seed-prompt.md
