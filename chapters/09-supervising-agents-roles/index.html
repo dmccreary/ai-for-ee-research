@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="How to supervise agents that act for you: autonomy levels, logging, failure modes, runaway behavior, cost control, scheduling, trust boundaries, and credential handling, and how to define specialized planning, execution, reviewer, and domain agent roles.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>9. Supervising Agents and Defining Agent Roles - AI for EE Research</title>
+        <title>Supervising Agents and Defining Agent Roles - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Supervising Agents and Defining Agent Roles
+              Supervising Agents and Defining Agent Roles
             
           </span>
         </div>
@@ -673,6 +673,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#autonomy-and-supervision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autonomy and Supervision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autonomy and Supervision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-autonomy-level-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Autonomy Level Assigner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-failure-modes-and-runaway-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging, Failure Modes, and Runaway Agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging, Failure Modes, and Runaway Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-failure-log-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Failure Log Triage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-background-work-and-trust-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling, Background Work, and Trust Boundaries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-agent-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining Agent Roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1283,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#autonomy-and-supervision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autonomy and Supervision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autonomy and Supervision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-autonomy-level-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Autonomy Level Assigner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-failure-modes-and-runaway-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging, Failure Modes, and Runaway Agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging, Failure Modes, and Runaway Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-failure-log-triage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Failure Log Triage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-background-work-and-trust-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling, Background Work, and Trust Boundaries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-agent-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining Agent Roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1348,14 +1498,433 @@
 <li><a href="../06-knowledge-bases-skill-anatomy/">Chapter 6: Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill</a></li>
 <li><a href="../08-agents-tool-use-subagents/">Chapter 8: Agents, Tool Use, and Subagents</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">A Flock Needs a Shepherd</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+One agent you can watch. Several agents, running while you work on something else, need rules you wrote in advance: how much each may do on its own, what it must log, and when it must stop. This chapter gives you those rules and the roles that make a team of agents legible. Trust, but verify!</p>
+</div>
+<h2 id="autonomy-and-supervision">Autonomy and Supervision<a class="headerlink" href="#autonomy-and-supervision" title="Permanent link">&para;</a></h2>
+<p><strong>Agent autonomy</strong> is the degree to which an agent acts without a human decision at each step. It is a dial, not a switch, and the right setting is different for each task. An agent that may only suggest has no autonomy and no risk, and delivers a fraction of the benefit. An agent that acts unattended delivers the full benefit and carries the full risk. The art is to set the dial per task from the properties of the task and not from your confidence in the model.</p>
+<p>Three properties of a task determine how far the dial can safely turn. <strong>Reversibility</strong> is whether the effect can be undone: an edit to a file in version control can, and an email that has been sent cannot. <strong>Reach</strong> is whether the result leaves your control, by being sent, published, or written to a shared system. <strong>Verifiability</strong> is whether you or a script can check the result quickly and objectively: a program that must pass tests is verifiable, and a paragraph of related work is not, without reading the cited papers.</p>
+<p>A small ladder of levels makes the choice concrete. The levels are a convention of this book and not a standard.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>The agent may</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Suggest only</td>
+<td>Propose; you perform the action</td>
+<td>Anything that leaves your control and cannot be checked</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Approve each step</td>
+<td>Act after you approve each action</td>
+<td>Irreversible or outward-bound actions that can be checked</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Act within a boundary</td>
+<td>Act freely inside a defined scope, and stop at gates for your approval</td>
+<td>Reversible work whose quality needs a human read</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Act and report</td>
+<td>Act unattended and report afterwards</td>
+<td>Reversible, local, automatically verifiable work</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. Autonomy levels and where each fits.</em></p>
+<p>The assignment rule used in this chapter's exercise follows from the three properties. If the result leaves your control and cannot be verified, the agent suggests only. If it leaves your control and can be verified, each step needs approval. If it stays local but cannot be undone, each step needs approval. If it is local and reversible but cannot be checked quickly, the agent acts within a boundary and stops at gates. If it is local, reversible, and verifiable, it can act and report.</p>
+<p><strong>Agent supervision</strong> is the set of practices by which you keep a deployed agent honest while it works: watching what it does, bounding what it may do, sampling its output, and stopping it when it departs from the task. Supervision is not the same as reading everything. It is the design of where a human looks, so that attention goes where the risk is.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Autonomy Follows the Task, Not the Model</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice what the three properties are about: the effect and not the agent. A very capable model should still not send email unreviewed, and a modest one can safely reformat a bibliography. Set autonomy by asking what the worst result of the action would cost and whether you could tell.</p>
+</div>
+<h4 id="diagram-agent-autonomy-level-assigner">Diagram: Agent Autonomy Level Assigner<a class="headerlink" href="#diagram-agent-autonomy-level-assigner" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Agent Autonomy Level Assigner</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> agent-autonomy-level-assigner<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> recommend<br/>
+<strong>Learning Objective:</strong> The learner will recommend an autonomy level from 0 to 3 for each of eight research tasks from its reversibility, reach, and verifiability, with at least 7 of 8 correct.</p>
+<p><strong>Prerequisites:</strong> agent autonomy, reversibility, reach, verifiability, and the four autonomy levels, all defined in the section "Autonomy and Supervision" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight tasks the learner commits one of four levels. A level is correct when it equals the level in Content, which follows from the assignment rule in Rules. Mastery is at least 7 of 8 correct on the first attempt. Reading the task attributes is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A capable model deserves more autonomy on every task. (2) Anything local is safe to run unattended. (3) If a result is outward-bound, a quick look at it is enough.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to apply criteria to cases and defend a choice. The attributes are given for each task, so the decision is about weighing them and not about guessing facts.</p>
+<p><strong>Content:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Reversible?</th>
+<th>Leaves your control?</th>
+<th>Verifiable quickly?</th>
+<th>Correct level</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Reformat the entries of refs.bib to a venue's style</td>
+<td>Yes, in version control</td>
+<td>No</td>
+<td>Yes, the document compiles and entries can be diffed</td>
+<td>3</td>
+<td>Local, reversible, and verifiable, so it can act and report.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Draft a related-work paragraph for your paper</td>
+<td>Yes</td>
+<td>No</td>
+<td>No, claims need reading the cited papers</td>
+<td>2</td>
+<td>Local and reversible, but quality needs a human read, so it works within a boundary and stops at a gate.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Email a summary of the results to a collaborator</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>0</td>
+<td>It leaves your control and cannot be checked, so the agent suggests and you send.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Push the analysis branch to the group's shared repository</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes, the diff and test results can be checked</td>
+<td>1</td>
+<td>It leaves your control, so each step needs your approval, though it is checkable.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Delete intermediate files under results/tmp/</td>
+<td>No</td>
+<td>No</td>
+<td>Yes, a dry run lists them</td>
+<td>1</td>
+<td>It is local but cannot be undone, so each step needs approval.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Run the nightly parameter sweep and save results to a new folder</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes, a check script validates the output</td>
+<td>3</td>
+<td>Local, reversible, and verifiable, so it can act and report.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Refactor an analysis script that has no tests</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>Reversible and local, but without tests the result cannot be checked quickly, so a human read is needed.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Submit a job that spends the lab's shared compute quota</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes, the job's parameters can be reviewed</td>
+<td>1</td>
+<td>It leaves your control, so each step needs approval.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The levels and the assignment rule are from the section "Autonomy and Supervision" of this chapter. The tasks are invented for illustration, and the sim labels them "illustrative".</p>
+<p><strong>Rules:</strong> The level is computed from the three attributes in this order. If Leaves your control is Yes and Verifiable is No, the level is 0. If Leaves your control is Yes and Verifiable is Yes, the level is 1. If Leaves your control is No and Reversible is No, the level is 1. If Leaves your control is No, Reversible is Yes, and Verifiable is No, the level is 2. If Leaves your control is No, Reversible is Yes, and Verifiable is Yes, the level is 3.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner sees task 1 with its three attributes.</li>
+<li>The learner chooses a level from 0 to 3 and submits.</li>
+<li>The sim shows whether the level was correct and the "Why" sentence, with the rule that applied.</li>
+<li>After task 8, the sim shows the count correct, and a summary of how many tasks fell at each level.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight tasks, one attempt each, in a fixed order. Correct: "Correct: level <n>." plus the "Why" sentence. Incorrect: "The rule gives level <n>." plus the "Why" sentence. The correct level is always revealed after the single attempt. A final score "n of 8 correct" is shown with whether the mastery threshold of 7 was met.</p>
+<p><strong>Starting State:</strong> Task 1 is shown with its three attributes and four levels, none chosen. The question on screen is "How much should the agent do on its own?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states four levels from 0 to 3, three properties (reversibility, reach, verifiability), and the assignment rule above, and that autonomy is set by the task and not by the model's capability.</p>
+</details>
+<h2 id="logging-failure-modes-and-runaway-agents">Logging, Failure Modes, and Runaway Agents<a class="headerlink" href="#logging-failure-modes-and-runaway-agents" title="Permanent link">&para;</a></h2>
+<p><strong>Agent logging</strong> is the recording of what an agent did, in a form you can read afterward. A useful log has, for each step, the time, the tool called and its arguments, the result or an excerpt of it, the files changed, the tokens used, and the model and settings in force. Logs serve three purposes: they let you audit what happened overnight, they let you debug a failure by finding the step at which things went wrong, and they let you reproduce a result. Keep them as plain files in or beside the project, so that they are searchable and, where appropriate, versioned.</p>
+<p>Agents fail in recognizable ways, and naming the patterns is the first step to catching them. <strong>Agent failure modes</strong> commonly include the following.</p>
+<ul>
+<li><em>Premature completion</em>: the agent reports success without having run the check that defines success.</li>
+<li><em>Hallucinated result</em>: the agent reports a number or file that no tool produced.</li>
+<li><em>Scope drift</em>: the agent fixes something nobody asked it to touch.</li>
+<li><em>Test weakening</em>: faced with a failing test, the agent edits the test and not the code.</li>
+<li><em>Wrong arguments</em>: the agent calls the right tool with the wrong path, parameter, or units.</li>
+<li><em>Runaway loop</em>: the agent repeats an action without progress.</li>
+</ul>
+<p>A <strong>runaway agent</strong> is an agent that continues acting beyond the point it should have stopped, by looping, spawning further work, or consuming resources without converging. The usual cause is a loop with no termination limit and a model that interprets each failure as a reason to try again. The defenses are mechanical: set a maximum number of steps, a time limit, and a budget on tokens or money; require that the agent stop and report when the same error recurs; and make destructive actions require approval.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Done Is a Claim, Not a Fact</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is accepting an agent's statement that a task is complete. It happens because the report is fluent and the check is tedious. Make the check part of the task: require the output of the acceptance check in the report, and treat a "done" without it as unfinished.</p>
+</div>
+<p><strong>Cost control</strong> is the set of limits and habits that keep agent spending predictable. Agents are expensive in a particular way. Each pass through the agent loop resends the growing context, so cost grows faster than the number of steps. A worked example with illustrative numbers shows the effect. The task starts with a 10,000-token context, and each iteration adds 2,000 tokens of tool results. At iteration <span class="arithmatex">\( i \)</span> the input is <span class="arithmatex">\( 10{,}000 + 2{,}000(i-1) \)</span> tokens. Over 10 iterations the total input is <span class="arithmatex">\( 10 \times 10{,}000 + 2{,}000 \times (0+1+\dots+9) = 190{,}000 \)</span> tokens. Over 20 iterations it is <span class="arithmatex">\( 20 \times 10{,}000 + 2{,}000 \times (0+1+\dots+19) = 580{,}000 \)</span> tokens. Doubling the steps roughly tripled the cost. At 3 dollars per million input tokens, the figures are about 0.57 and 1.74 dollars, small for one run and not small for a team of agents running all night.</p>
+<p>The controls follow from the arithmetic. Set a step limit and a spending cap. Summarize or reset the context between phases. Use a smaller, cheaper model for routine steps and a stronger one only where it matters. Watch usage as a metric, and read the first few runs of any new workflow closely, since cost surprises appear at the beginning.</p>
+<table>
+<thead>
+<tr>
+<th>Failure mode</th>
+<th>What you would see in the log</th>
+<th>Mechanical defense</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Premature completion</td>
+<td>"Done" with no check output</td>
+<td>Require check output in the report</td>
+</tr>
+<tr>
+<td>Hallucinated result</td>
+<td>A number with no producing tool call</td>
+<td>Trace every reported value to a call</td>
+</tr>
+<tr>
+<td>Scope drift</td>
+<td>Edits to files outside the request</td>
+<td>Path permissions; review the diff</td>
+</tr>
+<tr>
+<td>Test weakening</td>
+<td>Test file changed with a failing code change</td>
+<td>Protect tests, or review test diffs first</td>
+</tr>
+<tr>
+<td>Wrong arguments</td>
+<td>Tool errors, or results from the wrong file</td>
+<td>Read the first calls of a new workflow</td>
+</tr>
+<tr>
+<td>Runaway loop</td>
+<td>The same call repeated many times</td>
+<td>Step limit, repeat detector, spending cap</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. Failure modes, how they appear in a log, and a mechanical defense for each.</em></p>
+<h4 id="diagram-agent-failure-log-triage">Diagram: Agent Failure Log Triage<a class="headerlink" href="#diagram-agent-failure-log-triage" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Agent Failure Log Triage</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> agent-failure-log-triage<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> differentiate<br/>
+<strong>Learning Objective:</strong> The learner will differentiate six agent failure modes from six excerpts of an agent log, with at least 5 of 6 attributed correctly.</p>
+<p><strong>Prerequisites:</strong> the six agent failure modes defined in the section "Logging, Failure Modes, and Runaway Agents" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of six log excerpts the learner commits one of six failure modes. A choice is correct when it equals the mode in Content. Mastery is at least 5 of 6 correct on the first attempt. Reading the definitions is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A passing test run means the work is correct. (2) An agent that touched extra files was being thorough. (3) Repeated tool calls mean the agent is working hard.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level work needs the learner to read raw evidence and attribute it to a cause. The excerpts are raw log lines, as a researcher would meet them, so that the skill transfers to real logs.</p>
+<p><strong>Content:</strong></p>
+<p>All excerpts are invented for illustration and labeled "illustrative".</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Log excerpt</th>
+<th>Correct failure mode</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>14:02 tool=run_python args=scripts/enob.py rc=1 stderr="ValueError: need at least 64 samples". 14:02 agent: "All checks pass. The ENOB result is 9.4 bits."</td>
+<td>Hallucinated result</td>
+<td>The only run exited with an error, so no tool produced the value 9.4.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>14:10 tool=run_python tests/test_enob.py rc=1 (1 failed). 14:11 tool=edit_file path=tests/test_enob.py (changed expected value 10.0 to 9.0). 14:11 tool=run_python tests/test_enob.py rc=0.</td>
+<td>Test weakening</td>
+<td>The failing test was edited until it passed and the code was not changed.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>14:20 user request: "fix the typo in the README". 14:21 tool=edit_file path=README.md. 14:22 tool=edit_file path=scripts/enob.py (renamed 14 variables). 14:23 tool=edit_file path=docs/spec.md.</td>
+<td>Scope drift</td>
+<td>Edits to files that the request did not mention.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>14:30 tool=read_file path=data/rwa/capture-07.csv result=FileNotFoundError. 14:30 tool=read_file path=data/rwa/capture-07.csv result=FileNotFoundError. (repeated 31 times)</td>
+<td>Runaway loop</td>
+<td>The same failing call was repeated with no change and no progress.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>14:40 agent: "The conversion is complete." No tool calls since 14:35. The acceptance check scripts/check-units.py was never run.</td>
+<td>Premature completion</td>
+<td>Success was claimed without running the check that defines it.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>14:50 tool=run_python args="scripts/enob.py data/raw/capture-07.csv --fs 1000000" rc=0 result="ENOB=6.1". The record was sampled at 100000 Hz.</td>
+<td>Wrong arguments</td>
+<td>The tool ran with the wrong sampling rate, so the result is wrong without any error.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The failure modes are from the section "Logging, Failure Modes, and Runaway Agents" of this chapter. The log lines are invented for illustration.</p>
+<p><strong>Rules:</strong> Each excerpt has exactly one correct mode, chosen from the six: Premature completion, Hallucinated result, Scope drift, Test weakening, Wrong arguments, Runaway loop.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads excerpt 1.</li>
+<li>The learner chooses one failure mode and submits.</li>
+<li>The sim shows whether it was correct, the "Why" sentence, and the mechanical defense for that mode from the chapter's Table 2.</li>
+<li>After excerpt 6, the sim shows the count correct.</li>
+</ol>
+<p><strong>Feedback:</strong> Six excerpts, one attempt each, in a fixed order. Correct: "Correct: <mode>." plus the "Why" sentence. Incorrect: "This is <mode>." plus the "Why" sentence. The correct mode is always revealed after the single attempt. A final score "n of 6 correct" is shown with whether the mastery threshold of 5 was met.</p>
+<p><strong>Starting State:</strong> Excerpt 1 is shown with the six modes listed. The question on screen is "What went wrong here?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter lists six failure modes and states that a "done" claim must be backed by the check output and that a failing test should never be edited to pass.</p>
+</details>
+<h2 id="scheduling-background-work-and-trust-boundaries">Scheduling, Background Work, and Trust Boundaries<a class="headerlink" href="#scheduling-background-work-and-trust-boundaries" title="Permanent link">&para;</a></h2>
+<p><strong>Task scheduling</strong> is arranging for an agent task to run at a set time or interval, such as a nightly literature sweep or a weekly rerun of an analysis when new data arrive. <strong>Background tasks</strong> are tasks an agent runs while you do other work, whether started now or by a schedule. The two share one hazard: nobody is watching. Before an agent runs unattended, four things should be true.</p>
+<ol>
+<li>The scope is narrow and written down: which files and tools it may use.</li>
+<li>The task is idempotent, which means running it twice gives the same result as running it once, so a repeated or interrupted run does no harm.</li>
+<li>It writes a log, and the log is where you look first the next morning.</li>
+<li>It has limits on steps, time, and spending, and it stops and reports when it hits them.</li>
+</ol>
+<p><strong>Agent evaluation</strong> is measuring how well an agent performs a task, as skill evaluation measured a skill in Chapter 7. The method is the same at a larger scale: a fixed set of tasks with known good outcomes, repeated runs because behavior varies, and a record of success rate, cost, and time. Evaluate an agent before you give it autonomy, and again after you change its model, tools, or instructions.</p>
+<p>A <strong>trust boundary</strong> is a line between components or sources you trust and those you do not, across which data must be checked before it is acted on. For an agent, the content of a web page, an email, a downloaded paper, and the output of a third-party tool are all outside the boundary. The practical consequence is that text crossing the boundary is treated as data and not as instructions, and that the agent holding the most dangerous capabilities should read the least trusted text. Chapter 4 introduced prompt injection as the attack that exploits a missing boundary.</p>
+<p><strong>Credential handling</strong> is the discipline of managing secrets such as passwords, API keys, and tokens so that an agent can use a service without exposing the secret. The rules are short. Never put a secret in a prompt, an instruction file, a skill, or a repository. Provide secrets through environment variables or a secrets manager. Issue the narrowest credential that works: read-only where reading is enough, scoped to one project, and short-lived where the service allows it. Where possible, have the harness inject the credential at the moment of use, so that the model never sees it. Rotate any credential that may have entered a log or a context.</p>
+<h2 id="defining-agent-roles">Defining Agent Roles<a class="headerlink" href="#defining-agent-roles" title="Permanent link">&para;</a></h2>
+<p>Supervising a single agent is a problem of attention. Supervising several is a problem of legibility: you must be able to say what each is for, what it may touch, and what it hands on. <strong>Agent roles</strong> are named responsibilities that divide work among agents, each with a defined purpose, inputs, outputs, tools, and autonomy level. A role is written once, as an agent specification file, and reused. Giving each agent one role has the same benefits as single-purpose skills: a narrow instruction set, a checkable output, and failures that localize.</p>
+<p>Two roles frame the book's model of a team. A <strong>planning agent</strong> reads, explores, and decomposes: it surveys literature, breaks a problem into tasks, drafts specifications and acceptance criteria. Its output is a plan or a document, usually reversible and cheap to discard, so it can be given high autonomy and run in volume. An <strong>execution agent</strong> carries out a defined task: it writes code, runs analyses, builds simulations, prepares figures. Its output changes files and consumes resources, so it is bounded by its specification and its permissions, and its results are checked.</p>
+<p>The <strong>planner-executor pattern</strong> is the arrangement in which a planning agent produces a specification and an execution agent carries it out, with the specification serving as the handoff. The pattern is effective for a reason that goes back to Chapter 4: the plan is a document you can read and correct before any execution happens, and the execution agent has an unambiguous task and acceptance criteria. It also reduces cost, because the strong, expensive model can plan and a smaller one can execute routine steps.</p>
+<p>A <strong>reviewer agent</strong> is an agent whose job is to check another agent's output against stated criteria and report defects. It earns its keep because it works from the criteria and not from the producer's intentions, and it can be run by a different model, which gives some independence. It does not replace a human or a script. A reviewer shares the weaknesses of language models in general, so it complements tests and your own sampling instead of substituting for them.</p>
+<p>Domain agents specialize an execution or planning role for one kind of research work:</p>
+<ul>
+<li>A <strong>literature agent</strong> searches, triages, and summarizes papers, and its output is a reading list with extracted claims. A <strong>research agent</strong> is the broader form that gathers and organizes information for a question.</li>
+<li>An <strong>analysis agent</strong> loads data, runs statistical and signal-processing steps, and produces tables and plots.</li>
+<li>A <strong>coding agent</strong> writes, runs, and debugs code, including simulation scripts and tests.</li>
+<li>A <strong>writing agent</strong> drafts and revises prose from notes and results, within the author's voice and the venue's conventions.</li>
+</ul>
+<p>An <strong>agent handoff</strong> is the transfer of work from one agent to another. A handoff is where information is lost, so it is worth designing explicitly. A good handoff artifact states the goal, the inputs with their locations, the constraints, the acceptance criteria, what has been done, and what questions remain. It is a file, as in Chapter 1's workflow, so that you can read it. <strong>Context isolation</strong> is the practice of giving each agent only the context its role needs, and not the whole history, so that an agent is not distracted, cannot leak what it should not see, and cannot be misled by another agent's tangents.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Main job</th>
+<th>Typical output</th>
+<th>Typical autonomy</th>
+<th>Typical check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning agent</td>
+<td>Decompose, survey, specify</td>
+<td>Plan, specification</td>
+<td>2 or 3</td>
+<td>Human read of the plan</td>
+</tr>
+<tr>
+<td>Execution agent</td>
+<td>Carry out a specified task</td>
+<td>Files, results</td>
+<td>1 or 2</td>
+<td>Acceptance criteria, tests</td>
+</tr>
+<tr>
+<td>Reviewer agent</td>
+<td>Check output against criteria</td>
+<td>Defect list</td>
+<td>3</td>
+<td>Sample of its findings</td>
+</tr>
+<tr>
+<td>Literature agent</td>
+<td>Search and summarize papers</td>
+<td>Annotated list</td>
+<td>2</td>
+<td>Citation lookup</td>
+</tr>
+<tr>
+<td>Analysis agent</td>
+<td>Run analysis</td>
+<td>Tables, plots</td>
+<td>2</td>
+<td>Known-answer tests</td>
+</tr>
+<tr>
+<td>Coding agent</td>
+<td>Write and test code</td>
+<td>Scripts, tests</td>
+<td>2</td>
+<td>Tests, diff review</td>
+</tr>
+<tr>
+<td>Writing agent</td>
+<td>Draft and revise text</td>
+<td>Section drafts</td>
+<td>2</td>
+<td>Author read; claim check</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 3. Agent roles and their usual outputs, autonomy levels, and checks. The levels refer to Table 1 and are starting points, not rules.</em></p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Write the Role as a Job Description</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+For each agent, write five lines: purpose, inputs, outputs, tools it may use, and when it must stop and ask. If you cannot fill in the last line, you have not decided its autonomy yet, and the agent will decide for you.</p>
+</div>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Agents can be given real work only when you can see what they do and bound what they can do. Autonomy is set per task, from reversibility, reach, and verifiability. Logs, limits, and checks make failures visible and bounded. Roles make a group of agents legible.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>Agent autonomy</strong> is a dial set per task by reversibility, reach, and verifiability, not by the model's capability.</li>
+<li><strong>Supervision</strong> is the design of where a human looks. <strong>Logging</strong> makes the work auditable and reproducible.</li>
+<li><strong>Agent failure modes</strong>, including premature completion, hallucinated results, scope drift, test weakening, wrong arguments, and runaway loops, each have a mechanical defense.</li>
+<li><strong>Cost control</strong> uses step limits, spending caps, and context resets, because loop cost grows faster than the number of steps.</li>
+<li><strong>Scheduled and background tasks</strong> need narrow scope, idempotence, logs, and limits before they run unattended.</li>
+<li><strong>Trust boundaries and credential handling</strong> keep untrusted text as data and secrets out of the model's context.</li>
+<li><strong>Roles</strong> such as planning, execution, reviewer, literature, analysis, coding, and writing agents divide work. The <strong>planner-executor pattern</strong> makes the plan a readable handoff.</li>
+<li><strong>Handoffs and context isolation</strong> keep information from being lost or leaked between agents.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">A Team You Can Read</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now set an autonomy level from reversibility, reach, and verifiability, name the failure that a log line shows, and write a role as a job description with a stopping rule. That makes a group of agents something you can supervise.</p>
+</div>
+<p>The next chapter assembles these roles into coordinated teams, with task queues, handoff protocols, review checkpoints, and a candid look at when adding agents stops paying off. Round up the roles you would need for your project, and bring the list.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

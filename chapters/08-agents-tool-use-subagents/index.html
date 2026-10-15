@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="What makes an agent more than a chatbot: the agent loop, tool definitions and tool calls, file access, shell commands, code execution, the Model Context Protocol, sandboxing and permissions, hooks, and subagents with isolated context.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>8. Agents, Tool Use, and Subagents - AI for EE Research</title>
+        <title>Agents, Tool Use, and Subagents - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. Agents, Tool Use, and Subagents
+              Agents, Tool Use, and Subagents
             
           </span>
         </div>
@@ -647,6 +647,90 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-use-and-the-agent-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Use and the Agent Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Use and the Agent Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-loop-stepper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Loop Stepper
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaching-files-shells-and-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaching Files, Shells, and Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxing-and-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxing and Permissions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sandboxing and Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-permission-boundary-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Permission Boundary Judge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaching-outside-mcp-data-sources-and-skills-with-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaching Outside: MCP, Data Sources, and Skills With Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subagents-parallel-work-memory-and-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subagents, Parallel Work, Memory, and Hooks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
     </span>
   </a>
   
@@ -1208,6 +1292,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tool-use-and-the-agent-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Use and the Agent Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Use and the Agent Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-loop-stepper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Loop Stepper
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaching-files-shells-and-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaching Files, Shells, and Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxing-and-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxing and Permissions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sandboxing and Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-agent-permission-boundary-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Agent Permission Boundary Judge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaching-outside-mcp-data-sources-and-skills-with-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaching Outside: MCP, Data Sources, and Skills With Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subagents-parallel-work-memory-and-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subagents, Parallel Work, Memory, and Hooks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1343,14 +1511,465 @@
 <li><a href="../04-context-engineering-prompting/">Chapter 4: Context Engineering and Advanced Prompting</a></li>
 <li><a href="../06-knowledge-bases-skill-anatomy/">Chapter 6: Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Where Words Become Actions</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Until now the model has only produced text. In this chapter it starts to read your files, run your scripts, and call other programs, and every one of those abilities is a boundary you set. You will leave able to say exactly what an agent can reach, and to narrow it. Trust, but verify!</p>
+</div>
+<h2 id="tool-use-and-the-agent-loop">Tool Use and the Agent Loop<a class="headerlink" href="#tool-use-and-the-agent-loop" title="Permanent link">&para;</a></h2>
+<p>A language model by itself can only emit text. <strong>Tool use</strong> is the mechanism by which a model's text is turned into actions in the world: the model emits a structured request to use a named capability, a surrounding program carries it out, and the result is returned to the model as more text. Reading a file, running a script, searching the web, and querying a database are all tools. Tool use is what separates an agent from an assistant, in the sense defined in Chapter 1.</p>
+<p>Two terms describe the two sides of the mechanism. A <strong>tool definition</strong> is the description of a tool given to the model: its name, a plain-language statement of what it does, and a schema of the arguments it accepts. A <strong>tool call</strong> is the model's structured request to use a tool, with specific argument values. It is essential to see who does what. The model never executes anything. It writes a tool call, a program called the <em>harness</em> runs the tool, and the harness puts the result into the context.</p>
+<p>A tool definition and a tool call, in a common JSON form, make this concrete. In the definition, <code>name</code> identifies the tool, <code>description</code> is what the model reads to decide when to use it, and <code>input_schema</code> states the arguments and their types. In the call, <code>input</code> supplies the values for one use.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"read_file"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Read a text file from the project and return its contents."</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"input_schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Path relative to the project root"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"path"</span><span class="p">]</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"tool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"read_file"</span><span class="p">,</span><span class="w"> </span><span class="nt">"input"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"results/enob-sweep-2026-10-15.csv"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>The <strong>agent loop</strong> is the cycle that these pieces form. The model receives the task and the tool definitions, decides on the next action, and emits a tool call. The harness runs it and returns the result. The model reads the result and decides again, and the loop repeats until the model judges the task complete, an error stops it, or a limit is reached. Each pass through the loop adds the call and its result to the context, so a long loop uses the window faster than a long conversation would.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Who acts</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Decide</td>
+<td>Model</td>
+<td>Reads the task, the context, and the tool definitions, then chooses an action</td>
+</tr>
+<tr>
+<td>2. Call</td>
+<td>Model</td>
+<td>Emits a tool call with arguments, or a final answer</td>
+</tr>
+<tr>
+<td>3. Run</td>
+<td>Harness</td>
+<td>Executes the tool, subject to permissions</td>
+</tr>
+<tr>
+<td>4. Observe</td>
+<td>Harness to model</td>
+<td>The result is added to the context</td>
+</tr>
+<tr>
+<td>5. Repeat or stop</td>
+<td>Model</td>
+<td>Loops to step 1, or stops when done or when a limit is reached</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. One pass through the agent loop and who performs each step.</em></p>
+<p>The loop is why an agent can solve problems that a single prompt cannot. It can try something, see an error, and correct itself. It is also why errors compound: a wrong early observation shapes every later decision. The first MicroSim steps through a short loop so that you can predict the decision at each turn.</p>
+<h4 id="diagram-agent-loop-stepper">Diagram: Agent Loop Stepper<a class="headerlink" href="#diagram-agent-loop-stepper" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Agent Loop Stepper</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> agent-loop-stepper<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Understand<br/>
+<strong>Bloom Verb:</strong> infer<br/>
+<strong>Learning Objective:</strong> The learner will infer the agent's next tool call at each of five steps of a loop that diagnoses a low ENOB result, given the task and the results observed so far, with at least 4 of 5 correct.</p>
+<p><strong>Prerequisites:</strong> tool use, tool definition, tool call, agent loop, and the roles of the model and the harness, all defined in the section "Tool Use and the Agent Loop" above.</p>
+<p><strong>Evidence of Mastery:</strong> At each of five steps the learner commits one of three candidate next actions before the agent's actual choice is shown. A prediction is correct when it equals the action marked correct in Content. Mastery is at least 4 of 5 correct. Stepping forward after the reveal is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) The model runs the tools itself. (2) The agent decides everything in one planning step and then executes. (3) An error result ends the loop.</p>
+<p><strong>Instructional Rationale:</strong> Understand-level inference needs the learner to predict from the observed results, so that the dependence of each action on the previous observation becomes visible. Committing before the reveal makes the learner's mental model testable.</p>
+<p><strong>Content:</strong></p>
+<p>Task shown at the start: "The ENOB of capture-07.csv is 6.1 bits but the converter should give about 9. Find out why." Tools available: read_file, run_python, list_files. The data are invented and labeled "illustrative".</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Result observed so far</th>
+<th>Candidate A</th>
+<th>Candidate B</th>
+<th>Candidate C</th>
+<th>Correct</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nothing yet.</td>
+<td>list_files on the project root</td>
+<td>run_python to recompute ENOB with a different formula</td>
+<td>read_file on the paper draft</td>
+<td>A</td>
+<td>The agent knows nothing about the project, so it looks at what exists before acting.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Files: data/raw/capture-07.csv, scripts/enob.py, docs/spec.md.</td>
+<td>read_file scripts/enob.py</td>
+<td>read_file data/raw/capture-07.csv</td>
+<td>list_files on data/raw</td>
+<td>A</td>
+<td>The result is computed by the script, so the method is the first thing to inspect.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>enob.py computes SNDR over all FFT bins, including bin 0 (DC).</td>
+<td>run_python to print the DC bin magnitude of capture-07.csv</td>
+<td>rewrite enob.py without being asked</td>
+<td>read_file docs/spec.md</td>
+<td>A</td>
+<td>A hypothesis has appeared (DC counted as noise), and a cheap measurement tests it before anything is changed.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DC bin magnitude is 40 times larger than the next-largest non-signal bin.</td>
+<td>run_python to compute ENOB with the DC bin excluded, without editing the file</td>
+<td>edit enob.py and overwrite the old result</td>
+<td>report success</td>
+<td>A</td>
+<td>The agent tests the fix on a copy and compares, so the original file and result stay intact.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ENOB with DC excluded is 9.1 bits.</td>
+<td>report the cause and the evidence, and propose the change for approval</td>
+<td>silently apply the change to enob.py</td>
+<td>rerun the capture</td>
+<td>A</td>
+<td>The task was to find why, and a change to the project file is the researcher's decision.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The loop structure is from the section "Tool Use and the Agent Loop" of this chapter. The files, results, and numbers are invented for illustration.</p>
+<p><strong>Rules:</strong> At each step exactly one candidate is correct, as marked. The correct candidate is the one that follows from the results observed so far and does not exceed the scope of the task.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the task, the tools, and the results observed so far.</li>
+<li>The learner chooses one of the three candidate next actions and submits.</li>
+<li>The sim reveals the agent's actual action, then shows the harness executing it and the result being added to the context.</li>
+<li>After step 5 the sim shows the count correct and the full loop as a list of calls and results.</li>
+</ol>
+<p><strong>Feedback:</strong> Five steps, one attempt each, in a fixed order. Correct: "Correct." plus the "Why" sentence. Incorrect: the correct action and the "Why" sentence. The correct action is always revealed after the single attempt. A final score "n of 5 correct" is shown.</p>
+<p><strong>Starting State:</strong> The task and the three tools are shown with no results yet. The question on screen is "What should the agent do first?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that the model emits a tool call and the harness executes it, that results are returned to the context, and that the loop repeats until the task is complete or a limit is reached.</p>
+</details>
+<h2 id="reaching-files-shells-and-code">Reaching Files, Shells, and Code<a class="headerlink" href="#reaching-files-shells-and-code" title="Permanent link">&para;</a></h2>
+<p>Most useful tools for research fall into a few families, and each one carries its own risk. It is worth taking each in turn, because the risk of an agent is the sum of what its tools can do.</p>
+<p><strong>File access</strong> is the ability to read, create, edit, and delete files. Reading is the most common and usually the safest. Writing changes the project and should be covered by version control, which turns an unwanted edit into a one-command undo. The scope matters: an agent confined to the project directory can do far less damage than one that can write anywhere your user account can.</p>
+<p><strong>Shell commands</strong> are commands run in your command line environment: <code>ls</code>, <code>grep</code>, <code>python</code>, <code>git</code>, and anything else installed. A shell tool is the most general and therefore the most dangerous tool, because it is an open door to everything the account can do. The same shell that runs <code>grep</code> runs <code>rm -rf</code>, <code>git push --force</code>, and a command that downloads and executes a script from the internet.</p>
+<p><strong>Code execution</strong> is the running of code that the agent itself wrote, such as a Python script that analyzes a dataset. It is the capability that makes an agent useful for data work, and it multiplies the risk of the shell, because the code is new and unreviewed when it runs. An agent-written script might delete a directory it was meant to clean, send data to a service, or run for hours.</p>
+<p>A worked example of how to read a shell command before approving it: ask what it changes, whether the change can be undone, and who else is affected. Five commands that an agent might propose in the ADC project illustrate the range.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it changes</th>
+<th>Undoable?</th>
+<th>Reasonable response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls results/</code></td>
+<td>Nothing, it only lists</td>
+<td>Not applicable</td>
+<td>Allow by pattern</td>
+</tr>
+<tr>
+<td><code>python scripts/enob.py data/processed/run07.csv</code></td>
+<td>Writes an output file</td>
+<td>Yes, if results are in version control</td>
+<td>Allow for scripts in the project</td>
+</tr>
+<tr>
+<td><code>rm -r results/old/</code></td>
+<td>Deletes a directory</td>
+<td>Only from version control or backup</td>
+<td>Ask, and check the path</td>
+</tr>
+<tr>
+<td><code>git push --force origin main</code></td>
+<td>Rewrites the shared history</td>
+<td>Hard, and affects collaborators</td>
+<td>Deny, or ask with a warning</td>
+</tr>
+<tr>
+<td><code>curl https://example.com/setup.sh \| sh</code></td>
+<td>Executes downloaded code</td>
+<td>No</td>
+<td>Deny</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. Reading shell commands by their effect, reversibility, and reach.</em></p>
+<p>Code execution deserves a worked example of its own, because the code in question did not exist a minute ago. Suppose an agent proposes the following cleanup script. First, what it does: it visits every directory under <code>results/</code> and, if the directory name begins with <code>tmp</code>, deletes it and everything inside it.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span><span class="o">,</span><span class="w"> </span><span class="nn">pathlib</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="s2">"results"</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="ow">and</span> <span class="n">d</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"tmp"</span><span class="p">):</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Reading it with the three questions above shows the problem. A directory named <code>tmp-final-figures</code>, which you kept deliberately, matches the pattern and is deleted without a trace, because <code>shutil.rmtree</code> does not use the trash. The fix is not to ban the script but to make it reviewable: print the list of directories it would delete first, require confirmation, and run it only on a clean working tree so that anything lost can be restored. A review of thirty seconds before the first run is the cheapest control in this chapter.</p>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Typical use</th>
+<th>Characteristic risk</th>
+<th>Standard control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File reading</td>
+<td>Load data, read notes</td>
+<td>Exposing sensitive files to the context</td>
+<td>Limit scope to the project</td>
+</tr>
+<tr>
+<td>File writing</td>
+<td>Edit scripts, save results</td>
+<td>Overwriting good work</td>
+<td>Version control, protect raw data</td>
+</tr>
+<tr>
+<td>Shell commands</td>
+<td>Run tools, inspect state</td>
+<td>Destructive or irreversible commands</td>
+<td>Permissions, command allow-lists</td>
+</tr>
+<tr>
+<td>Code execution</td>
+<td>Analysis, simulation</td>
+<td>Unreviewed code with side effects</td>
+<td>Sandbox, review before first run</td>
+</tr>
+<tr>
+<td>Web search and fetch</td>
+<td>Find and read pages</td>
+<td>Prompt injection, unreliable sources</td>
+<td>Treat results as untrusted</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 3. Tool families, their risks, and the usual controls.</em></p>
+<p><strong>Web search</strong> is a tool that submits a query and returns a ranked list of results, and <strong>web fetch</strong> is a tool that retrieves the content of a specific page. Together they extend an agent past its knowledge cutoff, which is their main value for research. They also bring in the untrusted text discussed under prompt injection in Chapter 4. A fetched page is data, and nothing in it is an instruction. Citations that come from a search should be verified against the source, as in Chapter 2.</p>
+<h2 id="sandboxing-and-permissions">Sandboxing and Permissions<a class="headerlink" href="#sandboxing-and-permissions" title="Permanent link">&para;</a></h2>
+<p>Two complementary controls decide what an agent may actually do. They answer different questions, and a sound setup uses both.</p>
+<p><strong>Sandboxing</strong> is the technical restriction of what a running process can reach, enforced by the operating system or a container, so that even a misbehaving command cannot exceed it. A sandbox limits the filesystem the process can see or write, the network it can connect to, and the resources it can consume. Its strength is that it does not depend on the agent's cooperation: a command that tries to read outside the allowed directory simply fails. Typical sandboxes are containers, virtual machines, and operating-system sandboxes built into the agent tool.</p>
+<p><strong>Permissions</strong> are the rules that decide whether a given tool call is allowed, requires your approval, or is denied. They work at the level of the harness: before running a call, the harness checks it against the rules. A permission rule can match a tool, a command pattern, or a path. Permissions are policy and sandboxing is enforcement, so permissions without a sandbox rely on the harness being configured correctly, and a sandbox without permissions gives you no say over actions that are permitted but unwise.</p>
+<p>A permission policy is usually a short list of rules that match a tool and a pattern. The generic form below is illustrative, and each tool has its own syntax. Read the rules first as plain statements: reading anything in the project is allowed, running scripts from <code>scripts/</code> is allowed, deleting and pushing ask, and credentials and raw data are denied.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>allow  read   ./**
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>allow  edit   ./scripts/** ./docs/**
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>allow  run    python scripts/*
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>ask    run    rm *   pip install *   git push *
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>deny   read   ~/.ssh/**   ./.env
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>deny   edit   ./data/raw/**
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>deny   run    curl * | sh   sudo *
+</span></code></pre></div>
+<p>The sandbox then enforces what the policy cannot guarantee. Suppose the agent writes a script that tries to open a file in your home directory. Permissions might have missed it, because the command was <code>python scripts/helper.py</code>, which the rules allow. A sandbox that limits the process to the project directory makes the open fail regardless of what the policy said. The two controls catch different mistakes, which is why you want both.</p>
+<p><strong>Permission modes</strong> are preset overall postures for how much the agent may do without asking. Names differ between tools, but the pattern is consistent:</p>
+<ul>
+<li><em>Ask for everything</em>: every file edit and command waits for your approval. Safest, and slow enough that people stop reading what they approve.</li>
+<li><em>Auto-accept edits</em>: file edits inside the project proceed, while commands still ask.</li>
+<li><em>Plan or read-only</em>: the agent may read and think but may not change anything, which is a good mode for the first look at an unfamiliar project.</li>
+<li><em>Bypass</em>: all checks are disabled. Appropriate only inside a sandbox that has nothing of value to lose, and never on a machine that holds credentials.</li>
+</ul>
+<p>A good working pattern is to pair a tight mode with a permissive allow-list for the safe, frequent commands, so that the approvals you are asked for are rare and therefore read. Approval fatigue is a real hazard: an agent that asks fifty times an hour trains you to click yes without reading.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Bypass Is Not a Productivity Setting</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is turning off all permission checks because the prompts are tedious. It happens because approval fatigue is real, and the cost of one destructive command is invisible until it lands. Fix the tedium instead: allow the safe, repeated commands by pattern, run in a sandbox, and keep the project under version control.</p>
+</div>
+<h4 id="diagram-agent-permission-boundary-judge">Diagram: Agent Permission Boundary Judge<a class="headerlink" href="#diagram-agent-permission-boundary-judge" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Agent Permission Boundary Judge</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> agent-permission-boundary-judge<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> judge<br/>
+<strong>Learning Objective:</strong> The learner will judge, for each of ten proposed agent actions, whether a stated permission policy allows it, requires approval, or denies it, with at least 8 of 10 correct.</p>
+<p><strong>Prerequisites:</strong> file access, shell commands, code execution, sandboxing, permissions, and permission modes, all defined in the sections "Reaching Files, Shells, and Code" and "Sandboxing and Permissions" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of ten actions the learner commits one of three outcomes. An outcome is correct when it equals the outcome in Content under the stated policy. Mastery is at least 8 of 10 correct on the first attempt. Reading the policy is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Any action inside the project directory is safe. (2) A command is safe if it is common. (3) Approval is needed for everything that changes a file.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to apply stated criteria to cases. The policy has three outcomes so that the learner must weigh reversibility and scope and not choose between allow and deny only.</p>
+<p><strong>Content:</strong></p>
+<p>The policy shown is illustrative. Rules apply in this order, and the first match decides.</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Condition</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Reads or writes any path outside the project directory, or reads credentials or key files</td>
+<td>Deny</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Any command that downloads and executes code, or uses elevated privileges</td>
+<td>Deny</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Writes to data/raw/</td>
+<td>Deny</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Deletes files, installs packages, pushes to a remote, or sends data over the network</td>
+<td>Ask</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Reads files in the project, or edits files in scripts/ or docs/, or runs a Python script from scripts/</td>
+<td>Allow</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Proposed action</th>
+<th>Correct outcome</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Read docs/spec.md</td>
+<td>Allow</td>
+<td>Rule 5: a read inside the project.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Edit scripts/enob.py to fix a bug</td>
+<td>Allow</td>
+<td>Rule 5: an edit in scripts/.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Run python scripts/enob.py data/processed/run07.csv</td>
+<td>Allow</td>
+<td>Rule 5: a script from scripts/.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Overwrite data/raw/capture-07.csv with a cleaned version</td>
+<td>Deny</td>
+<td>Rule 3: raw data is never written.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Run rm -r results/old/</td>
+<td>Ask</td>
+<td>Rule 4: deletion is irreversible without version control, so it needs approval.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Run pip install scipy</td>
+<td>Ask</td>
+<td>Rule 4: installing a package changes the environment.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Run curl https://example.com/setup.sh | sh</td>
+<td>Deny</td>
+<td>Rule 2: it downloads and executes unreviewed code.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Read ~/.ssh/id_ed25519</td>
+<td>Deny</td>
+<td>Rule 1: it reads a credential file outside the project.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Run git push origin main</td>
+<td>Ask</td>
+<td>Rule 4: it sends project contents to a remote.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Edit ../other-project/notes.md</td>
+<td>Deny</td>
+<td>Rule 1: it writes outside the project directory.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The permission concepts are from the sections "Reaching Files, Shells, and Code" and "Sandboxing and Permissions" of this chapter. The policy and actions are invented for illustration, and the sim labels them "illustrative policy". The domain example.com is reserved for documentation.</p>
+<p><strong>Rules:</strong> Rules are evaluated in numeric order and the first matching rule decides the outcome. Each action matches exactly one rule as given.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the policy and action 1.</li>
+<li>The learner chooses Allow, Ask, or Deny and submits.</li>
+<li>The sim shows whether it was correct, the matching rule number, and the "Why" sentence, then shows the next action.</li>
+<li>After action 10, the sim shows the count correct and the actions that were Ask, and states that these are the approvals the researcher would see.</li>
+</ol>
+<p><strong>Feedback:</strong> Ten actions, one attempt each, in a fixed order. Correct: "Correct: <outcome>." plus the rule number and the "Why" sentence. Incorrect: "The policy gives <outcome>." plus the rule number and the "Why" sentence. The correct outcome is always revealed after the single attempt. A final score "n of 10 correct" is shown with whether the mastery threshold of 8 was met.</p>
+<p><strong>Starting State:</strong> The policy and action 1 are shown with no choice made. The question on screen is "What does the policy say about this action?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that permissions are policy and sandboxing is enforcement, that actions outside the project, credentials, and downloaded code should be denied, that irreversible or outward-bound actions should need approval, and that raw data should be protected.</p>
+</details>
+<h2 id="reaching-outside-mcp-data-sources-and-skills-with-scripts">Reaching Outside: MCP, Data Sources, and Skills With Scripts<a class="headerlink" href="#reaching-outside-mcp-data-sources-and-skills-with-scripts" title="Permanent link">&para;</a></h2>
+<p>An agent's built-in tools cover files, a shell, and the web. Research needs more: a lab database, a reference manager, a ticket tracker, a simulator's job queue. The <strong>Model Context Protocol</strong> (MCP) is an open standard that defines how an agent connects to external tools and data in a uniform way, so that a capability written once can be used by any agent that speaks the protocol. An <strong>MCP server</strong> is a program that exposes a set of tools, and sometimes data, over this protocol. The agent, as the client, discovers the server's tools and their definitions and then calls them like any other tool.</p>
+<p>The benefit is reuse. Rather than building a custom integration for each agent, you run or install an MCP server for the service, and the tool definitions arrive in the standard form. The cost is a larger attack surface: every connected server is code that runs with some access, and its tool descriptions and results flow into the model's context. Treat a server like any dependency. Prefer ones you can read, give each the narrowest credentials that work, and know what it can reach.</p>
+<p>Three kinds of connection are common in research. <strong>External data sources</strong> are read-only collections of information: a paper index, a standards database, a lab wiki. <strong>API integration</strong> is a connection to a service with an interface: a reference manager, a repository host, a job scheduler. <strong>Database access</strong> is the ability to query a database directly. For all three, the rule is least privilege. Give the agent a read-only credential unless the task requires writing, and scope it to the one schema or one project it needs.</p>
+<p><strong>Scripts in skills</strong> are the same idea inside the skill package of Chapters 6 and 7: a skill can include a script that the agent runs instead of doing a computation in its head. An exact calculation such as ENOB belongs in a tested script. The script is reviewed once, and the agent's job is to call it with the right arguments, which is a much smaller thing to get wrong.</p>
+<h2 id="subagents-parallel-work-memory-and-hooks">Subagents, Parallel Work, Memory, and Hooks<a class="headerlink" href="#subagents-parallel-work-memory-and-hooks" title="Permanent link">&para;</a></h2>
+<p>A <strong>subagent</strong> is a separate agent instance that a main agent starts to carry out one part of a task, with its own context window, and often with its own restricted set of tools. When it finishes, it returns a result, normally a summary, to the main agent. Two properties make subagents valuable. They isolate context: the five papers a subagent reads do not fill the main agent's window, and only the findings return. And they can run at the same time.</p>
+<p><strong>Parallel agents</strong> are subagents run concurrently on independent parts of a job. A worked example: you ask for a comparison of five SAR ADC papers. The main agent starts five subagents, each reading one paper and returning its design parameters and the sentences that support them. The main agent then merges the five results into a table. The wall-clock time is about that of one paper rather than five, and the main context holds five short results instead of five papers.</p>
+<p>The costs are real. Each subagent consumes its own tokens, so total cost goes up even as time goes down. The summary a subagent returns is lossy, and an error inside a subagent is invisible unless the result is checked. Parallel agents that <em>write</em> to the same file can overwrite each other, so assign each its own output file, or keep parallel work read-only. These are the problems of orchestration, which Chapters 9 and 10 develop.</p>
+<p><strong>Agent memory</strong> is whatever persists across the agent's sessions. A model has none of its own, so memory is implemented as files: the project instruction file of Chapter 5, the knowledge base and session logs of Chapter 6, and files the agent writes to remember what it has learned. Memory in files is good for a researcher, because it is inspectable and editable. You can read what the agent remembers, correct it, and put it under version control.</p>
+<p><strong>Agent hooks</strong> are scripts that the harness runs automatically at defined moments, such as before a tool is used, after a file is edited, or when the agent stops. A hook is deterministic: unlike an instruction in a prompt, which the model may or may not follow, a hook always runs. This makes hooks the right tool for rules that must never be skipped, such as running the test suite after an edit, blocking any command that matches a dangerous pattern, or committing the work to version control when a session ends.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Instructions Are Suggestions, Hooks Are Rules</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice the difference in kind. A line in an instruction file asks the model to behave. A hook makes the harness behave, whatever the model decides. When a rule matters enough that you would be unhappy to see it skipped once, move it from the prompt to a hook or a permission.</p>
+</div>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>An agent is a model plus tools plus a loop, and its power and its risk are the same quantity: what its tools can reach. Setting limits is not a barrier to using agents; it is what lets you use them with confidence.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>Tool use</strong> turns the model's text into actions. The model writes a <strong>tool call</strong> against a <strong>tool definition</strong>, and the harness executes it.</li>
+<li><strong>The agent loop</strong> decides, calls, observes, and repeats, so early errors compound.</li>
+<li><strong>File access, shell commands, and code execution</strong> are increasingly powerful and increasingly risky, and version control is the safety net for them.</li>
+<li><strong>Web search and fetch</strong> extend knowledge, and their results are untrusted data.</li>
+<li><strong>Sandboxing</strong> enforces limits technically, <strong>permissions</strong> set policy, and <strong>permission modes</strong> are presets, and none of them should be bypassed for convenience.</li>
+<li><strong>MCP servers, data sources, APIs, and databases</strong> connect agents to research systems, with least-privilege credentials.</li>
+<li><strong>Subagents and parallel agents</strong> isolate context and save time at a token cost, and their results must be checked.</li>
+<li><strong>Agent memory</strong> lives in files you can inspect, and <strong>hooks</strong> enforce rules deterministically.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Draw the Boundary</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now describe the loop an agent runs, name what its tools can reach, and set permissions so that irreversible and outward-bound actions need your approval. That is the control surface for everything an agent does in the chapters ahead.</p>
+</div>
+<p>The next chapter moves from what a single agent can reach to how you supervise it and divide work among agents with defined roles. Round up the limits you would set, and bring them.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

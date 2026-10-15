@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="How a researcher coordinates a team of agents: work breakdown, task queues and dependencies, handoff protocols, review checkpoints and approval gates, span of control, and the limits of the 20-planning-agent, 10-execution-agent model.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>10. Orchestrating Teams of Planning and Execution Agents - AI for EE Research</title>
+        <title>Orchestrating Teams of Planning and Execution Agents - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. Orchestrating Teams of Planning and Execution Agents
+              Orchestrating Teams of Planning and Execution Agents
             
           </span>
         </div>
@@ -694,6 +694,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-team-and-the-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Team and the Orchestrator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-work-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking Work Down
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Breaking Work Down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-task-dependency-critical-path-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Task Dependency Critical Path Scheduler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoffs-shared-workspaces-and-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoffs, Shared Workspaces, and Conflicts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-approval-and-researcher-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review, Approval, and Researcher Attention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review, Approval, and Researcher Attention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-orchestrator-review-load-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Orchestrator Review Load Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-prioritizing-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying, Prioritizing, and Reporting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-benefit-and-the-limits-of-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost, Benefit, and the Limits of Scaling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1301,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-team-and-the-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Team and the Orchestrator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-work-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking Work Down
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Breaking Work Down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-task-dependency-critical-path-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Task Dependency Critical Path Scheduler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoffs-shared-workspaces-and-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoffs, Shared Workspaces, and Conflicts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-approval-and-researcher-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review, Approval, and Researcher Attention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review, Approval, and Researcher Attention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-orchestrator-review-load-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Orchestrator Review Load Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-prioritizing-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying, Prioritizing, and Reporting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-benefit-and-the-limits-of-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost, Benefit, and the Limits of Scaling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1355,14 +1541,377 @@
 <li><a href="../08-agents-tool-use-subagents/">Chapter 8: Agents, Tool Use, and Subagents</a></li>
 <li><a href="../09-supervising-agents-roles/">Chapter 9: Supervising Agents and Defining Agent Roles</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Conducting, Not Typing</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Launching thirty agents is easy. Knowing what they should do, in what order, and how you will review thirty outputs is the actual work. This chapter gives you the arithmetic and the structure to do it. Trust, but verify!</p>
+</div>
+<h2 id="the-team-and-the-orchestrator">The Team and the Orchestrator<a class="headerlink" href="#the-team-and-the-orchestrator" title="Permanent link">&para;</a></h2>
+<p>An <strong>agent team</strong> is a set of agents with defined roles that work toward one shared goal through explicit handoffs. <strong>Orchestration</strong> is the coordination of that work: deciding what is done, by which agent, in what order, with what checks, and what happens when something goes wrong. The <strong>orchestrator</strong> is whoever performs this coordination. In this book it is the researcher, who may be helped by an orchestrating agent that keeps the queue and drafts status reports, but who remains accountable for the result.</p>
+<p>The book's working model divides the team into two groups. A <strong>planning agent team</strong> is a group of planning agents that explore, decompose, and specify: they survey literature, propose approaches, draft specifications and acceptance criteria, and critique each other's plans. An <strong>execution agent team</strong> is a group of execution agents that carry out specified tasks: they write code, run simulations and analyses, and prepare figures and text. The <strong>agent ratio</strong> is the number of agents in each group. The model used throughout this book is roughly 20 planning agents to 10 execution agents.</p>
+<p>The reason for the two-to-one ratio is a property of the outputs, not a rule of nature. Planning output is cheap and reversible: a plan that turns out to be wrong costs a few minutes of reading and is discarded. It is therefore sensible to produce many plans in parallel and let you choose. Execution output changes files, consumes compute, and must be verified, and each unit of it costs more of your attention to check. So the execution side is kept smaller. The numbers are a design target and not a law. They should move with how much attention you have and how checkable your tasks are, as the arithmetic later in the chapter shows.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Attention Is the Scarce Resource</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice that nothing in the team's size is limited by compute or by the number of agents you may launch. The limit is the number of outputs you can responsibly read in a day. Everything in orchestration is a way of spending that attention where it prevents the most damage.</p>
+</div>
+<h2 id="breaking-work-down">Breaking Work Down<a class="headerlink" href="#breaking-work-down" title="Permanent link">&para;</a></h2>
+<p><strong>Work breakdown</strong> is the decomposition of a goal into tasks that are small enough to specify and to check, as in the task decomposition of Chapter 1. Each task in a breakdown should have an owner role, an input, an output, and an acceptance check. <strong>Task dependencies</strong> are the relations among tasks that say which must finish before another can start, because one needs the other's output. A <strong>task queue</strong> is the ordered list of tasks waiting to be done, with their status, usually kept as a plain file in the project so that agents and the researcher read the same record.</p>
+<p>Dependencies determine how much a team can parallelize. A worked example uses nine tasks from the running ADC project, with illustrative durations in hours. Each task and its prerequisites:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Name</th>
+<th>Duration (h)</th>
+<th>Needs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Literature survey</td>
+<td>3</td>
+<td>none</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Measurement procedure draft</td>
+<td>2</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>ENOB script</td>
+<td>3</td>
+<td>T2</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Test suite</td>
+<td>2</td>
+<td>T2</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Simulation run</td>
+<td>4</td>
+<td>T3, T4</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Analysis</td>
+<td>2</td>
+<td>T5</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>Figures</td>
+<td>1</td>
+<td>T6</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>Report draft</td>
+<td>3</td>
+<td>T6</td>
+</tr>
+<tr>
+<td>T9</td>
+<td>Final assembly</td>
+<td>1</td>
+<td>T7, T8</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. A task queue with durations and dependencies.</em></p>
+<p>The tasks add up to 21 hours of work. With as many agents as you like, the project still cannot finish before the longest chain of dependent tasks, called the <strong>critical path</strong>. Here the chain T1, T2, T3, T5, T6, T8, T9 takes 3 + 2 + 3 + 4 + 2 + 3 + 1 = 18 hours. The test suite T4 can slip by one hour without delaying anything, and the figures T7 by two hours. Adding agents cannot shorten 18 hours. Only shortening a task on the critical path can, and even then the next-longest chain takes over: reducing T3 from 3 hours to 1 hour moves the finish to 17 hours, not 16, because the path through T4 then becomes critical.</p>
+<h4 id="diagram-task-dependency-critical-path-scheduler">Diagram: Task Dependency Critical Path Scheduler<a class="headerlink" href="#diagram-task-dependency-critical-path-scheduler" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Task Dependency Critical Path Scheduler</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> task-dependency-critical-path<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Template:</strong> https://github.com/dmccreary/statistics-course/tree/main/docs/sims/view-task-graph<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> calculate<br/>
+<strong>Learning Objective:</strong> The learner will calculate the earliest finish time, the critical path, and the slack of tasks in a nine-task dependency graph, and recalculate the project duration after one duration changes, with at least 4 of 5 answers correct.</p>
+<p><strong>Prerequisites:</strong> task dependencies, task queue, critical path, earliest finish, and slack, all defined in the section "Breaking Work Down" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of five questions the learner enters a value or selects a path. An answer is correct when it equals the answer in Content. Mastery is at least 4 of 5 correct on the first attempt. Dragging nodes or reading a task's details is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) The project duration is the sum of all task durations. (2) Adding agents shortens any schedule. (3) Shortening a critical task always shortens the project by the same amount.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level work needs the learner to carry out the forward-pass calculation on a real graph and then see how changing one duration moves the critical path.</p>
+<p><strong>Content:</strong></p>
+<p>The tasks, durations in hours, and prerequisites are those in the chapter's Table 1: T1 (3, none), T2 (2, T1), T3 (3, T2), T4 (2, T2), T5 (4, T3 and T4), T6 (2, T5), T7 (1, T6), T8 (3, T6), T9 (1, T7 and T8). The numbers are illustrative and labeled "illustrative" in the sim.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Answer</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>What is the earliest finish time of T5, in hours?</td>
+<td>12</td>
+<td>T3 finishes at 8 and T4 at 7. T5 starts at the later, 8, and runs 4 hours.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Which tasks form the critical path?</td>
+<td>T1, T2, T3, T5, T6, T8, T9</td>
+<td>The longest chain is 3 + 2 + 3 + 4 + 2 + 3 + 1 = 18 hours.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>What is the slack of T4, in hours?</td>
+<td>1</td>
+<td>T4 could finish at 8 without delaying T5, which starts at 8. T4 finishes at 7, so its slack is 1 hour.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>What is the project duration, in hours?</td>
+<td>18</td>
+<td>T9 starts when T8 finishes at 17, and takes 1 hour.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>If T3 is reduced from 3 hours to 1 hour, what is the new project duration, in hours?</td>
+<td>17</td>
+<td>T3 then finishes at 6, but T4 finishes at 7, so T5 starts at 7 and the project ends at 17.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The method and the task table are from the section "Breaking Work Down" of this chapter. The durations are invented for illustration.</p>
+<p><strong>Rules:</strong> Earliest start of a task = the maximum earliest finish of its prerequisites, or 0 if none. Earliest finish = earliest start + duration. The project duration is the maximum earliest finish over all tasks. A task is on the critical path when its slack is 0, where slack = latest finish - earliest finish and the latest finish does not delay the project duration. Durations are whole hours.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner sees the graph with durations on the nodes and question 1.</li>
+<li>The learner enters the number or selects the tasks and submits.</li>
+<li>The sim shows the correct answer and highlights the relevant tasks and the forward pass of earliest start and finish times.</li>
+<li>For question 5, the sim lets the learner change T3's duration and shows the new critical path.</li>
+<li>After question 5, the sim shows the count correct. The learner should notice that cutting 2 hours from a critical task saved only 1 hour.</li>
+</ol>
+<p><strong>Feedback:</strong> Five questions, one attempt each, in a fixed order. Correct: "Correct." plus the "Why" sentence. Incorrect: the correct answer and the "Why" sentence. The correct answer is always revealed after the single attempt. A final score "n of 5 correct" is shown with whether the mastery threshold of 4 was met.</p>
+<p><strong>Starting State:</strong> The graph is shown with durations on the nodes and no times computed. The question on screen is "When can T5 finish?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter's task table lists nine tasks totalling 21 hours, a critical path of 18 hours through T1, T2, T3, T5, T6, T8, and T9, and a project duration of 17 hours if T3 is reduced to 1 hour.</p>
+</details>
+<h2 id="handoffs-shared-workspaces-and-conflicts">Handoffs, Shared Workspaces, and Conflicts<a class="headerlink" href="#handoffs-shared-workspaces-and-conflicts" title="Permanent link">&para;</a></h2>
+<p>A <strong>handoff protocol</strong> is the agreed form in which work passes from one agent to the next. Chapter 9 listed what a handoff must contain: the goal, the inputs, the constraints, the acceptance criteria, the work done, and the open questions. The protocol makes this uniform: one file format, one location, and a small fixed set of status values. A minimal protocol uses five statuses: <code>queued</code>, <code>running</code>, <code>needs-review</code>, <code>accepted</code>, and <code>rejected</code>. An agent never marks its own work <code>accepted</code>. That status belongs to a reviewer agent, a script, or you.</p>
+<p>A <strong>shared workspace</strong> is the common area where the team's files live. Because several agents may act at once, structure prevents collisions. Give each agent its own output directory, or its own Git branch, so that two agents never write the same file. Keep inputs read-only. Make merging an explicit step that goes through review, instead of letting agents write into the main line directly. The Git practices of Chapter 5 provide exactly this.</p>
+<p><strong>Conflict resolution</strong> is deciding what to do when two agents produce incompatible results, such as two analysis agents reporting different ENOB values for the same record, or two planning agents recommending different architectures. Averaging is rarely right. A sound procedure follows. Establish whether the disagreement is about <em>facts</em> or about <em>judgment</em>. For facts, trace each result to its inputs and method, and find the first point of divergence, which is usually a different assumption, window function, or file version. For judgment, ask a reviewer agent for the evidence on each side, then decide yourself. Whatever the outcome, record the decision and the reason in the decision log of Chapter 6, so that the conflict is not silently reopened.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Make the First Divergence Visible</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+When two agents disagree, do not ask which is right. Ask each to list its inputs, settings, and file versions in a table, then compare the tables line by line. The disagreement almost always sits on one row, and finding it takes minutes.</p>
+</div>
+<h2 id="review-approval-and-researcher-attention">Review, Approval, and Researcher Attention<a class="headerlink" href="#review-approval-and-researcher-attention" title="Permanent link">&para;</a></h2>
+<p>A <strong>review checkpoint</strong> is a defined point in the workflow at which output is examined before the next step uses it. A <strong>human approval gate</strong> is a review checkpoint at which a person must say yes before work continues. Checkpoints can be automated, for example a test suite or a check script, or performed by a reviewer agent. A gate requires you. The difference matters, because gates consume the scarce resource.</p>
+<p><strong>Researcher attention</strong> is the time and concentration you can give to reviewing in a day, and it is the binding constraint on the size of a team. It can be treated quantitatively. If a planning agent produces <span class="arithmatex">\( k_p \)</span> outputs a day and each takes <span class="arithmatex">\( r_p \)</span> minutes to review, and an execution agent produces <span class="arithmatex">\( k_e \)</span> outputs taking <span class="arithmatex">\( r_e \)</span> minutes, then for <span class="arithmatex">\( n_p \)</span> planning agents and <span class="arithmatex">\( n_e \)</span> execution agents the daily review load, with <span class="arithmatex">\( c \)</span> minutes for resolving conflicts, is</p>
+<div class="arithmatex">\[
+L = n_p\, k_p\, r_p + n_e\, k_e\, r_e + c.
+\]</div>
+<p>A worked example with illustrative numbers: 20 planning agents each give one output a day at 6 minutes each, 10 execution agents each give one output a day at 15 minutes each, and conflicts take 30 minutes. The load is <span class="arithmatex">\( 120 + 150 + 30 = 300 \)</span> minutes, which is 5 hours. If you have 4 hours of attention, the team is too large for the attention available. Three remedies exist. Reduce the team. Increase the share of review handled by scripts and reviewer agents. Or review a <em>sample</em> of the cheapest, most reversible outputs and not all of them. Reviewing half of the planning outputs brings the load to <span class="arithmatex">\( 60 + 150 + 30 = 240 \)</span> minutes, which is exactly 4 hours.</p>
+<p><strong>Span of control</strong> is the number of agents one orchestrator can supervise effectively. It is the attention budget divided by the review cost per agent. It is not fixed. A team of agents with machine-checkable outputs has a much wider span than a team whose outputs need a careful read.</p>
+<h4 id="diagram-orchestrator-review-load-calculator">Diagram: Orchestrator Review Load Calculator<a class="headerlink" href="#diagram-orchestrator-review-load-calculator" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Orchestrator Review Load Calculator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> orchestrator-review-load-calculator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> calculate<br/>
+<strong>Learning Objective:</strong> The learner will calculate the daily review load of an agent team from its size and per-output review times, and adjust the team or the review fraction to fit a stated attention budget, in three challenges.</p>
+<p><strong>Prerequisites:</strong> researcher attention, span of control, review checkpoint, and the load formula <span class="arithmatex">\( L = n_p k_p r_p + n_e k_e r_e + c \)</span>, all defined in the section "Review, Approval, and Researcher Attention" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of three challenges the learner types a value and submits. A value is correct when it equals the answer in Content. Mastery is 3 of 3 correct. Changing the quantities in exploration mode is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Review load grows only with the number of execution agents. (2) More agents always means more done. (3) Sampling review is the same as skipping review.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level work needs the learner to carry out the load calculation and then use it to make a design decision, so that the formula becomes a planning tool.</p>
+<p><strong>Content:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Min</th>
+<th>Max</th>
+<th>Step</th>
+<th>Default</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning agents n_p</td>
+<td>0</td>
+<td>40</td>
+<td>1</td>
+<td>20</td>
+<td>agents</td>
+</tr>
+<tr>
+<td>Execution agents n_e</td>
+<td>0</td>
+<td>20</td>
+<td>1</td>
+<td>10</td>
+<td>agents</td>
+</tr>
+<tr>
+<td>Planning outputs per agent per day k_p</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>outputs</td>
+</tr>
+<tr>
+<td>Execution outputs per agent per day k_e</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>outputs</td>
+</tr>
+<tr>
+<td>Review time per planning output r_p</td>
+<td>2</td>
+<td>15</td>
+<td>1</td>
+<td>6</td>
+<td>minutes</td>
+</tr>
+<tr>
+<td>Review time per execution output r_e</td>
+<td>5</td>
+<td>30</td>
+<td>1</td>
+<td>15</td>
+<td>minutes</td>
+</tr>
+<tr>
+<td>Conflict resolution c</td>
+<td>0</td>
+<td>120</td>
+<td>10</td>
+<td>30</td>
+<td>minutes per day</td>
+</tr>
+<tr>
+<td>Attention available</td>
+<td>1</td>
+<td>8</td>
+<td>0.5</td>
+<td>4</td>
+<td>hours per day</td>
+</tr>
+<tr>
+<td>Fraction of planning outputs reviewed</td>
+<td>0.25</td>
+<td>1.0</td>
+<td>0.25</td>
+<td>1.0</td>
+<td>fraction</td>
+</tr>
+</tbody>
+</table>
+<p>The review load is L = (planning fraction reviewed) x n_p x k_p x r_p + n_e x k_e x r_e + c, in minutes.</p>
+<p>Challenges, in this order. All use the default values except where stated.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Challenge</th>
+<th>Answer</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>What is the daily review load in hours for the default team?</td>
+<td>5.0</td>
+<td>20 x 1 x 6 = 120, plus 10 x 1 x 15 = 150, plus 30 is 300 minutes, which is 5.0 hours.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>With attention fixed at 4 hours, 10 execution agents, and every planning output reviewed, what is the largest number of planning agents that fits?</td>
+<td>10</td>
+<td>240 minutes minus 150 minus 30 leaves 60 minutes, and 60 / 6 = 10 planning agents.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>With 20 planning agents and attention fixed at 4 hours, what is the largest fraction of planning outputs, from 0.25, 0.5, 0.75, 1.0, that can be reviewed?</td>
+<td>0.5</td>
+<td>At 0.5 the load is 60 + 150 + 30 = 240 minutes, which equals 4 hours. At 0.75 it is 270 minutes, which exceeds it.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The formula and the default numbers are from the section "Review, Approval, and Researcher Attention" of this chapter. All values are illustrative and labeled "illustrative" in the sim.</p>
+<p><strong>Rules:</strong> Load in minutes = fraction x n_p x k_p x r_p + n_e x k_e x r_e + c. The load fits when load &lt;= attention x 60. All arithmetic is exact. Fractions of agents are not allowed.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads challenge 1 and enters the load in hours.</li>
+<li>After each submission the sim shows the worked calculation and a bar comparing the load with the attention available.</li>
+<li>After the three challenges, exploration opens: the learner changes any of the nine quantities and watches the bar. The learner should notice that halving review time on execution outputs has more effect than halving it on planning outputs.</li>
+</ol>
+<p><strong>Feedback:</strong> Three challenges, two attempts each, in a fixed order. Correct: "Correct." plus the worked calculation. Incorrect on the first attempt: "Check that each term is agents x outputs x minutes." Incorrect on the second attempt: the worked calculation is shown and the challenge counts as missed. A running count "n of 3 correct" is shown.</p>
+<p><strong>Starting State:</strong> The default team and attention of 4 hours are shown with the bar, and challenge 1 is posed. The question on screen is "How many hours of review does this team need each day?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states 20 planning agents and 10 execution agents, 6 and 15 minutes of review, 30 minutes of conflict resolution, a load of 300 minutes (5 hours) against 4 hours of attention, and a load of 240 minutes when half of the planning outputs are reviewed.</p>
+</details>
+<h2 id="specifying-prioritizing-and-reporting">Specifying, Prioritizing, and Reporting<a class="headerlink" href="#specifying-prioritizing-and-reporting" title="Permanent link">&para;</a></h2>
+<p>An <strong>agent specification</strong> is the written definition of one agent: its role, purpose, inputs, outputs, tools and permissions, autonomy level, stopping conditions, and the handoff format. It is the file that makes an agent reproducible, and it is where the roles of Chapter 9 become concrete. A compact specification for a planning agent, with illustrative content:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Agent: literature-planner</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Role: planning agent
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Purpose: propose a search strategy and a candidate reading list for a stated question.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Inputs: question statement (docs/question.md), glossary (docs/glossary.md).
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Outputs: docs/plans/search-strategy.md, docs/plans/reading-list.md (status: needs-review).
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Tools: web search, read files. No file writes outside docs/plans/.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Autonomy: level 2. Stops and asks when the question is ambiguous.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Handoff: acceptance criteria listed at the top of each output file.
+</span></code></pre></div>
+<p><strong>Plan review</strong> is the examination of a plan before any execution begins. It is the highest-leverage review in the workflow, because a defect found in a plan costs minutes, while the same defect found after execution costs a rerun. Check a plan against the question: does it address the stated metric, are the tasks checkable, are the dependencies right, and is anything out of scope? <strong>Plan revision</strong> is the controlled change of a plan when new findings arrive. Revise by editing the plan file, noting what changed and why in the decision log, and re-queuing only the tasks whose inputs changed, which the dependency structure identifies.</p>
+<p><strong>Task prioritization</strong> is the choice of what goes first in the queue. Three considerations dominate: tasks on the critical path come first, tasks that unblock many others come early, and tasks that reduce uncertainty about the plan, such as a quick feasibility check, come before expensive ones that depend on it.</p>
+<p><strong>Progress tracking</strong> is the recording of each task's status in the queue, and <strong>status reporting</strong> is the periodic summary of that record for the researcher. A useful report is short and answers four questions: what finished, what is blocked and why, what needs your decision, and what has been spent. Ask an orchestrating agent to produce it from the queue and the logs each morning, and read it before you read anything else.</p>
+<p><strong>Delegation</strong> is handing a task to an agent along with the authority to carry it out. Delegate tasks that are well specified and checkable. Keep the framing of the question, the choice among approaches, and the final judgment of what is true. These are the parts of research that the agents' outputs only inform.</p>
+<h2 id="cost-benefit-and-the-limits-of-scaling">Cost, Benefit, and the Limits of Scaling<a class="headerlink" href="#cost-benefit-and-the-limits-of-scaling" title="Permanent link">&para;</a></h2>
+<p><strong>Cost and benefit</strong> analysis for an agent team compares what the team saves with what it costs. The benefit is the work you would otherwise do by hand, expressed in hours. The costs are the review time, which is the dominant one and is paid in your attention, the compute and subscription cost of the agents, the setup effort to write specifications, and the cost of errors that escape review. A team is worth running when the saving, net of review, is large and the escape rate is low and known.</p>
+<p><strong>Scaling agent teams</strong> is adding agents to do more at once, and it pays off only while three limits are not binding. The first is attention: past the span of control, the added output is not reviewed, so it adds risk and not value. The second is dependencies: past the width of the dependency graph, added agents sit idle, as the critical-path example showed, where 21 hours of work still took 18. The third is coordination: more agents mean more handoffs, more potential conflicts, and more shared state to keep consistent. A reasonable discipline is to grow a team one role at a time, measure the review load and the escape rate at each size, and stop when an additional agent adds more review than it removes work.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">More Agents Is Not More Done</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is launching a large team because launching is cheap. It happens because the cost shows up later, as a pile of unreviewed output. Size the team to your review budget first, and add an agent only when the queue shows idle capacity that review can absorb.</p>
+</div>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Orchestration is the design of how work, checks, and decisions flow through a team of agents so that your attention goes where it prevents the most damage. The number of agents is the least important parameter. Dependencies, review cost, and the quality of handoffs set what the team can actually deliver.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>An agent team</strong> has planning and execution groups, and the 20-to-10 <strong>agent ratio</strong> reflects that plans are cheap to discard and executions are expensive to check.</li>
+<li><strong>Work breakdown</strong> produces tasks with owners, outputs, and checks. <strong>Task dependencies</strong> set the critical path, which parallelism cannot shorten.</li>
+<li><strong>Handoff protocols, shared workspaces, and conflict resolution</strong> use files, separate outputs, and a trace to the first divergence.</li>
+<li><strong>Review checkpoints</strong> can be automated. <strong>Human approval gates</strong> consume your attention and belong where actions are irreversible or outward-bound.</li>
+<li><strong>Researcher attention</strong> is quantifiable. Review load grows with team size and sets the <strong>span of control</strong>.</li>
+<li><strong>Agent specifications, plan review, and plan revision</strong> make agents reproducible and catch defects when they are cheapest.</li>
+<li><strong>Prioritization, progress tracking, and status reporting</strong> keep the queue and the researcher in step.</li>
+<li><strong>Scaling</strong> is limited by attention, by dependencies, and by coordination, and you should stop adding agents when they add more review than they remove work.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Size a Team</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now compute a critical path and the slack on a task, estimate the daily review load of a team and fit it to your attention, and say why 20 planning agents and 10 execution agents is a design target and not a law. That is the arithmetic of orchestration.</p>
+</div>
+<p>The following chapters apply this machinery to the everyday tasks of research, starting with the literature. Round up the question you would give a planning team, and bring it.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

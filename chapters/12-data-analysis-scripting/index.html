@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="Using AI on the data side of research: data formats, measurement data, cleaning, exploratory analysis and visualization, writing and debugging Python analysis scripts and notebooks, and keeping errors visible instead of hidden.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>12. AI-Assisted Data Analysis and Scripting - AI for EE Research</title>
+        <title>AI-Assisted Data Analysis and Scripting - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. AI-Assisted Data Analysis and Scripting
+              AI-Assisted Data Analysis and Scripting
             
           </span>
         </div>
@@ -736,6 +736,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#data-and-its-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Its Formats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-without-hiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning Without Hiding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cleaning Without Hiding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-measurement-data-cleaning-decision-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Measurement Data Cleaning Decision Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-analyzing-and-plotting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring, Analyzing, and Plotting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-scripts-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Scripts in Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Error Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Error Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-python-traceback-reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Python Traceback Reader
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-and-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environments and Notebooks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1301,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#data-and-its-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Its Formats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-without-hiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning Without Hiding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cleaning Without Hiding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-measurement-data-cleaning-decision-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Measurement Data Cleaning Decision Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-analyzing-and-plotting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring, Analyzing, and Plotting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-scripts-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Scripts in Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Error Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Error Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-python-traceback-reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Python Traceback Reader
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-and-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environments and Notebooks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1313,14 +1499,365 @@
 <li><a href="../05-markdown-and-version-control/">Chapter 5: Markdown Project Files and Version Control</a></li>
 <li><a href="../08-agents-tool-use-subagents/">Chapter 8: Agents, Tool Use, and Subagents</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Let the Agent Write It, Let the Data Check It</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+An agent will write an analysis script in a minute that would take you an hour. What it cannot know is whether your data are clean or whether the answer is plausible. This chapter is about arranging the work so that wrong results announce themselves. Trust, but verify!</p>
+</div>
+<h2 id="data-and-its-formats">Data and Its Formats<a class="headerlink" href="#data-and-its-formats" title="Permanent link">&para;</a></h2>
+<p><strong>Measurement data</strong> are the numbers recorded from an instrument, a simulator, or a sensor: captured ADC codes, waveform samples, sweep results, power readings. They have properties that generic datasets do not. They carry noise and quantization. They depend on instrument settings that must be recorded with them. They can contain artifacts: saturation, dropped samples, a probe that slipped. And they are the one thing in a project that you cannot regenerate with a prompt, so they must be protected.</p>
+<p>A <strong>data format</strong> is the file layout in which data are stored. The choice affects what agents and scripts can do with them.</p>
+<p><strong>CSV and JSON</strong> are the two plain-text formats to prefer. CSV, comma-separated values, stores a table with one row per record and one column per quantity. It is simple, readable in any editor, and diffable. Its weakness is that it has no types or units, so the meaning of a column must be recorded elsewhere. JSON stores nested key-value structures, which suits metadata: instrument, settings, date, operator, and units. A reliable pattern is a CSV of values with a JSON sidecar file of the same name that describes them.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Strength</th>
+<th>Weakness</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSV</td>
+<td>Simple, readable, diffable</td>
+<td>No units or types; large files are slow</td>
+<td>Tables of measured values</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>Nested, self-describing</td>
+<td>Verbose for large arrays</td>
+<td>Settings and metadata</td>
+</tr>
+<tr>
+<td>NumPy <code>.npy</code> or HDF5</td>
+<td>Compact, fast, typed arrays</td>
+<td>Binary, not diffable</td>
+<td>Large waveform records</td>
+</tr>
+<tr>
+<td>Vendor instrument format</td>
+<td>Complete instrument state</td>
+<td>Opaque, tool-specific</td>
+<td>Archive, then convert to an open format</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. Common data formats and what they suit.</em></p>
+<p>A worked example shows a capture with its sidecar. Everything the analysis needs to interpret the numbers is in the two files, and nothing depends on remembering.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># data/raw/capture-07.csv  (one ADC output code per line)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>512
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>531
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>...
+</span></code></pre></div>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capture-07.csv"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"instrument"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bench-ADC-board"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"sampling_rate_hz"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000000</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"input_frequency_hz"</span><span class="p">:</span><span class="w"> </span><span class="mi">499000</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"nominal_bits"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">"supply_v"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-09"</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">"samples"</span><span class="p">:</span><span class="w"> </span><span class="mi">4096</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Raw Is Read-Only, Always</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Put captured files in <code>data/raw/</code>, make them read-only, and never write to that directory from a script. Everything downstream is generated into <code>data/processed/</code>. Then a bad cleaning step can be rerun from the original, and an agent has a boundary it can obey.</p>
+</div>
+<h2 id="cleaning-without-hiding">Cleaning Without Hiding<a class="headerlink" href="#cleaning-without-hiding" title="Permanent link">&para;</a></h2>
+<p><strong>Data cleaning</strong> is preparing data for analysis by dealing with missing values, duplicates, unit mismatches, and artifacts. Done carelessly it is the quietest source of wrong results in research, because every choice changes the answer and nothing marks that a choice was made. Three rules keep it honest.</p>
+<p>First, <em>cleaning is a script, not an edit</em>. The raw file is never changed. A script reads it, applies named steps, and writes a new file. Second, <em>every change is logged</em>: how many rows were dropped, which, and why. Third, <em>remove only for a documented cause</em>. A point is removed because the notebook says the probe slipped, not because it is inconvenient. A point that is merely an outlier is information about the distribution, and removing it is a claim about the system.</p>
+<p>A worked example with illustrative numbers: a batch of 40 devices has measured offsets between 0.5 and 2.1 mV, with one device at 12 mV and one at 6.8 mV. The 12 mV device has a lab-notebook entry reading "probe slipped, remeasure". Excluding it is justified, and the exclusion is recorded with the reason. The 6.8 mV device has no such entry and is a valid part. It stays in the data, is reported, and is investigated, because a real tail in the distribution is exactly what a yield analysis is meant to find.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>When it applies</th>
+<th>What to record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep</td>
+<td>Variation is physical or consistent with expected noise</td>
+<td>Nothing, or a note that it was examined</td>
+</tr>
+<tr>
+<td>Exclude with log</td>
+<td>A documented cause, such as a duplicate, a missing-value code, or a known fault</td>
+<td>Row identifiers, count, and reason</td>
+</tr>
+<tr>
+<td>Correct and log</td>
+<td>A documented systematic error, such as a unit mismatch</td>
+<td>The conversion, its justification, and the rows</td>
+</tr>
+<tr>
+<td>Remeasure</td>
+<td>The data cannot support the analysis, such as a stuck or missing channel</td>
+<td>Which measurements and why</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. Four responses to an anomaly, and what to record for each.</em></p>
+<h4 id="diagram-measurement-data-cleaning-decision-simulator">Diagram: Measurement Data Cleaning Decision Simulator<a class="headerlink" href="#diagram-measurement-data-cleaning-decision-simulator" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Measurement Data Cleaning Decision Simulator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> data-cleaning-decision-simulator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> judge<br/>
+<strong>Learning Objective:</strong> The learner will judge, for each of eight anomalies in a batch of measurements, whether to keep, exclude with a log, correct and log, or remeasure, with at least 7 of 8 correct.</p>
+<p><strong>Prerequisites:</strong> data cleaning, the three rules of honest cleaning, and the four responses in the section "Cleaning Without Hiding" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight anomalies the learner commits one of four actions. An action is correct when it equals the action in Content. Mastery is at least 7 of 8 correct on the first attempt. Reading the lab notebook excerpt is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) An outlier should be removed because it is an outlier. (2) A suspicious value can be edited in the raw file. (3) Any problem with the data can be fixed by cleaning.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to apply a stated criterion, the documented cause, to concrete cases. The cases include two where the right answer is to keep a surprising value and two where cleaning is the wrong response.</p>
+<p><strong>Content:</strong></p>
+<p>The batch is synthetic, labeled "synthetic, invented for this exercise". It is 40 devices with offset voltages measured in millivolts, and the lab notebook is available for each anomaly.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Anomaly</th>
+<th>Notebook excerpt</th>
+<th>Correct action</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Device 17 reads 12 mV, while the other devices read 0.5 to 2.1 mV.</td>
+<td>"Device 17: probe slipped during measurement, remeasure."</td>
+<td>Exclude with log</td>
+<td>There is a documented cause, so exclusion is justified and the reason is recorded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Device 31 reads 6.8 mV, while the other devices read 0.5 to 2.1 mV.</td>
+<td>No entry.</td>
+<td>Keep</td>
+<td>There is no documented fault, so the value is data. It is reported and investigated.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The temperature column reads 0.0 for devices 8 to 12.</td>
+<td>"Logger cable disconnected for devices 8 to 12."</td>
+<td>Remeasure</td>
+<td>The values are missing and cannot be recovered or inferred.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rows for devices 22 and 23 appear twice in the merged file.</td>
+<td>"Merged files A and B; overlap at 22 and 23."</td>
+<td>Exclude with log</td>
+<td>The duplicates are artifacts of the merge, and one copy of each is kept.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>All values in lot B are about one thousand times smaller than in lot A.</td>
+<td>"Lot A exported in mV; lot B exported in V."</td>
+<td>Correct and log</td>
+<td>A documented unit mismatch is converted, and the conversion is recorded.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The value -999 appears in three rows of the offset column.</td>
+<td>"Instrument writes -999 when a reading fails."</td>
+<td>Exclude with log</td>
+<td>-999 is the instrument's missing-value code, so those rows have no measurement.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Six devices from one wafer edge read about three times higher than the rest.</td>
+<td>No entry.</td>
+<td>Keep</td>
+<td>A systematic spatial pattern is a finding about the process and is not an artifact.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>In capture 12 the ADC output is the same code for all 4,096 samples.</td>
+<td>"Input cable not connected for capture 12."</td>
+<td>Remeasure</td>
+<td>The record contains no information about the converter.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The four actions and the honest-cleaning rules are from the section "Cleaning Without Hiding" of this chapter. The batch and the notebook excerpts are synthetic.</p>
+<p><strong>Rules:</strong> Each anomaly has exactly one correct action. Exclusion requires a documented cause. A value with no documented cause is kept. Missing or unusable measurements require remeasurement and are not cleaned.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads anomaly 1 with its notebook excerpt.</li>
+<li>The learner chooses one of the four actions and submits.</li>
+<li>The sim shows whether it was correct and the "Why" sentence, and what would be recorded in the cleaning log.</li>
+<li>After anomaly 8, the sim shows the count correct and a summary of how many rows were kept, excluded, corrected, and sent for remeasurement.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight anomalies, one attempt each, in a fixed order. Correct: "Correct: <action>." plus the "Why" sentence. Incorrect: "The better response is <action>." plus the "Why" sentence. The correct action is always revealed after the single attempt. A final score "n of 8 correct" is shown with whether the mastery threshold of 7 was met.</p>
+<p><strong>Starting State:</strong> Anomaly 1 is shown with the four actions and no choice made. The question on screen is "What should happen to this data?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states four actions (keep, exclude with log, correct and log, remeasure), that removal needs a documented cause, that an undocumented outlier is kept and investigated, and that raw files are never edited.</p>
+</details>
+<h2 id="exploring-analyzing-and-plotting">Exploring, Analyzing, and Plotting<a class="headerlink" href="#exploring-analyzing-and-plotting" title="Permanent link">&para;</a></h2>
+<p><strong>Exploratory analysis</strong> is looking at the data before computing anything on it: its size, ranges, distributions, and shape. For a captured ADC record that means the number of samples, the minimum and maximum code, the fraction of samples at full scale, a plot of the codes against time, and a plot of the spectrum. These steps are cheap, and they catch the problems that make a downstream number meaningless: a clipped waveform, a record that is too short, a signal at the wrong frequency.</p>
+<p><strong>Statistical analysis</strong> is the quantification of what the data show and how sure you can be. For measurements the basics are enough to start: the mean and standard deviation across repeated runs, a confidence interval, and the number of independent samples behind a claim. State the sample size beside every statistic. A mean of nine chips and a mean of three hundred are different claims, and an agent will happily write both in the same sentence.</p>
+<p><strong>Data visualization</strong> is the graphical display of data, and <strong>plotting</strong> is the act of producing a plot, in Python typically with the Matplotlib library. A plot that supports a claim has labeled axes with units, a legend where there is more than one series, a visible indication of uncertainty or spread, and the raw data shown and not only a fit. When an agent writes the plot, read it as a reviewer would: are the units on the axes, is the scale honest, is anything cropped, and does it show what the text says it shows?</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Cleaning That Improves the Result</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is a cleaning step that happens to make the number better. It happens because an agent asked to "get a clean result" has an incentive to remove what hurts it. Whenever a cleaning step changes a headline number, report the result both with and without it, and ask what documented cause justified the step.</p>
+</div>
+<h2 id="analysis-scripts-in-python">Analysis Scripts in Python<a class="headerlink" href="#analysis-scripts-in-python" title="Permanent link">&para;</a></h2>
+<p><strong>Python</strong> is the language in which most research analysis is now written, and an agent writes it fluently. An <strong>analysis script</strong> is a program that reads data, applies a defined procedure, and writes results, and it is the unit of reproducible analysis: the script, run on the raw data, produces the figure and the table. Analysis that exists only as a sequence of manual steps cannot be repeated.</p>
+<p>Before the example, the key ideas of the code in plain terms. The script loads codes from a file. It computes the fraction of samples at the minimum or maximum code, which signals clipping. It windows the record with a Hann window, a smooth taper that reduces spectral leakage when the signal is not exactly periodic in the record. It computes the power spectrum, excludes the DC bin explicitly, takes the fundamental as the largest remaining bin and its neighbors, treats everything else as noise and distortion, and converts the ratio to ENOB with the formula of Chapter 4. Notice that failures are loud: a short record raises an error, and clipping is printed.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">load_codes</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">n_bits</span><span class="p">):</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">codes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">if</span> <span class="n">codes</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">64</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"record too short: </span><span class="si">{</span><span class="n">codes</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2"> samples"</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">clipped</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">codes</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">codes</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">**</span><span class="n">n_bits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"samples=</span><span class="si">{</span><span class="n">codes</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2">  clipped=</span><span class="si">{</span><span class="n">clipped</span><span class="si">:</span><span class="s2">.4%</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">return</span> <span class="n">codes</span><span class="p">,</span> <span class="n">clipped</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">enob</span><span class="p">(</span><span class="n">codes</span><span class="p">):</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">codes</span> <span class="o">-</span> <span class="n">codes</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">spec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">hanning</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">)))</span> <span class="o">**</span> <span class="mi">2</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">spec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>                      <span class="c1"># exclude DC explicitly</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">spec</span><span class="p">))</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">4</span>      <span class="c1"># fundamental plus leakage bins</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">signal</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="n">lo</span><span class="p">:</span><span class="n">hi</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="n">noise</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">signal</span>        <span class="c1"># noise and distortion</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">sndr_db</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">signal</span> <span class="o">/</span> <span class="n">noise</span><span class="p">)</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="k">return</span> <span class="p">(</span><span class="n">sndr_db</span> <span class="o">-</span> <span class="mf">1.76</span><span class="p">)</span> <span class="o">/</span> <span class="mf">6.02</span>
+</span></code></pre></div>
+<p>To have an agent write something like this, give it the specification and acceptance criteria of Chapter 4, point it at one raw file and its sidecar, require loud failure, and ask it to print the quantities it used. Then run it on the synthetic known-answer record from the acceptance criteria before you run it on real data. A script that cannot reproduce a known answer is not ready for an unknown one.</p>
+<h2 id="reading-error-messages">Reading Error Messages<a class="headerlink" href="#reading-error-messages" title="Permanent link">&para;</a></h2>
+<p>An <strong>error message</strong> is the program's report that something went wrong. In Python it appears as a traceback: a stack of lines, each naming a file, a line number, and the function being executed, ending with the exception type and a message. Read it from the bottom. The last line names the kind of failure and the reason. The line just above it shows the statement that failed. The lines above that show the chain of calls that led there, and the entry nearest the bottom that is in <em>your</em> code is where to look first.</p>
+<p>Error messages are the most useful information an agent has, and agents sometimes hide them: a <code>try</code> block that catches every exception and carries on, a default value substituted silently, a warning filtered out. These make a script appear to work while it computes the wrong thing. A rule that serves well is to let the script fail, and to treat any catch-all handler an agent adds as a defect to remove unless it logs the error and stops.</p>
+<h4 id="diagram-python-traceback-reader">Diagram: Python Traceback Reader<a class="headerlink" href="#diagram-python-traceback-reader" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Python Traceback Reader</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> python-traceback-reader<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> examine<br/>
+<strong>Learning Objective:</strong> The learner will examine five Python tracebacks and identify the cause of each from the exception type, message, and failing line, with at least 4 of 5 correct.</p>
+<p><strong>Prerequisites:</strong> error message, traceback, exception type, and the rule of reading a traceback from the bottom, all defined in the section "Reading Error Messages" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of five tracebacks the learner chooses one of three diagnoses. A diagnosis is correct when it equals the answer in Content. Mastery is at least 4 of 5 correct on the first attempt. Expanding the full traceback is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) The first line of a traceback shows the problem. (2) A ValueError that the code raised on purpose is a bug in the code. (3) Every error is a code defect.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level work needs the learner to attribute an error to its source from the evidence in the traceback. Options include a plausible but wrong cause for each item, so that the learner must read the message and not only the exception type.</p>
+<p><strong>Content:</strong></p>
+<p>Each traceback is invented and labeled "illustrative".</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Traceback (condensed)</th>
+<th>Option A</th>
+<th>Option B</th>
+<th>Option C</th>
+<th>Correct</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>File "scripts/enob.py", line 12, in load_codes: FileNotFoundError: [Errno 2] No such file or directory: 'data/raw/capture-7.csv'</td>
+<td>The file path is wrong; the file is named capture-07.csv</td>
+<td>The CSV file is corrupted</td>
+<td>NumPy is not installed</td>
+<td>A</td>
+<td>The message names a file that does not exist, and the data directory holds capture-07.csv.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>File "scripts/enob.py", line 8, in load_codes: ValueError: record too short: 12 samples</td>
+<td>A bug in np.loadtxt</td>
+<td>The input record is too short, and the script rejected it as designed</td>
+<td>The window function is wrong</td>
+<td>B</td>
+<td>The script raised this error deliberately, so the input is the problem and not the code.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>File "scripts/plot.py", line 1, in <module>: ModuleNotFoundError: No module named 'scipy'</td>
+<td>The environment does not have scipy installed</td>
+<td>The script has a typo in a variable name</td>
+<td>The data file is empty</td>
+<td>A</td>
+<td>The import failed before any other code ran, which points to the environment.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>File "scripts/enob.py", line 17, in enob: IndexError: index 4096 is out of bounds for axis 0 with size 4096</td>
+<td>The CSV has too many columns</td>
+<td>An off-by-one in an index or slice that reaches one past the end</td>
+<td>The sampling rate is wrong</td>
+<td>B</td>
+<td>An index equal to the array size is one past the last valid index, which is 4095.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>File "scripts/enob.py", line 14, in enob: TypeError: unsupported operand type(s) for -: 'str' and 'float'</td>
+<td>The data were loaded as text because a header line was not skipped</td>
+<td>The FFT length is not a power of two</td>
+<td>The Hann window is missing</td>
+<td>A</td>
+<td>A string cannot be subtracted from a float, which suggests the codes were read as strings, often because of a header row.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The reading rule is from the section "Reading Error Messages" of this chapter. The tracebacks, file names, and messages are invented for illustration.</p>
+<p><strong>Rules:</strong> Each traceback has exactly one correct diagnosis, given above. The sim must shuffle the option order independently for each learner.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner sees traceback 1, condensed to the file, line, function, and message.</li>
+<li>The learner chooses one of the three diagnoses and submits.</li>
+<li>The sim reveals the correct diagnosis and the "Why" sentence, and highlights the part of the traceback that determines it.</li>
+<li>After traceback 5, the sim shows the count correct.</li>
+</ol>
+<p><strong>Feedback:</strong> Five tracebacks, one attempt each, in a fixed order. Correct: "Correct." plus the "Why" sentence. Incorrect: the correct diagnosis and the "Why" sentence. The correct answer is always revealed after the single attempt. A final score "n of 5 correct" is shown with whether the mastery threshold of 4 was met.</p>
+<p><strong>Starting State:</strong> Traceback 1 is shown with three diagnoses and none chosen. The question on screen is "What does this error tell you about the cause?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that a traceback is read from the bottom, that the last line names the failure, that the nearest line of your own code is where to look first, and that a deliberately raised error points to the input.</p>
+</details>
+<h2 id="environments-and-notebooks">Environments and Notebooks<a class="headerlink" href="#environments-and-notebooks" title="Permanent link">&para;</a></h2>
+<p><strong>Dependency management</strong> is recording and controlling the libraries a script needs, so that it runs the same way tomorrow and on another machine. The minimum is a virtual environment, an isolated set of installed packages for one project, and a file listing the packages and their versions, for example a <code>requirements.txt</code> generated with <code>pip freeze</code>. Without this, a script that worked in March fails in October because a library changed, and the failure looks like a bug in your analysis.</p>
+<p>A <strong>notebook environment</strong> is an interactive document that mixes code, results, and text, with the code run in cells. A <strong>Jupyter notebook</strong> is the standard form: a file of cells that run in a live session. Notebooks are excellent for exploration, because you see each result as you build it. They have two weaknesses that matter for research. The state of a session depends on the order in which cells were run, so a notebook can show results that its own code cannot reproduce. And the file format mixes code and output, which makes diffs hard to read.</p>
+<p><strong>Notebook to script</strong> is the move from exploration to reproducibility: once the analysis is settled, the code is extracted from the notebook into a script or module, which is then run from the top on the raw data. A reliable check before you trust any notebook is to restart the kernel and run all cells in order. If the results change, the notebook was lying. A good habit is to keep the notebook as the narrative and figure producer, with real logic in tested functions in a script that the notebook imports.</p>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>An agent changes how fast analysis code is written and nothing about what makes an analysis trustworthy. The practices are those of a careful experimentalist: record the context of every number, protect the raw data, make every change visible, check the code on a known answer, and let errors stop the work.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>Measurement data</strong> need their settings recorded. Prefer <strong>CSV and JSON</strong> with a sidecar, and keep raw files read-only.</li>
+<li><strong>Data cleaning</strong> is a logged script, and removal needs a documented cause. Outliers are information.</li>
+<li><strong>Exploratory analysis</strong> comes before computation and catches clipping, short records, and wrong frequencies.</li>
+<li><strong>Statistics and plots</strong> state sample size, units, and spread, and show the raw data.</li>
+<li><strong>An analysis script</strong> fails loudly, prints the quantities it used, and is checked on a known-answer record first.</li>
+<li><strong>Error messages</strong> are read from the bottom, and a catch-all handler that hides them is a defect.</li>
+<li><strong>Dependency management</strong> and a <strong>notebook-to-script</strong> discipline make results reproducible, and restart-and-run-all is the test.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">An Analysis That Argues Back</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now keep raw data untouched, clean with a logged and justified script, read a traceback from the bottom, and test an analysis script on a known answer before real data. That makes wrong results visible, which is the point.</p>
+</div>
+<p>The next chapter extends the same discipline to code that simulates and tests circuits and systems, where silent errors are the main danger. Round up one script an agent has written for you, and bring it.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

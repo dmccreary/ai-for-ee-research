@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="Verification and validation as habits: independent, primary-source, and cross-model checks, test-driven research and replication, handling overconfidence, sycophancy, and bias in model output, and building audit trails and reproducibility packages.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>17. Verification and Reproducibility - AI for EE Research</title>
+        <title>Verification and Reproducibility - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              17. Verification and Reproducibility
+              Verification and Reproducibility
             
           </span>
         </div>
@@ -841,6 +841,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#verification-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification and Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinds-of-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinds of Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kinds of Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-verification-method-matcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Verification Method Matcher
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-test-first-and-replicating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working Test-First and Replicating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behaviors-of-models-that-undermine-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behaviors of Models That Undermine Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Behaviors of Models That Undermine Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sycophancy-spotter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sycophancy Spotter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#records-that-let-others-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Records That Let Others Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting the Standard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1301,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#verification-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification and Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinds-of-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinds of Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kinds of Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-verification-method-matcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Verification Method Matcher
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-test-first-and-replicating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working Test-First and Replicating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behaviors-of-models-that-undermine-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behaviors of Models That Undermine Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Behaviors of Models That Undermine Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sycophancy-spotter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sycophancy Spotter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#records-that-let-others-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Records That Let Others Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting the Standard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1322,14 +1508,319 @@
 <li><a href="../11-literature-search-synthesis/">Chapter 11: AI-Assisted Literature Search and Synthesis</a></li>
 <li><a href="../13-simulation-testing-code/">Chapter 13: Simulation, Testing, and Reproducible Code</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Round Up the Evidence</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Every earlier chapter had a check in it, and this chapter is where the checks become a standard you can state. By the end you will be able to say, for a result that an agent helped produce, exactly what would convince a skeptical colleague. Trust, but verify!</p>
+</div>
+<h2 id="verification-and-validation">Verification and Validation<a class="headerlink" href="#verification-and-validation" title="Permanent link">&para;</a></h2>
+<p>Two words that people often use interchangeably name different questions, and engineers already know the difference. <strong>Verification</strong> asks whether the work was done <em>right</em>: whether the code implements the formula, whether the computation matches the specification, whether the numbers in the paper are the numbers the script produced. <strong>Validation</strong> asks whether the <em>right thing</em> was done: whether the specification itself matches reality, whether the simulated circuit behaves as the fabricated one does, whether the result answers the research question. A design can be fully verified against a specification that was wrong, and it will be wrong in exactly the way the specification was.</p>
+<p>Both matter for AI-assisted work, and they fail differently. Verification failures are the typical agent failures of earlier chapters: a wrong formula, a changed number, an invented citation. Validation failures are quieter. An agent will faithfully implement the question as you stated it, and if the question was framed badly, every verified result answers the wrong thing. This is one reason that Chapter 14 put so much weight on framing, and why a skeptical reader's first question is often "is this the right comparison?"</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Verified Against What?</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice that a verification always has an object: the specification, the standard, the primary source. When someone says "it was verified", ask against what. If the reference is another output of the same process, nothing independent has happened.</p>
+</div>
+<h2 id="kinds-of-checks">Kinds of Checks<a class="headerlink" href="#kinds-of-checks" title="Permanent link">&para;</a></h2>
+<p>An <strong>independent check</strong> is a check whose failure causes are different from those of the thing being checked. That condition is what gives a check its power. Running the same script twice checks nothing, because the same bug appears twice. Computing the same quantity by a different method, with a different tool, from different data, or by a different person has some chance of disagreeing when something is wrong. Four kinds of independent check are especially useful with agents.</p>
+<p>A <strong>primary source check</strong> is going to the original source to confirm a claim: the paper itself and not a summary of it, the datasheet and not a model's recollection of its limits, the standard and not a paraphrase of its requirement. It is the answer to the fabricated and misattributed claims of Chapters 2 and 11. It takes minutes when the agent supplied the location of every claim.</p>
+<p>A <strong>cross-model check</strong> asks a different model, or a fresh session of the same one with none of the earlier context, to answer the same question or review the same output independently, and compares the answers. It is cheap and a good screen. Its limits are real: models share much of their training data and many of their blind spots, so agreement is weak evidence and disagreement is a useful flag. Use it to decide <em>what to look at</em>, and not to decide what is true.</p>
+<p>A <strong>known-answer test</strong>, from Chapter 13, runs a method on an input whose answer you know independently. And a <strong>result replication</strong>, taken up below, reruns or repeats the work from the beginning.</p>
+<p>A worked example, with illustrative numbers. An agent's script reports an ENOB of 9.4 bits for capture-07. A known-answer test (the ideal quantizer record) shows that the script returns 10.0 for a known 10-bit record, which verifies the implementation. An independent method, a least-squares sine fit of the kind described in the ADC test standard IEEE 1241, gives 9.3 bits on the same record, which is within the expected difference between the methods. A primary source check confirms from the lab notebook that the input frequency was 499 kHz and not the 99 kHz in the script's default. Each check could have failed, and each of them fails differently from the others.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>What it guards against</th>
+<th>Cost</th>
+<th>Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Known-answer test</td>
+<td>Implementation errors</td>
+<td>Low once the test exists</td>
+<td>Only covers the input you tried</td>
+</tr>
+<tr>
+<td>Independent method</td>
+<td>Method-specific errors and shared assumptions</td>
+<td>Medium</td>
+<td>The two methods may share an input error</td>
+</tr>
+<tr>
+<td>Primary source check</td>
+<td>Misquotation, fabrication, outdated facts</td>
+<td>Low per claim</td>
+<td>Only as good as the source</td>
+</tr>
+<tr>
+<td>Cross-model check</td>
+<td>Gross errors, a screening aid</td>
+<td>Very low</td>
+<td>Shared blind spots</td>
+</tr>
+<tr>
+<td>Replication</td>
+<td>Non-reproducible results</td>
+<td>Medium to high</td>
+<td>Does not catch a wrong question</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. Kinds of verification checks and what each one buys.</em></p>
+<h4 id="diagram-verification-method-matcher">Diagram: Verification Method Matcher<a class="headerlink" href="#diagram-verification-method-matcher" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Verification Method Matcher</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> verification-method-matcher<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> recommend<br/>
+<strong>Learning Objective:</strong> The learner will recommend which of five verification methods best fits each of eight AI-assisted claims, with at least 7 of 8 matching the answer in Content.</p>
+<p><strong>Prerequisites:</strong> known-answer test, independent method, primary source check, cross-model check, and replication, all defined in the section "Kinds of Checks" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight claims the learner commits one of five methods. A method is correct when it equals the answer in Content. Mastery is at least 7 of 8 correct on the first attempt. Reading the table of methods is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Asking the same model again is an independent check. (2) A cross-model check proves a claim. (3) A single check method suits every claim.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to choose a method by what it guards against. The claims differ in what could be wrong with them, so a single favorite method cannot score well.</p>
+<p><strong>Content:</strong></p>
+<p>All claims are invented for illustration and labeled "illustrative". Method options: Known-answer test, Independent method, Primary source check, Cross-model check, Replication.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Claim or situation</th>
+<th>Correct method</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A script reports ENOB = 9.4 for capture-07, and you have never validated the script.</td>
+<td>Known-answer test</td>
+<td>Run it on a record whose ENOB you know, to check the implementation before trusting any real result.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A model's summary says Paper P reports 9.2 bits of ENOB at 1 MS/s.</td>
+<td>Primary source check</td>
+<td>The claim is about what a paper says, and only the paper can settle it.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The FFT-based ENOB is 9.4 and you want another estimate that does not share the FFT's assumptions.</td>
+<td>Independent method</td>
+<td>A different method, such as a sine fit, can disagree for different reasons.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>An agent labeled 300 abstracts relevant or not, and you want a cheap screen for likely mislabels before sampling by hand.</td>
+<td>Cross-model check</td>
+<td>A second model's disagreement points to items worth reading, at very low cost.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A colleague wants to reuse your figure, and you must confirm it regenerates from raw data on a clean machine.</td>
+<td>Replication</td>
+<td>The question is whether the result can be reproduced from the raw inputs and code.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A model states "the standard requires jitter below 10 ps in section 4.3".</td>
+<td>Primary source check</td>
+<td>A requirement is quoted from a document, and the document must be read.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>You doubt a simulation result because a model-written netlist might misstate a component value.</td>
+<td>Independent method</td>
+<td>A hand calculation of the expected value is a different route to the same quantity.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A result must hold for a different batch of devices before you publish a claim.</td>
+<td>Replication</td>
+<td>The claim is that the result recurs, which only another run can show.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The five methods are from the section "Kinds of Checks" of this chapter. The claims are invented for illustration.</p>
+<p><strong>Rules:</strong> Each claim has exactly one correct method, chosen by what the claim could be wrong about: an implementation, a method, a quotation, a screening question, or recurrence.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads claim 1.</li>
+<li>The learner chooses one of the five methods and submits.</li>
+<li>The sim shows whether it was correct and the "Why" sentence.</li>
+<li>After claim 8, the sim shows the count correct and groups the claims by method.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight claims, one attempt each, in a fixed order. Correct: "Correct: <method>." plus the "Why" sentence. Incorrect: "The better fit is <method>." plus the "Why" sentence. The correct method is always revealed after the single attempt. A final score "n of 8 correct" is shown with whether the mastery threshold of 7 was met.</p>
+<p><strong>Starting State:</strong> Claim 1 is shown with five methods and none chosen. The question on screen is "What could be wrong with this claim, and which check would reveal it?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that an independent check has different failure causes from the thing checked, that cross-model agreement is weak evidence while disagreement is a useful flag, and that a primary source check is made against the original document.</p>
+</details>
+<h2 id="working-test-first-and-replicating">Working Test-First and Replicating<a class="headerlink" href="#working-test-first-and-replicating" title="Permanent link">&para;</a></h2>
+<p><strong>Test-driven research</strong> is the practice, borrowed from software, of deciding in advance what result would count as success or failure and writing it down before the experiment or analysis is run. It extends the acceptance criteria of Chapter 4 and the go criteria of Chapter 14 to results. The reason is a human one, made worse by agents: once a result is visible, it is easy to find a reading that makes it acceptable, and an agent asked to produce "a good result" will help. A criterion written first cannot be adjusted to fit.</p>
+<p><strong>Result replication</strong> is obtaining the result again. There are two levels, and both are worth distinguishing. <em>Computational</em> replication reruns your own analysis from the raw data in a clean environment, to confirm that the result is a property of the code and data and not of a leftover file or an unrecorded setting. <em>Independent</em> replication has another person, another instrument, or another dataset produce the result from the description, which also tests the description. The first is cheap and should be routine. The second is what ultimately moves a field, and a reproducibility package, described below, is what makes it possible.</p>
+<h2 id="behaviors-of-models-that-undermine-checks">Behaviors of Models That Undermine Checks<a class="headerlink" href="#behaviors-of-models-that-undermine-checks" title="Permanent link">&para;</a></h2>
+<p>Three tendencies of language models weaken verification when they are not recognized. They are properties of the models, not of any one product.</p>
+<p><strong>Uncertainty awareness</strong> is the discipline of stating how sure a result is, and asking for it. A model's fluent register carries no information about its confidence, so its self-reported confidence should not be treated as calibrated. What serves is explicit uncertainty in the work: confidence intervals from repeated measurements, a range and not a point, a list of the assumptions on which a number depends, and the sample size behind every statistic.</p>
+<p><strong>Overconfidence</strong> is the model's tendency to state conclusions with a certainty that its evidence does not support, including stating a specific figure where "unknown" would be correct. The countermeasures are those of Chapter 3: make "unknown" a legal output, require evidence with every claim, and ask for the strongest reason the answer could be wrong.</p>
+<p><strong>Sycophancy</strong> is the tendency to agree with the user, to tell them what they appear to want to hear, and to change an answer under pushback even when no new evidence has been given. It is particularly harmful in research, because researchers are invested in their results. A worked example: asked "I measured an ENOB of 9.5 bits, which looks great, doesn't it?", a model is likely to agree and elaborate. Asked "Here are the measurement conditions and the ENOB value. What are the three most likely reasons this number could be wrong?", the same model will produce something useful. The difference is in the framing. The practical countermeasures are to ask neutral questions that do not reveal your preferred answer, to ask for the case against, to flip the premise and see whether the answer flips with it, and to treat a change of answer under pushback as a warning unless the pushback contained evidence.</p>
+<p><strong>Output bias</strong> is a systematic tilt in what a model produces. It can favor the most popular method over a better suited but less written-about one, the literature in the most widely represented language and venues, recent and well-publicized work over older foundations, and the framing the prompt implies. It is hard to see from one answer. Counter it by asking for alternatives explicitly, by checking which literature a survey draws on, and by running the same task with different phrasings and noting what changes.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Flip the Premise</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+To test whether an answer reflects the evidence or your framing, ask the question again with the opposite premise: "I suspect this result is wrong. What supports that?" If the model agrees with both framings, it is following you, and neither answer is evidence.</p>
+</div>
+<h4 id="diagram-sycophancy-spotter">Diagram: Sycophancy Spotter<a class="headerlink" href="#diagram-sycophancy-spotter" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Sycophancy Spotter</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> sycophancy-spotter<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> distinguish<br/>
+<strong>Learning Objective:</strong> The learner will distinguish, among six exchanges between a researcher and a model, the replies that are sycophantic from those that are calibrated, with at least 5 of 6 classified correctly.</p>
+<p><strong>Prerequisites:</strong> sycophancy, overconfidence, uncertainty awareness, and the countermeasures, all defined in the section "Behaviors of Models That Undermine Checks" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of six exchanges the learner commits "sycophantic" or "calibrated". A classification is correct when it equals the answer in Content. Mastery is at least 5 of 6 correct on the first attempt. Reading the definitions is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A model that changes its answer is being responsive. (2) A polite and agreeable reply is a good reply. (3) A model that declines to confirm is being unhelpful.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level work needs the learner to separate an update that follows from evidence from agreement that follows from social pressure. Both appear in several tones, so tone alone is not a cue.</p>
+<p><strong>Content:</strong></p>
+<p>All exchanges are invented for illustration and labeled "illustrative".</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Exchange</th>
+<th>Correct classification</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Researcher: "I think this 10-bit ADC has an ENOB of 11 bits." Model: "You're right, 11 bits is achievable here."</td>
+<td>Sycophantic</td>
+<td>It agrees with an impossible claim for a nominal 10-bit converter without any evidence.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Researcher: "Are you sure? I think the notch is at 60 Hz." Model (earlier answer, from pasted text: 50 Hz): "You may be right, I apologize. The notch is at 60 Hz."</td>
+<td>Sycophantic</td>
+<td>It reverses an evidenced answer when no new evidence was given.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Researcher: "The datasheet text I pasted says 50 Hz." Model: "Thank you. The pasted text states 50 Hz, so my earlier value of 60 Hz was wrong."</td>
+<td>Calibrated</td>
+<td>It updates because evidence was supplied and cites it.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Researcher: "I'm sure my calibration scheme is novel." Model: "It does appear novel, and I can't think of anything similar."</td>
+<td>Sycophantic</td>
+<td>It validates a novelty claim from memory without a search and without caveats.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Researcher: "Is my method novel?" Model: "I can't establish novelty from memory. Two approaches I know of are close, and here is how yours differs. A search would need to check these."</td>
+<td>Calibrated</td>
+<td>It declines to certify, states what it knows, and names the check.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Researcher: "Please just confirm the result is right." Model: "I can't confirm that from the numbers alone. Two checks that would: a known-answer test and an independent method."</td>
+<td>Calibrated</td>
+<td>It declines to certify and proposes checks that could.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The definitions and countermeasures are from the section "Behaviors of Models That Undermine Checks" of this chapter. The exchanges are invented for illustration.</p>
+<p><strong>Rules:</strong> A reply is sycophantic when it agrees with, validates, or reverses to match the researcher's stated view without new evidence. A reply is calibrated when it changes only for supplied evidence, or states what it cannot establish and what would. Each exchange has exactly one correct classification.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads exchange 1.</li>
+<li>The learner chooses "sycophantic" or "calibrated" and submits.</li>
+<li>The sim shows whether it was correct and the "Why" sentence.</li>
+<li>After exchange 6, the sim shows the count correct.</li>
+</ol>
+<p><strong>Feedback:</strong> Six exchanges, one attempt each, in a fixed order. Correct: "Correct." plus the "Why" sentence. Incorrect: "This reply is <classification>." plus the "Why" sentence. The correct classification is always revealed after the single attempt. A final score "n of 6 correct" is shown with whether the mastery threshold of 5 was met.</p>
+<p><strong>Starting State:</strong> Exchange 1 is shown with two choices. The question on screen is "Did the reply follow the evidence or the researcher?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that sycophancy is agreeing with the user and changing an answer under pushback without new evidence, and that a change of answer is a warning unless the pushback contained evidence.</p>
+</details>
+<h2 id="records-that-let-others-check">Records That Let Others Check<a class="headerlink" href="#records-that-let-others-check" title="Permanent link">&para;</a></h2>
+<p>An <strong>audit trail</strong> is the chronological record of how a result came to be: the prompts given, the models and settings used, the tool calls and files changed, the decisions taken and by whom. It extends the agent logs of Chapter 9 and the run manifest of Chapter 13 into a record that a third party could follow. Its purpose is to answer, after the fact, "what exactly happened?" for a result you are about to rely on, or a result someone has questioned. Keep it as plain files in the project, under version control, with the session logs and decision log of Chapter 6.</p>
+<p>A <strong>reproducibility package</strong> is the set of materials that lets another person regenerate your results: the code at the version used, the raw data or instructions for obtaining them, the environment specification, the run manifest, a README with the exact commands, and the expected outputs with checksums so that a successful run can be recognized. A reasonable test of a package is a clean-room run: on a machine that has never seen the project, clone the repository, follow the README, and compare the outputs with the expected ones.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reproduce/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── README.md            exact commands, expected runtime, expected outputs
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── environment.txt      pinned library and tool versions
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── data/                raw data, or a script that fetches it with checksums
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── scripts/             code at the tagged commit
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── manifests/           one run manifest per result
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>└── expected/            checksums and reference outputs
+</span></code></pre></div>
+<p><strong>Peer verification</strong> is having a colleague perform that clean-room run, or repeat the key checks, and report what they found. It is the cheapest form of independent replication, and the questions it raises most often are about unstated assumptions: a path that existed only on your machine, a default that you did not record, a step you did by hand.</p>
+<p>An <strong>acceptance review</strong> is the formal decision, before a result enters a paper or a decision, that it meets the criteria. It uses the acceptance criteria written in advance, the checks performed, and the audit trail. The output is a short signed record: what was claimed, what checks were run and with what outcome, what remains uncertain, and who accepted it. For a research group it is the point at which "the agent produced it" becomes "we accept it".</p>
+<p><strong>Error tracing</strong> is what you do when a check fails or an error surfaces later. The goal is not only to fix the error but to find where it entered and what it touched. Trace the wrong value upstream through the audit trail and manifests to the first step that produced it: which input, which code version, which prompt, which agent. Fix that step, add a test that would have caught it, and then use the provenance records to find every downstream result that depended on it and recompute those. In Chapter 13's example, the wrong dB formula was found in one function. Error tracing then asks which results used that function, and the run manifests give the list.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Checking With the Thing That Made the Mistake</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is asking the same agent, in the same session, to confirm its own output. It happens because it is the cheapest check to run. The agent shares the original error and the context that produced it, so the confirmation carries almost no information. Change something that matters: the method, the model, the session, or the person.</p>
+</div>
+<h2 id="setting-the-standard">Setting the Standard<a class="headerlink" href="#setting-the-standard" title="Permanent link">&para;</a></h2>
+<p>Whether an AI-assisted result meets the standard of your field is a question with an answer you can write down. A useful form is a short checklist of the checks above, applied in proportion to the stakes: a figure for a group meeting needs less than a claim in a journal.</p>
+<table>
+<thead>
+<tr>
+<th>Stakes</th>
+<th>Minimum checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exploratory, internal</td>
+<td>Known-answer test on code, spot-check of numbers, primary source for any citation used</td>
+</tr>
+<tr>
+<td>Shared with collaborators</td>
+<td>The above, plus an independent method for the headline number and an audit trail</td>
+</tr>
+<tr>
+<td>Submitted or published</td>
+<td>The above, plus acceptance criteria written in advance, a reproducibility package, and a peer verification run</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. Verification effort in proportion to stakes.</em></p>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Verification is not a stage at the end. It is the set of independent checks, records, and habits that make a result something other people can rely on. AI assistance raises the importance of every one of them, because it raises the volume of output and adds failure modes that sound plausible.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>Verification</strong> asks whether the work was done right and <strong>validation</strong> asks whether it was the right work, and both can fail independently.</li>
+<li><strong>An independent check</strong> has different failure causes from the thing checked. Kinds include known-answer tests, independent methods, <strong>primary source checks</strong>, and <strong>cross-model checks</strong>, where agreement is weak evidence and disagreement is a flag.</li>
+<li><strong>Test-driven research</strong> fixes the success criteria before the result is seen. <strong>Replication</strong> is computational first and independent when it matters.</li>
+<li><strong>Uncertainty awareness, overconfidence, sycophancy, and output bias</strong> are model behaviors to counter with explicit uncertainty, evidence requirements, neutral and flipped framings, and requests for alternatives.</li>
+<li><strong>An audit trail and a reproducibility package</strong> let others follow and rerun the work, and a clean-room run is the test.</li>
+<li><strong>Peer verification and acceptance review</strong> turn private confidence into a group decision.</li>
+<li><strong>Error tracing</strong> goes upstream to the source and downstream to every affected result.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">A Standard You Can State</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now choose a check by what it guards against, spot a model agreeing with you instead of the evidence, package a result so that a colleague can rerun it, and trace an error to its source and its consequences. That is the standard that turns agent output into research.</p>
+</div>
+<p>The next chapter takes up the responsibilities that come with this power: honesty about AI use, privacy, ownership, and fairness. Round up the policies of your own lab and venue, and bring them.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="Ways research results are communicated and taught: slide decks, interactive simulations, MicroSims built with p5.js, embedded simulations, learning graphs and concept dependencies, intelligent textbooks, and generating a MicroSim from a specification with an agent.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>16. MicroSims and Research Communication - AI for EE Research</title>
+        <title>MicroSims and Research Communication - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              16. MicroSims and Research Communication
+              MicroSims and Research Communication
             
           </span>
         </div>
@@ -820,6 +820,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#communicating-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communicating Research
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSims
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-microsim-with-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating a MicroSim With an Agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating a MicroSim With an Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-blooms-taxonomy-microsim-matcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bloom's Taxonomy MicroSim Matcher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-microsim-suitability-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: MicroSim Suitability Judge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedding-concept-dependencies-and-intelligent-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding, Concept Dependencies, and Intelligent Textbooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Embedding, Concept Dependencies, and Intelligent Textbooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-concept-dependencies-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Concept Dependencies Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1292,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#communicating-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communicating Research
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSims
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-microsim-with-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating a MicroSim With an Agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating a MicroSim With an Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-blooms-taxonomy-microsim-matcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bloom's Taxonomy MicroSim Matcher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-microsim-suitability-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: MicroSim Suitability Judge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedding-concept-dependencies-and-intelligent-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding, Concept Dependencies, and Intelligent Textbooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Embedding, Concept Dependencies, and Intelligent Textbooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-concept-dependencies-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Concept Dependencies Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1300,14 +1468,228 @@
 <li><a href="../13-simulation-testing-code/">Chapter 13: Simulation, Testing, and Reproducible Code</a></li>
 <li><a href="../15-manuscript-preparation/">Chapter 15: AI-Assisted Manuscript Preparation</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Let Readers Turn the Knob</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+A figure shows one setting of a result, and a reader who can move the slider understands the whole relationship. You are looking at a book built this way: every interactive on these pages began as a written specification. By the end you will be able to write one for your own result. Trust, but verify!</p>
+</div>
+<h2 id="communicating-research">Communicating Research<a class="headerlink" href="#communicating-research" title="Permanent link">&para;</a></h2>
+<p><strong>Research communication</strong> is the transfer of a result and its reasoning to a particular audience for a particular purpose. The same result is communicated differently to a reviewer, who wants evidence and limits, to a colleague who wants the method, to a student who wants the idea, and to a funder who wants significance. The medium follows from the audience, and agents can help with several of them.</p>
+<p>A <strong>slide deck</strong> is the standard medium for a talk. An agent drafts a deck quickly from a paper, and the common failure is a deck that mirrors the paper's structure instead of a talk's. A talk has one message, a few supporting points, and few words per slide. Ask for the deck from a stated audience, time, and single message, and require that each slide state its point as a sentence in the title. Reuse figures from the paper's source scripts and not screenshots, and run the number check of Chapter 15 on every slide, since figures in slides are copied and changed more often than anywhere else.</p>
+<p>A static figure shows a result at the parameter values the author chose. An <strong>interactive simulation</strong> is a program that lets the viewer change parameters and see the response, and so lets the viewer explore the relationship the result describes. It is the right medium when the point of the result is a <em>dependence</em>: how ENOB falls as noise rises, how leakage changes with window choice, how a search converges. It is the wrong medium for a fact that has no parameter.</p>
+<h2 id="microsims">MicroSims<a class="headerlink" href="#microsims" title="Permanent link">&para;</a></h2>
+<p>A <strong>MicroSim</strong> is a small, single-concept, interactive simulation that runs in a web browser, is embedded in a page, has open and readable source code, and is built from a short specification. The idea, developed in the author's MicroSims project, is that a simulation small enough to specify in a page can be generated by an AI model, checked by a person, and embedded anywhere that displays web pages. This book contains many, each in its own directory under <code>docs/sims/</code> with a <code>main.html</code> that is embedded in the chapter and an <code>index.md</code> lesson page.</p>
+<p>The library most often used is <strong>p5.js</strong>, a JavaScript library for drawing and interaction in the browser. It needs no installation, runs everywhere, and has built-in controls such as sliders, buttons, and drop-downs. The rule in this book is to use the library's own controls and not to draw them by hand, since the built-in ones are accessible and consistent. Two further conventions keep sims embeddable: the first statement in <code>setup()</code> reads the container width so that the canvas fits the page, and the canvas is attached to the page's <code>main</code> element.</p>
+<p>Before the code, here is the relationship it shows. When Gaussian noise of standard deviation <span class="arithmatex">\( \sigma \)</span>, measured in least-significant bits, is added to an ideal <span class="arithmatex">\( N \)</span>-bit quantizer whose own quantization noise has standard deviation <span class="arithmatex">\( 1/\sqrt{12} \)</span> LSB, the effective number of bits becomes</p>
+<div class="arithmatex">\[
+\text{ENOB} = N - \tfrac{1}{2}\log_2\!\left(1 + 12\,\sigma^2\right).
+\]</div>
+<p>For <span class="arithmatex">\( N = 10 \)</span> and <span class="arithmatex">\( \sigma = 2 \)</span> the value is 7.19 bits, the number used in Chapter 13. The sketch below draws one bar for ENOB and one for the nominal bits, and a slider changes <span class="arithmatex">\( \sigma \)</span>. It uses <code>createSlider(min, max, value, step)</code>, which creates a slider with a minimum, a maximum, a starting value, and a step size.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">sigmaSlider</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">updateCanvasSize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'main'</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kd">function</span><span class="w"> </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="mf">220</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'main'</span><span class="p">));</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nx">sigmaSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">);</span><span class="w">   </span><span class="c1">// noise in LSB</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nx">sigmaSlider</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'main'</span><span class="p">));</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nx">background</span><span class="p">(</span><span class="s1">'aliceblue'</span><span class="p">);</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">sigma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sigmaSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">enob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">log2</span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">12</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">sigma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">sigma</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">40</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w">             </span><span class="c1">// pixels per bit</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">'lightgray'</span><span class="p">);</span><span class="w"> </span><span class="nx">rect</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">scale</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">);</span><span class="w">   </span><span class="c1">// nominal 10 bits</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">'steelblue'</span><span class="p">);</span><span class="w"> </span><span class="nx">rect</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">110</span><span class="p">,</span><span class="w"> </span><span class="nx">enob</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">scale</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="nx">noStroke</span><span class="p">();</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">'Nominal: 10 bits'</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">'ENOB: '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">enob</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">' bits at sigma = '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">sigma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">' LSB'</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Slide the control to 0 and the bar reaches about 10 bits; slide it to 2 and it falls to about 7.2. A reader who has seen this does not need the formula explained. The same sketch, with labels and a lesson page, is a complete MicroSim.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">The Interactive Is the Result in Motion</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice that the sketch has no data in it, only the relationship. A paper's table gives you the points the authors measured, and a sim gives you the function that the points came from. That is why a good MicroSim teaches in a minute what a page of text takes ten to explain.</p>
+</div>
+<h2 id="generating-a-microsim-with-an-agent">Generating a MicroSim With an Agent<a class="headerlink" href="#generating-a-microsim-with-an-agent" title="Permanent link">&para;</a></h2>
+<p><strong>MicroSim generation</strong> is the use of an agent to build a MicroSim from a specification. The workflow of this book is specification first. A specification states what the learner must be able to do afterward, the evidence that shows it, the full content, the rules the model must obey, the activity, and the feedback. It deliberately leaves out layout and code, which the generating agent decides. You have already seen the form: each interactive in the chapters of this book has such a specification in a collapsed block above it, with a Bloom level and verb, an objective, evidence of mastery, content, rules, learner activity, feedback, and chapter anchors.</p>
+<p>The workflow has five steps, and the checks matter more than the generation.</p>
+<ol>
+<li><em>Specify.</em> Write the objective with one verb, the evidence of mastery, and every item of content with its correct answer. If you cannot write the evidence, the sim has no purpose yet.</li>
+<li><em>Search before building.</em> Look for an existing MicroSim that already teaches the concept. Reuse is cheaper than generation.</li>
+<li><em>Generate.</em> Give the specification to the agent, with the conventions above. Ask for the code in the standard directory layout.</li>
+<li><em>Verify.</em> Run it. Check each rule in the specification against the behavior: the formulas, the thresholds, the feedback texts, the boundary cases. A sim that looks right and computes a slightly wrong number is the worst outcome, and the checks of Chapter 13 apply.</li>
+<li><em>Approve.</em> A person tests the controls and decides that it is ready for learners. In this repository a lesson page carries a <code>status</code> value that shows in the navigation: <code>scaffold</code> for a specification with no implementation, <code>built</code> for an implementation awaiting review, <code>instrumented</code> for one that records learner events, and <code>approved</code> for one the author has tested. Agents may set the first three. Only the human author sets <code>approved</code>.</li>
+</ol>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Write the Evidence of Mastery First</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Before you describe the sim, write one sentence that begins "The learner shows they understand by...". If the sentence names something the sim can check, such as a number entered, a prediction committed, or an item sorted, you have the spine of the activity. If it says "explores", the sim will be a toy.</p>
+</div>
+<p>The following reused MicroSim, from the author's instructional design project, supports the first step of the workflow. It matches each of the six levels of Bloom's taxonomy to the kind of interaction that fits it, which is the guidance behind the "Bloom level" and "verb" lines of every specification in this book.</p>
+<h4 id="diagram-blooms-taxonomy-microsim-matcher">Diagram: Bloom's Taxonomy MicroSim Matcher<a class="headerlink" href="#diagram-blooms-taxonomy-microsim-matcher" title="Permanent link">&para;</a></h4>
+<iframe src="https://dmccreary.github.io/infographics/sims/blooms-microsim-matcher/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="https://dmccreary.github.io/infographics/sims/blooms-microsim-matcher/main.html">Run the Bloom's Taxonomy MicroSim Matcher fullscreen</a></p>
+<details>
+<summary>Bloom's Taxonomy MicroSim Matcher (reused MicroSim)</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> blooms-microsim-matcher<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> https://dmccreary.github.io/infographics/sims/blooms-microsim-matcher/<br/>
+<strong>Source Repo:</strong> https://github.com/dmccreary/infographics/tree/main/docs/sims/blooms-microsim-matcher<br/>
+<strong>Bloom Level:</strong> Understand<br/>
+<strong>Bloom Verb:</strong> classify<br/>
+<strong>Learning Objective:</strong> The learner will classify each Bloom's taxonomy level with the kind of MicroSim interaction pattern that suits it.</p>
+<p>Reused from the MicroSim catalog (WHAT match score 0.85).</p>
+</details>
+<p>The five-step workflow has a prerequisite that is easy to overlook: the sim must be the right medium. The following specification practices the judgment of when a MicroSim earns its place.</p>
+<h4 id="diagram-microsim-suitability-judge">Diagram: MicroSim Suitability Judge<a class="headerlink" href="#diagram-microsim-suitability-judge" title="Permanent link">&para;</a></h4>
+<details>
+<summary>MicroSim Suitability Judge</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> microsim-suitability-judge<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> judge<br/>
+<strong>Learning Objective:</strong> The learner will judge, for each of eight pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with at least 7 of 8 correct.</p>
+<p><strong>Prerequisites:</strong> interactive simulation, MicroSim, and the criterion that a MicroSim suits a dependence or process the learner can manipulate or predict, all defined in the sections "Communicating Research" and "MicroSims" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight items the learner commits "MicroSim" or "static figure or text". A judgment is correct when it equals the answer in Content. Mastery is at least 7 of 8 correct on the first attempt. Reading the criterion is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Interactive is always better than static. (2) Any technical content should become a simulation. (3) A table of values is equivalent to a sim of the function.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to apply a criterion and decline to build when the criterion is not met, which saves the effort of building sims that add nothing.</p>
+<p><strong>Content:</strong></p>
+<p>All items are invented for illustration and labeled "illustrative". The criterion shown is: "A MicroSim suits content with a parameter the learner can change, or a process the learner can step through or predict, where seeing the response builds understanding."</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Content</th>
+<th>Correct medium</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>How the ENOB of an ADC falls as added noise increases.</td>
+<td>MicroSim</td>
+<td>It is a dependence on a parameter, and moving the noise slider shows the relationship.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A die photograph of the fabricated converter.</td>
+<td>Static figure or text</td>
+<td>It is a single image with no parameter or process.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>How a successive-approximation search converges, bit by bit, to the digital code of an input voltage.</td>
+<td>MicroSim</td>
+<td>It is a process the learner can step through and predict.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The bill of materials for the test board.</td>
+<td>Static figure or text</td>
+<td>It is a reference table with no parameter or process.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>How the choice of window changes spectral leakage when the signal frequency moves away from an exact FFT bin.</td>
+<td>MicroSim</td>
+<td>It is a dependence on two parameters, and the response is visual.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The author list and affiliations of the paper.</td>
+<td>Static figure or text</td>
+<td>It is a fact with no parameter or process.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The derivation of the Walden figure of merit from its definition.</td>
+<td>Static figure or text</td>
+<td>It is a short derivation with no parameter, and text with an equation serves it.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>How the spread of residual offset across devices changes as the number of calibration bits increases.</td>
+<td>MicroSim</td>
+<td>It is a dependence on a parameter, and the distribution changes visibly.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The criterion is from the sections "Communicating Research" and "MicroSims" of this chapter. The items are invented for illustration.</p>
+<p><strong>Rules:</strong> An item is a MicroSim when it has a parameter the learner can change, or a process the learner can step through or predict, and the response aids understanding. Otherwise it is static figure or text. Each item has exactly one correct answer.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads item 1 and the criterion.</li>
+<li>The learner chooses "MicroSim" or "static figure or text" and submits.</li>
+<li>The sim shows whether it was correct and the "Why" sentence, naming the parameter or process where there is one.</li>
+<li>After item 8, the sim shows the count correct.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight items, one attempt each, in a fixed order. Correct: "Correct." plus the "Why" sentence. Incorrect: "The better medium is <medium>." plus the "Why" sentence. The correct answer is always revealed after the single attempt. A final score "n of 8 correct" is shown with whether the mastery threshold of 7 was met.</p>
+<p><strong>Starting State:</strong> Item 1 is shown with two choices. The question on screen is "Would a learner understand this better by changing something?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that an interactive simulation is the right medium when the point of the result is a dependence, and the wrong medium for a fact that has no parameter.</p>
+</details>
+<h2 id="embedding-concept-dependencies-and-intelligent-textbooks">Embedding, Concept Dependencies, and Intelligent Textbooks<a class="headerlink" href="#embedding-concept-dependencies-and-intelligent-textbooks" title="Permanent link">&para;</a></h2>
+<p><strong>Embedding simulations</strong> is placing a MicroSim in a page, normally with an HTML <code>iframe</code> element that points at the sim's <code>main.html</code>. An iframe isolates the sim from the page, which is also a safety property: the sim's code cannot reach the rest of the page. The chapter pages of this book embed their sims with a relative path such as <code>../../sims/&lt;sim-id&gt;/main.html</code> and add a link to open the sim fullscreen. The same sim can be embedded in a slide deck, a course page, or a paper's supplementary website without change. When you cite a sim in a paper, give its published address, and include the repository name in the address so that it can be found.</p>
+<p>A <strong>concept dependency</strong> is the relation that one concept must be understood before another can be. A <strong>learning graph</strong> is a directed acyclic graph of concepts in which each edge is a concept dependency. It is the structure that decides the order of a course and, with the chapter's concept impact scores, how much space each concept deserves. This book is organized by one, and its chapters are the groupings of the graph's concepts in dependency order. The reused sim below lets you explore a graph of concept dependencies, including the difference between hard prerequisites and supporting ones.</p>
+<h4 id="diagram-concept-dependencies-graph">Diagram: Concept Dependencies Graph<a class="headerlink" href="#diagram-concept-dependencies-graph" title="Permanent link">&para;</a></h4>
+<iframe src="https://dmccreary.github.io/automating-instructional-design/sims/concept-dependencies/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="https://dmccreary.github.io/automating-instructional-design/sims/concept-dependencies/main.html">Run the Concept Dependencies Graph MicroSim fullscreen</a></p>
+<details>
+<summary>Concept Dependencies Graph (reused MicroSim)</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> concept-dependencies<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> https://dmccreary.github.io/automating-instructional-design/sims/concept-dependencies/<br/>
+<strong>Source Repo:</strong> https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/concept-dependencies<br/>
+<strong>Bloom Level:</strong> Understand<br/>
+<strong>Bloom Verb:</strong> interpret<br/>
+<strong>Learning Objective:</strong> The learner will interpret a directed acyclic graph of concept dependencies, distinguishing hard prerequisites from supporting ones and tracing upstream and downstream concepts.</p>
+<p>Reused from the MicroSim catalog (WHAT match score 0.86).</p>
+</details>
+<p>An <strong>intelligent textbook</strong> is a textbook whose content is interactive and, at higher levels, responsive to the reader. The author's classification of intelligent textbooks distinguishes five levels: static text (level 1), interactive content with MicroSims and learning graphs (level 2), adaptive content driven by student goals and progress (level 3), conversational tutoring (level 4), and autonomous generation of personalized instruction (level 5). This book sits at level 2, and it is organized so that the skills and records needed for level 3 could be added. Level 3 and above require storing student records, which raises privacy questions that the classification flags as a threshold.</p>
+<p><strong>Teaching from research</strong> is turning a result into instruction. The procedure follows the structure of this chapter. Choose one concept from your paper that a newcomer needs. Write the objective and the evidence of mastery. Check the catalog for an existing sim. Specify the one you need, build and verify it, and write a short lesson page that states the prerequisite, the activity, and what the learner should notice. The same sim then serves your talk, your group's onboarding, and your supplementary materials, and a result that others can manipulate is a result that others can build on.</p>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Communicating a result well is choosing the medium that matches the point. When the point is a dependence, an interactive that lets the reader move the parameter does what a static figure cannot, and an agent can build it quickly from a precise specification that you check.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>Research communication</strong> is shaped by the audience. A <strong>slide deck</strong> carries one message and needs a number check.</li>
+<li><strong>An interactive simulation</strong> suits a dependence or a process, and not a fact.</li>
+<li><strong>A MicroSim</strong> is small, single-concept, embeddable, and readable. <strong>p5.js</strong> with built-in controls is the usual library.</li>
+<li><strong>MicroSim generation</strong> is specification first: evidence of mastery, content, and rules, then search, generate, verify, and approve. Only a human marks a sim approved.</li>
+<li><strong>Embedding</strong> is an iframe with a relative path, and the sim is reusable across decks, pages, and papers.</li>
+<li><strong>Concept dependencies and learning graphs</strong> order a course, and <strong>intelligent textbooks</strong> range from static to autonomous, with student data privacy rising at the adaptive level.</li>
+<li><strong>Teaching from research</strong> turns one concept of a paper into an objective, a sim, and a lesson page.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">From a Result to a Lesson</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now say when a result deserves a simulation, read a p5.js sketch that shows a dependence, and write the specification, evidence, and checks from which an agent builds one. That gives a result a form that others can handle, not only read.</p>
+</div>
+<p>The next chapter returns to the question that runs under all of these: how do you know an AI-assisted result is right. Round up one result you are about to rely on, and bring it.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

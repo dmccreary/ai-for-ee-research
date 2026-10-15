@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="How to trust AI-written research code: unit tests, code review, debugging, silent errors, numerical sanity checks, simulation scripts and parameter sweeps, circuit and HDL code with testbenches, and reproducible environments with data provenance.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>13. Simulation, Testing, and Reproducible Code - AI for EE Research</title>
+        <title>Simulation, Testing, and Reproducible Code - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              13. Simulation, Testing, and Reproducible Code
+              Simulation, Testing, and Reproducible Code
             
           </span>
         </div>
@@ -757,6 +757,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-tests-and-which-ones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Tests, and Which Ones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-sanity-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numerical Sanity Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numerical Sanity Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-numerical-sanity-check-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Numerical Sanity Check Judge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-and-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging and Code Review
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-unit-test-selector-for-seeded-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Unit Test Selector for Seeded Bugs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducible-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducible Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1208,6 +1292,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-tests-and-which-ones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Tests, and Which Ones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-sanity-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numerical Sanity Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numerical Sanity Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-numerical-sanity-check-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Numerical Sanity Check Judge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-and-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging and Code Review
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-unit-test-selector-for-seeded-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Unit Test Selector for Seeded Bugs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducible-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducible Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1322,14 +1490,327 @@
 <li><a href="../05-markdown-and-version-control/">Chapter 5: Markdown Project Files and Version Control</a></li>
 <li><a href="../12-data-analysis-scripting/">Chapter 12: AI-Assisted Data Analysis and Scripting</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Code That Runs Is Not Code That Is Right</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+An agent's code almost always runs. The danger is the code that runs and returns a plausible, wrong number. This chapter gives you the tests and sanity checks that turn "it ran" into "it is right". Trust, but verify!</p>
+</div>
+<h2 id="why-tests-and-which-ones">Why Tests, and Which Ones<a class="headerlink" href="#why-tests-and-which-ones" title="Permanent link">&para;</a></h2>
+<p>The central difficulty with AI-written research code is that it fails quietly. A syntax error announces itself. A unit mistake, a wrong index, or a formula that is nearly right produces a clean run and a number that looks reasonable. <strong>Silent errors</strong> are exactly these: defects that cause no exception and no warning and change the result. Research code is especially exposed because the right answer is not known in advance, so nothing signals that the answer is wrong.</p>
+<p>A worked example makes the point. Suppose the signal and noise are powers, and the code converts their ratio to decibels with the voltage formula, <code>20 * log10(ratio)</code>, instead of the power formula, <code>10 * log10(ratio)</code>. For a power ratio of about 316,000 the correct figure is 55.0 dB. The buggy code returns 110.0 dB. The ENOB formula of Chapter 4 then gives <span class="arithmatex">\( (110.0 - 1.76) / 6.02 \approx 18.0 \)</span> bits for a 10-bit converter. The code ran and printed a number to two decimal places. Only a person who knows that a converter cannot exceed its nominal resolution would notice.</p>
+<p>Three defenses work together, and none is sufficient alone. <em>Unit tests</em> check that code returns known answers on chosen inputs. <em>Numerical sanity checks</em> test results against physical and definitional limits. <em>Code review</em> has a person or another agent read the code, and especially the diff, for what it does.</p>
+<p>A <strong>unit test</strong> is a small automated check that calls one function with a chosen input and compares the output with an expected value. In Python the usual tool is pytest, which runs every function whose name begins with <code>test_</code>. A good test of a research function has a known answer, and it is best to build the known answer independently of the code. Before the example: the test generates an ideal 10-bit quantization of a full-scale sine wave, for which the ENOB is, by construction, 10, and checks that the function agrees within 0.1 bit.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">enob</span><span class="w"> </span><span class="kn">import</span> <span class="n">enob</span>            <span class="c1"># the function under test</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">ideal_record</span><span class="p">(</span><span class="n">n_bits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span> <span class="n">cycles</span><span class="o">=</span><span class="mi">127</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">cycles</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>   <span class="c1"># full-scale sine, 0..1</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">n_bits</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_ideal_quantizer_gives_nominal_bits</span><span class="p">():</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">enob</span><span class="p">(</span><span class="n">ideal_record</span><span class="p">())</span> <span class="o">-</span> <span class="mf">10.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.1</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_added_noise_lowers_enob</span><span class="p">():</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>               <span class="c1"># fixed seed: repeatable</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">noisy</span> <span class="o">=</span> <span class="n">ideal_record</span><span class="p">()</span> <span class="o">+</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4096</span><span class="p">)</span>   <span class="c1"># 2 LSB of noise</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">assert</span> <span class="mf">7.0</span> <span class="o">&lt;</span> <span class="n">enob</span><span class="p">(</span><span class="n">noisy</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">7.5</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_short_record_is_rejected</span><span class="p">():</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="n">enob</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</span></code></pre></div>
+<p>The second test shows a useful habit: the expected range follows from a hand calculation (noise of 2 LSB with quantization noise of 0.29 LSB lowers the ENOB by about 2.8 bits). The test therefore encodes understanding, and not just whatever the code currently returns.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Ask the Agent for the Tests First</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Before an agent writes the function, have it write the tests from your acceptance criteria, and read them. A test file is shorter than the code and exposes the agent's understanding of the problem. If a test encodes the wrong expectation, you will find it in two minutes instead of after a week of results.</p>
+</div>
+<h2 id="numerical-sanity-checks">Numerical Sanity Checks<a class="headerlink" href="#numerical-sanity-checks" title="Permanent link">&para;</a></h2>
+<p>A <strong>numerical sanity check</strong> tests a result against something that must be true regardless of the details of the computation. It does not prove that a value is right. It can prove that it is wrong, which is often all you need. Five kinds of check cover most research code.</p>
+<ul>
+<li><em>Definitional limits</em>: an ADC's ENOB cannot exceed its nominal resolution by more than a small margin, and a probability lies between 0 and 1.</li>
+<li><em>Physical limits</em>: efficiency is at most 100 percent, power dissipated in a passive circuit is not negative, and a causal system does not respond before its input.</li>
+<li><em>Hand calculation</em>: an order-of-magnitude result that you can compute on paper. For an RC low-pass filter the cutoff is <span class="arithmatex">\( f_c = 1 / (2\pi R C) \)</span>. With R = 1 kΩ and C = 100 nF that is about 1.59 kHz, so a simulation that reports 15.9 kHz has a unit or parameter error.</li>
+<li><em>Scaling</em>: a linear system doubles its output when the input is doubled, and a quantity that should scale as the square of amplitude should quadruple.</li>
+<li><em>Limit cases</em>: a zero input produces zero output, and a very large resistor draws almost no current.</li>
+</ul>
+<h4 id="diagram-numerical-sanity-check-judge">Diagram: Numerical Sanity Check Judge<a class="headerlink" href="#diagram-numerical-sanity-check-judge" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Numerical Sanity Check Judge</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> numerical-sanity-check-judge<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> judge<br/>
+<strong>Learning Objective:</strong> The learner will judge each of eight reported results as plausible or as violating one of four kinds of sanity check, with at least 7 of 8 judged correctly.</p>
+<p><strong>Prerequisites:</strong> numerical sanity check and its four failing kinds (exceeds a limit, disagrees with a hand calculation, violates scaling, impossible value), all defined in the section "Numerical Sanity Checks" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight results the learner commits one of five verdicts. A verdict is correct when it equals the verdict in Content. Mastery is at least 7 of 8 correct on the first attempt. Reading the hint about each check is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A result printed to many digits is precise and therefore right. (2) A result that is merely different from expectation is an error. (3) A simulation result can be trusted because the simulator is well known.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to apply criteria to a result and name which criterion it fails. Three of the items are plausible, so that the learner does not treat every result as suspect.</p>
+<p><strong>Content:</strong></p>
+<p>All results are invented for illustration and labeled "illustrative".</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Reported result</th>
+<th>Correct verdict</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A 10-bit ADC is reported to have an ENOB of 17.98 bits.</td>
+<td>Exceeds a limit</td>
+<td>ENOB cannot exceed the nominal resolution by more than a small margin. This is the 10 versus 20 log10 error.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A 10-bit ADC is reported to have an ENOB of 9.2 bits at 1 MS/s.</td>
+<td>Plausible</td>
+<td>It is below the nominal resolution by a typical amount.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A low-dropout regulator is reported to have a power efficiency of 104 percent.</td>
+<td>Exceeds a limit</td>
+<td>Efficiency cannot exceed 100 percent.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>An RC low-pass filter with R = 1 kΩ and C = 100 nF is simulated and the -3 dB frequency is 1.59 kHz.</td>
+<td>Plausible</td>
+<td>It agrees with 1 / (2 pi R C) = 1.59 kHz.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>An RC low-pass filter with R = 1 kΩ and C = 100 nF is simulated and the -3 dB frequency is 15.9 kHz.</td>
+<td>Disagrees with a hand calculation</td>
+<td>It is ten times the hand calculation of 1.59 kHz, which suggests a wrong parameter or unit.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A sweep of 64 points reports 64 different supply power values, all between 41 and 49 µW.</td>
+<td>Plausible</td>
+<td>The values are positive, bounded, and vary with the swept parameter as expected.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A linear filter gives an output of 0.05 V for a 0.1 V input and 0.15 V for a 0.2 V input.</td>
+<td>Violates scaling</td>
+<td>Doubling the input of a linear system must double the output, which would be 0.10 V.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The noise standard deviation of a record is reported as -0.8 LSB.</td>
+<td>Impossible value</td>
+<td>A standard deviation is never negative.</td>
+</tr>
+</tbody>
+</table>
+<p>Verdict options: Plausible, Exceeds a limit, Disagrees with a hand calculation, Violates scaling, Impossible value.</p>
+<p><strong>Provenance:</strong> The five kinds of check and the RC formula are from the section "Numerical Sanity Checks" of this chapter. The results are invented for illustration.</p>
+<p><strong>Rules:</strong> Each result has exactly one correct verdict. A result is Plausible when it violates none of the five kinds of check. The RC cutoff is f_c = 1 / (2 pi R C), and the result is judged to disagree when it differs from the hand value by a factor of 2 or more.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads result 1.</li>
+<li>The learner chooses one of the five verdicts and submits.</li>
+<li>The sim shows whether it was correct, the "Why" sentence, and the quick calculation that exposes the problem if there is one.</li>
+<li>After result 8, the sim shows the count correct.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight results, one attempt each, in a fixed order. Correct: "Correct: <verdict>." plus the "Why" sentence. Incorrect: "The verdict is <verdict>." plus the "Why" sentence. The correct verdict is always revealed after the single attempt. A final score "n of 8 correct" is shown with whether the mastery threshold of 7 was met.</p>
+<p><strong>Starting State:</strong> Result 1 is shown with five verdicts and none chosen. The question on screen is "Is this result plausible, and if not, which check does it fail?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states the five kinds of check, the RC cutoff of 1.59 kHz for 1 kΩ and 100 nF, and the 17.98-bit ENOB that results from using 20 log10 on a power ratio.</p>
+</details>
+<h2 id="debugging-and-code-review">Debugging and Code Review<a class="headerlink" href="#debugging-and-code-review" title="Permanent link">&para;</a></h2>
+<p><strong>Debugging</strong> is finding and fixing the cause of a defect. A reliable procedure has four steps: reproduce the failure reliably, isolate it to the smallest input and the smallest piece of code that still fails, form a hypothesis about the cause and test it, and fix it with a new test that fails before the fix and passes after. An agent is good at the mechanical part of this. Your job is to insist on the test, because an agent that "fixes" a bug without a failing test has no evidence that the bug was the thing it changed. Version control helps here, since the Git history can show which commit made the result change.</p>
+<p><strong>Code review</strong> is the reading of code and its changes by someone other than the author. Reviewing an agent's code is easiest as a review of its diff. Look first at what the change touches, then at numbers and constants, then at deleted lines, and last at the logic. Four questions cover most defects: does it do what the specification says, what happens on the boundary input, is every unit stated, and is there anything in the diff you were not asking for? A second agent can do a first pass against a checklist. Treat its findings as leads and not as a verdict.</p>
+<h2 id="simulation-code">Simulation Code<a class="headerlink" href="#simulation-code" title="Permanent link">&para;</a></h2>
+<p>A <strong>simulation script</strong> is a program that sets up a model, runs it, and records the outputs, whether the model is a Python system model or a driver for a circuit simulator. It has a standard shape: read parameters, build the model, run, validate the output, and write results with their parameters. Keeping the parameters in a file, not scattered in code, is the habit that makes later changes safe.</p>
+<p>A <strong>parameter sweep</strong> repeats a simulation over a grid of parameter values to see how a result depends on them. Sweeps are where agents are most useful and where cost grows fastest. Four parameters at eight values each is <span class="arithmatex">\( 8^4 = 4{,}096 \)</span> runs. At 30 seconds per run that is about 34 hours sequentially, or about 4 hours on eight cores. Before launching, estimate the cost, run a coarse grid first, and make the sweep resumable by writing each result as it finishes with its parameters.</p>
+<p><strong>Signal processing</strong> code, such as filtering, FFTs, and windowing, is a frequent source of silent errors because the result depends on subtle choices: the window, the number of samples per cycle, whether the input is coherent. The remedy is the known-answer test: a synthetic sine at a known frequency and amplitude must appear at the expected bin with the expected magnitude.</p>
+<p><strong>Circuit simulation</strong> is the use of a simulator such as ngspice to compute a circuit's behavior from a netlist, and it is a task where an agent can write a netlist in seconds. A netlist is easy to write plausibly and wrongly. The standard remedies are a lint pass for floating nodes and missing end cards, attention to unit suffixes (in SPICE, <code>M</code> means milli and <code>MEG</code> means mega), and, above all, a hand calculation to compare with the simulated result, as with the RC filter.</p>
+<p><strong>HDL code</strong> is code in a hardware description language such as Verilog or VHDL. An agent can write it, and it is the area where a model's training data is thinnest and its errors most subtle, such as latches inferred by accident or mismatched widths. A <strong>testbench</strong> is the HDL code that drives a design with inputs and checks its outputs. <strong>Testbench generation</strong> by an agent saves work, with one important caveat. An agent writes tests for the cases it imagined, so a testbench is only as complete as the agent's reading of the specification. Make it self-checking, with expected values computed independently, and review its coverage against the specification, not against the design.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">The Test That Mirrors the Code</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is asking the same agent to write the code and its tests in one step. It happens because the agent derives both from the same understanding, so a misreading appears in both and the test passes. Give the tests an independent source of truth: a hand calculation, a published value, or your own reading of the specification.</p>
+</div>
+<h4 id="diagram-unit-test-selector-for-seeded-bugs">Diagram: Unit Test Selector for Seeded Bugs<a class="headerlink" href="#diagram-unit-test-selector-for-seeded-bugs" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Unit Test Selector for Seeded Bugs</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> unit-test-selector-seeded-bugs<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Apply<br/>
+<strong>Bloom Verb:</strong> apply<br/>
+<strong>Learning Objective:</strong> The learner will apply the idea of a known-answer test by selecting, from eight candidate unit tests, a set of at most four that exposes all three seeded bugs in a function.</p>
+<p><strong>Prerequisites:</strong> unit test, known-answer test, silent error, and boundary input, all defined in the sections "Why Tests, and Which Ones" and "Debugging and Code Review" above.</p>
+<p><strong>Evidence of Mastery:</strong> The learner selects up to four tests and presses Run. The selection is correct when every one of the three bugs is exposed by at least one selected test and no more than four tests are selected. Mastery is a correct selection on the first run. Reading the function source is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A test that passes proves the function is correct. (2) More tests are always better than well-chosen ones. (3) Tests of typical values catch boundary bugs.</p>
+<p><strong>Instructional Rationale:</strong> Apply-level work needs the learner to use the known-answer idea on a concrete function. The limit of four tests forces the learner to choose tests for what they would reveal and not to pick them all.</p>
+<p><strong>Content:</strong></p>
+<p>The function under test, written in Python with NumPy, computes a signal-to-noise-and-distortion ratio in decibels from signal and noise powers, and its specification states: "Return 10 times the base-10 logarithm of signal power divided by noise power. Raise ValueError if either power is not positive." The buggy implementation is:</p>
+<p><code>def sndr_db(signal, noise): return 20 * np.log10(signal / noise)</code></p>
+<p>It has three seeded bugs, which the sim labels as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Bug</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Uses 20 times the logarithm instead of 10 times.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Does not raise ValueError when the noise power is 0.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Does not raise ValueError when the signal power is negative or 0.</td>
+</tr>
+</tbody>
+</table>
+<p>Candidate tests, each with the expected result under the specification and the bug it exposes:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Test call</th>
+<th>Expected under the specification</th>
+<th>Exposes bug</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>sndr_db(100, 1)</td>
+<td>20.0 dB</td>
+<td>A</td>
+<td>The buggy code returns 40.0.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sndr_db(1, 1)</td>
+<td>0.0 dB</td>
+<td>none</td>
+<td>log10(1) is 0, so every version returns 0.0.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>sndr_db(10, 0)</td>
+<td>raises ValueError</td>
+<td>B</td>
+<td>The buggy code does not raise ValueError for a zero noise power.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>sndr_db(-5, 1)</td>
+<td>raises ValueError</td>
+<td>C</td>
+<td>The buggy code returns NaN and does not raise ValueError.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sndr_db(1000, 1)</td>
+<td>30.0 dB</td>
+<td>A</td>
+<td>The buggy code returns 60.0.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>sndr_db(2, 1)</td>
+<td>3.01 dB, within 0.01</td>
+<td>A</td>
+<td>The buggy code returns 6.02.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>sndr_db(4, 1)</td>
+<td>6.02 dB, within 0.01</td>
+<td>A</td>
+<td>The buggy code returns 12.04.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>sndr_db(0, 1)</td>
+<td>raises ValueError</td>
+<td>C</td>
+<td>The buggy code returns negative infinity and does not raise ValueError.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The function and specification are invented for this exercise and mirror the dB error of the chapter's worked example.</p>
+<p><strong>Rules:</strong> A bug is exposed by a test when the buggy implementation's result differs from the expected result. The three bugs are exposed only by the tests listed against them. A selection exposes all three bugs when it contains at least one of tests 1, 5, 6, 7 (bug A), test 3 (bug B), and at least one of tests 4, 8 (bug C). The minimum correct selection has three tests.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads the specification and the buggy implementation, and the eight candidate tests with their expected results.</li>
+<li>The learner selects up to four tests and presses Run.</li>
+<li>The sim runs the selected tests against the buggy function and reports which pass and which fail, and which bugs remain hidden.</li>
+<li>The learner may change the selection and run again. The sim then reveals the minimum set and the reason each test exposes its bug.</li>
+</ol>
+<p><strong>Feedback:</strong> The learner may run any number of times, and the first run is the one that counts as evidence. After each run: "Bugs exposed: <list>. Bugs hidden: <list>." If more than four tests are selected the sim refuses with "Choose at most four tests." The "Why" sentence for each selected test is shown after the run.</p>
+<p><strong>Starting State:</strong> The eight tests are shown with none selected. The question on screen is "Which tests would reveal what is wrong?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that the 10 versus 20 log10 error is a silent error, that a test needs an independently known answer, and that boundary inputs expose bugs that typical values hide.</p>
+</details>
+<h2 id="reproducible-code">Reproducible Code<a class="headerlink" href="#reproducible-code" title="Permanent link">&para;</a></h2>
+<p><strong>Test data</strong> are the inputs used to exercise code. Three kinds are valuable: <em>synthetic</em> data with a known answer, such as the ideal quantizer record; <em>edge cases</em>, such as an empty record, a constant record, or a record at full scale; and a small <em>golden file</em>, a real captured record whose correct result was verified independently and is stored with the tests, so that a change that alters the result is caught.</p>
+<p>A <strong>reproducible environment</strong> is a recorded and recoverable set of conditions under which code ran: the language version, the library versions, the tool versions (including the simulator and its version), the operating system if it matters, and the random seeds. Pin library versions in a requirements file, seed every random number generator, and record the simulator version in the output. For work that must be reproduced years later, a container image captures the environment more completely.</p>
+<p><strong>Data provenance</strong> is the record of where a result came from: which input files, which code version, which parameters, which environment, and when. A simple and effective form is a run manifest written beside each result.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"results/enob-sweep-2026-10-15.csv"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"inputs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"data/raw/capture-07.csv"</span><span class="p">],</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"code_commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5cc5016"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"window"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hann"</span><span class="p">,</span><span class="w"> </span><span class="nt">"fundamental_bins"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"environment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"requirements.txt@5cc5016"</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">"run_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-15T11:40:00"</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Code documentation</strong> is the written explanation of what code does, for the next reader. For research functions the part that matters most is the contract: what the inputs are, in what units, what is returned, what raises an error, and the equation or source it implements. An agent writes serviceable docstrings quickly, and you should check that the units and the formula it states are the ones the code uses.</p>
+<p><strong>Refactoring</strong> is changing the structure of code without changing its behavior, to make it clearer or easier to extend. It is a safe task for an agent only when tests already exist, because the tests are the definition of "without changing behavior". Run the tests before and after, and review the diff. <strong>Performance profiling</strong> is measuring where a program spends its time, usually with a profiler such as Python's <code>cProfile</code>, before optimizing. Intuition about the bottleneck is frequently wrong, and an agent's guess is no better. Profile first, change the dominant cost, and rerun the tests.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Plausible Is Not a Property of the Number</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice that every check in this chapter compares a result with something outside the code that produced it: a known answer, a physical limit, a hand calculation. A number cannot vouch for itself. Verification always needs a second source that does not share the first one's mistakes.</p>
+</div>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Code from an agent is a hypothesis about how to compute a result, and the practices of this chapter are how you test that hypothesis. They are inexpensive when built in at the start and very expensive to retrofit after a number has appeared in a draft.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>Silent errors</strong> run cleanly and return wrong numbers. A 10 versus 20 log10 mistake turned a 10-bit converter into an 18-bit one.</li>
+<li><strong>Unit tests</strong> use known answers built independently of the code, and are best written before the code.</li>
+<li><strong>Numerical sanity checks</strong> compare results with definitional and physical limits, hand calculations, scaling, and limit cases.</li>
+<li><strong>Debugging</strong> reproduces, isolates, hypothesizes, and fixes with a failing test, and <strong>code review</strong> reads the diff.</li>
+<li><strong>Simulation scripts and parameter sweeps</strong> keep parameters in files, estimate cost first, and write results as they finish.</li>
+<li><strong>Signal processing, circuit simulation, HDL code, and testbenches</strong> each need an independent check, because an agent tests what it imagined.</li>
+<li><strong>Test data, reproducible environments, and data provenance</strong> make a result recoverable, and <strong>documentation, refactoring, and profiling</strong> keep code maintainable.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Code You Can Defend</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now write a known-answer unit test, name the sanity check that a bad result fails, pick tests that expose seeded bugs, and write a run manifest that ties a result to its code and data. That is the evidence that lets an AI-written script into a paper.</p>
+</div>
+<p>The next chapter moves from verifying results to producing ideas, using agents as thinking partners without surrendering your judgment. Round up a half-formed research topic, and bring it.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
