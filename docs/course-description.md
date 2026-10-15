@@ -51,6 +51,13 @@ studies of real work**, including AI-generated interactive simulations
 agents, and it treats effective, creative, responsible, and ethical use as
 equal goals.
 
+The course also teaches **personal knowledge graphs**: a researcher's own
+notes, papers, experiments, people, and projects, represented as linked
+entities and relationships rather than as a folder of files. A personal
+knowledge graph gives agents a structured, queryable memory of the researcher's
+work, and the course shows how to build one with an agent, query it, use it to
+ground a model's answers, and decide what an agent may be allowed to see.
+
 The course also surveys the new class of **always-on personal agents** that
 arrived in 2026, because researchers will meet them in their own labs whether
 or not a course introduces them. These are hosted or self-hosted agents that
@@ -98,6 +105,9 @@ are collected in the appendix [Personal Agents](appendices/personal-agents/index
     Dots, Muse, Claude Cowork, OpenClaw, and Hermes Agent, including their
     architectures, permission and approval models, multi-agent features,
     pricing, and data-handling trade-offs
+18. Personal knowledge graphs: representing a researcher's notes, papers, and
+    projects as entities and relationships, building them with agents, querying
+    them, using them as grounded agent memory, and protecting their privacy
 
 ## Topics Not Covered
 
@@ -145,6 +155,9 @@ After completing this course, students will be able to:
 - Describe how an always-on personal agent differs from a session-based
   assistant, including where it runs, how it signs in to tools, and how it
   keeps memory between sessions
+- Explain how a personal knowledge graph differs from a folder of notes, and
+  how entities, relationships, and backlinks make a researcher's knowledge
+  queryable by an agent
 - Explain how splitting work between planning and execution agents reduces
   errors and cost
 - Describe the researcher's responsibilities when AI contributes to a result,
@@ -165,6 +178,9 @@ After completing this course, students will be able to:
   their own voice
 - Generate an interactive simulation that illustrates a concept from their
   research
+- Build a personal knowledge graph from their own research notes and papers
+  using an agent for entity extraction, then query it to ground an agent's
+  answers
 
 ### Analyze
 *Breaking material into constituent parts and determining how the parts relate to one another and to an overall structure or purpose.*
@@ -199,6 +215,8 @@ After completing this course, students will be able to:
 - Assess the security and data-handling risks of giving a personal agent
   access to research accounts, unpublished data, and licensed tools before
   adopting it
+- Decide which parts of a personal knowledge graph an agent may read, and
+  assess the privacy risk of exposing unpublished results through it
 
 ### Create
 *Putting elements together to form a coherent or functional whole; reorganizing elements into a new pattern or structure.*

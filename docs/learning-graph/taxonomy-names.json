@@ -13,5 +13,7 @@
   "COMM": "MicroSims and Research Communication",
   "VERIF": "Verification and Reproducibility",
   "ETHIC": "Responsible and Ethical Use",
-  "CASE": "Case Studies and Capstone"
+  "CASE": "Case Studies and Capstone",
+  "PERS": "Always-On Personal Agents",
+  "PKG": "Personal Knowledge Graphs"
 }

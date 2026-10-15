@@ -8,7 +8,7 @@
   --mascot-secondary: #8A6D00;   /* dark gold (white-text safe) */
   --mascot-bg:        #FBEAEE;   /* light maroon tint           */
   --mascot-border:    #9E2A3F;   /* medium maroon               */
-  --mascot-size: 90px;
+  --mascot-height: 90px;
 }
 
 /* ---- Shared base for all mascot admonitions ---- */
@@ -132,13 +132,12 @@
 
 /* ---- Mascot image floated LEFT of admonition body text ---- */
 /* The .md-typeset prefix outranks Material's `.md-typeset img { height: auto }`,
-   which otherwise stretches tall poses well past --mascot-size. */
+   while width: auto preserves each tightly trimmed pose's aspect ratio. */
 .md-typeset img.mascot-admonition-img {
   float: left;
-  width: var(--mascot-size);
-  height: var(--mascot-size);
+  width: auto;
+  height: var(--mascot-height);
   /* margin: top right bottom left */
   margin: 0 .5em 0 0;
-  object-fit: contain;
   pointer-events: none;  /* belt-and-suspenders; real exclusion is via glightbox skip_classes */
 }

@@ -2,8 +2,8 @@
   "title": "AI for EE Research: From Researcher to Orchestrator",
   "description": "A hands-on learning graph for graduate students in electrical and computer engineering who want to use generative AI, Markdown project files, agent skills, and teams of planning and execution agents for literature search, data analysis, brainstorming, coding, and manuscript preparation.",
   "creator": "Dan McCreary",
-  "date": "2026-10-10",
-  "version": "1.0",
+  "date": "2026-10-15",
+  "version": "1.2",
   "format": "Learning Graph JSON v1.0",
   "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
   "license": "CC BY-NC-SA 4.0 DEED"

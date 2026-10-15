@@ -2,48 +2,52 @@
 
 ## Overview
 
-- **Total Concepts**: 350
-- **Number of Taxonomies**: 15
-- **Average Concepts per Taxonomy**: 23.3
+- **Total Concepts**: 379
+- **Number of Taxonomies**: 17
+- **Average Concepts per Taxonomy**: 22.3
 
 ## Distribution Summary
 
 | Category | TaxonomyID | Count | Percentage | Status |
 |----------|-----------|-------|------------|--------|
-| Agents and Tool Use | AGENT | 35 | 10.0% | ✅ |
-| Agent Teams and Orchestration | ORCH | 35 | 10.0% | ✅ |
-| How Language Models Work | LLM | 30 | 8.6% | ✅ |
-| Prompting and Context Engineering | PROMPT | 30 | 8.6% | ✅ |
-| Markdown and Project Knowledge | MDKB | 30 | 8.6% | ✅ |
-| Data Analysis and Scientific Coding | DATA | 30 | 8.6% | ✅ |
-| Agent Skills | SKILL | 25 | 7.1% | ✅ |
-| Responsible and Ethical Use | ETHIC | 24 | 6.9% | ✅ |
-| Foundations of AI-Assisted Research | FOUND | 20 | 5.7% | ✅ |
-| Literature Search and Synthesis | LIT | 20 | 5.7% | ✅ |
-| Manuscript Preparation | MANU | 19 | 5.4% | ✅ |
-| Verification and Reproducibility | VERIF | 16 | 4.6% | ✅ |
-| Case Studies and Capstone | CASE | 14 | 4.0% | ✅ |
-| MicroSims and Research Communication | COMM | 12 | 3.4% | ✅ |
-| Brainstorming and Problem Framing | BRAIN | 10 | 2.9% | ℹ️ Under |
+| Agents and Tool Use | AGENT | 35 | 9.2% | ✅ |
+| Agent Teams and Orchestration | ORCH | 35 | 9.2% | ✅ |
+| How Language Models Work | LLM | 30 | 7.9% | ✅ |
+| Prompting and Context Engineering | PROMPT | 30 | 7.9% | ✅ |
+| Markdown and Project Knowledge | MDKB | 30 | 7.9% | ✅ |
+| Data Analysis and Scientific Coding | DATA | 30 | 7.9% | ✅ |
+| Agent Skills | SKILL | 25 | 6.6% | ✅ |
+| Responsible and Ethical Use | ETHIC | 24 | 6.3% | ✅ |
+| Foundations of AI-Assisted Research | FOUND | 20 | 5.3% | ✅ |
+| Literature Search and Synthesis | LIT | 20 | 5.3% | ✅ |
+| Manuscript Preparation | MANU | 19 | 5.0% | ✅ |
+| Always-On Personal Agents | PERS | 19 | 5.0% | ✅ |
+| Verification and Reproducibility | VERIF | 16 | 4.2% | ✅ |
+| Case Studies and Capstone | CASE | 14 | 3.7% | ✅ |
+| MicroSims and Research Communication | COMM | 12 | 3.2% | ✅ |
+| Brainstorming and Problem Framing | BRAIN | 10 | 2.6% | ℹ️ Under |
+| Personal Knowledge Graphs | PKG | 10 | 2.6% | ℹ️ Under |
 
 ## Visual Distribution
 
 ```
-Agents and Tool Use       █████  35 ( 10.0%)
-Agent Teams and Orchestra █████  35 ( 10.0%)
-How Language Models Work  ████  30 (  8.6%)
-Prompting and Context Eng ████  30 (  8.6%)
-Markdown and Project Know ████  30 (  8.6%)
-Data Analysis and Scienti ████  30 (  8.6%)
-Agent Skills              ███  25 (  7.1%)
-Responsible and Ethical U ███  24 (  6.9%)
-Foundations of AI-Assiste ██  20 (  5.7%)
-Literature Search and Syn ██  20 (  5.7%)
-Manuscript Preparation    ██  19 (  5.4%)
-Verification and Reproduc ██  16 (  4.6%)
-Case Studies and Capstone ██  14 (  4.0%)
-MicroSims and Research Co █  12 (  3.4%)
-Brainstorming and Problem █  10 (  2.9%)
+Agents and Tool Use       ████  35 (  9.2%)
+Agent Teams and Orchestra ████  35 (  9.2%)
+How Language Models Work  ███  30 (  7.9%)
+Prompting and Context Eng ███  30 (  7.9%)
+Markdown and Project Know ███  30 (  7.9%)
+Data Analysis and Scienti ███  30 (  7.9%)
+Agent Skills              ███  25 (  6.6%)
+Responsible and Ethical U ███  24 (  6.3%)
+Foundations of AI-Assiste ██  20 (  5.3%)
+Literature Search and Syn ██  20 (  5.3%)
+Manuscript Preparation    ██  19 (  5.0%)
+Always-On Personal Agents ██  19 (  5.0%)
+Verification and Reproduc ██  16 (  4.2%)
+Case Studies and Capstone █  14 (  3.7%)
+MicroSims and Research Co █  12 (  3.2%)
+Brainstorming and Problem █  10 (  2.6%)
+Personal Knowledge Graphs █  10 (  2.6%)
 ```
 
 ## Balance Analysis
@@ -54,14 +58,16 @@ All categories are under the 30% threshold. Good balance!
 
 ### ℹ️ Under-Represented Categories (<3%)
 
-- **Brainstorming and Problem Framing** (BRAIN): 10 concepts (2.9%)
+- **Brainstorming and Problem Framing** (BRAIN): 10 concepts (2.6%)
+  - *Note*: Small categories are acceptable for specialized topics
+- **Personal Knowledge Graphs** (PKG): 10 concepts (2.6%)
   - *Note*: Small categories are acceptable for specialized topics
 
 ## Category Details
 
 ### Agents and Tool Use (AGENT)
 
-**Count**: 35 concepts (10.0%)
+**Count**: 35 concepts (9.2%)
 
 **Concepts**:
 
@@ -84,7 +90,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Agent Teams and Orchestration (ORCH)
 
-**Count**: 35 concepts (10.0%)
+**Count**: 35 concepts (9.2%)
 
 **Concepts**:
 
@@ -107,7 +113,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### How Language Models Work (LLM)
 
-**Count**: 30 concepts (8.6%)
+**Count**: 30 concepts (7.9%)
 
 **Concepts**:
 
@@ -130,7 +136,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Prompting and Context Engineering (PROMPT)
 
-**Count**: 30 concepts (8.6%)
+**Count**: 30 concepts (7.9%)
 
 **Concepts**:
 
@@ -153,7 +159,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Markdown and Project Knowledge (MDKB)
 
-**Count**: 30 concepts (8.6%)
+**Count**: 30 concepts (7.9%)
 
 **Concepts**:
 
@@ -176,7 +182,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Data Analysis and Scientific Coding (DATA)
 
-**Count**: 30 concepts (8.6%)
+**Count**: 30 concepts (7.9%)
 
 **Concepts**:
 
@@ -199,7 +205,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Agent Skills (SKILL)
 
-**Count**: 25 concepts (7.1%)
+**Count**: 25 concepts (6.6%)
 
 **Concepts**:
 
@@ -222,7 +228,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Responsible and Ethical Use (ETHIC)
 
-**Count**: 24 concepts (6.9%)
+**Count**: 24 concepts (6.3%)
 
 **Concepts**:
 
@@ -245,7 +251,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Foundations of AI-Assisted Research (FOUND)
 
-**Count**: 20 concepts (5.7%)
+**Count**: 20 concepts (5.3%)
 
 **Concepts**:
 
@@ -268,7 +274,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Literature Search and Synthesis (LIT)
 
-**Count**: 20 concepts (5.7%)
+**Count**: 20 concepts (5.3%)
 
 **Concepts**:
 
@@ -291,7 +297,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Manuscript Preparation (MANU)
 
-**Count**: 19 concepts (5.4%)
+**Count**: 19 concepts (5.0%)
 
 **Concepts**:
 
@@ -312,9 +318,32 @@ All categories are under the 30% threshold. Good balance!
 - 280. Grammar and Clarity
 - *...and 4 more*
 
+### Always-On Personal Agents (PERS)
+
+**Count**: 19 concepts (5.0%)
+
+**Concepts**:
+
+- 351. Personal Agent
+- 352. Always-On Agent
+- 353. Cloud Agent Computer
+- 354. Self-Hosted Agent
+- 355. Teachable Routine
+- 356. Delegated Sign-In
+- 357. Grok Bot
+- 358. Dots
+- 359. Muse
+- 360. Claude Cowork
+- 361. OpenClaw
+- 362. Hermes Agent
+- 363. Agent Blast Radius
+- 364. Usage Metering
+- 365. Agent Comparison Criteria
+- *...and 4 more*
+
 ### Verification and Reproducibility (VERIF)
 
-**Count**: 16 concepts (4.6%)
+**Count**: 16 concepts (4.2%)
 
 **Concepts**:
 
@@ -337,7 +366,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Case Studies and Capstone (CASE)
 
-**Count**: 14 concepts (4.0%)
+**Count**: 14 concepts (3.7%)
 
 **Concepts**:
 
@@ -358,7 +387,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### MicroSims and Research Communication (COMM)
 
-**Count**: 12 concepts (3.4%)
+**Count**: 12 concepts (3.2%)
 
 **Concepts**:
 
@@ -377,7 +406,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Brainstorming and Problem Framing (BRAIN)
 
-**Count**: 10 concepts (2.9%)
+**Count**: 10 concepts (2.6%)
 
 **Concepts**:
 
@@ -392,9 +421,26 @@ All categories are under the 30% threshold. Good balance!
 - 264. Idea Ranking
 - 265. Novelty Check
 
+### Personal Knowledge Graphs (PKG)
+
+**Count**: 10 concepts (2.6%)
+
+**Concepts**:
+
+- 370. Knowledge Graph
+- 371. Entity and Relationship
+- 372. Personal Knowledge Graph
+- 373. Graph Schema
+- 374. Backlinks
+- 375. Entity Extraction
+- 376. Graph Querying
+- 377. Graph Retrieval Augmented Generation
+- 378. Knowledge Graph Memory
+- 379. Personal Knowledge Privacy
+
 ## Recommendations
 
-- ✅ **Excellent balance**: Categories are evenly distributed (spread: 7.1%)
+- ✅ **Excellent balance**: Categories are evenly distributed (spread: 6.6%)
 - ✅ **MISC category minimal**: Good categorization specificity
 
 ### Educational Use Recommendations

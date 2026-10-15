@@ -349,3 +349,32 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 348,Group Workflow,19|181|191,CASE
 349,Presentation of Results,345|285,CASE
 350,Adoption Plan,330|347|348,CASE
+351,Personal Agent,12|158,PERS
+352,Always-On Agent,351|165,PERS
+353,Cloud Agent Computer,352|145,PERS
+354,Self-Hosted Agent,351|39,PERS
+355,Teachable Routine,351|164,PERS
+356,Delegated Sign-In,353|170,PERS
+357,Grok Bot,352|353|355|356,PERS
+358,Dots,352|353|194|356,PERS
+359,Muse,352|353|146,PERS
+360,Claude Cowork,351|140|152,PERS
+361,OpenClaw,354|152,PERS
+362,Hermes Agent,354|111,PERS
+363,Agent Blast Radius,353|169,PERS
+364,Usage Metering,163|40,PERS
+365,Agent Comparison Criteria,357|358|359|360|361|362,PERS
+366,Vendor Claim Verification,365|297,PERS
+367,Agent Data Exposure,353|319|320,PERS
+368,Overnight Activity Audit,352|308|160,PERS
+369,Personal Agent Selection,365|363|364|367,PERS
+370,Knowledge Graph,100|101,PKG
+371,Entity and Relationship,370,PKG
+372,Personal Knowledge Graph,370|371|95,PKG
+373,Graph Schema,371|92,PKG
+374,Backlinks,372|101,PKG
+375,Entity Extraction,372|373|31,PKG
+376,Graph Querying,372|45,PKG
+377,Graph Retrieval Augmented Generation,376|44,PKG
+378,Knowledge Graph Memory,372|150|351,PKG
+379,Personal Knowledge Privacy,372|319,PKG

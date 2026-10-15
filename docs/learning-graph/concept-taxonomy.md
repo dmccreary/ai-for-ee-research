@@ -1,12 +1,14 @@
 # Concept Taxonomy
 
-The 350 concepts in the *AI for EE Research* learning graph are organized into
-15 categories. Each concept has exactly one primary category, identified by a
+The 379 concepts in the *AI for EE Research* learning graph are organized into
+17 categories. Each concept has exactly one primary category, identified by a
 3-6 letter **TaxonomyID** that is used in `learning-graph.csv` and as the group
 key in `learning-graph.json`. The categories follow the course's teaching
 order: foundations first, then how models work, then the Markdown and skill
 building blocks, then agents and orchestration, then the five research tasks,
-and finally verification, ethics, and the capstone.
+and finally verification, ethics, and the capstone. The always-on personal
+agents and personal knowledge graph categories were added afterward and are
+numbered last so that existing concept IDs did not change.
 
 No category holds more than 10% of the concepts, well under the 30% ceiling.
 
@@ -97,6 +99,23 @@ accountability, and over-reliance.
 Concepts 337-350. The MicroSims arXiv paper, the intelligent textbook
 project, lessons learned, agent team design, and the capstone project.
 
+### PERS — Always-On Personal Agents
+
+Concepts 351-369. Always-on, cloud-hosted and self-hosted personal agents:
+persistent cloud computers, delegated sign-in, taught routines, the individual
+products (Grok Bot, Dots, Muse, Claude Cowork, OpenClaw, and Hermes Agent),
+blast radius, usage metering, comparison criteria, vendor-claim verification,
+research-data exposure, overnight audits, and agent selection. See the
+appendix [Personal Agents](../appendices/personal-agents/index.md).
+
+### PKG — Personal Knowledge Graphs
+
+Concepts 370-379. Knowledge graphs, entities and relationships, personal
+knowledge graphs built from a researcher's own notes and papers, graph schema,
+backlinks, entity extraction, graph querying, graph retrieval augmented
+generation, knowledge graph memory for agents, and the privacy of personal
+knowledge.
+
 ## TaxonomyID Reference
 
 | TaxonomyID | Category Name | Concept ID Range |
@@ -116,3 +135,5 @@ project, lessons learned, agent team design, and the capstone project.
 | VERIF | Verification and Reproducibility | 297-312 |
 | ETHIC | Responsible and Ethical Use | 313-336 |
 | CASE | Case Studies and Capstone | 337-350 |
+| PERS | Always-On Personal Agents | 351-369 |
+| PKG | Personal Knowledge Graphs | 370-379 |

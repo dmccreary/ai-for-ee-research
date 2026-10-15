@@ -352,3 +352,32 @@ This is the numbered list of concepts for the *AI for EE Research* learning grap
 348. Group Workflow
 349. Presentation of Results
 350. Adoption Plan
+351. Personal Agent
+352. Always-On Agent
+353. Cloud Agent Computer
+354. Self-Hosted Agent
+355. Teachable Routine
+356. Delegated Sign-In
+357. Grok Bot
+358. Dots
+359. Muse
+360. Claude Cowork
+361. OpenClaw
+362. Hermes Agent
+363. Agent Blast Radius
+364. Usage Metering
+365. Agent Comparison Criteria
+366. Vendor Claim Verification
+367. Agent Data Exposure
+368. Overnight Activity Audit
+369. Personal Agent Selection
+370. Knowledge Graph
+371. Entity and Relationship
+372. Personal Knowledge Graph
+373. Graph Schema
+374. Backlinks
+375. Entity Extraction
+376. Graph Querying
+377. Graph Retrieval Augmented Generation
+378. Knowledge Graph Memory
+379. Personal Knowledge Privacy

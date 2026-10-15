@@ -2,12 +2,12 @@
 
 ## Overview
 
-- **Total Concepts**: 350
+- **Total Concepts**: 379
 - **Foundational Concepts** (no prerequisites, other concepts depend on them): 5
-- **Terminal Nodes** (nothing depends on them, but have prerequisites): 115
+- **Terminal Nodes** (nothing depends on them, but have prerequisites): 116
 - **Orphaned Nodes** (completely disconnected, no edges): 0
-- **Concepts with Dependencies**: 345
-- **Average Dependencies per Concept**: 1.73
+- **Concepts with Dependencies**: 374
+- **Average Dependencies per Concept**: 1.79
 
 ## Graph Structure Validation
 
@@ -27,33 +27,34 @@ These concepts have no prerequisites:
 
 ## Dependency Chain Analysis
 
-- **Maximum Dependency Chain Length**: 17
+- **Maximum Dependency Chain Length**: 18
 
 ### Longest Learning Path:
 
 1. **Generative AI** (ID: 9)
 2. **Large Language Model** (ID: 10)
-3. **Prompt** (ID: 25)
-4. **Completion** (ID: 26)
-5. **Prompt Engineering** (ID: 51)
-6. **Clear Instructions** (ID: 53)
-7. **Constraints** (ID: 59)
-8. **Acceptance Criteria** (ID: 60)
-9. **Task Specification** (ID: 74)
-10. **Specification File** (ID: 96)
-11. **Knowledge Base** (ID: 100)
-12. **Cross References** (ID: 101)
-13. **Concept Dependency** (ID: 296)
-14. **Learning Graph** (ID: 289)
-15. **Intelligent Textbook** (ID: 288)
-16. **Teaching From Research** (ID: 293)
-17. **Open Educational Resources** (ID: 294)
+3. **AI Assistant** (ID: 11)
+4. **AI Agent** (ID: 12)
+5. **Tool Use** (ID: 137)
+6. **Shell Commands** (ID: 141)
+7. **Code Execution** (ID: 144)
+8. **Sandboxing** (ID: 145)
+9. **Permissions** (ID: 146)
+10. **Permission Modes** (ID: 147)
+11. **Agent Autonomy** (ID: 158)
+12. **Personal Agent** (ID: 351)
+13. **Always-On Agent** (ID: 352)
+14. **Cloud Agent Computer** (ID: 353)
+15. **Delegated Sign-In** (ID: 356)
+16. **Grok Bot** (ID: 357)
+17. **Agent Comparison Criteria** (ID: 365)
+18. **Vendor Claim Verification** (ID: 366)
 
 ## Terminal Nodes Analysis
 
 Terminal nodes are concepts that nothing else depends on but have prerequisites. They represent natural endpoints of learning paths — culminating or specialized concepts.
 
-- **Total Terminal Nodes**: 115 (32.9% of all concepts)
+- **Total Terminal Nodes**: 116 (30.6% of all concepts)
 - **Healthy Range**: 5-40% of total concepts
 
 Concepts at the end of learning paths:
@@ -65,7 +66,6 @@ Concepts at the end of learning paths:
 - **38**: Local Model
 - **41**: Rate Limit
 - **42**: Latency
-- **44**: Retrieval Augmented Generation
 - **46**: Model Benchmark
 - **50**: Model Version Drift
 - **64**: Negative Instructions
@@ -78,8 +78,9 @@ Concepts at the end of learning paths:
 - **76**: Clarifying Questions
 - **77**: Self Critique
 - **84**: Headings
+- **86**: Code Blocks
 
-*...and 95 more*
+*...and 96 more*
 
 ## Orphaned Nodes Analysis
 
@@ -103,29 +104,31 @@ Top 10 concepts that are prerequisites for the most other concepts:
 |------|-----------|---------------|----------|
 | 1 | 1 | Research Workflow | 16 |
 | 2 | 10 | Large Language Model | 11 |
-| 3 | 12 | AI Agent | 10 |
+| 3 | 12 | AI Agent | 11 |
 | 4 | 51 | Prompt Engineering | 10 |
 | 5 | 81 | Markdown | 10 |
 | 6 | 60 | Acceptance Criteria | 9 |
-| 7 | 137 | Tool Use | 9 |
-| 8 | 111 | Agent Skill | 8 |
-| 9 | 313 | Responsible AI Use | 8 |
-| 10 | 2 | Literature Search | 7 |
+| 7 | 111 | Agent Skill | 9 |
+| 8 | 137 | Tool Use | 9 |
+| 9 | 297 | Verification | 8 |
+| 10 | 313 | Responsible AI Use | 8 |
 
 ## Outdegree Distribution
 
 | Dependencies | Number of Concepts |
 |--------------|--------------------|
 | 0 | 5 |
-| 1 | 115 |
-| 2 | 209 |
-| 3 | 21 |
+| 1 | 116 |
+| 2 | 226 |
+| 3 | 28 |
+| 4 | 3 |
+| 6 | 1 |
 
 ## Recommendations
 
-- ✅ **Terminal node percentage** (32.9%): Within healthy range (5-40%)
+- ✅ **Terminal node percentage** (30.6%): Within healthy range (5-40%)
 - ✅ **DAG structure verified**: Graph supports valid learning progressions
-- ℹ️ **Long dependency chains** (17): Ensure students can follow extended learning paths
+- ℹ️ **Long dependency chains** (18): Ensure students can follow extended learning paths
 
 ---
 

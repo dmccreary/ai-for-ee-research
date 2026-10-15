@@ -70,13 +70,13 @@ to each concept based on the concept type.  We use generative AI to
 create about a dozen categories for our concepts and then place each concept
 into a single primary classifier.
 
-- A concept classifier taxonomy with 15 categories
+- A concept classifier taxonomy with 17 categories
 - Category organization - foundational elements first, course capstone project ideas last
-- Balanced categories (2.9% - 10.0% each)
+- Balanced categories (2.6% - 9.2% each)
 - All categories under 30% threshold
 - Pedagogical flow recommendations
 - Clear 3-5 letter abbreviations for use in CSV file
-- No Miscellaneous category was needed: all 350 concepts have a specific home
+- No Miscellaneous category was needed: all 379 concepts have a specific home
 
 [View the Concept Taxonomy](concept-taxonomy.md)
 

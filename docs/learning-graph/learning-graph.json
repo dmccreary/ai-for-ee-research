@@ -3,8 +3,8 @@
     "title": "AI for EE Research: From Researcher to Orchestrator",
     "description": "A hands-on learning graph for graduate students in electrical and computer engineering who want to use generative AI, Markdown project files, agent skills, and teams of planning and execution agents for literature search, data analysis, brainstorming, coding, and manuscript preparation.",
     "creator": "Dan McCreary",
-    "date": "2026-10-10",
-    "version": "1.0",
+    "date": "2026-10-15",
+    "version": "1.2",
     "format": "Learning Graph JSON v1.0",
     "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
     "license": "CC BY-NC-SA 4.0 DEED"
@@ -114,6 +114,20 @@
       "font": {
         "color": "white"
       }
+    },
+    "PERS": {
+      "classifierName": "Always-On Personal Agents",
+      "color": "OliveDrab",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PKG": {
+      "classifierName": "Personal Knowledge Graphs",
+      "color": "Indigo",
+      "font": {
+        "color": "white"
+      }
     }
   },
   "nodes": [
@@ -122,7 +136,7 @@
       "label": "Research Workflow",
       "group": "FOUND",
       "shape": "box",
-      "cis": 920
+      "cis": 1144
     },
     {
       "id": 2,
@@ -152,13 +166,13 @@
       "id": 6,
       "label": "Manuscript Preparation",
       "group": "FOUND",
-      "cis": 54
+      "cis": 56
     },
     {
       "id": 7,
       "label": "Research Question",
       "group": "FOUND",
-      "cis": 367
+      "cis": 459
     },
     {
       "id": 8,
@@ -171,25 +185,25 @@
       "label": "Generative AI",
       "group": "FOUND",
       "shape": "box",
-      "cis": 1784
+      "cis": 2929
     },
     {
       "id": 10,
       "label": "Large Language Model",
       "group": "FOUND",
-      "cis": 1783
+      "cis": 2928
     },
     {
       "id": 11,
       "label": "AI Assistant",
       "group": "FOUND",
-      "cis": 461
+      "cis": 916
     },
     {
       "id": 12,
       "label": "AI Agent",
       "group": "FOUND",
-      "cis": 395
+      "cis": 837
     },
     {
       "id": 13,
@@ -207,13 +221,13 @@
       "id": 15,
       "label": "Human in the Loop",
       "group": "FOUND",
-      "cis": 47
+      "cis": 56
     },
     {
       "id": 16,
       "label": "Task Decomposition",
       "group": "FOUND",
-      "cis": 167
+      "cis": 212
     },
     {
       "id": 17,
@@ -237,13 +251,13 @@
       "id": 20,
       "label": "Electrical Engineering Research",
       "group": "FOUND",
-      "cis": 56
+      "cis": 93
     },
     {
       "id": 21,
       "label": "Token",
       "group": "LLM",
-      "cis": 112
+      "cis": 164
     },
     {
       "id": 22,
@@ -255,7 +269,7 @@
       "id": 23,
       "label": "Context Window",
       "group": "LLM",
-      "cis": 100
+      "cis": 145
     },
     {
       "id": 24,
@@ -267,19 +281,19 @@
       "id": 25,
       "label": "Prompt",
       "group": "LLM",
-      "cis": 1109
+      "cis": 1718
     },
     {
       "id": 26,
       "label": "Completion",
       "group": "LLM",
-      "cis": 524
+      "cis": 663
     },
     {
       "id": 27,
       "label": "System Prompt",
       "group": "LLM",
-      "cis": 8
+      "cis": 24
     },
     {
       "id": 28,
@@ -291,7 +305,7 @@
       "id": 29,
       "label": "Training Data",
       "group": "LLM",
-      "cis": 70
+      "cis": 77
     },
     {
       "id": 30,
@@ -303,7 +317,7 @@
       "id": 31,
       "label": "Hallucination",
       "group": "LLM",
-      "cis": 65
+      "cis": 72
     },
     {
       "id": 32,
@@ -351,13 +365,13 @@
       "id": 39,
       "label": "API Access",
       "group": "LLM",
-      "cis": 12
+      "cis": 34
     },
     {
       "id": 40,
       "label": "Token Cost",
       "group": "LLM",
-      "cis": 7
+      "cis": 11
     },
     {
       "id": 41,
@@ -375,19 +389,19 @@
       "id": 43,
       "label": "Embedding",
       "group": "LLM",
-      "cis": 3
+      "cis": 6
     },
     {
       "id": 44,
       "label": "Retrieval Augmented Generation",
       "group": "LLM",
-      "cis": 1
+      "cis": 2
     },
     {
       "id": 45,
       "label": "Vector Search",
       "group": "LLM",
-      "cis": 2
+      "cis": 5
     },
     {
       "id": 46,
@@ -399,20 +413,20 @@
       "id": 47,
       "label": "Model Context Protocol",
       "group": "LLM",
-      "cis": 2
+      "cis": 10
     },
     {
       "id": 48,
       "label": "Chat Interface",
       "group": "LLM",
-      "cis": 18
+      "cis": 22
     },
     {
       "id": 49,
       "label": "Command Line Interface",
       "group": "LLM",
       "shape": "box",
-      "cis": 21
+      "cis": 172
     },
     {
       "id": 50,
@@ -424,19 +438,19 @@
       "id": 51,
       "label": "Prompt Engineering",
       "group": "PROMPT",
-      "cis": 447
+      "cis": 579
     },
     {
       "id": 52,
       "label": "Context Engineering",
       "group": "PROMPT",
-      "cis": 41
+      "cis": 81
     },
     {
       "id": 53,
       "label": "Clear Instructions",
       "group": "PROMPT",
-      "cis": 348
+      "cis": 440
     },
     {
       "id": 54,
@@ -466,19 +480,19 @@
       "id": 58,
       "label": "Output Format",
       "group": "PROMPT",
-      "cis": 58
+      "cis": 62
     },
     {
       "id": 59,
       "label": "Constraints",
       "group": "PROMPT",
-      "cis": 179
+      "cis": 226
     },
     {
       "id": 60,
       "label": "Acceptance Criteria",
       "group": "PROMPT",
-      "cis": 176
+      "cis": 223
     },
     {
       "id": 61,
@@ -490,7 +504,7 @@
       "id": 62,
       "label": "Prompt Template",
       "group": "PROMPT",
-      "cis": 46
+      "cis": 50
     },
     {
       "id": 63,
@@ -526,7 +540,7 @@
       "id": 68,
       "label": "Conversation History",
       "group": "PROMPT",
-      "cis": 17
+      "cis": 21
     },
     {
       "id": 69,
@@ -544,7 +558,7 @@
       "id": 71,
       "label": "Prompt Injection",
       "group": "PROMPT",
-      "cis": 5
+      "cis": 21
     },
     {
       "id": 72,
@@ -562,7 +576,7 @@
       "id": 74,
       "label": "Task Specification",
       "group": "PROMPT",
-      "cis": 64
+      "cis": 101
     },
     {
       "id": 75,
@@ -598,26 +612,26 @@
       "id": 80,
       "label": "Domain Vocabulary",
       "group": "PROMPT",
-      "cis": 26
+      "cis": 63
     },
     {
       "id": 81,
       "label": "Markdown",
       "group": "MDKB",
-      "cis": 201
+      "cis": 349
     },
     {
       "id": 82,
       "label": "Plain Text",
       "group": "MDKB",
       "shape": "box",
-      "cis": 253
+      "cis": 401
     },
     {
       "id": 83,
       "label": "Markdown Syntax",
       "group": "MDKB",
-      "cis": 29
+      "cis": 48
     },
     {
       "id": 84,
@@ -647,7 +661,7 @@
       "id": 88,
       "label": "Project Instruction File",
       "group": "MDKB",
-      "cis": 10
+      "cis": 13
     },
     {
       "id": 89,
@@ -671,7 +685,7 @@
       "id": 92,
       "label": "Project Conventions",
       "group": "MDKB",
-      "cis": 3
+      "cis": 5
     },
     {
       "id": 93,
@@ -683,49 +697,49 @@
       "id": 94,
       "label": "Glossary File",
       "group": "MDKB",
-      "cis": 23
+      "cis": 60
     },
     {
       "id": 95,
       "label": "Research Notes",
       "group": "MDKB",
-      "cis": 57
+      "cis": 105
     },
     {
       "id": 96,
       "label": "Specification File",
       "group": "MDKB",
-      "cis": 28
+      "cis": 65
     },
     {
       "id": 97,
       "label": "Decision Log",
       "group": "MDKB",
-      "cis": 10
+      "cis": 11
     },
     {
       "id": 98,
       "label": "Session Log",
       "group": "MDKB",
-      "cis": 15
+      "cis": 18
     },
     {
       "id": 99,
       "label": "Project Memory",
       "group": "MDKB",
-      "cis": 2
+      "cis": 3
     },
     {
       "id": 100,
       "label": "Knowledge Base",
       "group": "MDKB",
-      "cis": 22
+      "cis": 59
     },
     {
       "id": 101,
       "label": "Cross References",
       "group": "MDKB",
-      "cis": 8
+      "cis": 27
     },
     {
       "id": 102,
@@ -785,7 +799,7 @@
       "id": 111,
       "label": "Agent Skill",
       "group": "SKILL",
-      "cis": 42
+      "cis": 46
     },
     {
       "id": 112,
@@ -935,13 +949,13 @@
       "id": 136,
       "label": "Agent Loop",
       "group": "AGENT",
-      "cis": 16
+      "cis": 79
     },
     {
       "id": 137,
       "label": "Tool Use",
       "group": "AGENT",
-      "cis": 124
+      "cis": 430
     },
     {
       "id": 138,
@@ -959,13 +973,13 @@
       "id": 140,
       "label": "File Access",
       "group": "AGENT",
-      "cis": 14
+      "cis": 98
     },
     {
       "id": 141,
       "label": "Shell Commands",
       "group": "AGENT",
-      "cis": 19
+      "cis": 170
     },
     {
       "id": 142,
@@ -983,25 +997,25 @@
       "id": 144,
       "label": "Code Execution",
       "group": "AGENT",
-      "cis": 15
+      "cis": 121
     },
     {
       "id": 145,
       "label": "Sandboxing",
       "group": "AGENT",
-      "cis": 10
+      "cis": 116
     },
     {
       "id": 146,
       "label": "Permissions",
       "group": "AGENT",
-      "cis": 9
+      "cis": 89
     },
     {
       "id": 147,
       "label": "Permission Modes",
       "group": "AGENT",
-      "cis": 4
+      "cis": 64
     },
     {
       "id": 148,
@@ -1019,7 +1033,7 @@
       "id": 150,
       "label": "Agent Memory",
       "group": "AGENT",
-      "cis": 1
+      "cis": 2
     },
     {
       "id": 151,
@@ -1031,7 +1045,7 @@
       "id": 152,
       "label": "MCP Server",
       "group": "AGENT",
-      "cis": 1
+      "cis": 9
     },
     {
       "id": 153,
@@ -1067,7 +1081,7 @@
       "id": 158,
       "label": "Agent Autonomy",
       "group": "AGENT",
-      "cis": 3
+      "cis": 63
     },
     {
       "id": 159,
@@ -1079,7 +1093,7 @@
       "id": 160,
       "label": "Agent Logging",
       "group": "AGENT",
-      "cis": 3
+      "cis": 4
     },
     {
       "id": 161,
@@ -1097,19 +1111,19 @@
       "id": 163,
       "label": "Cost Control",
       "group": "AGENT",
-      "cis": 3
+      "cis": 5
     },
     {
       "id": 164,
       "label": "Task Scheduling",
       "group": "AGENT",
-      "cis": 2
+      "cis": 47
     },
     {
       "id": 165,
       "label": "Background Tasks",
       "group": "AGENT",
-      "cis": 1
+      "cis": 41
     },
     {
       "id": 166,
@@ -1133,19 +1147,19 @@
       "id": 169,
       "label": "Trust Boundary",
       "group": "AGENT",
-      "cis": 4
+      "cis": 20
     },
     {
       "id": 170,
       "label": "Credential Handling",
       "group": "AGENT",
-      "cis": 1
+      "cis": 10
     },
     {
       "id": 171,
       "label": "Planning Agent",
       "group": "ORCH",
-      "cis": 59
+      "cis": 63
     },
     {
       "id": 172,
@@ -1163,7 +1177,7 @@
       "id": 174,
       "label": "Reviewer Agent",
       "group": "ORCH",
-      "cis": 45
+      "cis": 49
     },
     {
       "id": 175,
@@ -1241,7 +1255,7 @@
       "id": 187,
       "label": "Work Breakdown",
       "group": "ORCH",
-      "cis": 15
+      "cis": 19
     },
     {
       "id": 188,
@@ -1253,7 +1267,7 @@
       "id": 189,
       "label": "Task Dependencies",
       "group": "ORCH",
-      "cis": 9
+      "cis": 13
     },
     {
       "id": 190,
@@ -1277,13 +1291,13 @@
       "id": 193,
       "label": "Review Checkpoint",
       "group": "ORCH",
-      "cis": 8
+      "cis": 12
     },
     {
       "id": 194,
       "label": "Human Approval Gate",
       "group": "ORCH",
-      "cis": 1
+      "cis": 5
     },
     {
       "id": 195,
@@ -1902,7 +1916,7 @@
       "id": 297,
       "label": "Verification",
       "group": "VERIF",
-      "cis": 50
+      "cis": 56
     },
     {
       "id": 298,
@@ -1968,7 +1982,7 @@
       "id": 308,
       "label": "Audit Trail",
       "group": "VERIF",
-      "cis": 9
+      "cis": 10
     },
     {
       "id": 309,
@@ -1998,7 +2012,7 @@
       "id": 313,
       "label": "Responsible AI Use",
       "group": "ETHIC",
-      "cis": 31
+      "cis": 36
     },
     {
       "id": 314,
@@ -2028,19 +2042,19 @@
       "id": 318,
       "label": "Privacy",
       "group": "ETHIC",
-      "cis": 7
+      "cis": 12
     },
     {
       "id": 319,
       "label": "Confidential Data",
       "group": "ETHIC",
-      "cis": 2
+      "cis": 7
     },
     {
       "id": 320,
       "label": "Unpublished Results",
       "group": "ETHIC",
-      "cis": 1
+      "cis": 3
     },
     {
       "id": 321,
@@ -2220,6 +2234,180 @@
       "id": 350,
       "label": "Adoption Plan",
       "group": "CASE",
+      "cis": 1
+    },
+    {
+      "id": 351,
+      "label": "Personal Agent",
+      "group": "PERS",
+      "cis": 60
+    },
+    {
+      "id": 352,
+      "label": "Always-On Agent",
+      "group": "PERS",
+      "cis": 40
+    },
+    {
+      "id": 353,
+      "label": "Cloud Agent Computer",
+      "group": "PERS",
+      "cis": 26
+    },
+    {
+      "id": 354,
+      "label": "Self-Hosted Agent",
+      "group": "PERS",
+      "cis": 9
+    },
+    {
+      "id": 355,
+      "label": "Teachable Routine",
+      "group": "PERS",
+      "cis": 5
+    },
+    {
+      "id": 356,
+      "label": "Delegated Sign-In",
+      "group": "PERS",
+      "cis": 9
+    },
+    {
+      "id": 357,
+      "label": "Grok Bot",
+      "group": "PERS",
+      "cis": 4
+    },
+    {
+      "id": 358,
+      "label": "Dots",
+      "group": "PERS",
+      "cis": 4
+    },
+    {
+      "id": 359,
+      "label": "Muse",
+      "group": "PERS",
+      "cis": 4
+    },
+    {
+      "id": 360,
+      "label": "Claude Cowork",
+      "group": "PERS",
+      "cis": 4
+    },
+    {
+      "id": 361,
+      "label": "OpenClaw",
+      "group": "PERS",
+      "cis": 4
+    },
+    {
+      "id": 362,
+      "label": "Hermes Agent",
+      "group": "PERS",
+      "cis": 4
+    },
+    {
+      "id": 363,
+      "label": "Agent Blast Radius",
+      "group": "PERS",
+      "cis": 2
+    },
+    {
+      "id": 364,
+      "label": "Usage Metering",
+      "group": "PERS",
+      "cis": 2
+    },
+    {
+      "id": 365,
+      "label": "Agent Comparison Criteria",
+      "group": "PERS",
+      "cis": 3
+    },
+    {
+      "id": 366,
+      "label": "Vendor Claim Verification",
+      "group": "PERS",
+      "cis": 1
+    },
+    {
+      "id": 367,
+      "label": "Agent Data Exposure",
+      "group": "PERS",
+      "cis": 2
+    },
+    {
+      "id": 368,
+      "label": "Overnight Activity Audit",
+      "group": "PERS",
+      "cis": 1
+    },
+    {
+      "id": 369,
+      "label": "Personal Agent Selection",
+      "group": "PERS",
+      "cis": 1
+    },
+    {
+      "id": 370,
+      "label": "Knowledge Graph",
+      "group": "PKG",
+      "cis": 18
+    },
+    {
+      "id": 371,
+      "label": "Entity and Relationship",
+      "group": "PKG",
+      "cis": 10
+    },
+    {
+      "id": 372,
+      "label": "Personal Knowledge Graph",
+      "group": "PKG",
+      "cis": 7
+    },
+    {
+      "id": 373,
+      "label": "Graph Schema",
+      "group": "PKG",
+      "cis": 2
+    },
+    {
+      "id": 374,
+      "label": "Backlinks",
+      "group": "PKG",
+      "cis": 1
+    },
+    {
+      "id": 375,
+      "label": "Entity Extraction",
+      "group": "PKG",
+      "cis": 1
+    },
+    {
+      "id": 376,
+      "label": "Graph Querying",
+      "group": "PKG",
+      "cis": 2
+    },
+    {
+      "id": 377,
+      "label": "Graph Retrieval Augmented Generation",
+      "group": "PKG",
+      "cis": 1
+    },
+    {
+      "id": 378,
+      "label": "Knowledge Graph Memory",
+      "group": "PKG",
+      "cis": 1
+    },
+    {
+      "id": 379,
+      "label": "Personal Knowledge Privacy",
+      "group": "PKG",
       "cis": 1
     }
   ],
@@ -4607,6 +4795,302 @@
     {
       "from": 350,
       "to": 348
+    },
+    {
+      "from": 351,
+      "to": 12
+    },
+    {
+      "from": 351,
+      "to": 158
+    },
+    {
+      "from": 352,
+      "to": 351
+    },
+    {
+      "from": 352,
+      "to": 165
+    },
+    {
+      "from": 353,
+      "to": 352
+    },
+    {
+      "from": 353,
+      "to": 145
+    },
+    {
+      "from": 354,
+      "to": 351
+    },
+    {
+      "from": 354,
+      "to": 39
+    },
+    {
+      "from": 355,
+      "to": 351
+    },
+    {
+      "from": 355,
+      "to": 164
+    },
+    {
+      "from": 356,
+      "to": 353
+    },
+    {
+      "from": 356,
+      "to": 170
+    },
+    {
+      "from": 357,
+      "to": 352
+    },
+    {
+      "from": 357,
+      "to": 353
+    },
+    {
+      "from": 357,
+      "to": 355
+    },
+    {
+      "from": 357,
+      "to": 356
+    },
+    {
+      "from": 358,
+      "to": 352
+    },
+    {
+      "from": 358,
+      "to": 353
+    },
+    {
+      "from": 358,
+      "to": 194
+    },
+    {
+      "from": 358,
+      "to": 356
+    },
+    {
+      "from": 359,
+      "to": 352
+    },
+    {
+      "from": 359,
+      "to": 353
+    },
+    {
+      "from": 359,
+      "to": 146
+    },
+    {
+      "from": 360,
+      "to": 351
+    },
+    {
+      "from": 360,
+      "to": 140
+    },
+    {
+      "from": 360,
+      "to": 152
+    },
+    {
+      "from": 361,
+      "to": 354
+    },
+    {
+      "from": 361,
+      "to": 152
+    },
+    {
+      "from": 362,
+      "to": 354
+    },
+    {
+      "from": 362,
+      "to": 111
+    },
+    {
+      "from": 363,
+      "to": 353
+    },
+    {
+      "from": 363,
+      "to": 169
+    },
+    {
+      "from": 364,
+      "to": 163
+    },
+    {
+      "from": 364,
+      "to": 40
+    },
+    {
+      "from": 365,
+      "to": 357
+    },
+    {
+      "from": 365,
+      "to": 358
+    },
+    {
+      "from": 365,
+      "to": 359
+    },
+    {
+      "from": 365,
+      "to": 360
+    },
+    {
+      "from": 365,
+      "to": 361
+    },
+    {
+      "from": 365,
+      "to": 362
+    },
+    {
+      "from": 366,
+      "to": 365
+    },
+    {
+      "from": 366,
+      "to": 297
+    },
+    {
+      "from": 367,
+      "to": 353
+    },
+    {
+      "from": 367,
+      "to": 319
+    },
+    {
+      "from": 367,
+      "to": 320
+    },
+    {
+      "from": 368,
+      "to": 352
+    },
+    {
+      "from": 368,
+      "to": 308
+    },
+    {
+      "from": 368,
+      "to": 160
+    },
+    {
+      "from": 369,
+      "to": 365
+    },
+    {
+      "from": 369,
+      "to": 363
+    },
+    {
+      "from": 369,
+      "to": 364
+    },
+    {
+      "from": 369,
+      "to": 367
+    },
+    {
+      "from": 370,
+      "to": 100
+    },
+    {
+      "from": 370,
+      "to": 101
+    },
+    {
+      "from": 371,
+      "to": 370
+    },
+    {
+      "from": 372,
+      "to": 370
+    },
+    {
+      "from": 372,
+      "to": 371
+    },
+    {
+      "from": 372,
+      "to": 95
+    },
+    {
+      "from": 373,
+      "to": 371
+    },
+    {
+      "from": 373,
+      "to": 92
+    },
+    {
+      "from": 374,
+      "to": 372
+    },
+    {
+      "from": 374,
+      "to": 101
+    },
+    {
+      "from": 375,
+      "to": 372
+    },
+    {
+      "from": 375,
+      "to": 373
+    },
+    {
+      "from": 375,
+      "to": 31
+    },
+    {
+      "from": 376,
+      "to": 372
+    },
+    {
+      "from": 376,
+      "to": 45
+    },
+    {
+      "from": 377,
+      "to": 376
+    },
+    {
+      "from": 377,
+      "to": 44
+    },
+    {
+      "from": 378,
+      "to": 372
+    },
+    {
+      "from": 378,
+      "to": 150
+    },
+    {
+      "from": 378,
+      "to": 351
+    },
+    {
+      "from": 379,
+      "to": 372
+    },
+    {
+      "from": 379,
+      "to": 319
     }
   ]
 }
