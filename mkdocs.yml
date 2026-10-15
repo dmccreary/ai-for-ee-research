@@ -123,6 +123,7 @@ nav:
       - Personal Agents: appendices/personal-agents/index.md
       - Personal Knowledge Graphs: appendices/pkg/index.md
 
+  - Glossary: glossary.md
   - References: references.md
   - License: license.md
   - Contact: contact.md

@@ -4,41 +4,52 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
+
 #### 1. What is the term for the sequence of repeatable activities that turns a research question into a validated, communicated result?
 
 <div class="upper-alpha" markdown>
-1. Research workflow
+1. Task decomposition
 2. Research pipeline
 3. Agentic research
-4. Task decomposition
+4. Research workflow
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **A**. A research workflow is defined as the sequence of repeatable activities—literature search, analysis, coding, and manuscript preparation—through which a question becomes a validated result. A research pipeline is the chaining of those tasks end-to-end, agentic research is the use of agents within that work, and task decomposition is the breaking of goals into subtasks.
+    The correct answer is **D**. A research workflow is defined as the sequence of repeatable activities—literature search, analysis, coding, and manuscript preparation—through which a question becomes a validated result. A research pipeline is the chaining of those tasks end-to-end, agentic research is the use of agents within that work, and task decomposition is the breaking of goals into subtasks.
 
     **Concept Tested:** Research Workflow
 
-    **See:** [Research as a Workflow](../index.md#research-as-a-workflow)
+    **See:** [Research as a Workflow](./index.md#research-as-a-workflow)
+
+
+
+
 
 ---
+
 
 #### 2. Which property of a strong research question is most clearly demonstrated by stating a metric, a threshold, and operating conditions?
 
 <div class="upper-alpha" markdown>
 1. Specific
-2. Measurable
+2. Falsifiable
 3. Bounded
-4. Falsifiable
+4. Measurable
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. The chapter lists four properties of a good research question, and a stated metric with a threshold makes the question measurable—you can compare the result to a number. The example is also specific, bounded, and falsifiable, but the metric-and-threshold pair most directly establishes measurability.
+    The correct answer is **D**. The chapter lists four properties of a good research question, and a stated metric with a threshold makes the question measurable—you can compare the result to a number. The example is also specific, bounded, and falsifiable, but the metric-and-threshold pair most directly establishes measurability.
 
     **Concept Tested:** Research Question
 
-    **See:** [Framing the Research Question](../index.md#framing-the-research-question)
+    **See:** [Framing the Research Question](./index.md#framing-the-research-question)
+
+
+
+
 
 ---
+
 
 #### 3. In the vocabulary chain from generative AI to AI agent, what does an AI assistant add to a large language model?
 
@@ -50,13 +61,18 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **C**. The chapter builds the chain: generative AI is the broad class, an LLM specializes in next-token prediction, an assistant wraps the LLM in a conversational interface with history and turns, and an agent adds tools plus a loop. Tools and loops belong to agents, not assistants, and LLMs are not deterministic by default.
+    The correct answer is **B**. The chapter builds the chain: generative AI is the broad class, an LLM specializes in next-token prediction, an assistant wraps the LLM in a conversational interface with history and turns, and an agent adds tools plus a loop. Tools and loops belong to agents, not assistants, and LLMs are not deterministic by default.
 
     **Concept Tested:** AI Assistant
 
-    **See:** [AI Assistants](../index.md#ai-assistants)
+    **See:** [AI Assistants](./index.md#ai-assistants)
+
+
+
+
 
 ---
+
 
 #### 4. What is the key practical difference between an AI assistant and an AI agent?
 
@@ -72,9 +88,14 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** AI Agent
 
-    **See:** [AI Agents](../index.md#ai-agents)
+    **See:** [AI Agents](./index.md#ai-agents)
+
+
+
+
 
 ---
+
 
 #### 5. What term describes a researcher who directs teams of planning and execution agents while retaining final accountability for the science?
 
@@ -90,9 +111,14 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** Researcher as Orchestrator
 
-    **See:** [The Researcher as Orchestrator](../index.md#the-researcher-as-orchestrator)
+    **See:** [The Researcher as Orchestrator](./index.md#the-researcher-as-orchestrator)
+
+
+
+
 
 ---
+
 
 #### 6. If each of five independent workflow stages has a 90% chance of being free of consequential error, why is the chance of a clean pipeline only about 59%?
 
@@ -108,9 +134,14 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** Research Pipeline
 
-    **See:** [The Research Pipeline, Productivity, and Reproducibility](../index.md#the-research-pipeline-productivity-and-reproducibility)
+    **See:** [The Research Pipeline, Productivity, and Reproducibility](./index.md#the-research-pipeline-productivity-and-reproducibility)
+
+
+
+
 
 ---
+
 
 #### 7. In the ADC comparison example, which two subtasks can proceed in either order after the measurement procedure is defined?
 
@@ -126,9 +157,14 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** Task Decomposition
 
-    **See:** [Task Decomposition](../index.md#task-decomposition)
+    **See:** [Task Decomposition](./index.md#task-decomposition)
+
+
+
+
 
 ---
+
 
 #### 8. To make an AI-assisted step reproducible, what should be recorded alongside the prompt and input files?
 
@@ -144,9 +180,14 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** Reproducibility
 
-    **See:** [The Research Pipeline, Productivity, and Reproducibility](../index.md#the-research-pipeline-productivity-and-reproducibility)
+    **See:** [The Research Pipeline, Productivity, and Reproducibility](./index.md#the-research-pipeline-productivity-and-reproducibility)
+
+
+
+
 
 ---
+
 
 #### 9. Which agent action most clearly requires human review because it is irreversible?
 
@@ -162,9 +203,14 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** Human in the Loop
 
-    **See:** [Human in the Loop](../index.md#human-in-the-loop)
+    **See:** [Human in the Loop](./index.md#human-in-the-loop)
+
+
+
+
 
 ---
+
 
 #### 10. Which everyday research task is described as especially prone to silent errors because a script usually runs and produces a number?
 
@@ -180,4 +226,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
     **Concept Tested:** Data Analysis
 
-    **See:** [Data Analysis](../index.md#data-analysis)
+    **See:** [Data Analysis](./index.md#data-analysis)
+
+

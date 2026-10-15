@@ -4,23 +4,29 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
+
 #### 1. What is the term for all of the text a language model receives before generating its next response?
 
 <div class="upper-alpha" markdown>
 1. Completion
-2. Prompt
+2. System prompt
 3. Context window
-4. System prompt
+4. Prompt
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. The prompt is everything the model receives for a given response: system instructions, conversation history, attachments, tool output, and your latest message. The completion is what the model generates, the context window is the capacity limit, and the system prompt is only one part of the prompt.
+    The correct answer is **D**. The prompt is everything the model receives for a given response: system instructions, conversation history, attachments, tool output, and your latest message. The completion is what the model generates, the context window is the capacity limit, and the system prompt is only one part of the prompt.
 
     **Concept Tested:** Prompt
 
-    **See:** [What You Send and What Comes Back](../index.md#what-you-send-and-what-comes-back)
+    **See:** [What You Send and What Comes Back](./index.md#what-you-send-and-what-comes-back)
+
+
+
+
 
 ---
+
 
 #### 2. What is the text that a language model generates in response to a prompt called?
 
@@ -36,9 +42,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Completion
 
-    **See:** [What You Send and What Comes Back](../index.md#what-you-send-and-what-comes-back)
+    **See:** [What You Send and What Comes Back](./index.md#what-you-send-and-what-comes-back)
+
+
+
+
 
 ---
+
 
 #### 3. Which of the following is included in the prompt assembled for a single model response?
 
@@ -54,9 +65,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Prompt
 
-    **See:** [What You Send and What Comes Back](../index.md#what-you-send-and-what-comes-back)
+    **See:** [What You Send and What Comes Back](./index.md#what-you-send-and-what-comes-back)
+
+
+
+
 
 ---
+
 
 #### 4. What does the context window limit?
 
@@ -72,9 +88,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Context Window
 
-    **See:** [The Context Window](../index.md#the-context-window)
+    **See:** [The Context Window](./index.md#the-context-window)
+
+
+
+
 
 ---
+
 
 #### 5. What is the basic unit that language models process, bill by, and measure capacity in?
 
@@ -90,9 +111,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Token
 
-    **See:** [Tokens and Tokenization](../index.md#tokens-and-tokenization)
+    **See:** [Tokens and Tokenization](./index.md#tokens-and-tokenization)
+
+
+
+
 
 ---
+
 
 #### 6. What effect does lowering the temperature have on the model's next-token distribution?
 
@@ -108,9 +134,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Temperature
 
-    **See:** [Temperature and Sampling](../index.md#temperature-and-sampling)
+    **See:** [Temperature and Sampling](./index.md#temperature-and-sampling)
+
+
+
+
 
 ---
+
 
 #### 7. A model has a 32,000-token context window. The system prompt uses 600 tokens, conversation history uses 4,000 tokens, an attachment uses 11,000 tokens, and the latest message uses 400 tokens. Can a 6,000-token completion fit?
 
@@ -126,9 +157,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Context Window
 
-    **See:** [The Context Window](../index.md#the-context-window)
+    **See:** [The Context Window](./index.md#the-context-window)
+
+
+
+
 
 ---
+
 
 #### 8. Which request is most likely to cause a hallucination?
 
@@ -144,9 +180,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Hallucination
 
-    **See:** [Hallucination and Fabricated Citations](../index.md#hallucination-and-fabricated-citations)
+    **See:** [Hallucination and Fabricated Citations](./index.md#hallucination-and-fabricated-citations)
+
+
+
+
 
 ---
+
 
 #### 9. A model-generated citation has a well-formed DOI and a real journal name, but the exact title is not found in any bibliographic database. How should you classify it?
 
@@ -162,9 +203,14 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Fabricated Citation
 
-    **See:** [Hallucination and Fabricated Citations](../index.md#hallucination-and-fabricated-citations)
+    **See:** [Hallucination and Fabricated Citations](./index.md#hallucination-and-fabricated-citations)
+
+
+
+
 
 ---
+
 
 #### 10. Which interface is generally better for repeatable, file-touching, version-controllable research tasks?
 
@@ -180,4 +226,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
     **Concept Tested:** Command Line Interface
 
-    **See:** [Chat Interfaces and the Command Line](../index.md#chat-interfaces-and-the-command-line)
+    **See:** [Chat Interfaces and the Command Line](./index.md#chat-interfaces-and-the-command-line)
+
+
