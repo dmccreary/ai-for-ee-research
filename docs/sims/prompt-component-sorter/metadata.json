@@ -1,0 +1,97 @@
+{
+  "title": "Prompt Component Sorter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners label each of the ten sentences of one working research prompt as a clear instruction, constraint, output format, role, or few-shot example. Each label gets one attempt with immediate feedback and a reason; the run ends with a score out of 10, a mastery statement at 8 of 10, and a tally of how many sentences carry each component.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/prompt-component-sorter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "The components of a prompt: clear instructions, constraints, output format, role, and few-shot examples",
+    "learningObjectives": [
+      "Distinguish which prompt component, clear instruction, constraint, output format, role, or few-shot example, each of ten prompt sentences carries, with at least 8 of 10 classified correctly",
+      "Recognize that constraints are the most numerous component in a well-specified research prompt"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "distinguish",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Clear instructions, constraints, and output format",
+      "Role prompting and few-shot examples"
+    ],
+    "concepts": [
+      "Prompt Engineering",
+      "Clear Instructions",
+      "Constraints",
+      "Output Format",
+      "Role Prompting",
+      "Few-Shot Examples"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 765,
+      "drawHeight": 680,
+      "controlHeight": 85
+    },
+    "iframeHeight": 767,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML selects and buttons reachable with the Tab key; correct and incorrect feedback uses words and check or X symbols as well as a blue/orange color-blind-safe palette; all body text is 16 px."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Component",
+      "purpose": "Chooses Clear instruction, Constraint, Output format, Role, or Few-shot example for the highlighted sentence. Disabled after Submit."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the single attempt for the highlighted sentence. Enabled when a component is chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Sentence / See Score",
+      "purpose": "Enabled after Submit. Highlights the next sentence, and after sentence 10 shows the score and the component tally."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Decomposition of one working prompt into its parts with one attempt per sentence and immediate explanatory feedback",
+    "keyQuestions": [
+      "Which component of the prompt does this sentence carry?",
+      "Does this sentence limit the answer or describe its shape?",
+      "Does a role sentence add knowledge or only a viewpoint?"
+    ],
+    "commonMisconceptions": [
+      "A sentence that sets a length is part of the output format, when it is a constraint.",
+      "A role sentence also adds domain knowledge.",
+      "An example is only decoration and does not specify behavior."
+    ],
+    "assessmentOpportunities": [
+      "First-attempt score of at least 8 of 10 labels matching the answer key is evidence of mastery",
+      "Learner explains why sentence 3 is a constraint and sentence 6 an output format"
+    ]
+  },
+  "chapter": "03-models-and-prompt-basics"
+}

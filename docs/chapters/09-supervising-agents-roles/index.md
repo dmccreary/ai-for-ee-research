@@ -89,7 +89,7 @@ The assignment rule used in this chapter's exercise follows from the three prope
 Type: microsim
 **sim-id:** agent-autonomy-level-assigner<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** recommend<br/>
@@ -134,6 +134,10 @@ Type: microsim
 **Chapter Anchors:** The chapter states four levels from 0 to 3, three properties (reversibility, reach, verifiability), and the assignment rule above, and that autonomy is set by the task and not by the model's capability.
 </details>
 
+<iframe src="../../sims/agent-autonomy-level-assigner/main.html" height="832px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Agent Autonomy Level Assigner. [Open it fullscreen](../../sims/agent-autonomy-level-assigner/main.html).*
+
 ## Logging, Failure Modes, and Runaway Agents
 
 **Agent logging** is the recording of what an agent did, in a form you can read afterward. A useful log has, for each step, the time, the tool called and its arguments, the result or an excerpt of it, the files changed, the tokens used, and the model and settings in force. Logs serve three purposes: they let you audit what happened overnight, they let you debug a failure by finding the step at which things went wrong, and they let you reproduce a result. Keep them as plain files in or beside the project, so that they are searchable and, where appropriate, versioned.
@@ -175,7 +179,7 @@ The controls follow from the arithmetic. Set a step limit and a spending cap. Su
 Type: microsim
 **sim-id:** agent-failure-log-triage<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** differentiate<br/>
 **Learning Objective:** The learner will differentiate six agent failure modes from six excerpts of an agent log, with at least 5 of 6 attributed correctly.
@@ -218,6 +222,10 @@ All excerpts are invented for illustration and labeled "illustrative".
 
 **Chapter Anchors:** The chapter lists six failure modes and states that a "done" claim must be backed by the check output and that a failing test should never be edited to pass.
 </details>
+
+<iframe src="../../sims/agent-failure-log-triage/main.html" height="802px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Agent Failure Log Triage. [Open it fullscreen](../../sims/agent-failure-log-triage/main.html).*
 
 ## Scheduling, Background Work, and Trust Boundaries
 

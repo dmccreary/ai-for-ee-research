@@ -1,0 +1,109 @@
+{
+  "title": "Adoption Plan Prioritizer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Ordering activity in which learners arrange six steps for adopting AI research practices in a group (lab AI policy, shared repository, pilot skill, verification checks, agent team, 90-day review), shown in a scrambled order, into a sequence that respects five dependencies. A submission is reported as a valid order with the dependency list, or the first violated dependency is named with its reason; both valid orders and the dependency graph are then shown. Only the first submission counts as evidence; later submissions are practice.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/adoption-plan-prioritizer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Staged adoption of AI research practices in a research group",
+    "learningObjectives": [
+      "Prioritize six adoption steps for a research group into an order that respects their dependencies, and state the dependency that justifies each constraint",
+      "Recognize that the lab AI policy and the shared repository may be done in either order, because both are prerequisites only of the pilot"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "prioritize",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Lab AI policy, project instruction file, pilot skill, verification checks, review gates, and agent team, from earlier chapters",
+      "The section Adopting These Practices in Chapter 20"
+    ],
+    "concepts": [
+      "Adoption Plan",
+      "Lab AI Policy",
+      "Project Instruction File",
+      "Pilot Skill",
+      "Verification Checks",
+      "Review Gates",
+      "Agent Team",
+      "Prerequisite"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 850,
+      "drawHeight": 770,
+      "controlHeight": 80
+    },
+    "iframeHeight": 852,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the step choice is a native select element and every action is a native HTML button that responds to the Tab key and Enter or Space, so ordering never needs dragging; valid and invalid feedback uses words and check or cross symbols as well as an Okabe-Ito blue and vermillion palette, and the broken dependency is drawn as a dashed arrow; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Pick a step / Step A to Step F",
+      "purpose": "Chooses one of the six steps to move. Each option shows the step's current position, for example Step C (#4). The picked step is outlined on the canvas."
+    },
+    {
+      "type": "button",
+      "label": "Earlier",
+      "purpose": "Moves the picked step one position earlier. Disabled when the step is first."
+    },
+    {
+      "type": "button",
+      "label": "Later",
+      "purpose": "Moves the picked step one position later. Disabled when the step is last."
+    },
+    {
+      "type": "button",
+      "label": "Submit Order",
+      "purpose": "Checks the sequence. Reports Valid order or the first violated dependency with its reason, then shows both valid orders and the dependency graph. Only the first submission counts as evidence."
+    },
+    {
+      "type": "button",
+      "label": "Next Page",
+      "purpose": "Shown only when the feedback does not fit. Pages through the feedback; on narrow screens it also moves between the step view and the feedback pages."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Prioritization task with a dependency check, a reason for the first violated dependency, and a revealed dependency graph with both valid orders",
+    "keyQuestions": [
+      "Which steps must come first, and why?",
+      "What must be in place before a pilot touches real data?",
+      "Why must the checks exist before a team is scaled?"
+    ],
+    "commonMisconceptions": [
+      "Start with the most capable agents and add controls later",
+      "Policy can be written after the pilot",
+      "Scaling is the first step after a pilot"
+    ],
+    "assessmentOpportunities": [
+      "A valid order on the first submission is evidence of mastery",
+      "Reading the step descriptions and later practice submissions are exploration and are not evidence"
+    ]
+  },
+  "chapter": "20-case-studies-capstone"
+}

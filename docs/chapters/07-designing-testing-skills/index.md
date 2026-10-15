@@ -104,7 +104,7 @@ A worked example: for the `enob-report` skill, five trigger tests and five behav
 Type: microsim
 **sim-id:** skill-description-trigger-tester<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** distinguish<br/>
 **Learning Objective:** The learner will distinguish, for each of eight user requests, whether a stated skill description should trigger the skill or not, with at least 7 of 8 correct.
@@ -150,6 +150,10 @@ The skill description shown is: "Check a SPICE netlist for floating nodes, a mis
 **Chapter Anchors:** The chapter states that triggering is a comparison of the request with the description, that a skill needs tests for both firing and staying quiet, and that near-miss requests that share a keyword are the most useful trigger tests.
 </details>
 
+<iframe src="../../sims/skill-description-trigger-tester/main.html" height="617px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Skill Description Trigger Tester. [Open it fullscreen](../../sims/skill-description-trigger-tester/main.html).*
+
 ## Failure Modes and Maintenance
 
 Skills fail in a small number of recurring ways. **Skill failure modes** are those characteristic patterns, and knowing them lets you diagnose a misbehaving skill by symptom instead of by guesswork. The most common are listed here.
@@ -170,7 +174,7 @@ Skills fail in a small number of recurring ways. **Skill failure modes** are tho
 Type: microsim
 **sim-id:** skill-failure-mode-classifier<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** attribute<br/>
 **Learning Objective:** The learner will attribute each of eight observed skill problems to one of six failure modes, with at least 7 of 8 correct.
@@ -213,6 +217,10 @@ Type: microsim
 
 **Chapter Anchors:** The chapter lists six failure modes and states that undertriggering and overtriggering trace to the description, that instruction drift traces to long or uncheckable instructions, and that stale references and missing dependencies cause confident but wrong or failed output.
 </details>
+
+<iframe src="../../sims/skill-failure-mode-classifier/main.html" height="822px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Skill Failure Mode Classifier. [Open it fullscreen](../../sims/skill-failure-mode-classifier/main.html).*
 
 ## Versioning, Sharing, and Installing
 

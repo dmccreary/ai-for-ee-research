@@ -1,0 +1,98 @@
+{
+  "title": "Markdown Syntax Matcher",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Practice activity in which learners choose, for each of eight described rendered results, which of three Markdown sources produces it: a level-2 heading, a bulleted list, a numbered list, inline code, a fenced Python code block, a link, a two-column table, and bold text. Option order is shuffled per item, each item has one attempt, and the feedback shows the reason with rendered previews (CommonMark with the GFM table extension) of the chosen and the correct source. The run ends with a score out of 8, a mastery statement at 7 of 8, and the misconceptions behind the missed items.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/markdown-syntax-matcher/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Writing Markdown syntax for headings, lists, tables, code, links, and emphasis",
+    "learningObjectives": [
+      "Use Markdown syntax for headings, lists, tables, code, links, and emphasis by choosing, for each of eight described rendered results, the source text that produces it, with at least 7 of 8 correct"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "use",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Headings, lists and tables, code blocks, links, emphasis, and the blank line before a list, as defined in the section Markdown of Chapter 5"
+    ],
+    "concepts": [
+      "Markdown",
+      "Markdown Syntax",
+      "Headings",
+      "Lists and Tables",
+      "Code Blocks",
+      "Links and Emphasis"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 760,
+      "drawHeight": 680,
+      "controlHeight": 80
+    },
+    "iframeHeight": 762,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key, and the option buttons report their selected state with aria-pressed; the correct option is marked with a check mark and a wrong choice with an X in addition to blue and orange outlines; all text is 15 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Option A / Option B / Option C",
+      "purpose": "Selects one of the three sources for the current item. The selection can be changed until Submit is pressed; the buttons are disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Enabled once an option is selected. Commits the single attempt for the item and reveals the correct option, the reason, and the rendered previews."
+    },
+    {
+      "type": "button",
+      "label": "Next Item / See Score",
+      "purpose": "Enabled after submission. Advances to the next item, and after item 8 shows the final score, the mastery result, and the misconceptions behind the missed items."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Three-option source selection with near-miss distractors, one attempt per item, and rendered previews that show the consequence of each error",
+    "keyQuestions": [
+      "Which source produces this result?",
+      "Is there a space after the heading hashes or the list marker?",
+      "Does the code use backticks rather than quotation marks?",
+      "Does the table have a separator row under its header row?"
+    ],
+    "commonMisconceptions": [
+      "A heading needs no space after the hash characters",
+      "A list item needs no space after the marker",
+      "A table works without a separator row",
+      "Quotation marks or single quotes make code"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 correct on the first attempt is evidence of mastery",
+      "The misconceptions listed for the missed items show which syntax rule to review",
+      "Viewing rendered previews after the answer is revealed is exploration, not evidence"
+    ]
+  },
+  "chapter": "05-markdown-and-version-control"
+}

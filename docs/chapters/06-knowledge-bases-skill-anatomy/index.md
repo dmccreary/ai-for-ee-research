@@ -176,7 +176,7 @@ You do not need a graph database to benefit. A graph can live in your Markdown f
 Type: graph-model
 **sim-id:** pkg-graph-query-explorer<br/>
 **Library:** vis-network<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/infographics/tree/main/docs/sims/learning-path-explorer<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** solve<br/>
@@ -252,6 +252,10 @@ Questions, in this order:
 **Chapter Anchors:** The chapter states that typed, directed relationships let a program answer multi-hop questions, and that the PKG research rule of thumb is about 60 percent of value in nodes and 40 percent in relationships.
 </details>
 
+<iframe src="../../sims/pkg-graph-query-explorer/main.html" height="842px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Personal Knowledge Graph Query Explorer. [Open it fullscreen](../../sims/pkg-graph-query-explorer/main.html).*
+
 ### Grounding a Model With the Graph
 
 **Graph retrieval-augmented generation** (graph RAG) is retrieval-augmented generation, as introduced in Chapter 3, where the retrieved material is a *subgraph* of facts selected by following relationships, not a set of text passages ranked by similarity. The question is mapped to entities in the graph, the neighbourhood of those entities is collected, and the resulting facts are placed in the prompt with an instruction to answer from them.
@@ -317,7 +321,7 @@ Read the file as a reader would. The frontmatter is between the two lines of thr
 Type: microsim
 **sim-id:** skill-anatomy-labeler<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Remember<br/>
 **Bloom Verb:** identify<br/>
 **Learning Objective:** The learner will identify, for each of eight lines or files of a skill, whether it is the skill name, the skill description, skill instructions, or a supporting file, with at least 7 of 8 correct.
@@ -362,6 +366,10 @@ The skill is the `enob-report` skill shown in the chapter. The four labels are S
 
 **Chapter Anchors:** The chapter states that SKILL.md has YAML frontmatter with a name and a description, that the description says what the skill does and when to use it, that instructions are the body, and that scripts, references, and templates are supporting files opened only when pointed to.
 </details>
+
+<iframe src="../../sims/skill-anatomy-labeler/main.html" height="792px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Skill Anatomy Labeler. [Open it fullscreen](../../sims/skill-anatomy-labeler/main.html).*
 
 ## Summary and Key Takeaways
 

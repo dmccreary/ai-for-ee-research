@@ -150,7 +150,7 @@ The five-step workflow has a prerequisite that is easy to overlook: the sim must
 Type: microsim
 **sim-id:** microsim-suitability-judge<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
 **Learning Objective:** The learner will judge, for each of eight pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with at least 7 of 8 correct.
@@ -195,6 +195,10 @@ All items are invented for illustration and labeled "illustrative". The criterio
 
 **Chapter Anchors:** The chapter states that an interactive simulation is the right medium when the point of the result is a dependence, and the wrong medium for a fact that has no parameter.
 </details>
+
+<iframe src="../../sims/microsim-suitability-judge/main.html" height="612px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: MicroSim Suitability Judge. [Open it fullscreen](../../sims/microsim-suitability-judge/main.html).*
 
 ## Embedding, Concept Dependencies, and Intelligent Textbooks
 

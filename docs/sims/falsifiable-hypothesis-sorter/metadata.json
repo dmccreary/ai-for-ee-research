@@ -1,0 +1,98 @@
+{
+  "title": "Falsifiable Hypothesis Sorter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners decide whether each of eight illustrative electrical engineering research statements is falsifiable or not falsifiable. Statements appear in a fixed order with one attempt each; feedback gives Correct or the correct classification, the reason, and for a not-falsifiable statement the missing element. The run ends with a score out of 8 and whether the mastery threshold of 7 was met.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/falsifiable-hypothesis-sorter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Falsifiable research hypotheses",
+    "learningObjectives": [
+      "Distinguish falsifiable hypotheses from statements that no experiment could contradict, among eight statements, with at least 7 of 8 classified correctly"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "distinguish",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Hypothesis",
+      "Falsifiable",
+      "Metric",
+      "Condition"
+    ],
+    "concepts": [
+      "Hypothesis Development",
+      "Falsifiability",
+      "Metric",
+      "Threshold",
+      "Test Conditions"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 680,
+      "drawHeight": 630,
+      "controlHeight": 50
+    },
+    "iframeHeight": 682,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; correct and incorrect feedback uses a check mark or X and words as well as a blue or orange color; all text is 16 px or larger. At container widths under about 360 px the buttons wrap onto a second row and the drawing region shrinks by the same amount."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Falsifiable",
+      "purpose": "Commits the answer Falsifiable for the current statement. Disabled after the single attempt."
+    },
+    {
+      "type": "button",
+      "label": "Not falsifiable",
+      "purpose": "Commits the answer Not falsifiable for the current statement. Disabled after the single attempt."
+    },
+    {
+      "type": "button",
+      "label": "Next / See Score",
+      "purpose": "Enabled after an answer is committed. Advances to the next statement, and after statement 8 shows the final score."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Forced binary classification with one attempt per item and immediate explanatory feedback naming the missing element",
+    "keyQuestions": [
+      "Could any measurement show this to be wrong?",
+      "Does the statement name a measurable quantity?",
+      "Does it name a threshold or a direction and size of effect?",
+      "Does it name the conditions under which it is tested?"
+    ],
+    "commonMisconceptions": [
+      "A statement with a number in it is falsifiable",
+      "A confident, technical-sounding statement is a hypothesis",
+      "A statement that cannot fail is the strongest claim"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 statements classified correctly on the first attempt is evidence of mastery",
+      "Reading the checklist of properties is exploration and is not evidence"
+    ]
+  },
+  "chapter": "14-brainstorming-problem-framing"
+}

@@ -99,7 +99,7 @@ The tasks add up to 21 hours of work. With as many agents as you like, the proje
 Type: graph-model
 **sim-id:** task-dependency-critical-path<br/>
 **Library:** vis-network<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/statistics-course/tree/main/docs/sims/view-task-graph<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** calculate<br/>
@@ -144,6 +144,10 @@ The tasks, durations in hours, and prerequisites are those in the chapter's Tabl
 **Chapter Anchors:** The chapter's task table lists nine tasks totalling 21 hours, a critical path of 18 hours through T1, T2, T3, T5, T6, T8, and T9, and a project duration of 17 hours if T3 is reduced to 1 hour.
 </details>
 
+<iframe src="../../sims/task-dependency-critical-path/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Task Dependency Critical Path Scheduler. [Open it fullscreen](../../sims/task-dependency-critical-path/main.html).*
+
 ## Handoffs, Shared Workspaces, and Conflicts
 
 A **handoff protocol** is the agreed form in which work passes from one agent to the next. Chapter 9 listed what a handoff must contain: the goal, the inputs, the constraints, the acceptance criteria, the work done, and the open questions. The protocol makes this uniform: one file format, one location, and a small fixed set of status values. A minimal protocol uses five statuses: `queued`, `running`, `needs-review`, `accepted`, and `rejected`. An agent never marks its own work `accepted`. That status belongs to a reviewer agent, a script, or you.
@@ -177,7 +181,7 @@ A worked example with illustrative numbers: 20 planning agents each give one out
 Type: microsim
 **sim-id:** orchestrator-review-load-calculator<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** calculate<br/>
 **Learning Objective:** The learner will calculate the daily review load of an agent team from its size and per-output review times, and adjust the team or the review fraction to fit a stated attention budget, in three challenges.
@@ -230,6 +234,10 @@ Challenges, in this order. All use the default values except where stated.
 
 **Chapter Anchors:** The chapter states 20 planning agents and 10 execution agents, 6 and 15 minutes of review, 30 minutes of conflict resolution, a load of 300 minutes (5 hours) against 4 hours of attention, and a load of 240 minutes when half of the planning outputs are reviewed.
 </details>
+
+<iframe src="../../sims/orchestrator-review-load-calculator/main.html" height="752px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Orchestrator Review Load Calculator. [Open it fullscreen](../../sims/orchestrator-review-load-calculator/main.html).*
 
 ## Specifying, Prioritizing, and Reporting
 

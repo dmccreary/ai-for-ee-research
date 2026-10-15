@@ -127,7 +127,7 @@ Every element in that source has a visible counterpart in the rendered page: a s
 Type: microsim
 **sim-id:** markdown-syntax-matcher<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** use<br/>
 **Learning Objective:** The learner will use Markdown syntax for headings, lists, tables, code, links, and emphasis by choosing, for each of eight described rendered results, the source text that produces it, with at least 7 of 8 correct.
@@ -172,6 +172,10 @@ The rules follow the CommonMark specification with the GitHub Flavored Markdown 
 
 **Chapter Anchors:** The chapter states that a heading is hashes, a space, and a title, that a bullet item is a hyphen and a space, that a numbered item is a number, a period, and a space, that a table needs a header row and a separator row, that code uses backticks, and that a list needs a blank line before it.
 </details>
+
+<iframe src="../../sims/markdown-syntax-matcher/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Markdown Syntax Matcher. [Open it fullscreen](../../sims/markdown-syntax-matcher/main.html).*
 
 ### YAML Frontmatter
 
@@ -231,7 +235,7 @@ Notice what the file leaves out. It does not say "be careful" or "do excellent w
 Type: microsim
 **sim-id:** project-instruction-file-triage<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
 **Learning Objective:** The learner will judge each of eleven lines of a draft instruction file as a goal, a convention, a constraint, or not belonging in the file, with at least 9 of 11 judged correctly.
@@ -279,6 +283,10 @@ The draft file shown is for the illustrative SAR ADC project. The four labels ar
 
 **Chapter Anchors:** The chapter states that an instruction file has goals, conventions, and constraints, that it should leave out vague exhortations, transient notes, and secrets, and that a line should be checkable.
 </details>
+
+<iframe src="../../sims/project-instruction-file-triage/main.html" height="782px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Project Instruction File Triage. [Open it fullscreen](../../sims/project-instruction-file-triage/main.html).*
 
 ## Organizing a Project for Agents and People
 

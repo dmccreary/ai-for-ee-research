@@ -1,0 +1,120 @@
+{
+  "title": "Task Dependency Critical Path Scheduler",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A vis-network dependency graph of nine illustrative tasks from an ADC research project, with durations in hours. The learner answers five questions in a fixed order, one attempt each: the earliest finish of T5, the tasks on the critical path, the slack of T4, the project duration, and the new project duration after T3 is reduced from 3 hours to 1 hour. After each answer the sim shows the correct answer, the reason, and the forward pass of earliest start and finish times; after question 5 a T3 duration slider shows how the critical path moves. The final score is reported as n of 5 correct with a mastery threshold of 4.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/task-dependency-critical-path/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Task dependencies, critical path, and slack in an agent team's work breakdown",
+    "learningObjectives": [
+      "Calculate the earliest finish time, the critical path, and the slack of tasks in a nine-task dependency graph, and recalculate the project duration after one duration changes, with at least 4 of 5 answers correct"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "calculate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "task dependencies",
+      "task queue",
+      "critical path",
+      "earliest finish",
+      "slack"
+    ],
+    "concepts": [
+      "Work Breakdown",
+      "Task Dependencies",
+      "Task Queue",
+      "Critical Path",
+      "Earliest Start and Earliest Finish",
+      "Slack"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "9.1.9",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 760
+    },
+    "iframeHeight": 762,
+    "responsive": true,
+    "dependencies": [
+      "vis-network@9.1.9 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "colorBlindSafe": true,
+      "notes": "The graph has an aria-label listing every task, duration, and dependency. All scored input uses native controls reachable with the Tab key: a text box (Enter submits), T1 to T9 toggle buttons with aria-pressed, a range slider, and a select for task details. Critical tasks carry a star and the word critical plus a thick border; tasks in the current answer carry a triangle and a dashed border; colors are from the Okabe-Ito blue/orange palette. Mouse-wheel zoom and drag-to-pan are disabled so the iframe never captures page scrolling."
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Worked forward-pass practice: the learner commits a calculation before the sim reveals the answer, the reason, and the forward pass on the graph, then explores how changing one duration moves the critical path",
+    "keyQuestions": [
+      "When can T5 finish?",
+      "Which chain of tasks sets the project duration?",
+      "How much can a task slip without delaying the project?",
+      "Why does cutting 2 hours from a critical task save only 1 hour?"
+    ],
+    "commonMisconceptions": [
+      "The project duration is the sum of all task durations",
+      "Adding agents shortens any schedule",
+      "Shortening a critical task always shortens the project by the same amount"
+    ],
+    "assessmentOpportunities": [
+      "Score on the single attempt for each of five questions; mastery is at least 4 of 5 correct",
+      "Find the value of T3 at which the critical path switches between the T3 and T4 branches",
+      "Explain in one sentence why cutting 2 hours from T3 saved only 1 hour"
+    ]
+  },
+  "controls": [
+    {
+      "type": "text input",
+      "name": "Answer (hours)",
+      "purpose": "Enter a number of hours for questions 1, 3, 4, and 5; Enter submits"
+    },
+    {
+      "type": "toggle buttons",
+      "name": "T1 to T9",
+      "purpose": "Select the tasks on the critical path for question 2"
+    },
+    {
+      "type": "button",
+      "name": "Submit",
+      "purpose": "Commit the answer; one attempt per question; a non-number is not counted as an attempt"
+    },
+    {
+      "type": "button",
+      "name": "Next question",
+      "purpose": "Advance to the next question after the current one has been answered"
+    },
+    {
+      "type": "range slider",
+      "name": "T3 duration",
+      "purpose": "After question 5, change T3 from 1 to 6 hours and watch the project duration and critical path update (exploration, not scored)"
+    },
+    {
+      "type": "button",
+      "name": "Restart",
+      "purpose": "Clear all answers and return to the starting state with no times shown"
+    },
+    {
+      "type": "node click / select",
+      "name": "Read a task",
+      "purpose": "Show a task's duration, prerequisites, and any times already revealed (exploration, not scored)"
+    }
+  ],
+  "chapter": "10-orchestrating-agent-teams"
+}

@@ -133,3 +133,22 @@ Chapters 6, 8, 9, 10, 18, and 19 fall well below the summed budget; the rest are
 - Stray closing details tags removed by script (chapters 5-20)
 - mkdocs build --strict: passes
 - Not done: MicroSims not built; docs/sims index not updated; glossary, FAQ, quizzes not generated
+
+---
+
+## Session 4: MicroSim builds (chapters 2-20)
+
+**Mode:** Parallel, 19 agents (one per chapter), model opus, on the user's explicit request.
+**Result:** 40 sims built in docs/sims/<sim-id>/ (main.html, <sim-id>.js, index.md with status: built, metadata.json). Specs in chapters changed from Specified to Built, with an iframe and fullscreen link added after each. Nav entries and sims index cards added. mkdocs build --strict passes.
+
+### Spec corrections made after build
+- ch15 figure-caption-critic: caption 4 stated no conditions, so the Rules order gave "Missing conditions" and not "Overclaims". Conditions were added to the caption in the chapter and the sim.
+- ch8 agent-loop-stepper: the correct candidate was A at all five steps. Candidate order changed to A, B, C, B, C in the chapter and the sim.
+
+### Open items for author review
+- Agents wrote text the specs did not supply: misconception mappings (ch2 citations, ch3 sorter, ch4 injection spotter, ch5 matcher), cleaning-log lines (ch12), skill failure fixes (ch7), quick-calculation and hint text (ch13), one-line criterion tests (ch19), and control pairings (ch19).
+- ch14 research-idea-ranking-matrix: the spec shows the full ranking after each question, which reveals the answers to later questions.
+- Several sims overflow slightly below 360-400 px wide; they have fixed iframe heights sized for phones, which leaves blank space on desktop.
+- No sim has a screenshot PNG; a few have a Start Over button the specs did not describe.
+- research-task-sorter (chapter 1) uses mousePressed and does not respond to Enter and Space on its buttons; the new sims use click events.
+- All sims are status built. None is approved; only the author sets that.

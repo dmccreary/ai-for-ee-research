@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Citation Chaining Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title and the on-screen question (Starting State) -->
+        <header class="title-bar">
+            <div class="title">Citation Chaining Explorer</div>
+            <div class="subtitle" id="main-question">Which papers does this procedure find?</div>
+        </header>
+
+        <div class="layout">
+            <!-- Left column: citation graph and paper details (exploration) -->
+            <section class="left-col">
+                <div class="graph-wrap">
+                    <!-- vis-network replaces the children of #network, so overlays are siblings -->
+                    <div id="network" role="img"
+                         aria-label="Citation graph of eight illustrative papers. An arrow from X to Y means X cites Y. S (2022) is the seed paper. S cites A (2018), B (2019), and C (2020). B and C both cite F (2017). D (2023) cites S. E (2024) cites S and C. G (2025) cites D."></div>
+                    <div class="legend" aria-hidden="true">
+                        <div><span class="lg-arrow">X &rarr; Y</span> means X cites Y</div>
+                        <div>Older papers left, newer right</div>
+                        <div><span class="lg-thick"></span> edges followed for the last answer</div>
+                    </div>
+                    <div class="tag-illustrative">Illustrative papers, invented for this exercise</div>
+                </div>
+
+                <div class="explore-panel">
+                    <div class="paper-list" role="group" aria-label="Open a paper to read its details (not scored)">
+                        <span class="chain-label">Paper details:</span>
+                        <button class="node-btn" data-node="S">S</button>
+                        <button class="node-btn" data-node="A">A</button>
+                        <button class="node-btn" data-node="B">B</button>
+                        <button class="node-btn" data-node="C">C</button>
+                        <button class="node-btn" data-node="D">D</button>
+                        <button class="node-btn" data-node="E">E</button>
+                        <button class="node-btn" data-node="F">F</button>
+                        <button class="node-btn" data-node="G">G</button>
+                    </div>
+                    <div class="definition" id="definition" aria-live="polite">
+                        Click a paper in the graph, or a button above, to read its details. Exploring is not scored.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right column: the scored questions -->
+            <section class="right-panel" aria-label="Questions">
+                <div class="q-header">
+                    <span class="q-step" id="q-step">Question 1 of 5</span>
+                </div>
+                <div class="question" id="q-text"></div>
+
+                <fieldset class="choices" id="choices">
+                    <legend>Select every paper that answers the question:</legend>
+                    <div class="choice-row" id="choice-row"></div>
+                </fieldset>
+
+                <div class="feedback" id="feedback" aria-live="polite"></div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="submit-btn" disabled>Submit answer</button>
+                    <button class="btn btn-primary" id="next-btn" style="display:none;">Next question &rarr;</button>
+                    <span class="score" id="score" aria-live="polite">Score: 0 of 5 correct</span>
+                </div>
+            </section>
+        </div>
+
+        <a class="back-link" href=".">Back to Lesson Plan</a>
+    </div>
+
+    <script src="citation-chaining-explorer.js"></script>
+</body>
+</html>

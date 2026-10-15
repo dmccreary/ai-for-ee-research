@@ -90,7 +90,7 @@ Broadening a query raises recall and lowers precision, and narrowing does the op
 Type: microsim
 **sim-id:** search-precision-recall-explorer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/search-microsims/tree/main/docs/sims/keyword-search-flow<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** calculate<br/>
@@ -142,6 +142,10 @@ Purpose question: "You are starting a literature survey and cannot afford to mis
 **Chapter Anchors:** The chapter states the two formulas and that broadening a query raises recall and lowers precision. The chapter does not state the corpus numbers.
 </details>
 
+<iframe src="../../sims/search-precision-recall-explorer/main.html" height="858px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Search Query Precision and Recall Explorer. [Open it fullscreen](../../sims/search-precision-recall-explorer/main.html).*
+
 ## Triage, Summarization, and Claim Extraction
 
 A successful search returns more papers than you can read. **Paper triage** is the fast sorting of results into those to read closely, those to skim, and those to set aside, using only the title, abstract, and figures. An agent can do first-pass triage from a rubric you supply: relevance to the question, whether the work is measured or simulated, the process node or technology, the year, and the venue. The rubric matters more than the model. A triage prompt that says only "rate relevance from 1 to 5" returns inconsistent scores, and one that names the criteria and requires a one-line reason for each is auditable.
@@ -176,7 +180,7 @@ Each row can be checked in under a minute by going to the stated location. This 
 Type: graph-model
 **sim-id:** citation-chaining-explorer<br/>
 **Library:** vis-network<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** solve<br/>
 **Learning Objective:** The learner will solve five citation-chaining questions on a graph of eight papers by following references backward and citations forward, with at least 4 of 5 correct.
@@ -231,6 +235,10 @@ Edges: S cites A, S cites B, S cites C, B cites F, C cites F, D cites S, E cites
 
 **Chapter Anchors:** The chapter states that backward chaining follows references to earlier work and forward chaining follows citations to later work, and that a paper cited by several references of a seed paper is likely foundational.
 </details>
+
+<iframe src="../../sims/citation-chaining-explorer/main.html" height="802px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Citation Chaining Explorer. [Open it fullscreen](../../sims/citation-chaining-explorer/main.html).*
 
 ## References, Verification, and Quality
 

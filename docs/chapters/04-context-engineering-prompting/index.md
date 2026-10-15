@@ -172,7 +172,7 @@ A long project eventually produces more material than any window holds, and then
 Type: microsim
 **sim-id:** context-selection-budget<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** prioritize<br/>
 **Learning Objective:** The learner will prioritize nine candidate context items for a stated task by assigning each one the verdict include, compress, or omit, so that the total fits a stated token budget and at least 8 of 9 verdicts match Content.
@@ -223,6 +223,10 @@ Correct total: items 1, 2, and 3 as is (3,700) plus items 4, 5, and 6 compressed
 **Chapter Anchors:** The chapter states that the test for including an item is whether the answer would change if it were absent, that summaries should be made for a purpose and numbers spot-checked, and that long sessions should be summarized or restarted with a short summary.
 </details>
 
+<iframe src="../../sims/context-selection-budget/main.html" height="922px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Context Selection Budget. [Open it fullscreen](../../sims/context-selection-budget/main.html).*
+
 ## Prompt Injection
 
 A **prompt injection** is text inside the material a model processes that is written to be taken as an instruction. It exploits the fact established in Chapter 2: to the model, a system instruction, your request, and a retrieved web page are all just text in the same window, and it has no reliable way to distinguish a command that came from you from a command that came from a document. Anything the model reads is an input channel, and anything the model can do is a capability an attacker may try to borrow.
@@ -249,7 +253,7 @@ Distinguishing an injection from ordinary content is itself a skill, and it is l
 Type: microsim
 **sim-id:** prompt-injection-spotter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** differentiate<br/>
 **Learning Objective:** The learner will differentiate, among eight text snippets that an agent has been asked to read, those that contain an injected instruction aimed at the model from those that are ordinary content, with at least 7 of 8 classified correctly.
@@ -294,6 +298,10 @@ All snippets are invented for this exercise. The domains example.org and example
 
 **Chapter Anchors:** The chapter states that injection is text in processed material written to be taken as an instruction, that imperative text addressed to a human reader is not an injection, and that the defenses are least privilege, separated channels, human approval for consequential actions, and treating output as untrusted.
 </details>
+
+<iframe src="../../sims/prompt-injection-spotter/main.html" height="662px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Prompt Injection Spotter. [Open it fullscreen](../../sims/prompt-injection-spotter/main.html).*
 
 ## Reusable Prompts: Templates, Libraries, and Tests
 
@@ -349,7 +357,7 @@ Notice the dependencies. Step 2 needs step 1. Step 3 needs the verified values f
 Type: microsim
 **sim-id:** prompt-chain-builder<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** implement<br/>
 **Learning Objective:** The learner will implement a six-step prompt chain by placing the steps in an order that respects their dependencies and choosing a testable acceptance check for each step, with a valid order and at least 5 of 6 testable checks.
@@ -405,6 +413,10 @@ Acceptance check options for each step, with the testable one marked:
 
 **Chapter Anchors:** The chapter lists the six steps in the order S1 to S6, states that step 6 depends on step 2 and must precede step 5, and gives the Walden figure of merit as P divided by 2 to the ENOB times the sampling rate.
 </details>
+
+<iframe src="../../sims/prompt-chain-builder/main.html" height="842px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Prompt Chain Builder. [Open it fullscreen](../../sims/prompt-chain-builder/main.html).*
 
 ## Putting It Together: A Prompt Workflow
 

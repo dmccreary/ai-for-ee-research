@@ -105,7 +105,7 @@ A **numerical sanity check** tests a result against something that must be true 
 Type: microsim
 **sim-id:** numerical-sanity-check-judge<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
 **Learning Objective:** The learner will judge each of eight reported results as plausible or as violating one of four kinds of sanity check, with at least 7 of 8 judged correctly.
@@ -153,6 +153,10 @@ Verdict options: Plausible, Exceeds a limit, Disagrees with a hand calculation, 
 **Chapter Anchors:** The chapter states the five kinds of check, the RC cutoff of 1.59 kHz for 1 kΩ and 100 nF, and the 17.98-bit ENOB that results from using 20 log10 on a power ratio.
 </details>
 
+<iframe src="../../sims/numerical-sanity-check-judge/main.html" height="722px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Numerical Sanity Check Judge. [Open it fullscreen](../../sims/numerical-sanity-check-judge/main.html).*
+
 ## Debugging and Code Review
 
 **Debugging** is finding and fixing the cause of a defect. A reliable procedure has four steps: reproduce the failure reliably, isolate it to the smallest input and the smallest piece of code that still fails, form a hypothesis about the cause and test it, and fix it with a new test that fails before the fix and passes after. An agent is good at the mechanical part of this. Your job is to insist on the test, because an agent that "fixes" a bug without a failing test has no evidence that the bug was the thing it changed. Version control helps here, since the Git history can show which commit made the result change.
@@ -182,7 +186,7 @@ A **parameter sweep** repeats a simulation over a grid of parameter values to se
 Type: microsim
 **sim-id:** unit-test-selector-seeded-bugs<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** apply<br/>
 **Learning Objective:** The learner will apply the idea of a known-answer test by selecting, from eight candidate unit tests, a set of at most four that exposes all three seeded bugs in a function.
@@ -239,6 +243,10 @@ Candidate tests, each with the expected result under the specification and the b
 
 **Chapter Anchors:** The chapter states that the 10 versus 20 log10 error is a silent error, that a test needs an independently known answer, and that boundary inputs expose bugs that typical values hide.
 </details>
+
+<iframe src="../../sims/unit-test-selector-seeded-bugs/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Unit Test Selector for Seeded Bugs. [Open it fullscreen](../../sims/unit-test-selector-seeded-bugs/main.html).*
 
 ## Reproducible Code
 

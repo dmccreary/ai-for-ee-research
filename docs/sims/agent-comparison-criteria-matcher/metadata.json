@@ -1,0 +1,107 @@
+{
+  "title": "Personal Agent Comparison Criteria Matcher",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners place each of eight questions a researcher might ask about a personal, always-on AI agent under one of eight comparison criteria: Where it runs, Blast radius, Approval model, Usage metering, Data exposure, Memory, Claim verification, and Activity audit. The criteria buttons are shuffled once per learner. Each submitted answer gets one attempt and immediate feedback with the correct criterion and a one-sentence reason, and the run ends with a score out of 8, a mastery statement at 7 of 8, and a one-line test per criterion that the learner could run on a real product.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/agent-comparison-criteria-matcher/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Criteria for comparing personal and always-on AI agents",
+    "learningObjectives": [
+      "Classify each of eight questions about a personal agent under the comparison criterion it addresses, with at least 7 of 8 correct",
+      "Explain what a question about an agent is really asking, using criteria that transfer to products that do not exist yet"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomVerb": "classify",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Agent blast radius, usage metering, agent data exposure, vendor claim verification, and overnight activity audit",
+      "Cloud agent computer, self-hosted agent, and the approval model"
+    ],
+    "concepts": [
+      "Personal Agent",
+      "Always-On Agent",
+      "Cloud Agent Computer",
+      "Self-Hosted Agent",
+      "Agent Blast Radius",
+      "Usage Metering",
+      "Agent Data Exposure",
+      "Vendor Claim Verification",
+      "Overnight Activity Audit",
+      "Personal Agent Selection"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 560,
+      "drawHeight": "responsive (canvas height minus control height)",
+      "controlHeight": "responsive (128 to 204 by width; 50 on the end screen)"
+    },
+    "iframeHeight": 562,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; focus moves to Next after Submit; chosen, correct and incorrect states use a symbol (filled circle, check mark, X) and border style as well as a blue/orange color-blind-safe palette; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Where it runs, Blast radius, Approval model, Usage metering, Data exposure, Memory, Claim verification, Activity audit",
+      "purpose": "Eight criterion buttons in an order shuffled once per learner. Pressing one selects that criterion for the current question; the choice can be changed until Submit. Disabled after submission, when the correct criterion is marked with a check mark and a wrong pick with an X."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the selected criterion as the single attempt for the current question. Enabled only when a criterion is selected and the question has not been submitted."
+    },
+    {
+      "type": "button",
+      "label": "Next Question / See Score",
+      "purpose": "Enabled after submission. Advances to the next question in the fixed order, and after question 8 shows the score screen."
+    },
+    {
+      "type": "button",
+      "label": "More Tests",
+      "purpose": "Shown only on the score screen when the eight one-line tests do not fit on one page; pages through them."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Eight-way classification with one attempt per item, explanatory feedback, and per-learner shuffling of the answer options",
+    "keyQuestions": [
+      "Which criterion does this question test?",
+      "Is this question about where the agent runs or about what it can reach?",
+      "Does a vendor's statement count as verification?"
+    ],
+    "commonMisconceptions": [
+      "A comparison is about features and price only",
+      "A vendor's statement about safety is itself the verification",
+      "Where an agent runs is the same as what it can reach"
+    ],
+    "assessmentOpportunities": [
+      "A first-attempt score of at least 7 of 8 matching the answer key is evidence of mastery",
+      "Reading the list of criteria is exploration and is not evidence",
+      "Learner runs one-line tests from the end screen against a real product with a throwaway account"
+    ]
+  },
+  "chapter": "19-always-on-personal-agents"
+}

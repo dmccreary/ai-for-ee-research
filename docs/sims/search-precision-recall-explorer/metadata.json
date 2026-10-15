@@ -1,0 +1,122 @@
+{
+  "title": "Search Query Precision and Recall Explorer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Learners calculate precision and recall to two decimal places for three search queries (narrow, broad, and balanced) run on a synthetic corpus of 20 papers with 8 relevant papers, with two attempts per query and a tolerance of 0.01, and then choose the query for a literature survey that cannot afford to miss a relevant paper. Worked TP, FP, and FN counts, the reason for the correct choice, and a score with a mastery statement are shown.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/search-precision-recall-explorer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Precision and recall of literature search queries",
+    "learningObjectives": [
+      "Calculate the precision and recall of three search queries run on a corpus of twenty papers with eight known relevant papers",
+      "Choose the query that suits a stated purpose, using recall when a missed paper is costly"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "calculate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Search strategy",
+      "Precision",
+      "Recall",
+      "True positive, false positive, and false negative"
+    ],
+    "concepts": [
+      "Search Strategy",
+      "Precision",
+      "Recall",
+      "Keyword Generation",
+      "Literature Review"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 856,
+      "drawHeight": 660,
+      "controlHeight": 196
+    },
+    "iframeHeight": 858,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons, checkboxes, text inputs, and a select reachable with the Tab key, and Enter in a value field checks the values. Returned papers are shown with solid borders and the others with dashed borders, relevant papers carry a star glyph, learner marks a check-mark glyph, and correct or incorrect feedback uses check and X glyphs and words as well as color. Colors are blue and brown/orange, which are distinguishable with common color-vision deficiencies."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Reveal Relevant Set",
+      "purpose": "Shown at the start; reveals which papers in the synthetic corpus are relevant (P1 to P8), marked with a star."
+    },
+    {
+      "type": "checkbox",
+      "label": "P1 ... P20",
+      "purpose": "One checkbox for each paper returned by the current query; the learner marks the relevant returned papers as a counting aid. Not scored."
+    },
+    {
+      "type": "input",
+      "label": "Precision",
+      "purpose": "The learner types precision as a decimal to two places; correct when within 0.01 of the reference value."
+    },
+    {
+      "type": "input",
+      "label": "Recall",
+      "purpose": "The learner types recall as a decimal to two places; correct when within 0.01 of the reference value."
+    },
+    {
+      "type": "button",
+      "label": "Check Values",
+      "purpose": "Checks both values; two attempts per query. A hint follows a first wrong attempt, and the worked counts follow a correct answer or the second attempt."
+    },
+    {
+      "type": "button",
+      "label": "Next Query / Go to Purpose Question",
+      "purpose": "Shown after a query is scored; moves to the next query, and after query C to the purpose question."
+    },
+    {
+      "type": "select",
+      "label": "Your choice",
+      "purpose": "Choose Query A, B, or C for the stated purpose."
+    },
+    {
+      "type": "button",
+      "label": "Submit Choice",
+      "purpose": "Submits the single attempt at the purpose question and shows the answer, the reason, the worked values, and the score."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Worked calculation on concrete result sets with limited attempts and hint-then-reveal feedback, followed by a decision that uses the computed measures",
+    "keyQuestions": [
+      "What fraction of the results are relevant, and what fraction of the relevant papers were found?",
+      "You are starting a literature survey and cannot afford to miss any relevant paper. Which query should you run first?"
+    ],
+    "commonMisconceptions": [
+      "A query that returns many results is a good query",
+      "High precision means the search found everything relevant",
+      "Precision and recall always move together"
+    ],
+    "assessmentOpportunities": [
+      "At least 5 of 6 precision and recall values within 0.01 of the reference values, and the purpose-question choice correct, is evidence of mastery",
+      "Browsing the corpus and marking papers is exploration and is not evidence"
+    ]
+  },
+  "chapter": "11-literature-search-synthesis"
+}

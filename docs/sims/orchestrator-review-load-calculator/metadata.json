@@ -1,0 +1,112 @@
+{
+  "title": "Orchestrator Review Load Calculator",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A p5.js calculator for the daily review load of an agent team, L = fraction x n_p x k_p x r_p + n_e x k_e x r_e + c minutes, compared with the researcher's attention budget. Three challenges in a fixed order, two attempts each, ask for the load of the default team in hours, the largest number of planning agents that fits in 4 hours, and the largest fraction of planning outputs that can be reviewed. After each challenge the sim shows the worked calculation and a stacked bar of planning, execution, and conflict minutes against a dashed attention line, with the verdict in words. After the challenges, nine sliders unlock for exploration. All values are illustrative.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/orchestrator-review-load-calculator/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Researcher attention as the limit on the size of an agent team",
+    "learningObjectives": [
+      "Calculate the daily review load of an agent team from its size and per-output review times, and adjust the team or the review fraction to fit a stated attention budget, in three challenges"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "calculate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "researcher attention",
+      "span of control",
+      "review checkpoint",
+      "the load formula L = n_p k_p r_p + n_e k_e r_e + c"
+    ],
+    "concepts": [
+      "Researcher Attention",
+      "Span of Control",
+      "Review Checkpoint",
+      "Planning Agent Team",
+      "Execution Agent Team",
+      "Agent Ratio",
+      "Sampling Review"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 750,
+      "drawHeight": "750 minus controlHeight",
+      "controlHeight": "191 (3 slider columns, width >= 860 px) or 253 to 283 (2 slider columns)"
+    },
+    "iframeHeight": 752,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "colorBlindSafe": true,
+      "notes": "describe() provides a screen-reader description. The answer box (Enter submits), buttons, and nine sliders are native p5.js DOM controls reachable with the Tab key; each slider has an aria-label. Bar segments are labeled with their minutes and named in a legend, the attention limit is a dashed line with a text label, and fit or no-fit is stated in words with a check or X, so no meaning depends on color alone. All text is 13 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "input",
+      "label": "Answer",
+      "purpose": "Type the answer to the current challenge; Enter submits. A non-number is not counted as an attempt."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Checks the answer. Two attempts per challenge; a first miss shows a hint, a second miss shows the worked calculation and counts as missed."
+    },
+    {
+      "type": "button",
+      "label": "Next challenge / Start exploring",
+      "purpose": "Shown after a challenge ends. Moves to the next challenge, or after the third challenge opens exploration with the default values."
+    },
+    {
+      "type": "slider",
+      "label": "Nine quantities: n_p, n_e, k_p, k_e, r_p, r_e, c, attention available, fraction of planning outputs reviewed",
+      "purpose": "Locked at the challenge values during the challenges (the unknown is hidden); unlocked in exploration, where each change updates the worked calculation and the bar."
+    },
+    {
+      "type": "button",
+      "label": "Restore defaults",
+      "purpose": "Exploration only. Returns all nine sliders to their default values."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Calculate-then-decide: the learner computes the load by hand, receives the worked calculation and a visual comparison with the attention budget, then uses the formula to size the team or the review fraction",
+    "keyQuestions": [
+      "How many hours of review does this team need each day?",
+      "How many planning agents fit in 4 hours of attention?",
+      "What fraction of planning outputs can be reviewed in 4 hours?",
+      "Which saves more attention: halving review time on planning outputs or on execution outputs?"
+    ],
+    "commonMisconceptions": [
+      "Review load grows only with the number of execution agents",
+      "More agents always means more done",
+      "Sampling review is the same as skipping review"
+    ],
+    "assessmentOpportunities": [
+      "Score on three challenges with two attempts each; mastery is 3 of 3 correct",
+      "Compare the saving from halving r_p with the saving from halving r_e",
+      "Find the largest team that fits a chosen attention budget"
+    ]
+  },
+  "chapter": "10-orchestrating-agent-teams"
+}

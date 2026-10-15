@@ -1,0 +1,121 @@
+{
+  "title": "Citation Verification Judge",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Evaluation activity in which learners judge eight invented model-generated citations as Verified, Wrong details, Unsupported claim, or Fabricated from the results of four simulated database lookups (DOI, exact title, authors venue and year, and the paper text). Each record allows one attempt with feedback that gives the reason and the misconception the record tests; the run ends with a score out of 8, a mastery statement at 7 of 8, and missed verdicts grouped by misconception.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/citation-verification-judge/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Verifying model-generated citations",
+    "learningObjectives": [
+      "Judge each of eight model-generated citations as verified, wrong details, unsupported claim, or fabricated, using the results of a simulated database lookup, with at least 7 of 8 judged correctly"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Hallucination and fabricated citation",
+      "The four ways a citation can fail: fabricated, wrong details, unsupported claim, verified"
+    ],
+    "concepts": [
+      "Hallucination",
+      "Fabricated Citation",
+      "Citation Verification",
+      "DOI",
+      "Bibliographic Database"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 800,
+      "drawHeight": 670,
+      "controlHeight": 130
+    },
+    "iframeHeight": 802,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML elements (buttons, select lists, text input, range sliders) reachable with the Tab key; correct and incorrect feedback uses words and symbols as well as color; colors come from the Okabe-Ito color-blind-safe palette; body text is 15 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Check DOI",
+      "purpose": "Opens the lookup check DOI resolves? for the current record."
+    },
+    {
+      "type": "button",
+      "label": "Check title",
+      "purpose": "Opens the lookup check Exact title found in database? for the current record."
+    },
+    {
+      "type": "button",
+      "label": "Check details",
+      "purpose": "Opens the lookup check Authors, venue and year match database? for the current record."
+    },
+    {
+      "type": "button",
+      "label": "Check text",
+      "purpose": "Opens the lookup check Paper's text supports the claim? for the current record."
+    },
+    {
+      "type": "select",
+      "label": "Verdict",
+      "purpose": "Learner's verdict: Verified, Wrong details, Unsupported claim, or Fabricated."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the verdict (one attempt per record) and shows feedback."
+    },
+    {
+      "type": "button",
+      "label": "Next Record / See Score",
+      "purpose": "Enabled after a verdict is submitted; advances to the next record, and after record 8 shows the score summary."
+    },
+    {
+      "type": "button",
+      "label": "More Missed Records",
+      "purpose": "Shown only on the summary screen when the missed-verdict list does not fit; pages through the list."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Evidence-based judgment against a fixed order of checks, with explanatory feedback tied to misconceptions",
+    "keyQuestions": [
+      "Is this citation safe to use as written?",
+      "Does the exact title exist, and does the DOI resolve to this paper?",
+      "Do the authors, venue, and year match the database?",
+      "Does the paper actually say what the model claims?"
+    ],
+    "commonMisconceptions": [
+      "A citation with a well-formed DOI and a real journal name is real",
+      "If the paper exists, the claim is supported",
+      "A wrong year or volume means the paper is fabricated"
+    ],
+    "assessmentOpportunities": [
+      "Mastery is at least 7 of 8 verdicts correct on the first attempt",
+      "Viewing the lookup results is exploration and is not evidence of mastery"
+    ]
+  },
+  "chapter": "02-how-language-models-work"
+}

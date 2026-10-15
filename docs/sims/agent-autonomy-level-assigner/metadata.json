@@ -1,0 +1,102 @@
+{
+  "title": "Agent Autonomy Level Assigner",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Evaluation activity in which learners recommend an autonomy level from 0 (Suggest only) to 3 (Act and report) for each of eight illustrative research tasks, using three given attributes: whether the task is reversible, whether its result leaves the researcher's control, and whether it can be verified quickly. Each task gets one attempt in a fixed order, followed by the correct level, the reason, and the assignment rule that applied. The run ends with a score out of 8, a mastery statement at 7 of 8, and how many tasks fell at each level.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/agent-autonomy-level-assigner/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Setting agent autonomy from the properties of a research task",
+    "learningObjectives": [
+      "Recommend an autonomy level from 0 to 3 for each of eight research tasks from its reversibility, reach, and verifiability, with at least 7 of 8 correct"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "recommend",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Agent autonomy, reversibility, reach, and verifiability",
+      "The four autonomy levels: Suggest only, Approve each step, Act within a boundary, and Act and report"
+    ],
+    "concepts": [
+      "Agent Autonomy",
+      "Agent Supervision",
+      "Reversibility",
+      "Reach",
+      "Verifiability",
+      "Autonomy Levels"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 830,
+      "drawHeight": 750,
+      "controlHeight": 80
+    },
+    "iframeHeight": 832,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; the level buttons carry aria-label and aria-pressed; correct and incorrect feedback uses words and check or X symbols as well as a blue or orange outline; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Level 0 / Level 1 / Level 2 / Level 3",
+      "purpose": "Chooses an autonomy level for the current task. The choice can be changed until Submit is pressed. Disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen level as the single attempt for the current task. Enabled only after a level is chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Task / See Score",
+      "purpose": "Enabled after submission. Advances to the next task, and after task 8 shows the score summary."
+    },
+    {
+      "type": "button",
+      "label": "Start Over",
+      "purpose": "Shown on the summary screen; returns to task 1 with no level chosen."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Criteria-based judgment with one attempt per case and immediate explanatory feedback naming the rule that applied",
+    "keyQuestions": [
+      "How much should the agent do on its own?",
+      "Does the result leave your control?",
+      "Can the effect be undone?",
+      "Can the result be checked quickly and objectively?"
+    ],
+    "commonMisconceptions": [
+      "A capable model deserves more autonomy on every task",
+      "Anything local is safe to run unattended",
+      "If a result is outward-bound, a quick look at it is enough"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 levels correct on the first attempt is evidence of mastery",
+      "Reading the task attributes is exploration and is not evidence"
+    ]
+  },
+  "chapter": "09-supervising-agents-roles"
+}

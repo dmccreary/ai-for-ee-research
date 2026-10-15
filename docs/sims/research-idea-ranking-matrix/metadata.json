@@ -1,0 +1,107 @@
+{
+  "title": "Research Idea Ranking Matrix",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Weighted-scoring activity in which learners calculate S = sum of weight x score for four illustrative SAR ADC research ideas scored on impact, feasibility, novelty, and low risk, under two weighting profiles (exploratory thesis and three-month deadline). Five questions in a fixed order give two attempts for numbers (tolerance 0.05) and one for choices, with the worked calculation, the ranking under both profiles, and a running count out of 5. After question 5, sliders let learners set their own weights, which must sum to 1.00, and watch the ranking change.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/research-idea-ranking-matrix/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Ranking research ideas by weighted criteria",
+    "learningObjectives": [
+      "Calculate the weighted score of research ideas under two weighting profiles and state which idea ranks first under each, with all five answers correct"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "calculate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Idea ranking",
+      "Weighted score",
+      "Impact, feasibility, novelty, and risk as ranking criteria"
+    ],
+    "concepts": [
+      "Idea Ranking",
+      "Weighted Score",
+      "Feasibility Assessment",
+      "Novelty",
+      "Risk"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 850,
+      "drawHeight": 800,
+      "controlHeight": 50
+    },
+    "iframeHeight": 852,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the answer box, drop-down list, buttons, and sliders are native HTML controls reachable with the Tab key, Enter submits a typed number, and the sliders move with the arrow keys; the active profile is marked with an arrow and an outline, feedback uses a check mark or X and words as well as a blue or orange color, and the leading idea is shown in bold; text is 16 px except the narrow-layout key (15 px) and column headers that shrink to fit narrow columns. The control region grows to two rows for the sliders (four rows below 580 px) and the drawing region shrinks by the same amount."
+    }
+  },
+  "controls": [
+    {
+      "type": "input",
+      "label": "Answer",
+      "purpose": "Number entry for questions 1 and 2. Enter submits. Two attempts; correct within 0.05."
+    },
+    {
+      "type": "select",
+      "label": "Answer",
+      "purpose": "Choice for questions 3 to 5 (I1 to I4, or Yes and No). One attempt."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Checks the current answer. An empty or non-numeric entry is not counted as an attempt."
+    },
+    {
+      "type": "button",
+      "label": "Next Question / Explore Weights",
+      "purpose": "Enabled after a question is finished. Advances to the next question, and after question 5 opens exploration."
+    },
+    {
+      "type": "slider",
+      "label": "Impact, Feasibility, Novelty, Low risk",
+      "purpose": "Exploration weights from 0.00 to 1.00 in steps of 0.05, starting at profile P1. The ranking is shown only while the four weights sum to 1.00."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Worked weighted-sum practice with graduated feedback, followed by guided exploration of weight sensitivity",
+    "keyQuestions": [
+      "Which idea wins when novelty matters most?",
+      "What is the weighted score of an idea under a given profile?",
+      "Is there an idea that ranks first under both profiles?",
+      "How small a change in the weights reverses the ranking?"
+    ],
+    "commonMisconceptions": [
+      "The best idea is the best under every weighting",
+      "A high score on one criterion makes an idea rank first",
+      "The weights are a technicality and not part of the decision"
+    ],
+    "assessmentOpportunities": [
+      "All five answers correct (numbers within 0.05, choices equal to the answer key) is evidence of mastery",
+      "Changing the weights in exploration mode is not evidence"
+    ]
+  },
+  "chapter": "14-brainstorming-problem-framing"
+}

@@ -111,7 +111,7 @@ Run on a revised paragraph, it takes a second and flags a changed ENOB figure th
 Type: microsim
 **sim-id:** paper-section-sorter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Understand<br/>
 **Bloom Verb:** classify<br/>
 **Learning Objective:** The learner will classify each of ten sentences from an engineering paper into the section where it belongs, with at least 8 of 10 classified correctly.
@@ -159,6 +159,10 @@ All sentences are invented for illustration and labeled "illustrative". The six 
 **Chapter Anchors:** The chapter lists the sections and the reader question each answers, states that an abstract compresses context, gap, contribution, and result, and that the introduction ends with a roadmap.
 </details>
 
+<iframe src="../../sims/paper-section-sorter/main.html" height="742px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Paper Section Sorter. [Open it fullscreen](../../sims/paper-section-sorter/main.html).*
+
 ## Figures, LaTeX, and References
 
 **LaTeX** is the typesetting system that most engineering venues use, and it is plain text. That makes it a good fit for the version-controlled project of Chapter 5 and for agents, which write LaTeX fluently. The cautions are practical. An agent may use packages your venue's template does not allow, produce markup that compiles with warnings, or silently alter a macro. Keep the venue's class file and template unchanged, compile after every substantial edit, and read the log for warnings, since a wrong cross-reference shows up there as `??` in the output.
@@ -174,7 +178,7 @@ All sentences are invented for illustration and labeled "illustrative". The six 
 Type: microsim
 **sim-id:** figure-caption-critic<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** critique<br/>
 **Learning Objective:** The learner will critique each of six figure captions by naming its main defect, or that it has none, with at least 5 of 6 judged correctly.
@@ -196,7 +200,7 @@ All captions are invented for illustration and labeled "illustrative". Judgment 
 | 1 | Figure 3. ENOB results. | Vague | It does not say what is plotted against what, so the reader cannot tell what the figure shows. |
 | 2 | Figure 4. Measured ENOB versus input frequency for 12 devices at 1 MS/s, 1.0 V, and 25 °C. Markers show the mean and error bars show one standard deviation. | No defect | It states the quantity, the conditions, and how to read the markers. |
 | 3 | Figure 5. Measured ENOB versus input frequency. | Missing conditions | The sampling rate, supply, temperature, and number of devices are not stated. |
-| 4 | Figure 6. SNDR versus input frequency, showing that our design is the best known SAR ADC. | Overclaims | A single figure of SNDR versus frequency cannot establish that the design is the best known. |
+| 4 | Figure 6. SNDR versus input frequency at 1 MS/s, 1.0 V, and 25 °C, showing that our design is the best known SAR ADC. | Overclaims | A single figure of SNDR versus frequency cannot establish that the design is the best known. |
 | 5 | Figure 7. FoM_W versus fs for ADC1 to ADC9 (measured, 65 nm). | Undefined symbols | FoM_W, fs, and ADC1 to ADC9 are not defined in the caption. |
 | 6 | Figure 8. Power breakdown of the converter at 1 MS/s and 1.0 V (simulated, typical corner): comparator 38 percent, DAC 27 percent, logic 25 percent, clock 10 percent. | No defect | It states the conditions, that the data are simulated, and the breakdown, which sums to 100 percent. |
 
@@ -217,6 +221,10 @@ All captions are invented for illustration and labeled "illustrative". Judgment 
 
 **Chapter Anchors:** The chapter states that a caption says what is plotted, the conditions, how to read the markers, and the observation to take, and that figure and caption together should be understandable without the body.
 </details>
+
+<iframe src="../../sims/figure-caption-critic/main.html" height="862px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Figure Caption Critic. [Open it fullscreen](../../sims/figure-caption-critic/main.html).*
 
 **Reference formatting** is producing the reference list in the style a venue requires. With BibTeX and a venue's style file the formatting is automatic, so the job is to keep the BibTeX entries correct and complete: verified as in Chapter 11, with the venue name, year, volume, pages, and DOI present. Never let an agent retype a reference by hand into the text, since that is where fabricated and corrupted entries enter.
 

@@ -1,0 +1,109 @@
+{
+  "title": "Personal Knowledge Graph Query Explorer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A vis-network personal knowledge graph of ten illustrative entities (experiments, datasets, designs, papers, a concept, and a person) joined by twelve typed, directed relationships. For each of five questions, in a fixed order and rising from one hop to three, the learner selects the exact set of entities that answers it and submits once. The sim then highlights the path that produces the answer set and shows the reason. The final score is reported as n of 5 correct, and mastery is 4 of 5.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/pkg-graph-query-explorer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Querying a personal knowledge graph by following typed relationships",
+    "learningObjectives": [
+      "Solve five questions about a twelve-edge personal knowledge graph by following typed, directed relationships, and give each answer as the exact set of entities, with at least 4 of 5 correct"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "solve",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "entity",
+      "relationship",
+      "typed relationship",
+      "graph schema",
+      "backlink",
+      "graph querying"
+    ],
+    "concepts": [
+      "Knowledge Graph",
+      "Personal Knowledge Graph",
+      "Entity",
+      "Typed Relationship",
+      "Graph Schema",
+      "Graph Querying",
+      "Multi-Hop Traversal"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 840
+    },
+    "iframeHeight": 842,
+    "responsive": true,
+    "dependencies": [
+      "vis-network@9.1.9"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "colorBlindSafe": true,
+      "notes": "Every node is mirrored by a keyboard-reachable toggle button with aria-pressed; focusing a button shows that entity's typed relationships in a live region. Each node names its entity type in words. Selection and result states carry a glyph (check, X, star) and a border style, not color alone; colors are from the Okabe-Ito palette. Mouse-wheel zoom and drag-to-pan are disabled so the iframe never captures page scrolling."
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Worked traversal practice: the learner solves graded questions from one hop to three hops, commits one answer set per question, and then sees the highlighted path and the reason",
+    "keyQuestions": [
+      "Which entities answer this, by following the relationships?",
+      "Does this hop follow the edge in its stated direction or against it?"
+    ],
+    "commonMisconceptions": [
+      "A relationship can be followed in either direction with the same meaning",
+      "A question that needs more than one hop cannot be answered from the graph",
+      "A paper that is not directly linked to a dataset is unaffected by that dataset"
+    ],
+    "assessmentOpportunities": [
+      "Score on the single attempt for each of the five questions; mastery is at least 4 of 5 correct",
+      "Write the chain of relationships that answers question 5 and explain why Paper Beta must be rechecked"
+    ]
+  },
+  "controls": [
+    {
+      "type": "node click / toggle buttons",
+      "name": "Entity selection",
+      "purpose": "Select or deselect an entity as part of the answer set for the current question; locked after submit"
+    },
+    {
+      "type": "hover / focus",
+      "name": "Relationship information",
+      "purpose": "Show an edge's type, or all of a node's incoming and outgoing typed relationships (exploration, not scored)"
+    },
+    {
+      "type": "button",
+      "name": "Submit",
+      "purpose": "Commit the selected set for the current question; one attempt per question"
+    },
+    {
+      "type": "button",
+      "name": "Next question",
+      "purpose": "Advance to the next question after the current one has been submitted"
+    },
+    {
+      "type": "button",
+      "name": "Start over",
+      "purpose": "Shown after question 5; clears all answers and starts again at question 1"
+    }
+  ],
+  "chapter": "06-knowledge-bases-skill-anatomy"
+}

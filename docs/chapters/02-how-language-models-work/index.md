@@ -124,7 +124,7 @@ The first MicroSim lets you practice the subtraction. Before you use it, make su
 Type: microsim
 **sim-id:** context-window-budget-calculator<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/token-efficiency/tree/main/docs/sims/context-budget-long-session<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** calculate<br/>
@@ -177,6 +177,10 @@ Exploration mode lets the learner set four quantities and shows a stacked bar of
 **Chapter Anchors:** The chapter's worked example uses a 32,000-token window, a 600-token system prompt, a 4,000-token history, a paper of 8,250 words (about 11,000 tokens), and a 400-token question, leaving 16,000 tokens. A second paper leaves 5,000 tokens, which cannot hold a 6,000-token completion. The chapter states that tokens are about words divided by 0.75.
 </details>
 
+<iframe src="../../sims/context-window-budget-calculator/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Context Window Budget Calculator. [Open it fullscreen](../../sims/context-window-budget-calculator/main.html).*
+
 !!! mascot-warning "Truncation Rarely Announces Itself"
     ![Volt warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
     A common trap is a long session in which the first instructions quietly fall off the window and the model drifts from your constraints. It happens because many chat tools drop the oldest content instead of failing. Restate the constraints near the end of the prompt, or start a fresh session with a short summary of the decisions so far.
@@ -204,7 +208,7 @@ With three candidate tokens scoring 2.0, 1.0, and 0.0, temperature 1.0 gives pro
 Type: microsim
 **sim-id:** temperature-next-token-explorer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Understand<br/>
 **Bloom Verb:** infer<br/>
 **Learning Objective:** The learner will infer, before it is revealed, whether the probability of the top-ranked and of the lowest-ranked candidate token rises or falls when the temperature is raised or lowered.
@@ -271,6 +275,10 @@ Prediction items, in this order:
 **Chapter Anchors:** The chapter's worked example for scores 2.0, 1.0, and 0.0 states 66.5%, 24.5%, and 9.0% at temperature 1.0; 86.7%, 11.7%, and 1.6% at 0.5; and 50.6%, 30.7%, and 18.6% at 2.0. The chapter states that the ranking never changes and that low temperature does not make a model more correct.
 </details>
 
+<iframe src="../../sims/temperature-next-token-explorer/main.html" height="722px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Temperature Next-Token Explorer. [Open it fullscreen](../../sims/temperature-next-token-explorer/main.html).*
+
 ## Training Data and the Knowledge Cutoff
 
 A model's behavior comes from its **training data**, the large body of text, code, and other material it was fitted to. During training, the model's parameters are adjusted so that it predicts the continuation of its training text better. This stage is followed by additional tuning on curated instruction-and-response examples and on human preference judgments, which is what makes a raw text predictor behave like an assistant. You do not need the optimization details for this course. You need to know what the process implies for what the model can and cannot reliably do.
@@ -329,7 +337,7 @@ The second MicroSim lets you practice the four-way classification on records tha
 Type: microsim
 **sim-id:** citation-verification-judge<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
 **Learning Objective:** The learner will judge each of eight model-generated citations as verified, wrong details, unsupported claim, or fabricated, using the results of a simulated database lookup, with at least 7 of 8 judged correctly.
@@ -376,6 +384,10 @@ Verdict options: Verified, Wrong details, Unsupported claim, Fabricated.
 
 **Chapter Anchors:** The chapter lists four citation outcomes: fabricated, wrong details, unsupported claim, and verified. It states that a well-formed DOI and a real venue do not establish that a paper exists, and that checking requires a database lookup the learner runs, not the model.
 </details>
+
+<iframe src="../../sims/citation-verification-judge/main.html" height="802px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Citation Verification Judge. [Open it fullscreen](../../sims/citation-verification-judge/main.html).*
 
 ## Choosing the Model: Size, Reasoning, Modality, and Benchmarks
 

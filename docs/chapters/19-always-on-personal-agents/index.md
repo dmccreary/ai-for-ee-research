@@ -125,7 +125,7 @@ The following MicroSim practices the translation from a worry to the criterion t
 Type: microsim
 **sim-id:** agent-comparison-criteria-matcher<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
 **Bloom Level:** Understand<br/>
 **Bloom Verb:** classify<br/>
@@ -172,6 +172,10 @@ The eight criteria are: Where it runs, Blast radius, Approval model, Usage meter
 **Chapter Anchors:** The chapter states criteria for where an agent runs, its blast radius, its approval model, usage metering, data exposure, memory, verification of vendor claims, and overnight activity audit.
 </details>
 
+<iframe src="../../sims/agent-comparison-criteria-matcher/main.html" height="562px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Personal Agent Comparison Criteria Matcher. [Open it fullscreen](../../sims/agent-comparison-criteria-matcher/main.html).*
+
 ## Memory, the Knowledge Graph, and Privacy
 
 An always-on agent is only as useful as what it remembers. **Knowledge graph memory** is the use of a personal knowledge graph, as built in Chapter 6, as the persistent memory of an agent: its entities and typed relationships supply the facts, projects, papers, experiments, and people, and the agent queries it instead of relying on whatever a vendor's memory feature retained. The arrangement has three advantages for a researcher. The memory is *yours*: it lives in files you control, under version control, and it survives a change of agent or vendor. It is *inspectable*: you can read and correct it, which cannot be said of an opaque store. And it is *structured*: the agent can answer multi-hop questions, such as which results depend on a dataset that has been withdrawn, by following relationships, as in the graph RAG of Chapter 6.
@@ -203,7 +207,7 @@ An overnight activity audit is a practical skill. The log of an always-on agent 
 Type: microsim
 **sim-id:** overnight-activity-audit<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** examine<br/>
 **Learning Objective:** The learner will examine ten lines of an agent's overnight activity log against a stated task and permission list, and flag each as in scope or out of scope, with at least 9 of 10 correct.
@@ -250,6 +254,10 @@ The task and permissions shown to the learner are: "Each night, search arXiv for
 
 **Chapter Anchors:** The chapter states that an audit compares each action with the task given, asks whether anything left your control, and that an agent whose activity cannot be reviewed should not be left alone with anything that matters.
 </details>
+
+<iframe src="../../sims/overnight-activity-audit/main.html" height="702px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Overnight Activity Audit. [Open it fullscreen](../../sims/overnight-activity-audit/main.html).*
 
 !!! mascot-tip "Test With a Throwaway Account"
     ![Volt offering a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }

@@ -1,0 +1,93 @@
+{
+  "title": "Skill Failure Mode Classifier",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners attribute eight illustrative observations of a misbehaving agent skill, in a fixed order, to one of six failure modes: undertriggering, overtriggering, instruction drift, missing dependency, stale reference, and scope creep. Each observation gets one attempt, followed by Correct or This is <mode> with a one-sentence reason. The run ends with a score out of 8, a mastery statement at 7 of 8, and the recommended fix for each mode that was missed.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/skill-failure-mode-classifier/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Diagnosing agent skill failures by symptom",
+    "learningObjectives": [
+      "Attribute each of eight observed skill problems to one of six failure modes, with at least 7 of 8 correct",
+      "Name the recommended fix for each failure mode"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "attribute",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "The six skill failure modes: undertriggering, overtriggering, instruction drift, missing dependency, stale reference, and scope creep"
+    ],
+    "concepts": [
+      "Skill Failure Modes",
+      "Undertriggering",
+      "Overtriggering",
+      "Instruction Drift",
+      "Missing Dependency",
+      "Stale Reference",
+      "Scope Creep",
+      "Skill Maintenance"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 820,
+      "drawHeight": 740,
+      "controlHeight": 80
+    },
+    "iframeHeight": 822,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the drop-down list and the button are native HTML controls reachable with the Tab key; the selected, correct, and wrong modes are marked with an arrow, a check mark, and an X as well as a color-blind-safe blue and vermillion outline; text is 16 px, reduced to no less than 14 px only at narrow widths."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Failure mode",
+      "purpose": "Chooses one of the six failure modes for the current observation. Disabled after the choice is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit / Next Observation / See Score",
+      "purpose": "Submit commits the chosen mode (one attempt per observation). After submission the button advances to the next observation, and after observation 8 it shows the score."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Six-way attribution of symptoms to causes with immediate explanatory feedback and targeted fixes for missed modes",
+    "keyQuestions": [
+      "Which failure mode explains this?",
+      "Did the skill load at all, and should it have?",
+      "If it loaded, what was skipped, missing, outdated, or added?"
+    ],
+    "commonMisconceptions": [
+      "Any skill problem is a problem with the model",
+      "A skill that gives a wrong answer must have bad instructions",
+      "A skill that does not run has failed to trigger"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 correct on the first attempt is evidence of mastery",
+      "Learner explains how the recommended fix for each missed mode addresses its cause"
+    ]
+  },
+  "chapter": "07-designing-testing-skills"
+}

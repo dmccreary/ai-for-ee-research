@@ -1,0 +1,99 @@
+{
+  "title": "AI Use Disclosure Decision Helper",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Practice activity in which learners apply a five-rule illustrative lab disclosure policy (not a real venue's policy) to eight scenarios of AI use in an electrical engineering project, choosing one of four actions for each: Disclose in the paper, Record in the project log only, No disclosure needed, or Not permitted. Each scenario has one attempt in a fixed order with feedback naming the matching rule and the reason. The run ends with a score out of 8, a mastery statement at 7 of 8, and an illustrative draft disclosure statement assembled from the scenarios that required disclosure in the paper.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/ai-use-disclosure-decision-helper/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Disclosure and citation of AI use in research publications",
+    "learningObjectives": [
+      "Apply a five-rule illustrative lab disclosure policy to eight scenarios of AI use and give the required action for each, with at least 7 of 8 correct",
+      "Distinguish disclosure in the paper from a project log entry and from no record"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "apply",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "AI disclosure, citation of AI use, and authorship policy from the section Integrity, Disclosure, and Authorship of Chapter 18",
+      "The audit trail from Chapter 17"
+    ],
+    "concepts": [
+      "AI Disclosure",
+      "Citation of AI Use",
+      "Authorship Policy",
+      "Journal Policy",
+      "Institutional Policy",
+      "Academic Integrity",
+      "Audit Trail"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 780,
+      "drawHeight": 700,
+      "controlHeight": 80
+    },
+    "iframeHeight": 782,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the action list and buttons are native HTML controls reachable with the Tab key; correct and incorrect feedback uses words and check-mark or X symbols as well as color, and the matching rule is marked with an arrow as well as an outline; the color pair is the color-blind-safe Okabe-Ito blue and vermillion; the base text size is chosen per width from 18 px down to 14 px (13 px only below about 340 px wide) so that every state fits."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose an action...",
+      "purpose": "Chooses one of the four actions: Disclose in the paper, Record in the project log only, No disclosure needed, Not permitted. Disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen action for the current scenario (one attempt per scenario). Enabled once an action is chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Scenario / See Score",
+      "purpose": "Enabled after the answer is submitted. Advances to the next scenario, and after scenario 8 shows the score, the mastery statement, and the draft disclosure statement."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Rule application to fixed-order cases with one attempt each, immediate feedback naming the matching rule, and a synthesis step that assembles a draft disclosure statement",
+    "keyQuestions": [
+      "What does the policy require here?",
+      "Does the AI-assisted text, code, data, or figure appear in the submitted paper or contribute to reported results?",
+      "Is the use only grammar, spelling, or formatting assistance?",
+      "Would the action list an AI system as an author?"
+    ],
+    "commonMisconceptions": [
+      "Only AI-written text needs disclosure",
+      "If AI was used heavily, it can be listed as an author",
+      "Any use at all must be disclosed in the paper"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 scenarios answered with the action the policy gives on the first attempt is evidence of mastery",
+      "Reading the policy is exploration and is not evidence of mastery"
+    ]
+  },
+  "chapter": "18-responsible-ethical-use"
+}

@@ -113,7 +113,7 @@ A worked example with illustrative numbers: a batch of 40 devices has measured o
 Type: microsim
 **sim-id:** data-cleaning-decision-simulator<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
 **Learning Objective:** The learner will judge, for each of eight anomalies in a batch of measurements, whether to keep, exclude with a log, correct and log, or remeasure, with at least 7 of 8 correct.
@@ -158,6 +158,10 @@ The batch is synthetic, labeled "synthetic, invented for this exercise". It is 4
 
 **Chapter Anchors:** The chapter states four actions (keep, exclude with log, correct and log, remeasure), that removal needs a documented cause, that an undocumented outlier is kept and investigated, and that raw files are never edited.
 </details>
+
+<iframe src="../../sims/data-cleaning-decision-simulator/main.html" height="752px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Measurement Data Cleaning Decision Simulator. [Open it fullscreen](../../sims/data-cleaning-decision-simulator/main.html).*
 
 ## Exploring, Analyzing, and Plotting
 
@@ -215,7 +219,7 @@ Error messages are the most useful information an agent has, and agents sometime
 Type: microsim
 **sim-id:** python-traceback-reader<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** examine<br/>
 **Learning Objective:** The learner will examine five Python tracebacks and identify the cause of each from the exception type, message, and failing line, with at least 4 of 5 correct.
@@ -257,6 +261,10 @@ Each traceback is invented and labeled "illustrative".
 
 **Chapter Anchors:** The chapter states that a traceback is read from the bottom, that the last line names the failure, that the nearest line of your own code is where to look first, and that a deliberately raised error points to the input.
 </details>
+
+<iframe src="../../sims/python-traceback-reader/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Python Traceback Reader. [Open it fullscreen](../../sims/python-traceback-reader/main.html).*
 
 ## Environments and Notebooks
 

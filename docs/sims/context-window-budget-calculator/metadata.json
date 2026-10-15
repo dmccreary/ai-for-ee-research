@@ -1,0 +1,122 @@
+{
+  "title": "Context Window Budget Calculator",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Calculator activity in which learners compute the tokens left for a completion from a context window size and the sizes of the system prompt, history, attachment, and latest message, and decide whether a requested completion fits. Three illustrative challenges in a fixed order allow two attempts each and reveal the worked subtraction and a stacked bar of the window; an exploration mode then offers four sliders and shows the remaining space and whether a 6,000-token completion fits.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/context-window-budget-calculator/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Context window budgeting for prompts and completions",
+    "learningObjectives": [
+      "Calculate the number of tokens left for a completion from a context window size and the sizes of the prompt components, and state whether a requested completion fits"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "calculate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Token, context window, prompt, and completion",
+      "The estimate of tokens as words divided by 0.75"
+    ],
+    "concepts": [
+      "Token",
+      "Tokenization",
+      "Context Window",
+      "Context Limit",
+      "System Prompt",
+      "Prompt",
+      "Completion"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 760,
+      "drawHeight": 620,
+      "controlHeight": 140
+    },
+    "iframeHeight": 762,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML elements (buttons, select lists, text input, range sliders) reachable with the Tab key; correct and incorrect feedback uses words and symbols as well as color; colors come from the Okabe-Ito color-blind-safe palette; body text is 15 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "input",
+      "label": "tokens remaining",
+      "purpose": "Text box for the learner's remaining-token answer; accepts whole numbers with optional commas and a minus sign."
+    },
+    {
+      "type": "select",
+      "label": "fits / does not fit",
+      "purpose": "Learner's decision on whether the requested completion fits."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Checks the remaining-token figure and the fits decision together; two attempts per challenge."
+    },
+    {
+      "type": "button",
+      "label": "Next Challenge / Open Exploration Mode",
+      "purpose": "Enabled after a challenge is answered correctly or missed; advances to the next challenge, and after challenge 3 opens exploration mode."
+    },
+    {
+      "type": "slider",
+      "label": "Window",
+      "purpose": "Exploration mode: window size from 8,000 to 128,000 tokens in steps of 8,000 (default 32,000)."
+    },
+    {
+      "type": "slider",
+      "label": "System prompt",
+      "purpose": "Exploration mode: system prompt from 0 to 2,000 tokens in steps of 100 (default 600)."
+    },
+    {
+      "type": "slider",
+      "label": "History",
+      "purpose": "Exploration mode: history from 0 to 20,000 tokens in steps of 500 (default 4,000)."
+    },
+    {
+      "type": "slider",
+      "label": "Attachment",
+      "purpose": "Exploration mode: attachment from 0 to 40,000 tokens in steps of 500 (default 11,000)."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Worked calculation with committed answers, two attempts and a hint, followed by free exploration of a stacked-bar budget",
+    "keyQuestions": [
+      "How many tokens are left for the answer?",
+      "Does the completion share the window with the prompt?",
+      "What happens when the prompt alone exceeds the window?"
+    ],
+    "commonMisconceptions": [
+      "The context window limits only the prompt, so the completion is free",
+      "Words and tokens are the same unit",
+      "Content that does not fit is rejected with a visible error, when it may instead be dropped silently"
+    ],
+    "assessmentOpportunities": [
+      "Mastery is 3 of 3 challenges correct: the remaining-token figure exactly equals the answer key and the fits decision matches",
+      "Changing the sliders in exploration mode is not evidence of mastery"
+    ]
+  },
+  "chapter": "02-how-language-models-work"
+}

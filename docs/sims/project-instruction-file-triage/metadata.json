@@ -1,0 +1,97 @@
+{
+  "title": "Project Instruction File Triage",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Evaluation activity in which learners judge each of eleven lines of an illustrative draft project instruction file (AGENTS.md or CLAUDE.md) for a SAR ADC project as a Goal, a Convention, a Constraint, or Does not belong. Each line has one attempt in a fixed order, with feedback that states the correct label and a one-sentence reason. The run ends with a score out of 11, a mastery statement at 9 of 11, and where the content of each line that does not belong should live instead.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/project-instruction-file-triage/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Writing project instruction files for coding agents",
+    "learningObjectives": [
+      "Judge each of eleven lines of a draft instruction file as a goal, a convention, a constraint, or not belonging in the file, with at least 9 of 11 judged correctly"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Project instruction file, project goals, project conventions, and project constraints, as defined in the section Project Instruction Files of Chapter 5"
+    ],
+    "concepts": [
+      "Project Instruction File",
+      "AGENTS.md File",
+      "CLAUDE.md File",
+      "Project Goals",
+      "Project Conventions",
+      "Project Constraints"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 780,
+      "drawHeight": 700,
+      "controlHeight": 80
+    },
+    "iframeHeight": 782,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key, and the label buttons report their selected state with aria-pressed; correct and incorrect judgments are marked with a check mark or an X and stated in words as well as in blue and orange; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Goal / Convention / Constraint / Does not belong",
+      "purpose": "Selects a label for the highlighted line. The selection can be changed until Submit is pressed."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Enabled once a label is selected. Commits the single attempt for the highlighted line, shows the feedback, and highlights the next line."
+    },
+    {
+      "type": "button",
+      "label": "See Score",
+      "purpose": "Shown after line 11 is judged. Shows the final score, the mastery result, and where each line that does not belong should live instead."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Line-by-line four-way judgment against explicit criteria (durable, checkable, safe) with immediate explanatory feedback",
+    "keyQuestions": [
+      "Is this line a goal, a convention, a constraint, or not worth putting in the file?",
+      "Could this line be checked?",
+      "Will this line still be true next week?",
+      "Would this line be safe in a committed file?"
+    ],
+    "commonMisconceptions": [
+      "Anything useful to say to an agent belongs in the instruction file",
+      "A vague exhortation such as be careful is a constraint",
+      "A credential in a private repository is safe to include"
+    ],
+    "assessmentOpportunities": [
+      "At least 9 of 11 lines judged correctly on the first attempt is evidence of mastery",
+      "The learner can name where each removed line belongs instead: a log, nowhere, or a secrets store",
+      "Reading the draft file as a whole is exploration, not evidence"
+    ]
+  },
+  "chapter": "05-markdown-and-version-control"
+}

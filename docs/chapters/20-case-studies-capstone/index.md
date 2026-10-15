@@ -107,7 +107,7 @@ The generation of this book produced several failure cases of its own, and each 
 Type: microsim
 **sim-id:** failure-case-root-cause-analyzer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** attribute<br/>
 **Learning Objective:** The learner will attribute each of six failure cases to its root cause and to the control that would have caught it, with at least 5 of 6 attributed correctly.
@@ -150,6 +150,10 @@ All cases are invented or adapted for illustration and labeled "illustrative". R
 
 **Chapter Anchors:** The chapter lists failure cases including a wrong acceptance-criterion number caught by hand calculation, malformed markup caught by a validation script, and shorter chapters than the budget, and states that a record of only successes shows no place for controls.
 </details>
+
+<iframe src="../../sims/failure-case-root-cause-analyzer/main.html" height="832px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Failure Case Root Cause Analyzer. [Open it fullscreen](../../sims/failure-case-root-cause-analyzer/main.html).*
 
 !!! mascot-warning "The Record With No Failures"
     ![Volt warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
@@ -218,7 +222,7 @@ An **adoption plan** is the staged introduction of these practices into a resear
 Type: microsim
 **sim-id:** adoption-plan-prioritizer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** prioritize<br/>
 **Learning Objective:** The learner will prioritize six adoption steps for a research group into an order that respects their dependencies, and state the dependency that justifies each constraint.
@@ -269,6 +273,10 @@ Dependencies, each with its reason:
 
 **Chapter Anchors:** The chapter states that policy and repository come before the pilot, that checks are added before a team is scaled, and that a 90-day review decides what to expand or stop.
 </details>
+
+<iframe src="../../sims/adoption-plan-prioritizer/main.html" height="852px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Adoption Plan Prioritizer. [Open it fullscreen](../../sims/adoption-plan-prioritizer/main.html).*
 
 A reasonable adoption plan names the owner of each step, a date, and the measure that will show whether it worked. Three measures are enough to begin with: the time saved on the pilot task, the review time the pilot required, and the number of errors found after acceptance. If the third number is not falling, the controls are not yet adequate, and the team should not grow.
 

@@ -104,7 +104,7 @@ A more specific rule is easier to practise than a general one. The following Mic
 Type: microsim
 **sim-id:** ai-use-disclosure-decision-helper<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/theory-of-knowledge/tree/main/docs/sims/ai-ethics-dimensions<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** apply<br/>
@@ -161,6 +161,10 @@ Action options: Disclose in the paper, Record in the project log only, No disclo
 **Chapter Anchors:** The chapter states that AI systems are not listed as authors and that substantive use is disclosed, that a log of AI use makes disclosure accurate, and that venue and institutional policies differ and must be read at submission.
 </details>
 
+<iframe src="../../sims/ai-use-disclosure-decision-helper/main.html" height="782px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: AI Use Disclosure Decision Helper. [Open it fullscreen](../../sims/ai-use-disclosure-decision-helper/main.html).*
+
 ## Privacy, Confidentiality, and Governance
 
 **Privacy** is the protection of information about people, and **confidential data** is information that you are obliged to protect, by agreement, law, or policy. Research holds both: personal data of human participants, the logs of a user study, measurement data under a sponsor's agreement, and the models and design files that a foundry or tool vendor supplies under a non-disclosure agreement. In electrical engineering the last is common. Process design kits and device models are usually restricted.
@@ -185,7 +189,7 @@ Action options: Disclose in the paper, Record in the project log only, No disclo
 Type: microsim
 **sim-id:** data-sensitivity-sorter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
 **Learning Objective:** The learner will judge which class of AI tool an item of research data may be given to under a four-class illustrative policy, for eight items, with at least 7 of 8 correct.
@@ -230,6 +234,10 @@ The classification is Table 1 above and is labeled "illustrative policy" in the 
 
 **Chapter Anchors:** The chapter states that hosted tools are a disclosure to a third party, that a local model keeps data on your machine, and that vendor files under NDA, export-controlled data, and participants' personal data are the most restricted.
 </details>
+
+<iframe src="../../sims/data-sensitivity-sorter/main.html" height="812px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Data Sensitivity Sorter for AI Tools. [Open it fullscreen](../../sims/data-sensitivity-sorter/main.html).*
 
 !!! mascot-warning "The Paste Is Not Undoable"
     ![Volt warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }

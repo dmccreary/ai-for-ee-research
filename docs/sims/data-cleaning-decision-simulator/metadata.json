@@ -1,0 +1,94 @@
+{
+  "title": "Measurement Data Cleaning Decision Simulator",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Decision activity in which learners judge eight anomalies in a synthetic batch of 40 device offset-voltage measurements and commit one of four actions: keep, exclude with log, correct and log, or remeasure. Each anomaly comes with a lab notebook excerpt; one attempt per anomaly in a fixed order, after which the sim reveals the correct action, the reason, and the cleaning log entry. The run ends with a score out of 8, a mastery statement at 7 of 8, and a summary of how many rows were kept, excluded, corrected, and sent for remeasurement.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/data-cleaning-decision-simulator/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Electrical Engineering",
+    "topic": "Honest cleaning of measurement data",
+    "learningObjectives": [
+      "Judge, for each of eight anomalies in a batch of measurements, whether to keep, exclude with a log, correct and log, or remeasure, with at least 7 of 8 correct"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Data cleaning",
+      "The three rules of honest cleaning: cleaning is a script, every change is logged, remove only for a documented cause",
+      "The four responses to an anomaly: keep, exclude with log, correct and log, remeasure"
+    ],
+    "concepts": [
+      "Measurement Data",
+      "Data Cleaning",
+      "Outliers",
+      "Missing-Value Codes",
+      "Unit Mismatch",
+      "Cleaning Log",
+      "Raw Data Preservation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 750,
+      "drawHeight": 635,
+      "controlHeight": 115
+    },
+    "iframeHeight": 752,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and expose aria-pressed for the current choice; the chosen action is shown by a thick border and bold text as well as color; correct and incorrect feedback uses words and check or X symbols as well as a blue/brown color pair; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Keep / Exclude with log / Correct and log / Remeasure",
+      "purpose": "Chooses one of the four actions for the current anomaly. The choice can be changed until Submit; after Submit the buttons are disabled and marked with a check mark (correct action) or an X (wrong pick)."
+    },
+    {
+      "type": "button",
+      "label": "Submit / Next Anomaly / See Score",
+      "purpose": "Submit commits the chosen action (one attempt) and is enabled only after a choice. It then becomes Next Anomaly, and after the eighth anomaly See Score, which shows the score, the mastery statement, and the row summary."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Case-based judgment against a stated criterion (the documented cause) with one attempt per case and an explanatory reveal",
+    "keyQuestions": [
+      "What should happen to this data?",
+      "Is there a documented cause for this anomaly?",
+      "Can cleaning recover this measurement, or must it be remeasured?",
+      "What would be recorded in the cleaning log?"
+    ],
+    "commonMisconceptions": [
+      "An outlier should be removed because it is an outlier",
+      "A suspicious value can be edited in the raw file",
+      "Any problem with the data can be fixed by cleaning"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 actions matching the answer key on the first attempt is evidence of mastery",
+      "Reading the lab notebook excerpt is exploration and is not evidence"
+    ]
+  },
+  "chapter": "12-data-analysis-scripting"
+}

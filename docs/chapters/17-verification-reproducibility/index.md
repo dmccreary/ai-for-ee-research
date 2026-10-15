@@ -91,7 +91,7 @@ A worked example, with illustrative numbers. An agent's script reports an ENOB o
 Type: microsim
 **sim-id:** verification-method-matcher<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** recommend<br/>
 **Learning Objective:** The learner will recommend which of five verification methods best fits each of eight AI-assisted claims, with at least 7 of 8 matching the answer in Content.
@@ -137,6 +137,10 @@ All claims are invented for illustration and labeled "illustrative". Method opti
 **Chapter Anchors:** The chapter states that an independent check has different failure causes from the thing checked, that cross-model agreement is weak evidence while disagreement is a useful flag, and that a primary source check is made against the original document.
 </details>
 
+<iframe src="../../sims/verification-method-matcher/main.html" height="712px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Verification Method Matcher. [Open it fullscreen](../../sims/verification-method-matcher/main.html).*
+
 ## Working Test-First and Replicating
 
 **Test-driven research** is the practice, borrowed from software, of deciding in advance what result would count as success or failure and writing it down before the experiment or analysis is run. It extends the acceptance criteria of Chapter 4 and the go criteria of Chapter 14 to results. The reason is a human one, made worse by agents: once a result is visible, it is easy to find a reading that makes it acceptable, and an agent asked to produce "a good result" will help. A criterion written first cannot be adjusted to fit.
@@ -166,7 +170,7 @@ Three tendencies of language models weaken verification when they are not recogn
 Type: microsim
 **sim-id:** sycophancy-spotter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** distinguish<br/>
 **Learning Objective:** The learner will distinguish, among six exchanges between a researcher and a model, the replies that are sycophantic from those that are calibrated, with at least 5 of 6 classified correctly.
@@ -209,6 +213,10 @@ All exchanges are invented for illustration and labeled "illustrative".
 
 **Chapter Anchors:** The chapter states that sycophancy is agreeing with the user and changing an answer under pushback without new evidence, and that a change of answer is a warning unless the pushback contained evidence.
 </details>
+
+<iframe src="../../sims/sycophancy-spotter/main.html" height="652px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Sycophancy Spotter. [Open it fullscreen](../../sims/sycophancy-spotter/main.html).*
 
 ## Records That Let Others Check
 

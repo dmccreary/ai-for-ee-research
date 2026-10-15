@@ -1,0 +1,360 @@
+/* Citation Chaining Explorer - vis-network-tutorial layout
+ * ========================================================
+ * Wide (>= 860px): citation graph + paper details on the left, question panel on the right.
+ * Narrow (< 860px): title, graph, paper details, and question panel stacked.
+ * The whole page fits inside the iframe height (CANVAS_HEIGHT + 2);
+ * the graph area absorbs any spare height so nothing scrolls.
+ *
+ * Colors are from the Okabe-Ito color-blind-safe palette (blue / vermillion).
+ * Meaning is also carried by edge width, arrowheads, check and X glyphs, and text.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 6px 10px 4px 10px;
+    gap: 6px;
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title-bar {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-style: italic;
+    color: #003f73;
+    margin-top: 2px;
+}
+
+/* ===========================================
+   TWO-COLUMN LAYOUT
+   =========================================== */
+.layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.left-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.graph-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 180px;
+    background-color: white;
+    border: 1px solid #c9d6e3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+}
+
+/* Legend: upper left of the graph */
+.legend {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 3px 6px;
+    border-radius: 6px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.lg-arrow { font-weight: bold; }
+
+.lg-thick {
+    display: inline-block;
+    width: 26px;
+    height: 5px;
+    background: #d55e00;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.tag-illustrative {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 14px;
+    font-style: italic;
+    color: #444;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 3px 6px;
+    border-radius: 6px;
+    z-index: 10;
+    pointer-events: none;
+    max-width: 45%;
+    text-align: right;
+}
+
+/* ===========================================
+   EXPLORATION PANEL (paper details)
+   =========================================== */
+.explore-panel {
+    flex: 0 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 6px 10px;
+}
+
+.paper-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.chain-label {
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.node-btn {
+    font-size: 15px;
+    min-width: 30px;
+    padding: 2px 7px;
+    border: 2px solid #0072b2;
+    border-radius: 6px;
+    background: #eef6fc;
+    color: #003f73;
+    cursor: pointer;
+}
+
+.node-btn:hover { background: #d6eaf8; }
+.node-btn[aria-pressed="true"] {
+    background: #0072b2;
+    color: white;
+}
+
+.definition {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.35;
+    min-height: 2.7em;
+}
+
+.definition strong { color: #003f73; }
+
+/* ===========================================
+   RIGHT PANEL (Questions)
+   =========================================== */
+.right-panel {
+    flex: 0 0 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 8px 10px;
+    min-height: 0;
+}
+
+.q-header {
+    font-size: 16px;
+}
+
+.q-step {
+    font-weight: bold;
+    color: #003f73;
+}
+
+.question {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.choices {
+    border: 1px solid #c9d6e3;
+    border-radius: 6px;
+    padding: 4px 8px 6px 8px;
+}
+
+.choices legend {
+    font-size: 15px;
+    padding: 0 4px;
+}
+
+.choice-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    padding: 3px 8px;
+    border: 2px solid #b8c7d6;
+    border-radius: 6px;
+    background: #fbfdff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.choice input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.choice:hover { border-color: #0072b2; }
+.choice:focus-within { outline: 3px solid #56b4e9; outline-offset: 1px; }
+.choice.selected { border-color: #0072b2; background: #eef6fc; }
+.choice.locked { cursor: default; }
+.choice.locked input { cursor: default; }
+
+/* After submit: glyph + text + border style, not color only */
+.choice.is-answer {
+    border-color: #0072b2;
+    background: #e3f1fb;
+    font-weight: bold;
+}
+.choice.is-wrong {
+    border-color: #d55e00;
+    background: #fdf0e1;
+    border-style: dashed;
+}
+
+.feedback {
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.feedback:empty { display: none; }
+
+.feedback .fb {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border-left: 5px solid #0072b2;
+    background: #eef6fc;
+}
+
+.feedback .fb.fb-wrong {
+    border-left-color: #d55e00;
+    background: #fdf0e1;
+}
+
+.feedback .fb-edges {
+    margin-top: 3px;
+    font-size: 14px;
+    color: #333;
+}
+
+.feedback .fb-final {
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.feedback .fb-notice {
+    margin-top: 2px;
+}
+
+/* ===========================================
+   CONTROL BUTTONS
+   =========================================== */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: auto;
+}
+
+.btn {
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:focus-visible, .node-btn:focus-visible { outline: 3px solid #56b4e9; outline-offset: 2px; }
+
+.btn-primary { background-color: #0072b2; color: white; }
+.btn-primary:hover { background-color: #005a8c; }
+.btn-primary:disabled { background-color: #9cc3dd; cursor: not-allowed; }
+
+.score {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.back-link {
+    flex: 0 0 auto;
+    font-size: 14px;
+    color: #005a8c;
+}
+
+/* ===========================================
+   RESPONSIVE: stack below 860px
+   =========================================== */
+@media (max-width: 859px) {
+    .container { padding: 4px 6px 2px 6px; gap: 4px; }
+    .title { font-size: 18px; }
+    .subtitle { font-size: 15px; }
+    .layout { flex-direction: column; gap: 4px; }
+    .left-col { flex: 1 1 auto; min-height: 0; gap: 4px; }
+    .right-panel { flex: 0 0 auto; padding: 6px 8px; gap: 4px; }
+    .legend { font-size: 13px; }
+    .tag-illustrative { font-size: 13px; }
+    .explore-panel { padding: 4px 8px; }
+    .node-btn { padding: 1px 6px; }
+    .definition { font-size: 14px; min-height: 2.6em; margin-top: 3px; }
+    .question { font-size: 15px; }
+    .choice { padding: 2px 7px; }
+    .feedback { font-size: 14px; }
+    .btn { padding: 6px 11px; font-size: 14px; }
+    .score { font-size: 14px; }
+}

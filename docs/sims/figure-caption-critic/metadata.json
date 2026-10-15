@@ -1,0 +1,91 @@
+{
+  "title": "Figure Caption Critic",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Critique activity in which learners judge six illustrative figure captions from an engineering paper as Vague, Missing conditions, Undefined symbols, Overclaims, or No defect, naming the first failing property of a caption checklist. Captions come in a fixed order with one attempt each; every submission gets Correct or The main issue is feedback with a one-sentence reason and, where there is a defect, a suggested corrected caption. The run ends with a score out of 6 and a mastery statement at 5 of 6.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/figure-caption-critic/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Writing figure captions for engineering papers",
+    "learningObjectives": [
+      "Critique each of six figure captions by naming its main defect, or that it has none, with at least 5 of 6 judged correctly",
+      "Apply a caption checklist in order: what is plotted, conditions, how to read it, and no unsupported claim"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "critique",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Figure caption and the four properties of a good caption (what is plotted, conditions, how to read it, no unsupported claim), from the section Figures, LaTeX, and References in Chapter 15"
+    ],
+    "concepts": [
+      "Figure Captions",
+      "Figure Preparation",
+      "Manuscript Preparation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 860,
+      "drawHeight": "responsive (860 minus the control region)",
+      "controlHeight": "44 to 116 (one to three rows of buttons, by width)"
+    },
+    "iframeHeight": 862,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; the chosen judgment button sets aria-pressed; keyboard focus moves to the next usable button after Submit and Next; correct and incorrect feedback uses words and check or X symbols as well as an Okabe-Ito color-blind-safe palette; the suggested caption has a dashed border and a text label; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Vague, Missing conditions, Undefined symbols, Overclaims, No defect",
+      "purpose": "Five judgment buttons. Pressing one chooses that judgment for the current caption; the choice can be changed until Submit. Disabled after the caption is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Enabled once a judgment is chosen. Commits the single attempt for the current caption and shows the feedback and, where there is a defect, a suggested corrected caption."
+    },
+    {
+      "type": "button",
+      "label": "Next / See Score",
+      "purpose": "Enabled after a submission. Advances to the next caption in the fixed order, and after caption 6 shows the score and whether the mastery threshold was met."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Checklist-based critique with the first failing property named, one attempt per item, immediate explanatory feedback, and a suggested corrected caption",
+    "keyQuestions": [
+      "Could a reader understand this figure from the caption alone?"
+    ],
+    "commonMisconceptions": [
+      "A short caption is a good caption",
+      "A caption can rely on the body text for its conditions",
+      "A caption should state the paper's main claim"
+    ],
+    "assessmentOpportunities": [
+      "At least 5 of 6 captions judged correctly on the first attempt is evidence of mastery",
+      "Reading the checklist is exploration and is not evidence"
+    ]
+  },
+  "chapter": "15-manuscript-preparation"
+}

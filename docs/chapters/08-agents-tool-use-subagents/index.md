@@ -100,7 +100,7 @@ The loop is why an agent can solve problems that a single prompt cannot. It can 
 Type: microsim
 **sim-id:** agent-loop-stepper<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Understand<br/>
 **Bloom Verb:** infer<br/>
 **Learning Objective:** The learner will infer the agent's next tool call at each of five steps of a loop that diagnoses a low ENOB result, given the task and the results observed so far, with at least 4 of 5 correct.
@@ -120,10 +120,10 @@ Task shown at the start: "The ENOB of capture-07.csv is 6.1 bits but the convert
 | Step | Result observed so far | Candidate A | Candidate B | Candidate C | Correct | Why (shown as feedback) |
 |---|---|---|---|---|---|---|
 | 1 | Nothing yet. | list_files on the project root | run_python to recompute ENOB with a different formula | read_file on the paper draft | A | The agent knows nothing about the project, so it looks at what exists before acting. |
-| 2 | Files: data/raw/capture-07.csv, scripts/enob.py, docs/spec.md. | read_file scripts/enob.py | read_file data/raw/capture-07.csv | list_files on data/raw | A | The result is computed by the script, so the method is the first thing to inspect. |
-| 3 | enob.py computes SNDR over all FFT bins, including bin 0 (DC). | run_python to print the DC bin magnitude of capture-07.csv | rewrite enob.py without being asked | read_file docs/spec.md | A | A hypothesis has appeared (DC counted as noise), and a cheap measurement tests it before anything is changed. |
-| 4 | DC bin magnitude is 40 times larger than the next-largest non-signal bin. | run_python to compute ENOB with the DC bin excluded, without editing the file | edit enob.py and overwrite the old result | report success | A | The agent tests the fix on a copy and compares, so the original file and result stay intact. |
-| 5 | ENOB with DC excluded is 9.1 bits. | report the cause and the evidence, and propose the change for approval | silently apply the change to enob.py | rerun the capture | A | The task was to find why, and a change to the project file is the researcher's decision. |
+| 2 | Files: data/raw/capture-07.csv, scripts/enob.py, docs/spec.md. | list_files on data/raw | read_file scripts/enob.py | read_file data/raw/capture-07.csv | B | The result is computed by the script, so the method is the first thing to inspect. |
+| 3 | enob.py computes SNDR over all FFT bins, including bin 0 (DC). | read_file docs/spec.md | rewrite enob.py without being asked | run_python to print the DC bin magnitude of capture-07.csv | C | A hypothesis has appeared (DC counted as noise), and a cheap measurement tests it before anything is changed. |
+| 4 | DC bin magnitude is 40 times larger than the next-largest non-signal bin. | report success | run_python to compute ENOB with the DC bin excluded, without editing the file | edit enob.py and overwrite the old result | B | The agent tests the fix on a copy and compares, so the original file and result stay intact. |
+| 5 | ENOB with DC excluded is 9.1 bits. | silently apply the change to enob.py | rerun the capture | report the cause and the evidence, and propose the change for approval | C | The task was to find why, and a change to the project file is the researcher's decision. |
 
 **Provenance:** The loop structure is from the section "Tool Use and the Agent Loop" of this chapter. The files, results, and numbers are invented for illustration.
 
@@ -142,6 +142,10 @@ Task shown at the start: "The ENOB of capture-07.csv is 6.1 bits but the convert
 
 **Chapter Anchors:** The chapter states that the model emits a tool call and the harness executes it, that results are returned to the context, and that the loop repeats until the task is complete or a limit is reached.
 </details>
+
+<iframe src="../../sims/agent-loop-stepper/main.html" height="847px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Agent Loop Stepper. [Open it fullscreen](../../sims/agent-loop-stepper/main.html).*
 
 ## Reaching Files, Shells, and Code
 
@@ -231,7 +235,7 @@ A good working pattern is to pair a tight mode with a permissive allow-list for 
 Type: microsim
 **sim-id:** agent-permission-boundary-judge<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** judge<br/>
@@ -287,6 +291,10 @@ The policy shown is illustrative. Rules apply in this order, and the first match
 
 **Chapter Anchors:** The chapter states that permissions are policy and sandboxing is enforcement, that actions outside the project, credentials, and downloaded code should be denied, that irreversible or outward-bound actions should need approval, and that raw data should be protected.
 </details>
+
+<iframe src="../../sims/agent-permission-boundary-judge/main.html" height="764px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Agent Permission Boundary Judge. [Open it fullscreen](../../sims/agent-permission-boundary-judge/main.html).*
 
 ## Reaching Outside: MCP, Data Sources, and Skills With Scripts
 

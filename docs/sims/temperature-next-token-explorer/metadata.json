@@ -1,0 +1,105 @@
+{
+  "title": "Temperature Next-Token Explorer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Prediction activity in which learners infer whether the probability of the top-ranked or lowest-ranked of five illustrative candidate next tokens rises, falls, or stays the same when the sampling temperature changes, then reveal the softmax distribution computed from the formula. Three predictions in a fixed order allow one attempt each; an exploration mode then offers a temperature slider from 0.1 to 2.0 and a reproducible Draw 10 Samples button with a fixed seed of 42.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/temperature-next-token-explorer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Temperature and sampling in language models",
+    "learningObjectives": [
+      "Infer, before it is revealed, whether the probability of the top-ranked and of the lowest-ranked candidate token rises or falls when the temperature is raised or lowered"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomVerb": "infer",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Token and probability distribution",
+      "Temperature with the formula p_i = exp(z_i/T) / sum_j exp(z_j/T)"
+    ],
+    "concepts": [
+      "Token",
+      "Temperature",
+      "Sampling",
+      "Probability Distribution",
+      "Softmax"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 720,
+      "drawHeight": 630,
+      "controlHeight": 90
+    },
+    "iframeHeight": 722,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML elements (buttons, select lists, text input, range sliders) reachable with the Tab key; correct and incorrect feedback uses words and symbols as well as color; colors come from the Okabe-Ito color-blind-safe palette; body text is 15 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "rises / falls / stays the same",
+      "purpose": "Learner's committed prediction for the current item."
+    },
+    {
+      "type": "button",
+      "label": "Reveal",
+      "purpose": "Commits the prediction (one attempt), changes the chart to the new temperature, and shows feedback."
+    },
+    {
+      "type": "button",
+      "label": "Next Prediction / Open Exploration Mode",
+      "purpose": "Enabled after a reveal; poses the next prediction from temperature 1.0, and after prediction 3 opens exploration mode."
+    },
+    {
+      "type": "slider",
+      "label": "Temperature",
+      "purpose": "Exploration mode: temperature from 0.1 to 2.0 in steps of 0.1 (default 1.0)."
+    },
+    {
+      "type": "button",
+      "label": "Draw 10 Samples",
+      "purpose": "Exploration mode: draws ten synthetic samples at the current temperature with a fixed seed of 42 and counts how many are the top token."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Predict-then-reveal with committed predictions, followed by free exploration and reproducible sampling",
+    "keyQuestions": [
+      "If temperature drops to 0.5, what happens to the probability of the top token?",
+      "Does temperature change which token ranks first?",
+      "Why does a lower temperature make output more repeatable but not more correct?"
+    ],
+    "commonMisconceptions": [
+      "Low temperature makes the model more accurate",
+      "Temperature changes which token ranks first",
+      "At high temperature every token becomes equally likely"
+    ],
+    "assessmentOpportunities": [
+      "Mastery is 3 of 3 predictions correct, each committed before the distribution is revealed",
+      "Dragging the temperature control freely is exploration and is not evidence of mastery"
+    ]
+  },
+  "chapter": "02-how-language-models-work"
+}

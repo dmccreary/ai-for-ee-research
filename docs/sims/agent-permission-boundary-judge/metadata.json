@@ -1,0 +1,102 @@
+{
+  "title": "Agent Permission Boundary Judge",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Judgment activity in which learners apply an illustrative five-rule permission policy to ten actions an agent might propose in an ADC research project. Rules are evaluated in numeric order and the first match decides whether the action is allowed, needs approval (Ask), or is denied. Each committed judgment gets feedback with the matching rule number and a one-sentence reason, and the run ends with a score out of 10, the mastery threshold of 8, and the list of Ask actions the researcher would be asked to approve.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/agent-permission-boundary-judge/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Agent permissions: allow, ask, and deny rules for file access, shell commands, and code execution",
+    "learningObjectives": [
+      "Judge, for each of ten proposed agent actions, whether a stated permission policy allows it, requires approval, or denies it, with at least 8 of 10 correct",
+      "Apply first-match rule ordering to decide the outcome of an action"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "File access, shell commands, and code execution",
+      "Sandboxing, permissions, and permission modes"
+    ],
+    "concepts": [
+      "File Access",
+      "Shell Commands",
+      "Code Execution",
+      "Sandboxing",
+      "Permissions",
+      "Permission Modes"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 762,
+      "drawHeight": 712,
+      "controlHeight": 50
+    },
+    "iframeHeight": 764,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and carry aria-labels; correct and incorrect feedback and the matching rule use words and symbols as well as a color-blind-safe (Okabe-Ito) palette; body text is 15 px (14 px below 500 px width)."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Allow",
+      "purpose": "Commits the judgment Allow for the current action. Disabled after the judgment is committed."
+    },
+    {
+      "type": "button",
+      "label": "Ask",
+      "purpose": "Commits the judgment Ask (requires approval) for the current action. Disabled after the judgment is committed."
+    },
+    {
+      "type": "button",
+      "label": "Deny",
+      "purpose": "Commits the judgment Deny for the current action. Disabled after the judgment is committed."
+    },
+    {
+      "type": "button",
+      "label": "Next Action / See Score",
+      "purpose": "Enabled after a judgment is committed. Advances to the next action; after action 10 shows the score, the mastery threshold, and the Ask actions."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Apply stated criteria to cases: three-outcome judgment against an ordered, first-match rule policy with explanatory feedback",
+    "keyQuestions": [
+      "What does the policy say about this action?",
+      "Which rule matches first?",
+      "Is the action irreversible, outward-bound, or outside the project?"
+    ],
+    "commonMisconceptions": [
+      "Any action inside the project directory is safe",
+      "A command is safe if it is common",
+      "Approval is needed for everything that changes a file"
+    ],
+    "assessmentOpportunities": [
+      "At least 8 of 10 judgments correct on the first attempt is evidence of mastery",
+      "Reading the policy is exploration and is not evidence"
+    ]
+  },
+  "chapter": "08-agents-tool-use-subagents"
+}

@@ -76,6 +76,46 @@ nav:
       - Research Task Sorter: sims/research-task-sorter/index.md
       - Research Workflow Handoffs: sims/research-workflow-handoffs/index.md
       - Review Checkpoint Judge: sims/review-checkpoint-judge/index.md
+      - Context Window Budget Calculator: sims/context-window-budget-calculator/index.md
+      - Temperature Next-Token Explorer: sims/temperature-next-token-explorer/index.md
+      - Citation Verification Judge: sims/citation-verification-judge/index.md
+      - Model Choice Scenario Sorter: sims/model-choice-scenario-sorter/index.md
+      - Embedding Vector Search Explorer: sims/embedding-vector-search-explorer/index.md
+      - Prompt Component Sorter: sims/prompt-component-sorter/index.md
+      - Context Selection Budget: sims/context-selection-budget/index.md
+      - Prompt Injection Spotter: sims/prompt-injection-spotter/index.md
+      - Prompt Chain Builder: sims/prompt-chain-builder/index.md
+      - Markdown Syntax Matcher: sims/markdown-syntax-matcher/index.md
+      - Project Instruction File Triage: sims/project-instruction-file-triage/index.md
+      - Personal Knowledge Graph Query Explorer: sims/pkg-graph-query-explorer/index.md
+      - Skill Anatomy Labeler: sims/skill-anatomy-labeler/index.md
+      - Skill Description Trigger Tester: sims/skill-description-trigger-tester/index.md
+      - Skill Failure Mode Classifier: sims/skill-failure-mode-classifier/index.md
+      - Agent Loop Stepper: sims/agent-loop-stepper/index.md
+      - Agent Permission Boundary Judge: sims/agent-permission-boundary-judge/index.md
+      - Agent Autonomy Level Assigner: sims/agent-autonomy-level-assigner/index.md
+      - Agent Failure Log Triage: sims/agent-failure-log-triage/index.md
+      - Task Dependency Critical Path Scheduler: sims/task-dependency-critical-path/index.md
+      - Orchestrator Review Load Calculator: sims/orchestrator-review-load-calculator/index.md
+      - Search Query Precision and Recall Explorer: sims/search-precision-recall-explorer/index.md
+      - Citation Chaining Explorer: sims/citation-chaining-explorer/index.md
+      - Measurement Data Cleaning Decision Simulator: sims/data-cleaning-decision-simulator/index.md
+      - Python Traceback Reader: sims/python-traceback-reader/index.md
+      - Numerical Sanity Check Judge: sims/numerical-sanity-check-judge/index.md
+      - Unit Test Selector for Seeded Bugs: sims/unit-test-selector-seeded-bugs/index.md
+      - Falsifiable Hypothesis Sorter: sims/falsifiable-hypothesis-sorter/index.md
+      - Research Idea Ranking Matrix: sims/research-idea-ranking-matrix/index.md
+      - Paper Section Sorter: sims/paper-section-sorter/index.md
+      - Figure Caption Critic: sims/figure-caption-critic/index.md
+      - MicroSim Suitability Judge: sims/microsim-suitability-judge/index.md
+      - Verification Method Matcher: sims/verification-method-matcher/index.md
+      - Sycophancy Spotter: sims/sycophancy-spotter/index.md
+      - AI Use Disclosure Decision Helper: sims/ai-use-disclosure-decision-helper/index.md
+      - Data Sensitivity Sorter for AI Tools: sims/data-sensitivity-sorter/index.md
+      - Personal Agent Comparison Criteria Matcher: sims/agent-comparison-criteria-matcher/index.md
+      - Overnight Activity Audit: sims/overnight-activity-audit/index.md
+      - Failure Case Root Cause Analyzer: sims/failure-case-root-cause-analyzer/index.md
+      - Adoption Plan Prioritizer: sims/adoption-plan-prioritizer/index.md
 
   - Appendices:
       - List of Appendices: appendices/index.md

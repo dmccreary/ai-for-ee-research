@@ -1,0 +1,94 @@
+{
+  "title": "MicroSim Suitability Judge",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Judgment activity in which learners decide, for eight illustrative pieces of electrical engineering research content, whether an interactive MicroSim or a static figure or text is the better medium. The criterion stays on screen; each item has one attempt in a fixed order, with Correct or The better medium is feedback and a one-sentence reason, and the activity ends with a score out of 8 and a mastery statement at 7 of 8.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/microsim-suitability-judge/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Choosing between an interactive simulation and a static figure or text for research communication",
+    "learningObjectives": [
+      "Judge, for each of eight pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with at least 7 of 8 correct"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "5-10 minutes",
+    "prerequisites": [
+      "Interactive simulation and MicroSim, as defined in the sections Communicating Research and MicroSims of Chapter 16",
+      "The criterion that a MicroSim suits a dependence or process the learner can manipulate or predict"
+    ],
+    "concepts": [
+      "Research Communication",
+      "Interactive Simulation",
+      "MicroSim",
+      "MicroSim Generation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 610,
+      "drawHeight": 530,
+      "controlHeight": 80
+    },
+    "iframeHeight": 612,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; the selected choice is marked with aria-pressed, bold text and an outline; correct and incorrect feedback uses words and check or X symbols as well as a color-blind-safe blue and vermillion; all body text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "MicroSim",
+      "purpose": "Chooses MicroSim as the better medium for the current item. The choice can be changed until it is submitted; disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Static figure or text",
+      "purpose": "Chooses static figure or text as the better medium for the current item. The choice can be changed until it is submitted; disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Submit / Next Item / See Score",
+      "purpose": "Submit commits the single attempt for the current item and shows the feedback; Next Item advances to the next item in the fixed order; See Score, after item 8, shows n of 8 correct and whether the mastery threshold of 7 was met."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Criterion-based binary judgment with one attempt per item and immediate explanatory feedback",
+    "keyQuestions": [
+      "Would a learner understand this better by changing something?",
+      "Does the content have a parameter the learner can change?",
+      "Is there a process the learner can step through or predict?"
+    ],
+    "commonMisconceptions": [
+      "Interactive is always better than static",
+      "Any technical content should become a simulation",
+      "A table of values is equivalent to a sim of the function"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 judgments matching the answer key on the first attempt is evidence of mastery",
+      "Reading the criterion is exploration and is not evidence"
+    ]
+  },
+  "chapter": "16-microsims-communication"
+}

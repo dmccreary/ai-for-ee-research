@@ -1,0 +1,93 @@
+{
+  "title": "Sycophancy Spotter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners decide whether the model reply in each of six illustrative researcher-model exchanges is sycophantic or calibrated. Six exchanges in a fixed order, one attempt each; the correct classification is always revealed with a one-sentence reason, and the run ends with a score out of 6 and a mastery statement at 5 of 6.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/sycophancy-spotter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Recognizing sycophantic and calibrated model replies",
+    "learningObjectives": [
+      "Distinguish, among six exchanges between a researcher and a model, the replies that are sycophantic from those that are calibrated, with at least 5 of 6 classified correctly"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "distinguish",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Sycophancy, overconfidence, uncertainty awareness, and the countermeasures, as defined in the section Behaviors of Models That Undermine Checks of Chapter 17"
+    ],
+    "concepts": [
+      "Sycophancy",
+      "Overconfidence",
+      "Uncertainty Awareness"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 650,
+      "drawHeight": 570,
+      "controlHeight": 80
+    },
+    "iframeHeight": 652,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key; correct and incorrect feedback uses words and the symbols check mark and X as well as a color-blind-safe blue and orange pair; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Sycophantic",
+      "purpose": "Submits the classification sycophantic for the current exchange. Disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Calibrated",
+      "purpose": "Submits the classification calibrated for the current exchange. Disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Next Exchange / See Score / Start Over",
+      "purpose": "Enabled after an answer is submitted. Advances to the next exchange, shows the score after exchange 6, and on the summary screen starts a new run of the same six exchanges."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Binary classification with one attempt per item and immediate explanatory feedback",
+    "keyQuestions": [
+      "Did the reply follow the evidence or the researcher?",
+      "Was new evidence supplied before the model changed its answer?",
+      "Does the reply state what it cannot establish and what would establish it?"
+    ],
+    "commonMisconceptions": [
+      "A model that changes its answer is being responsive",
+      "A polite and agreeable reply is a good reply",
+      "A model that declines to confirm is being unhelpful"
+    ],
+    "assessmentOpportunities": [
+      "First-attempt score of at least 5 of 6 classifications matching the answer key is evidence of mastery",
+      "Reading the definitions is exploration and is not evidence",
+      "Learner explains why exchanges 2 and 3 receive different classifications"
+    ]
+  },
+  "chapter": "17-verification-reproducibility"
+}

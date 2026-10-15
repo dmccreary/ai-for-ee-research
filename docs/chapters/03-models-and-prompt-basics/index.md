@@ -101,7 +101,7 @@ A related hazard is **model version drift**. Hosted models are updated, and a na
 Type: microsim
 **sim-id:** model-choice-scenario-sorter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Evaluate<br/>
 **Bloom Verb:** recommend<br/>
 **Learning Objective:** The learner will recommend one of three access paths, chat interface, hosted API, or local open-weight model, for each of eight research scenarios, with at least 6 of 8 recommendations matching the reasoning in Content.
@@ -149,6 +149,10 @@ Deciding factors: Privacy or data policy, Scale and automation, Reproducibility 
 **Chapter Anchors:** The chapter states that local open-weight models fit data that cannot leave the site, offline work, and reproducibility, that hosted APIs fit scripted batches, and that a chat interface fits one-off exploration. The chapter's worked cost example is 200 abstracts costing 0.75 dollars at the stated illustrative prices.
 </details>
 
+<iframe src="../../sims/model-choice-scenario-sorter/main.html" height="777px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Model Choice Scenario Sorter. [Open it fullscreen](../../sims/model-choice-scenario-sorter/main.html).*
+
 ## Adding Your Own Documents: Embeddings, Vector Search, and Retrieval
 
 A model does not know your lab's notebook, your private papers, or last month's preprints. The usual remedy is not to retrain the model but to *retrieve* the relevant passages and place them in the prompt. Three concepts make this work, and they are best taken in order.
@@ -174,7 +178,7 @@ A small worked example uses two-dimensional toy vectors so that the geometry can
 Type: microsim
 **sim-id:** embedding-vector-search-explorer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/Digital-Transformation-with-AI-Spring-2026/tree/main/docs/sims/vector-similarity<br/>
 **Bloom Level:** Understand<br/>
 **Bloom Verb:** infer<br/>
@@ -228,6 +232,10 @@ Queries, in this order, with the cosine similarity of each stored passage to the
 
 **Chapter Anchors:** The chapter's worked example gives a query vector (0.90, 0.25), passage d1 (0.95, 0.20) with cosine 0.998, and passage d3 (0.15, 0.95) with cosine 0.415. It states that search always returns results and that a threshold guards against weak matches.
 </details>
+
+<iframe src="../../sims/embedding-vector-search-explorer/main.html" height="917px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Embedding Vector Search Explorer. [Open it fullscreen](../../sims/embedding-vector-search-explorer/main.html).*
 
 !!! mascot-warning "Retrieved Does Not Mean Relevant"
     ![Volt warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
@@ -316,7 +324,7 @@ The last MicroSim practices recognizing which technique a sentence of a prompt i
 Type: microsim
 **sim-id:** prompt-component-sorter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Template:** https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/prompt-architecture-builder<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** distinguish<br/>
@@ -366,6 +374,10 @@ Component labels: Clear instruction, Constraint, Output format, Role, Few-shot e
 
 **Chapter Anchors:** The chapter's worked prompt contains a role, a length constraint of at most 120 words, a source constraint, an escape constraint, a table output format with six named columns, and one illustrative example row. The chapter states that role prompting sets viewpoint and does not add knowledge.
 </details>
+
+<iframe src="../../sims/prompt-component-sorter/main.html" height="767px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Prompt Component Sorter. [Open it fullscreen](../../sims/prompt-component-sorter/main.html).*
 
 !!! mascot-encourage "Your First Prompts Will Be Vague"
     ![Volt encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }

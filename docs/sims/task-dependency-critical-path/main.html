@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Task Dependency Critical Path Scheduler</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title and the on-screen question (Starting State) -->
+        <header class="title-bar">
+            <div class="title">Task Dependency Critical Path Scheduler</div>
+            <div class="subtitle" id="main-question">When can T5 finish?</div>
+        </header>
+
+        <div class="layout">
+            <!-- Left column: the nine-task dependency graph -->
+            <section class="left-col">
+                <div class="graph-wrap">
+                    <!-- vis-network replaces the children of #network, so overlays are siblings -->
+                    <div id="network" role="img"
+                         aria-label="Dependency graph of nine tasks from top to bottom. T1 Literature survey, 3 hours, feeds T2 Measurement procedure draft, 2 hours. T2 feeds T3 ENOB script, 3 hours, and T4 Test suite, 2 hours. T3 and T4 feed T5 Simulation run, 4 hours. T5 feeds T6 Analysis, 2 hours. T6 feeds T7 Figures, 1 hour, and T8 Report draft, 3 hours. T7 and T8 feed T9 Final assembly, 1 hour."></div>
+                </div>
+                <div class="legend" id="legend">
+                    <span><strong>Durations in hours (illustrative).</strong></span>
+                    <span>Arrow A &rarr; B: B needs A's output.</span>
+                    <span id="legend-times" hidden>start / finish = earliest start / earliest finish.</span>
+                    <span id="legend-hi" hidden>&#9654; dashed blue border = tasks in this answer.</span>
+                    <span id="legend-critical" hidden><span class="lg-crit">&#9733; critical</span> = slack 0, thick border.</span>
+                </div>
+            </section>
+
+            <!-- Right column: the scored questions -->
+            <section class="right-panel" aria-label="Questions">
+                <div class="q-header">
+                    <span class="q-step" id="q-step">Question 1 of 5</span>
+                </div>
+                <div class="question" id="q-text">What is the earliest finish time of T5, in hours?</div>
+
+                <!-- Number answer (questions 1, 3, 4, 5) -->
+                <div class="answer-row" id="number-row">
+                    <label for="answer-input" class="sr-only">Your answer in hours</label>
+                    <input type="text" id="answer-input" inputmode="numeric" autocomplete="off" placeholder="hours">
+                    <span class="unit">hours</span>
+                </div>
+
+                <!-- Task selection (question 2) -->
+                <div class="task-picks" id="task-picks" role="group" aria-label="Select the tasks on the critical path" hidden></div>
+
+                <!-- T3 duration control (question 5, after the answer is submitted) -->
+                <div class="t3-row" id="t3-row" hidden>
+                    <label for="t3-slider">T3 duration: <strong id="t3-value">1 h</strong></label>
+                    <input type="range" id="t3-slider" min="1" max="6" step="1" value="1">
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="submit-btn">Submit</button>
+                    <button class="btn btn-primary" id="next-btn" hidden>Next question &rarr;</button>
+                    <button class="btn btn-secondary" id="restart-btn">Restart</button>
+                </div>
+
+                <div class="feedback" id="feedback" aria-live="polite"></div>
+
+                <div class="score" id="score" aria-live="polite">Score: 0 of 5 correct</div>
+
+                <div class="explore">
+                    <label for="detail-select" class="explore-label">Read a task (not scored):</label>
+                    <select id="detail-select">
+                        <option value="">choose a task</option>
+                    </select>
+                    <div class="detail" id="detail">Click a task in the graph, or choose one above, to read its details.</div>
+                </div>
+            </section>
+        </div>
+
+        <a class="back-link" href=".">Back to Lesson Plan</a>
+    </div>
+
+    <script src="task-dependency-critical-path.js"></script>
+</body>
+</html>

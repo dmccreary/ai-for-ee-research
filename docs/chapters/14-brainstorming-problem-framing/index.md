@@ -97,7 +97,7 @@ A **devil's advocate prompt** is a request that the model argue against an idea:
 Type: microsim
 **sim-id:** falsifiable-hypothesis-sorter<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Analyze<br/>
 **Bloom Verb:** distinguish<br/>
 **Learning Objective:** The learner will distinguish falsifiable hypotheses from statements that no experiment could contradict, among eight statements, with at least 7 of 8 classified correctly.
@@ -143,6 +143,10 @@ All statements are invented for illustration and labeled "illustrative".
 **Chapter Anchors:** The chapter states that a hypothesis names a stated change, a stated effect size, and stated conditions, and gives "calibration makes the ADC better" as an example of a statement that is not falsifiable.
 </details>
 
+<iframe src="../../sims/falsifiable-hypothesis-sorter/main.html" height="682px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Falsifiable Hypothesis Sorter. [Open it fullscreen](../../sims/falsifiable-hypothesis-sorter/main.html).*
+
 **Experiment design** is the planning of the measurements or simulations that will test a hypothesis, and it is where a hypothesis becomes work. An experiment needs a defined *independent variable* that you change, a *dependent variable* that you measure, the *controlled* variables that you hold fixed, a *baseline* against which the effect is compared, enough repetitions to separate the effect from noise, and, decided before the data are seen, the *criterion* that will count as support or refutation. Writing the criterion in advance is the protection against fitting the interpretation to the result. An agent can draft a protocol quickly. Your contribution is the domain knowledge it lacks: confounds such as temperature drift, the corner cases that matter, and the limits of the instrument.
 
 ## Judging Feasibility, Ranking, and Novelty
@@ -160,7 +164,7 @@ The second MicroSim practices this on a small set of ideas. The weighted score o
 Type: microsim
 **sim-id:** research-idea-ranking-matrix<br/>
 **Library:** p5.js<br/>
-**Status:** Specified<br/>
+**Status:** Built<br/>
 **Bloom Level:** Apply<br/>
 **Bloom Verb:** calculate<br/>
 **Learning Objective:** The learner will calculate the weighted score of research ideas under two weighting profiles and state which idea ranks first under each, with all five answers correct.
@@ -227,6 +231,10 @@ Questions, in this order:
 
 **Chapter Anchors:** The chapter states that ranking depends on the weights, that a thesis with a novelty emphasis and a deadline-driven project weight the same scores differently, and that the weighted score is the sum of weight times score.
 </details>
+
+<iframe src="../../sims/research-idea-ranking-matrix/main.html" height="852px" width="100%" scrolling="no"></iframe>
+
+*MicroSim: Research Idea Ranking Matrix. [Open it fullscreen](../../sims/research-idea-ranking-matrix/main.html).*
 
 **Novelty check** is the verification that an idea has not already been done. It is a point where a model is unreliable in a particular way: a model's statement that an idea is novel is not evidence, because it reflects what the model does not remember, not what the literature contains. Run the search pipeline of Chapter 11 on the core of your idea, with several phrasings, and in more than one database. Record the five closest prior works, and for each write in one sentence what you would do differently. A novelty claim that rests on that table is a claim you can defend to a reviewer.
 

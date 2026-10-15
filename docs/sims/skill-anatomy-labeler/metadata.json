@@ -1,0 +1,104 @@
+{
+  "title": "Skill Anatomy Labeler",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Labeling activity on the enob-report agent skill. The skill's directory tree and SKILL.md are shown, and eight lines or files are highlighted one at a time in a fixed order. For each, the learner commits one of four labels (Skill name, Skill description, Skill instructions, Supporting file) and receives feedback naming the correct label with a one-sentence reason. The final score is reported as n of 8 correct, and mastery is 7 of 8.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/skill-anatomy-labeler/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "The parts of an agent skill",
+    "learningObjectives": [
+      "Identify, for each of eight lines or files of a skill, whether it is the skill name, the skill description, skill instructions, or a supporting file, with at least 7 of 8 correct"
+    ],
+    "bloomsTaxonomy": "Remember",
+    "bloomVerb": "identify",
+    "duration": "5-10 minutes",
+    "prerequisites": [
+      "skill name",
+      "skill description",
+      "skill instructions",
+      "supporting files",
+      "SKILL.md"
+    ],
+    "concepts": [
+      "Agent Skill",
+      "SKILL.md",
+      "Skill Name",
+      "Skill Description",
+      "Skill Instructions",
+      "Supporting Files"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 790,
+      "drawHeight": 740,
+      "controlHeight": 50
+    },
+    "iframeHeight": 792,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the label menu and the buttons are native HTML controls reachable with the Tab key. The highlighted item is marked by an outline and a pointer glyph as well as a fill color, and feedback uses a check mark or X and the words Correct or This is a, not color alone. Colors are from the Okabe-Ito palette."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose a label",
+      "purpose": "Choose Skill name, Skill description, Skill instructions, or Supporting file for the highlighted item. Locked after submit."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen label for the highlighted item; one attempt per item. Enabled once a label is chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next item",
+      "purpose": "Replaces Submit after an item is answered and highlights the next item."
+    },
+    {
+      "type": "button",
+      "label": "Start over",
+      "purpose": "Shown after item 8; clears all answers and highlights item 1 again."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Labeling the parts of a single realistic example, with one attempt per item and an explanatory reason after each",
+    "keyQuestions": [
+      "Which part of the skill is this?",
+      "Is this inside SKILL.md or a separate file?",
+      "Is this line in the frontmatter or the body of SKILL.md?"
+    ],
+    "commonMisconceptions": [
+      "The description only says what the skill does and not when to use it",
+      "Scripts and templates are part of SKILL.md",
+      "The name and the description are the same thing"
+    ],
+    "assessmentOpportunities": [
+      "Score on the single attempt for each of the eight items; mastery is at least 7 of 8 correct",
+      "Write a description line for a skill of your own that says what it does and when to use it"
+    ]
+  },
+  "chapter": "06-knowledge-bases-skill-anatomy"
+}
