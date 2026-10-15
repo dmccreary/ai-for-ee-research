@@ -1,0 +1,1469 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/learning-graph/concept-taxonomy/">
+      
+      
+        <link rel="prev" href="../concept-list/">
+      
+      
+        <link rel="next" href="../quality-metrics/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Concept Taxonomy - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#concept-taxonomy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Concept Taxonomy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description-assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Enumeration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#found-foundations-of-ai-assisted-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOUND — Foundations of AI-Assisted Research
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-how-language-models-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM — How Language Models Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-prompting-and-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROMPT — Prompting and Context Engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mdkb-markdown-and-project-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      MDKB — Markdown and Project Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-agent-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      SKILL — Agent Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-agents-and-tool-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      AGENT — Agents and Tool Use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orch-agent-teams-and-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCH — Agent Teams and Orchestration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lit-literature-search-and-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIT — Literature Search and Synthesis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-data-analysis-and-scientific-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATA — Data Analysis and Scientific Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-brainstorming-and-problem-framing" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRAIN — Brainstorming and Problem Framing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manu-manuscript-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      MANU — Manuscript Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comm-microsims-and-research-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMM — MicroSims and Research Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verif-verification-and-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      VERIF — Verification and Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethic-responsible-and-ethical-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      ETHIC — Responsible and Ethical Use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-case-studies-and-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASE — Case Studies and Capstone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pers-always-on-personal-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      PERS — Always-On Personal Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkg-personal-knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKG — Personal Knowledge Graphs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taxonomyid-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      TaxonomyID Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Quality Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taxonomy-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mascot-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mascot Rendering Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../appendices/personal-agents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#found-foundations-of-ai-assisted-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOUND — Foundations of AI-Assisted Research
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-how-language-models-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM — How Language Models Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-prompting-and-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROMPT — Prompting and Context Engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mdkb-markdown-and-project-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      MDKB — Markdown and Project Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-agent-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      SKILL — Agent Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-agents-and-tool-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      AGENT — Agents and Tool Use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orch-agent-teams-and-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCH — Agent Teams and Orchestration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lit-literature-search-and-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIT — Literature Search and Synthesis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-data-analysis-and-scientific-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATA — Data Analysis and Scientific Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brain-brainstorming-and-problem-framing" class="md-nav__link">
+    <span class="md-ellipsis">
+      BRAIN — Brainstorming and Problem Framing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manu-manuscript-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      MANU — Manuscript Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comm-microsims-and-research-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      COMM — MicroSims and Research Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verif-verification-and-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      VERIF — Verification and Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethic-responsible-and-ethical-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      ETHIC — Responsible and Ethical Use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-case-studies-and-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASE — Case Studies and Capstone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pers-always-on-personal-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      PERS — Always-On Personal Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkg-personal-knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      PKG — Personal Knowledge Graphs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taxonomyid-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      TaxonomyID Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/learning-graph/concept-taxonomy.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="concept-taxonomy">Concept Taxonomy<a class="headerlink" href="#concept-taxonomy" title="Permanent link">&para;</a></h1>
+<p>The 379 concepts in the <em>AI for EE Research</em> learning graph are organized into
+17 categories. Each concept has exactly one primary category, identified by a
+3-6 letter <strong>TaxonomyID</strong> that is used in <code>learning-graph.csv</code> and as the group
+key in <code>learning-graph.json</code>. The categories follow the course's teaching
+order: foundations first, then how models work, then the Markdown and skill
+building blocks, then agents and orchestration, then the five research tasks,
+and finally verification, ethics, and the capstone. The always-on personal
+agents and personal knowledge graph categories were added afterward and are
+numbered last so that existing concept IDs did not change.</p>
+<p>No category holds more than 10% of the concepts, well under the 30% ceiling.</p>
+<h2 id="categories">Categories<a class="headerlink" href="#categories" title="Permanent link">&para;</a></h2>
+<h3 id="found-foundations-of-ai-assisted-research">FOUND — Foundations of AI-Assisted Research<a class="headerlink" href="#found-foundations-of-ai-assisted-research" title="Permanent link">&para;</a></h3>
+<p>Concepts 1-20. The research workflow, the five target tasks, the core
+vocabulary of generative AI and agents, and the central idea of the researcher
+as orchestrator.</p>
+<h3 id="llm-how-language-models-work">LLM — How Language Models Work<a class="headerlink" href="#llm-how-language-models-work" title="Permanent link">&para;</a></h3>
+<p>Concepts 21-50. Tokens, context windows, prompts and completions, training
+data, hallucination, model selection and cost, retrieval, and the interfaces
+researchers use to reach a model.</p>
+<h3 id="prompt-prompting-and-context-engineering">PROMPT — Prompting and Context Engineering<a class="headerlink" href="#prompt-prompting-and-context-engineering" title="Permanent link">&para;</a></h3>
+<p>Concepts 51-80. Writing clear instructions, output formats and acceptance
+criteria, choosing and compressing context, grounding, prompt libraries,
+testing, and multi-step prompting.</p>
+<h3 id="mdkb-markdown-and-project-knowledge">MDKB — Markdown and Project Knowledge<a class="headerlink" href="#mdkb-markdown-and-project-knowledge" title="Permanent link">&para;</a></h3>
+<p>Concepts 81-110. Markdown syntax, project instruction files such as
+<code>AGENTS.md</code> and <code>CLAUDE.md</code>, notes, specifications, logs, knowledge bases, and
+the Git practices that keep them reliable.</p>
+<h3 id="skill-agent-skills">SKILL — Agent Skills<a class="headerlink" href="#skill-agent-skills" title="Permanent link">&para;</a></h3>
+<p>Concepts 111-135. Designing, writing, scoping, testing, versioning, sharing,
+and maintaining reusable agent skills for repeatable research tasks.</p>
+<h3 id="agent-agents-and-tool-use">AGENT — Agents and Tool Use<a class="headerlink" href="#agent-agents-and-tool-use" title="Permanent link">&para;</a></h3>
+<p>Concepts 136-170. The agent loop, tool calls, file access, shell commands,
+code execution, permissions, subagents, hooks, external data, autonomy, and
+agent failure modes.</p>
+<h3 id="orch-agent-teams-and-orchestration">ORCH — Agent Teams and Orchestration<a class="headerlink" href="#orch-agent-teams-and-orchestration" title="Permanent link">&para;</a></h3>
+<p>Concepts 171-205. Planning and execution agents, roles, handoffs, task
+queues, review checkpoints, delegation, and the 20-planning-agent,
+10-execution-agent orchestration model.</p>
+<h3 id="lit-literature-search-and-synthesis">LIT — Literature Search and Synthesis<a class="headerlink" href="#lit-literature-search-and-synthesis" title="Permanent link">&para;</a></h3>
+<p>Concepts 206-225. Search strategy, paper triage and summarization, citation
+chaining, reference management, citation verification, and evidence synthesis.</p>
+<h3 id="data-data-analysis-and-scientific-coding">DATA — Data Analysis and Scientific Coding<a class="headerlink" href="#data-data-analysis-and-scientific-coding" title="Permanent link">&para;</a></h3>
+<p>Concepts 226-255. Data cleaning, analysis scripts, plotting, testing and
+debugging, simulation and signal-processing code, HDL, and reproducible
+environments.</p>
+<h3 id="brain-brainstorming-and-problem-framing">BRAIN — Brainstorming and Problem Framing<a class="headerlink" href="#brain-brainstorming-and-problem-framing" title="Permanent link">&para;</a></h3>
+<p>Concepts 256-265. Framing problems, generating and ranking ideas, developing
+hypotheses, designing experiments, and checking novelty.</p>
+<h3 id="manu-manuscript-preparation">MANU — Manuscript Preparation<a class="headerlink" href="#manu-manuscript-preparation" title="Permanent link">&para;</a></h3>
+<p>Concepts 266-284. Paper structure, drafting and revision, author voice,
+LaTeX, figures, references, arXiv submission, peer review response, and
+authorship.</p>
+<h3 id="comm-microsims-and-research-communication">COMM — MicroSims and Research Communication<a class="headerlink" href="#comm-microsims-and-research-communication" title="Permanent link">&para;</a></h3>
+<p>Concepts 285-296. Slide decks, MicroSims, interactive simulations,
+intelligent textbooks, learning graphs, and teaching from research.</p>
+<h3 id="verif-verification-and-reproducibility">VERIF — Verification and Reproducibility<a class="headerlink" href="#verif-verification-and-reproducibility" title="Permanent link">&para;</a></h3>
+<p>Concepts 297-312. Verification and validation, independent and cross-model
+checks, result replication, sycophancy and overconfidence, audit trails, and
+error tracing.</p>
+<h3 id="ethic-responsible-and-ethical-use">ETHIC — Responsible and Ethical Use<a class="headerlink" href="#ethic-responsible-and-ethical-use" title="Permanent link">&para;</a></h3>
+<p>Concepts 313-336. Academic integrity, citation and disclosure of AI use,
+privacy, intellectual property, bias, institutional and journal policy,
+accountability, and over-reliance.</p>
+<h3 id="case-case-studies-and-capstone">CASE — Case Studies and Capstone<a class="headerlink" href="#case-case-studies-and-capstone" title="Permanent link">&para;</a></h3>
+<p>Concepts 337-350. The MicroSims arXiv paper, the intelligent textbook
+project, lessons learned, agent team design, and the capstone project.</p>
+<h3 id="pers-always-on-personal-agents">PERS — Always-On Personal Agents<a class="headerlink" href="#pers-always-on-personal-agents" title="Permanent link">&para;</a></h3>
+<p>Concepts 351-369. Always-on, cloud-hosted and self-hosted personal agents:
+persistent cloud computers, delegated sign-in, taught routines, the individual
+products (Grok Bot, Dots, Muse, Claude Cowork, OpenClaw, and Hermes Agent),
+blast radius, usage metering, comparison criteria, vendor-claim verification,
+research-data exposure, overnight audits, and agent selection. See the
+appendix <a href="../../appendices/personal-agents/">Personal Agents</a>.</p>
+<h3 id="pkg-personal-knowledge-graphs">PKG — Personal Knowledge Graphs<a class="headerlink" href="#pkg-personal-knowledge-graphs" title="Permanent link">&para;</a></h3>
+<p>Concepts 370-379. Knowledge graphs, entities and relationships, personal
+knowledge graphs built from a researcher's own notes and papers, graph schema,
+backlinks, entity extraction, graph querying, graph retrieval augmented
+generation, knowledge graph memory for agents, and the privacy of personal
+knowledge.</p>
+<h2 id="taxonomyid-reference">TaxonomyID Reference<a class="headerlink" href="#taxonomyid-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>TaxonomyID</th>
+<th>Category Name</th>
+<th>Concept ID Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FOUND</td>
+<td>Foundations of AI-Assisted Research</td>
+<td>1-20</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td>How Language Models Work</td>
+<td>21-50</td>
+</tr>
+<tr>
+<td>PROMPT</td>
+<td>Prompting and Context Engineering</td>
+<td>51-80</td>
+</tr>
+<tr>
+<td>MDKB</td>
+<td>Markdown and Project Knowledge</td>
+<td>81-110</td>
+</tr>
+<tr>
+<td>SKILL</td>
+<td>Agent Skills</td>
+<td>111-135</td>
+</tr>
+<tr>
+<td>AGENT</td>
+<td>Agents and Tool Use</td>
+<td>136-170</td>
+</tr>
+<tr>
+<td>ORCH</td>
+<td>Agent Teams and Orchestration</td>
+<td>171-205</td>
+</tr>
+<tr>
+<td>LIT</td>
+<td>Literature Search and Synthesis</td>
+<td>206-225</td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>Data Analysis and Scientific Coding</td>
+<td>226-255</td>
+</tr>
+<tr>
+<td>BRAIN</td>
+<td>Brainstorming and Problem Framing</td>
+<td>256-265</td>
+</tr>
+<tr>
+<td>MANU</td>
+<td>Manuscript Preparation</td>
+<td>266-284</td>
+</tr>
+<tr>
+<td>COMM</td>
+<td>MicroSims and Research Communication</td>
+<td>285-296</td>
+</tr>
+<tr>
+<td>VERIF</td>
+<td>Verification and Reproducibility</td>
+<td>297-312</td>
+</tr>
+<tr>
+<td>ETHIC</td>
+<td>Responsible and Ethical Use</td>
+<td>313-336</td>
+</tr>
+<tr>
+<td>CASE</td>
+<td>Case Studies and Capstone</td>
+<td>337-350</td>
+</tr>
+<tr>
+<td>PERS</td>
+<td>Always-On Personal Agents</td>
+<td>351-369</td>
+</tr>
+<tr>
+<td>PKG</td>
+<td>Personal Knowledge Graphs</td>
+<td>370-379</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../concept-list/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concept Enumeration">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Concept Enumeration
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../quality-metrics/" class="md-footer__link md-footer__link--next" aria-label="Next: Graph Quality Analysis">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Graph Quality Analysis
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
