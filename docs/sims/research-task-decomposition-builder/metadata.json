@@ -1,0 +1,116 @@
+{
+  "title": "Research Task Decomposition Builder",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Sequencing activity in which learners decompose the goal \"Compare the measured and simulated ENOB of two ADC designs\" by choosing six well-formed subtasks from eight shuffled candidate cards (two are distractors) and ordering them so every prerequisite comes first. Each submission is checked for distractors, missing subtasks, and prerequisite-order violations, with a reason for every problem; after a correct submission or the second submission, the answer and the reason for every card are revealed.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/research-task-decomposition-builder/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Task decomposition of a research goal into ordered subtasks with checkable outputs",
+    "learningObjectives": [
+      "Apply the criteria of a checkable output and a valid order to select six well-formed subtasks from eight candidates and sequence them so every prerequisite precedes its dependent",
+      "Explain why a goal statement such as \"Do the research on the ADC\" and a design change such as \"Improve the ADC until its ENOB reaches 9.5 bits\" are not subtasks of an ENOB comparison",
+      "Recognize that subtasks with the same single prerequisite, such as simulating and measuring the designs, may be done in either order"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Task decomposition and subtask, from the section Task Decomposition in Chapter 1",
+      "Prerequisite and checkable output as properties of a well-formed subtask",
+      "Effective number of bits (ENOB), from the section The Setting: Electrical Engineering Research in Chapter 1"
+    ],
+    "concepts": [
+      "Task Decomposition",
+      "Subtask",
+      "Prerequisite",
+      "Checkable Output",
+      "Effective Number of Bits",
+      "Hidden Dependencies"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 860,
+      "drawHeight": 780,
+      "controlHeight": 80
+    },
+    "iframeHeight": 862,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the card choice is a native select element and every action is a native HTML button reachable with the Tab key; correct and incorrect feedback uses words and check or cross symbols as well as color; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Pick a card / Card A to Card H",
+      "purpose": "Chooses one of the eight candidate cards. A card already in the sequence shows its position, for example Card C (#3). The picked card is outlined on the canvas."
+    },
+    {
+      "type": "button",
+      "label": "Add Card / Remove Card",
+      "purpose": "Adds the picked card to the end of the sequence, or removes it from the sequence when it is already there. Disabled until a card is picked."
+    },
+    {
+      "type": "button",
+      "label": "Move Earlier",
+      "purpose": "Moves the picked card one position earlier in the sequence. Enabled only when the picked card is in the sequence and not first. Together with Remove Card and Add Card, it allows any order."
+    },
+    {
+      "type": "button",
+      "label": "Check Order",
+      "purpose": "Submits the sequence. An empty sequence is rejected and does not use a submission. Two submissions are allowed; after a correct submission or the second submission, the answer is revealed and editing is locked."
+    },
+    {
+      "type": "button",
+      "label": "Start Over",
+      "purpose": "Before the answer is revealed, empties the sequence and keeps the submissions already used. After the answer is revealed, starts a new attempt with reshuffled cards and two new submissions."
+    },
+    {
+      "type": "button",
+      "label": "Next Page",
+      "purpose": "Shown only when the feedback or answer does not fit on one page. Pages through it; on narrow screens it also moves between the card view and the feedback pages."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Construct-and-check sequencing task with two submissions, explanatory feedback for every error, and a revealed answer with reasons",
+    "keyQuestions": [
+      "Which of these are well-formed subtasks for this goal, and in what order?",
+      "Does this candidate produce an output you could inspect, with a defined scope?",
+      "What must be finished before this subtask can start?",
+      "Which subtasks are independent of each other and could be done in either order?"
+    ],
+    "commonMisconceptions": [
+      "A goal such as \"do the research\" is a subtask",
+      "Every subtask must follow a single fixed sequence, when S2 and S3 are independent",
+      "A subtask that improves the design belongs in a comparison of measured and simulated ENOB"
+    ],
+    "assessmentOpportunities": [
+      "A correct submission within two submissions (Correct within 1 submission or Correct within 2 submissions) is evidence of mastery",
+      "The type of problems in the first submission shows whether the learner's difficulty is membership (distractors or missing subtasks) or prerequisite order",
+      "Learner writes a decomposition of a goal from their own research with a checkable output and prerequisites for each subtask"
+    ]
+  },
+  "chapter": "01-research-workflows-orchestrator"
+}

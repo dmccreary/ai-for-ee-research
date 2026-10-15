@@ -19,3 +19,7 @@ should be able to do after working through the book.
 ## Author
 
 Dan McCreary
+
+Dan has been working on intelligent agents since 2008, beginning with the
+semantic web architecture for advocate agents described in the
+[primary reference for this book](references.md).

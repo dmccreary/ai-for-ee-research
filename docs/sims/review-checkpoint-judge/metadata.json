@@ -1,0 +1,113 @@
+{
+  "title": "Review Checkpoint Judge",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Evaluation activity in which learners judge, for eight agent steps in an analysis workflow, whether a human review checkpoint is required before the output is used, and select the main reason: Reversibility, Outward effect, Reported result, or No criterion applies. Each committed judgment gets Correct, Right decision, different reason, or Not quite feedback with a one-sentence Why, and each run ends with a score out of 8, a mastery statement at 7 of 8, and the list of steps judged incorrectly.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/review-checkpoint-judge/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Placing human review checkpoints in agent workflows",
+    "learningObjectives": [
+      "Judge, for each of eight agent steps in an analysis workflow, whether a human review checkpoint is required before its output is used, agreeing with the answer key on at least 7 of 8 steps",
+      "Justify each judgment by naming the main criterion that applies (reversibility, outward effect, or reported result) or stating that no criterion applies"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Human in the loop",
+      "Reversible and irreversible actions",
+      "Output that leaves your control by being sent, published, or used to commit resources",
+      "Output that becomes a reported result"
+    ],
+    "concepts": [
+      "Human in the Loop",
+      "Review Checkpoint",
+      "Reversible and Irreversible Actions",
+      "Outward Effect",
+      "Reported Result",
+      "AI Agent",
+      "Verification of AI Output"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 740,
+      "drawHeight": 660,
+      "controlHeight": 80
+    },
+    "iframeHeight": 742,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are a native HTML select and native buttons reachable with the Tab key; correct, partly correct, and incorrect feedback uses words and symbols as well as color; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose the main reason",
+      "purpose": "Selects the main reason for the judgment: Reversibility, Outward effect, Reported result, or No criterion applies. Starts on the placeholder for every step; a judgment cannot be committed until a reason is chosen. Disabled after the commit."
+    },
+    {
+      "type": "button",
+      "label": "Review required",
+      "purpose": "Commits the judgment Review required together with the selected reason for the current step. Disabled after the commit."
+    },
+    {
+      "type": "button",
+      "label": "No review needed",
+      "purpose": "Commits the judgment No review needed together with the selected reason for the current step. Disabled after the commit."
+    },
+    {
+      "type": "button",
+      "label": "Next Step / See Score / Run Again",
+      "purpose": "Enabled after a commit. Advances to the next step, shows the score after the eighth step, and on the summary screen starts a new run with the steps reshuffled."
+    },
+    {
+      "type": "button",
+      "label": "More Missed Steps",
+      "purpose": "Shown only on the summary screen when the list of steps judged incorrectly does not fit on one page; pages through the list."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Criterion-based judgment with a required justification, immediate explanatory feedback, and a reshuffled second run",
+    "keyQuestions": [
+      "Does this output need your review before it is used?",
+      "Is the action irreversible?",
+      "Does the output leave your control by being sent, published, or used to commit resources?",
+      "Does the output become a result you will report?"
+    ],
+    "commonMisconceptions": [
+      "Every agent action needs review, so review is never a choice",
+      "A step that looks harmless needs no review even when it is irreversible",
+      "A step that only drafts something is safe to send without review"
+    ],
+    "assessmentOpportunities": [
+      "First-run score of at least 7 of 8 judgments matching the answer key is evidence of mastery",
+      "Right decision, different reason results show judgments not yet backed by the correct criterion",
+      "Comparison of the first and second run scores shows whether the criteria transferred to a new step order",
+      "Learner explains each missed step using the Why sentence and the three criteria"
+    ]
+  },
+  "chapter": "01-research-workflows-orchestrator"
+}

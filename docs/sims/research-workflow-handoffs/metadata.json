@@ -1,0 +1,53 @@
+{
+  "title": "Research Workflow Handoffs",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A Mermaid flowchart of the five research workflow stages in the chapter's running SAR ADC example, with the handoff artifact on each arrow. Hovering a box shows its input, output, and handoff artifact in an info panel; clicking marks a box as visited, and clicking all seven boxes fires a confetti cannon.",
+  "date": "2026-10-15",
+  "type": "Interactive Workflow Diagram",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/research-workflow-handoffs/",
+  "coverage": "Introductory",
+  "audience": "Graduate",
+  "diagram_type": "flowchart",
+  "direction": "TD",
+  "node_count": "7",
+  "edge_count": "6",
+  "concepts": [
+    "research workflow",
+    "stage",
+    "handoff",
+    "handoff artifact"
+  ],
+  "bloom_taxonomy": "Understand",
+  "technical": {
+    "framework": "Mermaid",
+    "dependencies": [
+      "mermaid@11",
+      "canvas-confetti@1.9.3"
+    ],
+    "iframeHeight": 640,
+    "accessibility": {
+      "keyboardNavigable": true,
+      "notes": "Boxes are focusable buttons (Enter or Space marks the box as clicked; confetti fires after all seven are clicked, with a text progress counter); focus shows the same details as hover. Confetti is skipped when prefers-reduced-motion is set. Stage colors are never the only cue: every box carries its stage number and name."
+    }
+  },
+  "chapter": "01-research-workflows-orchestrator",
+  "version": "1.0",
+  "xapi": {
+    "concept": "ai-for-ee-research-1",
+    "objects": {
+      "find-what-is-known": "ai-for-ee-research-2",
+      "frame-the-question": "ai-for-ee-research-7",
+      "analyze": "ai-for-ee-research-3",
+      "communicate": "ai-for-ee-research-6",
+      "handoff-reading-list-with-citations": "ai-for-ee-research-1",
+      "handoff-question-statement": "ai-for-ee-research-1",
+      "handoff-netlists-scripts-raw-data-files": "ai-for-ee-research-1",
+      "handoff-result-tables-and-plots": "ai-for-ee-research-1",
+      "handoff-manuscript-source-and-figures": "ai-for-ee-research-1"
+    }
+  }
+}

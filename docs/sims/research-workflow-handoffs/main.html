@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Research Workflow Handoffs</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis',
+                nodeSpacing: 30,
+                rankSpacing: 38
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- xAPI runtime (docs/js). The sim still runs without it. -->
+    <link rel="stylesheet" href="../../css/lrs-xapi.css">
+    <script src="../../js/lrs-config.js"></script>
+    <script src="../../js/lrs-xapi.js"></script>
+    <script src="../../js/lrs-lite-sim.js"></script>
+    <script src="../../js/lrs-sim.js"></script>
+    <script src="../../js/xapi-json-viewer.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="diagram-panel" role="group"
+             aria-label="Flowchart of the five research workflow stages and the artifact handed between them. Hover or click a box for details.">
+            <div class="mermaid">
+flowchart TD
+    Topic("Topic and a gap<br/>in understanding"):::endpoint
+    Find["1. Find what is known"]:::s1
+    Frame["2. Frame the question"]:::s2
+    Build["3. Build and measure"]:::s3
+    Analyze["4. Analyze"]:::s4
+    Communicate["5. Communicate"]:::s5
+    Result("Paper, thesis chapter,<br/>or talk"):::endpoint
+
+    Topic --> Find
+    Find -->|"Reading list with citations"| Frame
+    Frame -->|"Question statement"| Build
+    Build -->|"Netlists, scripts, raw data files"| Analyze
+    Analyze -->|"Result tables and plots"| Communicate
+    Communicate -->|"Manuscript source and figures"| Result
+
+    classDef endpoint fill:#e9ecef,stroke:#333,stroke-width:2px,color:#222,font-size:16px
+    classDef s1 fill:#1b6ca8,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef s2 fill:#2a7f62,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef s3 fill:#8a5a00,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef s4 fill:#a23b72,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef s5 fill:#5b4b9a,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    linkStyle default stroke:#666,stroke-width:2px
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>Details</h3>
+            <div id="progress" class="progress" aria-live="polite"></div>
+            <div id="info-display">
+                <p class="info-placeholder">Hover over a box to see its input, output, and handoff artifact.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Node information data. Must be defined before script.js loads. -->
+    <script>
+        const nodeInfo = {
+            Topic: {
+                title: 'Starting point: a topic and a gap',
+                input: 'None. This is where the workflow begins.',
+                output: 'A topic and a gap in understanding',
+                artifact: 'Your own notes on what you do not yet know',
+                note: 'In the running example, the topic is low-power SAR ADCs for battery-powered sensor nodes.',
+                color: '#6c757d'
+            },
+            Find: {
+                title: '1. Find what is known',
+                input: 'A topic and a gap in understanding',
+                output: 'Annotated list of relevant papers',
+                artifact: 'Reading list with citations',
+                note: 'AI can draft keyword lists and summaries. You verify that each cited paper exists and says what the summary claims.',
+                color: '#1b6ca8'
+            },
+            Frame: {
+                title: '2. Frame the question',
+                input: 'Reading list and a design goal',
+                output: 'One falsifiable research question',
+                artifact: 'Question statement',
+                note: 'A question you cannot falsify cannot be checked at the next stage. Choosing it is your decision; AI supplies options.',
+                color: '#2a7f62'
+            },
+            Build: {
+                title: '3. Build and measure',
+                input: 'Question and a design',
+                output: 'Simulated and measured output records',
+                artifact: 'Netlists, scripts, raw data files',
+                note: 'The raw data files are the evidence every later stage trusts. Name and date them so stale files can be found after a loop.',
+                color: '#8a5a00'
+            },
+            Analyze: {
+                title: '4. Analyze',
+                input: 'Raw data files',
+                output: 'Quantified results with uncertainty',
+                artifact: 'Result tables and plots',
+                note: 'Scripts a model writes can run cleanly and still compute the wrong thing. Check them on data whose answer you already know.',
+                color: '#a23b72'
+            },
+            Communicate: {
+                title: '5. Communicate',
+                input: 'Result tables and plots',
+                output: 'A paper, thesis chapter, or talk',
+                artifact: 'Manuscript source and figures',
+                note: 'Every number in the text should trace back to a result table. Responsibility for the claims stays with you.',
+                color: '#5b4b9a'
+            },
+            Result: {
+                title: 'End point: a communicated result',
+                input: 'Result tables and plots',
+                output: 'A paper, thesis chapter, or talk',
+                artifact: 'Manuscript source and figures',
+                note: 'The result is only as sound as the weakest handoff upstream of it.',
+                color: '#6c757d'
+            }
+        };
+
+        // Hover text for the arrows: the artifact handed from one stage to the next.
+        const edgeInfo = {
+            'Reading list with citations': 'Handed from stage 1 to stage 2. The annotated list of relevant papers that frames the question.',
+            'Question statement': 'Handed from stage 2 to stage 3. The one falsifiable question that the design and measurements must answer.',
+            'Netlists, scripts, raw data files': 'Handed from stage 3 to stage 4. Everything needed to reproduce the measurements, plus the raw output.',
+            'Result tables and plots': 'Handed from stage 4 to stage 5. Quantified results with uncertainty, ready to be written up.',
+            'Manuscript source and figures': 'The final artifact of the workflow: the source files and figures behind the paper, thesis chapter, or talk.'
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

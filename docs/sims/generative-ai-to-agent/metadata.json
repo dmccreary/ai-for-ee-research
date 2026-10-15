@@ -1,0 +1,99 @@
+{
+  "title": "From Generative AI to Agent",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A vis-network chain of four terms (Generative AI, Large Language Model, AI Assistant, AI Agent) joined by three links. For each link, in order, the learner chooses which of four options the second term adds to the first, commits once, and receives feedback on the choice plus the correct option. The final score is reported as n of 3 correct, and mastery is 3 of 3.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/generative-ai-to-agent/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "From Generative AI to Agent",
+    "learningObjectives": [
+      "Explain what capability each of the three links in the chain from generative AI to AI agent adds, by selecting the correct capability for all three links",
+      "Distinguish an AI agent from an AI assistant by the addition of tools and a loop: the agent acts, observes the result, and chooses the next step"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomsVerb": "explain",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "generative AI",
+      "large language model",
+      "AI assistant",
+      "AI agent",
+      "tool",
+      "loop"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 760
+    },
+    "iframeHeight": 762,
+    "responsive": true,
+    "dependencies": [
+      "vis-network@9.1.9"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "colorBlindSafe": true,
+      "notes": "The graph has an aria-label listing the four nodes in order, and the same four nodes appear as keyboard-reachable buttons. Options are native radio inputs (arrow keys to move, Enter to commit). Answered links carry a check-mark or X glyph and text status, not color alone; colors are from the Okabe-Ito blue/orange palette. Mouse-wheel zoom and drag-to-pan are disabled so the iframe never captures page scrolling."
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Predict-then-reveal concept chain: the learner commits a choice for what each link adds before the correct capability and a misconception-specific explanation are shown",
+    "keyQuestions": [
+      "What changes at each step from generative AI to an AI agent?",
+      "What does the second term add to the first?"
+    ],
+    "commonMisconceptions": [
+      "An assistant and an agent are the same thing with different branding",
+      "A larger model is what turns an assistant into an agent",
+      "An agent is simply a chatbot with a friendlier tone or a longer memory"
+    ],
+    "assessmentOpportunities": [
+      "Score on the first commit for each of the three links; mastery is 3 of 3 correct",
+      "Restart with reshuffled option order and answer all three links without opening the node definitions",
+      "Write one sentence explaining the difference between an AI assistant and an AI agent"
+    ]
+  },
+  "controls": [
+    {
+      "type": "node click / buttons",
+      "name": "Open a node",
+      "purpose": "Show the definition of Generative AI, Large Language Model, AI Assistant, or AI Agent (exploration, not scored)"
+    },
+    {
+      "type": "radio group",
+      "name": "Options",
+      "purpose": "Choose one of four capabilities for the current link; order is shuffled per run"
+    },
+    {
+      "type": "button",
+      "name": "Commit answer",
+      "purpose": "Lock the chosen option for the current link and show feedback; one commit per link"
+    },
+    {
+      "type": "button",
+      "name": "Next link",
+      "purpose": "Advance to the next link after the current link has been answered"
+    },
+    {
+      "type": "button",
+      "name": "Restart",
+      "purpose": "Clear all answers and reshuffle the option order"
+    }
+  ],
+  "chapter": "01-research-workflows-orchestrator"
+}

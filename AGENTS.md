@@ -84,6 +84,7 @@ complex, it needs a MicroSim — do not settle for a wall of text.
   |---|---|---|
   | `scaffold` | red | Spec exists; no implementation yet. |
   | `built` | orange | Implemented; awaiting author review. |
+  | `instrumented` | teal | Implemented and emits xAPI events (set by the add-xapi-events-to-microsim skill's `sync-status.py`). |
   | `approved` | green | Author tested it and approved it for learners. |
 
   New sims are born `scaffold`. Bump to `built` when you write a real

@@ -71,18 +71,25 @@ nav:
 
   - MicroSims:
       - List of MicroSims: sims/index.md
+      - From Generative AI to Agent: sims/generative-ai-to-agent/index.md
+      - Research Task Decomposition Builder: sims/research-task-decomposition-builder/index.md
+      - Research Task Sorter: sims/research-task-sorter/index.md
+      - Research Workflow Handoffs: sims/research-workflow-handoffs/index.md
+      - Review Checkpoint Judge: sims/review-checkpoint-judge/index.md
 
   - Appendices:
+      - List of Appendices: appendices/index.md
       - Personal Agents: appendices/personal-agents/index.md
+      - Personal Knowledge Graphs: appendices/pkg/index.md
 
+  - References: references.md
   - License: license.md
   - Contact: contact.md
 
 # Theme configuration
 theme:
   name: material
-  # Once a logo is generated, point this at docs/img/logo.png or a mascot pose:
-  # logo: img/logo.png
+  logo: img/mascot/neutral.png
   # favicon: img/favicon.ico
   palette:
     # University of Minnesota brand colors (Maroon #7A0019, Gold #FFCC33).
@@ -135,7 +142,11 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
