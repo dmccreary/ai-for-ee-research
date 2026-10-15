@@ -1,6 +1,8 @@
 ---
 title: "Search Query Precision and Recall Explorer"
 description: "Calculate the precision and recall of three search queries on a synthetic corpus of twenty papers with eight relevant papers, then choose the query that suits a literature survey that cannot miss a relevant paper."
+image: /sims/search-precision-recall-explorer/search-precision-recall-explorer.png
+og:image: /sims/search-precision-recall-explorer/search-precision-recall-explorer.png
 social:
    cards: false
 quality_score: 0

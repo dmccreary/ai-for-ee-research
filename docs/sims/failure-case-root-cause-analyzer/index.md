@@ -1,6 +1,8 @@
 ---
 title: "Failure Case Root Cause Analyzer"
-description: 'Attribute six illustrative research failure cases to one of six root causes, then see the control from an earlier chapter that would have caught each one, with a score of n of 6 and a mastery threshold of 5.'
+description: "Attribute six illustrative research failure cases to one of six root causes, then see the control from an earlier chapter that would have caught each one, with a score of n of 6 and a mastery threshold of 5."
+image: /sims/failure-case-root-cause-analyzer/failure-case-root-cause-analyzer.png
+og:image: /sims/failure-case-root-cause-analyzer/failure-case-root-cause-analyzer.png
 social:
    cards: false
 quality_score: 0

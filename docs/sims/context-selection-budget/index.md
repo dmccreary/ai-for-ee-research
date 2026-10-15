@@ -1,6 +1,8 @@
 ---
 title: "Context Selection Budget"
 description: "Give each of nine candidate context items the verdict include, compress, or omit so that the total fits a 6,500-token context budget, then compare your choices with the answer key."
+image: /sims/context-selection-budget/context-selection-budget.png
+og:image: /sims/context-selection-budget/context-selection-budget.png
 social:
    cards: false
 quality_score: 0

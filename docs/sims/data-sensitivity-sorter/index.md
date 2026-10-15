@@ -1,6 +1,8 @@
 ---
 title: "Data Sensitivity Sorter for AI Tools"
 description: "Judge which class of AI tool each of eight items of research data may be given to under a four-class illustrative data classification, with immediate feedback and the items grouped by class at the end."
+image: /sims/data-sensitivity-sorter/data-sensitivity-sorter.png
+og:image: /sims/data-sensitivity-sorter/data-sensitivity-sorter.png
 social:
    cards: false
 quality_score: 0

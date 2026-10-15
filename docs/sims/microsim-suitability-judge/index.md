@@ -1,6 +1,8 @@
 ---
 title: "MicroSim Suitability Judge"
-description: 'Judge, for eight illustrative pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with immediate feedback on each judgment.'
+description: "Judge, for eight illustrative pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with immediate feedback on each judgment."
+image: /sims/microsim-suitability-judge/microsim-suitability-judge.png
+og:image: /sims/microsim-suitability-judge/microsim-suitability-judge.png
 social:
    cards: false
 quality_score: 0

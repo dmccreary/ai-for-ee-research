@@ -1,6 +1,8 @@
 ---
 title: "Numerical Sanity Check Judge"
 description: "Judge eight illustrative reported results as Plausible or as failing a sanity check (exceeds a limit, disagrees with a hand calculation, violates scaling, or impossible value), with one attempt each and a mastery threshold of 7 of 8."
+image: /sims/numerical-sanity-check-judge/numerical-sanity-check-judge.png
+og:image: /sims/numerical-sanity-check-judge/numerical-sanity-check-judge.png
 social:
    cards: false
 quality_score: 0

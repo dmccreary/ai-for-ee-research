@@ -1,6 +1,8 @@
 ---
 title: "Unit Test Selector for Seeded Bugs"
 description: "Select at most four of eight candidate unit tests for a buggy sndr_db() function and run them to see which of three seeded bugs your selection exposes and which stay hidden."
+image: /sims/unit-test-selector-seeded-bugs/unit-test-selector-seeded-bugs.png
+og:image: /sims/unit-test-selector-seeded-bugs/unit-test-selector-seeded-bugs.png
 social:
    cards: false
 quality_score: 0

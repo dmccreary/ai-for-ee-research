@@ -1,6 +1,8 @@
 ---
 title: "Embedding Vector Search Explorer"
 description: "Predict which two passages vector search returns for three queries in an illustrative two-dimensional embedding space, check the second result against a 0.90 cosine threshold, then drag the query and watch the ranking change."
+image: /sims/embedding-vector-search-explorer/embedding-vector-search-explorer.png
+og:image: /sims/embedding-vector-search-explorer/embedding-vector-search-explorer.png
 social:
    cards: false
 quality_score: 0

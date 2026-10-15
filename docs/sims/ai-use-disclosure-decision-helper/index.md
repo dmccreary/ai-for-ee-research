@@ -1,6 +1,8 @@
 ---
 title: "AI Use Disclosure Decision Helper"
 description: "Apply a five-rule illustrative lab disclosure policy to eight scenarios of AI use, choose the action the policy requires for each, and see a draft disclosure statement built from the scenarios that required disclosure."
+image: /sims/ai-use-disclosure-decision-helper/ai-use-disclosure-decision-helper.png
+og:image: /sims/ai-use-disclosure-decision-helper/ai-use-disclosure-decision-helper.png
 social:
    cards: false
 quality_score: 0

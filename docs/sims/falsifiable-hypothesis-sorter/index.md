@@ -1,6 +1,8 @@
 ---
 title: "Falsifiable Hypothesis Sorter"
 description: 'Classify eight illustrative EE research statements as "falsifiable" or "not falsifiable", with one attempt each, the reason after every answer, and a final score out of 8.'
+image: /sims/falsifiable-hypothesis-sorter/falsifiable-hypothesis-sorter.png
+og:image: /sims/falsifiable-hypothesis-sorter/falsifiable-hypothesis-sorter.png
 social:
    cards: false
 quality_score: 0

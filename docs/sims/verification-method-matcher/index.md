@@ -1,6 +1,8 @@
 ---
 title: "Verification Method Matcher"
-description: 'Recommend which of five verification methods (known-answer test, independent method, primary source check, cross-model check, replication) best fits each of eight illustrative AI-assisted claims, with feedback on every choice.'
+description: "Recommend which of five verification methods (known-answer test, independent method, primary source check, cross-model check, replication) best fits each of eight illustrative AI-assisted claims, with feedback on every choice."
+image: /sims/verification-method-matcher/verification-method-matcher.png
+og:image: /sims/verification-method-matcher/verification-method-matcher.png
 social:
    cards: false
 quality_score: 0

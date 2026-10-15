@@ -1,6 +1,8 @@
 ---
 title: "Agent Failure Log Triage"
-description: 'Read six illustrative excerpts of an agent log and attribute each to one of six failure modes, with the reason and the mechanical defense for that mode shown after each answer.'
+description: "Read six illustrative excerpts of an agent log and attribute each to one of six failure modes, with the reason and the mechanical defense for that mode shown after each answer."
+image: /sims/agent-failure-log-triage/agent-failure-log-triage.png
+og:image: /sims/agent-failure-log-triage/agent-failure-log-triage.png
 social:
    cards: false
 quality_score: 0

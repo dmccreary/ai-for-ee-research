@@ -1,6 +1,8 @@
 ---
 title: "Personal Knowledge Graph Query Explorer"
 description: "Interactive vis-network MicroSim in which learners solve five questions about a twelve-edge personal knowledge graph by following typed, directed relationships and selecting the exact set of entities that answers each question."
+image: /sims/pkg-graph-query-explorer/pkg-graph-query-explorer.png
+og:image: /sims/pkg-graph-query-explorer/pkg-graph-query-explorer.png
 social:
    cards: false
 quality_score: 0

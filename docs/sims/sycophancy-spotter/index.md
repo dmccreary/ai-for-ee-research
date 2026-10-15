@@ -1,6 +1,8 @@
 ---
 title: "Sycophancy Spotter"
-description: 'Classify the model reply in each of six illustrative researcher-model exchanges as sycophantic or calibrated, and get the reason after every choice.'
+description: "Classify the model reply in each of six illustrative researcher-model exchanges as sycophantic or calibrated, and get the reason after every choice."
+image: /sims/sycophancy-spotter/sycophancy-spotter.png
+og:image: /sims/sycophancy-spotter/sycophancy-spotter.png
 social:
    cards: false
 quality_score: 0

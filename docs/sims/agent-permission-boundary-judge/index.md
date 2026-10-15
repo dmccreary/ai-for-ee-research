@@ -1,6 +1,8 @@
 ---
 title: "Agent Permission Boundary Judge"
-description: 'Judge whether an illustrative five-rule permission policy allows, asks about, or denies each of ten proposed agent actions, where the first matching rule decides.'
+description: "Judge whether an illustrative five-rule permission policy allows, asks about, or denies each of ten proposed agent actions, where the first matching rule decides."
+image: /sims/agent-permission-boundary-judge/agent-permission-boundary-judge.png
+og:image: /sims/agent-permission-boundary-judge/agent-permission-boundary-judge.png
 social:
    cards: false
 quality_score: 0

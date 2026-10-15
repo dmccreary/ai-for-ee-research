@@ -1,6 +1,8 @@
 ---
 title: "Markdown Syntax Matcher"
-description: 'Choose which of three Markdown sources produces each of eight rendered results, from headings and lists to tables, code, links, and bold text, and see the rendered preview of your choice next to the correct one.'
+description: "Choose which of three Markdown sources produces each of eight rendered results, from headings and lists to tables, code, links, and bold text, and see the rendered preview of your choice next to the correct one."
+image: /sims/markdown-syntax-matcher/markdown-syntax-matcher.png
+og:image: /sims/markdown-syntax-matcher/markdown-syntax-matcher.png
 social:
    cards: false
 quality_score: 0

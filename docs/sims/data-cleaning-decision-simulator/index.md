@@ -1,6 +1,8 @@
 ---
 title: "Measurement Data Cleaning Decision Simulator"
-description: 'Judge eight anomalies in a synthetic batch of device offset measurements: keep, exclude with log, correct and log, or remeasure, using the documented cause as the criterion.'
+description: "Judge eight anomalies in a synthetic batch of device offset measurements: keep, exclude with log, correct and log, or remeasure, using the documented cause as the criterion."
+image: /sims/data-cleaning-decision-simulator/data-cleaning-decision-simulator.png
+og:image: /sims/data-cleaning-decision-simulator/data-cleaning-decision-simulator.png
 social:
    cards: false
 quality_score: 0

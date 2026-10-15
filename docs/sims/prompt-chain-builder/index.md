@@ -1,6 +1,8 @@
 ---
 title: "Prompt Chain Builder"
 description: "Arrange six prompt-chain steps for a verified Walden figure-of-merit table into an order that respects their dependencies, and choose a testable acceptance check for each step."
+image: /sims/prompt-chain-builder/prompt-chain-builder.png
+og:image: /sims/prompt-chain-builder/prompt-chain-builder.png
 social:
    cards: false
 quality_score: 0

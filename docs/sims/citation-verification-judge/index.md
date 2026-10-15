@@ -1,6 +1,8 @@
 ---
 title: "Citation Verification Judge"
-description: 'Judge eight model-generated citations as Verified, Wrong details, Unsupported claim, or Fabricated, using the results of four simulated database lookups.'
+description: "Judge eight model-generated citations as Verified, Wrong details, Unsupported claim, or Fabricated, using the results of four simulated database lookups."
+image: /sims/citation-verification-judge/citation-verification-judge.png
+og:image: /sims/citation-verification-judge/citation-verification-judge.png
 social:
    cards: false
 quality_score: 0

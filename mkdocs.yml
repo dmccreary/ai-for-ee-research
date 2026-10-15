@@ -71,6 +71,7 @@ nav:
 
   - MicroSims:
       - List of MicroSims: sims/index.md
+      - Learning Graph Viewer: sims/graph-viewer/index.md
       - From Generative AI to Agent: sims/generative-ai-to-agent/index.md
       - Research Task Decomposition Builder: sims/research-task-decomposition-builder/index.md
       - Research Task Sorter: sims/research-task-sorter/index.md

@@ -1,6 +1,8 @@
 ---
 title: "Prompt Injection Spotter"
 description: "Classify eight text snippets that an agent has been asked to read as an injected instruction aimed at the model or as ordinary content, with feedback on the capability each injection tries to borrow and the defense that limits it."
+image: /sims/prompt-injection-spotter/prompt-injection-spotter.png
+og:image: /sims/prompt-injection-spotter/prompt-injection-spotter.png
 social:
    cards: false
 quality_score: 0

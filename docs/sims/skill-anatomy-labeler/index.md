@@ -1,6 +1,8 @@
 ---
 title: "Skill Anatomy Labeler"
 description: "Interactive p5.js MicroSim in which learners identify eight lines and files of the enob-report agent skill as the skill name, the skill description, skill instructions, or a supporting file."
+image: /sims/skill-anatomy-labeler/skill-anatomy-labeler.png
+og:image: /sims/skill-anatomy-labeler/skill-anatomy-labeler.png
 social:
    cards: false
 quality_score: 0

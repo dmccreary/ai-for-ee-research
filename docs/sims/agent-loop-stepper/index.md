@@ -1,6 +1,8 @@
 ---
 title: "Agent Loop Stepper"
-description: 'Predict the next tool call at each of five steps of an agent loop that diagnoses a low ENOB result, then watch the model emit the call, the harness run it, and the result return to the context.'
+description: "Predict the next tool call at each of five steps of an agent loop that diagnoses a low ENOB result, then watch the model emit the call, the harness run it, and the result return to the context."
+image: /sims/agent-loop-stepper/agent-loop-stepper.png
+og:image: /sims/agent-loop-stepper/agent-loop-stepper.png
 social:
    cards: false
 quality_score: 0

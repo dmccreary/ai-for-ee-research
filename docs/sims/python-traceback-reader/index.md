@@ -1,6 +1,8 @@
 ---
 title: "Python Traceback Reader"
-description: 'Examine five illustrative Python tracebacks and identify the cause of each from the exception type, the message, and the failing line, reading from the bottom.'
+description: "Examine five illustrative Python tracebacks and identify the cause of each from the exception type, the message, and the failing line, reading from the bottom."
+image: /sims/python-traceback-reader/python-traceback-reader.png
+og:image: /sims/python-traceback-reader/python-traceback-reader.png
 social:
    cards: false
 quality_score: 0

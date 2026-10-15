@@ -1,6 +1,8 @@
 ---
 title: "Model Choice Scenario Sorter"
 description: "Recommend a chat interface, a hosted API, or a local open-weight model for eight illustrative research scenarios, name the deciding factor, and get feedback on each recommendation."
+image: /sims/model-choice-scenario-sorter/model-choice-scenario-sorter.png
+og:image: /sims/model-choice-scenario-sorter/model-choice-scenario-sorter.png
 social:
    cards: false
 quality_score: 0

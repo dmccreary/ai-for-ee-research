@@ -1,6 +1,8 @@
 ---
 title: "Personal Agent Comparison Criteria Matcher"
 description: 'Classify eight questions about a personal, always-on AI agent under the comparison criterion each one tests, with one attempt per question, a "Why" sentence after each answer, and a one-line test per criterion at the end.'
+image: /sims/agent-comparison-criteria-matcher/agent-comparison-criteria-matcher.png
+og:image: /sims/agent-comparison-criteria-matcher/agent-comparison-criteria-matcher.png
 social:
    cards: false
 quality_score: 0

@@ -1,6 +1,8 @@
 ---
 title: "Figure Caption Critic"
-description: 'Critique six illustrative figure captions by naming the first failing property (Vague, Missing conditions, Undefined symbols, Overclaims) or judging that the caption has no defect.'
+description: "Critique six illustrative figure captions by naming the first failing property (Vague, Missing conditions, Undefined symbols, Overclaims) or judging that the caption has no defect."
+image: /sims/figure-caption-critic/figure-caption-critic.png
+og:image: /sims/figure-caption-critic/figure-caption-critic.png
 social:
    cards: false
 quality_score: 0

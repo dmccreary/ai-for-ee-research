@@ -1,6 +1,8 @@
 ---
 title: "Orchestrator Review Load Calculator"
 description: "Interactive p5.js MicroSim in which learners calculate the daily review load of an agent team from its size and per-output review times, then size the team or the review fraction to fit an attention budget."
+image: /sims/orchestrator-review-load-calculator/orchestrator-review-load-calculator.png
+og:image: /sims/orchestrator-review-load-calculator/orchestrator-review-load-calculator.png
 social:
    cards: false
 quality_score: 0

@@ -1,6 +1,8 @@
 ---
 title: "Agent Autonomy Level Assigner"
-description: 'Recommend an autonomy level from 0 (Suggest only) to 3 (Act and report) for eight illustrative research tasks from their reversibility, reach, and verifiability, with the rule that applied shown after each answer.'
+description: "Recommend an autonomy level from 0 (Suggest only) to 3 (Act and report) for eight illustrative research tasks from their reversibility, reach, and verifiability, with the rule that applied shown after each answer."
+image: /sims/agent-autonomy-level-assigner/agent-autonomy-level-assigner.png
+og:image: /sims/agent-autonomy-level-assigner/agent-autonomy-level-assigner.png
 social:
    cards: false
 quality_score: 0

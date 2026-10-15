@@ -1,6 +1,8 @@
 ---
 title: "Temperature Next-Token Explorer"
-description: 'Predict whether the probability of the top-ranked and the lowest-ranked candidate token rises or falls when the sampling temperature changes, then reveal the new distribution and draw reproducible samples.'
+description: "Predict whether the probability of the top-ranked and the lowest-ranked candidate token rises or falls when the sampling temperature changes, then reveal the new distribution and draw reproducible samples."
+image: /sims/temperature-next-token-explorer/temperature-next-token-explorer.png
+og:image: /sims/temperature-next-token-explorer/temperature-next-token-explorer.png
 social:
    cards: false
 quality_score: 0

@@ -1,6 +1,8 @@
 ---
 title: "Research Idea Ranking Matrix"
-description: 'Calculate weighted scores for four illustrative SAR ADC research ideas under two weighting profiles, find the idea that ranks first under each, then set your own weights and watch the ranking change.'
+description: "Calculate weighted scores for four illustrative SAR ADC research ideas under two weighting profiles, find the idea that ranks first under each, then set your own weights and watch the ranking change."
+image: /sims/research-idea-ranking-matrix/research-idea-ranking-matrix.png
+og:image: /sims/research-idea-ranking-matrix/research-idea-ranking-matrix.png
 social:
    cards: false
 quality_score: 0

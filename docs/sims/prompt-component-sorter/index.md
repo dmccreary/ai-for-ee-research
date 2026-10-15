@@ -1,6 +1,8 @@
 ---
 title: "Prompt Component Sorter"
 description: "Label each of the ten sentences of a working research prompt as a clear instruction, constraint, output format, role, or few-shot example, with feedback after each label and a tally of the components at the end."
+image: /sims/prompt-component-sorter/prompt-component-sorter.png
+og:image: /sims/prompt-component-sorter/prompt-component-sorter.png
 social:
    cards: false
 quality_score: 0

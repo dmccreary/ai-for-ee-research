@@ -1,6 +1,8 @@
 ---
 title: "Citation Chaining Explorer"
 description: "Interactive vis-network MicroSim in which learners solve five citation-chaining questions on a graph of eight illustrative papers by following references backward and citations forward."
+image: /sims/citation-chaining-explorer/citation-chaining-explorer.png
+og:image: /sims/citation-chaining-explorer/citation-chaining-explorer.png
 social:
    cards: false
 quality_score: 0

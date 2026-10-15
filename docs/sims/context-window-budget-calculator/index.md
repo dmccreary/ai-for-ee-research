@@ -1,6 +1,8 @@
 ---
 title: "Context Window Budget Calculator"
-description: 'Calculate the tokens left for a completion from a context window size and the sizes of the system prompt, history, attachment, and latest message, then decide whether a requested completion fits.'
+description: "Calculate the tokens left for a completion from a context window size and the sizes of the system prompt, history, attachment, and latest message, then decide whether a requested completion fits."
+image: /sims/context-window-budget-calculator/context-window-budget-calculator.png
+og:image: /sims/context-window-budget-calculator/context-window-budget-calculator.png
 social:
    cards: false
 quality_score: 0

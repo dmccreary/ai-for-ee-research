@@ -1,6 +1,8 @@
 ---
 title: "Research Workflow Handoffs"
 description: "Interactive Mermaid flowchart of the five research workflow stages, with the handoff artifact on each arrow, a hover info panel, and a confetti cannon that fires when you have clicked every box."
+image: /sims/research-workflow-handoffs/research-workflow-handoffs.png
+og:image: /sims/research-workflow-handoffs/research-workflow-handoffs.png
 quality_score: 0
 status: instrumented
 social:

@@ -1,6 +1,8 @@
 ---
 title: "Adoption Plan Prioritizer"
-description: 'Arrange six steps for adopting AI research practices in a group into an order that respects their dependencies, then see the first violated dependency with its reason, both valid orders, and the dependency graph.'
+description: "Arrange six steps for adopting AI research practices in a group into an order that respects their dependencies, then see the first violated dependency with its reason, both valid orders, and the dependency graph."
+image: /sims/adoption-plan-prioritizer/adoption-plan-prioritizer.png
+og:image: /sims/adoption-plan-prioritizer/adoption-plan-prioritizer.png
 social:
    cards: false
 quality_score: 0

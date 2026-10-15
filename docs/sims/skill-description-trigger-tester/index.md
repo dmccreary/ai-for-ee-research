@@ -1,6 +1,8 @@
 ---
 title: "Skill Description Trigger Tester"
-description: 'Decide, for eight user requests, whether an illustrative SPICE netlist-checking skill description should trigger, and learn to separate the task a request asks for from the keywords it shares.'
+description: "Decide, for eight user requests, whether an illustrative SPICE netlist-checking skill description should trigger, and learn to separate the task a request asks for from the keywords it shares."
+image: /sims/skill-description-trigger-tester/skill-description-trigger-tester.png
+og:image: /sims/skill-description-trigger-tester/skill-description-trigger-tester.png
 social:
    cards: false
 quality_score: 0

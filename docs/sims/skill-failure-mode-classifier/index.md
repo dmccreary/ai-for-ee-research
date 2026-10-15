@@ -1,6 +1,8 @@
 ---
 title: "Skill Failure Mode Classifier"
-description: 'Attribute eight illustrative observations of a misbehaving agent skill to one of six failure modes, then see the recommended fix for each mode you missed.'
+description: "Attribute eight illustrative observations of a misbehaving agent skill to one of six failure modes, then see the recommended fix for each mode you missed."
+image: /sims/skill-failure-mode-classifier/skill-failure-mode-classifier.png
+og:image: /sims/skill-failure-mode-classifier/skill-failure-mode-classifier.png
 social:
    cards: false
 quality_score: 0

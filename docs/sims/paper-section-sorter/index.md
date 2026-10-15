@@ -1,6 +1,8 @@
 ---
 title: "Paper Section Sorter"
-description: 'Classify ten illustrative sentences from one invented engineering paper into Abstract, Introduction, Related work, Method, Results, or Discussion by the reader question each answers.'
+description: "Classify ten illustrative sentences from one invented engineering paper into Abstract, Introduction, Related work, Method, Results, or Discussion by the reader question each answers."
+image: /sims/paper-section-sorter/paper-section-sorter.png
+og:image: /sims/paper-section-sorter/paper-section-sorter.png
 social:
    cards: false
 quality_score: 0

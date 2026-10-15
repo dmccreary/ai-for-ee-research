@@ -1,6 +1,8 @@
 ---
 title: "Task Dependency Critical Path Scheduler"
 description: "Interactive vis-network MicroSim in which learners calculate earliest finish times, the critical path, slack, and the project duration for a nine-task dependency graph, then see how shortening one task moves the critical path."
+image: /sims/task-dependency-critical-path/task-dependency-critical-path.png
+og:image: /sims/task-dependency-critical-path/task-dependency-critical-path.png
 social:
    cards: false
 quality_score: 0

@@ -1,6 +1,8 @@
 ---
 title: "Project Instruction File Triage"
-description: 'Judge each of eleven lines of an illustrative draft AGENTS.md or CLAUDE.md file as a goal, a convention, a constraint, or a line that does not belong, with immediate feedback on each judgment.'
+description: "Judge each of eleven lines of an illustrative draft AGENTS.md or CLAUDE.md file as a goal, a convention, a constraint, or a line that does not belong, with immediate feedback on each judgment."
+image: /sims/project-instruction-file-triage/project-instruction-file-triage.png
+og:image: /sims/project-instruction-file-triage/project-instruction-file-triage.png
 social:
    cards: false
 quality_score: 0

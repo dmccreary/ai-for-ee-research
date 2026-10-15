@@ -1,6 +1,8 @@
 ---
 title: "Overnight Activity Audit"
-description: 'Examine ten lines of an illustrative overnight log from an always-on agent against its task and permission lists, flag each as in scope or out of scope, and finish with a morning report of the out-of-scope actions.'
+description: "Examine ten lines of an illustrative overnight log from an always-on agent against its task and permission lists, flag each as in scope or out of scope, and finish with a morning report of the out-of-scope actions."
+image: /sims/overnight-activity-audit/overnight-activity-audit.png
+og:image: /sims/overnight-activity-audit/overnight-activity-audit.png
 social:
    cards: false
 quality_score: 0
