@@ -1,0 +1,17 @@
+{
+  "FOUND": "Foundations of AI-Assisted Research",
+  "LLM": "How Language Models Work",
+  "PROMPT": "Prompting and Context Engineering",
+  "MDKB": "Markdown and Project Knowledge",
+  "SKILL": "Agent Skills",
+  "AGENT": "Agents and Tool Use",
+  "ORCH": "Agent Teams and Orchestration",
+  "LIT": "Literature Search and Synthesis",
+  "DATA": "Data Analysis and Scientific Coding",
+  "BRAIN": "Brainstorming and Problem Framing",
+  "MANU": "Manuscript Preparation",
+  "COMM": "MicroSims and Research Communication",
+  "VERIF": "Verification and Reproducibility",
+  "ETHIC": "Responsible and Ethical Use",
+  "CASE": "Case Studies and Capstone"
+}

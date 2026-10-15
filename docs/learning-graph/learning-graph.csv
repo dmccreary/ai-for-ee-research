@@ -1,0 +1,351 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Research Workflow,,FOUND
+2,Literature Search,1,FOUND
+3,Data Analysis,1,FOUND
+4,Brainstorming,1,FOUND
+5,Scientific Coding,1,FOUND
+6,Manuscript Preparation,1,FOUND
+7,Research Question,1,FOUND
+8,Research Productivity,1,FOUND
+9,Generative AI,,FOUND
+10,Large Language Model,9,FOUND
+11,AI Assistant,10,FOUND
+12,AI Agent,11,FOUND
+13,Agentic Research,12|1,FOUND
+14,Researcher as Orchestrator,13|15,FOUND
+15,Human in the Loop,11,FOUND
+16,Task Decomposition,1|7,FOUND
+17,Research Pipeline,1|16,FOUND
+18,Reproducibility,1,FOUND
+19,Research Group,1,FOUND
+20,Electrical Engineering Research,1,FOUND
+21,Token,10,LLM
+22,Tokenization,21,LLM
+23,Context Window,21,LLM
+24,Context Limit,23,LLM
+25,Prompt,10,LLM
+26,Completion,25,LLM
+27,System Prompt,25,LLM
+28,Temperature,26,LLM
+29,Training Data,10,LLM
+30,Knowledge Cutoff,29,LLM
+31,Hallucination,29|26,LLM
+32,Fabricated Citation,31|2,LLM
+33,Model Selection,34|40,LLM
+34,Model Size,10,LLM
+35,Reasoning Model,10,LLM
+36,Multimodal Model,10,LLM
+37,Open Weight Model,10|34,LLM
+38,Local Model,37,LLM
+39,API Access,10,LLM
+40,Token Cost,21|39,LLM
+41,Rate Limit,39,LLM
+42,Latency,34|39,LLM
+43,Embedding,21,LLM
+44,Retrieval Augmented Generation,45|23,LLM
+45,Vector Search,43,LLM
+46,Model Benchmark,10,LLM
+47,Model Context Protocol,137,LLM
+48,Chat Interface,11,LLM
+49,Command Line Interface,,LLM
+50,Model Version Drift,33|18,LLM
+51,Prompt Engineering,25|26,PROMPT
+52,Context Engineering,51|23,PROMPT
+53,Clear Instructions,51,PROMPT
+54,Role Prompting,51|27,PROMPT
+55,Few-Shot Examples,51,PROMPT
+56,Chain of Thought,51|35,PROMPT
+57,Structured Output,58,PROMPT
+58,Output Format,53,PROMPT
+59,Constraints,53,PROMPT
+60,Acceptance Criteria,59|7,PROMPT
+61,Iterative Refinement,51|26,PROMPT
+62,Prompt Template,53|58,PROMPT
+63,Prompt Library,62,PROMPT
+64,Negative Instructions,59,PROMPT
+65,Source Grounding,52|31,PROMPT
+66,Context Selection,52|24,PROMPT
+67,Context Compression,66|69,PROMPT
+68,Conversation History,23|48,PROMPT
+69,Summarization,51,PROMPT
+70,Long Document Handling,24|69,PROMPT
+71,Prompt Injection,25|27,PROMPT
+72,Prompt Testing,62|60,PROMPT
+73,Prompt Versioning,63|102,PROMPT
+74,Task Specification,16|53|60,PROMPT
+75,Counterexamples,55,PROMPT
+76,Clarifying Questions,51|15,PROMPT
+77,Self Critique,61|56,PROMPT
+78,Multi-Step Prompt,16|51,PROMPT
+79,Prompt Chaining,78|57,PROMPT
+80,Domain Vocabulary,52|20,PROMPT
+81,Markdown,82,MDKB
+82,Plain Text,,MDKB
+83,Markdown Syntax,81,MDKB
+84,Headings,83,MDKB
+85,Lists and Tables,83,MDKB
+86,Code Blocks,83,MDKB
+87,YAML Frontmatter,83,MDKB
+88,Project Instruction File,81|52,MDKB
+89,AGENTS.md File,88,MDKB
+90,CLAUDE.md File,88,MDKB
+91,Project Goals,88|7,MDKB
+92,Project Conventions,88,MDKB
+93,Project Constraints,88|59,MDKB
+94,Glossary File,81|80,MDKB
+95,Research Notes,81|1,MDKB
+96,Specification File,81|74,MDKB
+97,Decision Log,95,MDKB
+98,Session Log,95|68,MDKB
+99,Project Memory,88|98,MDKB
+100,Knowledge Base,95|94|96,MDKB
+101,Cross References,83|100,MDKB
+102,Version Control,82,MDKB
+103,Git,102,MDKB
+104,Git Commit,103,MDKB
+105,GitHub Repository,103,MDKB
+106,Branch,104,MDKB
+107,Diff Review,104,MDKB
+108,File Organization,82,MDKB
+109,Naming Conventions,108|92,MDKB
+110,Documentation as Code,81|102,MDKB
+111,Agent Skill,12|81|62,SKILL
+112,SKILL.md File,111|87,SKILL
+113,Skill Name,112,SKILL
+114,Skill Description,112,SKILL
+115,Skill Instructions,112|74,SKILL
+116,Skill Triggering,114,SKILL
+117,Supporting Files,112,SKILL
+118,Scripts in Skills,117|144,SKILL
+119,Reference Documents,117,SKILL
+120,Progressive Disclosure,119|66,SKILL
+121,Skill Scope,111|16,SKILL
+122,Single Purpose Skill,121,SKILL
+123,Skill Testing,111|60,SKILL
+124,Skill Evaluation,123,SKILL
+125,Skill Versioning,111|102,SKILL
+126,Skill Library,111|108,SKILL
+127,Skill Sharing,126|105,SKILL
+128,Skill Installation,127,SKILL
+129,Slash Command,111|49,SKILL
+130,Skill Composition,122|79,SKILL
+131,Skill Metadata,113|114,SKILL
+132,Skill Failure Modes,123|116,SKILL
+133,Skill Maintenance,125|132,SKILL
+134,Skill Examples,111|55,SKILL
+135,Research Skill Template,134|122|1,SKILL
+136,Agent Loop,137|12,AGENT
+137,Tool Use,12|25,AGENT
+138,Tool Call,137,AGENT
+139,Tool Definition,138|57,AGENT
+140,File Access,137,AGENT
+141,Shell Commands,137|49,AGENT
+142,Web Search,137,AGENT
+143,Web Fetch,137,AGENT
+144,Code Execution,141,AGENT
+145,Sandboxing,144,AGENT
+146,Permissions,145|140,AGENT
+147,Permission Modes,146,AGENT
+148,Subagent,12|23,AGENT
+149,Parallel Agents,148,AGENT
+150,Agent Memory,12|99|68,AGENT
+151,Agent Hooks,136|141,AGENT
+152,MCP Server,47,AGENT
+153,External Data Sources,137|143,AGENT
+154,API Integration,39|139,AGENT
+155,Database Access,153,AGENT
+156,Notebook Environment,144|232,AGENT
+157,Jupyter Notebook,156,AGENT
+158,Agent Autonomy,136|147,AGENT
+159,Agent Supervision,158|15,AGENT
+160,Agent Logging,136|98,AGENT
+161,Agent Failure Modes,136|31,AGENT
+162,Runaway Agent,161|158,AGENT
+163,Cost Control,40|136,AGENT
+164,Task Scheduling,141,AGENT
+165,Background Tasks,164,AGENT
+166,Agent Evaluation,161|60,AGENT
+167,Agent Handoff,148|74,AGENT
+168,Context Isolation,148|23,AGENT
+169,Trust Boundary,146|71,AGENT
+170,Credential Handling,169|39,AGENT
+171,Planning Agent,12|16,ORCH
+172,Execution Agent,12|137,ORCH
+173,Planner Executor Pattern,171|172,ORCH
+174,Reviewer Agent,12|60,ORCH
+175,Research Agent,12|1,ORCH
+176,Coding Agent,172|5,ORCH
+177,Writing Agent,172|6,ORCH
+178,Analysis Agent,172|3,ORCH
+179,Literature Agent,171|2,ORCH
+180,Agent Roles,171|172|174,ORCH
+181,Agent Team,180|167,ORCH
+182,Orchestration,181,ORCH
+183,Orchestrator,182,ORCH
+184,Planning Agent Team,181|171,ORCH
+185,Execution Agent Team,181|172,ORCH
+186,Agent Ratio,184|185,ORCH
+187,Work Breakdown,16|171,ORCH
+188,Task Queue,187,ORCH
+189,Task Dependencies,187,ORCH
+190,Handoff Protocol,167|96,ORCH
+191,Shared Workspace,140|181,ORCH
+192,Conflict Resolution,191|174,ORCH
+193,Review Checkpoint,174|189,ORCH
+194,Human Approval Gate,193|15,ORCH
+195,Progress Tracking,188|160,ORCH
+196,Status Reporting,195,ORCH
+197,Task Prioritization,187|8,ORCH
+198,Researcher Attention,183|8,ORCH
+199,Delegation,183|74,ORCH
+200,Span of Control,199|198,ORCH
+201,Agent Specification,180|96,ORCH
+202,Plan Review,171|193,ORCH
+203,Plan Revision,202|61,ORCH
+204,Cost and Benefit,163|186,ORCH
+205,Scaling Agent Teams,186|200|204,ORCH
+206,Literature Review,207|210,LIT
+207,Search Strategy,2|7,LIT
+208,Keyword Generation,207|80,LIT
+209,Citation Chaining,207|225,LIT
+210,Paper Summarization,69|2,LIT
+211,Annotated Bibliography,210|217,LIT
+212,Reading List,219|207,LIT
+213,Research Gap,206|7,LIT
+214,Related Work,206|213,LIT
+215,Citation Verification,32|216,LIT
+216,DOI Lookup,143|225,LIT
+217,Reference Manager,2|218,LIT
+218,BibTeX,82,LIT
+219,Paper Triage,207|210,LIT
+220,Claim Extraction,210|57,LIT
+221,Comparison Table,220|85,LIT
+222,Evidence Synthesis,221|223,LIT
+223,Source Quality,225|224,LIT
+224,Preprint Server,2,LIT
+225,Scholarly Databases,2|142,LIT
+226,Data Cleaning,3|253,DATA
+227,Measurement Data,3|20,DATA
+228,Exploratory Analysis,226|227,DATA
+229,Statistical Analysis,228,DATA
+230,Data Visualization,228,DATA
+231,Plotting,230|232,DATA
+232,Python,,DATA
+233,Analysis Script,232|5|3,DATA
+234,Unit Tests,232|60,DATA
+235,Code Review,233|107,DATA
+236,Debugging,237|233,DATA
+237,Error Messages,232,DATA
+238,Silent Errors,236|234,DATA
+239,Numerical Sanity Check,238|227,DATA
+240,Simulation Script,233|20,DATA
+241,Parameter Sweep,240,DATA
+242,Signal Processing,233|227,DATA
+243,Circuit Simulation,240,DATA
+244,HDL Code,5|20,DATA
+245,Testbench Generation,244|234,DATA
+246,Test Data,234|253,DATA
+247,Reproducible Environment,248|18,DATA
+248,Dependency Management,232,DATA
+249,Data Provenance,102|227,DATA
+250,Code Documentation,233|81,DATA
+251,Refactoring,235|234,DATA
+252,Performance Profiling,233|236,DATA
+253,Data Formats,3|82,DATA
+254,CSV and JSON,253,DATA
+255,Notebook to Script,157|233,DATA
+256,Problem Framing,7|4,BRAIN
+257,Idea Generation,4|51,BRAIN
+258,Hypothesis Development,256|257,BRAIN
+259,Devils Advocate Prompt,54|257,BRAIN
+260,Analogical Thinking,257|80,BRAIN
+261,Experiment Design,258,BRAIN
+262,Feasibility Assessment,258|261,BRAIN
+263,Research Roadmap,262|197,BRAIN
+264,Idea Ranking,257|60,BRAIN
+265,Novelty Check,214|257,BRAIN
+266,Paper Structure,6,MANU
+267,Abstract Writing,266|69,MANU
+268,Outline Generation,266|95,MANU
+269,Drafting,268|177,MANU
+270,Revision,269|61,MANU
+271,Author Voice,270|55,MANU
+272,LaTeX,82|6,MANU
+273,Figure Preparation,230|6,MANU
+274,Figure Captions,273,MANU
+275,Reference Formatting,218|272,MANU
+276,arXiv Submission,272|275|224,MANU
+277,Peer Review Response,270|174,MANU
+278,Technical Editing,270,MANU
+279,Style Consistency,278|92,MANU
+280,Grammar and Clarity,278,MANU
+281,Authorship,6|15,MANU
+282,Co-Author Review,281|270,MANU
+283,Venue Requirements,266,MANU
+284,Cover Letter,283|267,MANU
+285,Slide Deck,292|273,COMM
+286,MicroSim,287|290,COMM
+287,Interactive Simulation,240|292,COMM
+288,Intelligent Textbook,286|289|81,COMM
+289,Learning Graph,296|100,COMM
+290,p5.js,5,COMM
+291,Embedding Simulations,286|81,COMM
+292,Research Communication,6,COMM
+293,Teaching From Research,292|288,COMM
+294,Open Educational Resources,293|323,COMM
+295,MicroSim Generation,286|111|176,COMM
+296,Concept Dependency,100|101,COMM
+297,Verification,31|60,VERIF
+298,Validation,297,VERIF
+299,Independent Check,297,VERIF
+300,Primary Source Check,299|215,VERIF
+301,Cross Model Check,299|33,VERIF
+302,Test Driven Research,234|297,VERIF
+303,Result Replication,18|299,VERIF
+304,Uncertainty Awareness,31|297,VERIF
+305,Overconfidence,304,VERIF
+306,Sycophancy,10|304,VERIF
+307,Output Bias,29|299,VERIF
+308,Audit Trail,98|97,VERIF
+309,Reproducibility Package,247|249|308,VERIF
+310,Peer Verification,299|19,VERIF
+311,Acceptance Review,60|297|193,VERIF
+312,Error Tracing,308|236,VERIF
+313,Responsible AI Use,15|297,ETHIC
+314,Academic Integrity,313,ETHIC
+315,Citation of AI Use,314|308,ETHIC
+316,AI Disclosure,315,ETHIC
+317,Authorship Policy,281|316,ETHIC
+318,Privacy,313,ETHIC
+319,Confidential Data,318|169,ETHIC
+320,Unpublished Results,319|6,ETHIC
+321,Intellectual Property,313,ETHIC
+322,Copyright,321,ETHIC
+323,Licensing,322,ETHIC
+324,Data Governance,318|249,ETHIC
+325,Bias and Fairness,307|313,ETHIC
+326,Environmental Cost,34|313,ETHIC
+327,Dual Use Risk,313,ETHIC
+328,Institutional Policy,314|318,ETHIC
+329,Journal Policy,316|283,ETHIC
+330,Lab AI Policy,328|19,ETHIC
+331,Accountability,313|14,ETHIC
+332,Transparency,316|308,ETHIC
+333,Human Judgment,15|331,ETHIC
+334,Skill Atrophy,335,ETHIC
+335,Over-Reliance,333|306,ETHIC
+336,Ethical Use,313|331|325,ETHIC
+337,Case Study,13|17,CASE
+338,MicroSims Paper,337|286|276,CASE
+339,Intelligent Textbook Project,337|288|341,CASE
+340,Textbook Workflow,339|181,CASE
+341,Skill Pipeline,337|130,CASE
+342,Lessons Learned,337|161,CASE
+343,Failure Case,337|161|132,CASE
+344,Workflow Documentation,337|110,CASE
+345,Capstone Project,346|297|344,CASE
+346,Agent Team Design,181|201|193,CASE
+347,Personal Skill Library,126|135,CASE
+348,Group Workflow,19|181|191,CASE
+349,Presentation of Results,345|285,CASE
+350,Adoption Plan,330|347|348,CASE
