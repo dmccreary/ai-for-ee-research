@@ -1,0 +1,347 @@
+/* From Generative AI to Agent - vis-network-tutorial layout
+ * =========================================================
+ * Wide (>= 860px): chain graph + definitions on the left, exercise panel on the right.
+ * Narrow (< 860px): title, graph, definitions, and exercise stacked.
+ * The whole page always fits inside the iframe height (CANVAS_HEIGHT + 2);
+ * the graph area absorbs any spare height so nothing scrolls.
+ *
+ * Colors are from the Okabe-Ito color-blind-safe palette (blue / orange),
+ * and every answered link also carries a check or X glyph and a text status.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 6px 10px 4px 10px;
+    gap: 6px;
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title-bar {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-top: 2px;
+}
+
+/* ===========================================
+   TWO-COLUMN LAYOUT
+   =========================================== */
+.layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.left-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.graph-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 130px;
+    background-color: white;
+    border: 1px solid #c9d6e3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+}
+
+/* Legend: upper left of the graph (wide layout only) */
+.legend {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 3px 6px;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.lg {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+
+.lg:first-child { margin-left: 0; }
+.lg-open    { color: #555; border: 2px dashed #888; }
+.lg-current { color: #003f73; border: 2px solid #0072b2; }
+.lg-correct { color: #fff; background: #0072b2; }
+.lg-wrong   { color: #8a3c00; background: #fdf0e1; border: 2px dashed #d55e00; }
+
+/* ===========================================
+   EXPLORATION PANEL (node definitions)
+   =========================================== */
+.explore-panel {
+    flex: 0 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 6px 10px;
+}
+
+.chain-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+    font-size: 14px;
+}
+
+.chain-label {
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.arrow {
+    color: #555;
+}
+
+.node-btn {
+    font-size: 14px;
+    padding: 3px 7px;
+    border: 2px solid #0072b2;
+    border-radius: 6px;
+    background: #eef6fc;
+    color: #003f73;
+    cursor: pointer;
+}
+
+.node-btn:hover { background: #d6eaf8; }
+.node-btn[aria-pressed="true"] {
+    background: #0072b2;
+    color: white;
+}
+
+.definition {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.35;
+    min-height: 2.7em;
+}
+
+.definition strong { color: #003f73; }
+
+/* ===========================================
+   RIGHT PANEL (Exercise)
+   =========================================== */
+.right-panel {
+    flex: 0 0 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 8px 10px;
+    min-height: 0;
+}
+
+.link-header {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.link-step {
+    font-weight: bold;
+    color: #003f73;
+    margin-right: 4px;
+}
+
+.link-nodes {
+    font-weight: bold;
+}
+
+.question {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.option {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 15px;
+    line-height: 1.3;
+    padding: 4px 7px;
+    border: 2px solid #b8c7d6;
+    border-radius: 6px;
+    background: #fbfdff;
+    cursor: pointer;
+}
+
+.option input {
+    margin-top: 3px;
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.option:hover { border-color: #0072b2; }
+.option:focus-within { outline: 3px solid #56b4e9; outline-offset: 1px; }
+.option.selected { border-color: #0072b2; background: #eef6fc; }
+
+.option.locked { cursor: default; }
+.option.locked:hover { border-color: #b8c7d6; }
+.option.locked input { cursor: default; }
+
+/* After commit: the correct option and a wrong choice are marked by glyph + text, not color only */
+.option.is-correct {
+    border-color: #0072b2;
+    background: #e3f1fb;
+}
+.option.is-wrong {
+    border-color: #d55e00;
+    background: #fdf0e1;
+    border-style: dashed;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 4px;
+    white-space: nowrap;
+}
+.tag-correct { color: #003f73; }
+.tag-wrong   { color: #8a3c00; }
+
+.feedback {
+    font-size: 15px;
+    line-height: 1.35;
+    min-height: 0;
+}
+
+.feedback:empty { display: none; }
+
+.feedback .fb {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border-left: 5px solid #0072b2;
+    background: #eef6fc;
+}
+
+.feedback .fb.fb-wrong {
+    border-left-color: #d55e00;
+    background: #fdf0e1;
+}
+
+.feedback .fb-final {
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+/* ===========================================
+   CONTROL BUTTONS
+   =========================================== */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: auto;
+}
+
+.btn {
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:focus-visible, .node-btn:focus-visible { outline: 3px solid #56b4e9; outline-offset: 2px; }
+
+.btn-primary { background-color: #0072b2; color: white; }
+.btn-primary:hover { background-color: #005a8c; }
+.btn-primary:disabled { background-color: #9cc3dd; cursor: not-allowed; }
+
+.btn-secondary { background-color: #616161; color: white; }
+.btn-secondary:hover { background-color: #4a4a4a; }
+
+.score {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.back-link {
+    flex: 0 0 auto;
+    font-size: 14px;
+    color: #005a8c;
+}
+
+/* ===========================================
+   RESPONSIVE: stack below 860px
+   =========================================== */
+@media (max-width: 859px) {
+    .container { padding: 4px 6px 2px 6px; gap: 4px; }
+    .title { font-size: 18px; }
+    .subtitle { font-size: 15px; }
+    .layout { flex-direction: column; gap: 4px; }
+    .left-col { flex: 1 1 auto; min-height: 0; gap: 4px; }
+    .right-panel { flex: 0 0 auto; padding: 6px 8px; gap: 4px; }
+    .legend { display: none; }
+    .explore-panel { padding: 5px 8px; }
+    .node-btn { padding: 2px 6px; }
+    .definition { font-size: 14px; }
+    .option { font-size: 14px; padding: 3px 6px; }
+    .link-header, .question { font-size: 15px; }
+    .feedback { font-size: 14px; }
+    .btn { padding: 6px 11px; font-size: 14px; }
+    .score { font-size: 14px; }
+}

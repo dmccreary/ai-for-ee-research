@@ -21,7 +21,19 @@
          <lastmod>2026-10-15</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/references/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/personal-agents/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/pkg/</loc>
          <lastmod>2026-10-15</lastmod>
     </url>
     <url>
@@ -142,6 +154,26 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/generative-ai-to-agent/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-task-decomposition-builder/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-task-sorter/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-workflow-handoffs/</loc>
+         <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/review-checkpoint-judge/</loc>
          <lastmod>2026-10-15</lastmod>
     </url>
 </urlset>

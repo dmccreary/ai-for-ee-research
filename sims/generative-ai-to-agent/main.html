@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>From Generative AI to Agent</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title and the on-screen question (Starting State) -->
+        <header class="title-bar">
+            <div class="title">From Generative AI to Agent</div>
+            <div class="subtitle" id="main-question">What changes at each step from generative AI to an AI agent?</div>
+        </header>
+
+        <div class="layout">
+            <!-- Left column: chain graph and node definitions (exploration) -->
+            <section class="left-col">
+                <div class="graph-wrap">
+                    <!-- vis-network replaces the children of #network, so overlays are siblings -->
+                    <div id="network" role="img"
+                         aria-label="Chain diagram of four terms in a row: Generative AI, then Large Language Model, then AI Assistant, then AI Agent, joined by three links."></div>
+                    <div class="legend" aria-hidden="true">
+                        Links: <span class="lg lg-open">2</span> locked
+                        <span class="lg lg-current">1 ?</span> current
+                        <span class="lg lg-correct">1 &#10003;</span> correct
+                        <span class="lg lg-wrong">1 &#10007;</span> incorrect
+                    </div>
+                </div>
+
+                <div class="explore-panel">
+                    <div class="chain-list" role="group" aria-label="Open a node to read its definition (not scored)">
+                        <span class="chain-label">Open a node:</span>
+                        <button class="node-btn" data-node="1">Generative AI</button><span class="arrow" aria-hidden="true">&rarr;</span>
+                        <button class="node-btn" data-node="2">Large Language Model</button><span class="arrow" aria-hidden="true">&rarr;</span>
+                        <button class="node-btn" data-node="3">AI Assistant</button><span class="arrow" aria-hidden="true">&rarr;</span>
+                        <button class="node-btn" data-node="4">AI Agent</button>
+                    </div>
+                    <div class="definition" id="definition" aria-live="polite">
+                        Click a node in the diagram, or a button above, to read its definition. Exploring is not scored.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right column: the scored exercise -->
+            <section class="right-panel" aria-label="Exercise">
+                <div class="link-header">
+                    <span class="link-step" id="link-step">Link 1 of 3</span>
+                    <span class="link-nodes" id="link-nodes">Generative AI &rarr; Large Language Model</span>
+                </div>
+                <div class="question" id="link-question">What does the second term add to the first?</div>
+
+                <div class="options" id="options" role="radiogroup" aria-labelledby="link-question"></div>
+
+                <div class="feedback" id="feedback" aria-live="polite"></div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="commit-btn" disabled>Commit answer</button>
+                    <button class="btn btn-primary" id="next-btn" style="display:none;">Next link &rarr;</button>
+                    <button class="btn btn-secondary" id="restart-btn">Restart</button>
+                    <span class="score" id="score" aria-live="polite">Score: 0 of 3 correct</span>
+                </div>
+            </section>
+        </div>
+
+        <a class="back-link" href=".">Back to Lesson Plan</a>
+    </div>
+
+    <script src="generative-ai-to-agent.js"></script>
+</body>
+</html>

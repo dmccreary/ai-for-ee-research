@@ -1,0 +1,111 @@
+{
+  "title": "Research Task Sorter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Sorting activity in which learners place ten everyday electrical engineering research tasks into one of three groups: AI drafts, you verify; You decide, AI assists; or You do directly. Each committed placement gets immediate Correct or Not quite feedback with a one-sentence reason, and each run ends with a score out of 10, a mastery statement at 8 of 10, and the list of missed cards.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/research-task-sorter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Dividing research work between AI tools and the researcher",
+    "learningObjectives": [
+      "Differentiate ten research tasks into \"AI drafts, you verify\", \"You decide, AI assists\", and \"You do directly\", matching the answer key in at least 8 of 10 tasks",
+      "Explain why a task belongs in its group using the distinction between cheap verification, judgment that depends on the researcher's knowledge, and responsibility that cannot be delegated"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "differentiate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "The five everyday research tasks: literature search, data analysis, brainstorming, scientific coding, and manuscript preparation",
+      "The definitions of the three groups AI drafts, you verify; You decide, AI assists; and You do directly"
+    ],
+    "concepts": [
+      "Literature Search",
+      "Data Analysis",
+      "Brainstorming",
+      "Scientific Coding",
+      "Manuscript Preparation",
+      "Human-AI Division of Labor",
+      "Verification of AI Output",
+      "Research Accountability"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 670,
+      "drawHeight": 590,
+      "controlHeight": 80
+    },
+    "iframeHeight": 672,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key; correct and incorrect feedback uses words and symbols as well as color; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "AI drafts, you verify",
+      "purpose": "Commits the current card to the group AI drafts, you verify. Disabled after the placement is committed."
+    },
+    {
+      "type": "button",
+      "label": "You decide, AI assists",
+      "purpose": "Commits the current card to the group You decide, AI assists. Disabled after the placement is committed."
+    },
+    {
+      "type": "button",
+      "label": "You do directly",
+      "purpose": "Commits the current card to the group You do directly. Disabled after the placement is committed."
+    },
+    {
+      "type": "button",
+      "label": "Next Card / See Score / Run Again",
+      "purpose": "Enabled after a placement is committed. Advances to the next card, shows the score after the tenth card, and on the summary screen starts a new run with the cards reshuffled."
+    },
+    {
+      "type": "button",
+      "label": "More Missed Cards",
+      "purpose": "Shown only on the summary screen when the list of missed cards does not fit on one page; pages through the list."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Forced three-way classification with immediate explanatory feedback and a reshuffled second run",
+    "keyQuestions": [
+      "Who should do this task: the model, you assisted, or only you?",
+      "Can the result of this task be checked cheaply?",
+      "Does the choice depend on knowledge and judgment that only the researcher has?",
+      "Does the task carry responsibility, commitment, or certification that cannot be handed off?"
+    ],
+    "commonMisconceptions": [
+      "AI output that reads fluently can be accepted without checking",
+      "Any task that involves a decision is one the model should make",
+      "Tasks involving certification or accountability can be delegated if the model is good enough"
+    ],
+    "assessmentOpportunities": [
+      "First-run score of at least 8 of 10 placements matching the answer key is evidence of mastery",
+      "Comparison of the first and second run scores shows whether the sorting criteria transferred to a new card order",
+      "Learner explains each missed card using the Why sentence and the three group definitions"
+    ]
+  },
+  "chapter": "01-research-workflows-orchestrator"
+}
