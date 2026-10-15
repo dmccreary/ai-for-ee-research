@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+        <meta name="description" content="How access method, cost, latency, and openness shape the choice of a model for a research project, how retrieval adds your own documents, and how clear instructions, constraints, output formats, roles, and examples make prompts reliable.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>3. Choosing Models and Writing Clear Prompts - AI for EE Research</title>
+        <title>Choosing Models and Writing Clear Prompts - AI for EE Research</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Choosing Models and Writing Clear Prompts
+              Choosing Models and Writing Clear Prompts
             
           </span>
         </div>
@@ -542,6 +542,147 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaching-a-model-through-an-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaching a Model Through an API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting a Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting a Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-model-choice-scenario-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Model Choice Scenario Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-your-own-documents-embeddings-vector-search-and-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Your Own Documents: Embeddings, Vector Search, and Retrieval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Your Own Documents: Embeddings, Vector Search, and Retrieval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-embedding-vector-search-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Embedding Vector Search Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#few-shot-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Few-Shot Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Few-Shot Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-component-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Component Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
     </span>
   </a>
   
@@ -1208,6 +1349,147 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reaching-a-model-through-an-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reaching a Model Through an API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting a Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting a Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-model-choice-scenario-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Model Choice Scenario Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-your-own-documents-embeddings-vector-search-and-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Your Own Documents: Embeddings, Vector Search, and Retrieval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Your Own Documents: Embeddings, Vector Search, and Retrieval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-embedding-vector-search-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Embedding Vector Search Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#few-shot-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Few-Shot Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Few-Shot Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-component-sorter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Component Sorter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1320,14 +1602,556 @@
 <li><a href="../01-research-workflows-orchestrator/">Chapter 1: Research Workflows and the Researcher as Orchestrator</a></li>
 <li><a href="../02-how-language-models-work/">Chapter 2: How Language Models Work</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Using a Model to Choosing One</p>
+<p><img alt="Volt waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+This chapter is where you stop asking "what can the model do?" and start asking "which model, reached how, at what price, and told what?" By the end you will be able to choose a model for a task and write a prompt precise enough that you can check the answer. Trust, but verify!</p>
+</div>
+<h2 id="reaching-a-model-through-an-api">Reaching a Model Through an API<a class="headerlink" href="#reaching-a-model-through-an-api" title="Permanent link">&para;</a></h2>
+<p>In Chapter 2 you met two ways of using a model: a chat interface and a command line. Both sit on top of a third thing that you need to understand to choose well. <strong>API access</strong> is the ability to send a prompt to a model from a program, over the network, and receive the completion as data. API is short for application programming interface. A chat product is, in effect, a graphical program that makes these calls for you.</p>
+<p>The distinction matters because an API call is repeatable and scriptable. You send a request that names the model, supplies the messages, and sets parameters such as the temperature and the maximum number of output tokens. You receive a response that includes the completion and a count of the tokens used. You authenticate with a secret <strong>API key</strong> that identifies your account and is tied to your billing. Treat the key like a password: store it in an environment variable or a secrets manager, never inside a prompt, a notebook that you share, or a repository. A key committed to a public repository is typically scraped within minutes.</p>
+<p>An API gives you three things a chat window does not. You can run the same prompt over a hundred inputs in a loop. You can pin the exact model version and settings and write them in your lab notebook. And you can wire the model into a pipeline, so that its output is checked by a script before a human sees it. Each of these is a prerequisite for the verification practices in later chapters.</p>
+<p>An API also brings three practical constraints, each of which can break a pipeline that worked on five inputs and fails on five thousand.</p>
+<ul>
+<li><strong>Token cost</strong> is the price of a request, computed from the number of tokens in and out.</li>
+<li><strong>Latency</strong> is the time between sending a request and receiving the response.</li>
+<li>A <strong>rate limit</strong> is the maximum number of requests, or tokens, a provider will accept from you in a time window.</li>
+</ul>
+<p>Token cost is the product of usage and price. Providers quote prices per million tokens, with different prices for input tokens and output tokens. If <span class="arithmatex">\( t_{\text{in}} \)</span> and <span class="arithmatex">\( t_{\text{out}} \)</span> are the input and output token counts and <span class="arithmatex">\( p_{\text{in}} \)</span> and <span class="arithmatex">\( p_{\text{out}} \)</span> are the prices per million tokens, then</p>
+<div class="arithmatex">\[
+C = \frac{t_{\text{in}}\, p_{\text{in}} + t_{\text{out}}\, p_{\text{out}}}{10^{6}}.
+\]</div>
+<p>Consider a worked example with illustrative prices: 3 dollars per million input tokens and 15 dollars per million output tokens. You want to classify 200 abstracts. Each request carries about 500 input tokens, a 400-token abstract plus a 100-token instruction, and returns about 150 output tokens. The totals are 100,000 input tokens and 30,000 output tokens. The cost is <span class="arithmatex">\( (100{,}000 \times 3 + 30{,}000 \times 15) / 10^{6} = 0.75 \)</span> dollars. A model priced at five times those rates costs 3.75 dollars for the same job. Neither figure is a concern for a single run, but a development loop of 20 prompt revisions over the same 200 abstracts multiplies the cost by 20, and a pipeline that feeds a long document into every call multiplies the input tokens by the document length.</p>
+<p>Latency and rate limits determine wall-clock time. If each request takes 4 seconds and you send them one after another, 200 requests take 800 seconds, about 13 minutes. Sending ten at a time cuts that to around 80 seconds, unless the provider caps you at 50 requests per minute (an illustrative limit), in which case the job takes 4 minutes whatever you do. When a limit is exceeded the API returns an error, and a script that does not wait and retry will fail partway through, leaving a half-processed set of results. Always write batch scripts so that they log which inputs completed and can resume.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Price the Whole Loop, Not One Call</p>
+<p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Before you run a batch, run five items and read the usage counts the API returns. Multiply by the number of items and by the number of revisions you expect to make. If the total surprises you, shorten the input or switch to a cheaper model for the development loop and use the better model only for the final run.</p>
+</div>
+<h2 id="selecting-a-model">Selecting a Model<a class="headerlink" href="#selecting-a-model" title="Permanent link">&para;</a></h2>
+<p><strong>Model selection</strong> is the choice of which model, through which access method, to use for a given task. It is a trade-off among capability, cost, latency, privacy, and reproducibility. There is no best model; there is a best model for a task under constraints. Two further distinctions shape the decision.</p>
+<p>An <strong>open-weight model</strong> is a model whose trained parameters are published, so that you can download and run them yourself, usually under a license that states what you may do with them. This is different from "open source" in the strict sense, because the training data and code may not be released. A <strong>local model</strong> is any model that runs on hardware you control, such as your laptop, a lab workstation, or a departmental cluster. Open-weight models are what make local models possible. Their appeal for research is concrete: your data never leaves your machine, the model works with no network connection, the exact weights can be archived with your results, and there is no per-token charge once the hardware exists. Their costs are equally concrete: capable models need substantial memory, usually a GPU, and the strongest hosted models are generally ahead of what you can run locally.</p>
+<p>A related hazard is <strong>model version drift</strong>. Hosted models are updated, and a name such as a model family can point to different weights over time. The same prompt run six months apart can return different results, which silently invalidates a comparison. The defense is to record the exact model identifier, the date, and the settings with every result, to pin a dated version when the provider offers one, and to rerun a small fixed test set whenever the model changes. A local open-weight model has no drift unless you change the file, which is the reason it is attractive for work that must be reproduced years later.</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Chat interface</th>
+<th>Hosted API</th>
+<th>Local open-weight model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-off exploration</td>
+<td>Best fit</td>
+<td>Overkill</td>
+<td>Overkill</td>
+</tr>
+<tr>
+<td>Batch over many inputs</td>
+<td>Impractical</td>
+<td>Best fit</td>
+<td>Fit if hardware allows</td>
+</tr>
+<tr>
+<td>Data that must not leave the site</td>
+<td>Not allowed</td>
+<td>Check policy and terms</td>
+<td>Best fit</td>
+</tr>
+<tr>
+<td>Needs the strongest model</td>
+<td>Fit</td>
+<td>Best fit</td>
+<td>Often behind</td>
+</tr>
+<tr>
+<td>Must be reproducible in years</td>
+<td>Poor</td>
+<td>Fair if a version is pinned</td>
+<td>Best fit</td>
+</tr>
+<tr>
+<td>No network or air-gapped</td>
+<td>Not possible</td>
+<td>Not possible</td>
+<td>Only option</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1. Matching an access path to a situation. "Best fit" is a tendency, not a rule.</em></p>
+<h4 id="diagram-model-choice-scenario-sorter">Diagram: Model Choice Scenario Sorter<a class="headerlink" href="#diagram-model-choice-scenario-sorter" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Model Choice Scenario Sorter</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> model-choice-scenario-sorter<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Bloom Level:</strong> Evaluate<br/>
+<strong>Bloom Verb:</strong> recommend<br/>
+<strong>Learning Objective:</strong> The learner will recommend one of three access paths, chat interface, hosted API, or local open-weight model, for each of eight research scenarios, with at least 6 of 8 recommendations matching the reasoning in Content.</p>
+<p><strong>Prerequisites:</strong> chat interface, API access, token cost, latency, rate limit, open-weight model, local model, and model version drift, all defined in the sections "Reaching a Model Through an API" and "Selecting a Model" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of eight scenarios the learner commits one of the three access paths and then names the single deciding factor from a list of four. A scenario is correct when the access path equals the answer in Content. The factor choice is feedback only and is not scored. Mastery is at least 6 of 8 correct on the first attempt. Reading the scenario details is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A local model is always the safest or cheapest choice. (2) The strongest hosted model is the right choice for every task. (3) A chat interface is adequate for any task because the model is the same.</p>
+<p><strong>Instructional Rationale:</strong> Evaluate-level work needs the learner to apply criteria to a case and defend a choice. Scenarios are written so that each path is correct for some cases, and so a single heuristic such as "always choose the best model" fails on at least two items.</p>
+<p><strong>Content:</strong></p>
+<p>Access paths: Chat interface (hosted model used through a web or desktop application), Hosted API (hosted model called from a script), Local open-weight model (a downloadable model run on hardware the researcher controls).</p>
+<p>Deciding factors: Privacy or data policy, Scale and automation, Reproducibility over time, Capability and effort.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Scenario</th>
+<th>Correct path</th>
+<th>Deciding factor</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>You spend 30 minutes exploring the vocabulary of an unfamiliar topic, with no files and no data.</td>
+<td>Chat interface</td>
+<td>Capability and effort</td>
+<td>An interactive, one-off exploration needs no scripting, no pinned version, and no data handling.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>You must classify 5,000 public abstracts into four categories overnight and save the labels to a file.</td>
+<td>Hosted API</td>
+<td>Scale and automation</td>
+<td>A scripted loop over many inputs needs an API. The data are public, and the cost is a small multiple of the worked example in the chapter.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>You must analyze measured data from an unpublished chip, and the sponsor's agreement forbids sending it off-site.</td>
+<td>Local open-weight model</td>
+<td>Privacy or data policy</td>
+<td>The data cannot leave the site, so only a model running on controlled hardware is permitted.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>You want a reworded version of one paragraph of your own draft paper.</td>
+<td>Chat interface</td>
+<td>Capability and effort</td>
+<td>A single short text with no data issue is the simplest possible use.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A nightly job flags regressions in simulation logs, and the same job must be re-runnable with the identical model in three years.</td>
+<td>Local open-weight model</td>
+<td>Reproducibility over time</td>
+<td>Hosted models drift and are retired. Weights you hold can be archived and rerun.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>You want help checking a multi-step derivation of a transfer function, once, from a public textbook problem.</td>
+<td>Chat interface</td>
+<td>Capability and effort</td>
+<td>A one-off, checkable task with no data policy issue is served by the interactive tool, using a capable model.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A lab pipeline must summarize 200 new papers each week and write each summary to a file with the citation.</td>
+<td>Hosted API</td>
+<td>Scale and automation</td>
+<td>A recurring batch with file output needs a scriptable interface. The papers are public.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A measurement workstation in an RF shielded room has no network connection and you want to parse its logs.</td>
+<td>Local open-weight model</td>
+<td>Privacy or data policy</td>
+<td>With no network, a hosted model is not reachable, so only a local model can run there.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The access paths and decision criteria are from the sections "Reaching a Model Through an API" and "Selecting a Model" of this chapter. All scenarios are invented for illustration, and the sim labels them "illustrative scenarios".</p>
+<p><strong>Rules:</strong> Each scenario has exactly one correct path, given in the table. The correct path is not influenced by the learner's earlier answers. The score counts only the path choice.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner reads scenario 1.</li>
+<li>The learner chooses one of the three access paths and one of the four deciding factors and submits.</li>
+<li>The sim shows whether the path was correct and the "Why" sentence, then moves to the next scenario.</li>
+<li>After scenario 8 the sim shows the count correct, and for each missed scenario the misconception it exposes.</li>
+</ol>
+<p><strong>Feedback:</strong> Eight scenarios, one attempt each, in a fixed order. Correct: "Correct: <path>." plus the "Why" sentence. Incorrect: "The better fit is <path>." plus the "Why" sentence. The correct path is always revealed after the single attempt. A final score "n of 8 correct" is shown, with whether the mastery threshold of 6 was met.</p>
+<p><strong>Starting State:</strong> Scenario 1 is shown with no path chosen. The question on screen is "Which access path would you recommend, and why?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter states that local open-weight models fit data that cannot leave the site, offline work, and reproducibility, that hosted APIs fit scripted batches, and that a chat interface fits one-off exploration. The chapter's worked cost example is 200 abstracts costing 0.75 dollars at the stated illustrative prices.</p>
+</details>
+<h2 id="adding-your-own-documents-embeddings-vector-search-and-retrieval">Adding Your Own Documents: Embeddings, Vector Search, and Retrieval<a class="headerlink" href="#adding-your-own-documents-embeddings-vector-search-and-retrieval" title="Permanent link">&para;</a></h2>
+<p>A model does not know your lab's notebook, your private papers, or last month's preprints. The usual remedy is not to retrain the model but to <em>retrieve</em> the relevant passages and place them in the prompt. Three concepts make this work, and they are best taken in order.</p>
+<p>An <strong>embedding</strong> is a list of numbers, a vector, that represents the meaning of a piece of text, produced by a model trained so that texts with similar meaning receive vectors that point in similar directions. A real embedding has hundreds to thousands of numbers. Two sentences that share no words, such as "calibrating comparator offset" and "removing input-referred bias in a latch", can still land close together, because the vectors encode meaning and not spelling.</p>
+<p><strong>Vector search</strong> is the retrieval of the stored vectors most similar to the vector of a query. The common similarity measure is cosine similarity, the cosine of the angle between two vectors. For vectors <span class="arithmatex">\( \mathbf{a} \)</span> and <span class="arithmatex">\( \mathbf{b} \)</span>,</p>
+<div class="arithmatex">\[
+\cos\theta = \frac{\mathbf{a} \cdot \mathbf{b}}{\lVert \mathbf{a} \rVert \, \lVert \mathbf{b} \rVert}.
+\]</div>
+<p>A value near 1 means the vectors point in nearly the same direction, a value near 0 means they are unrelated, and a negative value means they point apart. Notice that the search always returns <em>something</em>: the top results are simply the least bad, and a weak match comes back with the same confident formatting as a strong one. A similarity threshold, below which results are discarded, is the guard against that.</p>
+<p><strong>Retrieval-augmented generation (RAG)</strong> combines these steps. Your documents are split into passages and embedded once. At question time the question is embedded, the most similar passages are retrieved by vector search, and they are inserted into the prompt with an instruction to answer from them. The model's answer is then grounded in text you can point to, and the passages give you something to cite.</p>
+<p>A small worked example uses two-dimensional toy vectors so that the geometry can be seen. The vectors are invented for illustration. Take a query vector <span class="arithmatex">\( q = (0.90, 0.25) \)</span> and two stored passages <span class="arithmatex">\( d_1 = (0.95, 0.20) \)</span> and <span class="arithmatex">\( d_3 = (0.15, 0.95) \)</span>. The cosine of <span class="arithmatex">\( q \)</span> with <span class="arithmatex">\( d_1 \)</span> is <span class="arithmatex">\( (0.90 \times 0.95 + 0.25 \times 0.20) / (0.934 \times 0.971) = 0.998 \)</span>. The cosine with <span class="arithmatex">\( d_3 \)</span> is <span class="arithmatex">\( (0.90 \times 0.15 + 0.25 \times 0.95) / (0.934 \times 0.962) = 0.415 \)</span>. The first passage is retrieved, and the second is not.</p>
+<h4 id="diagram-embedding-vector-search-explorer">Diagram: Embedding Vector Search Explorer<a class="headerlink" href="#diagram-embedding-vector-search-explorer" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Embedding Vector Search Explorer</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> embedding-vector-search-explorer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Template:</strong> https://github.com/dmccreary/Digital-Transformation-with-AI-Spring-2026/tree/main/docs/sims/vector-similarity<br/>
+<strong>Bloom Level:</strong> Understand<br/>
+<strong>Bloom Verb:</strong> infer<br/>
+<strong>Learning Objective:</strong> The learner will infer, from the angles between vectors in a two-dimensional toy embedding space, which two stored passages vector search returns for each of three queries and whether the second result clears a similarity threshold of 0.90.</p>
+<p><strong>Prerequisites:</strong> embedding, vector search, cosine similarity, and retrieval-augmented generation, all defined in the section "Adding Your Own Documents" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of three queries the learner commits the two passages they expect to be retrieved, in order, and then marks the second result as "clears threshold" or "below threshold". A query is correct when both retrieved passages and their order match Content and the threshold mark matches. Mastery is 3 of 3 correct. Moving the query vector in exploration is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) Vector search matches words, not meanings. (2) The top results are always good matches. (3) Retrieval returns the passage that is closest in distance, not in direction.</p>
+<p><strong>Instructional Rationale:</strong> Understand-level inference asks the learner to predict the outcome from the geometry before the computed ranking is shown. The threshold step targets the misconception that a returned result is a relevant result.</p>
+<p><strong>Content:</strong></p>
+<p>The two dimensions are an illustrative "analog–digital" axis and an illustrative "learning" axis. Real embeddings have hundreds to thousands of dimensions and no named axes.</p>
+<p>Stored passages:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Passage title</th>
+<th>Vector (x, y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>SAR ADC offset calibration</td>
+<td>(0.95, 0.20)</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>Delta-sigma noise shaping</td>
+<td>(0.85, 0.35)</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>Transformer accelerator dataflow</td>
+<td>(0.15, 0.95)</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>Edge-inference quantization</td>
+<td>(0.30, 0.90)</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>LDO stability compensation</td>
+<td>(0.70, -0.45)</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>Analog and digital mixed-signal learning</td>
+<td>(0.60, 0.60)</td>
+</tr>
+</tbody>
+</table>
+<p>Queries, in this order, with the cosine similarity of each stored passage to the query:</p>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Vector (x, y)</th>
+<th>D1</th>
+<th>D2</th>
+<th>D3</th>
+<th>D4</th>
+<th>D5</th>
+<th>D6</th>
+<th>Top 2 in order</th>
+<th>Second result clears 0.90?</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1: comparator offset in successive approximation converters</td>
+<td>(0.90, 0.25)</td>
+<td>0.998</td>
+<td>0.993</td>
+<td>0.415</td>
+<td>0.559</td>
+<td>0.666</td>
+<td>0.871</td>
+<td>D1, D2</td>
+<td>Yes</td>
+<td>Both retrieved passages point in almost the same direction as the query.</td>
+</tr>
+<tr>
+<td>Q2: reducing memory traffic in neural network hardware</td>
+<td>(0.20, 0.90)</td>
+<td>0.413</td>
+<td>0.572</td>
+<td>0.998</td>
+<td>0.995</td>
+<td>-0.345</td>
+<td>0.844</td>
+<td>D3, D4</td>
+<td>Yes</td>
+<td>Both neural-hardware passages point nearly along the query.</td>
+</tr>
+<tr>
+<td>Q3: keeping a regulator stable under load</td>
+<td>(0.75, -0.40)</td>
+<td>0.766</td>
+<td>0.637</td>
+<td>-0.327</td>
+<td>-0.167</td>
+<td>0.997</td>
+<td>0.291</td>
+<td>D5, D1</td>
+<td>No</td>
+<td>Only D5 is a close match. D1 is returned because top 2 always returns two results, and 0.766 is below the threshold.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Provenance:</strong> The cosine formula is from the section "Adding Your Own Documents" of this chapter. All vectors, titles, and queries are invented for illustration, and the sim labels them "illustrative, not output of a real embedding model". Similarities are computed from the vectors and rounded to 0.001.</p>
+<p><strong>Rules:</strong> Cosine similarity = (a . b) / (|a| |b|). Results are ranked by descending cosine similarity. The number of results returned is always 2 (top-k with k = 2). A result clears the threshold when its cosine similarity &gt;= 0.90. Ties are broken by the lower passage number. The vectors are fixed, and in exploration the learner may move the query vector anywhere in the plane.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner sees the six passage vectors as arrows from the origin and the first query vector, and reads the query text.</li>
+<li>The learner commits the two passages they expect to be retrieved, in order, and marks whether the second clears the threshold. The learner submits.</li>
+<li>The sim shows the cosine similarities for all six passages, the ranking, and the "Why" sentence, and advances to the next query.</li>
+<li>After Q3, exploration opens: the learner drags the query vector and watches the ranking and the threshold marks update. The learner should notice that a vector far from every passage still returns two results.</li>
+</ol>
+<p><strong>Feedback:</strong> Three queries, one attempt each, in a fixed order. Correct: "Correct: <D?> then <D?>." plus the "Why" sentence. Incorrect: the correct ranking with the cosine values and the "Why" sentence. The correct answer is always revealed after the single attempt. A final count "n of 3 correct" is shown.</p>
+<p><strong>Starting State:</strong> Query 1 is shown with the six passage vectors and no ranking. The question on screen is "Which two passages will vector search return?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter's worked example gives a query vector (0.90, 0.25), passage d1 (0.95, 0.20) with cosine 0.998, and passage d3 (0.15, 0.95) with cosine 0.415. It states that search always returns results and that a threshold guards against weak matches.</p>
+</details>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Retrieved Does Not Mean Relevant</p>
+<p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common trap is to treat the passages a retrieval step returns as evidence that your documents contain the answer. The search ranks; it does not judge. Set a similarity threshold, instruct the model to answer "not found in the provided documents" when the passages do not contain the answer, and read the retrieved passages yourself on a sample.</p>
+</div>
+<h2 id="prompt-engineering">Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Permanent link">&para;</a></h2>
+<p>Everything so far has concerned the model and how to reach it. <strong>Prompt engineering</strong> is the practice of designing the prompt so that a model reliably produces the output you need. The word "engineering" is deliberate. A prompt is a specification, the model is a component with variable behavior, and the work is to write a specification precise enough that you can tell whether the component met it. It is not a bag of magic phrases, and phrases that work on one model version often fail on another.</p>
+<p>A useful discipline is to treat a prompt as having four parts that can be named and inspected separately: the <em>task</em> (what to do), the <em>constraints</em> (the limits on how), the <em>output format</em> (the shape of the result), and the <em>context</em> (the material to work on). The techniques in this chapter correspond to these parts, plus two refinements, a role and examples.</p>
+<h3 id="clear-instructions">Clear Instructions<a class="headerlink" href="#clear-instructions" title="Permanent link">&para;</a></h3>
+<p><strong>Clear instructions</strong> state one task, in terms of an observable outcome, using the vocabulary of the field. Three habits produce most of the gain. Use a verb that names the action ("list", "classify", "extract", "compare", "derive") instead of an open one ("look at", "think about", "help with"). State the goal and the audience, because the same material is summarized differently for a reading group and for a funding panel. And give one task per prompt where you can, because a prompt asking for five things gets five uneven answers.</p>
+<p>The most reliable test of an instruction is to hand it to a competent colleague who has not seen the project and ask what they would produce. If two colleagues would produce visibly different outputs, the instruction underdetermines the task, and a model will resolve that ambiguity in whatever way its training data makes likely, not the way you intended.</p>
+<p>A worked example shows the effect. The weak prompt is "Summarize this paper." The gaps are the length, the audience, the content to prioritize, and what to do when the paper does not state something. A model must guess all four. The revised prompt below says them explicitly. Read it first as plain text, then notice which sentence carries which of the four parts.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are reviewing a paper for a graduate reading group in analog circuit design.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Summarize the attached paper's contribution in at most 120 words.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Use only information that appears in the attached text. If a value is not stated,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>write "not stated" instead of estimating it.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>After the summary, output a table with these columns:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Architecture | Process node | Supply voltage | Sampling rate | ENOB | Power
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>One row for the paper's main design. Example row (illustrative):
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>SAR | 65 nm | 1.0 V | 1 MS/s | 9.2 | 45 µW
+</span></code></pre></div>
+<h3 id="constraints">Constraints<a class="headerlink" href="#constraints" title="Permanent link">&para;</a></h3>
+<p><strong>Constraints</strong> are explicit limits on what the model may do or use: its length, its sources, its scope, and what it must not do. They matter more than they appear to, because without them the model fills every unspecified dimension with its defaults, and the defaults are tuned for a generic reader. The constraints that most often matter in research work fall into four families.</p>
+<ul>
+<li><em>Source constraints</em> limit what may be used: "use only the attached text", "cite only papers from the provided list".</li>
+<li><em>Scope constraints</em> limit the territory: "consider only successive-approximation converters, not pipeline architectures".</li>
+<li><em>Length and style constraints</em> limit the shape: "at most 120 words", "no marketing language".</li>
+<li><em>Escape constraints</em> give the model a sanctioned way out: "if the text does not state it, write 'not stated'".</li>
+</ul>
+<p>The last family is the one most often missed, and it is the cheapest defense against hallucination. A model that is required to answer and is given no permitted way to say "unknown" will produce a plausible answer. Make "unknown" a legal output, and then look for how often it occurs.</p>
+<h3 id="output-format">Output Format<a class="headerlink" href="#output-format" title="Permanent link">&para;</a></h3>
+<p>An <strong>output format</strong> is an explicit statement of the shape of the response: a table with named columns, a JSON object with named fields, a numbered list, a fixed number of sentences. Its value is practical. A response in a known shape can be parsed by a script, compared across runs, and checked at a glance. For work that feeds a pipeline, ask for a machine-readable format, give the field names, and say what to do with missing values. For work that a human will read, a table with named columns serves nearly as well and is easier to scan.</p>
+<p>A sample specification for a parseable result, with the purpose of each key explained first. The <code>claim</code> key holds one sentence from the paper, <code>supported</code> holds true or false, and <code>evidence</code> holds the supporting quotation or the string "not stated".</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"claim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string, one sentence from the paper"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"supported"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true or false"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"evidence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string, a quotation from the paper, or \"not stated\""</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">A Prompt Is a Specification You Can Test</p>
+<p><img alt="Volt thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice what the format buys you beyond tidiness. Once the answer has a named structure, "is this output valid?" becomes a question a script can answer, and verification stops depending on your attention.</p>
+</div>
+<h3 id="role-prompting">Role Prompting<a class="headerlink" href="#role-prompting" title="Permanent link">&para;</a></h3>
+<p><strong>Role prompting</strong> assigns the model a role, such as "a reviewer for a circuits conference" or "a careful numerical analyst", at the start of the prompt. It works by shifting the style, vocabulary, and the set of considerations the model brings, and it is most useful for tone and perspective. It is weaker than it sounds as a way to <em>add knowledge or accuracy</em>: telling a model it is a world expert does not give it expertise it lacks. Use a role to set the viewpoint, and use constraints and examples to enforce the behavior.</p>
+<h3 id="few-shot-examples">Few-Shot Examples<a class="headerlink" href="#few-shot-examples" title="Permanent link">&para;</a></h3>
+<p><strong>Few-shot examples</strong> are one or more worked input-and-output pairs placed in the prompt to show the model what you want. A prompt with no examples is called zero-shot. Examples are the strongest single way to communicate a format or a judgment that is hard to describe, such as how to label a borderline abstract. They have two costs: they consume context, and the model will imitate them closely, including their quirks. Choose examples that cover the range of cases, include a boundary case, and vary them so that a surface feature, such as always the same length, is not mistaken for the rule. Mark any invented example as illustrative so a reader does not take it for data.</p>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>What it controls</th>
+<th>Typical failure if omitted</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear instructions</td>
+<td>The task and audience</td>
+<td>Plausible answer to a different question</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Constraints</td>
+<td>Sources, scope, length, "unknown"</td>
+<td>Invented details; scope creep</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>Shape of the result</td>
+<td>Unparseable or inconsistent results</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Role prompting</td>
+<td>Tone and perspective</td>
+<td>Generic voice</td>
+<td>Very low</td>
+</tr>
+<tr>
+<td>Few-shot examples</td>
+<td>Format and judgment</td>
+<td>Inconsistent labels</td>
+<td>Context tokens</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. The five prompt techniques of this chapter and what each controls.</em></p>
+<p>The last MicroSim practices recognizing which technique a sentence of a prompt is carrying. This is a real skill: when a prompt misbehaves, the way to fix it is to find which component is missing or doing the wrong job.</p>
+<h4 id="diagram-prompt-component-sorter">Diagram: Prompt Component Sorter<a class="headerlink" href="#diagram-prompt-component-sorter" title="Permanent link">&para;</a></h4>
+<details>
+<summary>Prompt Component Sorter</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> prompt-component-sorter<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified<br/>
+<strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/prompt-architecture-builder<br/>
+<strong>Bloom Level:</strong> Analyze<br/>
+<strong>Bloom Verb:</strong> distinguish<br/>
+<strong>Learning Objective:</strong> The learner will distinguish which prompt component, clear instruction, constraint, output format, role, or few-shot example, each of ten prompt sentences carries, with at least 8 of 10 classified correctly.</p>
+<p><strong>Prerequisites:</strong> clear instructions, constraints, output format, role prompting, and few-shot examples, all defined in the section "Prompt Engineering" above.</p>
+<p><strong>Evidence of Mastery:</strong> For each of ten sentences from one prompt the learner commits one of five component labels. A label is correct when it equals the answer in Content. Mastery is at least 8 of 10 correct on the first attempt. Reading the full assembled prompt is exploration and is not evidence.</p>
+<p><strong>Misconceptions:</strong> (1) A sentence that sets a length is part of the output format, when it is a constraint. (2) A role sentence also adds domain knowledge. (3) An example is only decoration and does not specify behavior.</p>
+<p><strong>Instructional Rationale:</strong> Analyze-level work needs the learner to decompose a whole into parts and attribute each part to its function. Sorting sentences from a single working prompt shows the components interacting in one place.</p>
+<p><strong>Content:</strong></p>
+<p>The ten sentences, in the order they appear in the assembled prompt:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Sentence</th>
+<th>Correct component</th>
+<th>Why (shown as feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>You are reviewing a paper for a graduate reading group in analog circuit design.</td>
+<td>Role</td>
+<td>It sets a viewpoint and audience and gives the model no new knowledge.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Summarize the attached paper's contribution.</td>
+<td>Clear instruction</td>
+<td>It names one task with a verb that describes an observable action.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Use at most 120 words.</td>
+<td>Constraint</td>
+<td>It limits the length of the answer and does not describe its shape.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Use only information that appears in the attached text.</td>
+<td>Constraint</td>
+<td>It limits the sources the model may use.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>If a value is not stated, write "not stated" instead of estimating it.</td>
+<td>Constraint</td>
+<td>It gives a sanctioned way out, so that the model need not invent a value.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>After the summary, output a table with these columns: Architecture, Process node, Supply voltage, Sampling rate, ENOB, Power.</td>
+<td>Output format</td>
+<td>It names the structure and the fields of the result.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Give one row for the paper's main design.</td>
+<td>Output format</td>
+<td>It states how many rows the structure has.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Example row: SAR, 65 nm, 1.0 V, 1 MS/s, 9.2, 45 µW.</td>
+<td>Few-shot example</td>
+<td>It shows a worked instance of the format with illustrative values.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Consider only successive-approximation converters.</td>
+<td>Constraint</td>
+<td>It limits the scope of the territory the model should consider.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Classify the paper as "analog-dominant" or "digital-assisted".</td>
+<td>Clear instruction</td>
+<td>It names a second task with an observable result in a fixed set. The chapter advises one task per prompt where possible, so in practice this sentence belongs in a separate prompt.</td>
+</tr>
+</tbody>
+</table>
+<p>Component labels: Clear instruction, Constraint, Output format, Role, Few-shot example.</p>
+<p><strong>Provenance:</strong> The component definitions are from the section "Prompt Engineering" of this chapter. The sentences are adapted from the chapter's worked prompt, with sentences 9 and 10 added. All example values are invented for illustration, and the sim labels them "illustrative".</p>
+<p><strong>Rules:</strong> Each sentence has exactly one correct label. Labels are chosen from the five in Content. The score counts the labels that match on the single attempt.</p>
+<p><strong>Learner Activity:</strong></p>
+<ol>
+<li>The learner sees the assembled prompt with sentence 1 highlighted.</li>
+<li>The learner chooses one of the five labels for the highlighted sentence and submits.</li>
+<li>The sim shows whether it was correct and the "Why" sentence, then highlights the next sentence.</li>
+<li>After sentence 10, the sim shows the count correct, and a tally of how many sentences carry each component. The learner should notice that constraints are the most numerous.</li>
+</ol>
+<p><strong>Feedback:</strong> Ten sentences, one attempt each, in a fixed order. Correct: "Correct: <label>." plus the "Why" sentence. Incorrect: "This sentence is a <label>." plus the "Why" sentence. The correct label is always revealed after the single attempt. A final score "n of 10 correct" is shown with whether the mastery threshold of 8 was met.</p>
+<p><strong>Starting State:</strong> The assembled prompt is shown with sentence 1 highlighted. The question on screen is "Which component of the prompt does this sentence carry?"</p>
+<p><strong>Chapter Anchors:</strong> The chapter's worked prompt contains a role, a length constraint of at most 120 words, a source constraint, an escape constraint, a table output format with six named columns, and one illustrative example row. The chapter states that role prompting sets viewpoint and does not add knowledge.</p>
+</details>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Your First Prompts Will Be Vague</p>
+<p><img alt="Volt encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If your early prompts get plausible but unusable answers, that is normal, because you know the context so well that it feels obvious. You have written methods sections for readers who lack your context. Write the prompt the same way, then change one thing at a time and keep the version that passes your check.</p>
+</div>
+<p>A final point connects this chapter to the next. Prompt engineering at this level is a way of writing a good single message. Real research tasks depend on more than one message: which documents to include, how to carry earlier results forward, how to test a prompt, and how to defend against hostile text. That wider view is context engineering, the subject of Chapter 4.</p>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
+<p>Choosing a model is a constrained trade-off, and writing a prompt is writing a specification. Both are decisions you can make deliberately, record, and revisit, which is what turns casual use into research practice.</p>
+<p>The main points to carry forward:</p>
+<ul>
+<li><strong>API access</strong> makes model use repeatable and scriptable, and API keys are secrets.</li>
+<li><strong>Token cost, latency, and rate limits</strong> decide whether a batch is practical. Price the whole loop, not one call.</li>
+<li><strong>Model selection</strong> weighs capability, cost, privacy, and reproducibility. A local open-weight model is the answer when data must stay on site, work is offline, or results must be rerun years later.</li>
+<li><strong>Model version drift</strong> silently changes hosted-model results, so record the model identifier, date, and settings.</li>
+<li><strong>Embeddings, vector search, and RAG</strong> bring your own documents into the prompt, and retrieval returns results whether or not they are relevant.</li>
+<li><strong>Clear instructions</strong> name one observable task for a stated audience.</li>
+<li><strong>Constraints</strong> bound sources, scope, and length, and an "unknown" escape is the cheapest guard against invention.</li>
+<li><strong>Output formats</strong> make results parseable and checkable.</li>
+<li><strong>Roles</strong> set viewpoint, and <strong>few-shot examples</strong> communicate format and judgment, at the cost of context.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Pick and Specify</p>
+<p><img alt="Volt celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now choose among a chat interface, a hosted API, and a local open-weight model for a stated scenario, estimate what a batch will cost, and write a prompt with a clear task, explicit constraints, and a defined output format.</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
