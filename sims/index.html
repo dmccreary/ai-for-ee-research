@@ -18,7 +18,7 @@
         <link rel="prev" href="../learning-graph/mascot-test/">
       
       
-        <link rel="next" href="generative-ai-to-agent/">
+        <link rel="next" href="graph-viewer/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -672,6 +672,10 @@
           
         
       
+        
+          
+        
+      
     
     
     
@@ -710,6 +714,35 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graph-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph Viewer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--built" title="Built — implementation complete, awaiting review">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -2181,13 +2214,173 @@
 
 
 <h1 id="list-of-microsims-for-ai-for-ee-research">List of MicroSims for AI for EE Research<a class="headerlink" href="#list-of-microsims-for-ai-for-ee-research" title="Permanent link">&para;</a></h1>
-<p>Interactive MicroSimulations that let you practice the ideas in each chapter: sort tasks, order subtasks, and judge where a human review belongs.</p>
+<p>Interactive MicroSimulations that let you practice the ideas in each chapter: sort, predict, calculate, and judge. Each card shows a screenshot of the MicroSim. The list is alphabetical.</p>
 <div class="grid cards">
 <ul>
+<li>
+<p><strong><a href="adoption-plan-prioritizer/">Adoption Plan Prioritizer</a></strong></p>
+<p><img alt="Adoption Plan Prioritizer" src="adoption-plan-prioritizer/adoption-plan-prioritizer.png" /></p>
+<p>Arrange six steps for adopting AI research practices in a group into an order that respects their dependencies, then see the first violated dependency with its reason, both valid orders, and the dependency graph.</p>
+</li>
+<li>
+<p><strong><a href="agent-autonomy-level-assigner/">Agent Autonomy Level Assigner</a></strong></p>
+<p><img alt="Agent Autonomy Level Assigner" src="agent-autonomy-level-assigner/agent-autonomy-level-assigner.png" /></p>
+<p>Recommend an autonomy level from 0 (Suggest only) to 3 (Act and report) for eight illustrative research tasks from their reversibility, reach, and verifiability, with the rule that applied shown after each answer.</p>
+</li>
+<li>
+<p><strong><a href="agent-failure-log-triage/">Agent Failure Log Triage</a></strong></p>
+<p><img alt="Agent Failure Log Triage" src="agent-failure-log-triage/agent-failure-log-triage.png" /></p>
+<p>Read six illustrative excerpts of an agent log and attribute each to one of six failure modes, with the reason and the mechanical defense for that mode shown after each answer.</p>
+</li>
+<li>
+<p><strong><a href="agent-loop-stepper/">Agent Loop Stepper</a></strong></p>
+<p><img alt="Agent Loop Stepper" src="agent-loop-stepper/agent-loop-stepper.png" /></p>
+<p>Predict the next tool call at each of five steps of an agent loop that diagnoses a low ENOB result, then watch the model emit the call, the harness run it, and the result return to the context.</p>
+</li>
+<li>
+<p><strong><a href="agent-permission-boundary-judge/">Agent Permission Boundary Judge</a></strong></p>
+<p><img alt="Agent Permission Boundary Judge" src="agent-permission-boundary-judge/agent-permission-boundary-judge.png" /></p>
+<p>Judge whether an illustrative five-rule permission policy allows, asks about, or denies each of ten proposed agent actions, where the first matching rule decides.</p>
+</li>
+<li>
+<p><strong><a href="ai-use-disclosure-decision-helper/">AI Use Disclosure Decision Helper</a></strong></p>
+<p><img alt="AI Use Disclosure Decision Helper" src="ai-use-disclosure-decision-helper/ai-use-disclosure-decision-helper.png" /></p>
+<p>Apply a five-rule illustrative lab disclosure policy to eight scenarios of AI use, choose the action the policy requires for each, and see a draft disclosure statement built from the scenarios that required disclosure.</p>
+</li>
+<li>
+<p><strong><a href="citation-chaining-explorer/">Citation Chaining Explorer</a></strong></p>
+<p><img alt="Citation Chaining Explorer" src="citation-chaining-explorer/citation-chaining-explorer.png" /></p>
+<p>Interactive vis-network MicroSim in which learners solve five citation-chaining questions on a graph of eight illustrative papers by following references backward and citations forward.</p>
+</li>
+<li>
+<p><strong><a href="citation-verification-judge/">Citation Verification Judge</a></strong></p>
+<p><img alt="Citation Verification Judge" src="citation-verification-judge/citation-verification-judge.png" /></p>
+<p>Judge eight model-generated citations as Verified, Wrong details, Unsupported claim, or Fabricated, using the results of four simulated database lookups.</p>
+</li>
+<li>
+<p><strong><a href="context-selection-budget/">Context Selection Budget</a></strong></p>
+<p><img alt="Context Selection Budget" src="context-selection-budget/context-selection-budget.png" /></p>
+<p>Give each of nine candidate context items the verdict include, compress, or omit so that the total fits a 6,500-token context budget, then compare your choices with the answer key.</p>
+</li>
+<li>
+<p><strong><a href="context-window-budget-calculator/">Context Window Budget Calculator</a></strong></p>
+<p><img alt="Context Window Budget Calculator" src="context-window-budget-calculator/context-window-budget-calculator.png" /></p>
+<p>Calculate the tokens left for a completion from a context window size and the sizes of the system prompt, history, attachment, and latest message, then decide whether a requested completion fits.</p>
+</li>
+<li>
+<p><strong><a href="data-sensitivity-sorter/">Data Sensitivity Sorter for AI Tools</a></strong></p>
+<p><img alt="Data Sensitivity Sorter for AI Tools" src="data-sensitivity-sorter/data-sensitivity-sorter.png" /></p>
+<p>Judge which class of AI tool each of eight items of research data may be given to under a four-class illustrative data classification, with immediate feedback and the items grouped by class at the end.</p>
+</li>
+<li>
+<p><strong><a href="embedding-vector-search-explorer/">Embedding Vector Search Explorer</a></strong></p>
+<p><img alt="Embedding Vector Search Explorer" src="embedding-vector-search-explorer/embedding-vector-search-explorer.png" /></p>
+<p>Predict which two passages vector search returns for three queries in an illustrative two-dimensional embedding space, check the second result against a 0.90 cosine threshold, then drag the query and watch the ranking change.</p>
+</li>
+<li>
+<p><strong><a href="failure-case-root-cause-analyzer/">Failure Case Root Cause Analyzer</a></strong></p>
+<p><img alt="Failure Case Root Cause Analyzer" src="failure-case-root-cause-analyzer/failure-case-root-cause-analyzer.png" /></p>
+<p>Attribute six illustrative research failure cases to one of six root causes, then see the control from an earlier chapter that would have caught each one, with a score of n of 6 and a mastery threshold of 5.</p>
+</li>
+<li>
+<p><strong><a href="falsifiable-hypothesis-sorter/">Falsifiable Hypothesis Sorter</a></strong></p>
+<p><img alt="Falsifiable Hypothesis Sorter" src="falsifiable-hypothesis-sorter/falsifiable-hypothesis-sorter.png" /></p>
+<p>Classify eight illustrative EE research statements as "falsifiable" or "not falsifiable", with one attempt each, the reason after every answer, and a final score out of 8.</p>
+</li>
+<li>
+<p><strong><a href="figure-caption-critic/">Figure Caption Critic</a></strong></p>
+<p><img alt="Figure Caption Critic" src="figure-caption-critic/figure-caption-critic.png" /></p>
+<p>Critique six illustrative figure captions by naming the first failing property (Vague, Missing conditions, Undefined symbols, Overclaims) or judging that the caption has no defect.</p>
+</li>
 <li>
 <p><strong><a href="generative-ai-to-agent/">From Generative AI to Agent</a></strong></p>
 <p><img alt="From Generative AI to Agent" src="generative-ai-to-agent/generative-ai-to-agent.png" /></p>
 <p>Interactive vis-network MicroSim in which learners explain what each of the three links from generative AI to large language model, AI assistant, and AI agent adds, choosing one capability per link.</p>
+</li>
+<li>
+<p><strong><a href="graph-viewer/">Learning Graph Viewer</a></strong></p>
+<p><img alt="Learning Graph Viewer" src="graph-viewer/graph-viewer.png" /></p>
+<p>Explore the concept dependency graph for AI for EE Research with search, category filtering, and live node and edge statistics.</p>
+</li>
+<li>
+<p><strong><a href="markdown-syntax-matcher/">Markdown Syntax Matcher</a></strong></p>
+<p><img alt="Markdown Syntax Matcher" src="markdown-syntax-matcher/markdown-syntax-matcher.png" /></p>
+<p>Choose which of three Markdown sources produces each of eight rendered results, from headings and lists to tables, code, links, and bold text, and see the rendered preview of your choice next to the correct one.</p>
+</li>
+<li>
+<p><strong><a href="data-cleaning-decision-simulator/">Measurement Data Cleaning Decision Simulator</a></strong></p>
+<p><img alt="Measurement Data Cleaning Decision Simulator" src="data-cleaning-decision-simulator/data-cleaning-decision-simulator.png" /></p>
+<p>Judge eight anomalies in a synthetic batch of device offset measurements: keep, exclude with log, correct and log, or remeasure, using the documented cause as the criterion.</p>
+</li>
+<li>
+<p><strong><a href="microsim-suitability-judge/">MicroSim Suitability Judge</a></strong></p>
+<p><img alt="MicroSim Suitability Judge" src="microsim-suitability-judge/microsim-suitability-judge.png" /></p>
+<p>Judge, for eight illustrative pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with immediate feedback on each judgment.</p>
+</li>
+<li>
+<p><strong><a href="model-choice-scenario-sorter/">Model Choice Scenario Sorter</a></strong></p>
+<p><img alt="Model Choice Scenario Sorter" src="model-choice-scenario-sorter/model-choice-scenario-sorter.png" /></p>
+<p>Recommend a chat interface, a hosted API, or a local open-weight model for eight illustrative research scenarios, name the deciding factor, and get feedback on each recommendation.</p>
+</li>
+<li>
+<p><strong><a href="numerical-sanity-check-judge/">Numerical Sanity Check Judge</a></strong></p>
+<p><img alt="Numerical Sanity Check Judge" src="numerical-sanity-check-judge/numerical-sanity-check-judge.png" /></p>
+<p>Judge eight illustrative reported results as Plausible or as failing a sanity check (exceeds a limit, disagrees with a hand calculation, violates scaling, or impossible value), with one attempt each and a mastery threshold of 7 of 8.</p>
+</li>
+<li>
+<p><strong><a href="orchestrator-review-load-calculator/">Orchestrator Review Load Calculator</a></strong></p>
+<p><img alt="Orchestrator Review Load Calculator" src="orchestrator-review-load-calculator/orchestrator-review-load-calculator.png" /></p>
+<p>Interactive p5.js MicroSim in which learners calculate the daily review load of an agent team from its size and per-output review times, then size the team or the review fraction to fit an attention budget.</p>
+</li>
+<li>
+<p><strong><a href="overnight-activity-audit/">Overnight Activity Audit</a></strong></p>
+<p><img alt="Overnight Activity Audit" src="overnight-activity-audit/overnight-activity-audit.png" /></p>
+<p>Examine ten lines of an illustrative overnight log from an always-on agent against its task and permission lists, flag each as in scope or out of scope, and finish with a morning report of the out-of-scope actions.</p>
+</li>
+<li>
+<p><strong><a href="paper-section-sorter/">Paper Section Sorter</a></strong></p>
+<p><img alt="Paper Section Sorter" src="paper-section-sorter/paper-section-sorter.png" /></p>
+<p>Classify ten illustrative sentences from one invented engineering paper into Abstract, Introduction, Related work, Method, Results, or Discussion by the reader question each answers.</p>
+</li>
+<li>
+<p><strong><a href="agent-comparison-criteria-matcher/">Personal Agent Comparison Criteria Matcher</a></strong></p>
+<p><img alt="Personal Agent Comparison Criteria Matcher" src="agent-comparison-criteria-matcher/agent-comparison-criteria-matcher.png" /></p>
+<p>Classify eight questions about a personal, always-on AI agent under the comparison criterion each one tests, with one attempt per question, a "Why" sentence after each answer, and a one-line test per criterion at the end.</p>
+</li>
+<li>
+<p><strong><a href="pkg-graph-query-explorer/">Personal Knowledge Graph Query Explorer</a></strong></p>
+<p><img alt="Personal Knowledge Graph Query Explorer" src="pkg-graph-query-explorer/pkg-graph-query-explorer.png" /></p>
+<p>Interactive vis-network MicroSim in which learners solve five questions about a twelve-edge personal knowledge graph by following typed, directed relationships and selecting the exact set of entities that answers each question.</p>
+</li>
+<li>
+<p><strong><a href="project-instruction-file-triage/">Project Instruction File Triage</a></strong></p>
+<p><img alt="Project Instruction File Triage" src="project-instruction-file-triage/project-instruction-file-triage.png" /></p>
+<p>Judge each of eleven lines of an illustrative draft AGENTS.md or CLAUDE.md file as a goal, a convention, a constraint, or a line that does not belong, with immediate feedback on each judgment.</p>
+</li>
+<li>
+<p><strong><a href="prompt-chain-builder/">Prompt Chain Builder</a></strong></p>
+<p><img alt="Prompt Chain Builder" src="prompt-chain-builder/prompt-chain-builder.png" /></p>
+<p>Arrange six prompt-chain steps for a verified Walden figure-of-merit table into an order that respects their dependencies, and choose a testable acceptance check for each step.</p>
+</li>
+<li>
+<p><strong><a href="prompt-component-sorter/">Prompt Component Sorter</a></strong></p>
+<p><img alt="Prompt Component Sorter" src="prompt-component-sorter/prompt-component-sorter.png" /></p>
+<p>Label each of the ten sentences of a working research prompt as a clear instruction, constraint, output format, role, or few-shot example, with feedback after each label and a tally of the components at the end.</p>
+</li>
+<li>
+<p><strong><a href="prompt-injection-spotter/">Prompt Injection Spotter</a></strong></p>
+<p><img alt="Prompt Injection Spotter" src="prompt-injection-spotter/prompt-injection-spotter.png" /></p>
+<p>Classify eight text snippets that an agent has been asked to read as an injected instruction aimed at the model or as ordinary content, with feedback on the capability each injection tries to borrow and the defense that limits it.</p>
+</li>
+<li>
+<p><strong><a href="python-traceback-reader/">Python Traceback Reader</a></strong></p>
+<p><img alt="Python Traceback Reader" src="python-traceback-reader/python-traceback-reader.png" /></p>
+<p>Examine five illustrative Python tracebacks and identify the cause of each from the exception type, the message, and the failing line, reading from the bottom.</p>
+</li>
+<li>
+<p><strong><a href="research-idea-ranking-matrix/">Research Idea Ranking Matrix</a></strong></p>
+<p><img alt="Research Idea Ranking Matrix" src="research-idea-ranking-matrix/research-idea-ranking-matrix.png" /></p>
+<p>Calculate weighted scores for four illustrative SAR ADC research ideas under two weighting profiles, find the idea that ranks first under each, then set your own weights and watch the ranking change.</p>
 </li>
 <li>
 <p><strong><a href="research-task-decomposition-builder/">Research Task Decomposition Builder</a></strong></p>
@@ -2210,164 +2403,49 @@
 <p>Judge whether each of eight agent steps in an analysis workflow needs your review before its output is used, and name the main reason - reversibility, outward effect, or reported result.</p>
 </li>
 <li>
-<p><strong><a href="context-window-budget-calculator/">Context Window Budget Calculator</a></strong></p>
-<p>Calculate the tokens left for a completion from a context window size and the sizes of the system prompt, history, attachment, and latest message, then decide whether a requested completion fits.</p>
-</li>
-<li>
-<p><strong><a href="temperature-next-token-explorer/">Temperature Next-Token Explorer</a></strong></p>
-<p>Predict whether the probability of the top-ranked and the lowest-ranked candidate token rises or falls when the sampling temperature changes, then reveal the new distribution and draw reproducible samples.</p>
-</li>
-<li>
-<p><strong><a href="citation-verification-judge/">Citation Verification Judge</a></strong></p>
-<p>Judge eight model-generated citations as Verified, Wrong details, Unsupported claim, or Fabricated, using the results of four simulated database lookups.</p>
-</li>
-<li>
-<p><strong><a href="model-choice-scenario-sorter/">Model Choice Scenario Sorter</a></strong></p>
-<p>Recommend a chat interface, a hosted API, or a local open-weight model for eight illustrative research scenarios, name the deciding factor, and get feedback on each recommendation.</p>
-</li>
-<li>
-<p><strong><a href="embedding-vector-search-explorer/">Embedding Vector Search Explorer</a></strong></p>
-<p>Predict which two passages vector search returns for three queries in an illustrative two-dimensional embedding space, check the second result against a 0.90 cosine threshold, then drag the query and watch the ranking change.</p>
-</li>
-<li>
-<p><strong><a href="prompt-component-sorter/">Prompt Component Sorter</a></strong></p>
-<p>Label each of the ten sentences of a working research prompt as a clear instruction, constraint, output format, role, or few-shot example, with feedback after each label and a tally of the components at the end.</p>
-</li>
-<li>
-<p><strong><a href="context-selection-budget/">Context Selection Budget</a></strong></p>
-<p>Give each of nine candidate context items the verdict include, compress, or omit so that the total fits a 6,500-token context budget, then compare your choices with the answer key.</p>
-</li>
-<li>
-<p><strong><a href="prompt-injection-spotter/">Prompt Injection Spotter</a></strong></p>
-<p>Classify eight text snippets that an agent has been asked to read as an injected instruction aimed at the model or as ordinary content, with feedback on the capability each injection tries to borrow and the defense that limits it.</p>
-</li>
-<li>
-<p><strong><a href="prompt-chain-builder/">Prompt Chain Builder</a></strong></p>
-<p>Arrange six prompt-chain steps for a verified Walden figure-of-merit table into an order that respects their dependencies, and choose a testable acceptance check for each step.</p>
-</li>
-<li>
-<p><strong><a href="markdown-syntax-matcher/">Markdown Syntax Matcher</a></strong></p>
-<p>Choose which of three Markdown sources produces each of eight rendered results, from headings and lists to tables, code, links, and bold text, and see the rendered preview of your choice next to the correct one.</p>
-</li>
-<li>
-<p><strong><a href="project-instruction-file-triage/">Project Instruction File Triage</a></strong></p>
-<p>Judge each of eleven lines of an illustrative draft AGENTS.md or CLAUDE.md file as a goal, a convention, a constraint, or a line that does not belong, with immediate feedback on each judgment.</p>
-</li>
-<li>
-<p><strong><a href="pkg-graph-query-explorer/">Personal Knowledge Graph Query Explorer</a></strong></p>
-<p>Interactive vis-network MicroSim in which learners solve five questions about a twelve-edge personal knowledge graph by following typed, directed relationships and selecting the exact set of entities that answers each question.</p>
+<p><strong><a href="search-precision-recall-explorer/">Search Query Precision and Recall Explorer</a></strong></p>
+<p><img alt="Search Query Precision and Recall Explorer" src="search-precision-recall-explorer/search-precision-recall-explorer.png" /></p>
+<p>Calculate the precision and recall of three search queries on a synthetic corpus of twenty papers with eight relevant papers, then choose the query that suits a literature survey that cannot miss a relevant paper.</p>
 </li>
 <li>
 <p><strong><a href="skill-anatomy-labeler/">Skill Anatomy Labeler</a></strong></p>
+<p><img alt="Skill Anatomy Labeler" src="skill-anatomy-labeler/skill-anatomy-labeler.png" /></p>
 <p>Interactive p5.js MicroSim in which learners identify eight lines and files of the enob-report agent skill as the skill name, the skill description, skill instructions, or a supporting file.</p>
 </li>
 <li>
 <p><strong><a href="skill-description-trigger-tester/">Skill Description Trigger Tester</a></strong></p>
+<p><img alt="Skill Description Trigger Tester" src="skill-description-trigger-tester/skill-description-trigger-tester.png" /></p>
 <p>Decide, for eight user requests, whether an illustrative SPICE netlist-checking skill description should trigger, and learn to separate the task a request asks for from the keywords it shares.</p>
 </li>
 <li>
 <p><strong><a href="skill-failure-mode-classifier/">Skill Failure Mode Classifier</a></strong></p>
+<p><img alt="Skill Failure Mode Classifier" src="skill-failure-mode-classifier/skill-failure-mode-classifier.png" /></p>
 <p>Attribute eight illustrative observations of a misbehaving agent skill to one of six failure modes, then see the recommended fix for each mode you missed.</p>
 </li>
 <li>
-<p><strong><a href="agent-loop-stepper/">Agent Loop Stepper</a></strong></p>
-<p>Predict the next tool call at each of five steps of an agent loop that diagnoses a low ENOB result, then watch the model emit the call, the harness run it, and the result return to the context.</p>
-</li>
-<li>
-<p><strong><a href="agent-permission-boundary-judge/">Agent Permission Boundary Judge</a></strong></p>
-<p>Judge whether an illustrative five-rule permission policy allows, asks about, or denies each of ten proposed agent actions, where the first matching rule decides.</p>
-</li>
-<li>
-<p><strong><a href="agent-autonomy-level-assigner/">Agent Autonomy Level Assigner</a></strong></p>
-<p>Recommend an autonomy level from 0 (Suggest only) to 3 (Act and report) for eight illustrative research tasks from their reversibility, reach, and verifiability, with the rule that applied shown after each answer.</p>
-</li>
-<li>
-<p><strong><a href="agent-failure-log-triage/">Agent Failure Log Triage</a></strong></p>
-<p>Read six illustrative excerpts of an agent log and attribute each to one of six failure modes, with the reason and the mechanical defense for that mode shown after each answer.</p>
-</li>
-<li>
-<p><strong><a href="task-dependency-critical-path/">Task Dependency Critical Path Scheduler</a></strong></p>
-<p>Interactive vis-network MicroSim in which learners calculate earliest finish times, the critical path, slack, and the project duration for a nine-task dependency graph, then see how shortening one task moves the critical path.</p>
-</li>
-<li>
-<p><strong><a href="orchestrator-review-load-calculator/">Orchestrator Review Load Calculator</a></strong></p>
-<p>Interactive p5.js MicroSim in which learners calculate the daily review load of an agent team from its size and per-output review times, then size the team or the review fraction to fit an attention budget.</p>
-</li>
-<li>
-<p><strong><a href="search-precision-recall-explorer/">Search Query Precision and Recall Explorer</a></strong></p>
-<p>Calculate the precision and recall of three search queries on a synthetic corpus of twenty papers with eight relevant papers, then choose the query that suits a literature survey that cannot miss a relevant paper.</p>
-</li>
-<li>
-<p><strong><a href="citation-chaining-explorer/">Citation Chaining Explorer</a></strong></p>
-<p>Interactive vis-network MicroSim in which learners solve five citation-chaining questions on a graph of eight illustrative papers by following references backward and citations forward.</p>
-</li>
-<li>
-<p><strong><a href="data-cleaning-decision-simulator/">Measurement Data Cleaning Decision Simulator</a></strong></p>
-<p>Judge eight anomalies in a synthetic batch of device offset measurements: keep, exclude with log, correct and log, or remeasure, using the documented cause as the criterion.</p>
-</li>
-<li>
-<p><strong><a href="python-traceback-reader/">Python Traceback Reader</a></strong></p>
-<p>Examine five illustrative Python tracebacks and identify the cause of each from the exception type, the message, and the failing line, reading from the bottom.</p>
-</li>
-<li>
-<p><strong><a href="numerical-sanity-check-judge/">Numerical Sanity Check Judge</a></strong></p>
-<p>Judge eight illustrative reported results as Plausible or as failing a sanity check (exceeds a limit, disagrees with a hand calculation, violates scaling, or impossible value), with one attempt each and a mastery threshold of 7 of 8.</p>
-</li>
-<li>
-<p><strong><a href="unit-test-selector-seeded-bugs/">Unit Test Selector for Seeded Bugs</a></strong></p>
-<p>Select at most four of eight candidate unit tests for a buggy sndr_db() function and run them to see which of three seeded bugs your selection exposes and which stay hidden.</p>
-</li>
-<li>
-<p><strong><a href="falsifiable-hypothesis-sorter/">Falsifiable Hypothesis Sorter</a></strong></p>
-<p>Classify eight illustrative EE research statements as "falsifiable" or "not falsifiable", with one attempt each, the reason after every answer, and a final score out of 8.</p>
-</li>
-<li>
-<p><strong><a href="research-idea-ranking-matrix/">Research Idea Ranking Matrix</a></strong></p>
-<p>Calculate weighted scores for four illustrative SAR ADC research ideas under two weighting profiles, find the idea that ranks first under each, then set your own weights and watch the ranking change.</p>
-</li>
-<li>
-<p><strong><a href="paper-section-sorter/">Paper Section Sorter</a></strong></p>
-<p>Classify ten illustrative sentences from one invented engineering paper into Abstract, Introduction, Related work, Method, Results, or Discussion by the reader question each answers.</p>
-</li>
-<li>
-<p><strong><a href="figure-caption-critic/">Figure Caption Critic</a></strong></p>
-<p>Critique six illustrative figure captions by naming the first failing property (Vague, Missing conditions, Undefined symbols, Overclaims) or judging that the caption has no defect.</p>
-</li>
-<li>
-<p><strong><a href="microsim-suitability-judge/">MicroSim Suitability Judge</a></strong></p>
-<p>Judge, for eight illustrative pieces of research content, whether an interactive MicroSim or a static figure or text is the better medium, with immediate feedback on each judgment.</p>
-</li>
-<li>
-<p><strong><a href="verification-method-matcher/">Verification Method Matcher</a></strong></p>
-<p>Recommend which of five verification methods (known-answer test, independent method, primary source check, cross-model check, replication) best fits each of eight illustrative AI-assisted claims, with feedback on every choice.</p>
-</li>
-<li>
 <p><strong><a href="sycophancy-spotter/">Sycophancy Spotter</a></strong></p>
+<p><img alt="Sycophancy Spotter" src="sycophancy-spotter/sycophancy-spotter.png" /></p>
 <p>Classify the model reply in each of six illustrative researcher-model exchanges as sycophantic or calibrated, and get the reason after every choice.</p>
 </li>
 <li>
-<p><strong><a href="ai-use-disclosure-decision-helper/">AI Use Disclosure Decision Helper</a></strong></p>
-<p>Apply a five-rule illustrative lab disclosure policy to eight scenarios of AI use, choose the action the policy requires for each, and see a draft disclosure statement built from the scenarios that required disclosure.</p>
+<p><strong><a href="task-dependency-critical-path/">Task Dependency Critical Path Scheduler</a></strong></p>
+<p><img alt="Task Dependency Critical Path Scheduler" src="task-dependency-critical-path/task-dependency-critical-path.png" /></p>
+<p>Interactive vis-network MicroSim in which learners calculate earliest finish times, the critical path, slack, and the project duration for a nine-task dependency graph, then see how shortening one task moves the critical path.</p>
 </li>
 <li>
-<p><strong><a href="data-sensitivity-sorter/">Data Sensitivity Sorter for AI Tools</a></strong></p>
-<p>Judge which class of AI tool each of eight items of research data may be given to under a four-class illustrative data classification, with immediate feedback and the items grouped by class at the end.</p>
+<p><strong><a href="temperature-next-token-explorer/">Temperature Next-Token Explorer</a></strong></p>
+<p><img alt="Temperature Next-Token Explorer" src="temperature-next-token-explorer/temperature-next-token-explorer.png" /></p>
+<p>Predict whether the probability of the top-ranked and the lowest-ranked candidate token rises or falls when the sampling temperature changes, then reveal the new distribution and draw reproducible samples.</p>
 </li>
 <li>
-<p><strong><a href="agent-comparison-criteria-matcher/">Personal Agent Comparison Criteria Matcher</a></strong></p>
-<p>Classify eight questions about a personal, always-on AI agent under the comparison criterion each one tests, with one attempt per question, a "Why" sentence after each answer, and a one-line test per criterion at the end.</p>
+<p><strong><a href="unit-test-selector-seeded-bugs/">Unit Test Selector for Seeded Bugs</a></strong></p>
+<p><img alt="Unit Test Selector for Seeded Bugs" src="unit-test-selector-seeded-bugs/unit-test-selector-seeded-bugs.png" /></p>
+<p>Select at most four of eight candidate unit tests for a buggy sndr_db() function and run them to see which of three seeded bugs your selection exposes and which stay hidden.</p>
 </li>
 <li>
-<p><strong><a href="overnight-activity-audit/">Overnight Activity Audit</a></strong></p>
-<p>Examine ten lines of an illustrative overnight log from an always-on agent against its task and permission lists, flag each as in scope or out of scope, and finish with a morning report of the out-of-scope actions.</p>
-</li>
-<li>
-<p><strong><a href="failure-case-root-cause-analyzer/">Failure Case Root Cause Analyzer</a></strong></p>
-<p>Attribute six illustrative research failure cases to one of six root causes, then see the control from an earlier chapter that would have caught each one, with a score of n of 6 and a mastery threshold of 5.</p>
-</li>
-<li>
-<p><strong><a href="adoption-plan-prioritizer/">Adoption Plan Prioritizer</a></strong></p>
-<p>Arrange six steps for adopting AI research practices in a group into an order that respects their dependencies, then see the first violated dependency with its reason, both valid orders, and the dependency graph.</p>
+<p><strong><a href="verification-method-matcher/">Verification Method Matcher</a></strong></p>
+<p><img alt="Verification Method Matcher" src="verification-method-matcher/verification-method-matcher.png" /></p>
+<p>Recommend which of five verification methods (known-answer test, independent method, primary source check, cross-model check, replication) best fits each of eight illustrative AI-assisted claims, with feedback on every choice.</p>
 </li>
 </ul>
 </div>
@@ -2430,13 +2508,13 @@
         
         
           
-          <a href="generative-ai-to-agent/" class="md-footer__link md-footer__link--next" aria-label="Next: From Generative AI to Agent">
+          <a href="graph-viewer/" class="md-footer__link md-footer__link--next" aria-label="Next: Learning Graph Viewer">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                From Generative AI to Agent
+                Learning Graph Viewer
               </div>
             </div>
             <div class="md-footer__button md-icon">
