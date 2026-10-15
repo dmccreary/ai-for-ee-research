@@ -1,0 +1,104 @@
+{
+  "title": "Overnight Activity Audit",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Audit activity in which learners examine ten lines of an illustrative overnight log from an always-on agent against a stated task with Allowed and Not allowed lists, and flag each action as in scope or out of scope. Each submitted answer gets one attempt and immediate feedback with the correct classification and a one-sentence reason; out-of-scope lines also name the control (permission rule, sandbox, or approval gate) that would have prevented them. The run ends with a score out of 10, a mastery statement at 9 of 10, and a morning report of the out-of-scope actions.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/overnight-activity-audit/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Auditing the overnight activity of an always-on AI agent",
+    "learningObjectives": [
+      "Examine ten lines of an agent's overnight activity log against a stated task and permission list, and flag each as in scope or out of scope, with at least 9 of 10 correct",
+      "Name the control (permission rule, sandbox, or approval gate) that would have prevented an out-of-scope action"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "examine",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Overnight activity audit and agent blast radius",
+      "Least privilege, permissions, sandboxing, and human approval gates"
+    ],
+    "concepts": [
+      "Overnight Activity Audit",
+      "Always-On Agent",
+      "Agent Blast Radius",
+      "Least Privilege",
+      "Permissions",
+      "Sandboxing",
+      "Human Approval Gate"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 700,
+      "drawHeight": 620,
+      "controlHeight": 80
+    },
+    "iframeHeight": 702,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; focus moves to Next after Submit; chosen, correct and incorrect states use a symbol (filled circle, check mark, X) and border style as well as a blue/orange color-blind-safe palette; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "In scope",
+      "purpose": "Selects in scope for the current log line; the choice can be changed until Submit. Disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Out of scope",
+      "purpose": "Selects out of scope for the current log line; the choice can be changed until Submit. Disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the selected classification as the single attempt for the current log line. Enabled only when a classification is selected and the line has not been submitted."
+    },
+    {
+      "type": "button",
+      "label": "Next Line / See Morning Report",
+      "purpose": "Enabled after submission. Advances to the next log line in the fixed order, and after line 10 shows the score and the morning report."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Binary classification of log lines against an explicit task boundary, with one attempt per line, explanatory feedback, and a closing morning report",
+    "keyQuestions": [
+      "Did the agent stay inside the task?",
+      "Is this action covered by the Allowed list?",
+      "Which control would have prevented this action?"
+    ],
+    "commonMisconceptions": [
+      "An action that looks helpful is in scope",
+      "Reading a file is harmless",
+      "An action that is allowed by the platform is allowed by the task"
+    ],
+    "assessmentOpportunities": [
+      "A first-attempt score of at least 9 of 10 matching the answer key is evidence of mastery",
+      "Reading the task statement is exploration and is not evidence",
+      "Learner writes the permission rule, sandbox setting, or approval gate for each action in the morning report"
+    ]
+  },
+  "chapter": "19-always-on-personal-agents"
+}

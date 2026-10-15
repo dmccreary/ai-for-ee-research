@@ -1103,6 +1103,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1628,7 +1788,7 @@ A common trap is giving a multi-agent product the sign-ins to everything on the 
 <p>Type: microsim
 <strong>sim-id:</strong> agent-comparison-criteria-matcher<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
 <strong>Bloom Level:</strong> Understand<br/>
 <strong>Bloom Verb:</strong> classify<br/>
@@ -1712,6 +1872,9 @@ A common trap is giving a multi-agent product the sign-ins to everything on the 
 <p><strong>Starting State:</strong> Question 1 is shown with the eight criteria and none chosen. The question on screen is "Which criterion does this question test?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states criteria for where an agent runs, its blast radius, its approval model, usage metering, data exposure, memory, verification of vendor claims, and overnight activity audit.</p>
 </details>
+<iframe src="../../sims/agent-comparison-criteria-matcher/main.html" height="562px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Personal Agent Comparison Criteria Matcher. <a href="../../sims/agent-comparison-criteria-matcher/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="memory-the-knowledge-graph-and-privacy">Memory, the Knowledge Graph, and Privacy<a class="headerlink" href="#memory-the-knowledge-graph-and-privacy" title="Permanent link">&para;</a></h2>
 <p>An always-on agent is only as useful as what it remembers. <strong>Knowledge graph memory</strong> is the use of a personal knowledge graph, as built in Chapter 6, as the persistent memory of an agent: its entities and typed relationships supply the facts, projects, papers, experiments, and people, and the agent queries it instead of relying on whatever a vendor's memory feature retained. The arrangement has three advantages for a researcher. The memory is <em>yours</em>: it lives in files you control, under version control, and it survives a change of agent or vendor. It is <em>inspectable</em>: you can read and correct it, which cannot be said of an opaque store. And it is <em>structured</em>: the agent can answer multi-hop questions, such as which results depend on a dataset that has been withdrawn, by following relationships, as in the graph RAG of Chapter 6.</p>
 <p><strong>Personal knowledge privacy</strong> is the control of what an agent may read from that graph, and what it may learn. The personal knowledge graph research that this book draws on makes the point in its own terms: a graph of personal and work knowledge raises ownership questions, and sharing needs role-based access, with permissions granted to roles and named subgraphs and not to individuals. Applied here, the graph is partitioned into subgraphs by the data classes of Chapter 18, and each agent is given read access to the subgraphs its job needs. A literature agent reads the paper and concept subgraph. It does not read the subgraph of unpublished measurements. A writing agent reads the claims and results it is drafting from. None needs the contracts, credentials, or participant data.</p>
@@ -1734,7 +1897,7 @@ A common trap is giving a multi-agent product the sign-ins to everything on the 
 <p>Type: microsim
 <strong>sim-id:</strong> overnight-activity-audit<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> examine<br/>
 <strong>Learning Objective:</strong> The learner will examine ten lines of an agent's overnight activity log against a stated task and permission list, and flag each as in scope or out of scope, with at least 9 of 10 correct.</p>
@@ -1840,6 +2003,9 @@ A common trap is giving a multi-agent product the sign-ins to everything on the 
 <p><strong>Starting State:</strong> The task statement and log line 1 are shown. The question on screen is "Did the agent stay inside the task?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that an audit compares each action with the task given, asks whether anything left your control, and that an agent whose activity cannot be reviewed should not be left alone with anything that matters.</p>
 </details>
+<iframe src="../../sims/overnight-activity-audit/main.html" height="702px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Overnight Activity Audit. <a href="../../sims/overnight-activity-audit/main.html">Open it fullscreen</a>.</em></p>
 <div class="admonition mascot-tip">
 <p class="admonition-title">Test With a Throwaway Account</p>
 <p><img alt="Volt offering a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />

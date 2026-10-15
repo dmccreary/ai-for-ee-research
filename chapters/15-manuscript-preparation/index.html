@@ -1094,6 +1094,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1586,7 +1746,7 @@ Tell the agent to preserve every number, unit, and claim, and to change only the
 <p>Type: microsim
 <strong>sim-id:</strong> paper-section-sorter<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Understand<br/>
 <strong>Bloom Verb:</strong> classify<br/>
 <strong>Learning Objective:</strong> The learner will classify each of ten sentences from an engineering paper into the section where it belongs, with at least 8 of 10 classified correctly.</p>
@@ -1681,6 +1841,9 @@ Tell the agent to preserve every number, unit, and claim, and to change only the
 <p><strong>Starting State:</strong> Sentence 1 is shown with six sections and none chosen. The question on screen is "Which reader question does this sentence answer?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter lists the sections and the reader question each answers, states that an abstract compresses context, gap, contribution, and result, and that the introduction ends with a roadmap.</p>
 </details>
+<iframe src="../../sims/paper-section-sorter/main.html" height="742px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Paper Section Sorter. <a href="../../sims/paper-section-sorter/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="figures-latex-and-references">Figures, LaTeX, and References<a class="headerlink" href="#figures-latex-and-references" title="Permanent link">&para;</a></h2>
 <p><strong>LaTeX</strong> is the typesetting system that most engineering venues use, and it is plain text. That makes it a good fit for the version-controlled project of Chapter 5 and for agents, which write LaTeX fluently. The cautions are practical. An agent may use packages your venue's template does not allow, produce markup that compiles with warnings, or silently alter a macro. Keep the venue's class file and template unchanged, compile after every substantial edit, and read the log for warnings, since a wrong cross-reference shows up there as <code>??</code> in the output.</p>
 <p><strong>Figure preparation</strong> is making the figures that carry the results, and the standards are those of Chapter 12: labeled axes with units, a legible size at the column width, visible spread, and a consistent style across figures. Generate every figure from a script that reads the processed data, so that the figure can be regenerated when the data change. A figure drawn by hand in an editor cannot be reproduced and tends to go stale.</p>
@@ -1691,7 +1854,7 @@ Tell the agent to preserve every number, unit, and claim, and to change only the
 <p>Type: microsim
 <strong>sim-id:</strong> figure-caption-critic<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> critique<br/>
 <strong>Learning Objective:</strong> The learner will critique each of six figure captions by naming its main defect, or that it has none, with at least 5 of 6 judged correctly.</p>
@@ -1731,7 +1894,7 @@ Tell the agent to preserve every number, unit, and claim, and to change only the
 </tr>
 <tr>
 <td>4</td>
-<td>Figure 6. SNDR versus input frequency, showing that our design is the best known SAR ADC.</td>
+<td>Figure 6. SNDR versus input frequency at 1 MS/s, 1.0 V, and 25 °C, showing that our design is the best known SAR ADC.</td>
 <td>Overclaims</td>
 <td>A single figure of SNDR versus frequency cannot establish that the design is the best known.</td>
 </tr>
@@ -1762,6 +1925,9 @@ Tell the agent to preserve every number, unit, and claim, and to change only the
 <p><strong>Starting State:</strong> Caption 1 is shown with five judgments. The question on screen is "Could a reader understand this figure from the caption alone?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that a caption says what is plotted, the conditions, how to read the markers, and the observation to take, and that figure and caption together should be understandable without the body.</p>
 </details>
+<iframe src="../../sims/figure-caption-critic/main.html" height="862px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Figure Caption Critic. <a href="../../sims/figure-caption-critic/main.html">Open it fullscreen</a>.</em></p>
 <p><strong>Reference formatting</strong> is producing the reference list in the style a venue requires. With BibTeX and a venue's style file the formatting is automatic, so the job is to keep the BibTeX entries correct and complete: verified as in Chapter 11, with the venue name, year, volume, pages, and DOI present. Never let an agent retype a reference by hand into the text, since that is where fabricated and corrupted entries enter.</p>
 <p><strong>Venue requirements</strong> are the rules a particular journal or conference sets: the template, the page limit, whether review is anonymous, the reference style, the required statements such as data availability, ethics, and use of AI tools, and the file formats for submission. Read them before drafting, not after. A common and avoidable waste is a paper written to one length and then cut to another, and an agent can check a manuscript against a pasted copy of the requirements.</p>
 <h2 id="editing-consistency-and-co-authors">Editing, Consistency, and Co-Authors<a class="headerlink" href="#editing-consistency-and-co-authors" title="Permanent link">&para;</a></h2>

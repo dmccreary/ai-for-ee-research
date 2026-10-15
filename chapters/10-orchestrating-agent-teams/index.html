@@ -1103,6 +1103,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1632,7 +1792,7 @@ Notice that nothing in the team's size is limited by compute or by the number of
 <p>Type: graph-model
 <strong>sim-id:</strong> task-dependency-critical-path<br/>
 <strong>Library:</strong> vis-network<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/statistics-course/tree/main/docs/sims/view-task-graph<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> calculate<br/>
@@ -1699,6 +1859,9 @@ Notice that nothing in the team's size is limited by compute or by the number of
 <p><strong>Starting State:</strong> The graph is shown with durations on the nodes and no times computed. The question on screen is "When can T5 finish?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter's task table lists nine tasks totalling 21 hours, a critical path of 18 hours through T1, T2, T3, T5, T6, T8, and T9, and a project duration of 17 hours if T3 is reduced to 1 hour.</p>
 </details>
+<iframe src="../../sims/task-dependency-critical-path/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Task Dependency Critical Path Scheduler. <a href="../../sims/task-dependency-critical-path/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="handoffs-shared-workspaces-and-conflicts">Handoffs, Shared Workspaces, and Conflicts<a class="headerlink" href="#handoffs-shared-workspaces-and-conflicts" title="Permanent link">&para;</a></h2>
 <p>A <strong>handoff protocol</strong> is the agreed form in which work passes from one agent to the next. Chapter 9 listed what a handoff must contain: the goal, the inputs, the constraints, the acceptance criteria, the work done, and the open questions. The protocol makes this uniform: one file format, one location, and a small fixed set of status values. A minimal protocol uses five statuses: <code>queued</code>, <code>running</code>, <code>needs-review</code>, <code>accepted</code>, and <code>rejected</code>. An agent never marks its own work <code>accepted</code>. That status belongs to a reviewer agent, a script, or you.</p>
 <p>A <strong>shared workspace</strong> is the common area where the team's files live. Because several agents may act at once, structure prevents collisions. Give each agent its own output directory, or its own Git branch, so that two agents never write the same file. Keep inputs read-only. Make merging an explicit step that goes through review, instead of letting agents write into the main line directly. The Git practices of Chapter 5 provide exactly this.</p>
@@ -1722,7 +1885,7 @@ L = n_p\, k_p\, r_p + n_e\, k_e\, r_e + c.
 <p>Type: microsim
 <strong>sim-id:</strong> orchestrator-review-load-calculator<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> calculate<br/>
 <strong>Learning Objective:</strong> The learner will calculate the daily review load of an agent team from its size and per-output review times, and adjust the team or the review fraction to fit a stated attention budget, in three challenges.</p>
@@ -1861,6 +2024,9 @@ L = n_p\, k_p\, r_p + n_e\, k_e\, r_e + c.
 <p><strong>Starting State:</strong> The default team and attention of 4 hours are shown with the bar, and challenge 1 is posed. The question on screen is "How many hours of review does this team need each day?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states 20 planning agents and 10 execution agents, 6 and 15 minutes of review, 30 minutes of conflict resolution, a load of 300 minutes (5 hours) against 4 hours of attention, and a load of 240 minutes when half of the planning outputs are reviewed.</p>
 </details>
+<iframe src="../../sims/orchestrator-review-load-calculator/main.html" height="752px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Orchestrator Review Load Calculator. <a href="../../sims/orchestrator-review-load-calculator/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="specifying-prioritizing-and-reporting">Specifying, Prioritizing, and Reporting<a class="headerlink" href="#specifying-prioritizing-and-reporting" title="Permanent link">&para;</a></h2>
 <p>An <strong>agent specification</strong> is the written definition of one agent: its role, purpose, inputs, outputs, tools and permissions, autonomy level, stopping conditions, and the handoff format. It is the file that makes an agent reproducible, and it is where the roles of Chapter 9 become concrete. A compact specification for a planning agent, with illustrative content:</p>
 <div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Agent: literature-planner</span>

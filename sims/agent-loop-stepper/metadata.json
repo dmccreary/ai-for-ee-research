@@ -1,0 +1,102 @@
+{
+  "title": "Agent Loop Stepper",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Prediction activity in which learners step through a five-step agent loop that diagnoses why an ADC capture shows an ENOB of 6.1 bits instead of about 9. At each step the learner predicts the agent's next action from three candidates before it is revealed; the sim then shows the model emitting the tool call, the harness running it, and the result being added to the context. The run ends with a score out of 5, a mastery statement at 4 of 5, and the full loop as a list of calls and results.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/agent-loop-stepper/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "The agent loop: tool calls, the harness, and results returned to the context",
+    "learningObjectives": [
+      "Infer the agent's next tool call at each of five steps of a loop that diagnoses a low ENOB result, given the task and the results observed so far, with at least 4 of 5 correct",
+      "Explain that the model emits tool calls, the harness executes them, and each result is added to the context before the next decision"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomVerb": "infer",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Tool use, tool definition, tool call, and the agent loop",
+      "The roles of the model and the harness"
+    ],
+    "concepts": [
+      "Tool Use",
+      "Tool Definition",
+      "Tool Call",
+      "Agent Loop",
+      "Agent Harness",
+      "Context Window"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 845,
+      "drawHeight": 765,
+      "controlHeight": 80
+    },
+    "iframeHeight": 847,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and carry aria-labels; correct and incorrect feedback and the active loop stage use words and symbols as well as a color-blind-safe (Okabe-Ito) palette; body text is 15 px (14 px below 600 px width)."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Choose A",
+      "purpose": "Commits candidate A as the learner's prediction of the agent's next action. Disabled after the prediction is committed."
+    },
+    {
+      "type": "button",
+      "label": "Choose B",
+      "purpose": "Commits candidate B as the learner's prediction. Disabled after the prediction is committed."
+    },
+    {
+      "type": "button",
+      "label": "Choose C",
+      "purpose": "Commits candidate C as the learner's prediction. Disabled after the prediction is committed."
+    },
+    {
+      "type": "button",
+      "label": "Next Step / See Full Loop",
+      "purpose": "Enabled after a prediction is committed. Advances to the next step; after step 5 shows the score and the full loop."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Predict-then-reveal stepping through a worked agent loop, with the explanation of each correct action and an animated model-harness-context sequence",
+    "keyQuestions": [
+      "What should the agent do first?",
+      "What should the agent do next, given the results observed so far?",
+      "Who runs the tool: the model or the harness?"
+    ],
+    "commonMisconceptions": [
+      "The model runs the tools itself",
+      "The agent decides everything in one planning step and then executes",
+      "An error result ends the loop"
+    ],
+    "assessmentOpportunities": [
+      "At least 4 of 5 predictions committed before the reveal match the correct action is evidence of mastery",
+      "Stepping forward after the reveal is exploration and is not evidence"
+    ]
+  },
+  "chapter": "08-agents-tool-use-subagents"
+}

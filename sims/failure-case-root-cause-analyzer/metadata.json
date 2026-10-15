@@ -1,0 +1,99 @@
+{
+  "title": "Failure Case Root Cause Analyzer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Attribution activity in which learners read six illustrative failure cases from AI-assisted research, in a fixed order, and commit one of six root causes for each: missing sanity check, unverified model claim, unreviewed diff, environment drift, scope too broad, or untraceable claim. Each case has one attempt; the correct cause is always revealed with the control from an earlier chapter that would have caught the failure and a one-sentence reason. The run ends with a score of n of 6, a mastery statement at 5 of 6, and a table of the six causes with their controls.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/failure-case-root-cause-analyzer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Root causes of failures in AI-assisted research and the controls that catch them",
+    "learningObjectives": [
+      "Attribute each of six failure cases to its root cause and to the control that would have caught it, with at least 5 of 6 attributed correctly",
+      "Connect each failure to the practice from an earlier chapter that prevents it: numerical sanity checks, primary source checks, diff review, pinned environments, single-purpose skills, and claim-to-source tracing"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "attribute",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "The controls of earlier chapters: numerical sanity checks, primary source checks, diff review, pinned environments, single-purpose skills, and claim-to-source tracing",
+      "The section Lessons Learned and Failure Cases in Chapter 20"
+    ],
+    "concepts": [
+      "Failure Case",
+      "Lessons Learned",
+      "Case Study",
+      "Root Cause",
+      "Sanity Check",
+      "Diff Review",
+      "Environment Drift",
+      "Claim-to-Source Tracing"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 830,
+      "drawHeight": 750,
+      "controlHeight": 80
+    },
+    "iframeHeight": 832,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the root-cause choice is a native select element and Submit and Next Case are native HTML buttons that respond to the Tab key and Enter or Space; correct and incorrect feedback uses words and check or cross symbols as well as an Okabe-Ito blue and vermillion palette; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose a root cause",
+      "purpose": "Chooses one of the six root causes for the current failure case. The picked cause is outlined on the canvas. Locked after Submit."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen root cause. One attempt per case; enabled only when a cause is chosen and the case is not yet answered."
+    },
+    {
+      "type": "button",
+      "label": "Next Case / See Score",
+      "purpose": "Moves to the next case after a submission. After case 6 it reads See Score and shows n of 6 correct, the mastery statement, and the table of causes and controls."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Single-attempt attribution task with immediate explanatory feedback that always reveals the correct cause, its control, and the reason",
+    "keyQuestions": [
+      "What was missing that let this through?",
+      "Which control from an earlier chapter would have caught this failure?",
+      "Is the visible symptom the root cause?"
+    ],
+    "commonMisconceptions": [
+      "A failure is caused by the model, and so there is nothing to change in the workflow",
+      "The visible symptom is the root cause",
+      "More careful reading would have caught each failure"
+    ],
+    "assessmentOpportunities": [
+      "At least 5 of 6 correct on the first attempt is evidence of mastery",
+      "Reading the list of controls is exploration and is not evidence"
+    ]
+  },
+  "chapter": "20-case-studies-capstone"
+}

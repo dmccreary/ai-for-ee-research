@@ -1,0 +1,96 @@
+{
+  "title": "Unit Test Selector for Seeded Bugs",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Test-selection activity in which learners choose at most four of eight candidate unit tests for a buggy Python sndr_db() function and run them. The sim simulates the buggy function on each selected test, reports which tests pass and fail, which of three seeded bugs are exposed and which stay hidden, and the reason for each test. The first run counts as evidence; from the second run on the minimum set of three tests is revealed.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/unit-test-selector-seeded-bugs/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Choosing known-answer unit tests that expose bugs in research code",
+    "learningObjectives": [
+      "Apply the idea of a known-answer test by selecting, from eight candidate unit tests, a set of at most four that exposes all three seeded bugs in a function"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "apply",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Unit test",
+      "Known-answer test",
+      "Silent error",
+      "Boundary input"
+    ],
+    "concepts": [
+      "Unit Test",
+      "Known-Answer Test",
+      "Silent Error",
+      "Boundary Input",
+      "Test Coverage"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 760,
+      "drawHeight": "760 minus controlHeight",
+      "controlHeight": "rows x 35 + 10 (80 to 115, depending on width)"
+    },
+    "iframeHeight": 762,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the eight checkboxes, the Run button and the Show menu are native HTML controls reachable with the Tab key; selected tests are marked with a checked-box symbol as well as a tint; PASS and FAIL use words and check or cross symbols as well as color; all text is 16 px or larger. The buggy function is simulated in JavaScript; no learner input is executed as code."
+    }
+  },
+  "controls": [
+    {
+      "type": "checkbox",
+      "label": "Test 1 ... Test 8",
+      "purpose": "Select which candidate tests to run. At most four may be run at once."
+    },
+    {
+      "type": "button",
+      "label": "Run",
+      "purpose": "Runs the selected tests against the simulated buggy function. Refused with 'Choose at most four tests.' when more than four are selected. Disabled when none is selected."
+    },
+    {
+      "type": "select",
+      "label": "Show tests / Show function and bugs / Show run results / Show minimum set",
+      "purpose": "Chooses what the panel shows. Switches to the run results after each run; the minimum set is revealed from the second run on."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Constrained test selection (at most four of eight) with simulated execution and explanatory feedback",
+    "keyQuestions": [
+      "Which tests would reveal what is wrong?",
+      "Which input makes the buggy code disagree with the specification for each bug?"
+    ],
+    "commonMisconceptions": [
+      "A test that passes proves the function is correct",
+      "More tests are always better than well-chosen ones",
+      "Tests of typical values catch boundary bugs"
+    ],
+    "assessmentOpportunities": [
+      "A correct selection (all three bugs exposed with at most four tests) on the first run is evidence of mastery",
+      "Learner explains why test 2 exposes no bug and why typical values miss bugs B and C"
+    ]
+  },
+  "chapter": "13-simulation-testing-code"
+}

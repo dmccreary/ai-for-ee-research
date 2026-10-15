@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Personal Knowledge Graph Query Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title and the on-screen question (Starting State) -->
+        <header class="title-bar">
+            <div class="title">Personal Knowledge Graph Query Explorer</div>
+            <div class="subtitle" id="main-question">Which entities answer this, by following the relationships?</div>
+        </header>
+
+        <div class="layout">
+            <!-- Left column: the graph (exploration by hover) -->
+            <section class="left-col">
+                <div class="graph-wrap">
+                    <!-- vis-network replaces the children of #network, so overlays are siblings -->
+                    <div id="network" role="img"
+                         aria-label="Illustrative personal knowledge graph with ten entities and twelve typed, directed relationships. Use the entity buttons in the exercise panel to read each entity's relationships and to select answers."></div>
+                    <div class="illustrative">Illustrative graph: entities and links are invented</div>
+                    <div class="hover-info" id="hover-info" aria-live="polite"></div>
+                </div>
+                <div class="legend" id="legend">
+                    Arrows point from the first entity to the second; hover over a node or an edge to read its type.
+                    <b>&#10003;</b> selected or correct pick, <b>&#10007;</b> not in the answer,
+                    <b>&#9733;</b> answer you missed, <span class="lg-path">thick blue edges</span> = the path.
+                </div>
+            </section>
+
+            <!-- Right column: the scored exercise -->
+            <section class="right-panel" aria-label="Exercise">
+                <div class="q-header" id="q-step">Question 1 of 5</div>
+                <div class="question" id="q-text"></div>
+                <div class="entity-label" id="entity-label">Select the answer entities (click nodes or these buttons):</div>
+                <div class="entities" id="entities" role="group" aria-labelledby="entity-label"></div>
+                <div class="feedback" id="feedback" aria-live="polite"></div>
+                <div class="controls">
+                    <button class="btn btn-primary" id="submit-btn" disabled>Submit</button>
+                    <button class="btn btn-primary" id="next-btn" style="display:none;">Next question &rarr;</button>
+                    <button class="btn btn-secondary" id="restart-btn" style="display:none;">Start over</button>
+                    <span class="score" id="score" aria-live="polite">Score: 0 of 5 correct</span>
+                </div>
+            </section>
+        </div>
+
+        <a class="back-link" href=".">Back to Lesson Plan</a>
+    </div>
+
+    <script src="pkg-graph-query-explorer.js"></script>
+</body>
+</html>

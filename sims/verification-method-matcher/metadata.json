@@ -1,0 +1,101 @@
+{
+  "title": "Verification Method Matcher",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Matching activity in which learners recommend one of five verification methods (known-answer test, independent method, primary source check, cross-model check, replication) for each of eight illustrative AI-assisted claims. Eight claims in a fixed order, one attempt each; the correct method is always revealed with a one-sentence reason, and the run ends with a score out of 8, a mastery statement at 7 of 8, and the claims grouped by method.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/verification-method-matcher/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Choosing a verification method for AI-assisted research claims",
+    "learningObjectives": [
+      "Recommend which of five verification methods best fits each of eight AI-assisted claims, with at least 7 of 8 matching the answer key"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "recommend",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Known-answer test, independent method, primary source check, cross-model check, and replication, as defined in the section Kinds of Checks of Chapter 17"
+    ],
+    "concepts": [
+      "Independent Check",
+      "Known-Answer Test",
+      "Primary Source Check",
+      "Cross-Model Check",
+      "Result Replication",
+      "Verification and Validation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 710,
+      "drawHeight": 630,
+      "controlHeight": 80
+    },
+    "iframeHeight": 712,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the method list is a native select and all actions are native HTML buttons reachable with the Tab key; correct and incorrect feedback uses words and the symbols check mark and X as well as a color-blind-safe blue and orange pair; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose a method",
+      "purpose": "Chooses one of the five verification methods for the current claim. Starts with no method chosen and is disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen method for the current claim. Enabled only when a method is chosen; one attempt per claim."
+    },
+    {
+      "type": "button",
+      "label": "Next Claim / See Score / Start Over",
+      "purpose": "Enabled after an answer is submitted. Advances to the next claim, shows the score after claim 8, and on the summary screen starts a new run of the same eight claims."
+    },
+    {
+      "type": "button",
+      "label": "Next Page",
+      "purpose": "Shown only on the summary screen when the claims grouped by method do not fit on one page; pages through the groups."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Forced choice among five methods with one attempt per item, immediate explanatory feedback, and a summary that groups the items by method",
+    "keyQuestions": [
+      "What could be wrong with this claim, and which check would reveal it?",
+      "Is the claim about an implementation, a method, a quotation, a screening question, or recurrence?",
+      "Does the check have different failure causes from the thing being checked?"
+    ],
+    "commonMisconceptions": [
+      "Asking the same model again is an independent check",
+      "A cross-model check proves a claim",
+      "A single check method suits every claim"
+    ],
+    "assessmentOpportunities": [
+      "First-attempt score of at least 7 of 8 methods matching the answer key is evidence of mastery",
+      "Reading the table of methods is exploration and is not evidence",
+      "Learner explains each missed claim using the Why sentence and what the claim could be wrong about"
+    ]
+  },
+  "chapter": "17-verification-reproducibility"
+}

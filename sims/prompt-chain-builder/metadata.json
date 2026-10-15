@@ -1,0 +1,118 @@
+{
+  "title": "Prompt Chain Builder",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Construction activity in which learners order six prompt-chain steps for a verified Walden figure-of-merit comparison table of five SAR ADC papers so that every dependency holds, and choose a testable acceptance check for each step from three shuffled candidates. Submit marks the order valid or names the first violated dependency and shows the testable check and reason for each step; the score is \"order valid: yes or no; checks: n of 6\", and only the first submission counts as evidence.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/prompt-chain-builder/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Designing a prompt chain with dependencies and testable acceptance checks",
+    "learningObjectives": [
+      "Implement a six-step prompt chain by placing the steps in an order that respects their dependencies and choosing a testable acceptance check for each step, with a valid order and at least 5 of 6 testable checks",
+      "Distinguish an acceptance check that a script or second reader can decide from one that cannot be tested"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "implement",
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Prompt chaining",
+      "Acceptance criteria",
+      "Source grounding"
+    ],
+    "concepts": [
+      "Prompt Chaining",
+      "Multi-Step Prompt",
+      "Acceptance Criteria",
+      "Source Grounding",
+      "Walden Figure of Merit",
+      "Task Dependencies"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 840,
+      "drawHeight": 760,
+      "controlHeight": 80
+    },
+    "iframeHeight": 842,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons and drop-down lists reachable with the Tab key and activated with Enter or Space; meaning is carried by words and symbols (check mark, X, filled and open circles, the ▶ selection marker) as well as by a blue/orange color-blind-safe palette; body text is 16 px, with 14 px only for footnotes and meter labels."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Card",
+      "purpose": "Chooses which of the six step cards the other controls act on; each entry shows the card's current position in the chain."
+    },
+    {
+      "type": "button",
+      "label": "Move Up",
+      "purpose": "Moves the selected card one place earlier in the chain."
+    },
+    {
+      "type": "button",
+      "label": "Move Down",
+      "purpose": "Moves the selected card one place later in the chain."
+    },
+    {
+      "type": "select",
+      "label": "Check",
+      "purpose": "Chooses Check 1, 2, or 3 (options shown in a shuffled order) as the acceptance check for the selected card."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Enabled when all six cards have a check. Marks the order valid or names the first violated dependency, and scores the checks."
+    },
+    {
+      "type": "button",
+      "label": "Reset",
+      "purpose": "Starts again with a new scramble and no checks; only the first submission counts as evidence."
+    },
+    {
+      "type": "button",
+      "label": "Next Page",
+      "purpose": "Shown after submission when the per-step feedback does not fit on one page; pages through it."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Ordering under a partial order with one movable step, plus selection of a testable acceptance check per step, with feedback naming the first violated dependency",
+    "keyQuestions": [
+      "In what order can these steps run, and how would you know each one worked?",
+      "Which step can run in more than one place?",
+      "Could a script or a second reader decide this check?"
+    ],
+    "commonMisconceptions": [
+      "Chain order is a single fixed sequence",
+      "An acceptance check such as \"the output looks reasonable\" is adequate",
+      "A step that fails can be fixed at the end of the chain"
+    ],
+    "assessmentOpportunities": [
+      "A valid order and at least 5 of 6 checks correct on the first submission is evidence of mastery",
+      "Learner builds a second, different valid order after Reset"
+    ]
+  },
+  "chapter": "04-context-engineering-prompting"
+}

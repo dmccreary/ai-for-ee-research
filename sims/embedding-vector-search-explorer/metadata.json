@@ -1,0 +1,112 @@
+{
+  "title": "Embedding Vector Search Explorer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Prediction activity in an illustrative two-dimensional embedding space. Learners predict which two of six stored passages vector search returns for each of three queries, in order, and whether the second result clears a cosine-similarity threshold of 0.90. After each answer the sim shows every cosine similarity, the ranking, and the reason; after the third query an exploration mode lets learners drag the query vector and watch the ranking update.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/embedding-vector-search-explorer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Embeddings, cosine similarity, and top-k vector search with a similarity threshold",
+    "learningObjectives": [
+      "Infer, from the angles between vectors in a two-dimensional toy embedding space, which two stored passages vector search returns for each of three queries and whether the second result clears a similarity threshold of 0.90",
+      "Explain why a similarity threshold is needed when top-k search always returns k results"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomVerb": "infer",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Embedding and vector search",
+      "Cosine similarity",
+      "Retrieval-augmented generation"
+    ],
+    "concepts": [
+      "Embedding",
+      "Vector Search",
+      "Cosine Similarity",
+      "Retrieval Augmented Generation",
+      "Similarity Threshold"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 915,
+      "drawHeight": 800,
+      "controlHeight": 115
+    },
+    "iframeHeight": 917,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML selects and buttons reachable with the Tab key; correct and incorrect feedback uses words and check or X symbols as well as a blue/orange color-blind-safe palette; all body text is 16 px."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "First result",
+      "purpose": "Chooses the passage (D1 to D6) predicted to rank first. Disabled after Submit."
+    },
+    {
+      "type": "select",
+      "label": "Second result",
+      "purpose": "Chooses the passage predicted to rank second; must differ from the first. Disabled after Submit."
+    },
+    {
+      "type": "select",
+      "label": "Threshold mark",
+      "purpose": "Marks the second result as clears threshold or below threshold (cosine >= 0.90). Disabled after Submit."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the single attempt for the current query. Enabled when two different passages and a mark are chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Query / Open Exploration",
+      "purpose": "Enabled after Submit. Advances to the next query, and after Q3 opens exploration mode."
+    },
+    {
+      "type": "drag",
+      "label": "Query vector (exploration)",
+      "purpose": "In exploration, dragging inside the plot or pressing the arrow keys moves the query vector; the ranking table and threshold marks update live. Not scored."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Predict-then-reveal with concrete computed values, followed by free exploration",
+    "keyQuestions": [
+      "Which two passages will vector search return?",
+      "Does the second result clear the 0.90 threshold?",
+      "What does search return when the query is far from every passage?"
+    ],
+    "commonMisconceptions": [
+      "Vector search matches words, not meanings.",
+      "The top results are always good matches.",
+      "Retrieval returns the passage that is closest in distance, not in direction."
+    ],
+    "assessmentOpportunities": [
+      "3 of 3 queries correct (both passages, their order, and the threshold mark) is evidence of mastery",
+      "Learner explains why D1 is returned for Q3 even though it is below the threshold"
+    ]
+  },
+  "chapter": "03-models-and-prompt-basics"
+}

@@ -1,0 +1,287 @@
+/* Personal Knowledge Graph Query Explorer - vis-network-tutorial layout
+ * =====================================================================
+ * Wide (>= 1000px): graph on the left, exercise panel on the right.
+ * Narrower: title, graph, legend, and exercise stacked.
+ * The whole page always fits inside the iframe height (CANVAS_HEIGHT + 2);
+ * the graph area absorbs any spare height so nothing scrolls.
+ *
+ * Colors are from the Okabe-Ito color-blind-safe palette. Every state also
+ * carries a glyph (check, X, star) or a line style, never color alone, and
+ * every node states its entity type in words.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 6px 10px 4px 10px;
+    gap: 6px;
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title-bar {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+/* ===========================================
+   LAYOUT: stacked by default, two columns when wide
+   =========================================== */
+.layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.left-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.graph-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 200px;
+    background-color: white;
+    border: 1px solid #c9d6e3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+}
+
+.illustrative {
+    position: absolute;
+    right: 8px;
+    bottom: 4px;
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1px 4px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+/* Hover information: shown over the half of the graph away from the pointer */
+.hover-info {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    font-size: 15px;
+    line-height: 1.35;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 2px solid #0072b2;
+    border-radius: 6px;
+    padding: 4px 8px;
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+}
+.hover-info.at-top { top: 6px; }
+.hover-info.at-bottom { bottom: 6px; }
+.hover-info.show { display: block; }
+
+.legend {
+    flex: 0 0 auto;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #333;
+}
+
+.lg-path {
+    font-weight: bold;
+    color: #005a8c;
+    border-bottom: 3px solid #0072b2;
+}
+
+/* ===========================================
+   EXERCISE PANEL
+   =========================================== */
+.right-panel {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 7px 10px;
+    min-height: 0;
+}
+
+.q-header {
+    font-size: 15px;
+    font-weight: bold;
+    color: #003f73;
+}
+
+.question {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.entity-label {
+    font-size: 14px;
+    color: #333;
+}
+
+.entities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.ent-btn {
+    font-size: 14px;
+    padding: 3px 7px;
+    border: 2px solid #8aa4bd;
+    border-radius: 6px;
+    background: #fbfdff;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.ent-btn:hover { border-color: #0072b2; }
+.ent-btn[aria-pressed="true"] {
+    border-color: #003f73;
+    background: #d6eaf8;
+    font-weight: bold;
+}
+.ent-btn:disabled { cursor: default; }
+.ent-btn.is-correct { border-color: #003f73; background: #e3f1fb; font-weight: bold; }
+.ent-btn.is-missed  { border-color: #003f73; border-style: dashed; background: #fff; font-weight: bold; }
+.ent-btn.is-wrong   { border-color: #d55e00; border-style: dashed; background: #fdf0e1; color: #8a3c00; }
+.ent-btn:disabled:not(.is-correct):not(.is-missed):not(.is-wrong) { color: #666; }
+
+.feedback {
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.feedback:empty { display: none; }
+
+.feedback .fb {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border-left: 5px solid #0072b2;
+    background: #eef6fc;
+}
+
+.feedback .fb.fb-wrong {
+    border-left-color: #d55e00;
+    background: #fdf0e1;
+}
+
+.feedback .fb-final {
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+/* ===========================================
+   CONTROL BUTTONS
+   =========================================== */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    padding: 6px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:focus-visible, .ent-btn:focus-visible { outline: 3px solid #56b4e9; outline-offset: 2px; }
+
+.btn-primary { background-color: #0072b2; color: white; }
+.btn-primary:hover { background-color: #005a8c; }
+.btn-primary:disabled { background-color: #9cc3dd; cursor: not-allowed; }
+
+.btn-secondary { background-color: #616161; color: white; }
+.btn-secondary:hover { background-color: #4a4a4a; }
+
+.score {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.back-link {
+    flex: 0 0 auto;
+    font-size: 14px;
+    color: #005a8c;
+}
+
+/* ===========================================
+   WIDE: graph left, exercise right
+   =========================================== */
+@media (min-width: 1000px) {
+    .layout { flex-direction: row; gap: 10px; }
+    .right-panel { flex: 0 0 380px; }
+    .controls { margin-top: auto; }
+}
+
+/* ===========================================
+   NARROW: tighten spacing
+   =========================================== */
+@media (max-width: 599px) {
+    .container { padding: 4px 6px 2px 6px; gap: 4px; }
+    .title { font-size: 17px; }
+    .subtitle { font-size: 15px; }
+    .legend { font-size: 13px; }
+    .question { font-size: 16px; }
+    .ent-btn { font-size: 13px; padding: 2px 5px; }
+    .feedback { font-size: 14px; }
+    .btn { padding: 6px 10px; font-size: 14px; }
+    .score { font-size: 14px; }
+    .hover-info { font-size: 14px; }
+}

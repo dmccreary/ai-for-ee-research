@@ -1103,6 +1103,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1570,7 +1730,7 @@ Save every query with the database, the date, and the result count in a file in 
 <p>Type: microsim
 <strong>sim-id:</strong> search-precision-recall-explorer<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/search-microsims/tree/main/docs/sims/keyword-search-flow<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> calculate<br/>
@@ -1664,6 +1824,9 @@ Save every query with the database, the date, and the result count in a file in 
 <p><strong>Starting State:</strong> The corpus is shown with query A's results highlighted. The question on screen is "What fraction of the results are relevant, and what fraction of the relevant papers were found?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states the two formulas and that broadening a query raises recall and lowers precision. The chapter does not state the corpus numbers.</p>
 </details>
+<iframe src="../../sims/search-precision-recall-explorer/main.html" height="858px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Search Query Precision and Recall Explorer. <a href="../../sims/search-precision-recall-explorer/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="triage-summarization-and-claim-extraction">Triage, Summarization, and Claim Extraction<a class="headerlink" href="#triage-summarization-and-claim-extraction" title="Permanent link">&para;</a></h2>
 <p>A successful search returns more papers than you can read. <strong>Paper triage</strong> is the fast sorting of results into those to read closely, those to skim, and those to set aside, using only the title, abstract, and figures. An agent can do first-pass triage from a rubric you supply: relevance to the question, whether the work is measured or simulated, the process node or technology, the year, and the venue. The rubric matters more than the model. A triage prompt that says only "rate relevance from 1 to 5" returns inconsistent scores, and one that names the criteria and requires a one-line reason for each is auditable.</p>
 <p><strong>Paper summarization</strong> is producing a short account of a paper. It is among the strongest uses of a language model, and it has one characteristic failure: the summary may be built from the abstract and the model's expectations about the field, and not from the paper's body. A summary that sounds right can state a result the paper does not contain. The defenses are those of Chapter 4: supply the full text, ask for a structured summary with the section for each statement, and spot-check.</p>
@@ -1719,7 +1882,7 @@ A common trap is citing a paper from a model-written summary. It happens because
 <p>Type: graph-model
 <strong>sim-id:</strong> citation-chaining-explorer<br/>
 <strong>Library:</strong> vis-network<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> solve<br/>
 <strong>Learning Objective:</strong> The learner will solve five citation-chaining questions on a graph of eight papers by following references backward and citations forward, with at least 4 of 5 correct.</p>
@@ -1836,6 +1999,9 @@ A common trap is citing a paper from a model-written summary. It happens because
 <p><strong>Starting State:</strong> The graph is shown with S highlighted and the direction of each citation edge visible. The question on screen is "Which papers does this procedure find?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that backward chaining follows references to earlier work and forward chaining follows citations to later work, and that a paper cited by several references of a seed paper is likely foundational.</p>
 </details>
+<iframe src="../../sims/citation-chaining-explorer/main.html" height="802px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Citation Chaining Explorer. <a href="../../sims/citation-chaining-explorer/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="references-verification-and-quality">References, Verification, and Quality<a class="headerlink" href="#references-verification-and-quality" title="Permanent link">&para;</a></h2>
 <p>A <strong>reference manager</strong> is a program that stores bibliographic records, attaches PDFs, and formats citations for a document. Zotero, Mendeley, and JabRef are common examples. The record format that matters most in engineering is <strong>BibTeX</strong>, a plain-text format for bibliographic entries that LaTeX uses to build reference lists. Each entry has a type, a key, and fields. The entry below is the book's primary reference, which is the first entry on the References page.</p>
 <div class="language-bibtex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">ketter2008advocate</span><span class="p">,</span>

@@ -1085,6 +1085,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1557,7 +1717,7 @@ Notice what the three properties are about: the effect and not the agent. A very
 <p>Type: microsim
 <strong>sim-id:</strong> agent-autonomy-level-assigner<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> recommend<br/>
@@ -1667,6 +1827,9 @@ Notice what the three properties are about: the effect and not the agent. A very
 <p><strong>Starting State:</strong> Task 1 is shown with its three attributes and four levels, none chosen. The question on screen is "How much should the agent do on its own?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states four levels from 0 to 3, three properties (reversibility, reach, verifiability), and the assignment rule above, and that autonomy is set by the task and not by the model's capability.</p>
 </details>
+<iframe src="../../sims/agent-autonomy-level-assigner/main.html" height="832px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Agent Autonomy Level Assigner. <a href="../../sims/agent-autonomy-level-assigner/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="logging-failure-modes-and-runaway-agents">Logging, Failure Modes, and Runaway Agents<a class="headerlink" href="#logging-failure-modes-and-runaway-agents" title="Permanent link">&para;</a></h2>
 <p><strong>Agent logging</strong> is the recording of what an agent did, in a form you can read afterward. A useful log has, for each step, the time, the tool called and its arguments, the result or an excerpt of it, the files changed, the tokens used, and the model and settings in force. Logs serve three purposes: they let you audit what happened overnight, they let you debug a failure by finding the step at which things went wrong, and they let you reproduce a result. Keep them as plain files in or beside the project, so that they are searchable and, where appropriate, versioned.</p>
 <p>Agents fail in recognizable ways, and naming the patterns is the first step to catching them. <strong>Agent failure modes</strong> commonly include the following.</p>
@@ -1734,7 +1897,7 @@ A common trap is accepting an agent's statement that a task is complete. It happ
 <p>Type: microsim
 <strong>sim-id:</strong> agent-failure-log-triage<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> differentiate<br/>
 <strong>Learning Objective:</strong> The learner will differentiate six agent failure modes from six excerpts of an agent log, with at least 5 of 6 attributed correctly.</p>
@@ -1805,6 +1968,9 @@ A common trap is accepting an agent's statement that a task is complete. It happ
 <p><strong>Starting State:</strong> Excerpt 1 is shown with the six modes listed. The question on screen is "What went wrong here?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter lists six failure modes and states that a "done" claim must be backed by the check output and that a failing test should never be edited to pass.</p>
 </details>
+<iframe src="../../sims/agent-failure-log-triage/main.html" height="802px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Agent Failure Log Triage. <a href="../../sims/agent-failure-log-triage/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="scheduling-background-work-and-trust-boundaries">Scheduling, Background Work, and Trust Boundaries<a class="headerlink" href="#scheduling-background-work-and-trust-boundaries" title="Permanent link">&para;</a></h2>
 <p><strong>Task scheduling</strong> is arranging for an agent task to run at a set time or interval, such as a nightly literature sweep or a weekly rerun of an analysis when new data arrive. <strong>Background tasks</strong> are tasks an agent runs while you do other work, whether started now or by a schedule. The two share one hazard: nobody is watching. Before an agent runs unattended, four things should be true.</p>
 <ol>

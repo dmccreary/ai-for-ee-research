@@ -1085,6 +1085,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1654,7 +1814,7 @@ Notice the shift. A folder lets you <em>find</em> a note you already know exists
 <p>Type: graph-model
 <strong>sim-id:</strong> pkg-graph-query-explorer<br/>
 <strong>Library:</strong> vis-network<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/infographics/tree/main/docs/sims/learning-path-explorer<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> solve<br/>
@@ -1867,6 +2027,9 @@ Notice the shift. A folder lets you <em>find</em> a note you already know exists
 <p><strong>Starting State:</strong> The full graph is shown with edge types visible on hover and question 1 posed. The question on screen is "Which entities answer this, by following the relationships?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that typed, directed relationships let a program answer multi-hop questions, and that the PKG research rule of thumb is about 60 percent of value in nodes and 40 percent in relationships.</p>
 </details>
+<iframe src="../../sims/pkg-graph-query-explorer/main.html" height="842px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Personal Knowledge Graph Query Explorer. <a href="../../sims/pkg-graph-query-explorer/main.html">Open it fullscreen</a>.</em></p>
 <h3 id="grounding-a-model-with-the-graph">Grounding a Model With the Graph<a class="headerlink" href="#grounding-a-model-with-the-graph" title="Permanent link">&para;</a></h3>
 <p><strong>Graph retrieval-augmented generation</strong> (graph RAG) is retrieval-augmented generation, as introduced in Chapter 3, where the retrieved material is a <em>subgraph</em> of facts selected by following relationships, not a set of text passages ranked by similarity. The question is mapped to entities in the graph, the neighbourhood of those entities is collected, and the resulting facts are placed in the prompt with an instruction to answer from them.</p>
 <p>The advantage over passage retrieval is on multi-hop questions. A vector search for "which papers need rechecking if Dataset A is corrupted?" finds passages that mention Dataset A and misses the paper that reports an experiment that used it, because that paper never names the dataset. Following the relationships finds it. A worked example: the question is converted to the entity "Dataset A", the traversal collects two experiments and two papers, and the prompt receives four lines such as "Run 07 USED Dataset A; Paper Alpha REPORTS Run 07", with the instruction "answer only from these facts; if they are insufficient, say so". The model's answer is then both grounded and checkable against named links.</p>
@@ -1913,7 +2076,7 @@ A common trap is a well-written skill with a description such as "analysis helpe
 <p>Type: microsim
 <strong>sim-id:</strong> skill-anatomy-labeler<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Remember<br/>
 <strong>Bloom Verb:</strong> identify<br/>
 <strong>Learning Objective:</strong> The learner will identify, for each of eight lines or files of a skill, whether it is the skill name, the skill description, skill instructions, or a supporting file, with at least 7 of 8 correct.</p>
@@ -1996,6 +2159,9 @@ A common trap is a well-written skill with a description such as "analysis helpe
 <p><strong>Starting State:</strong> The directory tree and SKILL.md are shown with item 1 highlighted. The question on screen is "Which part of the skill is this?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that SKILL.md has YAML frontmatter with a name and a description, that the description says what the skill does and when to use it, that instructions are the body, and that scripts, references, and templates are supporting files opened only when pointed to.</p>
 </details>
+<iframe src="../../sims/skill-anatomy-labeler/main.html" height="792px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Skill Anatomy Labeler. <a href="../../sims/skill-anatomy-labeler/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="summary-and-key-takeaways">Summary and Key Takeaways<a class="headerlink" href="#summary-and-key-takeaways" title="Permanent link">&para;</a></h2>
 <p>A research project that lasts needs memory that does not live in anyone's head or in a chat window. Plain files of defined types form a knowledge base. Typed links turn it into a graph that can be queried and used to ground an agent. And a skill packages one repeatable task so that it is done the same way, loaded only when it applies.</p>
 <p>The main points to carry forward:</p>

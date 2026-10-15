@@ -1112,6 +1112,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1594,7 +1754,7 @@ Everyone tests that a skill fires when asked. Few test that it stays quiet when 
 <p>Type: microsim
 <strong>sim-id:</strong> skill-description-trigger-tester<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> distinguish<br/>
 <strong>Learning Objective:</strong> The learner will distinguish, for each of eight user requests, whether a stated skill description should trigger the skill or not, with at least 7 of 8 correct.</p>
@@ -1677,6 +1837,9 @@ Everyone tests that a skill fires when asked. Few test that it stays quiet when 
 <p><strong>Starting State:</strong> The description and request 1 are shown with no choice made. The question on screen is "Would an agent load this skill for this request?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that triggering is a comparison of the request with the description, that a skill needs tests for both firing and staying quiet, and that near-miss requests that share a keyword are the most useful trigger tests.</p>
 </details>
+<iframe src="../../sims/skill-description-trigger-tester/main.html" height="617px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Skill Description Trigger Tester. <a href="../../sims/skill-description-trigger-tester/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="failure-modes-and-maintenance">Failure Modes and Maintenance<a class="headerlink" href="#failure-modes-and-maintenance" title="Permanent link">&para;</a></h2>
 <p>Skills fail in a small number of recurring ways. <strong>Skill failure modes</strong> are those characteristic patterns, and knowing them lets you diagnose a misbehaving skill by symptom instead of by guesswork. The most common are listed here.</p>
 <ul>
@@ -1694,7 +1857,7 @@ Everyone tests that a skill fires when asked. Few test that it stays quiet when 
 <p>Type: microsim
 <strong>sim-id:</strong> skill-failure-mode-classifier<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> attribute<br/>
 <strong>Learning Objective:</strong> The learner will attribute each of eight observed skill problems to one of six failure modes, with at least 7 of 8 correct.</p>
@@ -1776,6 +1939,9 @@ Everyone tests that a skill fires when asked. Few test that it stays quiet when 
 <p><strong>Starting State:</strong> Observation 1 is shown with the six modes listed and none chosen. The question on screen is "Which failure mode explains this?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter lists six failure modes and states that undertriggering and overtriggering trace to the description, that instruction drift traces to long or uncheckable instructions, and that stale references and missing dependencies cause confident but wrong or failed output.</p>
 </details>
+<iframe src="../../sims/skill-failure-mode-classifier/main.html" height="822px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Skill Failure Mode Classifier. <a href="../../sims/skill-failure-mode-classifier/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="versioning-sharing-and-installing">Versioning, Sharing, and Installing<a class="headerlink" href="#versioning-sharing-and-installing" title="Permanent link">&para;</a></h2>
 <p>A skill is a directory of text files, so everything from Chapter 5 applies: it belongs in a Git repository, with commits that say what changed and why. <strong>Skill versioning</strong> is giving each released state of a skill an identifier, such as a semantic version number, so that users can tell which one they have and a result can be tied to the version that produced it. Increment the major number when a change alters the skill's output format or behavior in a way that could break a user's pipeline, and the minor and patch numbers for additions and fixes. Keep a short changelog in the repository.</p>
 <p><strong>Skill metadata</strong> is the descriptive information about a skill beyond its name and description: its version, author, license, the date it was last verified, and the tools or models it was tested with. Some packaging tools validate frontmatter strictly and reject unknown top-level keys, so it is safest to place custom fields under a single <code>metadata</code> map instead of adding new top-level keys.</p>

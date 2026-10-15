@@ -1,0 +1,102 @@
+{
+  "title": "Prompt Injection Spotter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners decide whether each of eight invented text snippets that an agent has been asked to read is an injected instruction aimed at the model or ordinary content. Snippets come in a fixed order with one attempt each; feedback always reveals the correct classification and reason, and for injections names the capability the text tries to borrow and the structural defense that limits it. The run ends with a score out of 8, a mastery statement at 7 of 8, and the misconception behind each missed snippet.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/prompt-injection-spotter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Recognizing prompt injection in material an agent reads",
+    "learningObjectives": [
+      "Differentiate, among eight text snippets that an agent has been asked to read, those that contain an injected instruction aimed at the model from those that are ordinary content, with at least 7 of 8 classified correctly",
+      "Name the capability an injection tries to borrow and the structural defense that would limit it"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "differentiate",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Prompt injection and untrusted content",
+      "Least privilege and human approval for consequential actions"
+    ],
+    "concepts": [
+      "Prompt Injection",
+      "Untrusted Content",
+      "Least Privilege",
+      "Separated Channels",
+      "Human Approval",
+      "Treating Output as Untrusted"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 660,
+      "drawHeight": 580,
+      "controlHeight": 80
+    },
+    "iframeHeight": 662,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons and drop-down lists reachable with the Tab key and activated with Enter or Space; meaning is carried by words and symbols (check mark, X, filled and open circles, the ▶ selection marker) as well as by a blue/orange color-blind-safe palette; body text is 16 px, with 14 px only for footnotes and meter labels."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Injected instruction",
+      "purpose": "Commits the classification \"injected instruction\" for the current snippet. Disabled after the one attempt."
+    },
+    {
+      "type": "button",
+      "label": "Ordinary content",
+      "purpose": "Commits the classification \"ordinary content\" for the current snippet. Disabled after the one attempt."
+    },
+    {
+      "type": "button",
+      "label": "Next Snippet / See Score",
+      "purpose": "Enabled after a classification is committed. Advances through the eight snippets in a fixed order, then shows the score."
+    },
+    {
+      "type": "button",
+      "label": "More Missed Snippets",
+      "purpose": "Shown on the summary when the list of missed snippets does not fit on one page; pages through it."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Binary classification with surface features balanced across classes, one attempt per item, and immediate explanatory feedback",
+    "keyQuestions": [
+      "Is this text trying to steer the model?",
+      "Who is this text addressed to: a human reader or the model?",
+      "What capability would the injection borrow, and which defense limits it?"
+    ],
+    "commonMisconceptions": [
+      "Any imperative sentence in a document is an injection",
+      "An injection must contain the words \"ignore previous instructions\"",
+      "A snippet in a trusted file type, such as a PDF or a README, is safe"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 snippets classified correctly on the first attempt is evidence of mastery",
+      "Learner explains why the peer-review comment is ordinary content although it says \"disregard the previous version\""
+    ]
+  },
+  "chapter": "04-context-engineering-prompting"
+}

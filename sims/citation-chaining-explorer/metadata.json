@@ -1,0 +1,101 @@
+{
+  "title": "Citation Chaining Explorer",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A vis-network citation graph of eight illustrative papers in which an arrow from X to Y means X cites Y. The learner answers five citation-chaining questions in a fixed order, one attempt each, by selecting the set of papers found by backward chaining, forward chaining, or a combination of the two from the seed paper S. After each answer the sim highlights the edges followed and explains why; the final score is reported as n of 5 correct with a mastery threshold of 4.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/citation-chaining-explorer/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Citation chaining: backward and forward",
+    "learningObjectives": [
+      "Solve five citation-chaining questions on a graph of eight papers by following references backward and citations forward, with at least 4 of 5 correct",
+      "Recognize that forward chaining reaches newer papers and backward chaining reaches older ones"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomVerb": "solve",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "citation chaining",
+      "backward chaining",
+      "forward chaining",
+      "the meaning of a citation edge"
+    ],
+    "concepts": [
+      "Citation Chaining",
+      "Backward Chaining",
+      "Forward Chaining",
+      "Literature Review"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 800
+    },
+    "iframeHeight": 802,
+    "responsive": true,
+    "dependencies": [
+      "vis-network@9.1.9"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "colorBlindSafe": true,
+      "notes": "The graph has an aria-label that lists every paper, year, and citation edge, and every paper has a keyboard-reachable details button. Answers are native checkboxes; Enter on a checkbox submits. Edge direction is shown with arrowheads, followed edges are drawn thick, correct papers carry a check-mark glyph, wrong picks an X glyph and a dashed border, and feedback is in words; colors are from the Okabe-Ito blue/orange palette. Mouse-wheel zoom and drag-to-pan are disabled so the iframe never captures page scrolling; navigation buttons are provided."
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Procedure practice on a concrete graph with one attempt per question, immediate reveal of the correct set, highlighted edges, and a one-sentence reason",
+    "keyQuestions": [
+      "Which papers does this procedure find?",
+      "Which papers are found by backward chaining one step from S?",
+      "Which papers are found by forward chaining one step from S?"
+    ],
+    "commonMisconceptions": [
+      "Forward and backward chaining find the same papers",
+      "Only papers with matching keywords are relevant",
+      "The most recent paper is the most foundational"
+    ],
+    "assessmentOpportunities": [
+      "At least 4 of 5 questions correct on the first attempt, with each selected set equal to the answer set exactly",
+      "Dragging nodes and reading paper details is exploration and is not evidence"
+    ]
+  },
+  "controls": [
+    {
+      "type": "node click / buttons",
+      "name": "Paper details",
+      "purpose": "Show the year, role, references, and citing papers of S, A, B, C, D, E, F, or G (exploration, not scored)"
+    },
+    {
+      "type": "checkbox group",
+      "name": "Answer papers",
+      "purpose": "Select the papers A to G that answer the current question; the seed paper S is never part of an answer"
+    },
+    {
+      "type": "button",
+      "name": "Submit answer",
+      "purpose": "Lock the selected set for the current question and show feedback; one attempt per question"
+    },
+    {
+      "type": "button",
+      "name": "Next question",
+      "purpose": "Advance to the next question in the fixed order after the current question has been answered"
+    }
+  ],
+  "chapter": "11-literature-search-synthesis"
+}

@@ -1094,6 +1094,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1542,7 +1702,7 @@ Before an agent writes the function, have it write the tests from your acceptanc
 <p>Type: microsim
 <strong>sim-id:</strong> numerical-sanity-check-judge<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> judge<br/>
 <strong>Learning Objective:</strong> The learner will judge each of eight reported results as plausible or as violating one of four kinds of sanity check, with at least 7 of 8 judged correctly.</p>
@@ -1626,6 +1786,9 @@ Before an agent writes the function, have it write the tests from your acceptanc
 <p><strong>Starting State:</strong> Result 1 is shown with five verdicts and none chosen. The question on screen is "Is this result plausible, and if not, which check does it fail?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states the five kinds of check, the RC cutoff of 1.59 kHz for 1 kΩ and 100 nF, and the 17.98-bit ENOB that results from using 20 log10 on a power ratio.</p>
 </details>
+<iframe src="../../sims/numerical-sanity-check-judge/main.html" height="722px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Numerical Sanity Check Judge. <a href="../../sims/numerical-sanity-check-judge/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="debugging-and-code-review">Debugging and Code Review<a class="headerlink" href="#debugging-and-code-review" title="Permanent link">&para;</a></h2>
 <p><strong>Debugging</strong> is finding and fixing the cause of a defect. A reliable procedure has four steps: reproduce the failure reliably, isolate it to the smallest input and the smallest piece of code that still fails, form a hypothesis about the cause and test it, and fix it with a new test that fails before the fix and passes after. An agent is good at the mechanical part of this. Your job is to insist on the test, because an agent that "fixes" a bug without a failing test has no evidence that the bug was the thing it changed. Version control helps here, since the Git history can show which commit made the result change.</p>
 <p><strong>Code review</strong> is the reading of code and its changes by someone other than the author. Reviewing an agent's code is easiest as a review of its diff. Look first at what the change touches, then at numbers and constants, then at deleted lines, and last at the logic. Four questions cover most defects: does it do what the specification says, what happens on the boundary input, is every unit stated, and is there anything in the diff you were not asking for? A second agent can do a first pass against a checklist. Treat its findings as leads and not as a verdict.</p>
@@ -1646,7 +1809,7 @@ A common trap is asking the same agent to write the code and its tests in one st
 <p>Type: microsim
 <strong>sim-id:</strong> unit-test-selector-seeded-bugs<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> apply<br/>
 <strong>Learning Objective:</strong> The learner will apply the idea of a known-answer test by selecting, from eight candidate unit tests, a set of at most four that exposes all three seeded bugs in a function.</p>
@@ -1763,6 +1926,9 @@ A common trap is asking the same agent to write the code and its tests in one st
 <p><strong>Starting State:</strong> The eight tests are shown with none selected. The question on screen is "Which tests would reveal what is wrong?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that the 10 versus 20 log10 error is a silent error, that a test needs an independently known answer, and that boundary inputs expose bugs that typical values hide.</p>
 </details>
+<iframe src="../../sims/unit-test-selector-seeded-bugs/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Unit Test Selector for Seeded Bugs. <a href="../../sims/unit-test-selector-seeded-bugs/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="reproducible-code">Reproducible Code<a class="headerlink" href="#reproducible-code" title="Permanent link">&para;</a></h2>
 <p><strong>Test data</strong> are the inputs used to exercise code. Three kinds are valuable: <em>synthetic</em> data with a known answer, such as the ideal quantizer record; <em>edge cases</em>, such as an empty record, a constant record, or a record at full scale; and a small <em>golden file</em>, a real captured record whose correct result was verified independently and is stored with the tests, so that a change that alters the result is caught.</p>
 <p>A <strong>reproducible environment</strong> is a recorded and recoverable set of conditions under which code ran: the language version, the library versions, the tool versions (including the simulator and its version), the operating system if it matters, and the random seeds. Pin library versions in a requirements file, seed every random number generator, and record the simulator version in the output. For work that must be reproduced years later, a container image captures the environment more completely.</p>

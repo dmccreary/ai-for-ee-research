@@ -1145,6 +1145,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1652,7 +1812,7 @@ Words divided by 0.75 gives a usable token estimate for prose. Multiply by 1.3 i
 <p>Type: microsim
 <strong>sim-id:</strong> context-window-budget-calculator<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/token-efficiency/tree/main/docs/sims/context-budget-long-session<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> calculate<br/>
@@ -1778,6 +1938,9 @@ Words divided by 0.75 gives a usable token estimate for prose. Multiply by 1.3 i
 <p><strong>Starting State:</strong> Challenge 1 is shown with an empty answer box. The question on screen is "How many tokens are left for the answer?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter's worked example uses a 32,000-token window, a 600-token system prompt, a 4,000-token history, a paper of 8,250 words (about 11,000 tokens), and a 400-token question, leaving 16,000 tokens. A second paper leaves 5,000 tokens, which cannot hold a 6,000-token completion. The chapter states that tokens are about words divided by 0.75.</p>
 </details>
+<iframe src="../../sims/context-window-budget-calculator/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Context Window Budget Calculator. <a href="../../sims/context-window-budget-calculator/main.html">Open it fullscreen</a>.</em></p>
 <div class="admonition mascot-warning">
 <p class="admonition-title">Truncation Rarely Announces Itself</p>
 <p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
@@ -1798,7 +1961,7 @@ p_i = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}.
 <p>Type: microsim
 <strong>sim-id:</strong> temperature-next-token-explorer<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Understand<br/>
 <strong>Bloom Verb:</strong> infer<br/>
 <strong>Learning Objective:</strong> The learner will infer, before it is revealed, whether the probability of the top-ranked and of the lowest-ranked candidate token rises or falls when the temperature is raised or lowered.</p>
@@ -1974,6 +2137,9 @@ p_i = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}.
 <p><strong>Starting State:</strong> The distribution at temperature 1.0 is shown with prediction 1 posed: "If temperature drops to 0.5, what happens to the probability of the top token?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter's worked example for scores 2.0, 1.0, and 0.0 states 66.5%, 24.5%, and 9.0% at temperature 1.0; 86.7%, 11.7%, and 1.6% at 0.5; and 50.6%, 30.7%, and 18.6% at 2.0. The chapter states that the ranking never changes and that low temperature does not make a model more correct.</p>
 </details>
+<iframe src="../../sims/temperature-next-token-explorer/main.html" height="722px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Temperature Next-Token Explorer. <a href="../../sims/temperature-next-token-explorer/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="training-data-and-the-knowledge-cutoff">Training Data and the Knowledge Cutoff<a class="headerlink" href="#training-data-and-the-knowledge-cutoff" title="Permanent link">&para;</a></h2>
 <p>A model's behavior comes from its <strong>training data</strong>, the large body of text, code, and other material it was fitted to. During training, the model's parameters are adjusted so that it predicts the continuation of its training text better. This stage is followed by additional tuning on curated instruction-and-response examples and on human preference judgments, which is what makes a raw text predictor behave like an assistant. You do not need the optimization details for this course. You need to know what the process implies for what the model can and cannot reliably do.</p>
 <p>First, a model's knowledge is a compressed statistical summary of text, not a database. Frequent, widely repeated, well-documented material is represented well. Rare, recent, proprietary, or highly specialized material is represented poorly or not at all. In electrical engineering this gradient is easy to see: a model will explain a two-stage Miller-compensated op-amp or the Nyquist criterion fluently, because that material is saturated in textbooks and lecture notes. It will be far shakier about the exact performance table of a 2024 conference paper, the quirks of a vendor's undocumented model-card parameter, or your group's internal test fixture, which it has never seen.</p>
@@ -2048,7 +2214,7 @@ A tempting shortcut is to ask the same model, "Are these citations real?" The mo
 <p>Type: microsim
 <strong>sim-id:</strong> citation-verification-judge<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> judge<br/>
 <strong>Learning Objective:</strong> The learner will judge each of eight model-generated citations as verified, wrong details, unsupported claim, or fabricated, using the results of a simulated database lookup, with at least 7 of 8 judged correctly.</p>
@@ -2177,6 +2343,9 @@ A tempting shortcut is to ask the same model, "Are these citations real?" The mo
 <p><strong>Starting State:</strong> Record 1 is shown with all four lookup checks closed. The question on screen is "Is this citation safe to use as written?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter lists four citation outcomes: fabricated, wrong details, unsupported claim, and verified. It states that a well-formed DOI and a real venue do not establish that a paper exists, and that checking requires a database lookup the learner runs, not the model.</p>
 </details>
+<iframe src="../../sims/citation-verification-judge/main.html" height="802px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Citation Verification Judge. <a href="../../sims/citation-verification-judge/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="choosing-the-model-size-reasoning-modality-and-benchmarks">Choosing the Model: Size, Reasoning, Modality, and Benchmarks<a class="headerlink" href="#choosing-the-model-size-reasoning-modality-and-benchmarks" title="Permanent link">&para;</a></h2>
 <p><strong>Model size</strong> is the number of trainable parameters in a model, the adjustable numbers fitted during training, usually stated in billions. Within a model family, larger models are generally more capable on difficult tasks, and also slower and more expensive to run. Size is a rough guide, not a ranking. Training data quality, tuning, and design differ between families, so a well-tuned smaller model can outperform a larger one on a given task, and many hosted models do not disclose their size at all. For a researcher the practical rule is to match the model to the task: a small, fast model is adequate for reformatting a bibliography or classifying abstracts, and a larger model is worth its cost for ambiguous derivations.</p>
 <p>A <strong>reasoning model</strong> is a model trained or configured to generate an extended sequence of intermediate steps, sometimes hidden from the user, before it gives a final answer. This tends to improve results on multi-step problems such as derivations, debugging, and planning. The trade-off is that the intermediate steps are tokens too: they count against the context window, they add latency, and they are usually billed. Use a reasoning model where the task is hard and the answer is checkable, and do not pay for it on a task that a short, direct answer already handles.</p>

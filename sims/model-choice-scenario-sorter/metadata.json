@@ -1,0 +1,111 @@
+{
+  "title": "Model Choice Scenario Sorter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Evaluation activity in which learners recommend a chat interface, a hosted API, or a local open-weight model for each of eight illustrative research scenarios and name the deciding factor. Each recommendation gets one attempt with immediate feedback and a reason; the run ends with a score out of 8, a mastery statement at 6 of 8, and the misconception exposed by each missed scenario.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/model-choice-scenario-sorter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Choosing an access path for a language model in research work",
+    "learningObjectives": [
+      "Recommend one of three access paths, chat interface, hosted API, or local open-weight model, for each of eight research scenarios, with at least 6 of 8 recommendations matching the reasoning in the chapter",
+      "Name the single deciding factor for each recommendation: privacy or data policy, scale and automation, reproducibility over time, or capability and effort"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "recommend",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Chat interface, API access, token cost, latency, and rate limit",
+      "Open-weight model, local model, and model version drift"
+    ],
+    "concepts": [
+      "API Access",
+      "Token Cost",
+      "Latency",
+      "Rate Limit",
+      "Model Selection",
+      "Open Weight Model",
+      "Local Model",
+      "Model Version Drift"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 775,
+      "drawHeight": 660,
+      "controlHeight": 115
+    },
+    "iframeHeight": 777,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML selects and buttons reachable with the Tab key; correct and incorrect feedback uses words and check or X symbols as well as a blue/orange color-blind-safe palette; all body text is 16 px."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Access path",
+      "purpose": "Chooses Chat interface, Hosted API, or Local open-weight model for the current scenario. Disabled after Submit."
+    },
+    {
+      "type": "select",
+      "label": "Deciding factor",
+      "purpose": "Chooses Privacy or data policy, Scale and automation, Reproducibility over time, or Capability and effort. Feedback only; not scored. Disabled after Submit."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the single attempt for the current scenario. Enabled only when both an access path and a deciding factor are chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Scenario / See Score",
+      "purpose": "Enabled after Submit. Advances to the next scenario, and after scenario 8 shows the score summary."
+    },
+    {
+      "type": "button",
+      "label": "More Missed Scenarios",
+      "purpose": "Shown only on the summary when the missed-scenario list does not fit on one page; pages through it."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Scenario-based recommendation with one attempt per item, immediate explanatory feedback, and misconception-linked review of misses",
+    "keyQuestions": [
+      "Which access path would you recommend, and why?",
+      "Can the data leave the site?",
+      "Must the task run over many inputs from a script?",
+      "Must the result be reproducible with the identical model years from now?"
+    ],
+    "commonMisconceptions": [
+      "A local model is always the safest or cheapest choice.",
+      "The strongest hosted model is the right choice for every task.",
+      "A chat interface is adequate for any task because the model is the same."
+    ],
+    "assessmentOpportunities": [
+      "First-attempt score of at least 6 of 8 access paths matching the answer key is evidence of mastery",
+      "Comparison of the named deciding factor with the factor the reasoning turns on (not scored)",
+      "Learner explains each missed scenario using the misconception it exposes"
+    ]
+  },
+  "chapter": "03-models-and-prompt-basics"
+}

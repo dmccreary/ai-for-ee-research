@@ -1151,6 +1151,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1687,7 +1847,7 @@ Before you run a batch, run five items and read the usage counts the API returns
 <p>Type: microsim
 <strong>sim-id:</strong> model-choice-scenario-sorter<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> recommend<br/>
 <strong>Learning Objective:</strong> The learner will recommend one of three access paths, chat interface, hosted API, or local open-weight model, for each of eight research scenarios, with at least 6 of 8 recommendations matching the reasoning in Content.</p>
@@ -1780,6 +1940,9 @@ Before you run a batch, run five items and read the usage counts the API returns
 <p><strong>Starting State:</strong> Scenario 1 is shown with no path chosen. The question on screen is "Which access path would you recommend, and why?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that local open-weight models fit data that cannot leave the site, offline work, and reproducibility, that hosted APIs fit scripted batches, and that a chat interface fits one-off exploration. The chapter's worked cost example is 200 abstracts costing 0.75 dollars at the stated illustrative prices.</p>
 </details>
+<iframe src="../../sims/model-choice-scenario-sorter/main.html" height="777px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Model Choice Scenario Sorter. <a href="../../sims/model-choice-scenario-sorter/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="adding-your-own-documents-embeddings-vector-search-and-retrieval">Adding Your Own Documents: Embeddings, Vector Search, and Retrieval<a class="headerlink" href="#adding-your-own-documents-embeddings-vector-search-and-retrieval" title="Permanent link">&para;</a></h2>
 <p>A model does not know your lab's notebook, your private papers, or last month's preprints. The usual remedy is not to retrain the model but to <em>retrieve</em> the relevant passages and place them in the prompt. Three concepts make this work, and they are best taken in order.</p>
 <p>An <strong>embedding</strong> is a list of numbers, a vector, that represents the meaning of a piece of text, produced by a model trained so that texts with similar meaning receive vectors that point in similar directions. A real embedding has hundreds to thousands of numbers. Two sentences that share no words, such as "calibrating comparator offset" and "removing input-referred bias in a latch", can still land close together, because the vectors encode meaning and not spelling.</p>
@@ -1796,7 +1959,7 @@ Before you run a batch, run five items and read the usage counts the API returns
 <p>Type: microsim
 <strong>sim-id:</strong> embedding-vector-search-explorer<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/Digital-Transformation-with-AI-Spring-2026/tree/main/docs/sims/vector-similarity<br/>
 <strong>Bloom Level:</strong> Understand<br/>
 <strong>Bloom Verb:</strong> infer<br/>
@@ -1921,6 +2084,9 @@ Before you run a batch, run five items and read the usage counts the API returns
 <p><strong>Starting State:</strong> Query 1 is shown with the six passage vectors and no ranking. The question on screen is "Which two passages will vector search return?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter's worked example gives a query vector (0.90, 0.25), passage d1 (0.95, 0.20) with cosine 0.998, and passage d3 (0.15, 0.95) with cosine 0.415. It states that search always returns results and that a threshold guards against weak matches.</p>
 </details>
+<iframe src="../../sims/embedding-vector-search-explorer/main.html" height="917px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Embedding Vector Search Explorer. <a href="../../sims/embedding-vector-search-explorer/main.html">Open it fullscreen</a>.</em></p>
 <div class="admonition mascot-warning">
 <p class="admonition-title">Retrieved Does Not Mean Relevant</p>
 <p><img alt="Volt warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
@@ -2021,7 +2187,7 @@ Notice what the format buys you beyond tidiness. Once the answer has a named str
 <p>Type: microsim
 <strong>sim-id:</strong> prompt-component-sorter<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/prompt-architecture-builder<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> distinguish<br/>
@@ -2118,6 +2284,9 @@ Notice what the format buys you beyond tidiness. Once the answer has a named str
 <p><strong>Starting State:</strong> The assembled prompt is shown with sentence 1 highlighted. The question on screen is "Which component of the prompt does this sentence carry?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter's worked prompt contains a role, a length constraint of at most 120 words, a source constraint, an escape constraint, a table output format with six named columns, and one illustrative example row. The chapter states that role prompting sets viewpoint and does not add knowledge.</p>
 </details>
+<iframe src="../../sims/prompt-component-sorter/main.html" height="767px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Prompt Component Sorter. <a href="../../sims/prompt-component-sorter/main.html">Open it fullscreen</a>.</em></p>
 <div class="admonition mascot-encourage">
 <p class="admonition-title">Your First Prompts Will Be Vague</p>
 <p><img alt="Volt encouraging" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />

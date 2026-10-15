@@ -1,0 +1,97 @@
+{
+  "title": "Data Sensitivity Sorter for AI Tools",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Judgment activity in which learners decide which class of AI tool each of eight items of research data may be given to under a four-class illustrative data classification: Class 0 Public, Class 1 Internal, Class 2 Unpublished, and Class 3 Obligated. Each item has one attempt in a fixed order with feedback naming the item's class and the reason. The run ends with a score out of 8, a mastery statement at 7 of 8, and the eight items grouped by class.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/data-sensitivity-sorter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Classifying research data before giving it to AI tools",
+    "learningObjectives": [
+      "Judge which class of AI tool an item of research data may be given to under a four-class illustrative policy, for eight items, with at least 7 of 8 correct",
+      "Recognize unpublished results, vendor files under NDA, and participants' personal data as restricted even when they are not secret"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Privacy, confidential data, unpublished results, and data governance from the section Privacy, Confidentiality, and Governance of Chapter 18",
+      "The four data classes of the illustrative classification in Table 1 of Chapter 18"
+    ],
+    "concepts": [
+      "Privacy",
+      "Confidential Data",
+      "Unpublished Results",
+      "Data Governance",
+      "Local Model",
+      "Hosted AI Tool"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 810,
+      "drawHeight": 730,
+      "controlHeight": 80
+    },
+    "iframeHeight": 812,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the tool-class list and buttons are native HTML controls reachable with the Tab key; correct and incorrect feedback uses words and check-mark or X symbols as well as color, and the item's class is marked with an arrow and the words (this item) as well as an outline; the color pair is the color-blind-safe Okabe-Ito blue and vermillion; the base text size is chosen per width from 18 px down to 14 px (13 px only below about 340 px wide) so that every state fits."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose a tool class...",
+      "purpose": "Chooses one of the four tool classes: Any tool; Approved hosted tool or local; Local model, or hosted with the advisor's approval; Local model only, if the agreement allows. Disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen tool class for the current item (one attempt per item). Enabled once a tool class is chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Item / See Score",
+      "purpose": "Enabled after the answer is submitted. Advances to the next item, and after item 8 shows the score, the mastery statement, and the items grouped by class."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Four-way judgment of concrete research data against a stated classification, with one attempt per item, immediate feedback naming the class, and a summary grouping the items by class",
+    "keyQuestions": [
+      "Which tools may receive this?",
+      "Is the item public, internal, unpublished, or under an obligation such as an NDA, a license, export control, or participant consent?",
+      "If the item falls in two classes, which is the more restrictive one?"
+    ],
+    "commonMisconceptions": [
+      "Only secret data are sensitive",
+      "Unpublished results are fine to share if they are not under an NDA",
+      "If a file is on a shared drive it may be given to any tool"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 items answered with the answer-key tool class on the first attempt is evidence of mastery",
+      "Reading the classification table is exploration and is not evidence of mastery"
+    ]
+  },
+  "chapter": "18-responsible-ethical-use"
+}

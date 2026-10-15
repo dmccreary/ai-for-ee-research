@@ -1,0 +1,97 @@
+{
+  "title": "Paper Section Sorter",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Classification activity in which learners place ten illustrative sentences from one invented engineering paper into one of six sections: Abstract, Introduction, Related work, Method, Results, or Discussion, by the reader question each sentence answers. Sentences come in a fixed order with one attempt each; every submission gets Correct or This belongs in feedback with a one-sentence reason, and the run ends with a score out of 10, a mastery statement at 8 of 10, and the sentences grouped by section.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/paper-section-sorter/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Structure of an engineering research paper",
+    "learningObjectives": [
+      "Classify each of ten sentences from an engineering paper into the section where it belongs, with at least 8 of 10 classified correctly",
+      "Explain a sentence's function by the reader question it answers"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomVerb": "classify",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "The sections of a paper and the reader question each answers, from the section Structure, Outline, and Abstract in Chapter 15"
+    ],
+    "concepts": [
+      "Paper Structure",
+      "Abstract Writing",
+      "Outline Generation",
+      "Manuscript Preparation"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 740,
+      "drawHeight": "responsive (740 minus the control region)",
+      "controlHeight": "44 to 116 (one to three rows of buttons, by width)"
+    },
+    "iframeHeight": 742,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and activated with Enter or Space; the chosen section button sets aria-pressed; keyboard focus moves to the next usable button after Submit and Next; correct and incorrect feedback uses words and check or X symbols as well as an Okabe-Ito color-blind-safe palette; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Abstract, Introduction, Related work, Method, Results, Discussion",
+      "purpose": "Six section buttons. Pressing one chooses that section for the current sentence; the choice can be changed until Submit. Disabled after the sentence is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Enabled once a section is chosen. Commits the single attempt for the current sentence and shows the feedback."
+    },
+    {
+      "type": "button",
+      "label": "Next / See Score",
+      "purpose": "Enabled after a submission. Advances to the next sentence in the fixed order, and after sentence 10 shows the score and the sentences grouped by section."
+    },
+    {
+      "type": "button",
+      "label": "More Sections",
+      "purpose": "Shown only on the summary screen when the sentences grouped by section do not fit on one page; pages through the groups."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Forced six-way classification of sentences from one invented paper, with one attempt per item and immediate explanatory feedback",
+    "keyQuestions": [
+      "Which reader question does this sentence answer?"
+    ],
+    "commonMisconceptions": [
+      "Any sentence with a number is a result",
+      "A contribution statement belongs only in the abstract",
+      "A limitation belongs in the conclusion and not in the discussion"
+    ],
+    "assessmentOpportunities": [
+      "At least 8 of 10 sentences classified correctly on the first attempt is evidence of mastery",
+      "Reading the table of sections is exploration and is not evidence"
+    ]
+  },
+  "chapter": "15-manuscript-preparation"
+}

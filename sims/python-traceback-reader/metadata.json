@@ -1,0 +1,93 @@
+{
+  "title": "Python Traceback Reader",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Diagnosis activity in which learners examine five illustrative Python tracebacks, each condensed to the file, line, function, and exception message, and choose one of three diagnoses. The order of the diagnoses is shuffled independently for each learner and each traceback. One attempt per traceback in a fixed order, after which the sim reveals the correct diagnosis and the reason and highlights the part of the traceback that determines it. The run ends with a score out of 5 and a mastery statement at 4 of 5.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/python-traceback-reader/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Reading Python error messages and tracebacks",
+    "learningObjectives": [
+      "Examine five Python tracebacks and identify the cause of each from the exception type, message, and failing line, with at least 4 of 5 correct"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "examine",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Error message",
+      "Traceback",
+      "Exception type",
+      "The rule of reading a traceback from the bottom"
+    ],
+    "concepts": [
+      "Error Message",
+      "Traceback",
+      "Exception Type",
+      "Python",
+      "Analysis Script",
+      "Dependency Management"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 760,
+      "drawHeight": 680,
+      "controlHeight": 80
+    },
+    "iframeHeight": 762,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key, with aria-label carrying the full diagnosis text and aria-pressed for the current choice; the deciding part of the traceback is shown with an underline as well as a gold background; correct and incorrect feedback uses words, check or X symbols, and solid or dashed outlines as well as a blue/brown color pair; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Diagnosis A / Diagnosis B / Diagnosis C",
+      "purpose": "Chooses one of the three diagnoses shown in the drawing area in this learner's shuffled order. The choice can be changed until Submit; after Submit the buttons are disabled and marked with a check mark (correct diagnosis) or an X (wrong pick)."
+    },
+    {
+      "type": "button",
+      "label": "Submit / Next Traceback / See Score",
+      "purpose": "Submit commits the chosen diagnosis (one attempt) and is enabled only after a choice. It then becomes Next Traceback, and after the fifth traceback See Score, which shows the score and the mastery statement."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Evidence-based attribution of an error to its source, with plausible distractors and a highlighted reveal of the deciding evidence",
+    "keyQuestions": [
+      "What does this error tell you about the cause?",
+      "What does the last line of the traceback name?",
+      "Was this error raised deliberately by the script to reject bad input?",
+      "Does the error point to the code, the input data, or the environment?"
+    ],
+    "commonMisconceptions": [
+      "The first line of a traceback shows the problem",
+      "A ValueError that the code raised on purpose is a bug in the code",
+      "Every error is a code defect"
+    ],
+    "assessmentOpportunities": [
+      "At least 4 of 5 diagnoses matching the answer key on the first attempt is evidence of mastery"
+    ]
+  },
+  "chapter": "12-data-analysis-scripting"
+}

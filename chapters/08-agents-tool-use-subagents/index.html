@@ -1094,6 +1094,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1577,7 +1737,7 @@ Until now the model has only produced text. In this chapter it starts to read yo
 <p>Type: microsim
 <strong>sim-id:</strong> agent-loop-stepper<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Understand<br/>
 <strong>Bloom Verb:</strong> infer<br/>
 <strong>Learning Objective:</strong> The learner will infer the agent's next tool call at each of five steps of a loop that diagnoses a low ENOB result, given the task and the results observed so far, with at least 4 of 5 correct.</p>
@@ -1612,37 +1772,37 @@ Until now the model has only produced text. In this chapter it starts to read yo
 <tr>
 <td>2</td>
 <td>Files: data/raw/capture-07.csv, scripts/enob.py, docs/spec.md.</td>
+<td>list_files on data/raw</td>
 <td>read_file scripts/enob.py</td>
 <td>read_file data/raw/capture-07.csv</td>
-<td>list_files on data/raw</td>
-<td>A</td>
+<td>B</td>
 <td>The result is computed by the script, so the method is the first thing to inspect.</td>
 </tr>
 <tr>
 <td>3</td>
 <td>enob.py computes SNDR over all FFT bins, including bin 0 (DC).</td>
-<td>run_python to print the DC bin magnitude of capture-07.csv</td>
-<td>rewrite enob.py without being asked</td>
 <td>read_file docs/spec.md</td>
-<td>A</td>
+<td>rewrite enob.py without being asked</td>
+<td>run_python to print the DC bin magnitude of capture-07.csv</td>
+<td>C</td>
 <td>A hypothesis has appeared (DC counted as noise), and a cheap measurement tests it before anything is changed.</td>
 </tr>
 <tr>
 <td>4</td>
 <td>DC bin magnitude is 40 times larger than the next-largest non-signal bin.</td>
+<td>report success</td>
 <td>run_python to compute ENOB with the DC bin excluded, without editing the file</td>
 <td>edit enob.py and overwrite the old result</td>
-<td>report success</td>
-<td>A</td>
+<td>B</td>
 <td>The agent tests the fix on a copy and compares, so the original file and result stay intact.</td>
 </tr>
 <tr>
 <td>5</td>
 <td>ENOB with DC excluded is 9.1 bits.</td>
-<td>report the cause and the evidence, and propose the change for approval</td>
 <td>silently apply the change to enob.py</td>
 <td>rerun the capture</td>
-<td>A</td>
+<td>report the cause and the evidence, and propose the change for approval</td>
+<td>C</td>
 <td>The task was to find why, and a change to the project file is the researcher's decision.</td>
 </tr>
 </tbody>
@@ -1660,6 +1820,9 @@ Until now the model has only produced text. In this chapter it starts to read yo
 <p><strong>Starting State:</strong> The task and the three tools are shown with no results yet. The question on screen is "What should the agent do first?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that the model emits a tool call and the harness executes it, that results are returned to the context, and that the loop repeats until the task is complete or a limit is reached.</p>
 </details>
+<iframe src="../../sims/agent-loop-stepper/main.html" height="847px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Agent Loop Stepper. <a href="../../sims/agent-loop-stepper/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="reaching-files-shells-and-code">Reaching Files, Shells, and Code<a class="headerlink" href="#reaching-files-shells-and-code" title="Permanent link">&para;</a></h2>
 <p>Most useful tools for research fall into a few families, and each one carries its own risk. It is worth taking each in turn, because the risk of an agent is the sum of what its tools can do.</p>
 <p><strong>File access</strong> is the ability to read, create, edit, and delete files. Reading is the most common and usually the safest. Writing changes the project and should be covered by version control, which turns an unwanted edit into a one-command undo. The scope matters: an agent confined to the project directory can do far less damage than one that can write anywhere your user account can.</p>
@@ -1794,7 +1957,7 @@ A common trap is turning off all permission checks because the prompts are tedio
 <p>Type: microsim
 <strong>sim-id:</strong> agent-permission-boundary-judge<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Template:</strong> https://github.com/dmccreary/ai-persona-testing/tree/main/docs/sims/agent-autonomy-boundary<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> judge<br/>
@@ -1926,6 +2089,9 @@ A common trap is turning off all permission checks because the prompts are tedio
 <p><strong>Starting State:</strong> The policy and action 1 are shown with no choice made. The question on screen is "What does the policy say about this action?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that permissions are policy and sandboxing is enforcement, that actions outside the project, credentials, and downloaded code should be denied, that irreversible or outward-bound actions should need approval, and that raw data should be protected.</p>
 </details>
+<iframe src="../../sims/agent-permission-boundary-judge/main.html" height="764px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Agent Permission Boundary Judge. <a href="../../sims/agent-permission-boundary-judge/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="reaching-outside-mcp-data-sources-and-skills-with-scripts">Reaching Outside: MCP, Data Sources, and Skills With Scripts<a class="headerlink" href="#reaching-outside-mcp-data-sources-and-skills-with-scripts" title="Permanent link">&para;</a></h2>
 <p>An agent's built-in tools cover files, a shell, and the web. Research needs more: a lab database, a reference manager, a ticket tracker, a simulator's job queue. The <strong>Model Context Protocol</strong> (MCP) is an open standard that defines how an agent connects to external tools and data in a uniform way, so that a capability written once can be used by any agent that speaks the protocol. An <strong>MCP server</strong> is a program that exposes a set of tools, and sometimes data, over this protocol. The agent, as the client, discovers the server's tools and their definitions and then calls them like any other tool.</p>
 <p>The benefit is reuse. Rather than building a custom integration for each agent, you run or install an MCP server for the service, and the tool definitions arrive in the standard form. The cost is a larger attack surface: every connected server is code that runs with some access, and its tool descriptions and results flow into the model's context. Treat a server like any dependency. Prefer ones you can read, give each the narrowest credentials that work, and know what it can reach.</p>

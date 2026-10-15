@@ -1103,6 +1103,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1609,7 +1769,7 @@ Put captured files in <code>data/raw/</code>, make them read-only, and never wri
 <p>Type: microsim
 <strong>sim-id:</strong> data-cleaning-decision-simulator<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> judge<br/>
 <strong>Learning Objective:</strong> The learner will judge, for each of eight anomalies in a batch of measurements, whether to keep, exclude with a log, correct and log, or remeasure, with at least 7 of 8 correct.</p>
@@ -1701,6 +1861,9 @@ Put captured files in <code>data/raw/</code>, make them read-only, and never wri
 <p><strong>Starting State:</strong> Anomaly 1 is shown with the four actions and no choice made. The question on screen is "What should happen to this data?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states four actions (keep, exclude with log, correct and log, remeasure), that removal needs a documented cause, that an undocumented outlier is kept and investigated, and that raw files are never edited.</p>
 </details>
+<iframe src="../../sims/data-cleaning-decision-simulator/main.html" height="752px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Measurement Data Cleaning Decision Simulator. <a href="../../sims/data-cleaning-decision-simulator/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="exploring-analyzing-and-plotting">Exploring, Analyzing, and Plotting<a class="headerlink" href="#exploring-analyzing-and-plotting" title="Permanent link">&para;</a></h2>
 <p><strong>Exploratory analysis</strong> is looking at the data before computing anything on it: its size, ranges, distributions, and shape. For a captured ADC record that means the number of samples, the minimum and maximum code, the fraction of samples at full scale, a plot of the codes against time, and a plot of the spectrum. These steps are cheap, and they catch the problems that make a downstream number meaningless: a clipped waveform, a record that is too short, a signal at the wrong frequency.</p>
 <p><strong>Statistical analysis</strong> is the quantification of what the data show and how sure you can be. For measurements the basics are enough to start: the mean and standard deviation across repeated runs, a confidence interval, and the number of independent samples behind a claim. State the sample size beside every statistic. A mean of nine chips and a mean of three hundred are different claims, and an agent will happily write both in the same sentence.</p>
@@ -1744,7 +1907,7 @@ A common trap is a cleaning step that happens to make the number better. It happ
 <p>Type: microsim
 <strong>sim-id:</strong> python-traceback-reader<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> examine<br/>
 <strong>Learning Objective:</strong> The learner will examine five Python tracebacks and identify the cause of each from the exception type, message, and failing line, with at least 4 of 5 correct.</p>
@@ -1827,6 +1990,9 @@ A common trap is a cleaning step that happens to make the number better. It happ
 <p><strong>Starting State:</strong> Traceback 1 is shown with three diagnoses and none chosen. The question on screen is "What does this error tell you about the cause?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that a traceback is read from the bottom, that the last line names the failure, that the nearest line of your own code is where to look first, and that a deliberately raised error points to the input.</p>
 </details>
+<iframe src="../../sims/python-traceback-reader/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Python Traceback Reader. <a href="../../sims/python-traceback-reader/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="environments-and-notebooks">Environments and Notebooks<a class="headerlink" href="#environments-and-notebooks" title="Permanent link">&para;</a></h2>
 <p><strong>Dependency management</strong> is recording and controlling the libraries a script needs, so that it runs the same way tomorrow and on another machine. The minimum is a virtual environment, an isolated set of installed packages for one project, and a file listing the packages and their versions, for example a <code>requirements.txt</code> generated with <code>pip freeze</code>. Without this, a script that worked in March fails in October because a library changed, and the failure looks like a bug in your analysis.</p>
 <p>A <strong>notebook environment</strong> is an interactive document that mixes code, results, and text, with the code run in cells. A <strong>Jupyter notebook</strong> is the standard form: a file of cells that run in a live session. Notebooks are excellent for exploration, because you see each result as you build it. They have two weaknesses that matter for research. The state of a session depends on the order in which cells were run, so a notebook can show results that its own code cannot reproduce. And the file format mixes code and output, which makes diffs hard to read.</p>

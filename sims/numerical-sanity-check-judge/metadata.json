@@ -1,0 +1,99 @@
+{
+  "title": "Numerical Sanity Check Judge",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Judgment activity in which learners give each of eight illustrative reported results one of five verdicts: Plausible, Exceeds a limit, Disagrees with a hand calculation, Violates scaling, or Impossible value. Each result gets one attempt in a fixed order; the sim then reveals the correct verdict, the reason, and the quick calculation that exposes the problem. The run ends with a score out of 8 and whether the mastery threshold of 7 was met.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/numerical-sanity-check-judge/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Engineering",
+    "topic": "Numerical sanity checks for AI-written research code",
+    "learningObjectives": [
+      "Judge each of eight reported results as plausible or as violating one of four kinds of sanity check, with at least 7 of 8 judged correctly"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "judge",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Numerical sanity check and its four failing kinds: exceeds a limit, disagrees with a hand calculation, violates scaling, impossible value",
+      "The RC low-pass cutoff f_c = 1 / (2 pi R C)"
+    ],
+    "concepts": [
+      "Numerical Sanity Check",
+      "Silent Error",
+      "Hand Calculation",
+      "Effective Number of Bits",
+      "Linearity and Scaling"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 720,
+      "drawHeight": "720 minus controlHeight",
+      "controlHeight": "rows x 35 + 10 (80 to 150, depending on width)"
+    },
+    "iframeHeight": 722,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons and a checkbox reachable with the Tab key and activated with Enter or Space; the chosen verdict is marked with a filled circle and aria-pressed; correct and incorrect feedback uses words and check or cross symbols as well as a blue or orange border; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Plausible / Exceeds a limit / Disagrees with a hand calculation / Violates scaling / Impossible value",
+      "purpose": "Five verdict buttons. Choose one verdict for the current result; the choice can be changed until it is submitted. Disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen verdict as the single attempt for the current result and shows the feedback."
+    },
+    {
+      "type": "button",
+      "label": "Next / See Score",
+      "purpose": "Enabled after a verdict is submitted. Advances to the next result, and after result 8 shows the score."
+    },
+    {
+      "type": "checkbox",
+      "label": "Show the checks",
+      "purpose": "Shows a one-line hint about each verdict. Exploration only; it does not affect the score."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Single-attempt judgment items with immediate explanatory feedback and a revealed quick calculation",
+    "keyQuestions": [
+      "Is this result plausible, and if not, which check does it fail?",
+      "What limit, hand calculation, or scaling law must this result obey?"
+    ],
+    "commonMisconceptions": [
+      "A result printed to many digits is precise and therefore right",
+      "A result that is merely different from expectation is an error",
+      "A simulation result can be trusted because the simulator is well known"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 verdicts correct on the first attempt is evidence of mastery",
+      "Learner writes the quick calculation for each result before submitting"
+    ]
+  },
+  "chapter": "13-simulation-testing-code"
+}

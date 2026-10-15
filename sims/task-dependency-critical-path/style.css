@@ -1,0 +1,322 @@
+/* Task Dependency Critical Path Scheduler - vis-network-tutorial layout
+ * =====================================================================
+ * Wide (>= 720px): dependency graph on the left, question panel on the right.
+ * Narrow (< 720px): title, graph, and question panel stacked and scrolled together.
+ * The whole page fits inside the iframe height (CANVAS_HEIGHT + 2);
+ * the graph area absorbs any spare height so nothing scrolls.
+ *
+ * Colors are from the Okabe-Ito color-blind-safe palette (blue / orange).
+ * Critical tasks also carry a star and the word "critical", a thick border,
+ * and thick solid arrows, so meaning never depends on color alone.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 6px 10px 4px 10px;
+    gap: 6px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title-bar {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #333;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+/* ===========================================
+   TWO-COLUMN LAYOUT
+   =========================================== */
+.layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.left-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.graph-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 200px;
+    background-color: white;
+    border: 1px solid #c9d6e3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+}
+
+.legend {
+    flex: 0 0 auto;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+}
+
+.legend [hidden] { display: none; }
+
+.lg-crit {
+    font-weight: bold;
+    color: #8a3c00;
+    border: 2px solid #d55e00;
+    border-radius: 4px;
+    padding: 0 3px;
+    background: #fdebd3;
+}
+
+/* ===========================================
+   RIGHT PANEL (Questions)
+   =========================================== */
+.right-panel {
+    flex: 0 0 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 8px 10px;
+    min-height: 0;
+    overflow-y: auto;   /* fallback only; content is sized to fit at >= 720px */
+}
+
+.q-step {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003f73;
+}
+
+.question {
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: bold;
+}
+
+.answer-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.answer-row[hidden], .task-picks[hidden], .t3-row[hidden], .btn[hidden] { display: none; }
+
+#answer-input {
+    width: 90px;
+    font-size: 17px;
+    padding: 5px 8px;
+    border: 2px solid #0072b2;
+    border-radius: 6px;
+}
+
+#answer-input:disabled {
+    background: #eef2f5;
+    border-color: #9cb3c6;
+    color: #333;
+}
+
+.unit { font-size: 16px; }
+
+.task-picks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pick-btn {
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 50px;
+    padding: 5px 6px;
+    border: 2px solid #0072b2;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #003f73;
+    cursor: pointer;
+}
+
+.pick-btn[aria-pressed="true"] {
+    background: #0072b2;
+    color: #ffffff;
+}
+
+.pick-btn:disabled { cursor: default; }
+.pick-btn:disabled[aria-pressed="false"] { border-color: #9cb3c6; color: #555; }
+
+.t3-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    padding: 5px 8px;
+    border: 2px solid #d55e00;
+    border-radius: 6px;
+    background: #fdf5ea;
+}
+
+.t3-row input { flex: 1 1 auto; min-width: 80px; }
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:focus-visible, .pick-btn:focus-visible, #answer-input:focus-visible,
+#detail-select:focus-visible, #t3-slider:focus-visible {
+    outline: 3px solid #56b4e9;
+    outline-offset: 2px;
+}
+
+.btn-primary { background-color: #0072b2; color: white; }
+.btn-primary:hover { background-color: #005a8c; }
+.btn-primary:disabled { background-color: #9cc3dd; cursor: not-allowed; }
+
+.btn-secondary { background-color: #616161; color: white; }
+.btn-secondary:hover { background-color: #4a4a4a; }
+
+.feedback {
+    font-size: 15px;
+    line-height: 1.38;
+}
+
+.feedback:empty { display: none; }
+
+.fb {
+    padding: 6px 9px;
+    border-radius: 6px;
+    border-left: 5px solid #0072b2;
+    background: #eef6fc;
+}
+
+.fb.fb-wrong {
+    border-left-color: #d55e00;
+    border-left-style: dashed;
+    background: #fdf0e1;
+}
+
+.fb.fb-note {
+    border-left-color: #888;
+    background: #f3f3f3;
+}
+
+.fb + .fb { margin-top: 5px; }
+
+.fb-final { font-weight: bold; }
+
+.score {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.explore {
+    margin-top: auto;
+    border-top: 1px solid #d5dee8;
+    padding-top: 6px;
+    font-size: 15px;
+}
+
+.explore-label { font-weight: bold; margin-right: 4px; }
+
+#detail-select {
+    font-size: 15px;
+    padding: 2px 4px;
+}
+
+.detail {
+    margin-top: 4px;
+    line-height: 1.35;
+    min-height: 2.7em;
+}
+
+.back-link {
+    flex: 0 0 auto;
+    font-size: 14px;
+    color: #005a8c;
+}
+
+/* ===========================================
+   RESPONSIVE: stack below 720px
+   =========================================== */
+@media (max-width: 719px) {
+    .container { padding: 4px 6px 2px 6px; gap: 4px; }
+    .title { font-size: 18px; }
+    .subtitle { font-size: 15px; }
+    /* The tall dependency graph cannot be read at phone width inside a fixed
+       iframe height, so below 720px the graph keeps a readable height and the
+       stacked graph + question panel scroll together inside the page. */
+    .layout { flex-direction: column; gap: 4px; overflow-y: auto; }
+    .left-col { flex: 0 0 auto; }
+    .graph-wrap { flex: 0 0 auto; height: 540px; }
+    .right-panel { flex: 0 0 auto; padding: 6px 8px; gap: 5px; }
+    .question { font-size: 16px; }
+    .feedback { font-size: 14px; }
+    .btn { padding: 6px 11px; font-size: 14px; }
+    .pick-btn { min-width: 42px; padding: 4px 4px; font-size: 14px; }
+    .explore { font-size: 14px; }
+    .detail { min-height: 0; }
+}

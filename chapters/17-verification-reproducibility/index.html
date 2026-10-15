@@ -1103,6 +1103,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1576,7 +1736,7 @@ Notice that a verification always has an object: the specification, the standard
 <p>Type: microsim
 <strong>sim-id:</strong> verification-method-matcher<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> recommend<br/>
 <strong>Learning Objective:</strong> The learner will recommend which of five verification methods best fits each of eight AI-assisted claims, with at least 7 of 8 matching the answer in Content.</p>
@@ -1659,6 +1819,9 @@ Notice that a verification always has an object: the specification, the standard
 <p><strong>Starting State:</strong> Claim 1 is shown with five methods and none chosen. The question on screen is "What could be wrong with this claim, and which check would reveal it?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that an independent check has different failure causes from the thing checked, that cross-model agreement is weak evidence while disagreement is a useful flag, and that a primary source check is made against the original document.</p>
 </details>
+<iframe src="../../sims/verification-method-matcher/main.html" height="712px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Verification Method Matcher. <a href="../../sims/verification-method-matcher/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="working-test-first-and-replicating">Working Test-First and Replicating<a class="headerlink" href="#working-test-first-and-replicating" title="Permanent link">&para;</a></h2>
 <p><strong>Test-driven research</strong> is the practice, borrowed from software, of deciding in advance what result would count as success or failure and writing it down before the experiment or analysis is run. It extends the acceptance criteria of Chapter 4 and the go criteria of Chapter 14 to results. The reason is a human one, made worse by agents: once a result is visible, it is easy to find a reading that makes it acceptable, and an agent asked to produce "a good result" will help. A criterion written first cannot be adjusted to fit.</p>
 <p><strong>Result replication</strong> is obtaining the result again. There are two levels, and both are worth distinguishing. <em>Computational</em> replication reruns your own analysis from the raw data in a clean environment, to confirm that the result is a property of the code and data and not of a leftover file or an unrecorded setting. <em>Independent</em> replication has another person, another instrument, or another dataset produce the result from the description, which also tests the description. The first is cheap and should be routine. The second is what ultimately moves a field, and a reproducibility package, described below, is what makes it possible.</p>
@@ -1679,7 +1842,7 @@ To test whether an answer reflects the evidence or your framing, ask the questio
 <p>Type: microsim
 <strong>sim-id:</strong> sycophancy-spotter<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> distinguish<br/>
 <strong>Learning Objective:</strong> The learner will distinguish, among six exchanges between a researcher and a model, the replies that are sycophantic from those that are calibrated, with at least 5 of 6 classified correctly.</p>
@@ -1750,6 +1913,9 @@ To test whether an answer reflects the evidence or your framing, ask the questio
 <p><strong>Starting State:</strong> Exchange 1 is shown with two choices. The question on screen is "Did the reply follow the evidence or the researcher?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that sycophancy is agreeing with the user and changing an answer under pushback without new evidence, and that a change of answer is a warning unless the pushback contained evidence.</p>
 </details>
+<iframe src="../../sims/sycophancy-spotter/main.html" height="652px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Sycophancy Spotter. <a href="../../sims/sycophancy-spotter/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="records-that-let-others-check">Records That Let Others Check<a class="headerlink" href="#records-that-let-others-check" title="Permanent link">&para;</a></h2>
 <p>An <strong>audit trail</strong> is the chronological record of how a result came to be: the prompts given, the models and settings used, the tool calls and files changed, the decisions taken and by whom. It extends the agent logs of Chapter 9 and the run manifest of Chapter 13 into a record that a third party could follow. Its purpose is to answer, after the fact, "what exactly happened?" for a result you are about to rely on, or a result someone has questioned. Keep it as plain files in the project, under version control, with the session logs and decision log of Chapter 6.</p>
 <p>A <strong>reproducibility package</strong> is the set of materials that lets another person regenerate your results: the code at the version used, the raw data or instructions for obtaining them, the environment specification, the run manifest, a README with the exact commands, and the expected outputs with checksums so that a successful run can be recognized. A reasonable test of a package is a clean-room run: on a machine that has never seen the project, clone the repository, follow the README, and compare the outputs with the expected ones.</p>

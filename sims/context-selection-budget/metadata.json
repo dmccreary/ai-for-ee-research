@@ -1,0 +1,113 @@
+{
+  "title": "Context Selection Budget",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Budgeting activity in which learners give each of nine candidate context items the verdict include, compress, or omit for the task of checking whether a draft's reported ENOB is consistent with its measurement procedure. A running total is kept against a 6,500-token context budget (8,000-token window minus a 1,500-token completion reserve); over-budget submissions are refused, and the one accepted submission is scored out of 9 with the correct verdict and reason for every item. All numbers are illustrative.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/context-selection-budget/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Context selection and compression under a token budget",
+    "learningObjectives": [
+      "Prioritize nine candidate context items for a stated task by assigning each one the verdict include, compress, or omit, so that the total fits a stated token budget and at least 8 of 9 verdicts match the answer key",
+      "Apply the test \"would the answer change if this item were missing?\" to decide what enters the context window"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "bloomVerb": "prioritize",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Context window, context selection, summarization, context compression, and conversation history",
+      "The shared budget of prompt and completion tokens"
+    ],
+    "concepts": [
+      "Context Window",
+      "Context Selection",
+      "Summarization",
+      "Context Compression",
+      "Conversation History",
+      "Token Budget",
+      "Completion Reserve"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 920,
+      "drawHeight": 840,
+      "controlHeight": 80
+    },
+    "iframeHeight": 922,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons and drop-down lists reachable with the Tab key and activated with Enter or Space; meaning is carried by words and symbols (check mark, X, filled and open circles, the ▶ selection marker) as well as by a blue/orange color-blind-safe palette; body text is 16 px, with 14 px only for footnotes and meter labels."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Item",
+      "purpose": "Chooses which of the nine items the verdict buttons act on."
+    },
+    {
+      "type": "button",
+      "label": "Include",
+      "purpose": "Gives the selected item the verdict Include; it adds its size as is to the running total."
+    },
+    {
+      "type": "button",
+      "label": "Compress",
+      "purpose": "Gives the selected item the verdict Compress; enabled only for items that list a compressed size, which it adds to the total."
+    },
+    {
+      "type": "button",
+      "label": "Omit",
+      "purpose": "Gives the selected item the verdict Omit; it adds 0 tokens."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Enabled when all nine items have a verdict. Refused with \"Over budget by n tokens. Compress or omit something.\" when the total exceeds 6,500; otherwise scores the one submission."
+    },
+    {
+      "type": "button",
+      "label": "Next Page",
+      "purpose": "Shown after submission when the item feedback does not fit on one page; pages through it."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Constrained prioritization with a live running total, a refusal rule at the budget, and explanatory feedback after one scored submission",
+    "keyQuestions": [
+      "Would the answer change if this item were missing?",
+      "Which items can be compressed without losing what the task needs?",
+      "What does including an irrelevant document cost?"
+    ],
+    "commonMisconceptions": [
+      "More context is always better",
+      "A large irrelevant document is harmless if it fits",
+      "Summarizing history is optional because the model remembers the conversation"
+    ],
+    "assessmentOpportunities": [
+      "At least 8 of 9 verdicts matching the answer key, with the total within the 6,500-token budget, is evidence of mastery",
+      "Learner explains why the related-work section alone pushes an otherwise correct selection over the budget"
+    ]
+  },
+  "chapter": "04-context-engineering-prompting"
+}

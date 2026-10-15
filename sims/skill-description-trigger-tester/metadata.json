@@ -1,0 +1,97 @@
+{
+  "title": "Skill Description Trigger Tester",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Trigger-test activity in which learners read one illustrative skill description for checking SPICE netlists and decide, for eight user requests in a fixed order, whether an agent should load the skill. Each request gets one attempt, followed by Correct or the correct answer with a one-sentence reason. The run ends with a score out of 8, a mastery statement at 7 of 8, and the list of near-miss requests that share a keyword with the description but should not trigger.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/skill-description-trigger-tester/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Testing whether an agent skill description triggers on the right requests",
+    "learningObjectives": [
+      "Distinguish, for each of eight user requests, whether a stated skill description should trigger the skill or not, with at least 7 of 8 correct",
+      "Separate the task a request asks for from the vocabulary it shares with a skill description"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "distinguish",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "Skill description and skill triggering",
+      "Single-purpose skill",
+      "Trigger tests"
+    ],
+    "concepts": [
+      "Skill Description",
+      "Skill Triggering",
+      "Single-Purpose Skill",
+      "Trigger Tests",
+      "Skill Testing"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 615,
+      "drawHeight": 535,
+      "controlHeight": 80
+    },
+    "iframeHeight": 617,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; all controls are native HTML buttons reachable with the Tab key and expose aria-pressed for the selected answer; correct and incorrect feedback uses a color-blind-safe blue and vermillion pair together with check-mark and X symbols and words; text is 16 px, reduced to no less than 14 px only at narrow widths."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Should trigger",
+      "purpose": "Selects the answer Should trigger for the current request. Disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Should not trigger",
+      "purpose": "Selects the answer Should not trigger for the current request. Disabled after the answer is submitted."
+    },
+    {
+      "type": "button",
+      "label": "Submit / Next Request / See Score",
+      "purpose": "Submit commits the selected answer (one attempt per request). After submission the button advances to the next request, and after request 8 it shows the score."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Binary judgment on near-miss and covered requests with immediate explanatory feedback",
+    "keyQuestions": [
+      "Would an agent load this skill for this request?",
+      "Does the request ask for the task the description names?",
+      "Does the request name an input type the description covers?"
+    ],
+    "commonMisconceptions": [
+      "Any request that shares a keyword with the description should trigger the skill",
+      "A request that is about the same files but for a different task should trigger it",
+      "A skill should trigger on any request that mentions its domain"
+    ],
+    "assessmentOpportunities": [
+      "At least 7 of 8 correct on the first attempt is evidence of mastery",
+      "Learner names the shared keyword and the actual task of each near-miss request on the summary screen"
+    ]
+  },
+  "chapter": "07-designing-testing-skills"
+}

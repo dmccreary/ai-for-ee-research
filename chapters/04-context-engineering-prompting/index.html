@@ -1136,6 +1136,166 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1774,7 +1934,7 @@ Draft three acceptance criteria before you send the request, and include them in
 <p>Type: microsim
 <strong>sim-id:</strong> context-selection-budget<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Evaluate<br/>
 <strong>Bloom Verb:</strong> prioritize<br/>
 <strong>Learning Objective:</strong> The learner will prioritize nine candidate context items for a stated task by assigning each one the verdict include, compress, or omit, so that the total fits a stated token budget and at least 8 of 9 verdicts match Content.</p>
@@ -1885,6 +2045,9 @@ Draft three acceptance criteria before you send the request, and include them in
 <p><strong>Starting State:</strong> All nine items are shown with no verdict, and the total is 0 against the budget of 6,500. The question on screen is "Would the answer change if this item were missing?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that the test for including an item is whether the answer would change if it were absent, that summaries should be made for a purpose and numbers spot-checked, and that long sessions should be summarized or restarted with a short summary.</p>
 </details>
+<iframe src="../../sims/context-selection-budget/main.html" height="922px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Context Selection Budget. <a href="../../sims/context-selection-budget/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="prompt-injection">Prompt Injection<a class="headerlink" href="#prompt-injection" title="Permanent link">&para;</a></h2>
 <p>A <strong>prompt injection</strong> is text inside the material a model processes that is written to be taken as an instruction. It exploits the fact established in Chapter 2: to the model, a system instruction, your request, and a retrieved web page are all just text in the same window, and it has no reliable way to distinguish a command that came from you from a command that came from a document. Anything the model reads is an input channel, and anything the model can do is a capability an attacker may try to borrow.</p>
 <p>The risk grows with what the model can do. A chat assistant that only summarizes a hostile web page might be steered into a misleading summary. An agent with access to your files, your email, or a shell might be steered into exfiltrating data or running a command. For researchers the realistic sources are the ones agents are told to read: web pages, PDFs of papers, e-mail, issue trackers, and the README files and code comments of repositories you did not write.</p>
@@ -1907,7 +2070,7 @@ A common trap is giving an agent both a web page to read and access to a mailbox
 <p>Type: microsim
 <strong>sim-id:</strong> prompt-injection-spotter<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Analyze<br/>
 <strong>Bloom Verb:</strong> differentiate<br/>
 <strong>Learning Objective:</strong> The learner will differentiate, among eight text snippets that an agent has been asked to read, those that contain an injected instruction aimed at the model from those that are ordinary content, with at least 7 of 8 classified correctly.</p>
@@ -1999,6 +2162,9 @@ A common trap is giving an agent both a web page to read and access to a mailbox
 <p><strong>Starting State:</strong> Snippet 1 is shown with its source label and no classification. The question on screen is "Is this text trying to steer the model?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter states that injection is text in processed material written to be taken as an instruction, that imperative text addressed to a human reader is not an injection, and that the defenses are least privilege, separated channels, human approval for consequential actions, and treating output as untrusted.</p>
 </details>
+<iframe src="../../sims/prompt-injection-spotter/main.html" height="662px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Prompt Injection Spotter. <a href="../../sims/prompt-injection-spotter/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="reusable-prompts-templates-libraries-and-tests">Reusable Prompts: Templates, Libraries, and Tests<a class="headerlink" href="#reusable-prompts-templates-libraries-and-tests" title="Permanent link">&para;</a></h2>
 <p>When a prompt works, it is an asset, and it should be treated as one. A <strong>prompt template</strong> is a prompt with named placeholders for the parts that change, such as the paper text, the list of fields, or the audience, so that the same tested wording is reused with different inputs. A template for extracting a paper's design parameters might read as follows. The placeholders are in double braces, and <code>{{paper_text}}</code> is replaced with the document at run time.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are extracting design parameters for a comparison table.
@@ -2041,7 +2207,7 @@ It can feel excessive to build a test set for a prompt you wrote in ten minutes,
 <p>Type: microsim
 <strong>sim-id:</strong> prompt-chain-builder<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified<br/>
+<strong>Status:</strong> Built<br/>
 <strong>Bloom Level:</strong> Apply<br/>
 <strong>Bloom Verb:</strong> implement<br/>
 <strong>Learning Objective:</strong> The learner will implement a six-step prompt chain by placing the steps in an order that respects their dependencies and choosing a testable acceptance check for each step, with a valid order and at least 5 of 6 testable checks.</p>
@@ -2169,6 +2335,9 @@ It can feel excessive to build a test set for a prompt you wrote in ten minutes,
 <p><strong>Starting State:</strong> The six step cards are in a scrambled order with no checks selected. The question on screen is "In what order can these steps run, and how would you know each one worked?"</p>
 <p><strong>Chapter Anchors:</strong> The chapter lists the six steps in the order S1 to S6, states that step 6 depends on step 2 and must precede step 5, and gives the Walden figure of merit as P divided by 2 to the ENOB times the sampling rate.</p>
 </details>
+<iframe src="../../sims/prompt-chain-builder/main.html" height="842px" width="100%" scrolling="no"></iframe>
+
+<p><em>MicroSim: Prompt Chain Builder. <a href="../../sims/prompt-chain-builder/main.html">Open it fullscreen</a>.</em></p>
 <h2 id="putting-it-together-a-prompt-workflow">Putting It Together: A Prompt Workflow<a class="headerlink" href="#putting-it-together-a-prompt-workflow" title="Permanent link">&para;</a></h2>
 <p>The pieces of this chapter combine into a workflow that scales from one prompt to a research pipeline, and it is worth stating once as a checklist you can apply to any new task.</p>
 <ol>

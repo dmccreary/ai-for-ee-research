@@ -1,0 +1,99 @@
+{
+  "title": "Agent Failure Log Triage",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "Analysis activity in which learners read six illustrative excerpts of an agent log and attribute each to one of six failure modes: Premature completion, Hallucinated result, Scope drift, Test weakening, Wrong arguments, or Runaway loop. Each excerpt gets one attempt in a fixed order, followed by the correct mode, the reason, and the mechanical defense for that mode. The run ends with a score out of 6 and a mastery statement at 5 of 6.",
+  "date": "2026-10-15",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/agent-failure-log-triage/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Recognizing agent failure modes in raw agent logs",
+    "learningObjectives": [
+      "Differentiate six agent failure modes from six excerpts of an agent log, with at least 5 of 6 attributed correctly"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "bloomVerb": "differentiate",
+    "duration": "10 minutes",
+    "prerequisites": [
+      "The six agent failure modes: Premature completion, Hallucinated result, Scope drift, Test weakening, Wrong arguments, and Runaway loop"
+    ],
+    "concepts": [
+      "Agent Logging",
+      "Agent Failure Modes",
+      "Runaway Agent",
+      "Agent Supervision"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 800,
+      "drawHeight": 720,
+      "controlHeight": 80
+    },
+    "iframeHeight": 802,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the drop-down and buttons are native HTML controls reachable with the Tab key, and the buttons respond to Enter or Space; correct and incorrect feedback uses words and check or X symbols as well as a blue or orange outline; log entries use a monospace font and notes use gray italics; all text is 16 px or larger."
+    }
+  },
+  "controls": [
+    {
+      "type": "select",
+      "label": "Choose a failure mode",
+      "purpose": "Chooses one of the six failure modes for the current excerpt. The choice can be changed until Submit is pressed. Disabled after submission."
+    },
+    {
+      "type": "button",
+      "label": "Submit",
+      "purpose": "Commits the chosen mode as the single attempt for the current excerpt. Enabled only after a mode is chosen."
+    },
+    {
+      "type": "button",
+      "label": "Next Excerpt / See Score",
+      "purpose": "Enabled after submission. Advances to the next excerpt, and after excerpt 6 shows the score summary."
+    },
+    {
+      "type": "button",
+      "label": "Start Over",
+      "purpose": "Shown on the summary screen; returns to excerpt 1 with no mode chosen."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Attribution of raw evidence to a named cause, with one attempt per case and immediate explanatory feedback naming the mechanical defense",
+    "keyQuestions": [
+      "What went wrong here?",
+      "Did a tool actually produce the value the agent reported?",
+      "Was the check that defines success run?",
+      "Did the agent touch only what the request mentioned?"
+    ],
+    "commonMisconceptions": [
+      "A passing test run means the work is correct",
+      "An agent that touched extra files was being thorough",
+      "Repeated tool calls mean the agent is working hard"
+    ],
+    "assessmentOpportunities": [
+      "At least 5 of 6 excerpts attributed correctly on the first attempt is evidence of mastery",
+      "Reading the definitions is exploration and is not evidence"
+    ]
+  },
+  "chapter": "09-supervising-agents-roles"
+}
