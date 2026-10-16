@@ -4,7 +4,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 ---
 
-
 #### 1. What is context engineering?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 
 ---
-
 
 #### 2. What are acceptance criteria?
 
@@ -50,7 +48,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 ---
 
-
 #### 3. Which technique asks the model to write out intermediate reasoning before giving its final answer?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 
 ---
-
 
 #### 4. Why is source grounding valuable?
 
@@ -96,7 +92,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 ---
 
-
 #### 5. You need to check whether the ENOB reported in Section 4 of a draft is consistent with the measurement procedure in Section 3. With a tight context budget, which item should most likely be omitted?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 
 ---
-
 
 #### 6. Which of the following is most clearly a prompt injection?
 
@@ -142,7 +136,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 ---
 
-
 #### 7. What is the main advantage of prompt chaining over a single multi-step prompt?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 
 ---
-
 
 #### 8. Which of the following is a testable acceptance check for a value-extraction step?
 
@@ -188,7 +180,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 ---
 
-
 #### 9. A single source document is larger than the context window, and a claim made in one section is later qualified in another. What is the best way to handle it?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of task specifications, context selection, prompt inject
 
 ---
 
-
 #### 10. During iterative refinement of a prompt, which habit makes the process most productive?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of task specifications, context selection, prompt inject
     **Concept Tested:** Iterative Refinement
 
     **See:** [Reusable Prompts: Templates, Libraries, and Tests](./index.md#reusable-prompts-templates-libraries-and-tests)
-
-

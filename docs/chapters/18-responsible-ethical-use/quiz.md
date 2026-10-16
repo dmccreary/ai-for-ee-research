@@ -4,7 +4,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 ---
 
-
 #### 1. What is the central principle of responsible AI use in research?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 
 ---
-
 
 #### 2. What is the common position of major publishers regarding listing an AI system as an author?
 
@@ -50,7 +48,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 ---
 
-
 #### 3. Why should a log of AI use be kept during the work rather than reconstructed at submission time?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 
 ---
-
 
 #### 4. Why are unpublished results a special concern when using hosted AI tools?
 
@@ -96,7 +92,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 ---
 
-
 #### 5. What is the main risk of over-reliance on AI tools in research?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 
 ---
-
 
 #### 6. An agent substantially rewrote two paragraphs of the Discussion section in a submitted manuscript. Under the chapter's illustrative disclosure policy, what should be done?
 
@@ -142,7 +136,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 ---
 
-
 #### 7. A researcher wants to use an AI tool on foundry process design kit model files covered by an NDA. Under the illustrative data classification, what is the appropriate action?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 
 ---
-
 
 #### 8. A student wants to keep their own skills sharp while using AI. Which practice best counters skill atrophy?
 
@@ -188,7 +180,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 ---
 
-
 #### 9. A lab policy states that authors are accountable for all content and that AI is never an author. What does this rule imply about AI-assisted content?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of accountability, disclosure, data governance, intellec
 
 ---
 
-
 #### 10. A researcher notices that AI-assisted literature surveys keep returning papers from the same set of high-profile venues. What is the most appropriate response?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of accountability, disclosure, data governance, intellec
     **Concept Tested:** Bias and Fairness
 
     **See:** ./index.md#fairness-environment-and-dual-use
-
-

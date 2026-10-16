@@ -250,3 +250,5 @@ The main points to carry forward:
     You can now say when a result deserves a simulation, read a p5.js sketch that shows a dependence, and write the specification, evidence, and checks from which an agent builds one. That gives a result a form that others can handle, not only read.
 
 The next chapter returns to the question that runs under all of these: how do you know an AI-assisted result is right. Round up one result you are about to rely on, and bring it.
+
+[See Annotated References](./references.md)

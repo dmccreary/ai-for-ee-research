@@ -293,3 +293,5 @@ The main points to carry forward:
     You can now keep raw data untouched, clean with a logged and justified script, read a traceback from the bottom, and test an analysis script on a known answer before real data. That makes wrong results visible, which is the point.
 
 The next chapter extends the same discipline to code that simulates and tests circuits and systems, where silent errors are the main danger. Round up one script an agent has written for you, and bring it.
+
+[See Annotated References](./references.md)

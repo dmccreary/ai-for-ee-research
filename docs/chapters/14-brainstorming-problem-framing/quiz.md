@@ -4,7 +4,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 ---
 
-
 #### 1. What is the term for borrowing structure from another field to solve a problem in your own field?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 
 ---
-
 
 #### 2. What is the term for the plan that connects a framed problem to a sequence of hypotheses, experiments, and decision points?
 
@@ -50,7 +48,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 ---
 
-
 #### 3. Why should idea generation and idea evaluation be kept as separate phases?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 
 ---
-
 
 #### 4. What is the purpose of a devil's advocate prompt?
 
@@ -96,7 +92,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 ---
 
-
 #### 5. Why is it important to write the support or refutation criterion before seeing the data in an experiment?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 
 ---
-
 
 #### 6. A hypothesis states that a new calibration raises ENOB from 8.6 to at least 9.5 bits at 1 MS/s in 65 nm CMOS. What makes this hypothesis falsifiable?
 
@@ -142,7 +136,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 ---
 
-
 #### 7. A researcher ranks four ideas by impact, feasibility, novelty, and risk. Under an "exploratory thesis" profile novelty gets the highest weight, while under a "deadline in three months" profile feasibility gets the highest weight. What does this illustrate?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 
 ---
-
 
 #### 8. A model claims an idea is novel. What is the most reliable next step?
 
@@ -188,7 +180,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 ---
 
-
 #### 9. A proposed analogical solution from compressive sensing is applied to ADC design. What must be checked before trusting the analogy?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
 
 ---
 
-
 #### 10. A roadmap states that if a prototype does not raise ENOB to at least 9.0 bits on 5 of 5 devices, the team will revisit the calibration algorithm. What function does this rule serve?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of problem framing, idea generation, hypotheses, experim
     **Concept Tested:** Research Roadmap
 
     **See:** ./index.md#the-research-roadmap
-
-

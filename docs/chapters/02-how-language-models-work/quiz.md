@@ -4,7 +4,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
-
 #### 1. What is the term for all of the text a language model receives before generating its next response?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 
 ---
-
 
 #### 2. What is the text that a language model generates in response to a prompt called?
 
@@ -50,7 +48,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
-
 #### 3. Which of the following is included in the prompt assembled for a single model response?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 
 ---
-
 
 #### 4. What does the context window limit?
 
@@ -96,7 +92,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
-
 #### 5. What is the basic unit that language models process, bill by, and measure capacity in?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 
 ---
-
 
 #### 6. What effect does lowering the temperature have on the model's next-token distribution?
 
@@ -142,7 +136,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
-
 #### 7. A model has a 32,000-token context window. The system prompt uses 600 tokens, conversation history uses 4,000 tokens, an attachment uses 11,000 tokens, and the latest message uses 400 tokens. Can a 6,000-token completion fit?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 
 ---
-
 
 #### 8. Which request is most likely to cause a hallucination?
 
@@ -188,7 +180,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
-
 #### 9. A model-generated citation has a well-formed DOI and a real journal name, but the exact title is not found in any bibliographic database. How should you classify it?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
 
 ---
 
-
 #### 10. Which interface is generally better for repeatable, file-touching, version-controllable research tasks?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of tokens, context windows, prompts, completions, halluc
     **Concept Tested:** Command Line Interface
 
     **See:** [Chat Interfaces and the Command Line](./index.md#chat-interfaces-and-the-command-line)
-
-

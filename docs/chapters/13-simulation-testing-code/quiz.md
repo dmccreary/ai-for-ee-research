@@ -4,7 +4,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 ---
 
-
 #### 1. What is the term for a code defect that produces no error message or warning but changes the computed result?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 
 ---
-
 
 #### 2. What is a small automated check that calls one function with chosen inputs and compares the output to an expected value?
 
@@ -50,7 +48,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 ---
 
-
 #### 3. Why should unit tests use known answers built independently of the code under test?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 
 ---
-
 
 #### 4. What is the main danger of asking the same agent to write both the code and its tests in one step?
 
@@ -96,7 +92,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 ---
 
-
 #### 5. Why is a hand calculation a valuable numerical sanity check?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 
 ---
-
 
 #### 6. An agent reports an ENOB of 18 bits for a 10-bit ADC. Which kind of sanity check does this violate?
 
@@ -142,7 +136,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 ---
 
-
 #### 7. Before launching a parameter sweep with four parameters at eight values each, what should the researcher do first?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 
 ---
-
 
 #### 8. An agent-generated HDL testbench passes. What is the most important additional check to increase confidence?
 
@@ -188,7 +180,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 ---
 
-
 #### 9. A script runs cleanly and returns a number, but a numerical sanity check shows the result is impossible. What does this demonstrate?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
 
 ---
 
-
 #### 10. A researcher refactors an agent-written function to make it clearer. What is the essential prerequisite before refactoring?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of silent errors, unit tests, sanity checks, debugging, 
     **Concept Tested:** Refactoring
 
     **See:** ./index.md#reproducible-code
-
-

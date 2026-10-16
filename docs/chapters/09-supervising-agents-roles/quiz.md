@@ -4,7 +4,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 ---
 
-
 #### 1. Which three properties of a task determine how much autonomy an agent should be given?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 
 ---
-
 
 #### 2. In the planner-executor pattern, what serves as the handoff from the planning agent to the execution agent?
 
@@ -50,7 +48,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 ---
 
-
 #### 3. Why should scheduled or background agent tasks be idempotent?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 
 ---
-
 
 #### 4. Why does the cost of an agent-loop conversation grow faster than the number of steps?
 
@@ -96,7 +92,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 ---
 
-
 #### 5. What makes a reviewer agent a useful check on another agent's output?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 
 ---
-
 
 #### 6. A task requires emailing a summary of results to a collaborator before you have verified its claims. Which autonomy level is appropriate?
 
@@ -142,7 +136,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 ---
 
-
 #### 7. An agent log shows that a failing test was edited to expect a lower value while the code under test was left unchanged. Which failure mode is this?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 
 ---
-
 
 #### 8. A researcher wants an agent script to run every night when new data may arrive. Which prerequisite is most important before leaving it unattended?
 
@@ -188,7 +180,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 ---
 
-
 #### 9. A planning agent is given high autonomy to produce many draft specifications, while an execution agent is kept at a lower autonomy level. What does this pairing illustrate?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
 
 ---
 
-
 #### 10. An agent receives an email claiming to contain a critical bug fix and immediately edits the project code based on the message text. What principle has been violated?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of autonomy levels, supervision, logging, failure modes,
     **Concept Tested:** Trust Boundary
 
     **See:** ./index.md#scheduling-background-work-and-trust-boundaries
-
-

@@ -4,7 +4,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
-
 #### 1. What is the term for the sequence of repeatable activities that turns a research question into a validated, communicated result?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 
 ---
-
 
 #### 2. Which property of a strong research question is most clearly demonstrated by stating a metric, a threshold, and operating conditions?
 
@@ -50,7 +48,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
-
 #### 3. In the vocabulary chain from generative AI to AI agent, what does an AI assistant add to a large language model?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 
 ---
-
 
 #### 4. What is the key practical difference between an AI assistant and an AI agent?
 
@@ -96,7 +92,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
-
 #### 5. What term describes a researcher who directs teams of planning and execution agents while retaining final accountability for the science?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 
 ---
-
 
 #### 6. If each of five independent workflow stages has a 90% chance of being free of consequential error, why is the chance of a clean pipeline only about 59%?
 
@@ -142,7 +136,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
-
 #### 7. In the ADC comparison example, which two subtasks can proceed in either order after the measurement procedure is defined?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 
 ---
-
 
 #### 8. To make an AI-assisted step reproducible, what should be recorded alongside the prompt and input files?
 
@@ -188,7 +180,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
-
 #### 9. Which agent action most clearly requires human review because it is irreversible?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
 
 ---
 
-
 #### 10. Which everyday research task is described as especially prone to silent errors because a script usually runs and produces a number?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of research workflows, the generative-AI vocabulary, and
     **Concept Tested:** Data Analysis
 
     **See:** [Data Analysis](./index.md#data-analysis)
-
-

@@ -295,3 +295,5 @@ The main points to carry forward:
     You can now write a known-answer unit test, name the sanity check that a bad result fails, pick tests that expose seeded bugs, and write a run manifest that ties a result to its code and data. That is the evidence that lets an AI-written script into a paper.
 
 The next chapter moves from verifying results to producing ideas, using agents as thinking partners without surrendering your judgment. Round up a half-formed research topic, and bring it.
+
+[See Annotated References](./references.md)

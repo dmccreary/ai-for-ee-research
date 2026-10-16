@@ -321,3 +321,5 @@ The main points to carry forward:
     You can now scope a skill to one checkable task, write a description that triggers correctly, test it for both firing and staying quiet, and diagnose a misbehaving skill by its failure mode. That is a repeatable task turned into something a colleague can install.
 
 The next chapter gives skills something to act with. Tools, files, shell commands, and subagents are what turn a procedure into an agent that does work. Round up your first skill, and bring it along.
+
+[See Annotated References](./references.md)

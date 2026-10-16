@@ -4,7 +4,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 ---
 
-
 #### 1. What is plain text?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 
 ---
-
 
 #### 2. Why is Markdown a good shared format for humans and agents?
 
@@ -50,7 +48,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 ---
 
-
 #### 3. What is YAML frontmatter?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 
 ---
-
 
 #### 4. Which three kinds of content belong in a project instruction file such as AGENTS.md?
 
@@ -96,7 +92,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 ---
 
-
 #### 5. Which of the following lines is best classified as a project constraint?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 
 ---
-
 
 #### 6. Which file name best follows the naming conventions in the chapter?
 
@@ -142,7 +136,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 ---
 
-
 #### 7. What is a Git commit?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 
 ---
-
 
 #### 8. What is the recommended practice before asking an agent to change files in a project?
 
@@ -188,7 +180,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 ---
 
-
 #### 9. The diff of an agent's edit changes a measured ENOB from 9.2 to 9.6 bits and removes the qualifier "only at the typical corner." What should you conclude?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of plain text, Markdown syntax, project instruction file
 
 ---
 
-
 #### 10. Where should a note like "Yesterday's run crashed at corner ss_0p9v; likely a license server problem" live instead of AGENTS.md?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of plain text, Markdown syntax, project instruction file
     **Concept Tested:** Project Instruction File
 
     **See:** [Project Instruction Files](./index.md#project-instruction-files)
-
-

@@ -389,3 +389,5 @@ The main points to carry forward:
     You can now sort project material into notes, specifications, glossary, decisions, and logs, answer a multi-hop question by following typed relationships, and name the four parts of a skill. That is the memory and the packaging the rest of the book builds on.
 
 The next chapter takes the skill from a file you can read to one you can design, test, and share. Round up a task you do at least once a month, and bring it.
+
+[See Annotated References](./references.md)

@@ -449,3 +449,5 @@ The main points to carry forward:
 !!! mascot-celebration "You Can Design the Whole Input"
     ![Volt celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You can now write a task specification with testable acceptance criteria, choose what goes into a limited context window, spot an injected instruction, and split a long job into a chain with a check at each step. That is a prompt workflow, not a prompt.
+
+[See Annotated References](./references.md)

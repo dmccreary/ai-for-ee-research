@@ -4,7 +4,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 ---
 
-
 #### 1. What is the standard JavaScript library used in this book for building MicroSims?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 
 ---
-
 
 #### 2. What is the term for placing a MicroSim in a web page using an HTML iframe that points at the sim's `main.html`?
 
@@ -50,7 +48,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 ---
 
-
 #### 3. Why is an interactive simulation a better choice than a static figure when showing how ENOB changes with added noise?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 
 ---
-
 
 #### 4. Why should a MicroSim specification include evidence of mastery before any code is written?
 
@@ -96,7 +92,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 ---
 
-
 #### 5. What is the role of a learning graph in organizing an intelligent textbook?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 
 ---
-
 
 #### 6. A slide deck is being prepared from a paper. What is the most important check to perform on the figures copied into the slides?
 
@@ -142,7 +136,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 ---
 
-
 #### 7. A researcher wants to teach how a SAR ADC's successive-approximation search converges bit by bit. Which medium is most appropriate?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 
 ---
-
 
 #### 8. An agent has implemented a MicroSim from a specification. What is the final step before learners use it?
 
@@ -188,7 +180,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 ---
 
-
 #### 9. A paper includes a die photograph of a fabricated converter. Why is this content not a good candidate for a MicroSim?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of research communication, slide decks, interactive simu
 
 ---
 
-
 #### 10. A researcher is deciding whether to build a MicroSim for the derivation of the Walden figure of merit. Why might a static figure or text be better?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of research communication, slide decks, interactive simu
     **Concept Tested:** MicroSim
 
     **See:** ./index.md#microsims
-
-

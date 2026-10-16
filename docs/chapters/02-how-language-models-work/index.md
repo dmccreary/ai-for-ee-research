@@ -463,3 +463,5 @@ The main points to carry forward:
     You can now budget a context window, say what temperature does and does not change, and sort a citation into verified, wrong-detail, unsupported, or fabricated. Those are the checks that stand between a fluent answer and a true one.
 
 The next chapter turns this knowledge into decisions: which model, through which access path, at what cost, and how to write a prompt that states its output format. Round up the evidence, and bring one task you would like to hand to a model.
+
+[See Annotated References](./references.md)

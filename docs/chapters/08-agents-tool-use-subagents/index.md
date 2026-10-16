@@ -342,3 +342,5 @@ The main points to carry forward:
     You can now describe the loop an agent runs, name what its tools can reach, and set permissions so that irreversible and outward-bound actions need your approval. That is the control surface for everything an agent does in the chapters ahead.
 
 The next chapter moves from what a single agent can reach to how you supervise it and divide work among agents with defined roles. Round up the limits you would set, and bring them.
+
+[See Annotated References](./references.md)

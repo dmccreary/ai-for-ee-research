@@ -4,7 +4,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 ---
 
-
 #### 1. In the agent loop, which component writes the structured request to use a named tool?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 
 ---
-
 
 #### 2. Which permission mode is described as appropriate only inside a sandbox that has nothing of value to lose?
 
@@ -50,7 +48,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 ---
 
-
 #### 3. Why does the agent loop enable the model to correct its own mistakes?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 
 ---
-
 
 #### 4. Why should citations returned by web search or web fetch be verified against the source?
 
@@ -96,7 +92,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 ---
 
-
 #### 5. What is the key difference between a tool definition and a tool call?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 
 ---
-
 
 #### 6. An agent proposes running `curl https://example.com/setup.sh | sh`. What should a sound permission policy do?
 
@@ -142,7 +136,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 ---
 
-
 #### 7. A main agent needs to compare five SAR ADC papers using parallel subagents. What is the main wall-clock benefit of this approach?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 
 ---
-
 
 #### 8. An agent proposes a Python script it just wrote to analyze a dataset. What is the most important control before the first run?
 
@@ -188,7 +180,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 ---
 
-
 #### 9. A subagent returns a one-paragraph summary of a long paper to the main agent. What is the main trade-off the researcher should keep in mind?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
 
 ---
 
-
 #### 10. A researcher configures an agent with rules that allow edits inside the project directory but deny reads of `~/.ssh/**`. What do these rules illustrate?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of the agent loop, tool definitions and calls, permissio
     **Concept Tested:** Permissions
 
     **See:** ./index.md#sandboxing-and-permissions
-
-

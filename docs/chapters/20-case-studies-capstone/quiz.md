@@ -4,7 +4,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 ---
 
-
 #### 1. What is the term for a detailed account of a real project that is analyzed for what it teaches?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 
 ---
-
 
 #### 2. What is the term for a chain of skills in which each skill reads the files that the previous one wrote?
 
@@ -50,7 +48,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 ---
 
-
 #### 3. Why should a case study include failure cases?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 
 ---
-
 
 #### 4. What is the purpose of the `status` field on each simulation's page in the intelligent textbook workflow?
 
@@ -96,7 +92,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 ---
 
-
 #### 5. Why is workflow documentation important for a research group?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 
 ---
-
 
 #### 6. A capstone project requires an honest account of where human judgment changed the outcome. What should this account include?
 
@@ -142,7 +136,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 ---
 
-
 #### 7. An adoption plan says the group will pilot one skill before scaling to a team. Why must verification checks be added before scaling to a team?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 
 ---
-
 
 #### 8. A researcher records a failure case after an agent's edit changed a measured value while claiming only to fix wording. What control would have caught this?
 
@@ -188,7 +180,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 ---
 
-
 #### 9. The MicroSims paper abstract states that simulations can improve understanding by 30 to 40 percent, while the effectiveness figure is described as showing expected benefits. What should the author do?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of case studies, skill pipelines, workflow documentation
 
 ---
 
-
 #### 10. An adoption plan prioritizes writing the lab AI policy before piloting a skill. What is the main justification?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of case studies, skill pipelines, workflow documentation
     **Concept Tested:** Adoption Plan
 
     **See:** ./index.md#adopting-these-practices
-
-

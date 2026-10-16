@@ -4,7 +4,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 ---
 
-
 #### 1. What is a knowledge base in the context of a research project?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 
 ---
-
 
 #### 2. Which knowledge-base file type states the current agreed requirements and is read before writing code or text?
 
@@ -50,7 +48,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 ---
 
-
 #### 3. What is the main purpose of a glossary file?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 
 ---
-
 
 #### 4. Why does the chapter recommend keeping a decision log?
 
@@ -96,7 +92,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 ---
 
-
 #### 5. At the start of a new working session, which file should an agent read to continue work without re-explaining the project?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 
 ---
-
 
 #### 6. In a knowledge graph, why are typed relationships more useful than undifferentiated wiki links?
 
@@ -142,7 +136,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 ---
 
-
 #### 7. In the chapter's graph example, if Dataset A is discovered to be corrupted, which papers must be rechecked?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 
 ---
-
 
 #### 8. What is the main job of a skill description in SKILL.md?
 
@@ -188,7 +180,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 ---
 
-
 #### 9. Given the skill description "Compute ENOB from a coherently sampled ADC record and write a one-page report. Use when the user asks for ENOB, SNDR, or an ADC characterization summary," which request should trigger the skill?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
 
 ---
 
-
 #### 10. Why are scripts, references, and templates kept as supporting files outside SKILL.md?
 
 <div class="upper-alpha" markdown>
@@ -228,5 +218,3 @@ Test your understanding of project knowledge files, personal knowledge graphs, a
     **Concept Tested:** Supporting Files
 
     **See:** [The Anatomy of an Agent Skill](./index.md#the-anatomy-of-an-agent-skill)
-
-

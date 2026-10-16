@@ -4,7 +4,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 ---
 
-
 #### 1. What are the two directions of citation chaining?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 
 ---
-
 
 #### 2. Which plain-text bibliographic format is most commonly used with LaTeX and fits well in version-controlled projects?
 
@@ -50,7 +48,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 ---
 
-
 #### 3. Why should a scoping literature search generally favor recall over precision?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 
 ---
-
 
 #### 4. Why is claim extraction preferred over a free-form summary when verifying a paper?
 
@@ -96,7 +92,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 ---
 
-
 #### 5. What is the main source-quality consideration when using papers from a preprint server?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 
 ---
-
 
 #### 6. A query returns 10 papers, 6 of which are relevant and 4 of which are not. It missed 2 additional relevant papers. What is the recall of this query?
 
@@ -142,7 +136,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 ---
 
-
 #### 7. An agent extracts a claim that a paper reports an ENOB of 9.2 bits in Section IV, Table II. What is the best first step to verify the claim?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 
 ---
-
 
 #### 8. A researcher compares two SAR ADC papers by ENOB. Paper A reports 9.2 bits at 1 MS/s and Paper B reports 10.1 bits at 100 MS/s. What is the most important consideration?
 
@@ -188,7 +180,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 ---
 
-
 #### 9. An agent generates several perfectly formatted BibTeX entries. Why must the researcher still verify them?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of search strategy, precision and recall, triage, claim 
 
 ---
 
-
 #### 10. A comparison table has rows for five papers and a column showing whether each result is measured or simulated. Four papers are simulated and one is measured. What does this pattern most clearly reveal?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of search strategy, precision and recall, triage, claim 
     **Concept Tested:** Research Gap
 
     **See:** ./index.md#synthesis
-
-

@@ -281,3 +281,5 @@ The main points to carry forward:
     You can now translate a worry about an always-on agent into the criterion that answers it, partition a knowledge graph so that an agent sees only what its job needs, and audit a night's log against a task. Those are the skills that will apply to whatever launches next month.
 
 The final chapter pulls the whole book together in case studies and a capstone project. Round up everything you have built so far, and bring it.
+
+[See Annotated References](./references.md)

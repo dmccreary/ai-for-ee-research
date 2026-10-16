@@ -292,3 +292,5 @@ The main points to carry forward:
     You can now compute a critical path and the slack on a task, estimate the daily review load of a team and fit it to your attention, and say why 20 planning agents and 10 execution agents is a design target and not a law. That is the arithmetic of orchestration.
 
 The following chapters apply this machinery to the everyday tasks of research, starting with the literature. Round up the question you would give a planning team, and bring it.
+
+[See Annotated References](./references.md)

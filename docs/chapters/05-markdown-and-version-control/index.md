@@ -413,3 +413,5 @@ The main points to carry forward:
     You can now write Markdown with correct headings, lists, tables, and code, set up a project with an AGENTS.md of goals, conventions, and constraints, and review a diff before accepting an agent's work. That is a workspace in which delegation is reversible.
 
 The next chapter builds the reusable pieces that sit on top of this foundation: knowledge bases, personal knowledge graphs, and the anatomy of an agent skill. Round up your files, commit them, and bring the project you would like an agent to work in.
+
+[See Annotated References](./references.md)

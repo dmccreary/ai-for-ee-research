@@ -298,3 +298,5 @@ The main points to carry forward:
     You can now specify a question and its acceptance criteria, design a small team of agents with defined autonomy and review points, verify and reproduce what they produce, disclose how you used them, and say honestly where your judgment decided the outcome. That is the whole shift this book set out to teach, and the work is yours.
 
 Round up your evidence, and keep checking. The agents will keep getting better, and the question of what is true will stay with you.
+
+[See Annotated References](./references.md)

@@ -4,7 +4,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 ---
 
-
 #### 1. In the book's working model, what is the approximate ratio of planning agents to execution agents?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 
 ---
-
 
 #### 2. What is the term for the longest chain of dependent tasks in a project schedule?
 
@@ -50,7 +48,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 ---
 
-
 #### 3. Why does the book recommend more planning agents than execution agents on a team?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 
 ---
-
 
 #### 4. What is the main purpose of a handoff protocol?
 
@@ -96,7 +92,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 ---
 
-
 #### 5. Why is plan review considered the highest-leverage review in the workflow?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 
 ---
-
 
 #### 6. A task queue contains tasks T1, T2, T3, and T4. T2 needs T1, T3 needs T1, and T4 needs both T2 and T3. Which task must start first?
 
@@ -142,7 +136,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 ---
 
-
 #### 7. A planning agent finishes a draft plan that it wants the researcher to examine. Which handoff status should the agent assign to the output?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 
 ---
-
 
 #### 8. A team produces 20 planning outputs at 6 minutes each and 10 execution outputs at 15 minutes each, with 30 minutes for conflict resolution. How many hours of daily review does it need?
 
@@ -188,7 +180,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 ---
 
-
 #### 9. Two execution agents report different ENOB values for the same data record. What should the conflict resolution procedure do first?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
 
 ---
 
-
 #### 10. A researcher doubles the number of execution agents on a project, but the project duration does not decrease. What is the most likely reason?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of agent teams, work breakdown, task dependencies, hando
     **Concept Tested:** Scaling Agent Teams
 
     **See:** ./index.md#cost-benefit-and-the-limits-of-scaling
-
-

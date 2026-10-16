@@ -4,7 +4,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 ---
 
-
 #### 1. What is the difference between verification and validation?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 
 ---
-
 
 #### 2. What is the term for going to the original document or source to confirm a claim?
 
@@ -50,7 +48,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 ---
 
-
 #### 3. Why is agreement between two models in a cross-model check considered weak evidence?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 
 ---
-
 
 #### 4. What is the main purpose of writing acceptance criteria before running an experiment?
 
@@ -96,7 +92,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 ---
 
-
 #### 5. Why is asking the same agent in the same session to confirm its own output a poor verification practice?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 
 ---
-
 
 #### 6. A model's summary says Paper P reports a specific ENOB value. Which verification method is most appropriate?
 
@@ -142,7 +136,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 ---
 
-
 #### 7. A script reports an ENOB using an FFT-based method, and the researcher wants another estimate that does not share the FFT's assumptions. Which check is best?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 
 ---
-
 
 #### 8. A colleague wants to reuse your figure and confirm it regenerates from raw data on a clean machine. Which term describes this activity?
 
@@ -188,7 +180,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 ---
 
-
 #### 9. A model first gives an evidenced answer and then reverses it after the researcher expresses a different opinion, with no new evidence provided. What behavior is this?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of verification, validation, independent checks, replica
 
 ---
 
-
 #### 10. A wrong value is found in a published result. The researcher traces it upstream through run manifests to find the first step that produced it and then recomputes every affected downstream result. What is this process called?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of verification, validation, independent checks, replica
     **Concept Tested:** Error Tracing
 
     **See:** ./index.md#records-that-let-others-check
-
-

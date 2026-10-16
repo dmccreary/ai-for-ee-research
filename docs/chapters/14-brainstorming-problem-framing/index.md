@@ -272,3 +272,5 @@ The main points to carry forward:
     You can now frame a topic as several testable questions, tell a falsifiable hypothesis from one no result could contradict, compute how the ranking of ideas changes with your priorities, and lay out a roadmap with go criteria. The choices stay yours, and the volume is the agent's.
 
 The next chapter takes a result that has survived this process and follows it into a manuscript. Round up your strongest hypothesis, and bring it.
+
+[See Annotated References](./references.md)

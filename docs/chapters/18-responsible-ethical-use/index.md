@@ -331,3 +331,5 @@ The main points to carry forward:
     You can now apply a disclosure rule to a scenario, classify data before it meets a tool, name the risks of ownership, bias, and dependence, and write a one-page policy for your group. That is how accountability becomes a habit of a lab.
 
 The next chapter examines a class of tools that make these questions pressing, because they work while you are away. Round up the permissions you would be willing to grant, and bring them.
+
+[See Annotated References](./references.md)

@@ -4,7 +4,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 ---
 
-
 #### 1. What is API access in the context of using a language model?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 
 ---
-
 
 #### 2. What is an open-weight model?
 
@@ -50,7 +48,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 ---
 
-
 #### 3. Which access path is the best fit for classifying 5,000 abstracts overnight and saving the labels to a file?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 
 ---
-
 
 #### 4. Why is a local open-weight model especially attractive when results must be reproducible years later?
 
@@ -96,7 +92,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 ---
 
-
 #### 5. What does retrieval-augmented generation (RAG) do?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 
 ---
-
 
 #### 6. What is an important limitation of vector search?
 
@@ -142,7 +136,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 ---
 
-
 #### 7. In the prompt "Use only information that appears in the attached text," which prompt component is being used?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 
 ---
-
 
 #### 8. What is an output format in prompt engineering?
 
@@ -188,7 +180,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 ---
 
-
 #### 9. Which prompt technique is usually most effective when you want the model to learn a format or judgment that is hard to describe in words?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of model access, selection, retrieval, and the building 
 
 ---
 
-
 #### 10. You are asking a model to classify abstracts and report numeric ENOB values. Which addition best guards against invented values?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of model access, selection, retrieval, and the building 
     **Concept Tested:** Constraints
 
     **See:** [Constraints](./index.md#constraints)
-
-

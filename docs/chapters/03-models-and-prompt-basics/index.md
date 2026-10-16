@@ -404,3 +404,5 @@ The main points to carry forward:
 !!! mascot-celebration "You Can Pick and Specify"
     ![Volt celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You can now choose among a chat interface, a hosted API, and a local open-weight model for a stated scenario, estimate what a batch will cost, and write a prompt with a clear task, explicit constraints, and a defined output format.
+
+[See Annotated References](./references.md)

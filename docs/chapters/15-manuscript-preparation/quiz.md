@@ -4,7 +4,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 ---
 
-
 #### 1. What is the purpose of inserting a `[NO EVIDENCE]` marker when an agent drafts from claims?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 
 ---
-
 
 #### 2. According to major publishers such as IEEE and ACM, can a language model be listed as an author on a research paper?
 
@@ -50,7 +48,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 ---
 
-
 #### 3. Why should the abstract typically be written last?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 
 ---
-
 
 #### 4. What is the main danger of asking an agent to "improve this" on an early draft?
 
@@ -96,7 +92,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 ---
 
-
 #### 5. Why is it important to generate figures from scripts rather than drawing them by hand?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 
 ---
-
 
 #### 6. A caption reads: "Figure 4. Measured ENOB versus input frequency for 12 devices at 1 MS/s, 1.0 V, and 25 °C. Markers show the mean and error bars show one standard deviation." How should this caption be judged?
 
@@ -142,7 +136,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 ---
 
-
 #### 7. A reviewer asks why a method was not tested at 125 °C, but the researcher could not do so with the available setup. Which response is best?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 
 ---
-
 
 #### 8. Before drafting a paper, what should the researcher do first regarding venue requirements?
 
@@ -188,7 +180,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 ---
 
-
 #### 9. A researcher runs a number-extraction script before and after an agent's revision and finds that an ENOB value changed. What should the researcher conclude?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
 
 ---
 
-
 #### 10. A peer review response drafted by an agent agrees with every comment and claims changes throughout the paper. What is the main risk?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of paper structure, outlining, drafting, revision, figur
     **Concept Tested:** Peer Review Response
 
     **See:** ./index.md#submission-and-response
-
-

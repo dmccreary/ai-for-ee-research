@@ -38,26 +38,66 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      - 1. Research Workflows and the Researcher as Orchestrator: chapters/01-research-workflows-orchestrator/index.md
-      - 2. How Language Models Work: chapters/02-how-language-models-work/index.md
-      - 3. Choosing Models and Writing Clear Prompts: chapters/03-models-and-prompt-basics/index.md
-      - 4. Context Engineering and Advanced Prompting: chapters/04-context-engineering-prompting/index.md
-      - 5. Markdown Project Files and Version Control: chapters/05-markdown-and-version-control/index.md
-      - 6. Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill: chapters/06-knowledge-bases-skill-anatomy/index.md
-      - 7. Designing, Testing, and Sharing Agent Skills: chapters/07-designing-testing-skills/index.md
-      - 8. Agents, Tool Use, and Subagents: chapters/08-agents-tool-use-subagents/index.md
-      - 9. Supervising Agents and Defining Agent Roles: chapters/09-supervising-agents-roles/index.md
-      - 10. Orchestrating Teams of Planning and Execution Agents: chapters/10-orchestrating-agent-teams/index.md
-      - 11. AI-Assisted Literature Search and Synthesis: chapters/11-literature-search-synthesis/index.md
-      - 12. AI-Assisted Data Analysis and Scripting: chapters/12-data-analysis-scripting/index.md
-      - 13. Simulation, Testing, and Reproducible Code: chapters/13-simulation-testing-code/index.md
-      - 14. Brainstorming and Problem Framing: chapters/14-brainstorming-problem-framing/index.md
-      - 15. AI-Assisted Manuscript Preparation: chapters/15-manuscript-preparation/index.md
-      - 16. MicroSims and Research Communication: chapters/16-microsims-communication/index.md
-      - 17. Verification and Reproducibility: chapters/17-verification-reproducibility/index.md
-      - 18. Responsible and Ethical Use of AI: chapters/18-responsible-ethical-use/index.md
-      - 19. Always-On Personal Agents for Research: chapters/19-always-on-personal-agents/index.md
-      - 20. Case Studies and Capstone Project: chapters/20-case-studies-capstone/index.md
+      - 1. Research Workflows and the Researcher as Orchestrator:
+          - Content: chapters/01-research-workflows-orchestrator/index.md
+          - Annotated References: chapters/01-research-workflows-orchestrator/references.md
+      - 2. How Language Models Work:
+          - Content: chapters/02-how-language-models-work/index.md
+          - Annotated References: chapters/02-how-language-models-work/references.md
+      - 3. Choosing Models and Writing Clear Prompts:
+          - Content: chapters/03-models-and-prompt-basics/index.md
+          - Annotated References: chapters/03-models-and-prompt-basics/references.md
+      - 4. Context Engineering and Advanced Prompting:
+          - Content: chapters/04-context-engineering-prompting/index.md
+          - Annotated References: chapters/04-context-engineering-prompting/references.md
+      - 5. Markdown Project Files and Version Control:
+          - Content: chapters/05-markdown-and-version-control/index.md
+          - Annotated References: chapters/05-markdown-and-version-control/references.md
+      - 6. Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill:
+          - Content: chapters/06-knowledge-bases-skill-anatomy/index.md
+          - Annotated References: chapters/06-knowledge-bases-skill-anatomy/references.md
+      - 7. Designing, Testing, and Sharing Agent Skills:
+          - Content: chapters/07-designing-testing-skills/index.md
+          - Annotated References: chapters/07-designing-testing-skills/references.md
+      - 8. Agents, Tool Use, and Subagents:
+          - Content: chapters/08-agents-tool-use-subagents/index.md
+          - Annotated References: chapters/08-agents-tool-use-subagents/references.md
+      - 9. Supervising Agents and Defining Agent Roles:
+          - Content: chapters/09-supervising-agents-roles/index.md
+          - Annotated References: chapters/09-supervising-agents-roles/references.md
+      - 10. Orchestrating Teams of Planning and Execution Agents:
+          - Content: chapters/10-orchestrating-agent-teams/index.md
+          - Annotated References: chapters/10-orchestrating-agent-teams/references.md
+      - 11. AI-Assisted Literature Search and Synthesis:
+          - Content: chapters/11-literature-search-synthesis/index.md
+          - Annotated References: chapters/11-literature-search-synthesis/references.md
+      - 12. AI-Assisted Data Analysis and Scripting:
+          - Content: chapters/12-data-analysis-scripting/index.md
+          - Annotated References: chapters/12-data-analysis-scripting/references.md
+      - 13. Simulation, Testing, and Reproducible Code:
+          - Content: chapters/13-simulation-testing-code/index.md
+          - Annotated References: chapters/13-simulation-testing-code/references.md
+      - 14. Brainstorming and Problem Framing:
+          - Content: chapters/14-brainstorming-problem-framing/index.md
+          - Annotated References: chapters/14-brainstorming-problem-framing/references.md
+      - 15. AI-Assisted Manuscript Preparation:
+          - Content: chapters/15-manuscript-preparation/index.md
+          - Annotated References: chapters/15-manuscript-preparation/references.md
+      - 16. MicroSims and Research Communication:
+          - Content: chapters/16-microsims-communication/index.md
+          - Annotated References: chapters/16-microsims-communication/references.md
+      - 17. Verification and Reproducibility:
+          - Content: chapters/17-verification-reproducibility/index.md
+          - Annotated References: chapters/17-verification-reproducibility/references.md
+      - 18. Responsible and Ethical Use of AI:
+          - Content: chapters/18-responsible-ethical-use/index.md
+          - Annotated References: chapters/18-responsible-ethical-use/references.md
+      - 19. Always-On Personal Agents for Research:
+          - Content: chapters/19-always-on-personal-agents/index.md
+          - Annotated References: chapters/19-always-on-personal-agents/references.md
+      - 20. Case Studies and Capstone Project:
+          - Content: chapters/20-case-studies-capstone/index.md
+          - Annotated References: chapters/20-case-studies-capstone/references.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
@@ -68,6 +108,7 @@ nav:
       - Graph Quality Analysis: learning-graph/quality-metrics.md
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Rendering Test: learning-graph/mascot-test.md
+      - Glossary Quality Report: learning-graph/glossary-quality-report.md
 
   - MicroSims:
       - List of MicroSims: sims/index.md

@@ -297,3 +297,5 @@ The main points to carry forward:
     You can now set an autonomy level from reversibility, reach, and verifiability, name the failure that a log line shows, and write a role as a job description with a stopping rule. That makes a group of agents something you can supervise.
 
 The next chapter assembles these roles into coordinated teams, with task queues, handoff protocols, review checkpoints, and a candid look at when adding agents stops paying off. Round up the roles you would need for your project, and bring the list.
+
+[See Annotated References](./references.md)

@@ -275,3 +275,5 @@ The main points to carry forward:
     You can now choose a check by what it guards against, spot a model agreeing with you instead of the evidence, package a result so that a colleague can rerun it, and trace an error to its source and its consequences. That is the standard that turns agent output into research.
 
 The next chapter takes up the responsibilities that come with this power: honesty about AI use, privacy, ownership, and fairness. Round up the policies of your own lab and venue, and bring them.
+
+[See Annotated References](./references.md)

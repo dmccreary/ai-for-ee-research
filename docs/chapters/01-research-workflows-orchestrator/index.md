@@ -727,3 +727,5 @@ The main points to carry forward:
     You can now name the five research tasks, tell an assistant from an agent by who closes the loop, and decide where a human review point belongs. That is the vocabulary and the habit of checking that the rest of this book builds on.
 
 The next chapter looks inside the models themselves, so that the failure modes introduced here, hallucination in particular, become something you can reason about rather than something that surprises you. Round up the evidence, and bring the question you would most like an agent to help with.
+
+[See Annotated References](./references.md)

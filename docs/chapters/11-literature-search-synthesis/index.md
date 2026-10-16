@@ -302,3 +302,5 @@ The main points to carry forward:
     You can now write a search strategy, compute the precision and recall of a query, chain citations in both directions, and build a comparison table in which every claim has a location and every reference has been looked up. That is an annotated reading list with verified citations.
 
 The next chapter turns from papers to data, where the same discipline of keeping errors visible applies to the numbers you measure yourself. Round up one dataset, and bring it.
+
+[See Annotated References](./references.md)

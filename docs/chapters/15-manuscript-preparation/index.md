@@ -278,3 +278,5 @@ The main points to carry forward:
     You can now place a sentence in its section, build an abstract with numbers, check a revision for changed numbers, judge a figure caption against a checklist, and write a response that claims only what changed. The agent supplies speed, and you supply the claims.
 
 The next chapter turns a result into something readers can interact with: simulations, slides, and teaching materials. Round up the one result you would most like others to understand, and bring it.
+
+[See Annotated References](./references.md)

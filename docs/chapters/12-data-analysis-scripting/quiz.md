@@ -4,7 +4,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 ---
 
-
 #### 1. What is the recommended pattern for storing measurement values together with their metadata?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 
 ---
-
 
 #### 2. When reading a Python traceback, where should you look first for the cause of the error?
 
@@ -50,7 +48,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 ---
 
-
 #### 3. Why is it important to keep raw measurement data files read-only?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 
 ---
-
 
 #### 4. What is the main danger of a catch-all exception handler in an analysis script?
 
@@ -96,7 +92,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 ---
 
-
 #### 5. Why is exploratory analysis performed before computing final statistics?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 
 ---
-
 
 #### 6. A cleaning script encounters a value that is far from the others but has no documented cause. What should the script do?
 
@@ -142,7 +136,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 ---
 
-
 #### 7. A Python script fails with `FileNotFoundError: data/raw/capture-7.csv`, but the directory contains `data/raw/capture-07.csv`. What is the most likely cause?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 
 ---
-
 
 #### 8. A notebook produces results that look correct, but restarting the kernel and running all cells changes the numbers. What does this indicate?
 
@@ -188,7 +180,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 ---
 
-
 #### 9. A cleaning step removes several data points and improves the headline ENOB. What is the most responsible way to report this?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
 
 ---
 
-
 #### 10. A script reads ADC codes from a CSV but then raises `TypeError: unsupported operand type(s) for -: 'str' and 'float'`. What is the most likely root cause?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of measurement data formats, cleaning, exploratory analy
     **Concept Tested:** Analysis Script
 
     **See:** ./index.md#analysis-scripts-in-python
-
-

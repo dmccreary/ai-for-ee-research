@@ -4,7 +4,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 ---
 
-
 #### 1. What is a single-purpose skill?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 
 ---
-
 
 #### 2. What is the main purpose of progressive disclosure in a skill?
 
@@ -50,7 +48,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 ---
 
-
 #### 3. A skill description says: "Check a SPICE netlist for floating nodes, a missing .end card, and unit suffix errors. Use when the user asks to lint, check, or validate a .sp or .cir netlist file." Which request should NOT trigger the skill?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 
 ---
-
 
 #### 4. A skill needs tests for two distinct ways it can fail. What are the two kinds of tests?
 
@@ -96,7 +92,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 ---
 
-
 #### 5. What does skill evaluation measure that a single test run cannot?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 
 ---
-
 
 #### 6. A skill loads, but the agent skips step 4 and reports success. Which failure mode is most likely?
 
@@ -142,7 +136,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 ---
 
-
 #### 7. What is the simplest reliable way to share a skill with a colleague?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 
 ---
-
 
 #### 8. What is a slash command?
 
@@ -188,7 +180,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 ---
 
-
 #### 9. Why is a pipeline of single-purpose skills easier to debug than one large skill that does the same work?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
 
 ---
 
-
 #### 10. Some packaging tools reject unknown top-level keys in SKILL.md frontmatter. Where should custom fields such as `last_verified` and `tested_with` go?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of skill scope, progressive disclosure, testing, failure
     **Concept Tested:** Skill Metadata
 
     **See:** [Versioning, Sharing, and Installing](./index.md#versioning-sharing-and-installing)
-
-

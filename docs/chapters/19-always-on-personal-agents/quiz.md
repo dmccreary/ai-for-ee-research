@@ -4,7 +4,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 ---
 
-
 #### 1. What is the term for the extent of what an agent can read, change, or send if it is compromised, misdirected, or simply wrong?
 
 <div class="upper-alpha" markdown>
@@ -26,7 +25,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 
 ---
-
 
 #### 2. What is the term for an agent that runs on a machine the user controls, such as a laptop, server, or own cloud account?
 
@@ -50,7 +48,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 ---
 
-
 #### 3. Why does a cloud agent computer change the risk profile compared to a session-based agent?
 
 <div class="upper-alpha" markdown>
@@ -72,7 +69,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 
 ---
-
 
 #### 4. Why should vendor claims about an always-on agent's safety be tested hands-on before relying on them?
 
@@ -96,7 +92,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 ---
 
-
 #### 5. What is the main advantage of using a personal knowledge graph as an agent's persistent memory?
 
 <div class="upper-alpha" markdown>
@@ -118,7 +113,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 
 ---
-
 
 #### 6. A nightly agent is allowed to search arXiv and write to `docs/reading-queue.md`. The log shows it read `data/raw/capture-07.csv`. How should this action be classified in an overnight activity audit?
 
@@ -142,7 +136,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 ---
 
-
 #### 7. A researcher wants to test a vendor's claim that the agent asks before sensitive actions. What is the best test?
 
 <div class="upper-alpha" markdown>
@@ -164,7 +157,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 
 ---
-
 
 #### 8. A task involves processing unpublished measurement data from the research group. Which factor is most important when selecting an agent?
 
@@ -188,7 +180,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 ---
 
-
 #### 9. A product allows all of a user's bots to share one cloud computer and one set of logins. What does this imply about blast radius?
 
 <div class="upper-alpha" markdown>
@@ -211,7 +202,6 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
 
 ---
 
-
 #### 10. A researcher partitions a personal knowledge graph so that a literature agent reads only the papers-and-concepts subgraph and not the unpublished-measurements subgraph. What principle does this follow?
 
 <div class="upper-alpha" markdown>
@@ -227,5 +217,3 @@ Test your understanding of personal agents, cloud and self-hosted agents, delega
     **Concept Tested:** Personal Knowledge Privacy
 
     **See:** ./index.md#memory-the-knowledge-graph-and-privacy
-
-
