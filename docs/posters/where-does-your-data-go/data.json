@@ -1,0 +1,184 @@
+{
+  "title": "Where Does Your Data Go?",
+  "image": "where-does-your-data-go.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#2F6DB5", "#6C5B9E", "#1F7A8C", "#D98E04", "#3C8D5A", "#E0A800", "#A32035", "#7A0019"],
+  "zones": [
+    {
+      "id": "out-through-the-window",
+      "label": "Out Through the Window",
+      "color": "#2F6DB5",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 32.0,
+      "y2": 52.0,
+      "summary": "Pasting into a hosted model sends documents out of the lab to a provider's computers. Once sent, a disclosure to a third party cannot be undone.",
+      "facts": [
+        "Unpublished results are not secret in a legal sense, but placing them in a hosted AI tool is a disclosure to a third party under that provider's terms (Chapter 18).",
+        "Ask of any hosted tool: may inputs train models, how long are they kept and who can see them, where are they processed, and do your institution's contract terms differ from consumer terms (Chapter 18).",
+        "A disclosure cannot be undone. Classify before you paste, and if you are unsure, use the local model or ask first (Chapter 18).",
+        "A cloud agent computer means your files and sessions live on someone else's hardware (Chapter 19)."
+      ]
+    },
+    {
+      "id": "the-cloud-end",
+      "label": "The Cloud End",
+      "color": "#6C5B9E",
+      "x1": 33.5,
+      "y1": 2.0,
+      "x2": 48.5,
+      "y2": 52.0,
+      "summary": "At the far end, what happens to your inputs depends on the provider's terms: how long they are kept, who sees them, and whether they train models.",
+      "facts": [
+        "Agent data exposure is what happens to data you give an agent: training use, retention, who can see it, where it is processed, and whether memory can be inspected and deleted (Chapter 19).",
+        "Defaults differ. At least one personal-agent product trains on user data by default, with an opt-out (Chapter 19).",
+        "For one early-beta product, the research notes record that retention defaults, credential handling, and audit records are undocumented (Chapter 19).",
+        "Where the answers about a hosted tool are not satisfactory, a local open-weight model keeps the data on your machine (Chapter 18)."
+      ]
+    },
+    {
+      "id": "inside-the-lab-boundary",
+      "label": "Inside the Lab Boundary",
+      "color": "#1F7A8C",
+      "x1": 51.5,
+      "y1": 2.0,
+      "x2": 81.0,
+      "y2": 52.0,
+      "summary": "A model you run on a rack in your own lab keeps the documents inside the dashed boundary. You decide where data go and what the agent can reach.",
+      "facts": [
+        "A self-hosted agent runs on a machine you control: a laptop, a server, or your own cloud account (Chapter 19).",
+        "You gain control over where the data go and what the agent can reach (Chapter 19).",
+        "A local open-weight model keeps data on your machine (Chapter 18).",
+        "Keep the master knowledge graph where you control it and give agents views of it, so the agent's memory is a copy that can be discarded (Chapter 19)."
+      ]
+    },
+    {
+      "id": "you-maintain-it",
+      "label": "You Maintain It",
+      "color": "#D98E04",
+      "x1": 82.5,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 52.0,
+      "summary": "Running your own model buys control and costs work: setup, security, and upkeep fall to you, along with the energy the hardware uses.",
+      "facts": [
+        "A self-hosted agent gives you control and also puts setup, security, and maintenance on you (Chapter 19).",
+        "With an open-source self-hosted agent, you manage your own servers, secrets, and security (Chapter 19).",
+        "Reviews recorded in the chapter's notes report runaway loops, malicious skills, and unattended deletions for one self-hosted agent (Chapter 19).",
+        "Environmental cost is real and rarely visible to the user. Use the smallest model that does the job and avoid loops and sweeps that nobody will read (Chapter 18)."
+      ]
+    },
+    {
+      "id": "green-lane",
+      "label": "Green Lane",
+      "color": "#3C8D5A",
+      "x1": 2.0,
+      "y1": 54.0,
+      "x2": 21.0,
+      "y2": 98.0,
+      "summary": "Public material may go to any tool. In the illustrative four-class policy this is class 0.",
+      "facts": [
+        "Class 0, public: published papers, public datasets, and open-source code may be given to any tool (Chapter 18).",
+        "In Chapter 18's sorter exercise, a published IEEE paper and an open-source simulation script from a public repository are both class 0.",
+        "The classification is illustrative. A group needs a small one that people can apply without looking it up, with a rule for what each class may be given to (Chapter 18).",
+        "The poster's three lanes simplify the four classes of Chapter 18: public, needs a decision, never to a hosted tool."
+      ]
+    },
+    {
+      "id": "yellow-lane",
+      "label": "Yellow Lane",
+      "color": "#E0A800",
+      "x1": 22.5,
+      "y1": 54.0,
+      "x2": 41.5,
+      "y2": 98.0,
+      "summary": "Internal and unpublished material needs a decision first: an approved tool, a local model, or your advisor's written approval.",
+      "facts": [
+        "Class 1, internal: lab notes on setup, scripts, and draft text without new results may go to an approved hosted tool or a local model (Chapter 18).",
+        "Class 2, unpublished: unpublished measurements and designs may go to a local model, or to a hosted tool with the advisor's written approval (Chapter 18).",
+        "A new circuit netlist that has not been published or filed is class 2, because disclosure may affect later protection (Chapter 18).",
+        "An item that falls in two classes takes the more restrictive one (Chapter 18)."
+      ]
+    },
+    {
+      "id": "red-lane",
+      "label": "Red Lane",
+      "color": "#A32035",
+      "x1": 43.0,
+      "y1": 54.0,
+      "x2": 62.0,
+      "y2": 98.0,
+      "summary": "Obligated data stays off hosted tools: data under NDA, export-controlled data, participants' personal data, and licensed vendor files.",
+      "facts": [
+        "Class 3, obligated: data under NDA, export-controlled technical data, personal data of participants, and vendor files under license (Chapter 18).",
+        "These go to a local model only, and only if the agreement allows. Otherwise they go to no AI tool (Chapter 18).",
+        "In electrical engineering, process design kits and device models are usually restricted (Chapter 18).",
+        "Interview transcripts with identifiable participants are class 3, governed by the consent and ethics approval (Chapter 18)."
+      ]
+    },
+    {
+      "id": "lab-policy-sheet",
+      "label": "The Lab Policy Sheet",
+      "color": "#7A0019",
+      "x1": 63.5,
+      "y1": 54.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "A one-page lab AI policy turns these principles into rules that a new student can follow on the first day.",
+      "facts": [
+        "A lab AI policy is a short written statement of how a research group uses AI tools. One page is enough (Chapter 18).",
+        "Its skeleton has eight sections: purpose, accountability, data classes and tools, disclosure, verification, approved tools, skills and training, and review (Chapter 18).",
+        "Keep it as a Markdown file in the group's repository and link it from each project's AGENTS.md, so agents read it at the start of every session (Chapter 18).",
+        "Review it every six months and whenever a venue or institution changes its rules. Chapter 18 is not legal advice, so check your own institution's current rules."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A student pastes unpublished ENOB measurements into a chat assistant to save time. Which region shows where those inputs travel and why the paste cannot be taken back?",
+      "correct_zone": "out-through-the-window",
+      "explanation": "Placing unpublished results in a hosted tool is a disclosure to a third party, and a disclosure cannot be undone."
+    },
+    {
+      "question": "Before adopting a hosted assistant you must ask whether it may train on your inputs and how long it keeps them. Which region shows where those answers play out?",
+      "correct_zone": "the-cloud-end",
+      "explanation": "Training use, retention, who can see the data, and where it is processed are decided by the provider's terms and defaults."
+    },
+    {
+      "question": "A personal agent product trains on user data by default and you must opt out. Which region shows the kind of exposure this creates?",
+      "correct_zone": "the-cloud-end",
+      "explanation": "Agent data exposure covers training use and retention at the provider, and defaults differ between products."
+    },
+    {
+      "question": "Your group wants its documents never to leave the building. Which region shows the setup that gives that control?",
+      "correct_zone": "inside-the-lab-boundary",
+      "explanation": "A self-hosted or local model runs on a machine you control, so you decide where the data go and what the agent reaches."
+    },
+    {
+      "question": "A lab runs its own model. Someone must patch it, protect its secrets, and watch for runaway loops. Which region shows this burden?",
+      "correct_zone": "you-maintain-it",
+      "explanation": "Self-hosting trades convenience for control: setup, security, and maintenance become the lab's job."
+    },
+    {
+      "question": "A published IEEE paper and an open-source script from a public repository need summarizing. Which region shows where they may go?",
+      "correct_zone": "green-lane",
+      "explanation": "Class 0 public material may be given to any tool."
+    },
+    {
+      "question": "A new circuit netlist has not been published or filed. Using a hosted tool needs the advisor's written approval, or a local model. Which region shows this?",
+      "correct_zone": "yellow-lane",
+      "explanation": "Unpublished designs are class 2 and need a decision before they go to any tool."
+    },
+    {
+      "question": "Foundry model files under NDA and identifiable interview transcripts are in the folder. Which region shows where they belong?",
+      "correct_zone": "red-lane",
+      "explanation": "Obligated data goes to a local model only, and only if the agreement allows, or else to no AI tool."
+    },
+    {
+      "question": "A new student asks on the first day what the group's rules for AI tools are. Which region shows the single page that answers?",
+      "correct_zone": "lab-policy-sheet",
+      "explanation": "A one-page lab AI policy sets data classes, disclosure, verification, and approved tools in advance."
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "title": "Cleaning Without Hiding",
+  "image": "cleaning-without-hiding.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#2A2E3A", "#C0392B", "#A04000", "#7B241C", "#1F7A8C", "#3C8D5A", "#7A0019"],
+  "zones": [
+    {
+      "id": "raw-capture",
+      "label": "The Raw Capture",
+      "color": "#2A2E3A",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 24.0,
+      "summary": "One measured dataset, shared by both paths: noisy points, a few outliers, and a block of missing values. It cannot be regenerated with a prompt, so it is the one thing you must protect.",
+      "facts": [
+        "Measurement data carry noise and quantization, depend on instrument settings recorded with them, and can contain artifacts such as saturation, dropped samples, or a probe that slipped (Chapter 12).",
+        "A reliable pattern is a CSV of values with a JSON sidecar of the same name that records the instrument, settings, date, and units (Chapter 12).",
+        "Measurement data are the one thing in a project that you cannot regenerate with a prompt, so they must be protected (Chapter 12).",
+        "Exploratory analysis comes first. Size, ranges, distributions, and shape catch clipping, short records, and wrong frequencies (Chapter 12)."
+      ]
+    },
+    {
+      "id": "silent-cleanup",
+      "label": "Silent Cleanup",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 27.0,
+      "x2": 48.5,
+      "y2": 63.5,
+      "summary": "The data go into a black box and come out looking tidy. No record says which points were dropped, how many, or why. Every choice changed the answer, and nothing marks that a choice was made.",
+      "facts": [
+        "Cleaning is the quietest source of wrong results in research, because every choice changes the answer and nothing marks that a choice was made (Chapter 12).",
+        "A point that is merely an outlier is information about the distribution. Removing it is a claim about the system (Chapter 12).",
+        "An agent asked to 'get a clean result' has an incentive to remove what hurts it (Chapter 12).",
+        "Agents can also hide errors: a catch-all exception handler, a silently substituted default, or a filtered warning make a script appear to work while it computes the wrong thing (Chapter 12)."
+      ]
+    },
+    {
+      "id": "unearned-polish",
+      "label": "The Unearned Polish",
+      "color": "#A04000",
+      "x1": 2.0,
+      "y1": 66.5,
+      "x2": 32.5,
+      "y2": 98.0,
+      "summary": "A smooth, handsome plot looks authoritative, but nobody can check what was removed to make it. Its polish is unearned, because the cleaning behind it left no record.",
+      "facts": [
+        "A cleaning step that happens to make the number better is a common trap (Chapter 12).",
+        "Whenever a cleaning step changes a headline number, report the result both with and without it, and ask what documented cause justified the step (Chapter 12).",
+        "A plot that supports a claim shows a visible indication of uncertainty or spread, and shows the raw data and not only a fit (Chapter 12).",
+        "State the sample size beside every statistic. A mean of nine chips and a mean of three hundred are different claims (Chapter 12)."
+      ]
+    },
+    {
+      "id": "overwritten-original",
+      "label": "Original Overwritten",
+      "color": "#7B241C",
+      "x1": 34.0,
+      "y1": 66.5,
+      "x2": 48.5,
+      "y2": 98.0,
+      "summary": "The cleaning edited the raw file in place. With no untouched original, a bad step cannot be rerun and nobody can check what was lost.",
+      "facts": [
+        "Cleaning is a script, not an edit. The raw file is never changed (Chapter 12).",
+        "Editing a suspicious value in the raw file is listed among the misconceptions the chapter's cleaning simulator is built to correct (Chapter 12).",
+        "When raw files are kept in data/raw/ and everything downstream is generated into data/processed/, a bad cleaning step can be rerun from the original (Chapter 12).",
+        "Measurement data cannot be regenerated with a prompt, so an overwritten capture may be gone for good (Chapter 12)."
+      ]
+    },
+    {
+      "id": "logged-cleanup",
+      "label": "Logged Cleanup",
+      "color": "#1F7A8C",
+      "x1": 51.5,
+      "y1": 27.0,
+      "x2": 98.0,
+      "y2": 63.5,
+      "summary": "A script applies named steps you can see: exclude missing-value rows, exclude points with a documented cause, correct a documented unit mismatch. Each step logs its rows, count, and reason.",
+      "facts": [
+        "Three rules: cleaning is a script and not an edit, every change is logged (how many rows, which, and why), and removal needs a documented cause (Chapter 12).",
+        "There are four responses to an anomaly: keep, exclude with log, correct and log, or remeasure (Chapter 12).",
+        "In the chapter's example, a 12 mV device whose notebook says 'probe slipped' is excluded with the reason recorded. A 6.8 mV device with no entry stays, is reported, and is investigated (illustrative numbers, Chapter 12).",
+        "Missing or unusable measurements, such as an unplugged input cable, call for remeasurement and not for cleaning (Chapter 12)."
+      ]
+    },
+    {
+      "id": "plot-with-ghosts",
+      "label": "A Plot With Its Ghosts",
+      "color": "#3C8D5A",
+      "x1": 51.5,
+      "y1": 66.5,
+      "x2": 82.0,
+      "y2": 98.0,
+      "summary": "The final plot looks much like the silent one, but removed points stay visible as faint gray ghosts with a count. A reader can see what was cut and judge whether the cuts were fair.",
+      "facts": [
+        "The cleaning log records the row identifiers, the count, and the reason for every exclusion, so the plot can be audited against it (Chapter 12).",
+        "A real tail in the distribution, such as an undocumented 6.8 mV device, stays in the data because it is what a yield analysis is meant to find (Chapter 12).",
+        "When a cleaning step changes a headline number, report the result both with and without it (Chapter 12).",
+        "A plot has labeled axes with units, a legend where there is more than one series, visible spread, and the raw data (Chapter 12)."
+      ]
+    },
+    {
+      "id": "raw-preserved",
+      "label": "Raw File, Locked",
+      "color": "#7A0019",
+      "x1": 83.5,
+      "y1": 66.5,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "The untouched original sits read-only in data/raw/, beside its JSON sidecar. Everything downstream is generated from it into data/processed/, so any step can be rerun.",
+      "facts": [
+        "Put captured files in data/raw/, make them read-only, and never write to that directory from a script (Chapter 12).",
+        "Everything downstream is generated into data/processed/, so a bad cleaning step can be rerun from the original (Chapter 12).",
+        "A read-only raw directory gives an agent a boundary it can obey (Chapter 12).",
+        "A vendor instrument format holds the complete instrument state. Archive it, then convert it to an open format (Chapter 12)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which region shows measurements straight off the instrument, with noise, a block of missing values, and a few outliers, that you could not regenerate with a prompt?",
+      "correct_zone": "raw-capture",
+      "explanation": "Measurement data are the one thing in a project that a prompt cannot recreate, so both cleaning paths start from this one capture."
+    },
+    {
+      "question": "A script returns a tidy dataset, but nothing records which rows were dropped, how many, or why. Which region shows this path?",
+      "correct_zone": "silent-cleanup",
+      "explanation": "Cleaning without a log hides every choice. Each removal changes the answer, and nothing marks that a choice was made."
+    },
+    {
+      "question": "An agent told to 'get a clean result' quietly removes the points that hurt it. Which region shows the path where nobody could tell?",
+      "correct_zone": "silent-cleanup",
+      "explanation": "An agent has an incentive to remove what hurts the result. Only a logged, documented process makes that visible."
+    },
+    {
+      "question": "A smooth, handsome plot with a gold ribbon looks authoritative, yet no one can check what was removed to produce it. Which region shows this?",
+      "correct_zone": "unearned-polish",
+      "explanation": "A plot that looks clean is not evidence of clean data. A step that improves the headline number should be reported with and without it."
+    },
+    {
+      "question": "After cleaning, the original capture file itself has been changed in place, so a bad step cannot be rerun. Which region shows this?",
+      "correct_zone": "overwritten-original",
+      "explanation": "Cleaning is a script and not an edit. The raw file must never be changed, or the original is lost."
+    },
+    {
+      "question": "A device reads 12 mV and its notebook says the probe slipped, so it is excluded with the reason written down. Another reads 6.8 mV with no entry and stays. Which region shows this process?",
+      "correct_zone": "logged-cleanup",
+      "explanation": "Removal needs a documented cause. A value with no documented fault is kept, reported, and investigated."
+    },
+    {
+      "question": "Which region shows each cleaning step dropping its removed points into a tray and writing an entry in a log?",
+      "correct_zone": "logged-cleanup",
+      "explanation": "Every change is logged with the rows, the count, and the reason, so the whole cleaning can be audited."
+    },
+    {
+      "question": "The final plot looks about the same as on the other side, but removed points remain visible as faint marks with a count. Which region shows this?",
+      "correct_zone": "plot-with-ghosts",
+      "explanation": "Showing what was removed lets a reader judge whether the cuts were fair, while the plot itself stays clear."
+    },
+    {
+      "question": "The untouched original sits read-only in data/raw/, and every other file is generated from it. Which region shows this rule?",
+      "correct_zone": "raw-preserved",
+      "explanation": "A read-only original means a bad cleaning step can be rerun, and an agent has a boundary it can obey."
+    }
+  ]
+}

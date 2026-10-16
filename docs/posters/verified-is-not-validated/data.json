@@ -1,0 +1,189 @@
+{
+  "title": "Verified Is Not Validated",
+  "image": "verified-is-not-validated.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#3C8D5A", "#2A2E3A", "#7A0019", "#C0392B", "#D9A400", "#1F7A8C", "#7A5AA6", "#2F6DB5"],
+  "zones": [
+    {
+      "id": "verification-checkpoint",
+      "label": "Verification Checkpoint",
+      "color": "#3C8D5A",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 31.0,
+      "y2": 36.0,
+      "summary": "An inspector compares the finished board and its code against the blueprint. Verification asks whether the work was done right.",
+      "facts": [
+        "Verification asks whether the code implements the formula, the computation matches the specification, and the numbers in the paper are the numbers the script produced (Chapter 17).",
+        "Every verification has an object: the specification, the standard, or the primary source. When someone says 'it was verified', ask against what (Chapter 17).",
+        "If the reference is another output of the same process, nothing independent has happened (Chapter 17).",
+        "Typical verification failures are the agent failures of earlier chapters: a wrong formula, a changed number, an invented citation (Chapter 17)."
+      ]
+    },
+    {
+      "id": "green-checklist",
+      "label": "The Green Checklist",
+      "color": "#2A2E3A",
+      "x1": 32.5,
+      "y1": 2.0,
+      "x2": 48.5,
+      "y2": 36.0,
+      "summary": "Every line is ticked, so the build matches its specification. A full set of ticks is evidence about the build, not about the specification.",
+      "facts": [
+        "A design can be fully verified against a specification that was wrong, and it will be wrong in exactly the way the specification was (Chapter 17).",
+        "In Chapter 17's worked example, a script that returns 10.0 bits for a known 10-bit record has its implementation verified.",
+        "Test-driven research writes the success criteria down before the result is seen, so a criterion cannot be adjusted to fit the result (Chapter 17).",
+        "Verification effort should match the stakes: a figure for a group meeting needs less than a claim in a journal (Chapter 17)."
+      ]
+    },
+    {
+      "id": "validation-checkpoint",
+      "label": "Validation Checkpoint",
+      "color": "#7A0019",
+      "x1": 51.5,
+      "y1": 2.0,
+      "x2": 80.5,
+      "y2": 36.0,
+      "summary": "The same board goes on a real bench with a probe, facing the real problem in the field. Validation asks whether the right thing was done.",
+      "facts": [
+        "Validation asks whether the specification matches reality, whether the simulated circuit behaves as the fabricated one does, and whether the result answers the research question (Chapter 17).",
+        "Validation failures are quiet. An agent faithfully implements the question as you stated it, so a badly framed question makes every verified result answer the wrong thing (Chapter 17).",
+        "A skeptical reader's first question is often 'is this the right comparison?', which is why Chapter 14 put so much weight on framing (Chapter 17).",
+        "Independent replication has another person, instrument, or dataset produce the result from the description, which also tests the description (Chapter 17)."
+      ]
+    },
+    {
+      "id": "waveforms-disagree",
+      "label": "Waveforms That Disagree",
+      "color": "#C0392B",
+      "x1": 82.0,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 36.0,
+      "summary": "The measured trace and the simulated trace do not match. That gap is a validation signal about the model and the specification.",
+      "facts": [
+        "Validation asks whether the simulated circuit behaves as the fabricated one does (Chapter 17).",
+        "Replication guards against non-reproducible results, but it does not catch a wrong question (Chapter 17, Table 1).",
+        "State how sure a result is: use confidence intervals from repeated measurements, a range and not a point, and the sample size behind every statistic (Chapter 17).",
+        "List the assumptions on which a number depends, because a fluent model's register carries no information about its confidence (Chapter 17)."
+      ]
+    },
+    {
+      "id": "flaw-that-travels",
+      "label": "The Flaw That Travels",
+      "color": "#D9A400",
+      "x1": 2.0,
+      "y1": 38.0,
+      "x2": 98.0,
+      "y2": 62.0,
+      "summary": "A small flaw printed on the blueprint is carried through design, code, and build. Every stage passes its check, and the product is wrong exactly as the specification was.",
+      "facts": [
+        "A design can be fully verified against a specification that was wrong, and it will be wrong in exactly the way the specification was (Chapter 17).",
+        "Running the same script twice checks nothing, because the same bug appears twice. A check needs failure causes different from those of the thing checked (Chapter 17).",
+        "Asking the same agent, in the same session, to confirm its own output carries almost no information, because it shares the original error and context (Chapter 17).",
+        "To make a check mean something, change the method, the model, the session, or the person (Chapter 17)."
+      ]
+    },
+    {
+      "id": "independent-check",
+      "label": "Independent Check",
+      "color": "#1F7A8C",
+      "x1": 2.0,
+      "y1": 64.0,
+      "x2": 32.5,
+      "y2": 98.0,
+      "summary": "Compute the same quantity by a different route. If something is wrong, two routes with different failure causes can disagree.",
+      "facts": [
+        "An independent check has failure causes different from those of the thing being checked. A different method, tool, dataset, or person gives it some chance of disagreeing when something is wrong (Chapter 17).",
+        "In the chapter's illustrative example, a least-squares sine fit gave 9.3 bits against the script's 9.4 on the same record, within the expected difference between methods.",
+        "A known-answer test runs a method on an input whose answer you know independently (Chapter 17).",
+        "The weakness of an independent method is that the two methods may share an input error (Chapter 17, Table 1)."
+      ]
+    },
+    {
+      "id": "primary-source-check",
+      "label": "Primary Source Check",
+      "color": "#7A5AA6",
+      "x1": 34.0,
+      "y1": 64.0,
+      "x2": 66.0,
+      "y2": 98.0,
+      "summary": "Go to the original: the paper, the datasheet, or the standard. Do not trust a summary or a model's recollection of it.",
+      "facts": [
+        "A primary source check is the answer to the fabricated and misattributed claims of Chapters 2 and 11 (Chapter 17).",
+        "It takes minutes when the agent supplied the location of every claim (Chapter 17).",
+        "In the chapter's illustrative example, the lab notebook showed the input frequency was 499 kHz and not the 99 kHz in the script's default.",
+        "Its weakness is that it is only as good as the source (Chapter 17, Table 1)."
+      ]
+    },
+    {
+      "id": "cross-model-check",
+      "label": "Cross-Model Check",
+      "color": "#2F6DB5",
+      "x1": 67.5,
+      "y1": 64.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "Ask a different model, or a fresh session with no earlier context, and compare. Agreement is weak evidence. Disagreement is a flag.",
+      "facts": [
+        "It is cheap and a good screen for gross errors (Chapter 17).",
+        "Models share much of their training data and many of their blind spots, so agreement is weak evidence and disagreement is a useful flag (Chapter 17).",
+        "Use it to decide what to look at, not to decide what is true (Chapter 17).",
+        "Its cost is very low and its weakness is shared blind spots (Chapter 17, Table 1)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A board passes every item on its test list, yet the value in the original blueprint was wrong. Which region shows how that error survives all the way to the finished product?",
+      "correct_zone": "flaw-that-travels",
+      "explanation": "Each stage was checked against the specification, so the specification's flaw was carried through every stage without being caught."
+    },
+    {
+      "question": "You ask the same agent, in the same session, to confirm its own output. Which region shows why that confirmation shares the original error?",
+      "correct_zone": "flaw-that-travels",
+      "explanation": "The agent carries the same mistake and context that produced the output, so its confirmation adds almost no information."
+    },
+    {
+      "question": "An inspector confirms that the code implements the formula given in the specification. Which region shows this kind of check?",
+      "correct_zone": "verification-checkpoint",
+      "explanation": "Verification asks whether the work was done right against a specification, standard, or source."
+    },
+    {
+      "question": "Every line of the test list is ticked and the team calls the work correct. Which region shows the comfort those ticks give, and its limit?",
+      "correct_zone": "green-checklist",
+      "explanation": "Ticks show the build matches the specification. They cannot show that the specification itself was right."
+    },
+    {
+      "question": "The same board is put on a real bench and compared with the real problem in the field. Which region shows the question being asked?",
+      "correct_zone": "validation-checkpoint",
+      "explanation": "Validation asks whether the right thing was done: whether the specification matches reality and the result answers the research question."
+    },
+    {
+      "question": "A skeptical reviewer asks whether this is the right comparison to be making at all. Which region shows the kind of failure the reviewer suspects?",
+      "correct_zone": "validation-checkpoint",
+      "explanation": "A badly framed question makes every verified result answer the wrong thing, which is a validation failure."
+    },
+    {
+      "question": "The trace measured on the fabricated circuit does not match the simulated trace. Which region shows this disagreement?",
+      "correct_zone": "waveforms-disagree",
+      "explanation": "Validation asks whether the simulated circuit behaves as the fabricated one does. A mismatch signals that the model or specification may be wrong."
+    },
+    {
+      "question": "Instead of rerunning the same script, you compute the same quantity with a least-squares sine fit. Which region shows why this is more informative?",
+      "correct_zone": "independent-check",
+      "explanation": "A different method has different failure causes, so it can disagree when the first method is wrong."
+    },
+    {
+      "question": "A model says a datasheet limits the input frequency, and you open the datasheet itself to read the limit. Which region shows this check?",
+      "correct_zone": "primary-source-check",
+      "explanation": "Only the original document can settle a claim about what the document says. A summary or a model's recollection cannot."
+    },
+    {
+      "question": "A fresh session of a different model, given no earlier context, disagrees with the first answer. Which region shows how much weight this deserves?",
+      "correct_zone": "cross-model-check",
+      "explanation": "Disagreement is a useful flag about what to look at. Agreement would be only weak evidence, because models share blind spots."
+    }
+  ]
+}

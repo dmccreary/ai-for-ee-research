@@ -1,0 +1,145 @@
+{
+  "title": "Twenty Planners, Ten Doers, One Researcher",
+  "orientation": "landscape",
+  "image": "twenty-planners-ten-doers.png",
+  "layout": "top-bottom",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Task Queue",
+      "panel": "top",
+      "x": 9.0,
+      "y": 44.0,
+      "radius": 4,
+      "color": "#2A2E3A",
+      "hint": "Find the tray at the far left end of the conveyor, where task cards wait in a neat ordered pile with colored status tabs.",
+      "description": "The ordered list of tasks waiting to be done, with their status, kept as a plain file in the project so the agents and the researcher read the same record. Each task in the breakdown has an owner role, an input, an output, and an acceptance check."
+    },
+    {
+      "id": 2,
+      "label": "Handoff Card",
+      "panel": "top",
+      "x": 21.0,
+      "y": 41.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the single task card riding the belt that has a five-segment stripe along its edge, one segment lit.",
+      "description": "A handoff carries the goal, inputs, constraints, acceptance criteria, work done, and open questions in one agreed format and place. A minimal protocol uses five statuses: queued, running, needs-review, accepted, rejected. An agent never marks its own work accepted.",
+      "tip": "A handoff is where information is lost, so design it on purpose."
+    },
+    {
+      "id": 3,
+      "label": "Critical Path",
+      "panel": "top",
+      "x": 33.0,
+      "y": 38.0,
+      "radius": 4,
+      "color": "#B9770E",
+      "hint": "Find the chain of cards joined by thick glowing arrows that runs the full length of the belt, with a few cards hanging loose beside it.",
+      "description": "Dependencies set what can run in parallel. In Chapter 10's illustrative example, 21 hours of work still takes 18 hours, the longest chain of dependent tasks. More agents cannot shorten it. Only shortening a task on that chain can, and then the next-longest chain takes over."
+    },
+    {
+      "id": 4,
+      "label": "Planning Agent Bank",
+      "panel": "top",
+      "x": 42.0,
+      "y": 14.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the wide upper tier packed with about twenty small teal workers at desks holding maps, outlines, and checklists.",
+      "description": "About twenty planning agents explore, decompose, and specify: surveys, approaches, specifications, and acceptance criteria. Their output is cheap and reversible, so many plans can run in parallel and you choose among them. The 20-to-10 ratio is a design target, not a law.",
+      "tip": "A wrong plan costs minutes of reading. A wrong execution costs a rerun."
+    },
+    {
+      "id": 5,
+      "label": "Review Checkpoint",
+      "panel": "top",
+      "x": 50.0,
+      "y": 44.0,
+      "radius": 4,
+      "color": "#FFCC33",
+      "hint": "Find the low gold arch spanning the belt, with a small scanner light and a green check tile, and no person beside it.",
+      "description": "A defined point where output is examined before the next step uses it. A checkpoint can be automated, such as a test suite or a check script, or run by a reviewer agent. It does not spend your attention. A reviewer agent complements tests and your own sampling, and does not replace them."
+    },
+    {
+      "id": 6,
+      "label": "Human Approval Gate",
+      "panel": "top",
+      "x": 63.0,
+      "y": 40.0,
+      "radius": 4,
+      "color": "#7A0019",
+      "hint": "Find the tall gold gate across the belt with a small person-and-pen symbol on its top beam.",
+      "description": "A checkpoint where a person must say yes before work continues. Gates consume the scarce resource, so they belong where actions are irreversible or outward-bound. Reviewing a sample of the cheapest, most reversible outputs is one way to save attention.",
+      "tip": "A gate that nobody reads is a gate in name only."
+    },
+    {
+      "id": 7,
+      "label": "Execution Agent Bank",
+      "panel": "bottom",
+      "x": 28.0,
+      "y": 80.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the lower tier of ten larger, darker teal workers at benches with laptops, probes, charts, and printed figures.",
+      "description": "About ten execution agents carry out specified tasks: code, analyses, simulations, figures, and text. Their output changes files and uses resources, and it costs more attention to check, so this side is kept smaller. Give each its own output directory or branch."
+    },
+    {
+      "id": 8,
+      "label": "The Orchestrator",
+      "panel": "bottom",
+      "x": 47.0,
+      "y": 93.0,
+      "radius": 4,
+      "color": "#7A0019",
+      "hint": "Find the maroon figure at the bottom center holding a baton behind a podium.",
+      "description": "The orchestrator decides what is done, by which agent, in what order, with what checks, and what happens when something fails. In this book that is the researcher. An orchestrating agent may keep the queue and draft status reports, but the researcher stays accountable."
+    },
+    {
+      "id": 9,
+      "label": "Shared Workspace",
+      "panel": "bottom",
+      "x": 52.0,
+      "y": 62.0,
+      "radius": 4,
+      "color": "#3C8D5A",
+      "hint": "Find the long table in the middle of the stage where file folders from above and below are being set down, each in its own colored tray.",
+      "description": "The common area where the team's files live. To prevent collisions, give each agent its own output directory or Git branch, keep inputs read-only, and make merging an explicit step that goes through review instead of letting agents write straight into the main line."
+    },
+    {
+      "id": 10,
+      "label": "Status Board",
+      "panel": "bottom",
+      "x": 57.0,
+      "y": 92.0,
+      "radius": 4,
+      "color": "#2A2E3A",
+      "hint": "Find the small panel mounted on the podium with four pictogram rows: a check, a block, a raised hand, and a coin.",
+      "description": "A short report from the queue and the logs answers four questions: what finished, what is blocked and why, what needs your decision, and what has been spent. Ask an orchestrating agent to produce it each morning, and read it before you read anything else."
+    },
+    {
+      "id": 11,
+      "label": "Conflict Flag",
+      "panel": "bottom",
+      "x": 60.0,
+      "y": 62.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the red pennant planted in one file folder that two teal hands from opposite tiers are both holding.",
+      "description": "Two agents produced incompatible results. Do not average them. Decide whether the dispute is about facts or judgment. For facts, trace each result to its inputs and find the first point of divergence, often a different window function or file version. Record the decision and the reason.",
+      "tip": "Ask each agent to list inputs, settings, and file versions, then compare line by line."
+    },
+    {
+      "id": 12,
+      "label": "Attention Meter",
+      "panel": "bottom",
+      "x": 92.0,
+      "y": 52.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the tall thermometer-like gauge on the far right, with a level that has drained into a hatched warning band.",
+      "description": "Researcher attention is the binding limit. In Chapter 10's illustration, 20 planners at 6 minutes, 10 executors at 15 minutes, and 30 minutes of conflicts need 300 minutes against 4 hours of attention. Reviewing half the planning outputs brings the load to 240 minutes."
+    }
+  ]
+}

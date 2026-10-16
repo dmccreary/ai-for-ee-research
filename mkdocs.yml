@@ -118,6 +118,30 @@ nav:
       - Failure Case Root Cause Analyzer: sims/failure-case-root-cause-analyzer/index.md
       - Adoption Plan Prioritizer: sims/adoption-plan-prioritizer/index.md
 
+  - Posters:
+      - Poster Gallery: posters/index.md
+      - Infographic Poster Ideas: posters/poster-ideas.md
+      - From Doing Everything to Directing Everything: posters/from-doing-to-directing/index.md
+      - The Window That Fills Up: posters/the-window-that-fills-up/index.md
+      - The Real Citation and the Fluent Fake: posters/real-citation-fluent-fake/index.md
+      - Vague Prompt, Engineered Context: posters/vague-prompt-engineered-context/index.md
+      - The Chat That Forgets, the Project That Remembers: posters/chat-forgets-project-remembers/index.md
+      - A Folder of Files, a Graph of Knowledge: posters/folder-of-files-graph-of-knowledge/index.md
+      - Inside an Agent Skill: posters/inside-an-agent-skill/index.md
+      - The Agent Loop Inside Its Sandbox: posters/agent-loop-inside-its-sandbox/index.md
+      - The Autonomy Dial: posters/the-autonomy-dial/index.md
+      - Twenty Planners, Ten Doers, One Researcher: posters/twenty-planners-ten-doers/index.md
+      - The Literature Funnel: posters/the-literature-funnel/index.md
+      - Cleaning Without Hiding: posters/cleaning-without-hiding/index.md
+      - Code That Runs, Code That Is Right: posters/code-that-runs-code-that-is-right/index.md
+      - From Hunch to Falsifiable Hypothesis: posters/hunch-to-falsifiable-hypothesis/index.md
+      - "The Manuscript Line: Where the Human Stays": posters/the-manuscript-line/index.md
+      - A Figure You Read, a Simulation You Explore: posters/figure-you-read-simulation-you-explore/index.md
+      - Verified Is Not Validated: posters/verified-is-not-validated/index.md
+      - Where Does Your Data Go?: posters/where-does-your-data-go/index.md
+      - Day Shift, Night Shift: posters/day-shift-night-shift/index.md
+      - The Paper Behind the Book: posters/the-paper-behind-the-book/index.md
+
   - Appendices:
       - List of Appendices: appendices/index.md
       - Personal Agents: appendices/personal-agents/index.md

@@ -1,0 +1,207 @@
+{
+  "title": "The Autonomy Dial",
+  "image": "the-autonomy-dial.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#2A2E3A", "#C0392B", "#B9770E", "#1F7A8C", "#3C8D5A", "#C0392B", "#B9770E", "#1F7A8C", "#3C8D5A"],
+  "zones": [
+    {
+      "id": "autonomy-dial",
+      "label": "The Autonomy Dial",
+      "color": "#2A2E3A",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 24.0,
+      "summary": "Autonomy is the degree to which an agent acts without a human decision at each step. It is a dial with four notches, set task by task, not a switch for the whole project.",
+      "facts": [
+        "Agent autonomy is the degree to which an agent acts without a human decision at each step. It is a dial, not a switch, and the right setting differs for each task (Chapter 9).",
+        "Set the dial from the properties of the task, not from your confidence in the model. A very capable model should still not send email unreviewed (Chapter 9).",
+        "Three properties set how far the dial can safely turn: reversibility, reach, and verifiability (Chapter 9).",
+        "An agent that may only suggest has no autonomy and no risk, and delivers a fraction of the benefit. One that acts unattended delivers the full benefit and carries the full risk (Chapter 9).",
+        "The four levels, 0 to 3, are a convention of this book and not a standard (Chapter 9)."
+      ]
+    },
+    {
+      "id": "level-0-suggest-only",
+      "label": "Level 0: Suggest Only",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 26.0,
+      "x2": 25.1,
+      "y2": 70.0,
+      "summary": "The agent drafts and proposes while the researcher performs the action. Chapter 9's example is emailing results to a collaborator.",
+      "facts": [
+        "At level 0 the agent may only propose, and you perform the action (Chapter 9).",
+        "Typical use: anything that leaves your control and cannot be checked (Chapter 9).",
+        "Chapter 9's example is emailing a summary of results to a collaborator. It cannot be undone, it leaves your control, and it cannot be checked, so the agent drafts and you send.",
+        "Drafting is safe because nothing leaves your control until you send it (Chapter 1)."
+      ]
+    },
+    {
+      "id": "level-0-gauges",
+      "label": "Level 0 Gauges",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 72.0,
+      "x2": 25.1,
+      "y2": 98.0,
+      "summary": "All three readings sit in the danger zone: the action cannot be undone, the result leaves your control, and it cannot be checked quickly.",
+      "facts": [
+        "Reversibility is whether the effect can be undone. A file edit under version control can be. An email that has been sent cannot (Chapter 9).",
+        "Reach is whether the result leaves your control by being sent, published, or written to a shared system (Chapter 9).",
+        "Verifiability is whether you or a script can check the result quickly and objectively (Chapter 9).",
+        "Rule: if the result leaves your control and cannot be verified, the agent suggests only (Chapter 9)."
+      ]
+    },
+    {
+      "id": "level-1-approve-each-step",
+      "label": "Level 1: Approve Each Step",
+      "color": "#B9770E",
+      "x1": 26.3,
+      "y1": 26.0,
+      "x2": 49.4,
+      "y2": 70.0,
+      "summary": "The agent prepares an action and waits at an approval gate. Chapter 9's example is pushing the analysis branch to the group's shared repository.",
+      "facts": [
+        "At level 1 the agent acts only after you approve each action (Chapter 9).",
+        "Typical use: irreversible or outward-bound actions that can be checked (Chapter 9).",
+        "Chapter 9's example is pushing the analysis branch to the group's shared repository. The diff and test results can be checked, but the push leaves your control.",
+        "Approval fatigue is real. An agent that asks fifty times an hour trains you to click yes without reading (Chapter 8)."
+      ]
+    },
+    {
+      "id": "level-1-gauges",
+      "label": "Level 1 Gauges",
+      "color": "#B9770E",
+      "x1": 26.3,
+      "y1": 72.0,
+      "x2": 49.4,
+      "y2": 98.0,
+      "summary": "Reversibility and reach read danger, but verifiability reads safe. The result can be checked, yet it cannot be recalled once it leaves your control.",
+      "facts": [
+        "Rule: if the result leaves your control and can be verified, each step needs your approval (Chapter 9).",
+        "Rule: if the result stays local but cannot be undone, each step also needs your approval (Chapter 9).",
+        "A quick, objective check can be a diff, a test run, or a dry run that lists what would be deleted (Chapter 9).",
+        "Version control turns an unwanted edit into a one-command undo, which is why such edits are reversible and a sent email is not (Chapter 8)."
+      ]
+    },
+    {
+      "id": "level-2-act-within-boundary",
+      "label": "Level 2: Act Within a Boundary",
+      "color": "#1F7A8C",
+      "x1": 50.6,
+      "y1": 26.0,
+      "x2": 73.7,
+      "y2": 70.0,
+      "summary": "The agent works freely inside a fenced scope and stops at gates for approval. Chapter 9's example is drafting a related-work paragraph.",
+      "facts": [
+        "At level 2 the agent acts freely inside a defined scope and stops at gates for your approval (Chapter 9).",
+        "Typical use: reversible work whose quality needs a human read (Chapter 9).",
+        "Chapter 9's examples: drafting a related-work paragraph, and refactoring an analysis script that has no tests.",
+        "The scope is written down: which files and tools the agent may use. Planning agents often run at level 2 or 3 and execution agents at level 1 or 2, as starting points and not rules (Chapter 9)."
+      ]
+    },
+    {
+      "id": "level-2-gauges",
+      "label": "Level 2 Gauges",
+      "color": "#1F7A8C",
+      "x1": 50.6,
+      "y1": 72.0,
+      "x2": 73.7,
+      "y2": 98.0,
+      "summary": "Reversibility and reach read safe, but verifiability reads low. The work is local and can be undone, but its quality cannot be checked without a human read.",
+      "facts": [
+        "Rule: if the result is local and reversible but cannot be checked quickly, the agent acts within a boundary and stops at gates (Chapter 9).",
+        "A related-work paragraph is local and reversible, but judging its claims means reading the cited papers, so verifiability stays low (Chapter 9).",
+        "A refactor of a script with no tests is reversible, but without tests the result cannot be checked quickly (Chapter 9).",
+        "A reviewer agent can check output against criteria, but it does not replace a human or a script (Chapter 9)."
+      ]
+    },
+    {
+      "id": "level-3-act-and-report",
+      "label": "Level 3: Act and Report",
+      "color": "#3C8D5A",
+      "x1": 74.9,
+      "y1": 26.0,
+      "x2": 98.0,
+      "y2": 70.0,
+      "summary": "The agent runs unattended on a schedule, keeps a log, and stays under a budget. Chapter 9's example is a nightly parameter sweep saved to a new folder.",
+      "facts": [
+        "At level 3 the agent acts unattended and reports afterwards (Chapter 9).",
+        "Typical use: reversible, local, automatically verifiable work (Chapter 9).",
+        "Chapter 9's examples: reformatting refs.bib to a venue's style, and a nightly parameter sweep saved to a new folder and validated by a check script.",
+        "Before an agent runs unattended, give it a narrow written scope, an idempotent task, a log, and limits on steps, time, and spending (Chapter 9).",
+        "The log is where you look first the next morning, and the first runs of any new workflow deserve a close read (Chapter 9)."
+      ]
+    },
+    {
+      "id": "level-3-gauges",
+      "label": "Level 3 Gauges",
+      "color": "#3C8D5A",
+      "x1": 74.9,
+      "y1": 72.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "All three readings sit in the safe zone: the work is reversible, stays local, and a script can check it. Even so, limits stay in place.",
+      "facts": [
+        "Rule: if the result is local, reversible, and verifiable, the agent can act and report (Chapter 9).",
+        "A check script is what makes the sweep verifiable. Require its output in the report, because 'done' is a claim and not a fact (Chapter 9).",
+        "Cost grows faster than steps, because each pass resends the growing context. In Chapter 9's illustration, doubling from 10 to 20 iterations roughly tripled the input tokens.",
+        "Set a step limit and a spending cap, and have the agent stop and report when the same error recurs (Chapter 9)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which region shows that autonomy is a setting you turn up or down for each task, not an on-off switch for a whole project?",
+      "correct_zone": "autonomy-dial",
+      "explanation": "Agent autonomy is a dial with four levels, and the right setting differs for each task."
+    },
+    {
+      "question": "A more capable model is released. Which region shows what you should still decide task by task, from the effect of the action and not from the model's skill?",
+      "correct_zone": "autonomy-dial",
+      "explanation": "Autonomy follows the task, not the model. Reversibility, reach, and verifiability of the task set the level."
+    },
+    {
+      "question": "An agent drafts a summary of results, and the researcher reads it and sends it to a collaborator personally. Which region shows this level?",
+      "correct_zone": "level-0-suggest-only",
+      "explanation": "The result leaves your control and cannot be checked, so the agent proposes and you perform the action."
+    },
+    {
+      "question": "Which region shows the readings for a task that cannot be undone, leaves your control, and cannot be checked quickly?",
+      "correct_zone": "level-0-gauges",
+      "explanation": "With all three readings in the danger zone, the rule gives suggest only."
+    },
+    {
+      "question": "An agent prepares a push of the analysis branch to the group's shared repository and waits for the researcher's yes before each action. Which region shows this level?",
+      "correct_zone": "level-1-approve-each-step",
+      "explanation": "The push leaves your control, so each step needs your approval, even though a diff and test results can be checked."
+    },
+    {
+      "question": "Which region shows readings where the result can be checked quickly with a diff and test results, but cannot be recalled once it leaves your control?",
+      "correct_zone": "level-1-gauges",
+      "explanation": "Verifiable but outward-bound work gets approval at each step."
+    },
+    {
+      "question": "An agent drafts a related-work paragraph freely inside a fenced scope and stops at a gate before anything is accepted. Which region shows this level?",
+      "correct_zone": "level-2-act-within-boundary",
+      "explanation": "The work is local and reversible, but claims need a human read of the cited papers, so the agent stops at gates."
+    },
+    {
+      "question": "Which region shows readings for local, reversible work whose quality cannot be checked without a human read?",
+      "correct_zone": "level-2-gauges",
+      "explanation": "Local, reversible, and not quickly verifiable gives act within a boundary and stop at gates."
+    },
+    {
+      "question": "A nightly parameter sweep runs unattended into a new folder, writes a log, and has a spending limit. Which region shows this level?",
+      "correct_zone": "level-3-act-and-report",
+      "explanation": "The work is local, reversible, and validated by a check script, so the agent acts and reports, with a log and limits."
+    },
+    {
+      "question": "Which region shows readings where the work is local, reversible, and checked by a script, so an agent may act and report afterwards?",
+      "correct_zone": "level-3-gauges",
+      "explanation": "All three readings are safe. Limits on steps, time, and spending still apply."
+    }
+  ]
+}

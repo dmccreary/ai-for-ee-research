@@ -1,0 +1,181 @@
+{
+  "title": "A Folder of Files, a Graph of Knowledge",
+  "image": "folder-of-files-graph-of-knowledge.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": [
+    "#C0392B",
+    "#2A2E3A",
+    "#5B6475",
+    "#1F7A8C",
+    "#C99700",
+    "#3C8D5A",
+    "#7A0019"
+  ],
+  "zones": [
+    {
+      "id": "the-folder",
+      "label": "The Folder",
+      "color": "#C0392B",
+      "x1": 1.2,
+      "y1": 1.5,
+      "x2": 49.3,
+      "y2": 35.2,
+      "summary": "A project directory of papers, notebook pages, simulation results, meeting notes, and a half-built bibliography. Any file can be opened, but nothing records how the files relate.",
+      "facts": [
+        "A folder of linked files is a good memory for reading and a poor one for asking (Chapter 6).",
+        "A knowledge base is built from file types that each do one job: research notes, specification, glossary, decision log, and session log (Chapter 6).",
+        "Without written project memory every session starts from zero, and the researcher becomes the only memory the project has (Chapter 6).",
+        "Cross references are the explicit links that make a folder a connected body of knowledge, and they are the seed of the graph (Chapter 6)."
+      ]
+    },
+    {
+      "id": "keyword-search",
+      "label": "Keyword Search Only",
+      "color": "#2A2E3A",
+      "x1": 1.2,
+      "y1": 36.1,
+      "x2": 49.3,
+      "y2": 64.2,
+      "summary": "A search box finds the files that contain the words you typed. It cannot follow a chain of meaning, so it misses the paper that never names the thing you asked about.",
+      "facts": [
+        "A folder lets you find a note you already know exists. A typed graph lets you derive a fact that no single note states (Chapter 6).",
+        "Which experiments used the dataset we later found to be corrupted? That needs several links followed in sequence, and a folder offers nothing to follow them with (Chapter 6).",
+        "Passage search by text similarity finds text that mentions Dataset A and misses the paper that reports an experiment that used it, because that paper never names the dataset (Chapter 6).",
+        "Curated files beat pasting five documents into a prompt and hoping you chose well: the selection is done once, in the structure of the files (Chapter 6)."
+      ]
+    },
+    {
+      "id": "untyped-links",
+      "label": "Links That Mean Nothing",
+      "color": "#5B6475",
+      "x1": 1.3,
+      "y1": 64.9,
+      "x2": 45.1,
+      "y2": 96.8,
+      "summary": "A plain link that means only 'is related to' lets you navigate but not compute. Every link looks the same, so a program cannot tell a citation from a dataset.",
+      "facts": [
+        "A wiki link that means only 'is related to' lets you navigate but not compute (Chapter 6).",
+        "A relationship named USED or CITES tells a program what the link means, so it can answer questions that depend on the meaning (Chapter 6).",
+        "A personal knowledge graph differs from a folder of notes in exactly two ways: its links are typed, and its entities have types with expected properties (Chapter 6).",
+        "Dan McCreary's personal knowledge graph research cites Jim Hendler's hypothesis: a little semantics goes a long way (Chapter 6)."
+      ]
+    },
+    {
+      "id": "typed-graph",
+      "label": "Typed Nodes and Edges",
+      "color": "#1F7A8C",
+      "x1": 50.6,
+      "y1": 1.5,
+      "x2": 98.7,
+      "y2": 35.2,
+      "summary": "The same items as typed entities: paper, experiment, dataset, design, concept, and person. Named, directed relationships join them, such as cites, reports, used, tested, revises, about, and authored.",
+      "facts": [
+        "An entity is a distinct thing the project cares about. A relationship is a named, directed connection between two entities (Chapter 6).",
+        "A graph schema is the declared list of entity types and relationship types a graph allows. It keeps the graph from decaying into a wiki, and it fits in a table (Chapter 6).",
+        "Backlinks are the automatic reverse of a link. The PKG rule of thumb is about 60 percent of a graph's value in its nodes and 40 percent in its relationships (Chapter 6).",
+        "An agent can propose entities and links from a note, but it invents plausible entities, merges distinct ones, and misses implicit relationships, so a human reviews every batch (Chapter 6)."
+      ]
+    },
+    {
+      "id": "three-hop-question",
+      "label": "A Three-Hop Question",
+      "color": "#C99700",
+      "x1": 50.6,
+      "y1": 36.1,
+      "x2": 98.7,
+      "y2": 64.2,
+      "summary": "No single note answers: which papers report an experiment that tested the design that ADC Design v3 revises? A highlighted path of three links reaches Paper Alpha.",
+      "facts": [
+        "In the chapter's illustrative graph, v3 revises v2, Run 07 tested v2, and Paper Alpha reports Run 07, so the answer is Paper Alpha (Chapter 6).",
+        "Graph querying retrieves answers by following relationships. In Cypher, parentheses are nodes, square brackets are relationships, and an arrow gives direction (Chapter 6).",
+        "You do not need a graph database. Typed links in the frontmatter of each Markdown note and a short script can answer the same question (Chapter 6).",
+        "The question moves from 'where did I write that?' to 'what follows from what I know?' (Chapter 6)."
+      ]
+    },
+    {
+      "id": "grounded-answer",
+      "label": "A Grounded Answer",
+      "color": "#3C8D5A",
+      "x1": 46.2,
+      "y1": 64.9,
+      "x2": 67.2,
+      "y2": 96.8,
+      "summary": "Graph RAG puts the facts found by following links into the prompt and tells the model to answer only from them. The answer then points back to named links you can check.",
+      "facts": [
+        "Graph RAG retrieves a subgraph of facts by following relationships, not text passages ranked by similarity (Chapter 6).",
+        "For papers to recheck if Dataset A is corrupted, the traversal collects two experiments and two papers. The prompt receives lines such as 'Run 07 USED Dataset A' (Chapter 6).",
+        "The prompt adds 'answer only from these facts; if they are insufficient, say so', so the answer is grounded and checkable against named links (Chapter 6).",
+        "The graph is only as good as its entities and relationships. An agent-extracted link that nobody reviewed can be wrong (Chapter 6)."
+      ]
+    },
+    {
+      "id": "privacy-ring",
+      "label": "The Privacy Ring",
+      "color": "#7A0019",
+      "x1": 68.2,
+      "y1": 64.9,
+      "x2": 98.7,
+      "y2": 96.8,
+      "summary": "Whoever can query the graph can see it. Partition it by data class and give each agent a view of only the subgraphs its job needs, never the master graph.",
+      "facts": [
+        "Personal knowledge privacy is the control of what an agent may read from the graph and what it may learn (Chapter 19).",
+        "A literature agent reads the paper and concept subgraph. It does not read the subgraph of unpublished measurements (Chapter 19).",
+        "Keep the master graph where you control it and give agents views, so that the agent's memory is a copy that can be discarded (Chapter 19).",
+        "Treat what an agent writes into memory as a proposal you review, because a wrong or injected statement stored as memory persists and reappears in later sessions (Chapter 19)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A project directory holds PDFs, notebook scans, result files, and meeting notes, and nothing records how any two of them relate. Which region shows this?",
+      "correct_zone": "the-folder",
+      "explanation": "A folder is a good memory for reading. Without typed links it gives you files to open, and no way to ask a question across them."
+    },
+    {
+      "question": "You search the project for 'Dataset A' and get only the notes that mention it, so you miss the paper whose experiment used it. Which region shows this limit?",
+      "correct_zone": "keyword-search",
+      "explanation": "Text search matches the words in a passage. The paper never names the dataset, so only a path through the links can reach it."
+    },
+    {
+      "question": "Every link in a wiki says only 'related to', so a script cannot tell a citation from a dataset reference. Which region shows this problem?",
+      "correct_zone": "untyped-links",
+      "explanation": "An untyped link lets you navigate but not compute. The program needs the link to say what it means."
+    },
+    {
+      "question": "Which region shows items that carry a type, such as paper, experiment, or person, joined by named, directed relationships like cites and reports?",
+      "correct_zone": "typed-graph",
+      "explanation": "A knowledge graph stores typed entities and typed, directed relationships, declared in a small schema."
+    },
+    {
+      "question": "You need the papers that report an experiment that tested the design a newer version revised, and no single note states the answer. Which region shows how it is derived?",
+      "correct_zone": "three-hop-question",
+      "explanation": "The answer comes from chaining three relationships: revises, tested, and reports. A graph can follow the chain."
+    },
+    {
+      "question": "An agent answers from a handful of retrieved facts and shows the link behind each statement, so you can check it. Which region shows this?",
+      "correct_zone": "grounded-answer",
+      "explanation": "Graph RAG places facts from followed relationships in the prompt and tells the model to answer only from them, so each claim traces to a named link."
+    },
+    {
+      "question": "A literature agent may read papers and concepts but not unpublished measurements. Which region shows that boundary?",
+      "correct_zone": "privacy-ring",
+      "explanation": "Chapter 19 partitions the graph by data class and gives each agent a view of the subgraphs its job needs."
+    },
+    {
+      "question": "Why does naming a link USED, instead of leaving it as a plain pointer, let a program compute an answer? Which region shows the result of doing so?",
+      "correct_zone": "typed-graph",
+      "explanation": "A named relationship tells a program what the link means, so it can answer questions that depend on that meaning."
+    },
+    {
+      "question": "You want the master copy of your research graph to stay under your control while an agent works from a copy you can throw away. Which region shows this rule?",
+      "correct_zone": "privacy-ring",
+      "explanation": "Give agents views of the graph, so the agent's memory is a disposable copy and the master stays where you control it."
+    },
+    {
+      "question": "An agent-extracted link that nobody reviewed ends up in the prompt as a fact. Which region carries a warning about this limit?",
+      "correct_zone": "grounded-answer",
+      "explanation": "The graph is only as good as its entities and relationships. Grounding makes errors checkable, and it does not make unreviewed links correct."
+    }
+  ]
+}
