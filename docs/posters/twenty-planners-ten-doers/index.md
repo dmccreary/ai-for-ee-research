@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over a numbered marker or its label and read what that part of the team does. Use **Quiz** mode to read a clue and click the marker that matches. The marker numbers are hidden in Quiz mode, so you must find the matching part of the stage. Planners are on the top tier, the task belt is in the middle, and the doers are at the bottom.
 
@@ -28,11 +30,13 @@ The twelve callouts are:
 11. **Conflict Flag** — Two agents with incompatible results, traced to the first point of divergence.
 12. **Attention Meter** — The review budget that sets how big a team can usefully be.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![Twenty Planners, Ten Doers, One Researcher poster](./twenty-planners-ten-doers.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, the image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

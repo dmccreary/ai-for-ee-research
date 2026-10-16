@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read what it shows about working without memory and working with a project. Use **Quiz** mode to read a clue and click the panel it describes.
 
@@ -26,11 +28,13 @@ The eight regions are:
 7. **Plain Text Files** — Markdown, notebooks, and scripts that people and agents both read.
 8. **Commit History** — Small saved snapshots, a rollback point, and a reviewed merge.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![The Chat That Forgets, the Project That Remembers poster](./chat-forgets-project-remembers.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

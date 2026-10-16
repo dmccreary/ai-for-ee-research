@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read what each level of autonomy allows and why the gauges read as they do. Use **Quiz** mode to read a scenario and click the panel that shows it. The four columns run from level 0 on the left to level 3 on the right. Each column has a scene above and three gauges below.
 
@@ -25,11 +27,13 @@ The nine regions are:
 8. **Level 3: Act and Report** — The agent runs unattended with a log and limits, then reports.
 9. **Level 3 Gauges** — Reversible, local, and checked by a script.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![The Autonomy Dial poster](./the-autonomy-dial.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, the image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

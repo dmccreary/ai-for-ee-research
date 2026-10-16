@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over a numbered marker or its label and read what that part of the window does. Use **Quiz** mode to read the name in the prompt, then click the marker that matches. The marker numbers are hidden, so you must find the matching part of the three tubes.
 
@@ -17,23 +19,25 @@ Read the poster from top to bottom. The top tube is comfortable. The middle tube
 
 The eleven callouts are:
 
-1. **System Prompt** — Standing instructions that spend budget on every turn.
-2. **Conversation History** — Earlier turns, resent each time, that pile up.
+1. **Budget Ruler** — The subtraction that tells you what is left.
+2. **System Prompt** — Standing instructions that spend budget on every turn.
 3. **The Paper Block** — A pasted document, counted in tokens.
-4. **Budget Ruler** — The subtraction that tells you what is left.
-5. **Room for the Answer** — The space the completion draws from the same pool.
-6. **Token Meter** — Equations and code cost more tokens per word than prose.
+4. **Token Meter** — Equations and code cost more tokens per word than prose.
+5. **Middle Gets Overlooked** — Material in the middle of a long prompt is used less well.
+6. **Room for the Answer** — The space the completion draws from the same pool.
 7. **Silent Overflow** — The oldest content slides off and nothing looks wrong.
-8. **Middle Gets Overlooked** — Material in the middle of a long prompt is used less well.
+8. **Conversation History** — Earlier turns, resent each time, that pile up.
 9. **The Second Paste** — The step that fills the window.
 10. **Cut-Off Answer** — A reply that stops partway because the window is full.
 11. **Model Working Unaware** — The model carries on without what it lost.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![The Window That Fills Up poster](./the-window-that-fills-up.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

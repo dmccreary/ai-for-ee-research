@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a station and read what the agent does there and what the person keeps. Use **Quiz** mode to read a clue and click the station it describes. The line reads left to right across the top row, then left to right across the bottom row, as a paper grows from an outline to a submission. A gold handrail marks what stays human, and four stations carry a human stamp.
 
@@ -22,11 +24,13 @@ The six regions are:
 5. **Co-Author Consistency** — Co-author review, with agent-proposed consistency fixes as a list.
 6. **Submit and Respond** — The cover letter, the disclosure note, and a reviewer response that claims only real changes.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![The Manuscript Line: Where the Human Stays poster](./the-manuscript-line.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, the image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

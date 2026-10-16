@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read what it shows. One raw capture at the top feeds two paths. The left half is a silent cleanup. The right half is a logged cleanup. Use **Quiz** mode to read a clue and click the panel it describes.
 
@@ -23,11 +25,13 @@ The seven regions are:
 6. **A Plot With Its Ghosts** — A similar plot that keeps the removed points visible.
 7. **Raw File, Locked** — The untouched original, read-only, with its sidecar.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![Cleaning Without Hiding poster](./cleaning-without-hiding.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

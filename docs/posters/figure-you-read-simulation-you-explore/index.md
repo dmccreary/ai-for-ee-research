@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read how the printed figure and the simulation differ and how they relate. Use **Quiz** mode to read a clue and click the panel it describes. The left half is the page, which shows one case. The right half is the screen, where a reader can change the parameter. The bottom row shows how both come from one source and how an agent helps build the simulation.
 
@@ -23,11 +25,13 @@ The seven regions are:
 6. **Specification to MicroSim** — An agent builds the sim from a specification, and a person verifies and approves it.
 7. **Embedded Anywhere** — The same sim in a lab website and a paper's supplementary material.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![A Figure You Read, a Simulation You Explore poster](./figure-you-read-simulation-you-explore.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, the image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

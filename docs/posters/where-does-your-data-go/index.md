@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read where data goes when you use a hosted model, what changes when you run one yourself, and how to sort documents before you paste. Use **Quiz** mode to read a clue and click the panel it describes.
 
@@ -24,11 +26,13 @@ The eight regions are:
 7. **Red Lane** — Obligated data that stays off hosted tools.
 8. **The Lab Policy Sheet** — The one-page lab AI policy that writes the rules down.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![Where Does Your Data Go? poster](./where-does-your-data-go.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

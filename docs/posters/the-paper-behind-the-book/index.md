@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over a numbered marker or its label and read what that stage, milestone, or failure case teaches. Use **Quiz** mode to read the clue in the prompt, then click the marker that matches. The marker numbers are hidden, so you must find the matching part of the poster.
 
@@ -28,11 +30,13 @@ The twelve callouts are:
 11. Short Chapters Accepted
 12. Unbuilt Sims Marked
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![The Paper Behind the Book poster](./the-paper-behind-the-book.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

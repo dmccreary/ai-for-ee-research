@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read what it shows. The left half is the folder of files. The right half is the same material as a graph. Use **Quiz** mode to read a clue and click the panel it describes.
 
@@ -23,11 +25,13 @@ The seven regions are:
 6. **A Grounded Answer** — Facts from followed links placed in the prompt, so the answer can be checked.
 7. **The Privacy Ring** — The part of the graph an agent may not read.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![A Folder of Files, a Graph of Knowledge poster](./folder-of-files-graph-of-knowledge.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

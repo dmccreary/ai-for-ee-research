@@ -7,18 +7,23 @@ Each poster lives in docs/posters/<slug>/ and is authored as:
     image-prompt.md  text-to-image prompt (no text in the image)           [authored]
     index.md         MkDocs page that embeds main.html                     [authored]
     main.html        engine page (grid-diagram.js or diagram.js)           [generated here]
-    <slug>.png       artwork; a placeholder is drawn until real art exists [generated here]
+    <slug>.png       artwork from image-prompt.md                          [you generate it]
 
 Usage (run from the repo root):
 
-    python3 scripts/poster_overlays.py scaffold [slug ...]   # main.html + placeholder PNG
+    python3 scripts/poster_overlays.py scaffold [slug ...]   # write main.html
+    python3 scripts/poster_overlays.py sync [slug ...]       # make each index.md match whether its art exists
     python3 scripts/poster_overlays.py validate [slug ...]   # lint data.json, prompt, page
-    python3 scripts/poster_overlays.py all [slug ...]        # scaffold, then validate
+    python3 scripts/poster_overlays.py all [slug ...]        # scaffold, sync, then validate
     python3 scripts/poster_overlays.py gallery               # thumbnails + docs/posters/index.md + nav snippet
 
+After you save new artwork as docs/posters/<slug>/<slug>.png, run `scaffold` and `sync`, calibrate the
+zones with main.html?edit=true, then run `gallery` to refresh thumbnails.
+
 With no slug, every poster directory under docs/posters/ that has a data.json is used.
-`scaffold` never overwrites an existing PNG unless --force is given, so generated art
-is safe. A placeholder is recognised by the marker string in its PNG metadata.
+No placeholder art is written by default, because placeholders carry no value in git. Pass
+--placeholder to `scaffold` to draw a labelled zone-map PNG while calibrating zones. A
+placeholder is never drawn over real art, and is recognised by a marker in its PNG metadata.
 """
 from __future__ import annotations
 
@@ -251,10 +256,9 @@ def draw_placeholder(data: dict, out: Path) -> None:
     im.save(out, "PNG", optimize=True, pnginfo=meta)
 
 
-def scaffold(d: Path, force: bool) -> list[str]:
+def scaffold(d: Path, placeholder: bool) -> list[str]:
     msgs: list[str] = []
     data = load(d)
-    slug = d.name
 
     tpl = CALLOUT_TEMPLATE if is_callout(data) else GRID_TEMPLATE
     main = tpl.format(
@@ -266,12 +270,73 @@ def scaffold(d: Path, force: bool) -> list[str]:
     msgs.append("main.html written")
 
     png = d / data["image"]
-    if force or not png.exists() or is_placeholder(png):
+    if png.exists() and not is_placeholder(png):
+        msgs.append(f"art present: {png.name}")
+    elif placeholder:
         draw_placeholder(data, png)
-        msgs.append(f"placeholder {png.name} drawn")
+        msgs.append(f"placeholder {png.name} drawn (do not commit it)")
     else:
-        msgs.append(f"kept existing {png.name} (real art)")
+        msgs.append(f"no art yet: generate {png.name} from image-prompt.md")
     return msgs
+
+
+def has_art(d: Path) -> bool:
+    png = d / f"{d.name}.png"
+    return png.exists() and not is_placeholder(png)
+
+
+ART_RE = re.compile(r"<!-- poster-art:begin -->.*?<!-- poster-art:end -->", re.S)
+STATIC_RE = re.compile(r"<!-- poster-static:begin -->.*?<!-- poster-static:end -->", re.S)
+
+
+def art_block(d: Path, art: bool) -> str:
+    if art:
+        inner = (
+            '<iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>\n\n'
+            "[Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }"
+        )
+    else:
+        inner = (
+            '!!! note "Artwork not generated yet"\n'
+            "    This poster is a scaffold. Its overlay data and quiz are written, but the picture is not.\n"
+            f"    Generate the image from `image-prompt.md` in this poster's folder, save it as `{d.name}.png`,\n"
+            "    then run `python3 scripts/poster_overlays.py sync`."
+        )
+    return f"<!-- poster-art:begin -->\n{inner}\n<!-- poster-art:end -->"
+
+
+def static_block(d: Path, title: str, art: bool) -> str:
+    if not art:
+        return "<!-- poster-static:begin -->\n<!-- poster-static:end -->"
+    return (
+        "<!-- poster-static:begin -->\n"
+        "## Static Poster\n\n"
+        f"![{title} poster](./{d.name}.png){{ loading=lazy }}\n\n"
+        "The full-size poster above is a static copy of the interactive version, handy for printing, "
+        "sharing, or viewing without JavaScript.\n"
+        "<!-- poster-static:end -->"
+    )
+
+
+def sync(d: Path) -> list[str]:
+    """Make index.md match whether the poster's artwork exists."""
+    idx = d / "index.md"
+    text = idx.read_text()
+    art = has_art(d)
+    data = load(d)
+    if not ART_RE.search(text) or not STATIC_RE.search(text):
+        return ["index.md has no poster-art / poster-static markers; left unchanged"]
+    text = ART_RE.sub(lambda _m: art_block(d, art), text, count=1)
+    text = STATIC_RE.sub(lambda _m: static_block(d, data["title"], art), text, count=1)
+    # frontmatter image: only when the file exists (social previews)
+    want = f"image: posters/{d.name}/{d.name}.png"
+    text = re.sub(r"^#?image: posters/.*$", want if art else "# " + want, text, count=1, flags=re.M)
+    # status: scaffold until art exists, then built. Only a human sets approved.
+    text = re.sub(
+        r"^status:\s*(scaffold|built)\s*$", "status: built" if art else "status: scaffold", text, count=1, flags=re.M
+    )
+    idx.write_text(text)
+    return [f"index.md synced ({'with art' if art else 'no art yet'})"]
 
 
 # --------------------------------------------------------------------------- validate
@@ -403,14 +468,16 @@ def check_page(d: Path, data: dict, err: list[str], warn: list[str]) -> None:
             err.append("index.md frontmatter is not a YAML mapping")
         else:
             want = f"posters/{d.name}/{d.name}.png"
-            if meta.get("image") != want:
+            if has_art(d) and meta.get("image") != want:
                 err.append(f"index.md frontmatter image must be {want!r} (social previews)")
     except ImportError:
         warn.append("PyYAML not installed; frontmatter YAML and image: not checked")
     except Exception as e:  # noqa: BLE001
         err.append(f"index.md frontmatter is not valid YAML (quote titles/descriptions containing ': '): {str(e).splitlines()[0]}")
-    if f"]({'./' + d.name}.png)" not in body and f"]({d.name}.png)" not in body:
-        warn.append("index.md does not embed the full-size poster image")
+    if has_art(d) and f"]({'./' + d.name}.png)" not in body and f"]({d.name}.png)" not in body:
+        warn.append("index.md does not embed the full-size poster image (run sync)")
+    if not has_art(d) and (f"]({'./' + d.name}.png)" in body):
+        err.append("index.md embeds a poster image that does not exist (run sync)")
     for k in ("title:", "description:", "status:", "hide:"):
         if k not in fm:
             err.append(f"index.md frontmatter missing {k}")
@@ -421,8 +488,8 @@ def check_page(d: Path, data: dict, err: list[str], warn: list[str]) -> None:
         warn.append("index.md title differs from data.json title")
     if re.search(r"^# ", body, re.M):
         err.append("index.md body has an H1 (title belongs in frontmatter only)")
-    if "main.html" not in body or "<iframe" not in body:
-        err.append("index.md must embed ./main.html in an iframe")
+    if has_art(d) and ("main.html" not in body or "<iframe" not in body):
+        err.append("index.md must embed ./main.html in an iframe (run sync)")
     if "main.html?edit=true" not in body:
         warn.append("index.md has no calibration-mode link")
     lines = body.splitlines()
@@ -486,8 +553,10 @@ def validate(d: Path) -> tuple[list[str], list[str]]:
     check_prompt(d, data, err, warn)
     if not (d / "main.html").exists():
         err.append("main.html missing (run scaffold)")
-    if not (d / f"{d.name}.png").exists():
-        err.append(f"{d.name}.png missing (run scaffold)")
+    if not has_art(d) and (d / "index.md").exists():
+        m = FM.match((d / "index.md").read_text())
+        if m and re.search(r"^status:\s*(built|approved)\s*$", m.group(1), re.M):
+            err.append(f"status is built/approved but {d.name}.png is missing")
     return err, warn
 
 
@@ -537,20 +606,36 @@ def gallery() -> None:
         data = load(d)
         png = d / data["image"]
         thumb = d / f"{d.name}-thumb.jpg"
-        with Image.open(png) as im:
-            im = im.convert("RGB")
-            im.thumbnail((900, 600))
-            im.save(thumb, "JPEG", quality=82, optimize=True)
+        art = has_art(d)
+        if art:
+            with Image.open(png) as im:
+                if im.mode in ("RGBA", "LA", "P"):
+                    im = im.convert("RGBA")
+                    bg = Image.new("RGBA", im.size, "#FAF7F2")
+                    bg.alpha_composite(im)
+                    im = bg
+                im = im.convert("RGB")
+                im.thumbnail((900, 600))
+                im.save(thumb, "JPEG", quality=82, optimize=True)
+        elif thumb.exists():
+            thumb.unlink()
         title = frontmatter_field(d, "title") or data["title"]
         desc = frontmatter_field(d, "description")
         kind = "Callout" if is_callout(data) else "Grid"
         n = len(data.get("callouts") or data.get("zones") or [])
         unit = "markers" if is_callout(data) else "regions"
-        cards.append(
-            f"-   [![{title}](./{d.name}/{d.name}-thumb.jpg)](./{d.name}/index.md)\n\n"
-            f"    **[{title}](./{d.name}/index.md)**\n\n"
-            f"    {desc} *{kind} overlay, {n} {unit}.*\n"
-        )
+        if art:
+            card = (
+                f"-   [![{title}](./{d.name}/{d.name}-thumb.jpg)](./{d.name}/index.md)\n\n"
+                f"    **[{title}](./{d.name}/index.md)**\n\n"
+                f"    {desc} *{kind} overlay, {n} {unit}.*\n"
+            )
+        else:
+            card = (
+                f"-   **[{title}](./{d.name}/index.md)**\n\n"
+                f"    {desc} *{kind} overlay, {n} {unit}. Artwork not generated yet.*\n"
+            )
+        cards.append(card)
         nav.append(f"      - {title if ':' not in title else json.dumps(title)}: posters/{d.name}/index.md")
     body = (
         "---\n"
@@ -577,9 +662,9 @@ def gallery() -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["scaffold", "validate", "all", "gallery"])
+    ap.add_argument("cmd", choices=["scaffold", "sync", "validate", "all", "gallery"])
     ap.add_argument("slugs", nargs="*")
-    ap.add_argument("--force", action="store_true", help="redraw placeholder even over real art")
+    ap.add_argument("--placeholder", action="store_true", help="draw a labelled zone-map PNG where no art exists (never commit it)")
     ap.add_argument("--quiet", action="store_true", help="only print problems")
     a = ap.parse_args()
 
@@ -596,15 +681,23 @@ def main() -> int:
             print(f"[{d.name}] directory not found")
             bad += 1
             continue
+        if a.cmd == "sync":
+            for m in sync(d):
+                if not a.quiet:
+                    print(f"[{d.name}] {m}")
         if a.cmd in ("scaffold", "all"):
             try:
-                for m in scaffold(d, a.force):
+                for m in scaffold(d, a.placeholder):
                     if not a.quiet:
                         print(f"[{d.name}] {m}")
             except Exception as e:  # noqa: BLE001
                 print(f"[{d.name}] scaffold failed: {e}")
                 bad += 1
                 continue
+        if a.cmd == "all":
+            for m in sync(d):
+                if not a.quiet:
+                    print(f"[{d.name}] {m}")
         if a.cmd in ("validate", "all"):
             err, warn = validate(d)
             status = "FAIL" if err else "ok"

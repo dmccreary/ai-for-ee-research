@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read what changes when an agent keeps working after you leave, and which criteria to apply. Use **Quiz** mode to read a clue and click the panel it describes.
 
@@ -23,11 +25,13 @@ The seven regions are:
 6. **Proof and Record** — Claim verification and the activity audit.
 7. **Morning Audit** — Reading last night's log against the task the agent was given.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![Day Shift, Night Shift poster](./day-shift-night-shift.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, this image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

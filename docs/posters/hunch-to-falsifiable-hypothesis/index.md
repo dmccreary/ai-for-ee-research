@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over or click a panel and read what happens at that stage of turning a topic into a testable claim. Use **Quiz** mode to read a clue and click the panel it describes. Two staircases climb toward the same summit. The left one is loose and cloudy and ends in nothing. The right one is sharp and ends in a claim that a result could contradict.
 
@@ -23,11 +25,13 @@ The seven regions are:
 6. **Novelty Check** — A search, and not a model's say-so, shows whether the idea is new.
 7. **Research Roadmap** — A plan with decision points that say continue, change direction, or stop.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![From Hunch to Falsifiable Hypothesis poster](./hunch-to-falsifiable-hypothesis.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, the image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 

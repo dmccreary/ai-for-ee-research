@@ -7,9 +7,11 @@ hide:
   - toc
 ---
 
+<!-- poster-art:begin -->
 <iframe src="./main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
+<!-- poster-art:end -->
 
 Use **Explore** mode to hover over a numbered marker or its label and read what that part of the loop or the sandbox does. Use **Quiz** mode to read a clue and click the marker that matches. The marker numbers are hidden in Quiz mode, so you must find the matching part of the picture. The loop is on the left. The permission rings are on the right.
 
@@ -28,11 +30,13 @@ The twelve callouts are:
 11. **Step and Cost Meter** — Step, time, and spending limits against a runaway loop.
 12. **Inside the Project** — The directory where the agent may work, with raw data protected.
 
+<!-- poster-static:begin -->
 ## Static Poster
 
 ![The Agent Loop Inside Its Sandbox poster](./agent-loop-inside-its-sandbox.png){ loading=lazy }
 
-The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript. Until the final artwork is generated, the image is placeholder art.
+The full-size poster above is a static copy of the interactive version, handy for printing, sharing, or viewing without JavaScript.
+<!-- poster-static:end -->
 
 ## Why This Matters
 
