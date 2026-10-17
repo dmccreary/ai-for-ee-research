@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+  Source for dans-desktop.png. Unlike the other posters, this one is rendered from HTML
+  (real text, cropped app icons) because every value in it is author-supplied data, not art.
+  Re-render from the repo root:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
+      --hide-scrollbars --window-size=1920,1080 --screenshot=docs/posters/dans-desktop/dans-desktop.png \
+      file://$PWD/docs/posters/dans-desktop/poster.html
+  Zone coordinates in data.json come from the grid below (see ZONES in the comment at the bottom).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dan's Desktop</title>
+<style>
+  :root {
+    --bg: #FAF7F2;
+    --ink: #2A2E3A;
+    --maroon: #7A0019;
+    --gold: #FFCC33;
+    --yes: #2F7D4F;
+    --no: #C0392B;
+    --line: #D9D2C5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1920px; height: 1080px; background: var(--bg); overflow: hidden; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background-image:
+      linear-gradient(rgba(122,0,25,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(122,0,25,.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+  }
+  header { position: absolute; left: 40px; top: 28px; width: 1840px; }
+  header h1 { font-size: 66px; font-weight: 800; letter-spacing: -1px; color: var(--maroon); line-height: 1.05; }
+  header p  { font-size: 30px; margin-top: 10px; color: #4a4f5c; }
+  header .rule { height: 8px; width: 160px; background: var(--gold); margin-top: 14px; border-radius: 4px; }
+
+  /* 8 columns' worth of table: label | 5 products | total */
+  .table {
+    position: absolute; left: 40px; top: 190px; width: 1840px;
+    display: grid;
+    grid-template-columns: 250px repeat(5, 254px) 248px;
+    grid-template-rows: 230px 150px 200px 200px;
+    column-gap: 12px; row-gap: 0;
+  }
+  .cell { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8px 12px; }
+  .label {
+    align-items: flex-start; text-align: left; font-size: 31px; font-weight: 700; color: var(--maroon);
+    border-left: 8px solid var(--gold); padding-left: 18px; line-height: 1.2;
+  }
+  .card { background: #fff; border: 2px solid var(--line); }
+  .r1 { border-radius: 24px 24px 0 0; border-bottom: 0; }
+  .r2 { border-top: 1px solid var(--line); border-bottom: 0; }
+  .r3 { border-top: 1px solid var(--line); border-bottom: 0; }
+  .r4 { border-radius: 0 0 24px 24px; border-top: 1px solid var(--line); }
+  .accent-claude   { border-top: 10px solid #D97757; }
+  .accent-chatgpt  { border-top: 10px solid #2A2E3A; }
+  .accent-anti     { border-top: 10px solid #4285F4; }
+  .accent-devin    { border-top: 10px solid #111111; }
+  .accent-grok     { border-top: 10px solid #8A8F98; }
+
+  .icon img { width: 170px; height: 170px; display: block; filter: drop-shadow(0 3px 7px rgba(0,0,0,.28)); }
+  .name { font-size: 31px; font-weight: 800; line-height: 1.15; }
+  .name small { display: block; font-size: 24px; font-weight: 600; color: #5b606c; margin-top: 4px; }
+  .plan { font-size: 25px; font-weight: 700; color: #4a4f5c; }
+  .price { font-size: 78px; font-weight: 800; line-height: 1; margin-top: 8px; letter-spacing: -2px; }
+  .price span { font-size: 26px; font-weight: 600; letter-spacing: 0; color: #5b606c; }
+  .badge { display: flex; align-items: center; gap: 14px; font-size: 54px; font-weight: 800; }
+  .badge .mark {
+    width: 80px; height: 80px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 54px; font-weight: 800; line-height: 1;
+  }
+  .yes { color: var(--yes); } .yes .mark { background: var(--yes); }
+  .no  { color: var(--no); }  .no .mark  { background: var(--no); }
+
+  /* Total column */
+  .total { background: var(--maroon); color: #fff; border: 2px solid var(--maroon); }
+  .total.r1 { }
+  .sigma { width: 170px; height: 170px; border-radius: 40px; background: var(--gold); color: var(--maroon);
+           display: flex; align-items: center; justify-content: center; font-size: 130px; font-weight: 800; }
+  .total .name { font-size: 40px; }
+  .total .plan { color: #f2d9de; }
+  .total .price { color: var(--gold); font-size: 88px; }
+  .total .sub2 { font-size: 25px; font-weight: 600; margin-top: 6px; color: #f2d9de; }
+  .total.r2, .total.r3, .total.r4 { border-top: 1px solid rgba(255,255,255,.28); }
+  .total .big { font-size: 66px; font-weight: 800; color: var(--gold); line-height: 1; }
+  .total .sub { font-size: 25px; font-weight: 600; margin-top: 8px; color: #f2d9de; }
+
+  footer { position: absolute; left: 40px; top: 1030px; width: 1840px; font-size: 22px; color: #5b606c; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dan's Desktop: Five AI Apps, One Monthly Bill</h1>
+  <p>What each desktop app costs per month, and whether it can generate images.</p>
+  <div class="rule"></div>
+</header>
+
+<div class="table">
+  <!-- Row 1: icons -->
+  <div class="cell"></div>
+  <div class="cell card r1 accent-claude icon"><img src="logos/claude.png" alt="Claude"></div>
+  <div class="cell card r1 accent-chatgpt icon"><img src="logos/chatgpt.png" alt="ChatGPT"></div>
+  <div class="cell card r1 accent-anti icon"><img src="logos/antigravity.png" alt="Google Antigravity"></div>
+  <div class="cell card r1 accent-devin icon"><img src="logos/devin.png" alt="Devin"></div>
+  <div class="cell card r1 accent-grok icon"><img src="logos/grok.png" alt="Grok Bot"></div>
+  <div class="cell total r1" style="border-radius:24px 24px 0 0"><div class="sigma">Σ</div></div>
+
+  <!-- Row 2: product name -->
+  <div class="cell label">Product Name:</div>
+  <div class="cell card r2 name">Claude Desktop</div>
+  <div class="cell card r2 name">ChatGPT Desktop</div>
+  <div class="cell card r2 name">Google Antigravity Desktop</div>
+  <div class="cell card r2 name">Devin Desktop<small>(aka Cursor)</small></div>
+  <div class="cell card r2 name">Grok Bot<small>(SpaceXAI)</small></div>
+  <div class="cell total r2 name">Total</div>
+
+  <!-- Row 3: plan and monthly cost -->
+  <div class="cell label">Plan Name and Cost per Month:</div>
+  <div class="cell card r3"><div class="plan">Claude Max</div><div class="price">$100</div></div>
+  <div class="cell card r3"><div class="plan">ChatGPT Plus</div><div class="price">$20</div></div>
+  <div class="cell card r3"><div class="plan">Google Antigravity Pro</div><div class="price">$16</div></div>
+  <div class="cell card r3"><div class="plan">Devin</div><div class="price">$20</div></div>
+  <div class="cell card r3"><div class="plan">Grok Bot</div><div class="price">$30</div></div>
+  <div class="cell total r3"><div class="plan">All five plans</div><div class="price">$186</div><div class="sub2">per month</div></div>
+
+  <!-- Row 4: can generate images -->
+  <div class="cell label">Can Generate Images:</div>
+  <div class="cell card r4"><div class="badge no"><div class="mark">✗</div>No</div></div>
+  <div class="cell card r4"><div class="badge yes"><div class="mark">✓</div>Yes</div></div>
+  <div class="cell card r4"><div class="badge yes"><div class="mark">✓</div>Yes</div></div>
+  <div class="cell card r4"><div class="badge no"><div class="mark">✗</div>No</div></div>
+  <div class="cell card r4"><div class="badge yes"><div class="mark">✓</div>Yes</div></div>
+  <div class="cell total r4" style="border-radius:0 0 24px 24px"><div class="big">3 of 5</div><div class="sub">can generate images</div></div>
+</div>
+
+<footer>Monthly plan prices as listed by the author, October 2026. Check each vendor's page before you budget.</footer>
+</body>
+</html>
+<!--
+  ZONES (px on the 1920x1080 canvas): table top y=190, bottom y=190+230+150+200+200=970.
+  Column lefts: claude 40+250+12=302, then +266 each (568, 834, 1100, 1366); total 1632..1880.
+-->

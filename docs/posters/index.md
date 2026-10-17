@@ -1,6 +1,6 @@
 ---
 title: Interactive Infographic Posters
-description: Twenty full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.
+description: Twenty-one full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.
 hide:
   - toc
 ---
@@ -132,5 +132,11 @@ The original concepts and their sources are in [Infographic Poster Ideas](./post
     **[The Paper Behind the Book](./the-paper-behind-the-book/index.md)**
 
     The skill pipeline that wrote this book and a paper about MicroSims shows that the pipeline is the documentation, because every stage leaves a file and every file has a check. *Callout overlay, 12 markers.*
+
+-   [![Dan's Desktop](./dans-desktop/dans-desktop-thumb.jpg)](./dans-desktop/index.md)
+
+    **[Dan's Desktop](./dans-desktop/index.md)**
+
+    Five AI desktop apps side by side, with the plan and monthly cost of each, whether it can generate images, and a total of $186 per month. *Grid overlay, 6 regions.*
 
 </div>

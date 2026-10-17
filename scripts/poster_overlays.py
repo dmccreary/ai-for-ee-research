@@ -342,11 +342,14 @@ def sync(d: Path) -> list[str]:
 # --------------------------------------------------------------------------- validate
 
 
-def check_grid(data: dict, err: list[str], warn: list[str]) -> None:
+def check_grid(data: dict, err: list[str], warn: list[str], printed_text: bool = False) -> None:
     zones = data.get("zones", [])
     if data.get("layout") != "grid":
         err.append('layout must be "grid"')
-    if data.get("showLabels") is not True:
+    if printed_text:
+        if data.get("showLabels") is not False:
+            err.append("showLabels must be false (the image prints its own column titles)")
+    elif data.get("showLabels") is not True:
         err.append("showLabels must be true (images carry no text)")
     if not 3 <= len(zones) <= 10:
         err.append(f"expected 3-10 zones, found {len(zones)}")
@@ -511,6 +514,8 @@ def check_page(d: Path, data: dict, err: list[str], warn: list[str]) -> None:
 
 
 def check_prompt(d: Path, data: dict, err: list[str], warn: list[str]) -> None:
+    if (d / "poster.html").exists():
+        return  # rendered from HTML (real text and logos), so there is no image-model prompt to lint
     p = d / "image-prompt.md"
     if not p.exists():
         err.append("image-prompt.md missing")
@@ -548,7 +553,10 @@ def validate(d: Path) -> tuple[list[str], list[str]]:
             err.append(f"data.json missing {k}")
     if data.get("image") != f"{d.name}.png":
         err.append(f'image must be "{d.name}.png"')
-    (check_callout if is_callout(data) else check_grid)(data, err, warn)
+    if is_callout(data):
+        check_callout(data, err, warn)
+    else:
+        check_grid(data, err, warn, printed_text=(d / "poster.html").exists())
     check_page(d, data, err, warn)
     check_prompt(d, data, err, warn)
     if not (d / "main.html").exists():
@@ -640,7 +648,7 @@ def gallery() -> None:
     body = (
         "---\n"
         "title: Interactive Infographic Posters\n"
-        "description: Twenty full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.\n"
+        "description: Twenty-one full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.\n"
         "hide:\n  - toc\n---\n\n"
         "# Interactive Infographic Posters\n\n"
         "These posters turn the book's biggest ideas into full-width, classroom-ready pictures. Most set a risky way of working beside a controlled one, so the difference is visible at a glance. "
