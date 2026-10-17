@@ -21,13 +21,13 @@ The twelve callouts are:
 2. **Decide** — The model reads the task, the context, and the tool definitions, and picks an action.
 3. **Call** — The model writes a structured tool call. Nothing has run yet.
 4. **Subagent Side Loop** — A separate agent with its own context takes one part of the job and returns a summary.
-5. **Rest of Your Machine** — Credentials, other projects, and everything outside the project directory.
-6. **Network and Other Accounts** — Remotes, outbound data, installs, and downloaded code.
+5. **Network and Other Accounts** — Remotes, outbound data, installs, and downloaded code.
+6. **Rest of Your Machine** — Credentials, other projects, and everything outside the project directory.
 7. **Observe** — The result goes into the context, and the model reads it.
 8. **Tool Bench** — Files, a shell, code execution, the web, and MCP connectors.
 9. **Run** — The harness executes the call after checking the permission rules.
-10. **Hook Gate** — A script that always runs at a set moment and can pause or veto a call.
-11. **Step and Cost Meter** — Step, time, and spending limits against a runaway loop.
+10. **Step and Cost Meter** — Step, time, and spending limits against a runaway loop.
+11. **Hook Gate** — A script that always runs at a set moment and can pause or veto a call.
 12. **Inside the Project** — The directory where the agent may work, with raw data protected.
 
 <!-- poster-static:begin -->

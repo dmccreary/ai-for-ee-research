@@ -13,15 +13,15 @@ hide:
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
 <!-- poster-art:end -->
 
-Use **Explore** mode to hover over or click a station and read what the agent does there and what the person keeps. Use **Quiz** mode to read a clue and click the station it describes. The line reads left to right across the top row, then left to right across the bottom row, as a paper grows from an outline to a submission. A gold handrail marks what stays human, and four stations carry a human stamp.
+Use **Explore** mode to hover over or click a station and read what the agent does there and what the person keeps. Use **Quiz** mode to read a clue and click the station it describes. The line reads left to right across the top row (outline, drafting, co-author review), then left to right across the bottom row (figures, references, submission), as a paper grows from an outline to a submission. A gold handrail marks what stays human, and four stations carry a human stamp.
 
 The six regions are:
 
 1. **Outline From Claims** — An outline of claims, each tied to its evidence, with unsupported bullets marked.
 2. **Drafting From Evidence** — The agent drafts only from supplied claims, and a number check follows each edit.
-3. **Figures and LaTeX** — Figures regenerated from scripts, and LaTeX compiled after every substantial edit.
-4. **References Checked** — Verified BibTeX entries, never retyped by hand.
-5. **Co-Author Consistency** — Co-author review, with agent-proposed consistency fixes as a list.
+3. **Co-Author Consistency** — Co-author review, with agent-proposed consistency fixes as a list.
+4. **Figures and LaTeX** — Figures regenerated from scripts, and LaTeX compiled after every substantial edit.
+5. **References Checked** — Verified BibTeX entries, never retyped by hand.
 6. **Submit and Respond** — The cover letter, the disclosure note, and a reviewer response that claims only real changes.
 
 <!-- poster-static:begin -->

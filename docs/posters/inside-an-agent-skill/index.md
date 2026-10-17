@@ -23,8 +23,8 @@ The nine callouts are:
 4. **Layer 2: The Instruction Sheet** — The body of SKILL.md, loaded when the skill triggers.
 5. **The Trigger Tests** — Requests that should load the skill.
 6. **The Overstuffed Binder** — A skill that tries to do everything.
-7. **The Skill Folder** — The directory built around SKILL.md.
-8. **Layer 3: The Supporting Files** — Scripts, references, and templates opened only when pointed to.
+7. **Layer 3: The Supporting Files** — Scripts, references, and templates opened only when pointed to.
+8. **The Skill Folder** — The directory built around SKILL.md.
 9. **The Near-Miss Tests** — Requests that share vocabulary but should not load the skill.
 
 <!-- poster-static:begin -->

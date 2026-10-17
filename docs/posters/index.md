@@ -41,7 +41,7 @@ The original concepts and their sources are in [Infographic Poster Ideas](./post
 
     **[The Chat That Forgets, the Project That Remembers](./chat-forgets-project-remembers/index.md)**
 
-    An agent starts every session with no memory, so a plain-text project file and a version history are what it reads first and what you can undo. *Grid overlay, 8 regions.*
+    An agent starts every session with no memory, so a plain-text project file and a version history are what it reads first and what you can undo. *Grid overlay, 7 regions.*
 
 -   [![A Folder of Files, a Graph of Knowledge](./folder-of-files-graph-of-knowledge/folder-of-files-graph-of-knowledge-thumb.jpg)](./folder-of-files-graph-of-knowledge/index.md)
 

@@ -17,16 +17,15 @@ Use **Explore** mode to hover over or click a panel and read what it shows about
 
 A calendar runs across the top of both halves to show time passing. The left half keeps nothing between sessions. The right half keeps the goals, the files, and the history.
 
-The eight regions are:
+The seven regions are:
 
 1. **Days Go By** — Time passes across both halves while sessions end and models change.
-2. **Three Chats, Three Resets** — Each new conversation starts from nothing.
-3. **The Same Mistake Again** — The same question and the same wrong assumption, session after session.
-4. **Nothing to Roll Back To** — A timeline with no snapshots to compare or restore.
-5. **The Instruction File** — The first document an agent reads: goals, conventions, constraints.
-6. **Project Layout** — A predictable folder structure with read-only raw data.
-7. **Plain Text Files** — Markdown, notebooks, and scripts that people and agents both read.
-8. **Commit History** — Small saved snapshots, a rollback point, and a reviewed merge.
+2. **Three Chats, Three Resets** — Each new conversation starts from nothing, and the same wrong assumption returns every time.
+3. **Nothing to Roll Back To** — A timeline with no snapshots to compare or restore.
+4. **The Instruction File** — The first document an agent reads: goals, conventions, constraints.
+5. **Project Layout** — A predictable folder structure with read-only raw data.
+6. **Plain Text Files** — Markdown, notebooks, and scripts that people and agents both read.
+7. **Commit History** — Small saved snapshots, a rollback point, and a reviewed merge.
 
 <!-- poster-static:begin -->
 ## Static Poster

@@ -19,16 +19,16 @@ The twelve callouts are:
 
 1. **Task Queue** — The ordered list of waiting tasks, kept as a plain file everyone reads.
 2. **Handoff Card** — The goal, inputs, constraints, criteria, and status that pass from one agent to the next.
-3. **Critical Path** — The longest chain of dependent tasks, which extra agents cannot shorten.
-4. **Planning Agent Bank** — About twenty agents that explore, decompose, and specify.
-5. **Review Checkpoint** — A point where output is examined before the next step uses it, often automated.
-6. **Human Approval Gate** — A checkpoint where a person must say yes.
+3. **Planning Agent Bank** — About twenty agents that explore, decompose, and specify.
+4. **Review Checkpoint** — A point where output is examined before the next step uses it, often automated.
+5. **Human Approval Gate** — A checkpoint where a person must say yes.
+6. **Attention Meter** — The review budget that sets how big a team can usefully be.
 7. **Execution Agent Bank** — About ten agents that carry out specified tasks.
-8. **The Orchestrator** — The researcher, who coordinates the work and stays accountable.
-9. **Shared Workspace** — The common area for files, with separate outputs and reviewed merges.
+8. **Shared Workspace** — The common area for files, with separate outputs and reviewed merges.
+9. **Critical Path** — The longest chain of dependent tasks, which extra agents cannot shorten.
 10. **Status Board** — The morning report: finished, blocked, needs a decision, and spent.
-11. **Conflict Flag** — Two agents with incompatible results, traced to the first point of divergence.
-12. **Attention Meter** — The review budget that sets how big a team can usefully be.
+11. **The Orchestrator** — The researcher, who coordinates the work and stays accountable.
+12. **Conflict Flag** — Two agents with incompatible results, traced to the first point of divergence.
 
 <!-- poster-static:begin -->
 ## Static Poster
