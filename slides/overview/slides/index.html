@@ -1,0 +1,1467 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/slides/overview/slides/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Slides - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-for-ee-research" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Slides
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../posters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Posters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../appendices/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph Admin
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-researcher-to-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Researcher to Orchestrator
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/slides/overview/slides.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<!-- _class: lead -->
+<h1 id="ai-for-ee-research">AI for EE Research<a class="headerlink" href="#ai-for-ee-research" title="Permanent link">&para;</a></h1>
+<h2 id="from-researcher-to-orchestrator">From Researcher to Orchestrator<a class="headerlink" href="#from-researcher-to-orchestrator" title="Permanent link">&para;</a></h2>
+<p>A hands-on guide to using AI tools and agents for everyday research in electrical engineering and computer design</p>
+<!--
+Welcome. This deck is a 20-slide tour of the whole book: the central idea,
+how the 20 chapters are organized, and what a reader can do after finishing.
+Each slide maps to one or two chapters. Speaker notes carry the detail.
+-->
+
+<hr />
+<h1 id="the-problem-research-is-a-pipeline">The Problem: Research Is a Pipeline<a class="headerlink" href="#the-problem-research-is-a-pipeline" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Literature search</li>
+<li>Data analysis</li>
+<li>Brainstorming and problem framing</li>
+<li>Scientific coding and simulation</li>
+<li>Manuscript preparation</li>
+</ul>
+<p><strong>AI can now absorb a large share of each stage, but only for researchers who know how to direct it, check it, and own the result.</strong></p>
+<!--
+Chapter 1. Graduate research in EE and computer design is a chain of repeatable
+tasks with checkable outputs. The pipeline is only as trustworthy as its weakest
+stage. AI absorbs much of the procedural layer; what it cannot supply is the
+question, the domain judgment, and the accountability.
+-->
+
+<hr />
+<h1 id="the-big-idea-researcher-as-orchestrator">The Big Idea: Researcher as Orchestrator<a class="headerlink" href="#the-big-idea-researcher-as-orchestrator" title="Permanent link">&para;</a></h1>
+<p><img alt="bg right:52% contain poster" src="../../../posters/twenty-planners-ten-doers/twenty-planners-ten-doers.png" /></p>
+<ul>
+<li>Stop doing every task personally</li>
+<li>Coordinate <strong>~20 planning agents</strong> and <strong>~10 execution agents</strong></li>
+<li>You set direction, supply domain judgment, resolve conflicts, and decide what is true</li>
+<li>You stay accountable for the science</li>
+</ul>
+<!--
+The 20:10 ratio reflects that plans are cheap to discard while executions are
+expensive to check. The number of agents matters least; dependencies, review
+cost, and handoff quality set what the team can deliver (Chapter 10).
+-->
+
+<hr />
+<h1 id="who-it-is-for">Who It Is For<a class="headerlink" href="#who-it-is-for" title="Permanent link">&para;</a></h1>
+<p><strong>Audience:</strong> MS and PhD students, postdocs, and faculty in EE, computer engineering, and computer design</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>Graduate standing or equivalent research experience</li>
+<li>One programming language, preferably Python</li>
+<li>Command line, text editor, and Git basics</li>
+<li>No prior ML, prompt engineering, or agent experience</li>
+</ul>
+<!--
+The course deliberately does not cover training LLMs, ML theory, AI chip design,
+vendor EDA flows, or legal advice. It assumes students bring their own EE domain
+knowledge and teaches how to direct AI at it.
+-->
+
+<hr />
+<h1 id="how-the-book-is-organized">How the Book Is Organized<a class="headerlink" href="#how-the-book-is-organized" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Chapters</th>
+<th>Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Foundations</strong></td>
+<td>1–4</td>
+<td>Workflows, how LLMs work, prompts, context</td>
+</tr>
+<tr>
+<td><strong>2. Memory and skills</strong></td>
+<td>5–7</td>
+<td>Markdown, Git, knowledge graphs, skills</td>
+</tr>
+<tr>
+<td><strong>3. Agents and teams</strong></td>
+<td>8–10</td>
+<td>Tools, supervision, orchestration</td>
+</tr>
+<tr>
+<td><strong>4. Research tasks</strong></td>
+<td>11–15</td>
+<td>Literature, data, code, ideas, manuscripts</td>
+</tr>
+<tr>
+<td><strong>5. Communicate and trust</strong></td>
+<td>16–20</td>
+<td>MicroSims, verification, ethics, agents, capstone</td>
+</tr>
+</tbody>
+</table>
+<!--
+Every chapter ships with annotated references and a quiz. The book also has a
+glossary of 379 terms, a learning graph with 379 concepts, 48 interactive
+MicroSims, 20 infographic posters, and two appendices (Personal Agents and
+Personal Knowledge Graphs).
+-->
+
+<hr />
+<h1 id="foundations-how-language-models-work">Foundations: How Language Models Work<a class="headerlink" href="#foundations-how-language-models-work" title="Permanent link">&para;</a></h1>
+<p><em>Chapters 2–3</em></p>
+<ul>
+<li>Text becomes <strong>tokens</strong>; the <strong>context window</strong> is a shared budget</li>
+<li>Models optimize <strong>plausibility, not truth</strong>, so fluent answers can be false</li>
+<li>Fabricated citations come from this, not from a bug</li>
+<li>Choose models by capability, cost, latency, privacy, and reproducibility</li>
+<li>A prompt is a <strong>specification</strong>: instructions, constraints, roles, examples</li>
+</ul>
+<!--
+Chapter 2 explains tokens, context windows, training data, knowledge cutoffs,
+and hallucination. Chapter 3 turns that into choices: API access (keys are
+secrets), cost and rate limits, when a local open-weight model is the right
+answer, and the first prompting techniques.
+-->
+
+<hr />
+<h1 id="context-engineering">Context Engineering<a class="headerlink" href="#context-engineering" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 4</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/the-window-that-fills-up/the-window-that-fills-up.png" /></p>
+<ul>
+<li>Decide <strong>everything</strong> the model sees</li>
+<li>Task spec: goal, inputs, outputs, constraints, definition of done</li>
+<li>Ground answers in sources</li>
+<li>Chain prompts with checks between steps</li>
+<li>Defend against <strong>prompt injection</strong></li>
+</ul>
+<!--
+Reliability comes less from clever wording than from complete specification,
+selected and grounded context, checks between steps, and tested, versioned
+prompts. Defining domain vocabulary (resolution, gain, noise) prevents silent
+misreadings.
+-->
+
+<hr />
+<h1 id="memory-markdown-git-and-knowledge-graphs">Memory: Markdown, Git, and Knowledge Graphs<a class="headerlink" href="#memory-markdown-git-and-knowledge-graphs" title="Permanent link">&para;</a></h1>
+<p><em>Chapters 5–6</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/folder-of-files-graph-of-knowledge/folder-of-files-graph-of-knowledge.png" /></p>
+<ul>
+<li><strong>Markdown</strong> is readable by both humans and agents</li>
+<li><strong>AGENTS.md / CLAUDE.md</strong> hold goals, conventions, constraints</li>
+<li><strong>Git</strong> gives history and recovery</li>
+<li>A <strong>personal knowledge graph</strong> links notes, papers, experiments, and people as queryable entities</li>
+</ul>
+<!--
+An agent is only as reliable as the project it works in. Plain text, a short
+checkable instruction file, a predictable layout, and version history give
+memory, boundaries, and recovery. A knowledge graph with typed links can be
+queried to ground an agent's answers; Appendix B covers building one.
+-->
+
+<hr />
+<h1 id="agent-skills-repeatable-tasks-as-commands">Agent Skills: Repeatable Tasks as Commands<a class="headerlink" href="#agent-skills-repeatable-tasks-as-commands" title="Permanent link">&para;</a></h1>
+<p><em>Chapters 6–7</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/inside-an-agent-skill/inside-an-agent-skill.png" /></p>
+<ul>
+<li>Anatomy: name, description, instructions, supporting files</li>
+<li>One-sentence scope; <strong>single-purpose</strong> skills</li>
+<li><strong>Progressive disclosure</strong> keeps context small</li>
+<li>Test that it fires, stays quiet, and gives known answers</li>
+<li>Version, share, and maintain</li>
+</ul>
+<!--
+A skill is worth the effort when a task recurs and the result can be checked.
+Chapter 7 covers trigger tests including near misses, behavior tests with known
+answers, evaluation of pass rate across repeated runs, and a research skill
+template.
+-->
+
+<hr />
+<h1 id="agents-tools-and-subagents">Agents, Tools, and Subagents<a class="headerlink" href="#agents-tools-and-subagents" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 8</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/agent-loop-inside-its-sandbox/agent-loop-inside-its-sandbox.png" /></p>
+<ul>
+<li>Agent = <strong>model + tools + loop</strong></li>
+<li>Decide, call a tool, observe, repeat</li>
+<li>File access, shell, code execution, MCP</li>
+<li><strong>Sandboxing</strong> and permissions set the limits</li>
+<li><strong>Subagents</strong> run in parallel with isolated context</li>
+</ul>
+<!--
+An agent's power and its risk are the same quantity: what its tools can reach.
+Early errors compound across loop iterations, so version control is the safety
+net. Setting limits is what lets you use agents with confidence.
+-->
+
+<hr />
+<h1 id="supervising-agents-and-assigning-roles">Supervising Agents and Assigning Roles<a class="headerlink" href="#supervising-agents-and-assigning-roles" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 9</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/the-autonomy-dial/the-autonomy-dial.png" /></p>
+<ul>
+<li><strong>Autonomy is a dial</strong> set per task</li>
+<li>Set it by reversibility, reach, and verifiability</li>
+<li>Log everything; bound cost and runtime</li>
+<li>Know the failure modes: premature completion, scope drift, test weakening, runaway loops</li>
+<li>Roles: planner, executor, reviewer, researcher, coder, writer</li>
+</ul>
+<!--
+Supervision is the design of where a human looks. Each failure mode has a
+mechanical defense. Roles make a group of agents legible.
+-->
+
+<hr />
+<h1 id="orchestrating-agent-teams">Orchestrating Agent Teams<a class="headerlink" href="#orchestrating-agent-teams" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 10</em></p>
+<ul>
+<li>Break work into tasks with owners, outputs, and checks</li>
+<li><strong>Dependencies</strong> set the critical path, and parallelism cannot shorten it</li>
+<li>Handoffs through files and a shared workspace</li>
+<li><strong>Review checkpoints</strong> and human approval gates</li>
+<li>Scaling stops paying off when <strong>review cost</strong> exceeds the work saved</li>
+</ul>
+<!--
+Orchestration is the design of how work, checks, and decisions flow so that your
+attention prevents the most damage. Span of control and review load limit the
+useful team size; the MicroSims on critical path and review load let students
+experiment with both.
+-->
+
+<hr />
+<h1 id="literature-search-and-synthesis">Literature Search and Synthesis<a class="headerlink" href="#literature-search-and-synthesis" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 11</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/the-literature-funnel/the-literature-funnel.png" /></p>
+<ul>
+<li>Write a <strong>repeatable search strategy</strong></li>
+<li>Favor <strong>recall</strong> when scoping, then triage for precision</li>
+<li>Chain citations forward and backward</li>
+<li><strong>Verify every citation</strong> against the source</li>
+<li>Tie claims to locations in sources</li>
+</ul>
+<!--
+AI changes the speed of every stage of the literature workflow and none of the
+standards. A fluent fake citation looks identical to a real one, so verification
+is a required step, not an optional one.
+-->
+
+<hr />
+<h1 id="data-analysis-simulation-and-code">Data Analysis, Simulation, and Code<a class="headerlink" href="#data-analysis-simulation-and-code" title="Permanent link">&para;</a></h1>
+<p><em>Chapters 12–13</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/code-that-runs-code-that-is-right/code-that-runs-code-that-is-right.png" /></p>
+<ul>
+<li>Record measurement settings; keep raw data <strong>read-only</strong></li>
+<li>Cleaning is a <strong>logged script</strong>; outliers are information</li>
+<li><strong>Silent errors</strong> run cleanly and return wrong numbers</li>
+<li>Test with <strong>known answers</strong></li>
+<li>Apply numerical sanity checks and pin environments</li>
+</ul>
+<!--
+Example from Chapter 13: a 10 versus 20 log10 mistake turned a 10-bit converter
+into an 18-bit one. Code from an agent is a hypothesis about how to compute a
+result; the chapter is how you test that hypothesis.
+-->
+
+<hr />
+<h1 id="brainstorming-and-manuscripts">Brainstorming and Manuscripts<a class="headerlink" href="#brainstorming-and-manuscripts" title="Permanent link">&para;</a></h1>
+<p><em>Chapters 14–15</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/the-manuscript-line/the-manuscript-line.png" /></p>
+<ul>
+<li>AI offers <strong>volume and range</strong>; its weakness is <strong>agreement</strong></li>
+<li>Use a devil's advocate prompt and check analogies</li>
+<li>Move from hunch to <strong>falsifiable hypothesis</strong></li>
+<li>Draft from evidenced claims; abstract last</li>
+<li>Protect <strong>your voice</strong> and <strong>your numbers</strong></li>
+</ul>
+<!--
+Chapter 14 separates divergent and convergent idea phases and ranks ideas in a
+table with assumptions and failure conditions. Chapter 15 follows a paper from
+outline through LaTeX, figures, references, venue rules, and arXiv submission.
+Argument-bearing sections stay human-written.
+-->
+
+<hr />
+<h1 id="microsims-communicating-by-interaction">MicroSims: Communicating by Interaction<a class="headerlink" href="#microsims-communicating-by-interaction" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 16</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/figure-you-read-simulation-you-explore/figure-you-read-simulation-you-explore.png" /></p>
+<ul>
+<li>Match the <strong>medium</strong> to the point</li>
+<li>A static figure shows a fact; an <strong>interactive</strong> shows a dependence</li>
+<li>A MicroSim is small, single-concept, embeddable</li>
+<li>Built with <strong>p5.js</strong> and built-in controls</li>
+<li>Specify precisely, then check what the agent builds</li>
+</ul>
+<!--
+This book contains 48 MicroSims that students use to sort, predict, calculate,
+and judge. Chapter 16 shows how to generate one from a precise specification,
+and the same approach extends to intelligent textbooks and slide decks like
+this one.
+-->
+
+<hr />
+<h1 id="verification-and-reproducibility">Verification and Reproducibility<a class="headerlink" href="#verification-and-reproducibility" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 17</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/verified-is-not-validated/verified-is-not-validated.png" /></p>
+<ul>
+<li><strong>Verification:</strong> done right? <strong>Validation:</strong> the right work?</li>
+<li><strong>Independent checks</strong> with different failure causes</li>
+<li>Primary-source and cross-model checks</li>
+<li>Fix success criteria <strong>before</strong> seeing the result</li>
+<li>Audit trails and reproducibility packages</li>
+</ul>
+<!--
+Agreement between models is weak evidence; disagreement is a flag. Verification
+is not a final stage but a habit that runs through the whole workflow. AI raises
+the volume of output and adds failure modes that sound plausible, so every check
+matters more.
+-->
+
+<hr />
+<h1 id="responsible-and-ethical-use">Responsible and Ethical Use<a class="headerlink" href="#responsible-and-ethical-use" title="Permanent link">&para;</a></h1>
+<p><em>Chapter 18</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/where-does-your-data-go/where-does-your-data-go.png" /></p>
+<ul>
+<li><strong>Accountability</strong> cannot be delegated; AI is not an author</li>
+<li><strong>Disclose</strong> AI use per venue and institutional policy</li>
+<li>Protect <strong>confidential</strong> data, participant data, and unpublished results</li>
+<li>Respect licensing and intellectual property</li>
+<li>Check for bias; keep your own skills sharp</li>
+</ul>
+<!--
+Unpublished results pasted into a hosted tool are disclosed to a third party.
+Keep a log as you work so the disclosure statement is accurate. The chapter ends
+with drafting a responsible-use policy for a research group.
+-->
+
+<hr />
+<h1 id="personal-agents-and-case-studies">Personal Agents and Case Studies<a class="headerlink" href="#personal-agents-and-case-studies" title="Permanent link">&para;</a></h1>
+<p><em>Chapters 19–20</em></p>
+<p><img alt="bg right:50% contain poster" src="../../../posters/the-paper-behind-the-book/the-paper-behind-the-book.png" /></p>
+<ul>
+<li><strong>Always-on agents</strong> (Grok Bot, Dots, Muse, Claude Cowork, OpenClaw, Hermes Agent)</li>
+<li>Judge them by <strong>criteria</strong>, not brands: where they run, what they reach, cost, data</li>
+<li>Real cases, <strong>including failures</strong>: the MicroSims arXiv paper, this textbook's skill pipeline</li>
+<li><strong>Capstone:</strong> an end-to-end task with an agent team, plus an adoption plan</li>
+</ul>
+<!--
+Products change monthly, so Chapter 19 teaches durable criteria: blast radius,
+usage metering, data exposure, vendor-claim verification, and overnight activity
+audits. Chapter 20 applies the whole toolkit; each case records cause,
+detection, control, and change for what failed.
+-->
+
+<hr />
+<!-- _class: lead -->
+<h1 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>Direct, check, and own</strong> — the researcher stays accountable</li>
+<li><strong>Context and memory</strong> make agents reliable: Markdown, Git, knowledge graphs, skills</li>
+<li><strong>Autonomy is a dial</strong> set per task, bounded by logs and review</li>
+<li><strong>Verify independently</strong>; disclose AI use</li>
+<li>Start small, then adopt in order</li>
+</ul>
+<p><strong>Read the book:</strong> dmccreary.github.io/ai-for-ee-research</p>
+<!--
+Close by pointing to the quizzes, MicroSims, and posters for self-study, and to
+the capstone chapter for an adoption plan. Invite questions.
+-->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

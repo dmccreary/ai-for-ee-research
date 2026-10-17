@@ -1,0 +1,111 @@
+{
+  "title": "Research Funnel",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A horizontal six-stage funnel, widest at Research Ideas and narrowest at Published Paper. Learners step through the stages (Research Ideas, Not Done Before, Feasible Within Budget, Funded & Approved, Validated Results, Published Paper), reading the standard research term for each gate from FINER, Stage-Gate, and the Heilmeier catechism, the gate question, why ideas stop there, and an EE example. A slider sets the number of starting ideas so the surviving counts are concrete. Pass rates are illustrative. Visiting all six stages fires two confetti cannons once.",
+  "date": "2026-10-17",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/research-funnel/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Research idea screening gates from ideation to publication",
+    "learningObjectives": [
+      "Explain the sequence of gates a research idea passes between ideation and publication, using the standard name for each gate, by stepping through a six-stage funnel"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomVerb": "explain",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Literature review",
+      "Research proposal",
+      "Peer review"
+    ],
+    "concepts": [
+      "Research Funnel",
+      "Novelty",
+      "Feasibility Assessment",
+      "Peer Review"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580,
+      "drawHeight": 500,
+      "controlHeight": 80
+    },
+    "iframeHeight": 582,
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.11.10 (jsdelivr CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true,
+      "notes": "describe() provides a screen-reader description; the Previous and Next buttons and the slider are native HTML controls reachable with the Tab key; the selected stage is shown with an outline and bold label as well as the detail panel text, and the counts are printed inside each segment so color is never the only cue. Stage labels shrink to 11 px and wrap to one word per line below 640 px canvas width."
+    }
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Previous",
+      "purpose": "Selects the previous stage. Disabled at stage 1."
+    },
+    {
+      "type": "button",
+      "label": "Next",
+      "purpose": "Selects the next stage. Disabled at stage 6."
+    },
+    {
+      "type": "button",
+      "label": "Reset",
+      "purpose": "Returns to stage 1, clears the visited stages and any confetti, and re-arms the celebration."
+    },
+    {
+      "type": "slider",
+      "label": "Starting ideas",
+      "purpose": "Number of ideas that enter the funnel, 20 to 200 in steps of 10. Changes the surviving count shown for each stage."
+    }
+  ],
+  "pedagogical": {
+    "teachingStrategy": "Predict, then step through a staged diagram with concrete counts and named gates",
+    "keyQuestions": [
+      "Which gate removes the largest share of ideas?",
+      "What question does each gate ask, and what is its standard research name?",
+      "At which gate would my own idea stop?"
+    ],
+    "commonMisconceptions": [
+      "Publication is decided by one review at the end rather than by a series of earlier gates",
+      "Novelty can be checked after the experiments are finished",
+      "A feasible idea is the same as a novel idea"
+    ],
+    "assessmentOpportunities": [
+      "Listing the six stages in order with the standard term for at least four gates",
+      "Naming the gate that a described failure would trigger"
+    ]
+  },
+  "chapter": "14-brainstorming-problem-framing",
+  "xapi": {
+    "concept": "ai-for-ee-research-17",
+    "objects": {
+      "stage-research-ideas": "ai-for-ee-research-257",
+      "stage-not-done-before": "ai-for-ee-research-265",
+      "stage-feasible-within-budget": "ai-for-ee-research-262",
+      "stage-validated-results": "ai-for-ee-research-298",
+      "starting-ideas-slider": "ai-for-ee-research-17",
+      "reset-control": "ai-for-ee-research-17"
+    }
+  }
+}

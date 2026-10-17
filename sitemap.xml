@@ -285,10 +285,6 @@
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/ai-for-ee-research/img/mascot/character-sheet/</loc>
-         <lastmod>2026-10-17</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
@@ -346,6 +342,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/code-that-runs-code-that-is-right/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/posters/dans-desktop/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
@@ -545,6 +545,10 @@
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-funnel/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-idea-ranking-matrix/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
@@ -598,6 +602,22 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/verification-method-matcher/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/slides/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/slides/overview/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/slides/overview/slides/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
 </urlset>
