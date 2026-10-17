@@ -110,6 +110,10 @@ let microsimButton;
 let staticButton;
 let actionButton;         // Submit / Next Item / See Score
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(286);   // MicroSim
+let lrs = null, itemStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -132,6 +136,12 @@ function setup() {
   actionButton.parent(document.querySelector('main'));
   styleButton(actionButton);
   actionButton.mouseClicked(actionPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'MicroSim Suitability Judge', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the MicroSim Suitability Judge MicroSim', pageDwell: true });
+  }
+  itemStart = Date.now();
 
   updateControls();
 
@@ -168,12 +178,19 @@ function actionPressed() {
     // one attempt per item: the judgment is final once submitted
     result = judge(itemPos, selected);
     if (result.correct) score++;
+    if (lrs) {
+      const it = ITEMS[itemPos];
+      lrs.question('q-item-' + it.id, { name: 'Item ' + it.id + ': ' + it.content, concept: PAGE_CONCEPT() })
+        .answer({ success: result.correct, response: LRS.slug(selected),
+                  durationMs: itemStart ? Date.now() - itemStart : undefined });
+    }
     submitted = true;
   } else if (itemPos < ITEMS.length - 1) {
     itemPos++;
     selected = null;
     submitted = false;
     result = null;
+    itemStart = Date.now();
   } else {
     finished = true;
   }

@@ -111,6 +111,10 @@ let finished = false;    // end screen showing
 let layoutBottom = 0;    // lowest y used by drawn content (used for layout testing)
 
 // controls
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(226);   // Data Cleaning
+let lrs = null, anomalyStart = 0;
+
 let actionButtons = [];
 let primaryButton;       // Submit / Next Anomaly / See Score
 
@@ -190,6 +194,13 @@ function setup() {
 
   updateControls();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Measurement Data Cleaning Decision Simulator', concept: PAGE_CONCEPT(),
+                          mount: '#xapi-slot', source: 'the Data Cleaning Decision Simulator MicroSim',
+                          pageDwell: true });
+    anomalyStart = Date.now();
+  }
+
   describe('Measurement Data Cleaning Decision Simulator. Eight anomalies from a synthetic batch of ' +
     '40 device offset measurements are shown one at a time with a lab notebook excerpt. For each ' +
     'one, choose Keep, Exclude with log, Correct and log, or Remeasure and press Submit. The sim ' +
@@ -223,11 +234,15 @@ function primaryPressed() {
     // one attempt: commit the choice
     committed = true;
     choices[current] = selected;
+    if (lrs) lrs.question('q-anomaly-' + ANOMALIES[current].id, { name: 'Anomaly ' + ANOMALIES[current].id + ': ' + ANOMALIES[current].anomaly, concept: PAGE_CONCEPT() })
+      .answer({ success: isCorrect(current, selected), response: LRS.slug(ACTIONS[selected]),
+                durationMs: anomalyStart ? Date.now() - anomalyStart : undefined });
     if (isCorrect(current, selected)) score++;
   } else if (current < ANOMALIES.length - 1) {
     current++;
     selected = -1;
     committed = false;
+    anomalyStart = Date.now();
   } else {
     finished = true;
   }

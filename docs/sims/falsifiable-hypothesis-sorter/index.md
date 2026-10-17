@@ -6,7 +6,7 @@ og:image: /sims/falsifiable-hypothesis-sorter/falsifiable-hypothesis-sorter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Falsifiable Hypothesis Sorter

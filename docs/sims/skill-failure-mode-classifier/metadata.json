@@ -89,5 +89,18 @@
       "Learner explains how the recommended fix for each missed mode addresses its cause"
     ]
   },
-  "chapter": "07-designing-testing-skills"
+  "chapter": "07-designing-testing-skills",
+  "xapi": {
+    "concept": "ai-for-ee-research-132",
+    "objects": {
+      "q-observation-1": "ai-for-ee-research-132",
+      "q-observation-2": "ai-for-ee-research-132",
+      "q-observation-3": "ai-for-ee-research-132",
+      "q-observation-4": "ai-for-ee-research-132",
+      "q-observation-5": "ai-for-ee-research-132",
+      "q-observation-6": "ai-for-ee-research-132",
+      "q-observation-7": "ai-for-ee-research-132",
+      "q-observation-8": "ai-for-ee-research-132"
+    }
+  }
 }

@@ -408,3 +408,58 @@ function setupControls() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', loadGraph);
+
+// ===========================================
+// xAPI (docs/js/lrs-sim.js). Without the runtime the viewer runs unchanged.
+// Node ids in learning-graph.json are the book's ConceptIDs.
+// ===========================================
+(function () {
+    if (!window.LRSSim) return;
+    const PAGE_CONCEPT = LRS.conceptId(289);   // Learning Graph
+    const lrs = LRSSim.create({ name: 'Learning Graph Viewer', concept: PAGE_CONCEPT, mount: '#xapi-slot',
+                                source: 'the Learning Graph Viewer MicroSim', pageDwell: true });
+    const nodeItems = {}, groupButtons = {};
+    function nodeItem(id) {
+        return nodeItems[id] || (nodeItems[id] = lrs.item('node-' + LRS.slug(String(id)), {
+            name: (allNodes.find(n => n.id === id) || {}).label || ('Concept ' + id),
+            concept: LRS.conceptId(id)
+        }));
+    }
+
+    // Selecting a node by clicking or dragging it in the graph. Programmatic selectNodes()
+    // (the search path) does not fire this event, so search is wrapped separately below.
+    const origInit = initializeNetwork;
+    initializeNetwork = function () {
+        origInit();
+        network.on('selectNode', params => {
+            if (params.nodes.length > 0) nodeItem(params.nodes[0]).study('click');
+        });
+    };
+
+    // Picking a search result.
+    const origSelect = selectNode;
+    selectNode = function (nodeId) {
+        origSelect(nodeId);
+        nodeItem(nodeId).study('search');
+    };
+
+    // Category legend checkboxes.
+    const origToggle = toggleGroup;
+    toggleGroup = function (groupId, visible) {
+        origToggle(groupId, visible);
+        const info = groups[groupId] || {};
+        (groupButtons[groupId] || (groupButtons[groupId] = lrs.button('group-' + LRS.slug(groupId), {
+            name: 'Category ' + (info.classifierName || groupId), concept: PAGE_CONCEPT
+        }))).press(visible ? 'show' : 'hide');
+    };
+
+    // Check All / Uncheck All.
+    const origControls = setupControls;
+    setupControls = function () {
+        origControls();
+        const all = lrs.button('check-all-categories', { name: 'Check All categories', concept: PAGE_CONCEPT });
+        const none = lrs.button('uncheck-all-categories', { name: 'Uncheck All categories', concept: PAGE_CONCEPT });
+        document.getElementById('check-all').addEventListener('click', () => all.press('show-all'));
+        document.getElementById('uncheck-all').addEventListener('click', () => none.press('hide-all'));
+    };
+})();

@@ -285,3 +285,7 @@ body {
     .score { font-size: 14px; }
     .hover-info { font-size: 14px; }
 }
+
+/* xAPI teaching panel (?xapi=teaching): pin the layout to its production height and let the page scroll. */
+html:has(.xapi-panel), body:has(.xapi-panel) { height: auto; overflow: auto; }
+body:has(.xapi-panel) .container { height: 840px; }

@@ -6,7 +6,7 @@ og:image: /sims/prompt-injection-spotter/prompt-injection-spotter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Prompt Injection Spotter

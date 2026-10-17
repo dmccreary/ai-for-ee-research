@@ -7,7 +7,7 @@ twitter:image: /sims/research-task-decomposition-builder/research-task-decomposi
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Research Task Decomposition Builder

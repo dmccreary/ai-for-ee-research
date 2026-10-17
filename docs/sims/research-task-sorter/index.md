@@ -7,7 +7,7 @@ twitter:image: /sims/research-task-sorter/research-task-sorter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Research Task Sorter

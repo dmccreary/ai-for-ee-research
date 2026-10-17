@@ -6,7 +6,7 @@ og:image: /sims/failure-case-root-cause-analyzer/failure-case-root-cause-analyze
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Failure Case Root Cause Analyzer

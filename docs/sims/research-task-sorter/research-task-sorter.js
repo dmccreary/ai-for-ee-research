@@ -84,6 +84,10 @@ let groupButtons = [];
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(15);   // Human in the Loop
+let lrs = null, cardStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -107,6 +111,11 @@ function setup() {
   moreButton.parent(document.querySelector('main'));
   styleButton(moreButton);
   moreButton.mousePressed(nextSummaryPage);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Research Task Sorter', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Research Task Sorter MicroSim', pageDwell: true });
+  }
 
   startRun();
 
@@ -150,6 +159,7 @@ function startRun() {
   finished = false;
   summaryPage = 0;
   summaryPageCount = 1;
+  cardStart = Date.now();
   updateControls();
   redraw();
 }
@@ -162,6 +172,9 @@ function currentCard() {
 function placeCard(g) {
   if (finished || committed) return;
   const card = currentCard();
+  if (lrs) lrs.question('q-card-' + card.id, { name: 'Card ' + card.id + ': ' + card.task, concept: PAGE_CONCEPT() })
+    .answer({ success: g === card.group, response: LRS.slug(GROUPS[g].name),
+              durationMs: cardStart ? Date.now() - cardStart : undefined, extensions: { 'run-number': runNumber } });
   chosenGroup = g;
   committed = true;
   placedCounts[g]++;
@@ -185,6 +198,7 @@ function nextPressed() {
     cardPos++;
     committed = false;
     chosenGroup = -1;
+    cardStart = Date.now();
   } else {
     finished = true;
     runHistory.push(runScore);

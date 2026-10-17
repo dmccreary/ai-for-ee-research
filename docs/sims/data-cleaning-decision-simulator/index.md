@@ -6,7 +6,7 @@ og:image: /sims/data-cleaning-decision-simulator/data-cleaning-decision-simulato
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Measurement Data Cleaning Decision Simulator

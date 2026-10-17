@@ -6,7 +6,7 @@ og:image: /sims/agent-loop-stepper/agent-loop-stepper.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Agent Loop Stepper

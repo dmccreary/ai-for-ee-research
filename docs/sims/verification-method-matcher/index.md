@@ -6,7 +6,7 @@ og:image: /sims/verification-method-matcher/verification-method-matcher.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Verification Method Matcher

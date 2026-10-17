@@ -6,7 +6,7 @@ og:image: /sims/sycophancy-spotter/sycophancy-spotter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Sycophancy Spotter

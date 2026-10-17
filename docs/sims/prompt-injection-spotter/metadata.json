@@ -98,5 +98,18 @@
       "Learner explains why the peer-review comment is ordinary content although it says \"disregard the previous version\""
     ]
   },
-  "chapter": "04-context-engineering-prompting"
+  "chapter": "04-context-engineering-prompting",
+  "xapi": {
+    "concept": "ai-for-ee-research-71",
+    "objects": {
+      "q1": "ai-for-ee-research-71",
+      "q2": "ai-for-ee-research-71",
+      "q3": "ai-for-ee-research-71",
+      "q4": "ai-for-ee-research-71",
+      "q5": "ai-for-ee-research-71",
+      "q6": "ai-for-ee-research-71",
+      "q7": "ai-for-ee-research-71",
+      "q8": "ai-for-ee-research-71"
+    }
+  }
 }

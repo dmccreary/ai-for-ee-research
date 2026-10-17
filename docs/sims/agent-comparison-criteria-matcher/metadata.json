@@ -103,5 +103,18 @@
       "Learner runs one-line tests from the end screen against a real product with a throwaway account"
     ]
   },
-  "chapter": "19-always-on-personal-agents"
+  "chapter": "19-always-on-personal-agents",
+  "xapi": {
+    "concept": "ai-for-ee-research-365",
+    "objects": {
+      "q-question-1": "ai-for-ee-research-365",
+      "q-question-2": "ai-for-ee-research-363",
+      "q-question-3": "ai-for-ee-research-365",
+      "q-question-4": "ai-for-ee-research-364",
+      "q-question-5": "ai-for-ee-research-367",
+      "q-question-6": "ai-for-ee-research-150",
+      "q-question-7": "ai-for-ee-research-366",
+      "q-question-8": "ai-for-ee-research-368"
+    }
+  }
 }

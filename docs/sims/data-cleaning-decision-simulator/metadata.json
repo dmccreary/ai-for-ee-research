@@ -90,5 +90,18 @@
       "Reading the lab notebook excerpt is exploration and is not evidence"
     ]
   },
-  "chapter": "12-data-analysis-scripting"
+  "chapter": "12-data-analysis-scripting",
+  "xapi": {
+    "concept": "ai-for-ee-research-226",
+    "objects": {
+      "q-anomaly-1": "ai-for-ee-research-226",
+      "q-anomaly-2": "ai-for-ee-research-226",
+      "q-anomaly-3": "ai-for-ee-research-226",
+      "q-anomaly-4": "ai-for-ee-research-226",
+      "q-anomaly-5": "ai-for-ee-research-226",
+      "q-anomaly-6": "ai-for-ee-research-226",
+      "q-anomaly-7": "ai-for-ee-research-226",
+      "q-anomaly-8": "ai-for-ee-research-226"
+    }
+  }
 }

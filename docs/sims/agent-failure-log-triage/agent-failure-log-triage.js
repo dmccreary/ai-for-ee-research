@@ -109,6 +109,11 @@ let startOverButton;
 
 const PLACEHOLDER = 'Choose a failure mode';
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(161);   // Agent Failure Modes
+const EXCERPT_CONCEPT = (id) => LRS.conceptId(id === 4 ? 162 : 161);   // excerpt 4 is a Runaway Agent
+let lrs = null, excerptStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -139,6 +144,11 @@ function setup() {
   startOverButton.parent(document.querySelector('main'));
   styleButton(startOverButton);
   onActivate(startOverButton, startOver);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Agent Failure Log Triage', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Agent Failure Log Triage MicroSim', pageDwell: true });
+  }
 
   startOver();
 
@@ -172,6 +182,7 @@ function startOver() {
   chosen = '';
   score = 0;
   finished = false;
+  excerptStart = Date.now();
   modeSelect.elt.value = '';
   updateControls();
   redraw();
@@ -192,6 +203,10 @@ function modeChanged() {
 // One attempt per excerpt
 function submitPressed() {
   if (finished || submitted || !chosen) return;
+  if (lrs) lrs.question('q-excerpt-' + currentExcerpt().id, { name: 'Excerpt ' + currentExcerpt().id,
+      concept: EXCERPT_CONCEPT(currentExcerpt().id) })
+    .answer({ success: isCorrect(currentExcerpt(), chosen), response: LRS.slug(chosen),
+              durationMs: excerptStart ? Date.now() - excerptStart : undefined });
   submitted = true;
   if (isCorrect(currentExcerpt(), chosen)) score++;
   updateControls();
@@ -204,6 +219,7 @@ function nextPressed() {
     pos++;
     submitted = false;
     chosen = '';
+    excerptStart = Date.now();
     modeSelect.elt.value = '';
   } else {
     finished = true;

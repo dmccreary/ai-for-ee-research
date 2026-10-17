@@ -116,5 +116,25 @@
       "purpose": "Show a task's duration, prerequisites, and any times already revealed (exploration, not scored)"
     }
   ],
-  "chapter": "10-orchestrating-agent-teams"
+  "chapter": "10-orchestrating-agent-teams",
+  "xapi": {
+    "concept": "ai-for-ee-research-189",
+    "objects": {
+      "q-earliest-finish-t5": "ai-for-ee-research-189",
+      "q-critical-path": "ai-for-ee-research-189",
+      "q-slack-t4": "ai-for-ee-research-189",
+      "q-project-duration": "ai-for-ee-research-189",
+      "q-t3-reduced-duration": "ai-for-ee-research-189",
+      "t3-duration-slider": "ai-for-ee-research-189",
+      "task-t1": "ai-for-ee-research-189",
+      "task-t2": "ai-for-ee-research-189",
+      "task-t3": "ai-for-ee-research-189",
+      "task-t4": "ai-for-ee-research-189",
+      "task-t5": "ai-for-ee-research-189",
+      "task-t6": "ai-for-ee-research-189",
+      "task-t7": "ai-for-ee-research-189",
+      "task-t8": "ai-for-ee-research-189",
+      "task-t9": "ai-for-ee-research-189"
+    }
+  }
 }

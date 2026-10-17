@@ -97,5 +97,17 @@
       "Learner explains each missed claim using the Why sentence and what the claim could be wrong about"
     ]
   },
-  "chapter": "17-verification-reproducibility"
+  "chapter": "17-verification-reproducibility",
+  "xapi": {
+    "concept": "ai-for-ee-research-297",
+    "objects": {
+      "q-claim-2": "ai-for-ee-research-300",
+      "q-claim-3": "ai-for-ee-research-299",
+      "q-claim-4": "ai-for-ee-research-301",
+      "q-claim-5": "ai-for-ee-research-303",
+      "q-claim-6": "ai-for-ee-research-300",
+      "q-claim-7": "ai-for-ee-research-299",
+      "q-claim-8": "ai-for-ee-research-303"
+    }
+  }
 }

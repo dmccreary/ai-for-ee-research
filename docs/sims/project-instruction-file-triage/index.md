@@ -6,7 +6,7 @@ og:image: /sims/project-instruction-file-triage/project-instruction-file-triage.
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Project Instruction File Triage

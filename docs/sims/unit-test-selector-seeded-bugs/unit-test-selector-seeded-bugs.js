@@ -140,6 +140,10 @@ let testBoxes = [];
 let runButton;
 let viewSelect;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(234);   // Unit Tests
+let lrs = null, runStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -172,6 +176,12 @@ function setup() {
   for (const c of allControls()) c.position(0, 0);
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Unit Test Selector for Seeded Bugs', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Unit Test Selector for Seeded Bugs MicroSim', pageDwell: true });
+  }
+  runStart = Date.now();
 
   describe('Unit Test Selector for Seeded Bugs. A table lists eight candidate unit tests of a ' +
     'Python function sndr_db with their expected results, and the three seeded bugs A, B and C. ' +
@@ -210,6 +220,12 @@ function runPressed() {
     runCount++;
     lastRun = run;
     if (firstRun === null) firstRun = run;
+    // A run is a checked answer: success means every seeded bug was exposed. Refused runs (>4 tests) are not.
+    if (lrs) lrs.question('q-select-tests', { name: 'Select tests that expose the three seeded bugs', concept: PAGE_CONCEPT() })
+      .answer({ success: run.correct, response: 'tests-' + run.tests.join('-'),
+                durationMs: Date.now() - runStart,
+                extensions: { 'run-number': runCount, 'bugs-exposed': run.exposed.join('') } });
+    runStart = Date.now();
     viewSelect.selected(VIEWS[2]); // show the run results
   }
   updateControls();

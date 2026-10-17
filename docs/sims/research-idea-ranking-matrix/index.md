@@ -6,7 +6,7 @@ og:image: /sims/research-idea-ranking-matrix/research-idea-ranking-matrix.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Research Idea Ranking Matrix

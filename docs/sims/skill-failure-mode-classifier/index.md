@@ -6,7 +6,7 @@ og:image: /sims/skill-failure-mode-classifier/skill-failure-mode-classifier.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Skill Failure Mode Classifier

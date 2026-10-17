@@ -6,7 +6,7 @@ og:image: /sims/figure-caption-critic/figure-caption-critic.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Figure Caption Critic

@@ -41,63 +41,83 @@ nav:
       - 1. Research Workflows and the Researcher as Orchestrator:
           - Content: chapters/01-research-workflows-orchestrator/index.md
           - Annotated References: chapters/01-research-workflows-orchestrator/references.md
+          - Quiz: chapters/01-research-workflows-orchestrator/quiz.md
       - 2. How Language Models Work:
           - Content: chapters/02-how-language-models-work/index.md
           - Annotated References: chapters/02-how-language-models-work/references.md
+          - Quiz: chapters/02-how-language-models-work/quiz.md
       - 3. Choosing Models and Writing Clear Prompts:
           - Content: chapters/03-models-and-prompt-basics/index.md
           - Annotated References: chapters/03-models-and-prompt-basics/references.md
+          - Quiz: chapters/03-models-and-prompt-basics/quiz.md
       - 4. Context Engineering and Advanced Prompting:
           - Content: chapters/04-context-engineering-prompting/index.md
           - Annotated References: chapters/04-context-engineering-prompting/references.md
+          - Quiz: chapters/04-context-engineering-prompting/quiz.md
       - 5. Markdown Project Files and Version Control:
           - Content: chapters/05-markdown-and-version-control/index.md
           - Annotated References: chapters/05-markdown-and-version-control/references.md
+          - Quiz: chapters/05-markdown-and-version-control/quiz.md
       - 6. Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill:
           - Content: chapters/06-knowledge-bases-skill-anatomy/index.md
           - Annotated References: chapters/06-knowledge-bases-skill-anatomy/references.md
+          - Quiz: chapters/06-knowledge-bases-skill-anatomy/quiz.md
       - 7. Designing, Testing, and Sharing Agent Skills:
           - Content: chapters/07-designing-testing-skills/index.md
           - Annotated References: chapters/07-designing-testing-skills/references.md
+          - Quiz: chapters/07-designing-testing-skills/quiz.md
       - 8. Agents, Tool Use, and Subagents:
           - Content: chapters/08-agents-tool-use-subagents/index.md
           - Annotated References: chapters/08-agents-tool-use-subagents/references.md
+          - Quiz: chapters/08-agents-tool-use-subagents/quiz.md
       - 9. Supervising Agents and Defining Agent Roles:
           - Content: chapters/09-supervising-agents-roles/index.md
           - Annotated References: chapters/09-supervising-agents-roles/references.md
+          - Quiz: chapters/09-supervising-agents-roles/quiz.md
       - 10. Orchestrating Teams of Planning and Execution Agents:
           - Content: chapters/10-orchestrating-agent-teams/index.md
           - Annotated References: chapters/10-orchestrating-agent-teams/references.md
+          - Quiz: chapters/10-orchestrating-agent-teams/quiz.md
       - 11. AI-Assisted Literature Search and Synthesis:
           - Content: chapters/11-literature-search-synthesis/index.md
           - Annotated References: chapters/11-literature-search-synthesis/references.md
+          - Quiz: chapters/11-literature-search-synthesis/quiz.md
       - 12. AI-Assisted Data Analysis and Scripting:
           - Content: chapters/12-data-analysis-scripting/index.md
           - Annotated References: chapters/12-data-analysis-scripting/references.md
+          - Quiz: chapters/12-data-analysis-scripting/quiz.md
       - 13. Simulation, Testing, and Reproducible Code:
           - Content: chapters/13-simulation-testing-code/index.md
           - Annotated References: chapters/13-simulation-testing-code/references.md
+          - Quiz: chapters/13-simulation-testing-code/quiz.md
       - 14. Brainstorming and Problem Framing:
           - Content: chapters/14-brainstorming-problem-framing/index.md
           - Annotated References: chapters/14-brainstorming-problem-framing/references.md
+          - Quiz: chapters/14-brainstorming-problem-framing/quiz.md
       - 15. AI-Assisted Manuscript Preparation:
           - Content: chapters/15-manuscript-preparation/index.md
           - Annotated References: chapters/15-manuscript-preparation/references.md
+          - Quiz: chapters/15-manuscript-preparation/quiz.md
       - 16. MicroSims and Research Communication:
           - Content: chapters/16-microsims-communication/index.md
           - Annotated References: chapters/16-microsims-communication/references.md
+          - Quiz: chapters/16-microsims-communication/quiz.md
       - 17. Verification and Reproducibility:
           - Content: chapters/17-verification-reproducibility/index.md
           - Annotated References: chapters/17-verification-reproducibility/references.md
+          - Quiz: chapters/17-verification-reproducibility/quiz.md
       - 18. Responsible and Ethical Use of AI:
           - Content: chapters/18-responsible-ethical-use/index.md
           - Annotated References: chapters/18-responsible-ethical-use/references.md
+          - Quiz: chapters/18-responsible-ethical-use/quiz.md
       - 19. Always-On Personal Agents for Research:
           - Content: chapters/19-always-on-personal-agents/index.md
           - Annotated References: chapters/19-always-on-personal-agents/references.md
+          - Quiz: chapters/19-always-on-personal-agents/quiz.md
       - 20. Case Studies and Capstone Project:
           - Content: chapters/20-case-studies-capstone/index.md
           - Annotated References: chapters/20-case-studies-capstone/references.md
+          - Quiz: chapters/20-case-studies-capstone/quiz.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
@@ -109,6 +129,7 @@ nav:
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Rendering Test: learning-graph/mascot-test.md
       - Glossary Quality Report: learning-graph/glossary-quality-report.md
+      - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
   - MicroSims:
       - List of MicroSims: sims/index.md
@@ -182,6 +203,10 @@ nav:
       - Where Does Your Data Go?: posters/where-does-your-data-go/index.md
       - Day Shift, Night Shift: posters/day-shift-night-shift/index.md
       - The Paper Behind the Book: posters/the-paper-behind-the-book/index.md
+
+  - Slides:
+      - List of Slide Decks: slides/index.md
+      - Book Overview Deck: slides/overview/index.md
 
   - Appendices:
       - List of Appendices: appendices/index.md

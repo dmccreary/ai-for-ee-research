@@ -80,6 +80,10 @@ let checkButton;
 let startOverButton;
 let nextPageButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+// One checked answer per counted submission; card editing is exploration, not evidence.
+let lrs = null, attemptStart = 0;   // concept: Task Decomposition (16)
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -102,6 +106,12 @@ function setup() {
   checkButton = makeButton('Check Order', checkOrder);
   startOverButton = makeButton('Start Over', startOver);
   nextPageButton = makeButton('Next Page', nextInfoPage);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Research Task Decomposition Builder', concept: LRS.conceptId(16),
+                          mount: '#xapi-slot', source: 'the Research Task Decomposition Builder MicroSim',
+                          pageDwell: true });
+  }
 
   newAttempt();
 
@@ -142,6 +152,7 @@ function shuffledDeck() {
 // Starting state: eight cards unselected and unordered, two fresh submissions
 function newAttempt() {
   deck = shuffledDeck();
+  attemptStart = Date.now();
   sequence = [];
   submissions = 0;
   lastCheck = null;
@@ -278,6 +289,11 @@ function checkOrder() {
   const problems = evaluate(sequence);
   lastCheck = { rejected: false, submission: submissions, problems: problems,
     correct: problems.length === 0, seq: sequence.slice() };
+  if (lrs) lrs.question('q-decomposition', { name: 'Order the subtasks: ' + GOAL, concept: LRS.conceptId(16) })
+    .answer({ success: problems.length === 0,
+              response: sequence.map(s => SUBTASKS[deck[s]].id.toLowerCase()).join('-'),
+              durationMs: attemptStart ? Date.now() - attemptStart : undefined,
+              extensions: { 'attempt-number': attempt, 'submission-number': submissions } });
   if (lastCheck.correct || submissions >= MAX_SUBMISSIONS) {
     revealed = true;
     resultText = lastCheck.correct

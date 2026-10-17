@@ -101,5 +101,15 @@
       "Dragging the temperature control freely is exploration and is not evidence of mastery"
     ]
   },
-  "chapter": "02-how-language-models-work"
+  "chapter": "02-how-language-models-work",
+  "xapi": {
+    "concept": "ai-for-ee-research-28",
+    "objects": {
+      "q-top-token-at-t0-5": "ai-for-ee-research-28",
+      "q-top-token-at-t2-0": "ai-for-ee-research-28",
+      "q-lowest-token-at-t2-0": "ai-for-ee-research-28",
+      "temperature-slider": "ai-for-ee-research-28",
+      "draw-samples-button": "ai-for-ee-research-28"
+    }
+  }
 }

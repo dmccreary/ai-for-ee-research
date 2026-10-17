@@ -100,5 +100,20 @@
       "Learner writes the permission rule, sandbox setting, or approval gate for each action in the morning report"
     ]
   },
-  "chapter": "19-always-on-personal-agents"
+  "chapter": "19-always-on-personal-agents",
+  "xapi": {
+    "concept": "ai-for-ee-research-368",
+    "objects": {
+      "q-web-search-arxiv": "ai-for-ee-research-368",
+      "q-fetch-arxiv-listing": "ai-for-ee-research-368",
+      "q-write-reading-queue-first": "ai-for-ee-research-368",
+      "q-read-raw-capture": "ai-for-ee-research-368",
+      "q-sign-in-publisher": "ai-for-ee-research-368",
+      "q-fetch-blog-post": "ai-for-ee-research-368",
+      "q-send-lab-message": "ai-for-ee-research-368",
+      "q-write-reading-queue-second": "ai-for-ee-research-368",
+      "q-install-pdf-tools": "ai-for-ee-research-368",
+      "q-add-to-cart": "ai-for-ee-research-368"
+    }
+  }
 }

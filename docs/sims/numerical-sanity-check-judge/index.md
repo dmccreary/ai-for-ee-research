@@ -6,7 +6,7 @@ og:image: /sims/numerical-sanity-check-judge/numerical-sanity-check-judge.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Numerical Sanity Check Judge

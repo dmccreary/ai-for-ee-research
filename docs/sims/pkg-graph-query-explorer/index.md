@@ -6,7 +6,7 @@ og:image: /sims/pkg-graph-query-explorer/pkg-graph-query-explorer.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Personal Knowledge Graph Query Explorer

@@ -6,7 +6,7 @@ og:image: /sims/unit-test-selector-seeded-bugs/unit-test-selector-seeded-bugs.pn
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Unit Test Selector for Seeded Bugs

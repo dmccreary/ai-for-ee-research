@@ -6,7 +6,7 @@ og:image: /sims/python-traceback-reader/python-traceback-reader.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Python Traceback Reader

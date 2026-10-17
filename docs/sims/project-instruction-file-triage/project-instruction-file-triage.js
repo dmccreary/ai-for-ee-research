@@ -105,6 +105,12 @@ let labelButtons = [];
 let submitButton;
 let scoreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(88);   // Project Instruction File
+// stable question keys, one per LINES entry (never the position)
+const LINE_KEYS = ['project-goal-enob', 'script-naming', 'never-modify-raw-data', 'numpy-scipy-only', 'commit-message-style', 'crash-debug-note', 'report-enob-format', 'long-simulation-confirm', 'success-acceptance-criteria', 'be-smart-vague', 'scheduler-api-key'];
+let lrs = null, lineStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -130,6 +136,12 @@ function setup() {
   scoreButton.mouseClicked(showScore);
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Project Instruction File Triage', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Project Instruction File Triage MicroSim', pageDwell: true });
+    lineStart = Date.now();
+  }
 
   describe('Project Instruction File Triage. An illustrative draft instruction file for a SAR ADC ' +
     'project is shown as eleven numbered lines, with one line highlighted. Select Goal, Convention, ' +
@@ -160,9 +172,13 @@ function selectLabel(k) {
 
 function submitLabel() {
   if (finished || pos >= LINES.length || selected < 0) return;
+  if (lrs) lrs.question('q-' + LINE_KEYS[pos], { name: 'Line ' + (pos + 1) + ': ' + LINES[pos].text, concept: PAGE_CONCEPT() })
+    .answer({ success: selected === LINES[pos].label, response: LRS.slug(LABELS[selected]),
+              durationMs: lineStart ? Date.now() - lineStart : undefined });
   results[pos] = selected;
   lastJudged = pos;
   pos++;            // highlight the next line
+  lineStart = Date.now();
   selected = -1;
   updateControls();
   redraw();

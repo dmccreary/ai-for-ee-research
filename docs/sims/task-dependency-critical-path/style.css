@@ -320,3 +320,7 @@ body {
     .explore { font-size: 14px; }
     .detail { min-height: 0; }
 }
+
+/* xAPI teaching panel (?xapi=teaching): pin the layout to its production height and let the page scroll. */
+html:has(.xapi-panel), body:has(.xapi-panel) { height: auto; overflow: auto; }
+body:has(.xapi-panel) .container { height: 760px; }

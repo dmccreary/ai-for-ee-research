@@ -6,7 +6,7 @@ og:image: /sims/context-selection-budget/context-selection-budget.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Context Selection Budget

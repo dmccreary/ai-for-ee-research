@@ -6,7 +6,7 @@ og:image: /sims/agent-comparison-criteria-matcher/agent-comparison-criteria-matc
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Personal Agent Comparison Criteria Matcher

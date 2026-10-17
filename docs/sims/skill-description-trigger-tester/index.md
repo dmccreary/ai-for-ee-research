@@ -6,7 +6,7 @@ og:image: /sims/skill-description-trigger-tester/skill-description-trigger-teste
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Skill Description Trigger Tester

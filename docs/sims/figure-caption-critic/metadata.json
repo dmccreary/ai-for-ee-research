@@ -87,5 +87,16 @@
       "Reading the checklist is exploration and is not evidence"
     ]
   },
-  "chapter": "15-manuscript-preparation"
+  "chapter": "15-manuscript-preparation",
+  "xapi": {
+    "concept": "ai-for-ee-research-274",
+    "objects": {
+      "q-figure-3": "ai-for-ee-research-274",
+      "q-figure-4": "ai-for-ee-research-274",
+      "q-figure-5": "ai-for-ee-research-274",
+      "q-figure-6": "ai-for-ee-research-274",
+      "q-figure-7": "ai-for-ee-research-274",
+      "q-figure-8": "ai-for-ee-research-274"
+    }
+  }
 }

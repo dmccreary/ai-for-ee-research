@@ -7,7 +7,7 @@ twitter:image: /sims/generative-ai-to-agent/generative-ai-to-agent.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # From Generative AI to Agent

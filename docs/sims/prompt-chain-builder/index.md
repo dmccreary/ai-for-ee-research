@@ -6,7 +6,7 @@ og:image: /sims/prompt-chain-builder/prompt-chain-builder.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Prompt Chain Builder

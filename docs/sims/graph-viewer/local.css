@@ -285,3 +285,7 @@ body {
         min-width: 40px;
     }
 }
+
+/* xAPI teaching panel (?xapi=teaching): pin the layout to its production height and let the page scroll. */
+html:has(.xapi-panel), body:has(.xapi-panel) { overflow: auto; }
+body:has(.xapi-panel) .container { height: 600px; }

@@ -94,5 +94,18 @@
       "Viewing rendered previews after the answer is revealed is exploration, not evidence"
     ]
   },
-  "chapter": "05-markdown-and-version-control"
+  "chapter": "05-markdown-and-version-control",
+  "xapi": {
+    "concept": "ai-for-ee-research-83",
+    "objects": {
+      "q-heading": "ai-for-ee-research-83",
+      "q-bulleted-list": "ai-for-ee-research-83",
+      "q-numbered-list": "ai-for-ee-research-83",
+      "q-inline-code": "ai-for-ee-research-83",
+      "q-code-block": "ai-for-ee-research-83",
+      "q-link": "ai-for-ee-research-83",
+      "q-table": "ai-for-ee-research-83",
+      "q-bold": "ai-for-ee-research-83"
+    }
+  }
 }

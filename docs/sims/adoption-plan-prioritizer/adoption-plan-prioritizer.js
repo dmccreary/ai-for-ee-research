@@ -104,6 +104,10 @@ let stepSelect;
 let earlierButton;
 let laterButton;
 let submitButton;
+
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(350);   // Adoption Plan
+let lrs = null, attemptStart = 0;
 let nextPageButton;
 
 function setup() {
@@ -130,6 +134,12 @@ function setup() {
 
   order = scrambledOrder();
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Adoption Plan Prioritizer', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Adoption Plan Prioritizer MicroSim', pageDwell: true });
+    attemptStart = Date.now();
+  }
 
   describe('Adoption Plan Prioritizer. Six adoption steps for a research group, labeled A to F, ' +
     'are listed in a scrambled order with the question: ' + QUESTION + ' Pick a step in the ' +
@@ -204,6 +214,12 @@ function submitOrder() {
   const v = firstViolation(order);
   lastResult = { order: order.slice(), violation: v, n: submissions };
   if (firstResult === null) firstResult = { valid: v === null };
+  if (lrs) {
+    lrs.question('q-adoption-order', { name: 'Order the six adoption steps', concept: PAGE_CONCEPT() })
+      .answer({ success: v === null, response: order.join('-'), durationMs: Date.now() - attemptStart,
+                extensions: { 'attempt-number': submissions } });
+    attemptStart = Date.now();
+  }
   // on a narrow screen, jump from the step view to the first page of feedback
   infoPage = canvasWidth < wideWidth ? 1 : 0;
   updateControls();

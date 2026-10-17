@@ -89,5 +89,16 @@
       "Learner explains why exchanges 2 and 3 receive different classifications"
     ]
   },
-  "chapter": "17-verification-reproducibility"
+  "chapter": "17-verification-reproducibility",
+  "xapi": {
+    "concept": "ai-for-ee-research-306",
+    "objects": {
+      "q-exchange-1": "ai-for-ee-research-306",
+      "q-exchange-2": "ai-for-ee-research-306",
+      "q-exchange-3": "ai-for-ee-research-306",
+      "q-exchange-4": "ai-for-ee-research-306",
+      "q-exchange-5": "ai-for-ee-research-306",
+      "q-exchange-6": "ai-for-ee-research-306"
+    }
+  }
 }

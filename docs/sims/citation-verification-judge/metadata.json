@@ -117,5 +117,18 @@
       "Viewing the lookup results is exploration and is not evidence of mastery"
     ]
   },
-  "chapter": "02-how-language-models-work"
+  "chapter": "02-how-language-models-work",
+  "xapi": {
+    "concept": "ai-for-ee-research-215",
+    "objects": {
+      "q-brandt-and-osei-2020": "ai-for-ee-research-215",
+      "q-vasquez-2018": "ai-for-ee-research-215",
+      "q-nakamura-and-reyes-2017": "ai-for-ee-research-215",
+      "q-oyelaran-2021": "ai-for-ee-research-215",
+      "q-lindqvist-and-okafor-2019": "ai-for-ee-research-215",
+      "q-hartmann-2022": "ai-for-ee-research-215",
+      "q-dubois-and-lin-2021": "ai-for-ee-research-215",
+      "q-fofanah-2020": "ai-for-ee-research-215"
+    }
+  }
 }

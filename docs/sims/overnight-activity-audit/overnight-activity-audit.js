@@ -115,6 +115,12 @@ let outButton;
 let submitButton;
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(368);   // Overnight Activity Audit
+// stable question keys, one per LOG entry (never the position)
+const LINE_KEYS = ['web-search-arxiv', 'fetch-arxiv-listing', 'write-reading-queue-first', 'read-raw-capture', 'sign-in-publisher', 'fetch-blog-post', 'send-lab-message', 'write-reading-queue-second', 'install-pdf-tools', 'add-to-cart'];
+let lrs = null, lineStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -143,6 +149,12 @@ function setup() {
   nextButton.mouseClicked(nextPressed);
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Overnight Activity Audit', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Overnight Activity Audit MicroSim', pageDwell: true });
+    lineStart = Date.now();
+  }
 
   describe('Overnight Activity Audit. The task given to an always-on agent is shown with its ' +
     'Allowed and Not allowed lists, followed by one line at a time from an illustrative overnight ' +
@@ -175,6 +187,9 @@ function choose(c) {
 function submitChoice() {
   if (finished || committed || chosen === '') return;
   committed = true;
+  if (lrs) lrs.question('q-' + LINE_KEYS[linePos], { name: 'Log line ' + LOG[linePos].id + ': ' + LOG[linePos].action, concept: PAGE_CONCEPT() })
+    .answer({ success: isCorrect(LOG[linePos], chosen), response: LRS.slug(chosen),
+              durationMs: lineStart ? Date.now() - lineStart : undefined });
   if (isCorrect(LOG[linePos], chosen)) score++;
   updateControls();
   redraw();
@@ -185,6 +200,7 @@ function nextPressed() {
   if (finished || !committed) return;
   if (linePos < N_LINES - 1) {
     linePos++;
+    lineStart = Date.now();
     committed = false;
     chosen = '';
     updateControls();

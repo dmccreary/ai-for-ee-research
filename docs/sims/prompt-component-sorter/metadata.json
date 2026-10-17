@@ -93,5 +93,20 @@
       "Learner explains why sentence 3 is a constraint and sentence 6 an output format"
     ]
   },
-  "chapter": "03-models-and-prompt-basics"
+  "chapter": "03-models-and-prompt-basics",
+  "xapi": {
+    "concept": "ai-for-ee-research-51",
+    "objects": {
+      "q1": "ai-for-ee-research-54",
+      "q2": "ai-for-ee-research-59",
+      "q3": "ai-for-ee-research-59",
+      "q4": "ai-for-ee-research-59",
+      "q5": "ai-for-ee-research-59",
+      "q6": "ai-for-ee-research-58",
+      "q7": "ai-for-ee-research-58",
+      "q8": "ai-for-ee-research-55",
+      "q9": "ai-for-ee-research-59",
+      "q10": "ai-for-ee-research-53"
+    }
+  }
 }

@@ -6,7 +6,7 @@ og:image: /sims/skill-anatomy-labeler/skill-anatomy-labeler.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Skill Anatomy Labeler

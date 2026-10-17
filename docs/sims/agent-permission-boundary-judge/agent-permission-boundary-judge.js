@@ -113,6 +113,10 @@ let maxLayoutBottom = 0;
 let outcomeButtons = [];
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(146);   // Permissions
+let lrs = null, actionStart = Date.now();
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -132,6 +136,11 @@ function setup() {
   nextButton.parent(document.querySelector('main'));
   styleButton(nextButton);
   nextButton.mousePressed(nextPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Agent Permission Boundary Judge', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Agent Permission Boundary Judge MicroSim', pageDwell: true });
+  }
 
   updateControls();
 
@@ -161,6 +170,10 @@ function correctOutcome(a) {
 
 function commitOutcome(o) {
   if (finished || committed) return;   // one attempt per action
+  if (lrs) lrs.question('q-action-' + ACTIONS[actionIdx].n, { name: 'Action ' + ACTIONS[actionIdx].n + ': ' + ACTIONS[actionIdx].text,
+      concept: PAGE_CONCEPT() })
+    .answer({ success: o === correctOutcome(ACTIONS[actionIdx]), response: o.toLowerCase(),
+              durationMs: Date.now() - actionStart });
   picks[actionIdx] = o;
   committed = true;
   if (o === correctOutcome(ACTIONS[actionIdx])) score++;
@@ -173,6 +186,7 @@ function nextPressed() {
   if (actionIdx < ACTIONS.length - 1) {
     actionIdx++;
     committed = false;
+    actionStart = Date.now();
   } else {
     finished = true;
   }

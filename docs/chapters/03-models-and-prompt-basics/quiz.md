@@ -106,7 +106,7 @@ Test your understanding of model access, selection, retrieval, and the building 
 
     **Concept Tested:** Retrieval Augmented Generation
 
-    **See:** [Adding Your Own Documents](./index.md#adding-your-own-documents)
+    **See:** [Adding Your Own Documents](./index.md#adding-your-own-documents-embeddings-vector-search-and-retrieval)
 
 
 
@@ -128,7 +128,7 @@ Test your understanding of model access, selection, retrieval, and the building 
 
     **Concept Tested:** Vector Search
 
-    **See:** [Adding Your Own Documents](./index.md#adding-your-own-documents)
+    **See:** [Adding Your Own Documents](./index.md#adding-your-own-documents-embeddings-vector-search-and-retrieval)
 
 
 

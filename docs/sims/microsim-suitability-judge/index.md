@@ -6,7 +6,7 @@ og:image: /sims/microsim-suitability-judge/microsim-suitability-judge.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # MicroSim Suitability Judge

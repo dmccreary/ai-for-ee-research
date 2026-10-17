@@ -6,7 +6,7 @@ og:image: /sims/agent-permission-boundary-judge/agent-permission-boundary-judge.
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Agent Permission Boundary Judge

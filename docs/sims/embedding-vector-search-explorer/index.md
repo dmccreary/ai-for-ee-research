@@ -6,7 +6,7 @@ og:image: /sims/embedding-vector-search-explorer/embedding-vector-search-explore
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Embedding Vector Search Explorer

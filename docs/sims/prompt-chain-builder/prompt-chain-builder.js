@@ -149,6 +149,10 @@ let submitButton;
 let resetButton;
 let nextPageButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(79);   // Prompt Chaining
+let lrs = null, resetEv = null, attemptStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -189,6 +193,12 @@ function setup() {
     resultPage = (resultPage + 1) % resultPageCount;
     redraw();
   });
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Prompt Chain Builder', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Prompt Chain Builder MicroSim', pageDwell: true });
+    resetEv = lrs.button('reset-button', { name: 'Reset Button', concept: PAGE_CONCEPT() });
+  }
 
   newAttempt();
 
@@ -242,11 +252,13 @@ function newAttempt() {
   lastResult = null;
   resultPage = 0;
   resultPageCount = 1;
+  attemptStart = Date.now();
   updateControls();
   redraw();
 }
 
 function resetPressed() {
+  if (resetEv) resetEv.press('reset');
   if (submitted || firstResult) attempt++;
   newAttempt();
 }
@@ -270,6 +282,18 @@ function submitPressed() {
   if (submitted || !allChecksChosen()) return;
   lastResult = scoreSubmission(order, checks);
   lastResult.order = order.slice();
+  if (lrs) {   // the order and each step's chosen check are separate checked answers, every submission
+    const dur = attemptStart ? Date.now() - attemptStart : undefined;
+    const ext = { 'attempt-number': attempt };
+    lrs.question('q-step-order', { name: 'Order of the six prompt-chain steps', concept: PAGE_CONCEPT() })
+      .answer({ success: lastResult.valid, response: order.map(id => id.toLowerCase()).join('-'),
+                durationMs: dur, extensions: ext });
+    for (const st of STEPS) {
+      lrs.question('q-check-' + st.id.toLowerCase(), { name: 'Acceptance check for step ' + st.id + ': ' + st.text, concept: PAGE_CONCEPT() })
+        .answer({ success: checks[st.id] === st.testable, response: 'option-' + checks[st.id].toLowerCase(),
+                  durationMs: dur, extensions: ext });
+    }
+  }
   if (!firstResult) firstResult = lastResult;
   submitted = true;
   resultPage = 0;

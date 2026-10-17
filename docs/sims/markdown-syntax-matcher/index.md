@@ -6,7 +6,7 @@ og:image: /sims/markdown-syntax-matcher/markdown-syntax-matcher.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Markdown Syntax Matcher

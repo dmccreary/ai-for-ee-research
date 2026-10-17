@@ -93,5 +93,18 @@
       "Learner names the shared keyword and the actual task of each near-miss request on the summary screen"
     ]
   },
-  "chapter": "07-designing-testing-skills"
+  "chapter": "07-designing-testing-skills",
+  "xapi": {
+    "concept": "ai-for-ee-research-116",
+    "objects": {
+      "q-request-1": "ai-for-ee-research-116",
+      "q-request-2": "ai-for-ee-research-116",
+      "q-request-3": "ai-for-ee-research-116",
+      "q-request-4": "ai-for-ee-research-116",
+      "q-request-5": "ai-for-ee-research-116",
+      "q-request-6": "ai-for-ee-research-116",
+      "q-request-7": "ai-for-ee-research-116",
+      "q-request-8": "ai-for-ee-research-116"
+    }
+  }
 }

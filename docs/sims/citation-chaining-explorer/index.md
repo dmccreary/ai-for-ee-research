@@ -6,7 +6,7 @@ og:image: /sims/citation-chaining-explorer/citation-chaining-explorer.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Citation Chaining Explorer

@@ -6,7 +6,7 @@ og:image: /sims/agent-autonomy-level-assigner/agent-autonomy-level-assigner.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Agent Autonomy Level Assigner

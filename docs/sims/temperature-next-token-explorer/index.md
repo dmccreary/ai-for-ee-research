@@ -6,7 +6,7 @@ og:image: /sims/temperature-next-token-explorer/temperature-next-token-explorer.
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Temperature Next-Token Explorer

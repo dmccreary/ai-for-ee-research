@@ -93,5 +93,21 @@
       "Reading the draft file as a whole is exploration, not evidence"
     ]
   },
-  "chapter": "05-markdown-and-version-control"
+  "chapter": "05-markdown-and-version-control",
+  "xapi": {
+    "concept": "ai-for-ee-research-88",
+    "objects": {
+      "q-project-goal-enob": "ai-for-ee-research-88",
+      "q-script-naming": "ai-for-ee-research-88",
+      "q-never-modify-raw-data": "ai-for-ee-research-88",
+      "q-numpy-scipy-only": "ai-for-ee-research-88",
+      "q-commit-message-style": "ai-for-ee-research-88",
+      "q-crash-debug-note": "ai-for-ee-research-88",
+      "q-report-enob-format": "ai-for-ee-research-88",
+      "q-long-simulation-confirm": "ai-for-ee-research-88",
+      "q-success-acceptance-criteria": "ai-for-ee-research-88",
+      "q-be-smart-vague": "ai-for-ee-research-88",
+      "q-scheduler-api-key": "ai-for-ee-research-88"
+    }
+  }
 }

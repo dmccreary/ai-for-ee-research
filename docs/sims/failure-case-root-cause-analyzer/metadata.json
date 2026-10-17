@@ -95,5 +95,16 @@
       "Reading the list of controls is exploration and is not evidence"
     ]
   },
-  "chapter": "20-case-studies-capstone"
+  "chapter": "20-case-studies-capstone",
+  "xapi": {
+    "concept": "ai-for-ee-research-343",
+    "objects": {
+      "q-missing-sanity-check": "ai-for-ee-research-343",
+      "q-unverified-model-claim": "ai-for-ee-research-343",
+      "q-unreviewed-diff": "ai-for-ee-research-343",
+      "q-environment-drift": "ai-for-ee-research-343",
+      "q-scope-too-broad": "ai-for-ee-research-343",
+      "q-untraceable-claim": "ai-for-ee-research-343"
+    }
+  }
 }

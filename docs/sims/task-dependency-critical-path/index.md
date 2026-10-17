@@ -6,7 +6,7 @@ og:image: /sims/task-dependency-critical-path/task-dependency-critical-path.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Task Dependency Critical Path Scheduler

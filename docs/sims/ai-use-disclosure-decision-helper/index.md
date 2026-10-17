@@ -6,7 +6,7 @@ og:image: /sims/ai-use-disclosure-decision-helper/ai-use-disclosure-decision-hel
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # AI Use Disclosure Decision Helper

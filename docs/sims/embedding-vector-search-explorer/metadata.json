@@ -108,5 +108,15 @@
       "Learner explains why D1 is returned for Q3 even though it is below the threshold"
     ]
   },
-  "chapter": "03-models-and-prompt-basics"
+  "chapter": "03-models-and-prompt-basics",
+  "xapi": {
+    "concept": "ai-for-ee-research-45",
+    "objects": {
+      "q1": "ai-for-ee-research-45",
+      "q2": "ai-for-ee-research-45",
+      "q3": "ai-for-ee-research-45",
+      "query-x-slider": "ai-for-ee-research-45",
+      "query-y-slider": "ai-for-ee-research-45"
+    }
+  }
 }

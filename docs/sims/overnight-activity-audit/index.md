@@ -6,7 +6,7 @@ og:image: /sims/overnight-activity-audit/overnight-activity-audit.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Overnight Activity Audit

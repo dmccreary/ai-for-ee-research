@@ -133,6 +133,17 @@ let submitButton;
 let nextButton;
 let weightSliders = [];
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+// Quiz answers only: the exploration sliders are "not evidence" per the sim's design.
+let lrs = null, questionStart = 0;   // concept: Idea Ranking (264)
+function reportAnswer(Q, success, response) {
+  if (!lrs) return;
+  lrs.question('q' + (qIndex + 1), { name: 'Question ' + (qIndex + 1) + ': ' + Q.q, concept: LRS.conceptId(264) })
+    .answer({ success: success, response: String(response),
+              durationMs: questionStart ? Date.now() - questionStart : undefined,
+              extensions: { 'attempt-number': attempts } });
+}
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -175,6 +186,11 @@ function setup() {
     weightSliders.push(s);
   }
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Research Idea Ranking Matrix', concept: LRS.conceptId(264), mount: '#xapi-slot',
+                          source: 'the Research Idea Ranking Matrix MicroSim', pageDwell: true });
+  }
+
   startQuestion();
 
   describe('Research Idea Ranking Matrix. A table gives illustrative scores from 1 to 5 for four ' +
@@ -201,6 +217,7 @@ function styleButton(b) {
 function startQuestion() {
   const Q = QUESTIONS[qIndex];
   attempts = 0;
+  questionStart = Date.now();
   resolved = false;
   feedback = '';
   lastAnswer = '';
@@ -231,6 +248,7 @@ function submitAnswer() {
     }
     attempts++;
     lastAnswer = String(answerInput.value()).trim();
+    reportAnswer(Q, numberCorrect(v, Q.answer), lastAnswer);
     if (numberCorrect(v, Q.answer)) {
       feedback = 'correct';
       correctCount++;
@@ -251,6 +269,7 @@ function submitAnswer() {
     }
     attempts++;
     lastAnswer = c;
+    reportAnswer(Q, c === Q.answer, LRS.slug(c));
     if (c === Q.answer) {
       feedback = 'correct';
       correctCount++;

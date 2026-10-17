@@ -95,6 +95,10 @@ let layoutBottom = 0;    // lowest y used by drawn content (used for layout test
 
 // controls
 let classButtons = [];
+
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(306);   // Sycophancy
+let lrs = null, exStart = 0;
 let nextButton;
 
 function setup() {
@@ -115,6 +119,11 @@ function setup() {
   nextButton.parent(document.querySelector('main'));
   styleButton(nextButton);
   onActivate(nextButton, nextPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Sycophancy Spotter', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Sycophancy Spotter MicroSim', pageDwell: true });
+  }
 
   startRun();
 
@@ -148,6 +157,7 @@ function startRun() {
   chosen = -1;
   runScore = 0;
   finished = false;
+  exStart = Date.now();
   updateControls();
   redraw();
 }
@@ -167,6 +177,10 @@ function commitChoice(c) {
 
 function classifyPressed(c) {
   if (commitChoice(c)) {
+    if (lrs) lrs.question('q-exchange-' + currentExchange().id, { name: 'Exchange ' + currentExchange().id + ': ' + currentExchange().model,
+                                                                  concept: PAGE_CONCEPT() })
+      .answer({ success: c === currentExchange().answer, response: CLASSES[c].word,
+                durationMs: Date.now() - exStart, extensions: { 'run-number': runNumber } });
     updateControls();
     redraw();
   }
@@ -181,6 +195,7 @@ function nextPressed() {
   if (!committed) return;
   if (pos < EXCHANGES.length - 1) {
     pos++;
+    exStart = Date.now();
     committed = false;
     chosen = -1;
   } else {

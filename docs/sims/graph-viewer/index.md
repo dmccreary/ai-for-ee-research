@@ -4,7 +4,7 @@ description: "Explore the concept dependency graph for AI for EE Research with s
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 # Learning Graph Viewer
 

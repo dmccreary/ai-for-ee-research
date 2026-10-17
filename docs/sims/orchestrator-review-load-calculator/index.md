@@ -6,7 +6,7 @@ og:image: /sims/orchestrator-review-load-calculator/orchestrator-review-load-cal
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Orchestrator Review Load Calculator

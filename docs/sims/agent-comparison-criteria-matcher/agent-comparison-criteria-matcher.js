@@ -138,6 +138,14 @@ let submitButton;
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(365);   // Agent Comparison Criteria
+// Concept each question is evidence for (the criterion it tests); 365 where the book has no finer concept.
+const Q_CONCEPT = () => ({ 1: LRS.conceptId(365), 2: LRS.conceptId(363), 3: LRS.conceptId(365),
+  4: LRS.conceptId(364), 5: LRS.conceptId(367), 6: LRS.conceptId(150), 7: LRS.conceptId(366),
+  8: LRS.conceptId(368) });
+let lrs = null, qConcepts = null, qStart = Date.now();
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -173,6 +181,12 @@ function setup() {
   styleActionButton(moreButton);
   moreButton.mouseClicked(nextTestPage);
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Personal Agent Comparison Criteria Matcher', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Personal Agent Comparison Criteria Matcher MicroSim', pageDwell: true });
+    qConcepts = Q_CONCEPT();
+  }
+
   updateControls();
 
   describe('Personal Agent Comparison Criteria Matcher. Eight questions a researcher might ask ' +
@@ -204,6 +218,10 @@ function chooseCriterion(c) {
 
 function submitChoice() {
   if (finished || committed || chosen < 0) return;
+  if (lrs) lrs.question('q-question-' + QUESTIONS[qPos].id, { name: 'Question ' + QUESTIONS[qPos].id + ': ' + QUESTIONS[qPos].text,
+      concept: qConcepts[QUESTIONS[qPos].id] })
+    .answer({ success: isCorrect(QUESTIONS[qPos], CRITERIA[chosen]), response: LRS.slug(CRITERIA[chosen]),
+              durationMs: Date.now() - qStart });
   committed = true;
   if (isCorrect(QUESTIONS[qPos], CRITERIA[chosen])) score++;
   updateControls();
@@ -217,6 +235,7 @@ function nextPressed() {
     qPos++;
     committed = false;
     chosen = -1;
+    qStart = Date.now();
     updateControls();
     redraw();
     criterionButtons[0].elt.focus();

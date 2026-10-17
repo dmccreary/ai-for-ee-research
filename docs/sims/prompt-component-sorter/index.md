@@ -6,7 +6,7 @@ og:image: /sims/prompt-component-sorter/prompt-component-sorter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Prompt Component Sorter

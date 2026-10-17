@@ -6,7 +6,7 @@ og:image: /sims/adoption-plan-prioritizer/adoption-plan-prioritizer.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Adoption Plan Prioritizer

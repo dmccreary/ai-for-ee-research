@@ -108,5 +108,23 @@
       "Find the largest team that fits a chosen attention budget"
     ]
   },
-  "chapter": "10-orchestrating-agent-teams"
+  "chapter": "10-orchestrating-agent-teams",
+  "xapi": {
+    "concept": "ai-for-ee-research-198",
+    "objects": {
+      "q-default-load-hours": "ai-for-ee-research-198",
+      "q-max-planning-agents": "ai-for-ee-research-198",
+      "q-max-fraction-reviewed": "ai-for-ee-research-198",
+      "restore-defaults-button": "ai-for-ee-research-198",
+      "planning-agents-slider": "ai-for-ee-research-198",
+      "execution-agents-slider": "ai-for-ee-research-198",
+      "planning-outputs-slider": "ai-for-ee-research-198",
+      "execution-outputs-slider": "ai-for-ee-research-198",
+      "planning-review-time-slider": "ai-for-ee-research-198",
+      "execution-review-time-slider": "ai-for-ee-research-198",
+      "conflict-resolution-slider": "ai-for-ee-research-198",
+      "attention-slider": "ai-for-ee-research-198",
+      "fraction-reviewed-slider": "ai-for-ee-research-198"
+    }
+  }
 }

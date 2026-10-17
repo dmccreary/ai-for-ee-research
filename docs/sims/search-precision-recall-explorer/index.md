@@ -6,7 +6,7 @@ og:image: /sims/search-precision-recall-explorer/search-precision-recall-explore
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Search Query Precision and Recall Explorer

@@ -93,5 +93,20 @@
       "Reading the table of sections is exploration and is not evidence"
     ]
   },
-  "chapter": "15-manuscript-preparation"
+  "chapter": "15-manuscript-preparation",
+  "xapi": {
+    "concept": "ai-for-ee-research-266",
+    "objects": {
+      "q-sar-adc-mismatch-problem": "ai-for-ee-research-266",
+      "q-prior-calibration-schemes": "ai-for-ee-research-266",
+      "q-comparator-offset-measurement": "ai-for-ee-research-266",
+      "q-enob-9-4-result": "ai-for-ee-research-266",
+      "q-residual-error-thermal-noise": "ai-for-ee-research-266",
+      "q-twelve-devices-setup": "ai-for-ee-research-266",
+      "q-foreground-calibration-abstract": "ai-for-ee-research-266",
+      "q-table-ii-enob": "ai-for-ee-research-266",
+      "q-offset-limit-15mv": "ai-for-ee-research-266",
+      "q-paper-roadmap": "ai-for-ee-research-266"
+    }
+  }
 }

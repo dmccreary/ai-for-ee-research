@@ -6,7 +6,7 @@ og:image: /sims/paper-section-sorter/paper-section-sorter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Paper Section Sorter

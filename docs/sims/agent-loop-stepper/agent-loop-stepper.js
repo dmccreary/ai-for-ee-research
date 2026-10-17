@@ -112,6 +112,10 @@ let maxLayoutBottom = 0;
 let choiceButtons = [];
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(136);   // Agent Loop
+let lrs = null, stepStart = Date.now();
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -131,6 +135,11 @@ function setup() {
   nextButton.parent(document.querySelector('main'));
   styleButton(nextButton);
   nextButton.mousePressed(nextPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Agent Loop Stepper', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Agent Loop Stepper MicroSim', pageDwell: true });
+  }
 
   updateControls();
 
@@ -155,6 +164,10 @@ function styleButton(b) {
 // ---------------------------------------------------------------
 function commitPick(i) {
   if (finished || committed) return;   // one attempt per step
+  if (lrs) lrs.question('q-step-' + (stepIdx + 1), { name: 'Step ' + (stepIdx + 1) + ': predict the agent\'s next action',
+      concept: PAGE_CONCEPT() })
+    .answer({ success: i === STEPS[stepIdx].correct, response: 'candidate-' + LETTERS[i].toLowerCase(),
+              durationMs: Date.now() - stepStart });
   picks[stepIdx] = i;
   committed = true;
   if (i === STEPS[stepIdx].correct) score++;
@@ -168,6 +181,7 @@ function nextPressed() {
   if (stepIdx < STEPS.length - 1) {
     stepIdx++;
     committed = false;
+    stepStart = Date.now();
   } else {
     finished = true;
   }

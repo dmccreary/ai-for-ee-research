@@ -6,7 +6,7 @@ og:image: /sims/context-window-budget-calculator/context-window-budget-calculato
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Context Window Budget Calculator

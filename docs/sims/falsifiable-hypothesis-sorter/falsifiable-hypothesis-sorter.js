@@ -120,6 +120,10 @@ let falsifiableButton;
 let notFalsifiableButton;
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(258);   // Hypothesis Development
+let lrs = null, stmtStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -141,6 +145,12 @@ function setup() {
   nextButton.parent(document.querySelector('main'));
   styleButton(nextButton);
   nextButton.mouseClicked(nextPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Falsifiable Hypothesis Sorter', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Falsifiable Hypothesis Sorter MicroSim', pageDwell: true });
+  }
+  stmtStart = Date.now();
 
   updateControls();
 
@@ -166,6 +176,12 @@ function styleButton(b) {
 // One attempt per statement: the answer is committed at once
 function answer(choice) {
   if (finished || committed) return;
+  if (lrs) {
+    const st = STATEMENTS[pos];
+    lrs.question('q-statement-' + st.id, { name: 'Statement ' + st.id + ': ' + st.text, concept: PAGE_CONCEPT() })
+      .answer({ success: isCorrect(st, choice), response: LRS.slug(choice),
+                durationMs: stmtStart ? Date.now() - stmtStart : undefined });
+  }
   choices[pos] = choice;
   committed = true;
   if (isCorrect(STATEMENTS[pos], choice)) score++;
@@ -178,6 +194,7 @@ function nextPressed() {
   if (pos < STATEMENTS.length - 1) {
     pos++;
     committed = false;
+    stmtStart = Date.now();
   } else {
     finished = true;
   }

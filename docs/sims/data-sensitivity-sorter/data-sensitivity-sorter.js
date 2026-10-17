@@ -142,6 +142,11 @@ let finished = false;    // summary screen showing
 let layoutBottom = 0;    // lowest y used by drawn content (used for layout testing)
 
 // controls
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(319);   // Confidential Data
+const ITEM_CONCEPT = (it) => LRS.conceptId(it.cls === 2 ? 320 : 319);   // 320 Unpublished Results
+let lrs = null, itemStart = 0;
+
 let toolSelect;
 let submitButton;
 let nextButton;
@@ -175,6 +180,12 @@ function setup() {
   resetSelect();
   chooseFontSize();
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Data Sensitivity Sorter for AI Tools', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Data Sensitivity Sorter MicroSim', pageDwell: true });
+    itemStart = Date.now();
+  }
 
   describe('Data Sensitivity Sorter for AI Tools. A four-class illustrative data classification ' +
     '(Class 0 Public, Class 1 Internal, Class 2 Unpublished, Class 3 Obligated) is shown with one ' +
@@ -215,6 +226,9 @@ function submitPressed() {
   chosen = t;
   committed = true;
   answers[current] = t;
+  if (lrs) lrs.question('q-item-' + ITEMS[current].id, { name: 'Item ' + ITEMS[current].id + ': ' + ITEMS[current].text, concept: ITEM_CONCEPT(ITEMS[current]) })
+    .answer({ success: isCorrect(current, t), response: 'class-' + t,
+              durationMs: itemStart ? Date.now() - itemStart : undefined });
   if (isCorrect(current, t)) score++;
   updateControls();
   redraw();
@@ -227,6 +241,7 @@ function nextPressed() {
     committed = false;
     chosen = -1;
     resetSelect();
+    itemStart = Date.now();
   } else {
     finished = true;
   }

@@ -6,7 +6,7 @@ og:image: /sims/data-sensitivity-sorter/data-sensitivity-sorter.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Data Sensitivity Sorter for AI Tools

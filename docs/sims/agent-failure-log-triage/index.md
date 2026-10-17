@@ -6,7 +6,7 @@ og:image: /sims/agent-failure-log-triage/agent-failure-log-triage.png
 social:
    cards: false
 quality_score: 0
-status: built
+status: instrumented
 ---
 
 # Agent Failure Log Triage
