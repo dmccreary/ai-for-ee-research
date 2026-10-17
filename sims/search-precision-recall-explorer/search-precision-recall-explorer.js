@@ -140,6 +140,10 @@ let markLabel, revealButton;
 let paperBoxes = [];      // one checkbox per paper (only the returned ones are shown)
 let precisionInput, recallInput, precisionMark, recallMark;
 let checkButton, nextButton;
+
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(207);   // Search Strategy
+let lrs = null, attemptStart = 0;
 let choiceSelect, submitButton;
 
 function setup() {
@@ -235,6 +239,13 @@ function setup() {
 
   resetState();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Search Query Precision and Recall Explorer', concept: PAGE_CONCEPT(),
+                          mount: '#xapi-slot', source: 'the Search Query Precision and Recall Explorer MicroSim',
+                          pageDwell: true });
+  }
+  attemptStart = Date.now();
+
   describe('Search Query Precision and Recall Explorer. A synthetic corpus of 20 papers, P1 to P20, ' +
     'is drawn as a grid. The papers returned by the current query have solid borders and the others ' +
     'dashed borders. After the relevant set is revealed, relevant papers carry a star. The learner ' +
@@ -294,6 +305,7 @@ function resetState() {
 // ---------------------------------------------------------------
 function revealRelevant() {
   revealed = true;
+  attemptStart = Date.now();
   message = 'Mark the returned papers that are relevant, then enter precision and recall to two decimal places.';
   updateControls();
   redraw();
@@ -327,6 +339,13 @@ function checkValues() {
   st.rVal = r;
   if (!st.pOk && isClose(p, ref.precision)) st.pOk = true;
   if (!st.rOk && isClose(r, ref.recall)) st.rOk = true;
+  if (lrs) {
+    lrs.question('q-query-' + q.id.toLowerCase(), { name: 'Precision and recall of Query ' + q.id, concept: PAGE_CONCEPT() })
+      .answer({ success: isClose(p, ref.precision) && isClose(r, ref.recall),
+                response: 'precision=' + fmt2(p) + ',recall=' + fmt2(r),
+                durationMs: Date.now() - attemptStart, extensions: { 'attempt-number': st.attempts } });
+    attemptStart = Date.now();
+  }
 
   if (st.pOk && st.rOk) {
     st.resolved = true;
@@ -377,12 +396,14 @@ function nextPressed() {
   if (phase !== 'queries' || !qState[qIndex].resolved) return;
   if (qIndex < QUERIES.length - 1) {
     qIndex++;
+    attemptStart = Date.now();
     feedbackLines = [];
     message = 'Mark the returned papers that are relevant, then enter precision and recall to two decimal places.';
     precisionInput.value('');
     recallInput.value('');
   } else {
     phase = 'choice';
+    attemptStart = Date.now();
     feedbackLines = [];
     message = 'Choose one query and press Submit Choice. You have one attempt.';
   }
@@ -395,6 +416,9 @@ function submitChoice() {
   const v = choiceSelect.value();
   if (!v) return;
   choice = v;
+  if (lrs) lrs.question('q-purpose', { name: 'Query choice for a survey that cannot miss papers', concept: PAGE_CONCEPT() })
+    .answer({ success: v === PURPOSE_ANSWER, response: 'query-' + v.toLowerCase(),
+              durationMs: Date.now() - attemptStart });
   phase = 'done';
   message = '';
   updateControls();

@@ -97,5 +97,23 @@
       "purpose": "Advance to the next question in the fixed order after the current question has been answered"
     }
   ],
-  "chapter": "11-literature-search-synthesis"
+  "chapter": "11-literature-search-synthesis",
+  "xapi": {
+    "concept": "ai-for-ee-research-209",
+    "objects": {
+      "q-backward-one-step": "ai-for-ee-research-209",
+      "q-forward-one-step": "ai-for-ee-research-209",
+      "q-shared-reference": "ai-for-ee-research-209",
+      "q-forward-two-steps": "ai-for-ee-research-209",
+      "q-cites-seed-and-c": "ai-for-ee-research-209",
+      "paper-s": "ai-for-ee-research-209",
+      "paper-a": "ai-for-ee-research-209",
+      "paper-b": "ai-for-ee-research-209",
+      "paper-c": "ai-for-ee-research-209",
+      "paper-d": "ai-for-ee-research-209",
+      "paper-e": "ai-for-ee-research-209",
+      "paper-f": "ai-for-ee-research-209",
+      "paper-g": "ai-for-ee-research-209"
+    }
+  }
 }

@@ -88,6 +88,13 @@ let submitButton;
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(297);   // Verification
+// Concept ConceptID of each method (index into METHODS). Known-answer test has no concept in the
+// learning graph, so it stays unmapped (null) and its claims emit with no concept.
+const METHOD_CONCEPT = [null, 299, 300, 301, 303];  // Independent Check, Primary Source Check, Cross Model Check, Result Replication
+let lrs = null, claimStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -118,6 +125,11 @@ function setup() {
   moreButton.parent(document.querySelector('main'));
   styleButton(moreButton);
   onActivate(moreButton, nextSummaryPage);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Verification Method Matcher', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Verification Method Matcher MicroSim', pageDwell: true });
+  }
 
   startRun();
 
@@ -155,6 +167,7 @@ function startRun() {
   finished = false;
   summaryPage = 0;
   summaryPageCount = 1;
+  claimStart = Date.now();
   methodSelect.selected('');
   updateControls();
   redraw();
@@ -184,6 +197,14 @@ function commitChoice(m) {
 
 function submitPressed() {
   if (commitChoice(chosen)) {
+    if (lrs) {
+      const cl = currentClaim(), cid = METHOD_CONCEPT[cl.method];
+      if (cid === null) console.warn('[verification-method-matcher] no concept mapped for "' + METHODS[cl.method].name + '"');
+      lrs.question('q-claim-' + cl.id, { name: 'Claim ' + cl.id + ': ' + cl.text,
+                                         concept: cid === null ? undefined : LRS.conceptId(cid) })
+        .answer({ success: chosen === cl.method, response: LRS.slug(METHODS[chosen].name),
+                  durationMs: Date.now() - claimStart, extensions: { 'run-number': runNumber } });
+    }
     updateControls();
     redraw();
   }
@@ -198,6 +219,7 @@ function nextPressed() {
   if (!committed) return;
   if (claimPos < CLAIMS.length - 1) {
     claimPos++;
+    claimStart = Date.now();
     committed = false;
     chosen = -1;
     methodSelect.selected('');

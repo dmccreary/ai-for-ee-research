@@ -317,6 +317,21 @@ let optionButtons = [];
 let submitButton;
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(83);   // Markdown Syntax
+let lrs = null, itemStart = 0;
+// stable fragment name per item, looked up by the item's own text (not by position)
+const XAPI_KEYS = {
+  'A level-2 heading with the text "Measurement setup"': 'heading',
+  'A bulleted list of three items: ENOB, SNDR, SFDR': 'bulleted-list',
+  'A numbered list of three steps: Bias, Calibrate, Measure': 'numbered-list',
+  'The variable name fs shown as inline code': 'inline-code',
+  'A multi-line block of Python code with the language named': 'code-block',
+  'The word "datasheet" as a link to https://example.com/ds.pdf': 'link',
+  'A table of two columns, Quantity and Value, with one data row: ENOB and 9.2': 'table',
+  'The word ENOB in bold': 'bold'
+};
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -344,6 +359,11 @@ function setup() {
   // option order shuffled independently for each item and each learner (page load)
   orders = ITEMS.map(() => shuffledKeys(Math.random));
   results = [];
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Markdown Syntax Matcher', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Markdown Syntax Matcher MicroSim', pageDwell: true });
+  }
+  itemStart = Date.now();
   updateControls();
 
   describe('Markdown Syntax Matcher. Eight items in a fixed order. Each item describes a rendered ' +
@@ -378,6 +398,15 @@ function submitAnswer() {
   committed = true;
   const specKey = orders[itemPos][selected];
   results[itemPos] = specKey === ITEMS[itemPos].correct;
+  if (lrs) {
+    const it = ITEMS[itemPos];
+    const key = XAPI_KEYS[it.result];
+    if (key) {
+      lrs.question('q-' + key, { name: it.result, concept: PAGE_CONCEPT() })
+        .answer({ success: results[itemPos], response: 'option-' + specKey.toLowerCase(),
+                  durationMs: itemStart ? Date.now() - itemStart : undefined });
+    } else console.warn('[markdown-syntax-matcher] no xAPI key for item "' + it.result + '"');
+  }
   updateControls();
   redraw();
 }
@@ -388,6 +417,7 @@ function nextPressed() {
     itemPos++;
     committed = false;
     selected = -1;
+    itemStart = Date.now();
   } else {
     finished = true;
   }

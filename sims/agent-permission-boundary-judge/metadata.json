@@ -98,5 +98,20 @@
       "Reading the policy is exploration and is not evidence"
     ]
   },
-  "chapter": "08-agents-tool-use-subagents"
+  "chapter": "08-agents-tool-use-subagents",
+  "xapi": {
+    "concept": "ai-for-ee-research-146",
+    "objects": {
+      "q-action-1": "ai-for-ee-research-146",
+      "q-action-2": "ai-for-ee-research-146",
+      "q-action-3": "ai-for-ee-research-146",
+      "q-action-4": "ai-for-ee-research-146",
+      "q-action-5": "ai-for-ee-research-146",
+      "q-action-6": "ai-for-ee-research-146",
+      "q-action-7": "ai-for-ee-research-146",
+      "q-action-8": "ai-for-ee-research-146",
+      "q-action-9": "ai-for-ee-research-146",
+      "q-action-10": "ai-for-ee-research-146"
+    }
+  }
 }

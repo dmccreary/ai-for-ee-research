@@ -1,0 +1,171 @@
+{
+  "title": "Code That Runs, Code That Is Right",
+  "image": "code-that-runs-code-that-is-right.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": [
+    "#1F7A8C",
+    "#E0A800",
+    "#C0392B",
+    "#7A0019",
+    "#2A2E3A",
+    "#5B6C8F",
+    "#3C8D5A"
+  ],
+  "zones": [
+    {
+      "id": "clean-run",
+      "label": "Run Finished, No Error",
+      "color": "#1F7A8C",
+      "x1": 1.0,
+      "y1": 1.3,
+      "x2": 49.4,
+      "y2": 31.0,
+      "summary": "An agent's script finishes with no exception and no warning, and a tidy number appears. Nothing on this side of the poster says anything is wrong.",
+      "facts": [
+        "A silent error causes no exception and no warning, yet it changes the result (Chapter 13).",
+        "A syntax error announces itself. A unit mistake, a wrong index, or a nearly right formula produces a clean run (Chapter 13).",
+        "Research code is especially exposed because the right answer is not known in advance, so nothing signals that the answer is wrong (Chapter 13).",
+        "An agent's code almost always runs. The danger is code that runs and returns a plausible, wrong number (Chapter 13)."
+      ]
+    },
+    {
+      "id": "plausible-number",
+      "label": "A Plausible Number",
+      "color": "#E0A800",
+      "x1": 1.0,
+      "y1": 32.0,
+      "x2": 49.4,
+      "y2": 64.8,
+      "summary": "The big meter shows a result printed to two decimal places. It looks reasonable, which is exactly why nobody questions it.",
+      "facts": [
+        "In Chapter 13's worked example, 20*log10 was used on a power ratio of about 316,000 instead of 10*log10. It returned 110.0 dB where the correct figure is 55.0 dB.",
+        "Fed into the ENOB formula of Chapter 4, 110.0 dB gives about 18.0 bits for a 10-bit converter (Chapter 13).",
+        "Only a person who knows that a converter cannot exceed its nominal resolution would notice (Chapter 13).",
+        "A number cannot vouch for itself. Every check in Chapter 13 compares a result with something outside the code that produced it."
+      ]
+    },
+    {
+      "id": "silent-error",
+      "label": "The Silent Error",
+      "color": "#C0392B",
+      "x1": 1.0,
+      "y1": 65.2,
+      "x2": 49.4,
+      "y2": 97.0,
+      "summary": "A hairline crack runs under the meter: the wrong formula, and a test that copies the code's own misreading. The defect is invisible from the front.",
+      "facts": [
+        "The defect in the worked example is the voltage formula applied to a power ratio: 20 times the log instead of 10 times (Chapter 13).",
+        "If one agent writes the code and its tests in one step, a misreading appears in both and the test passes (Chapter 13).",
+        "Running the same script twice checks nothing, because the same bug appears twice (Chapter 17).",
+        "Give the tests an independent source of truth: a hand calculation, a published value, or your own reading of the specification (Chapter 13)."
+      ]
+    },
+    {
+      "id": "hand-calculation",
+      "label": "Hand Calculation",
+      "color": "#7A0019",
+      "x1": 50.5,
+      "y1": 1.3,
+      "x2": 99.0,
+      "y2": 31.0,
+      "summary": "A researcher works out the expected value on paper, from a source that shares no code and no assumptions with the script.",
+      "facts": [
+        "A numerical sanity check tests a result against something that must be true whatever the computation. It cannot prove a value right, but it can prove it wrong (Chapter 13).",
+        "Five kinds cover most code: definitional limits, physical limits, hand calculation, scaling, and limit cases (Chapter 13).",
+        "An RC low-pass with R = 1 kΩ and C = 100 nF has f_c = 1/(2πRC), about 1.59 kHz. A simulation reporting 15.9 kHz has a unit or parameter error (Chapter 13).",
+        "An independent check has different failure causes from the thing it checks (Chapter 17)."
+      ]
+    },
+    {
+      "id": "numbers-disagree",
+      "label": "The Numbers Disagree",
+      "color": "#2A2E3A",
+      "x1": 50.5,
+      "y1": 32.0,
+      "x2": 99.0,
+      "y2": 64.8,
+      "summary": "A comparison balance holds the script's number against the hand number. They do not match, so the script gets a red tag and a person looks at both sides.",
+      "facts": [
+        "A definitional limit: an ADC's ENOB cannot exceed its nominal resolution by more than a small margin (Chapter 13).",
+        "Chapter 17's worked example gives one ENOB result three checks: a known-answer test, an independent sine fit, and a lab notebook check of the input frequency. Each could have failed, and each fails differently.",
+        "Debugging reproduces, isolates, hypothesizes, and then fixes with a new test that fails before the fix and passes after (Chapter 13).",
+        "An agent that fixes a bug without a failing test has no evidence that the bug was the thing it changed (Chapter 13)."
+      ]
+    },
+    {
+      "id": "seeded-bug",
+      "label": "Seeded Bug",
+      "color": "#5B6C8F",
+      "x1": 50.5,
+      "y1": 65.2,
+      "x2": 70.8,
+      "y2": 97.0,
+      "summary": "A bug planted on purpose in a small function. A test that cannot fail when the bug is present is not protecting you.",
+      "facts": [
+        "Chapter 13's exercise plants three bugs in an SNDR function: 20 times the log instead of 10, no error for a zero noise power, and no error for a zero or negative signal power.",
+        "Only some tests expose each bug. A call with signal 1 and noise 1 returns 0.0 dB in every version, so it exposes none of them (Chapter 13).",
+        "At least three well-chosen tests expose all three bugs. Boundary inputs reveal what typical values hide (Chapter 13).",
+        "A test that passes does not prove the function is correct (Chapter 13)."
+      ]
+    },
+    {
+      "id": "test-case-added",
+      "label": "Test Case Added",
+      "color": "#3C8D5A",
+      "x1": 71.7,
+      "y1": 65.2,
+      "x2": 99.0,
+      "y2": 97.0,
+      "summary": "The red-tagged script gains a new known-answer test. Its expected range comes from the hand calculation, not from whatever the code returns today.",
+      "facts": [
+        "Chapter 13's test adds 2 LSB of noise to an ideal 10-bit record and expects an ENOB between 7.0 and 7.5.",
+        "The range comes from a hand calculation: 2 LSB of noise with 0.29 LSB of quantization noise lowers the ENOB by about 2.8 bits, to near 7.2 (Chapter 13).",
+        "Chapter 16's formula ENOB = N − ½ log2(1 + 12σ²) gives 7.19 bits for N = 10 and σ = 2, the number used in Chapter 13.",
+        "Fix the random seed so the test is repeatable, and ask the agent for tests first from your acceptance criteria (Chapter 13)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A script finishes with no exception or warning and prints a tidy number. Which region shows the situation where that alone tells you nothing?",
+      "correct_zone": "clean-run",
+      "explanation": "Silent errors cause no exception and no warning, and research code has no known answer to flag a wrong result."
+    },
+    {
+      "question": "A power ratio is converted with 20 times the log instead of 10, and a 10-bit converter appears to have about 18 effective bits. Which region shows the result as the user first saw it?",
+      "correct_zone": "plausible-number",
+      "explanation": "The meter shows a clean, two-decimal number that looks reasonable, which is why only someone who knows a converter cannot exceed its resolution questions it."
+    },
+    {
+      "question": "Why can asking one agent to write both the code and its tests let a misreading slip through, and which region shows the hidden defect?",
+      "correct_zone": "silent-error",
+      "explanation": "Code and tests come from the same understanding, so the misreading appears in both and the test passes."
+    },
+    {
+      "question": "A simulated RC filter reports 15.9 kHz where 1/(2πRC) gives about 1.59 kHz. Which region shows the kind of check that would catch this?",
+      "correct_zone": "hand-calculation",
+      "explanation": "An order-of-magnitude result computed on paper is independent of the script, so a tenfold gap points to a unit or parameter error."
+    },
+    {
+      "question": "Two numbers sit on a balance, one from the script and one worked out independently, and they differ. Which region shows what happens next?",
+      "correct_zone": "numbers-disagree",
+      "explanation": "A mismatch is a flag. The script is tagged, and the cause is found by reproducing, isolating, and fixing it with a new test."
+    },
+    {
+      "question": "A function has three planted defects, and one test call returns 0.0 dB in every version. Which region shows this exercise?",
+      "correct_zone": "seeded-bug",
+      "explanation": "Chapter 13's exercise plants three bugs in an SNDR function, and a test that every version passes exposes none of them."
+    },
+    {
+      "question": "Which region shows a new test that accepts an ENOB between 7.0 and 7.5 for an ideal 10-bit record plus 2 LSB of noise?",
+      "correct_zone": "test-case-added",
+      "explanation": "The expected range follows from a hand calculation of about 2.8 bits lost, so the test encodes understanding and not the code's current output."
+    },
+    {
+      "question": "Which region shows a defect that is invisible from the front and that a second identical run would only repeat?",
+      "correct_zone": "silent-error",
+      "explanation": "Running the same script twice checks nothing, because the same bug appears twice. An independent source of truth is needed."
+    }
+  ]
+}

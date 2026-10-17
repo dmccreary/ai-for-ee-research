@@ -112,5 +112,11 @@
       "Learner writes a decomposition of a goal from their own research with a checkable output and prerequisites for each subtask"
     ]
   },
-  "chapter": "01-research-workflows-orchestrator"
+  "chapter": "01-research-workflows-orchestrator",
+  "xapi": {
+    "concept": "ai-for-ee-research-16",
+    "objects": {
+      "q-decomposition": "ai-for-ee-research-16"
+    }
+  }
 }

@@ -1,0 +1,2534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/chapters/16-microsims-communication/quiz/">
+      
+      
+        <link rel="prev" href="../references/">
+      
+      
+        <link rel="next" href="../../17-verification-reproducibility/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-microsims-and-research-communication" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-research-workflows-orchestrator/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Research Workflows and the Researcher as Orchestrator
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-how-language-models-work/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. How Language Models Work
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-models-and-prompt-basics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Choosing Models and Writing Clear Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-context-engineering-prompting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Context Engineering and Advanced Prompting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-markdown-and-version-control/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Markdown Project Files and Version Control
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-knowledge-bases-skill-anatomy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-designing-testing-skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Designing, Testing, and Sharing Agent Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-agents-tool-use-subagents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. Agents, Tool Use, and Subagents
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-supervising-agents-roles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Supervising Agents and Defining Agent Roles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-orchestrating-agent-teams/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Orchestrating Teams of Planning and Execution Agents
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-literature-search-synthesis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. AI-Assisted Literature Search and Synthesis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-data-analysis-scripting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. AI-Assisted Data Analysis and Scripting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-simulation-testing-code/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Simulation, Testing, and Reproducible Code
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-brainstorming-problem-framing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Brainstorming and Problem Framing
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-manuscript-preparation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. AI-Assisted Manuscript Preparation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_17" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    16. MicroSims and Research Communication
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_17" id="__nav_4_17_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_17_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_17">
+            <span class="md-nav__icon md-icon"></span>
+            16. MicroSims and Research Communication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-standard-javascript-library-used-in-this-book-for-building-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is the standard JavaScript library used in this book for building MicroSims?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-term-for-placing-a-microsim-in-a-web-page-using-an-html-iframe-that-points-at-the-sims-mainhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is the term for placing a MicroSim in a web page using an HTML iframe that points at the sim's main.html?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-is-an-interactive-simulation-a-better-choice-than-a-static-figure-when-showing-how-enob-changes-with-added-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Why is an interactive simulation a better choice than a static figure when showing how ENOB changes with added noise?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-why-should-a-microsim-specification-include-evidence-of-mastery-before-any-code-is-written" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Why should a MicroSim specification include evidence of mastery before any code is written?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-is-the-role-of-a-learning-graph-in-organizing-an-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What is the role of a learning graph in organizing an intelligent textbook?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-slide-deck-is-being-prepared-from-a-paper-what-is-the-most-important-check-to-perform-on-the-figures-copied-into-the-slides" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A slide deck is being prepared from a paper. What is the most important check to perform on the figures copied into the slides?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-researcher-wants-to-teach-how-a-sar-adcs-successive-approximation-search-converges-bit-by-bit-which-medium-is-most-appropriate" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A researcher wants to teach how a SAR ADC's successive-approximation search converges bit by bit. Which medium is most appropriate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-an-agent-has-implemented-a-microsim-from-a-specification-what-is-the-final-step-before-learners-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. An agent has implemented a MicroSim from a specification. What is the final step before learners use it?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-paper-includes-a-die-photograph-of-a-fabricated-converter-why-is-this-content-not-a-good-candidate-for-a-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A paper includes a die photograph of a fabricated converter. Why is this content not a good candidate for a MicroSim?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-researcher-is-deciding-whether-to-build-a-microsim-for-the-derivation-of-the-walden-figure-of-merit-why-might-a-static-figure-or-text-be-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A researcher is deciding whether to build a MicroSim for the derivation of the Walden figure of merit. Why might a static figure or text be better?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../17-verification-reproducibility/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Verification and Reproducibility
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../18-responsible-ethical-use/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Responsible and Ethical Use of AI
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../19-always-on-personal-agents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Always-On Personal Agents for Research
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../20-case-studies-capstone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. Case Studies and Capstone Project
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../posters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Posters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../appendices/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-standard-javascript-library-used-in-this-book-for-building-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is the standard JavaScript library used in this book for building MicroSims?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-term-for-placing-a-microsim-in-a-web-page-using-an-html-iframe-that-points-at-the-sims-mainhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is the term for placing a MicroSim in a web page using an HTML iframe that points at the sim's main.html?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-is-an-interactive-simulation-a-better-choice-than-a-static-figure-when-showing-how-enob-changes-with-added-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Why is an interactive simulation a better choice than a static figure when showing how ENOB changes with added noise?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-why-should-a-microsim-specification-include-evidence-of-mastery-before-any-code-is-written" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Why should a MicroSim specification include evidence of mastery before any code is written?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-is-the-role-of-a-learning-graph-in-organizing-an-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What is the role of a learning graph in organizing an intelligent textbook?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-slide-deck-is-being-prepared-from-a-paper-what-is-the-most-important-check-to-perform-on-the-figures-copied-into-the-slides" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A slide deck is being prepared from a paper. What is the most important check to perform on the figures copied into the slides?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-researcher-wants-to-teach-how-a-sar-adcs-successive-approximation-search-converges-bit-by-bit-which-medium-is-most-appropriate" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A researcher wants to teach how a SAR ADC's successive-approximation search converges bit by bit. Which medium is most appropriate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-an-agent-has-implemented-a-microsim-from-a-specification-what-is-the-final-step-before-learners-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. An agent has implemented a MicroSim from a specification. What is the final step before learners use it?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-paper-includes-a-die-photograph-of-a-fabricated-converter-why-is-this-content-not-a-good-candidate-for-a-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A paper includes a die photograph of a fabricated converter. Why is this content not a good candidate for a MicroSim?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-researcher-is-deciding-whether-to-build-a-microsim-for-the-derivation-of-the-walden-figure-of-merit-why-might-a-static-figure-or-text-be-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A researcher is deciding whether to build a MicroSim for the derivation of the Walden figure of merit. Why might a static figure or text be better?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/chapters/16-microsims-communication/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-microsims-and-research-communication">Quiz: MicroSims and Research Communication<a class="headerlink" href="#quiz-microsims-and-research-communication" title="Permanent link">&para;</a></h1>
+<p>Test your understanding of research communication, slide decks, interactive simulations, MicroSims, p5.js, learning graphs, and intelligent textbooks with these 10 review questions.</p>
+<hr />
+<h4 id="1-what-is-the-standard-javascript-library-used-in-this-book-for-building-microsims">1. What is the standard JavaScript library used in this book for building MicroSims?<a class="headerlink" href="#1-what-is-the-standard-javascript-library-used-in-this-book-for-building-microsims" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>p5.js</li>
+<li>D3.js</li>
+<li>React</li>
+<li>Three.js</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. p5.js is the library chosen for MicroSims in this book because it runs in the browser, needs no installation, and provides built-in controls. The other libraries are useful for other purposes but are not the standard here.</p>
+<p><strong>Concept Tested:</strong> p5.js</p>
+<p><strong>See:</strong> ./index.md#microsims</p>
+</details>
+<hr />
+<h4 id="2-what-is-the-term-for-placing-a-microsim-in-a-web-page-using-an-html-iframe-that-points-at-the-sims-mainhtml">2. What is the term for placing a MicroSim in a web page using an HTML iframe that points at the sim's <code>main.html</code>?<a class="headerlink" href="#2-what-is-the-term-for-placing-a-microsim-in-a-web-page-using-an-html-iframe-that-points-at-the-sims-mainhtml" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Concept dependency</li>
+<li>Parameter sweep</li>
+<li>Handoff protocol</li>
+<li>Embedding simulations</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Embedding simulations means placing the sim in a page with an iframe, which isolates the sim from the surrounding page and lets the same sim be reused in decks, course pages, and papers.</p>
+<p><strong>Concept Tested:</strong> Embedding Simulations</p>
+<p><strong>See:</strong> ./index.md#embedding-concept-dependencies-and-intelligent-textbooks</p>
+</details>
+<hr />
+<h4 id="3-why-is-an-interactive-simulation-a-better-choice-than-a-static-figure-when-showing-how-enob-changes-with-added-noise">3. Why is an interactive simulation a better choice than a static figure when showing how ENOB changes with added noise?<a class="headerlink" href="#3-why-is-an-interactive-simulation-a-better-choice-than-a-static-figure-when-showing-how-enob-changes-with-added-noise" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Because static figures cannot include numbers</li>
+<li>Because the relationship depends on a parameter the viewer can manipulate</li>
+<li>Because static figures cannot be included in papers</li>
+<li>Because interactive simulations are always easier to create</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A MicroSim suits a dependence: moving the noise slider shows the whole relationship. Static figures are fine for facts without parameters, and interactivity is not always easier to build.</p>
+<p><strong>Concept Tested:</strong> Interactive Simulation</p>
+<p><strong>See:</strong> ./index.md#communicating-research</p>
+</details>
+<hr />
+<h4 id="4-why-should-a-microsim-specification-include-evidence-of-mastery-before-any-code-is-written">4. Why should a MicroSim specification include evidence of mastery before any code is written?<a class="headerlink" href="#4-why-should-a-microsim-specification-include-evidence-of-mastery-before-any-code-is-written" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Because the agent needs it to choose colors</li>
+<li>Because the evidence determines the file name</li>
+<li>Because the evidence defines what the sim must check to be useful</li>
+<li>Because the specification cannot be written without code</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Evidence of mastery states what the learner must be able to do and how the sim will detect it. Without that, the sim has no purpose and may become a toy. Colors and file names are secondary, and the specification precedes code.</p>
+<p><strong>Concept Tested:</strong> MicroSim Generation</p>
+<p><strong>See:</strong> ./index.md#generating-a-microsim-with-an-agent</p>
+</details>
+<hr />
+<h4 id="5-what-is-the-role-of-a-learning-graph-in-organizing-an-intelligent-textbook">5. What is the role of a learning graph in organizing an intelligent textbook?<a class="headerlink" href="#5-what-is-the-role-of-a-learning-graph-in-organizing-an-intelligent-textbook" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It orders concepts by their dependencies</li>
+<li>It generates the MicroSim code automatically</li>
+<li>It replaces the need for written chapters</li>
+<li>It stores student data for adaptive content</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. A learning graph is a directed acyclic graph of concepts in which edges are dependencies; it helps decide teaching order and how much space each concept deserves. It does not generate code, replace chapters, or store student data.</p>
+<p><strong>Concept Tested:</strong> Learning Graph</p>
+<p><strong>See:</strong> ./index.md#embedding-concept-dependencies-and-intelligent-textbooks</p>
+</details>
+<hr />
+<h4 id="6-a-slide-deck-is-being-prepared-from-a-paper-what-is-the-most-important-check-to-perform-on-the-figures-copied-into-the-slides">6. A slide deck is being prepared from a paper. What is the most important check to perform on the figures copied into the slides?<a class="headerlink" href="#6-a-slide-deck-is-being-prepared-from-a-paper-what-is-the-most-important-check-to-perform-on-the-figures-copied-into-the-slides" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Make the slides mirror the paper's section order</li>
+<li>Run the number check on every figure to catch changed values</li>
+<li>Use screenshots instead of source figures</li>
+<li>Add as many words as possible to each slide</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Figures in slides are often copied and edited, so numbers can change silently. The number check of Chapter 15 should be run on every slide. Slides should carry one message with few words, and source figures are preferred over screenshots.</p>
+<p><strong>Concept Tested:</strong> Slide Deck</p>
+<p><strong>See:</strong> ./index.md#communicating-research</p>
+</details>
+<hr />
+<h4 id="7-a-researcher-wants-to-teach-how-a-sar-adcs-successive-approximation-search-converges-bit-by-bit-which-medium-is-most-appropriate">7. A researcher wants to teach how a SAR ADC's successive-approximation search converges bit by bit. Which medium is most appropriate?<a class="headerlink" href="#7-a-researcher-wants-to-teach-how-a-sar-adcs-successive-approximation-search-converges-bit-by-bit-which-medium-is-most-appropriate" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>A static table of digital codes</li>
+<li>A reference list</li>
+<li>A MicroSim that lets the learner step through the conversion</li>
+<li>A cover letter</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Bit-by-bit convergence is a process the learner can step through and predict, which is exactly what a MicroSim can make interactive. A static table, reference list, or cover letter does not show the process.</p>
+<p><strong>Concept Tested:</strong> MicroSim</p>
+<p><strong>See:</strong> ./index.md#microsims</p>
+</details>
+<hr />
+<h4 id="8-an-agent-has-implemented-a-microsim-from-a-specification-what-is-the-final-step-before-learners-use-it">8. An agent has implemented a MicroSim from a specification. What is the final step before learners use it?<a class="headerlink" href="#8-an-agent-has-implemented-a-microsim-from-a-specification-what-is-the-final-step-before-learners-use-it" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Set the status to approved automatically</li>
+<li>Add the sim to the learning graph</li>
+<li>Skip verification if the sim looks right</li>
+<li>A person tests it and sets the status to approved</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Only a human author may mark a sim <code>approved</code> after testing the controls and behavior. Agents may set <code>scaffold</code>, <code>built</code>, or <code>instrumented</code>, but approval is a human gate.</p>
+<p><strong>Concept Tested:</strong> MicroSim Generation</p>
+<p><strong>See:</strong> ./index.md#generating-a-microsim-with-an-agent</p>
+</details>
+<hr />
+<h4 id="9-a-paper-includes-a-die-photograph-of-a-fabricated-converter-why-is-this-content-not-a-good-candidate-for-a-microsim">9. A paper includes a die photograph of a fabricated converter. Why is this content not a good candidate for a MicroSim?<a class="headerlink" href="#9-a-paper-includes-a-die-photograph-of-a-fabricated-converter-why-is-this-content-not-a-good-candidate-for-a-microsim" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It is a single image with no parameter or process for the learner to manipulate</li>
+<li>Die photographs are too large to embed</li>
+<li>p5.js cannot display images</li>
+<li>MicroSims are only for electrical measurements</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. A die photograph is a static fact with no parameter or process. A MicroSim earns its place when the viewer can change something or step through a process. Size and display capability are not the issues.</p>
+<p><strong>Concept Tested:</strong> Interactive Simulation</p>
+<p><strong>See:</strong> ./index.md#communicating-research</p>
+</details>
+<hr />
+<h4 id="10-a-researcher-is-deciding-whether-to-build-a-microsim-for-the-derivation-of-the-walden-figure-of-merit-why-might-a-static-figure-or-text-be-better">10. A researcher is deciding whether to build a MicroSim for the derivation of the Walden figure of merit. Why might a static figure or text be better?<a class="headerlink" href="#10-a-researcher-is-deciding-whether-to-build-a-microsim-for-the-derivation-of-the-walden-figure-of-merit-why-might-a-static-figure-or-text-be-better" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The derivation is too complex for a simulation</li>
+<li>Students prefer reading equations</li>
+<li>The Walden figure of merit is not a real concept</li>
+<li>The derivation has no parameter to vary, so a short derivation in text serves it better</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. A MicroSim suits dependencies or processes. A derivation with no variable parameter is better explained by text and equations. Complexity and student preference are not the deciding factors, and the Walden figure of merit is a real metric.</p>
+<p><strong>Concept Tested:</strong> MicroSim</p>
+<p><strong>See:</strong> ./index.md#microsims</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../17-verification-reproducibility/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

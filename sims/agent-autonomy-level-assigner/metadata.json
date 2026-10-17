@@ -98,5 +98,18 @@
       "Reading the task attributes is exploration and is not evidence"
     ]
   },
-  "chapter": "09-supervising-agents-roles"
+  "chapter": "09-supervising-agents-roles",
+  "xapi": {
+    "concept": "ai-for-ee-research-158",
+    "objects": {
+      "q-task-1": "ai-for-ee-research-158",
+      "q-task-2": "ai-for-ee-research-158",
+      "q-task-3": "ai-for-ee-research-158",
+      "q-task-4": "ai-for-ee-research-158",
+      "q-task-5": "ai-for-ee-research-158",
+      "q-task-6": "ai-for-ee-research-158",
+      "q-task-7": "ai-for-ee-research-158",
+      "q-task-8": "ai-for-ee-research-158"
+    }
+  }
 }

@@ -105,6 +105,10 @@ let submitButton;
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(33);   // Model Selection
+let lrs = null, scStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -142,6 +146,12 @@ function setup() {
   moreButton.parent(document.querySelector('main'));
   styleControl(moreButton);
   moreButton.mousePressed(nextSummaryPage);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Model Choice Scenario Sorter', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Model Choice Scenario Sorter MicroSim', pageDwell: true });
+  }
+  scStart = Date.now();
 
   resetSelects();
   updateControls();
@@ -186,6 +196,13 @@ function submitAnswer() {
   chosenPath = parseInt(pathSelect.value());
   chosenFactor = parseInt(factorSelect.value());
   committed = true;
+  if (lrs) {
+    // only the access path is scored (see header); the deciding factor rides along as an extension
+    lrs.question('q-scenario-' + sc.id, { name: 'Scenario ' + sc.id + ': ' + sc.text, concept: PAGE_CONCEPT() })
+      .answer({ success: chosenPath === sc.path, response: LRS.slug(PATHS[chosenPath].name),
+                durationMs: scStart ? Date.now() - scStart : undefined,
+                extensions: { 'deciding-factor': LRS.slug(FACTORS[chosenFactor]) } });
+  }
   if (chosenPath === sc.path) {
     score++;
   } else {
@@ -202,6 +219,7 @@ function nextPressed() {
     committed = false;
     chosenPath = -1;
     chosenFactor = -1;
+    scStart = Date.now();
     resetSelects();
   } else {
     finished = true;

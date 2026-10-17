@@ -97,6 +97,9 @@ let noReviewButton;
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+let lrs = null, stepStart = 0;   // concept: Review Checkpoint (193)
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -117,6 +120,11 @@ function setup() {
   noReviewButton = makeButton('No review needed', () => commitJudgment(false));
   nextButton = makeButton('Next Step', nextPressed);
   moreButton = makeButton('More Missed Steps', nextSummaryPage);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Review Checkpoint Judge', concept: LRS.conceptId(193), mount: '#xapi-slot',
+                          source: 'the Review Checkpoint Judge MicroSim', pageDwell: true });
+  }
 
   startRun();
 
@@ -176,6 +184,7 @@ function resetStep() {
   chosenReason = -1;
   blocked = false;
   reasonSelect.selected('-1');
+  stepStart = Date.now();
 }
 
 function currentStep() {
@@ -202,6 +211,11 @@ function commitJudgment(review) {
   committed = true;
   chosenReview = review;
   chosenReason = r;
+  if (lrs) lrs.question('q-step-' + step.id, { name: 'Step ' + step.id + ': ' + step.text, concept: LRS.conceptId(193) })
+    .answer({ success: review === step.review,
+              response: (review ? 'review-required' : 'no-review-needed') + ':' + LRS.slug(REASONS[r]),
+              durationMs: stepStart ? Date.now() - stepStart : undefined,
+              extensions: { 'run-number': runNumber, 'reason-matches-key': r === step.reason } });
   if (review === step.review) {
     runScore++;                 // the score counts judgments only
   } else {

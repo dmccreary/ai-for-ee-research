@@ -104,6 +104,10 @@ let layoutBottom = 0;    // lowest y used by drawn content (used for layout test
 
 // controls
 let modeSelect;
+
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(132);   // Skill Failure Modes
+let lrs = null, obsStart = 0;
 let actionButton;
 
 function setup() {
@@ -133,6 +137,12 @@ function setup() {
 
   updateControls();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Skill Failure Mode Classifier', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Skill Failure Mode Classifier MicroSim', pageDwell: true });
+  }
+  obsStart = Date.now();
+
   describe('Skill Failure Mode Classifier. One of eight illustrative observations of a misbehaving ' +
     'agent skill is shown with the six failure modes and their definitions. Choose a mode in the ' +
     'drop-down list and press Submit. The sim says whether the choice was correct, names the correct ' +
@@ -159,9 +169,14 @@ function actionPressed() {
     if (selected < 0) return;
     committed = true;
     results[pos] = selected;
+    if (lrs) lrs.question('q-observation-' + OBSERVATIONS[pos].id, { name: 'Observation ' + OBSERVATIONS[pos].id + ': ' + OBSERVATIONS[pos].text,
+                                                                      concept: PAGE_CONCEPT() })
+      .answer({ success: selected === OBSERVATIONS[pos].mode, response: LRS.slug(MODES[selected].name),
+                durationMs: Date.now() - obsStart });
     if (selected === OBSERVATIONS[pos].mode) score++;
   } else if (pos < OBSERVATIONS.length - 1) {
     pos++;
+    obsStart = Date.now();
     committed = false;
     selected = -1;
     modeSelect.selected(PLACEHOLDER);

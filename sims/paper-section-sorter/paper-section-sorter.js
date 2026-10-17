@@ -91,6 +91,12 @@ let submitButton;
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(266);   // Paper Structure
+// stable question keys, one per SENTENCES entry (never the position)
+const SENTENCE_KEYS = ['sar-adc-mismatch-problem', 'prior-calibration-schemes', 'comparator-offset-measurement', 'enob-9-4-result', 'residual-error-thermal-noise', 'twelve-devices-setup', 'foreground-calibration-abstract', 'table-ii-enob', 'offset-limit-15mv', 'paper-roadmap'];
+let lrs = null, sentenceStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -122,6 +128,12 @@ function setup() {
   onActivate(moreButton, nextSummaryPage);
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Paper Section Sorter', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Paper Section Sorter MicroSim', pageDwell: true });
+    sentenceStart = Date.now();
+  }
 
   describe('Paper Section Sorter. One illustrative sentence from an invented engineering paper ' +
     'is shown at a time with the six sections Abstract, Introduction, Related work, Method, ' +
@@ -161,6 +173,9 @@ function chooseSection(s) {
 function submitChoice() {
   if (finished || committed || chosen < 0) return;
   committed = true;
+  if (lrs) lrs.question('q-' + SENTENCE_KEYS[pos], { name: 'Sentence: ' + SENTENCES[pos].text, concept: PAGE_CONCEPT() })
+    .answer({ success: chosen === SENTENCES[pos].section, response: LRS.slug(SECTIONS[chosen].name),
+              durationMs: sentenceStart ? Date.now() - sentenceStart : undefined });
   answers[pos] = chosen;
   if (chosen === SENTENCES[pos].section) score++;
   updateControls();
@@ -173,6 +188,7 @@ function nextPressed() {
   if (finished || !committed) return;
   if (pos < SENTENCES.length - 1) {
     pos++;
+    sentenceStart = Date.now();
     chosen = -1;
     committed = false;
   } else {

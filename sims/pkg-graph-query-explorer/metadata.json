@@ -105,5 +105,15 @@
       "purpose": "Shown after question 5; clears all answers and starts again at question 1"
     }
   ],
-  "chapter": "06-knowledge-bases-skill-anatomy"
+  "chapter": "06-knowledge-bases-skill-anatomy",
+  "xapi": {
+    "concept": "ai-for-ee-research-376",
+    "objects": {
+      "q-experiments-using-dataset-a": "ai-for-ee-research-376",
+      "q-designs-tested-with-dataset-b": "ai-for-ee-research-376",
+      "q-papers-reporting-revised-design": "ai-for-ee-research-376",
+      "q-papers-cited-by-rivera-paper": "ai-for-ee-research-376",
+      "q-papers-to-recheck-dataset-a": "ai-for-ee-research-376"
+    }
+  }
 }

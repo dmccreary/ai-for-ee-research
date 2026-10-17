@@ -132,6 +132,13 @@ let submitButton;
 let nextButton;
 let checksBox;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(239);   // Numerical Sanity Check
+// stable question keys, one per RESULTS entry (never the position)
+const QUESTION_KEYS = ['enob-17-98', 'enob-9-2', 'ldo-efficiency-104', 'rc-1-59khz',
+  'rc-15-9khz', 'sweep-64-points', 'linear-scaling', 'negative-std-dev'];
+let lrs = null, resultStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -166,6 +173,12 @@ function setup() {
 
   updateControls();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Numerical Sanity Check Judge', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Numerical Sanity Check Judge MicroSim', pageDwell: true });
+    resultStart = Date.now();
+  }
+
   describe('Numerical Sanity Check Judge. Eight illustrative reported results are shown one at a ' +
     'time. For each, choose one of five verdicts: Plausible, Exceeds a limit, Disagrees with a hand ' +
     'calculation, Violates scaling, or Impossible value, then press Submit. Each result gets ' +
@@ -199,6 +212,9 @@ function chooseVerdict(v) {
 function submitVerdict() {
   if (finished || committed || chosen < 0) return;
   committed = true;
+  if (lrs) lrs.question('q-' + QUESTION_KEYS[current], { name: 'Result ' + (current + 1) + ': ' + RESULTS[current].text, concept: PAGE_CONCEPT() })
+    .answer({ success: isCorrect(current, chosen), response: LRS.slug(VERDICTS[chosen]),
+              durationMs: resultStart ? Date.now() - resultStart : undefined });
   outcomes.push(isCorrect(current, chosen));
   checksBox.checked(false); // make room for the feedback
   updateControls();
@@ -211,6 +227,7 @@ function nextResult() {
     current++;
     chosen = -1;
     committed = false;
+    resultStart = Date.now();
   } else {
     finished = true;
   }

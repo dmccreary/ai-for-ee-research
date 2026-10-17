@@ -107,5 +107,18 @@
       "Learner explains each missed scenario using the misconception it exposes"
     ]
   },
-  "chapter": "03-models-and-prompt-basics"
+  "chapter": "03-models-and-prompt-basics",
+  "xapi": {
+    "concept": "ai-for-ee-research-33",
+    "objects": {
+      "q-scenario-1": "ai-for-ee-research-33",
+      "q-scenario-2": "ai-for-ee-research-33",
+      "q-scenario-3": "ai-for-ee-research-33",
+      "q-scenario-4": "ai-for-ee-research-33",
+      "q-scenario-5": "ai-for-ee-research-33",
+      "q-scenario-6": "ai-for-ee-research-33",
+      "q-scenario-7": "ai-for-ee-research-33",
+      "q-scenario-8": "ai-for-ee-research-33"
+    }
+  }
 }

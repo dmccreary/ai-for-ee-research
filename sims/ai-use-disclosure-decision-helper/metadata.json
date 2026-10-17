@@ -95,5 +95,18 @@
       "Reading the policy is exploration and is not evidence of mastery"
     ]
   },
-  "chapter": "18-responsible-ethical-use"
+  "chapter": "18-responsible-ethical-use",
+  "xapi": {
+    "concept": "ai-for-ee-research-316",
+    "objects": {
+      "q-scenario-1": "ai-for-ee-research-316",
+      "q-scenario-2": "ai-for-ee-research-316",
+      "q-scenario-3": "ai-for-ee-research-316",
+      "q-scenario-4": "ai-for-ee-research-316",
+      "q-scenario-5": "ai-for-ee-research-316",
+      "q-scenario-6": "ai-for-ee-research-316",
+      "q-scenario-7": "ai-for-ee-research-316",
+      "q-scenario-8": "ai-for-ee-research-316"
+    }
+  }
 }

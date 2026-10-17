@@ -115,6 +115,10 @@ let correctCount = 0;
 let layoutBottom = 0;     // lowest y used by drawn content (used for layout testing)
 
 // controls
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(23);   // Context Window
+let lrs = null, challengeStart = 0;
+
 let answerInput, fitSelect, submitButton, nextButton;
 let windowSlider, systemSlider, historySlider, attachSlider;
 
@@ -159,6 +163,22 @@ function setup() {
 
   updateControls();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Context Window Budget Calculator', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Context Window Budget Calculator MicroSim', pageDwell: true });
+    challengeStart = Date.now();
+    // Attachment has no matching learning-graph concept, so that slider is left unmapped.
+    const hook = (sl, key, name, mn, mx, init, step, concept) => {
+      const ev = lrs.slider(key, { name: name, concept: concept, min: mn, max: mx, initial: init, deadband: step });
+      sl.input(() => { redraw(); ev.input(sl.value()); });   // keep the sim's own redraw
+      sl.changed(() => ev.settle(sl.value()));
+    };
+    hook(windowSlider, 'window-size-slider', 'Window Size Slider', 8000, 128000, 32000, 8000, LRS.conceptId(23));
+    hook(systemSlider, 'system-prompt-slider', 'System Prompt Slider', 0, 2000, 600, 100, LRS.conceptId(27));
+    hook(historySlider, 'history-slider', 'History Slider', 0, 20000, 4000, 500, LRS.conceptId(68));
+    hook(attachSlider, 'attachment-slider', 'Attachment Slider', 0, 40000, 11000, 500, undefined);
+  }
+
   describe('Context Window Budget Calculator. Three challenges in a fixed order each list a window ' +
     'size, a system prompt, a history, an attachment, a latest message and a requested completion. ' +
     'Type the tokens remaining, choose fits or does not fit, and press Submit. Each challenge allows ' +
@@ -198,6 +218,10 @@ function submitAnswer() {
   const ans = challengeAnswer(CHALLENGES[chIndex]);
   const choiceFits = choice === 'fits';
   const correct = typed === ans.remaining && choiceFits === ans.fits;
+  if (lrs) lrs.question('q' + (chIndex + 1), { name: 'Challenge ' + (chIndex + 1) + ': tokens remaining and whether the completion fits', concept: PAGE_CONCEPT() })
+    .answer({ success: correct, response: typed + ' ' + LRS.slug(choice),
+              durationMs: challengeStart ? Date.now() - challengeStart : undefined,
+              extensions: { 'attempt-number': attempt } });
   if (correct) {
     correctCount++;
     resolved = true;
@@ -220,6 +244,7 @@ function nextPressed() {
     attempt = 1;
     resolved = false;
     lastResult = '';
+    challengeStart = Date.now();
     answerInput.value('');
     fitSelect.selected('');
   } else {

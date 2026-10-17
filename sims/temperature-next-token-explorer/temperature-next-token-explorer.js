@@ -139,6 +139,14 @@ let layoutBottom = 0;    // lowest y used by drawn content (used for layout test
 // controls
 let predSelect, revealButton, nextButton, tempSlider, drawButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(28);   // Temperature
+let lrs = null, tempEv = null, drawEv = null, predStart = 0;
+// stable fragment per prediction, from what it asks (token rank and target temperature)
+function predKey(item) {
+  return 'q-' + (item.tokenIdx === 0 ? 'top' : 'lowest') + '-token-at-t' + item.toT.toFixed(1).replace('.', '-');
+}
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -177,6 +185,18 @@ function setup() {
   styleButton(drawButton);
   drawButton.mousePressed(drawPressed);
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Temperature Next-Token Explorer', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Temperature Next-Token Explorer MicroSim', pageDwell: true });
+    tempEv = lrs.slider('temperature-slider', { name: 'Temperature Slider', concept: PAGE_CONCEPT(),
+      min: 0.1, max: 2.0, initial: Number(tempSlider.elt.value), round: 1 });
+    drawEv = lrs.button('draw-samples-button', { name: 'Draw 10 Samples Button', concept: PAGE_CONCEPT() });
+    // plain DOM listeners beside the sim's own .input() handler (p5 element hooks replace, not chain)
+    tempSlider.elt.addEventListener('input', () => tempEv.input(Number(tempSlider.elt.value)));
+    tempSlider.elt.addEventListener('change', () => tempEv.settle(Number(tempSlider.elt.value)));
+    predStart = Date.now();
+  }
+
   updateControls();
 
   describe('Temperature Next-Token Explorer. A bar chart shows the probability of five candidate ' +
@@ -213,6 +233,11 @@ function revealPressed() {
   }
   const item = PREDICTIONS[predIndex];
   chosen = v;
+  if (lrs) {
+    lrs.question(predKey(item), { name: item.question, concept: PAGE_CONCEPT() })
+      .answer({ success: v === changeDirection(item.tokenIdx, item.fromT, item.toT), response: LRS.slug(v),
+                durationMs: predStart ? Date.now() - predStart : undefined });
+  }
   revealed = true;
   if (chosen === changeDirection(item.tokenIdx, item.fromT, item.toT)) correctCount++;
   updateControls();
@@ -225,6 +250,7 @@ function nextPressed() {
     predIndex++;            // each prediction starts again from temperature 1.0
     revealed = false;
     chosen = '';
+    predStart = Date.now();
     predSelect.selected('');
   } else {
     mode = 'explore';
@@ -236,6 +262,7 @@ function nextPressed() {
 }
 
 function drawPressed() {
+  if (drawEv) drawEv.press('draw-samples');
   const T = roundT(tempSlider.value());
   samples = { T: T, idx: drawSamples(T, N_SAMPLES) };
   redraw();

@@ -98,5 +98,15 @@
       "Stepping forward after the reveal is exploration and is not evidence"
     ]
   },
-  "chapter": "08-agents-tool-use-subagents"
+  "chapter": "08-agents-tool-use-subagents",
+  "xapi": {
+    "concept": "ai-for-ee-research-136",
+    "objects": {
+      "q-step-1": "ai-for-ee-research-136",
+      "q-step-2": "ai-for-ee-research-136",
+      "q-step-3": "ai-for-ee-research-136",
+      "q-step-4": "ai-for-ee-research-136",
+      "q-step-5": "ai-for-ee-research-136"
+    }
+  }
 }

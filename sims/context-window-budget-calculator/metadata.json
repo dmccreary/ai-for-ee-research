@@ -118,5 +118,16 @@
       "Changing the sliders in exploration mode is not evidence of mastery"
     ]
   },
-  "chapter": "02-how-language-models-work"
+  "chapter": "02-how-language-models-work",
+  "xapi": {
+    "concept": "ai-for-ee-research-23",
+    "objects": {
+      "q1": "ai-for-ee-research-23",
+      "q2": "ai-for-ee-research-23",
+      "q3": "ai-for-ee-research-23",
+      "window-size-slider": "ai-for-ee-research-23",
+      "system-prompt-slider": "ai-for-ee-research-27",
+      "history-slider": "ai-for-ee-research-68"
+    }
+  }
 }

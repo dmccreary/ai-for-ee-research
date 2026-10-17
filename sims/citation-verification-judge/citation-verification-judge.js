@@ -153,6 +153,10 @@ let summaryPage = 0;
 let summaryPageCount = 1;
 let layoutBottom = 0;     // lowest y used by drawn content (used for layout testing)
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(215);   // Citation Verification
+let lrs = null, recStart = 0;
+
 // controls
 let checkButtons = [];
 let verdictSelect, submitButton, nextButton, moreButton;
@@ -202,6 +206,12 @@ function setup() {
 
   updateControls();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Citation Verification Judge', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Citation Verification Judge MicroSim', pageDwell: true });
+    recStart = Date.now();
+  }
+
   describe('Citation Verification Judge. Eight invented citation records are shown one at a time, ' +
     'each with the claim the model attached to it. Four lookup checks (DOI, title, authors venue ' +
     'and year, and the paper\'s text) start closed; press a Check button to reveal each result. ' +
@@ -244,6 +254,10 @@ function submitVerdict() {
   chosen = v;
   submitted = true;
   const rec = RECORDS[recIndex];
+  if (lrs) lrs.question('q-' + LRS.slug(rec.short), { name: 'Record ' + (recIndex + 1) + ': ' + rec.short, concept: PAGE_CONCEPT() })
+    .answer({ success: chosen === rec.verdict, response: LRS.slug(chosen),
+              durationMs: recStart ? Date.now() - recStart : undefined,
+              extensions: { 'checks-opened': opened.filter(Boolean).length } });
   if (chosen === rec.verdict) correctCount++;
   else missed.push({ index: recIndex, chosen: chosen });
   opened = [true, true, true, true]; // show all lookup evidence alongside the feedback
@@ -259,6 +273,7 @@ function nextPressed() {
     submitted = false;
     chosen = '';
     verdictSelect.selected('');
+    recStart = Date.now();
   } else {
     finished = true;
     summaryPage = 0;

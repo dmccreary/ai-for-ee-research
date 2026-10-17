@@ -83,6 +83,10 @@ let layoutBottom = 0;    // lowest y used by drawn content (used for layout test
 
 // controls
 let answerButtons = [];
+
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(116);   // Skill Triggering
+let lrs = null, reqStart = 0;
 let actionButton;
 
 function setup() {
@@ -105,6 +109,12 @@ function setup() {
   actionButton.mouseClicked(actionPressed);
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Skill Description Trigger Tester', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Skill Description Trigger Tester MicroSim', pageDwell: true });
+  }
+  reqStart = Date.now();
 
   describe('Skill Description Trigger Tester. An illustrative skill description for checking SPICE ' +
     'netlists is shown with one of eight user requests. Choose Should trigger or Should not trigger ' +
@@ -141,9 +151,14 @@ function actionPressed() {
     if (selected < 0) return;
     committed = true;
     results[pos] = selected;
+    if (lrs) lrs.question('q-request-' + REQUESTS[pos].id, { name: 'Request ' + REQUESTS[pos].id + ': ' + REQUESTS[pos].text,
+                                                              concept: PAGE_CONCEPT() })
+      .answer({ success: selected === REQUESTS[pos].answer, response: LRS.slug(ANSWERS[selected]),
+                durationMs: Date.now() - reqStart });
     if (selected === REQUESTS[pos].answer) score++;
   } else if (pos < REQUESTS.length - 1) {
     pos++;
+    reqStart = Date.now();
     committed = false;
     selected = -1;
   } else {

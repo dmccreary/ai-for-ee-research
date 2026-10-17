@@ -114,5 +114,18 @@
       "Learner builds a second, different valid order after Reset"
     ]
   },
-  "chapter": "04-context-engineering-prompting"
+  "chapter": "04-context-engineering-prompting",
+  "xapi": {
+    "concept": "ai-for-ee-research-79",
+    "objects": {
+      "q-step-order": "ai-for-ee-research-79",
+      "q-check-s1": "ai-for-ee-research-79",
+      "q-check-s2": "ai-for-ee-research-79",
+      "q-check-s3": "ai-for-ee-research-79",
+      "q-check-s4": "ai-for-ee-research-79",
+      "q-check-s5": "ai-for-ee-research-79",
+      "q-check-s6": "ai-for-ee-research-79",
+      "reset-button": "ai-for-ee-research-79"
+    }
+  }
 }

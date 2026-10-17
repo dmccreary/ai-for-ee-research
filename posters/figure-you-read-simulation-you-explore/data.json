@@ -1,0 +1,163 @@
+{
+  "title": "A Figure You Read, a Simulation You Explore",
+  "image": "figure-you-read-simulation-you-explore.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#2A2E3A", "#7A0019", "#1F7A8C", "#E0A800", "#FFCC33", "#5B6C8F", "#3C8D5A"],
+  "zones": [
+    {
+      "id": "figure-on-page",
+      "label": "A Figure on a Page",
+      "color": "#2A2E3A",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 48.5,
+      "y2": 42.0,
+      "summary": "A journal page holds one clean plot with two curves. It shows the result at the parameter values the author chose, and nothing else.",
+      "facts": [
+        "A static figure shows a result at the parameter values the author chose (Chapter 16).",
+        "Generate each figure from a script that reads the processed data. A caption states what is plotted, the conditions, and how to read the markers (Chapter 15).",
+        "A static figure or text is the better medium for a fact with no parameter, such as a die photograph or an author list (Chapter 16).",
+        "In Chapter 20's MicroSims paper, every number in the abstract must be traced to a source and labeled measured, cited, or expected."
+      ]
+    },
+    {
+      "id": "readers-question",
+      "label": "The Reader's Question",
+      "color": "#7A0019",
+      "x1": 2.0,
+      "y1": 44.0,
+      "x2": 48.5,
+      "y2": 74.0,
+      "summary": "A reader traces one curve with a finger and wonders what happens at a different parameter value. The page cannot answer, because it holds one case.",
+      "facts": [
+        "An interactive simulation is the right medium when the point of the result is a dependence, such as how ENOB falls as noise rises (Chapter 16).",
+        "A paper's table gives the points the authors measured. A simulation gives the function the points came from (Chapter 16).",
+        "Research communication depends on the audience: reviewers want evidence and limits, colleagues want the method, students want the idea, and funders want significance (Chapter 16).",
+        "A slide deck carries one message. Reuse figures from the paper's source scripts and run the number check of Chapter 15 on every slide (Chapter 16)."
+      ]
+    },
+    {
+      "id": "microsim-with-sliders",
+      "label": "A MicroSim With Sliders",
+      "color": "#1F7A8C",
+      "x1": 51.5,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 42.0,
+      "summary": "The same plot appears on a wide screen with real slider controls beneath it. The reader changes a parameter and the curves move.",
+      "facts": [
+        "A MicroSim is a small, single-concept, interactive simulation that runs in a browser, is embedded in a page, has open and readable source, and is built from a short specification (Chapter 16).",
+        "The usual library is p5.js. Its built-in controls, such as sliders, buttons, and drop-downs, are accessible and consistent, so this book uses them and does not draw controls by hand (Chapter 16).",
+        "The first statement in setup() reads the container width so the canvas fits the page, and the canvas is attached to the page's main element (Chapter 16).",
+        "A MicroSim is the wrong medium for a fact that has no parameter (Chapter 16)."
+      ]
+    },
+    {
+      "id": "moving-the-parameter",
+      "label": "Moving the Parameter",
+      "color": "#E0A800",
+      "x1": 51.5,
+      "y1": 44.0,
+      "x2": 98.0,
+      "y2": 74.0,
+      "summary": "A hand pulls the noise slider and a readout shifts. At zero added noise the bar reaches about 10 bits, and at 2 LSB it falls to about 7.2.",
+      "facts": [
+        "For an ideal N-bit quantizer with added Gaussian noise of σ LSB, ENOB = N − ½ log2(1 + 12σ²) (Chapter 16).",
+        "For N = 10 and σ = 2 the value is 7.19 bits, the number used in Chapter 13 (Chapter 16).",
+        "Slide the control to 0 and the bar reaches about 10 bits. Slide it to 2 and it falls to about 7.2 (Chapter 16).",
+        "The sketch has no data in it, only the relationship. That is why a good MicroSim teaches in a minute what a page of text takes ten to explain (Chapter 16)."
+      ]
+    },
+    {
+      "id": "one-source-two-outputs",
+      "label": "One Source, Two Outputs",
+      "color": "#FFCC33",
+      "x1": 2.0,
+      "y1": 76.0,
+      "x2": 33.0,
+      "y2": 98.0,
+      "summary": "A gold thread ties the page and the screen to one data file and one script, so they are two views of the same result and can be checked against each other.",
+      "facts": [
+        "Generate every figure from a script that reads the processed data, so it can be regenerated when the data change (Chapter 15).",
+        "A simulation that looks right and computes a slightly wrong number is the worst outcome. Check its formulas, thresholds, and boundary cases against the specification (Chapter 16).",
+        "Both outputs should pass a known-answer check. At zero added noise the ENOB should be about the nominal 10 bits (Chapters 13 and 16).",
+        "A run manifest records the input files, code version, parameters, environment, and seed beside each result (Chapter 13)."
+      ]
+    },
+    {
+      "id": "specification-to-microsim",
+      "label": "Specification to MicroSim",
+      "color": "#5B6C8F",
+      "x1": 34.5,
+      "y1": 76.0,
+      "x2": 65.5,
+      "y2": 98.0,
+      "summary": "A teal agent builds the simulation from a specification card. A person verifies it, and only a person marks it approved.",
+      "facts": [
+        "MicroSim generation is specification first: state the learner's objective, evidence of mastery, content, rules, activity, and feedback, and leave layout and code to the agent (Chapter 16).",
+        "The five steps are specify, search for an existing sim, generate, verify, and approve (Chapter 16).",
+        "Write the evidence of mastery first. If it says \"explores\", the sim will be a toy (Chapter 16).",
+        "A lesson page carries a status: scaffold, built, instrumented, or approved. Agents may set the first three. Only the human author sets approved (Chapter 16)."
+      ]
+    },
+    {
+      "id": "embedded-anywhere",
+      "label": "Embedded Anywhere",
+      "color": "#3C8D5A",
+      "x1": 67.0,
+      "y1": 76.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "A browser-frame icon shows the same simulation on a lab website and in a paper's supplementary material, with no change to the sim.",
+      "facts": [
+        "Embedding is normally an HTML iframe that points at the sim's main.html. The iframe isolates the sim's code from the rest of the page (Chapter 16).",
+        "The same sim can be embedded in a slide deck, a course page, or a paper's supplementary website without change (Chapter 16).",
+        "When you cite a sim in a paper, give its published address, and include the repository name in the address (Chapter 16).",
+        "Teaching from research: choose one concept, write the objective and evidence of mastery, check for an existing sim, specify, build, verify, and write a short lesson page (Chapter 16)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which region shows a result drawn only at the parameter values the author chose?",
+      "correct_zone": "figure-on-page",
+      "explanation": "A static figure shows one case. It is the right medium for facts with no parameter, and a weaker one for a dependence."
+    },
+    {
+      "question": "A reader traces a curve with a finger and wonders what would happen at a different parameter value. Which region shows this moment?",
+      "correct_zone": "readers-question",
+      "explanation": "When the point of a result is a dependence, a reader needs to move the parameter, and a page with one case cannot let them."
+    },
+    {
+      "question": "Which region shows a single-concept interactive that runs in a browser, with built-in slider controls under the plot?",
+      "correct_zone": "microsim-with-sliders",
+      "explanation": "A MicroSim is small, single-concept, embedded, open source, and built from a short specification, usually with p5.js built-in controls."
+    },
+    {
+      "question": "Sliding the noise control from 0 to 2 LSB drops the effective bits from about 10 to about 7.2. Which region shows this?",
+      "correct_zone": "moving-the-parameter",
+      "explanation": "The sketch computes ENOB = N − ½ log2(1 + 12σ²), which gives 7.19 bits for N = 10 and σ = 2."
+    },
+    {
+      "question": "Which region shows why the plot and the simulation can be traced to the same data file and script?",
+      "correct_zone": "one-source-two-outputs",
+      "explanation": "Figures are generated from a script that reads the processed data, and the simulation is checked against the same known answers, so the two views agree."
+    },
+    {
+      "question": "An agent builds the interactive from a written card, and only the author can mark it approved. Which region shows this?",
+      "correct_zone": "specification-to-microsim",
+      "explanation": "The workflow is specification first, then verify, and only a human sets the approved status."
+    },
+    {
+      "question": "Which region shows the same simulation placed on a lab website and in a paper's supplementary material without change?",
+      "correct_zone": "embedded-anywhere",
+      "explanation": "An iframe points at the sim's main.html, so the same sim can be reused in decks, course pages, and supplementary sites."
+    },
+    {
+      "question": "Which region shows that a table gives the points the authors measured, while a simulation gives the function the points came from?",
+      "correct_zone": "readers-question",
+      "explanation": "The simulation holds the relationship, so a reader can ask what-if questions the table cannot answer."
+    }
+  ]
+}

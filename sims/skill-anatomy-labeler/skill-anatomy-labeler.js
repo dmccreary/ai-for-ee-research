@@ -112,6 +112,12 @@ let restartButton;
 
 const PLACEHOLDER = 'none';
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(112);   // SKILL.md File
+// Concept each item is evidence for: its correct label's concept
+const LABEL_CONCEPT = { 'Skill name': 113, 'Skill description': 114, 'Skill instructions': 115, 'Supporting file': 117 };
+let lrs = null, itemStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -146,6 +152,12 @@ function setup() {
 
   restart();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Skill Anatomy Labeler', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Skill Anatomy Labeler MicroSim', pageDwell: true });
+  }
+  itemStart = Date.now();
+
   describe('Skill Anatomy Labeler. The enob-report skill is shown as a directory tree and the ' +
     'full SKILL.md file. One of eight lines or files is highlighted at a time. Choose its label ' +
     'from the menu: Skill name, Skill description, Skill instructions, or Supporting file, and ' +
@@ -167,6 +179,7 @@ function styleButton(b) {
 // ---------------------------------------------------------------
 function restart() {
   current = 0;
+  itemStart = Date.now();
   answers = ITEMS.map(() => null);
   labelSelect.elt.value = PLACEHOLDER;
   updateControls();
@@ -191,6 +204,9 @@ function submitLabel() {
   const label = chosenLabel();
   if (!label) return;
   answers[current] = { label: label, correct: isCorrectLabel(current, label) };
+  if (lrs) lrs.question('q-item-' + ITEMS[current].n, { name: 'Item ' + ITEMS[current].n + ': ' + ITEMS[current].shown,
+                                                        concept: LRS.conceptId(LABEL_CONCEPT[ITEMS[current].label]) })
+    .answer({ success: answers[current].correct, response: LRS.slug(label), durationMs: Date.now() - itemStart });
   updateControls();
   redraw();
   const focusTarget = (current < ITEMS.length - 1) ? nextButton : restartButton;
@@ -200,6 +216,7 @@ function submitLabel() {
 function nextItem() {
   if (!answers[current] || current >= ITEMS.length - 1) return;
   current++;
+  itemStart = Date.now();
   labelSelect.elt.value = PLACEHOLDER;
   updateControls();
   redraw();

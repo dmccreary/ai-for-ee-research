@@ -82,6 +82,10 @@ let labelSelect;
 let submitButton;
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const LABEL_CONCEPT = [53, 59, 58, 54, 55];   // Clear Instructions, Constraints, Output Format, Role Prompting, Few-Shot Examples
+let lrs = null, sentenceStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -109,6 +113,12 @@ function setup() {
 
   labelSelect.selected(NONE);
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Prompt Component Sorter', concept: LRS.conceptId(51), mount: '#xapi-slot',
+                          source: 'the Prompt Component Sorter MicroSim', pageDwell: true });
+    sentenceStart = Date.now();
+  }
 
   describe('Prompt Component Sorter. An assembled ten-sentence prompt for summarizing an analog circuit ' +
     'paper is shown with one sentence highlighted and marked with an arrow. Choose the component the ' +
@@ -139,6 +149,10 @@ function selectionChanged() {
 function submitAnswer() {
   if (finished || committed || labelSelect.value() === NONE) return;
   const pick = parseInt(labelSelect.value());
+  if (lrs) lrs.question('q' + (pos + 1), { name: 'Sentence ' + (pos + 1) + ': ' + SENTENCES[pos].text,
+                                           concept: LRS.conceptId(LABEL_CONCEPT[SENTENCES[pos].label]) })
+    .answer({ success: pick === SENTENCES[pos].label, response: LRS.slug(LABELS[pick]),
+              durationMs: sentenceStart ? Date.now() - sentenceStart : undefined });
   chosen[pos] = pick;
   committed = true;
   if (pick === SENTENCES[pos].label) score++;
@@ -152,6 +166,7 @@ function nextPressed() {
     pos++;
     committed = false;
     labelSelect.selected(NONE);
+    sentenceStart = Date.now();
   } else {
     finished = true;
   }

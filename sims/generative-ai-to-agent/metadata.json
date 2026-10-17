@@ -95,5 +95,17 @@
       "purpose": "Clear all answers and reshuffle the option order"
     }
   ],
-  "chapter": "01-research-workflows-orchestrator"
+  "chapter": "01-research-workflows-orchestrator",
+  "xapi": {
+    "concept": "ai-for-ee-research-12",
+    "objects": {
+      "node-generative-ai": "ai-for-ee-research-9",
+      "node-large-language-model": "ai-for-ee-research-10",
+      "node-ai-assistant": "ai-for-ee-research-11",
+      "node-ai-agent": "ai-for-ee-research-12",
+      "q-link-large-language-model": "ai-for-ee-research-10",
+      "q-link-ai-assistant": "ai-for-ee-research-11",
+      "q-link-ai-agent": "ai-for-ee-research-12"
+    }
+  }
 }

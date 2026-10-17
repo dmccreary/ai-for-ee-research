@@ -1,0 +1,190 @@
+{
+  "title": "The Literature Funnel",
+  "image": "the-literature-funnel.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#2A6F97", "#1F7A8C", "#6C4AB6", "#C99700", "#3C8D5A", "#7A0019", "#C0392B", "#2A2E3A"],
+  "zones": [
+    {
+      "id": "search-strategy",
+      "label": "Search Strategy",
+      "color": "#2A6F97",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 17.0,
+      "y2": 68.0,
+      "summary": "A written, repeatable procedure: the question, its concepts, the terms for each, the databases, the dates, and the filters. Breadth is cheap here because an agent can generate terms and run queries.",
+      "facts": [
+        "A search strategy is the written procedure. Writing it down is what separates a literature search from browsing (Chapter 11).",
+        "Join terms within one concept with OR and join concepts with AND. Quotation marks match an exact phrase, and an asterisk matches word endings (Chapter 11).",
+        "Keyword generation suits an assistant because it needs breadth and no fact checking. Read the list critically and remove terms that pull in a different field (Chapter 11).",
+        "Search at least two databases, because coverage differs, and record the query, date, and result count for each (Chapter 11).",
+        "Broadening a query raises recall and lowers precision, so a scoping search should favor recall (Chapter 11)."
+      ]
+    },
+    {
+      "id": "paper-triage",
+      "label": "Paper Triage",
+      "color": "#1F7A8C",
+      "x1": 18.2,
+      "y1": 4.0,
+      "x2": 33.2,
+      "y2": 66.0,
+      "summary": "A fast sort of the results into read closely, skim, and set aside, using only the title, abstract, and figures. An agent can do the first pass from a rubric you supply.",
+      "facts": [
+        "A triage rubric names criteria such as relevance to the question, measured or simulated, the technology node, the year, and the venue (Chapter 11).",
+        "The rubric matters more than the model. A prompt that says only 'rate relevance from 1 to 5' returns inconsistent scores (Chapter 11).",
+        "Naming the criteria and requiring a one-line reason for each score makes the triage auditable, and you review the borderline cases (Chapter 11).",
+        "A scoping search accepts extra irrelevant results because triage can remove them, while missing a key paper is costly (Chapter 11)."
+      ]
+    },
+    {
+      "id": "claim-extraction",
+      "label": "Claim Extraction",
+      "color": "#6C4AB6",
+      "x1": 34.4,
+      "y1": 6.0,
+      "x2": 49.4,
+      "y2": 64.0,
+      "summary": "Each chosen paper is reduced to small claim cards: a value, its units, its conditions, and the place in the paper where it is stated. A reader can check each card in under a minute.",
+      "facts": [
+        "Claim extraction pulls specific, checkable statements from a paper, each with its supporting evidence and location (Chapter 11).",
+        "Each row of an extracted-claims table can be checked in under a minute by going to the stated location (Chapter 11).",
+        "A summary may be built from the abstract and the model's expectations about the field, so it can state a result the paper does not contain (Chapter 11).",
+        "Defenses: supply the full text, ask for a structured summary with the section for each statement, and spot-check (Chapter 11)."
+      ]
+    },
+    {
+      "id": "citation-chaining",
+      "label": "Citation Chaining",
+      "color": "#C99700",
+      "x1": 50.6,
+      "y1": 8.0,
+      "x2": 65.6,
+      "y2": 62.0,
+      "summary": "Follow a paper's reference list backward to the work it builds on, and the papers that cite it forward to the work that builds on it. Chaining finds papers that keyword searches miss.",
+      "facts": [
+        "Backward chaining follows a paper's reference list. Forward chaining follows the papers that cite it, which are found in the citation indexes (Chapter 11).",
+        "Chaining follows influence and not vocabulary, so it finds papers that keyword searches miss (Chapter 11).",
+        "A paper cited by many of your seed papers' references is usually foundational. A recent paper that cites several of your seeds is usually relevant to the current state of the art (Chapter 11).",
+        "In the chapter's explorer, forward chaining reaches newer papers and backward chaining reaches older ones (Chapter 11)."
+      ]
+    },
+    {
+      "id": "citation-verification",
+      "label": "Citation Verification",
+      "color": "#3C8D5A",
+      "x1": 66.8,
+      "y1": 10.0,
+      "x2": 81.8,
+      "y2": 60.0,
+      "summary": "A script resolves every DOI and flags entries with no DOI or a mismatch. A model can write a well-formatted entry for a paper that does not exist, so every reference is looked up.",
+      "facts": [
+        "BibTeX is plain text, so it fits a version-controlled project. It is also where fabricated references enter a manuscript (Chapter 11).",
+        "DOI lookup retrieves a paper's metadata from its identifier, and the Crossref registry returns the record as data. Verification confirms that authors, venue, year, and title match (Chapter 11).",
+        "A short script that reads a BibTeX file, resolves every DOI, and flags missing or mismatched entries automates most of the check (Chapter 11).",
+        "The one step that cannot be automated is confirming that the paper supports the sentence it is cited for (Chapter 11)."
+      ]
+    },
+    {
+      "id": "evidence-synthesis",
+      "label": "Evidence Synthesis",
+      "color": "#7A0019",
+      "x1": 83.0,
+      "y1": 12.0,
+      "x2": 98.0,
+      "y2": 58.0,
+      "summary": "Findings from several sources are combined into a statement of what is known and how strong the evidence is. A table with conditions as columns keeps like compared with like.",
+      "facts": [
+        "Papers that report ENOB at different input frequencies, supply voltages, or process nodes are not comparable by their headline numbers. Averaging them describes neither (Chapter 11).",
+        "Empty cells in a comparison table are informative. A cell blank for most papers shows what the field has not measured (Chapter 11).",
+        "A research gap is a question the literature does not answer, or answers only under conditions that do not cover yours (Chapter 11).",
+        "Related work written from the table groups papers by approach, states what each achieves under what conditions, and ends with the gap (Chapter 11)."
+      ]
+    },
+    {
+      "id": "leak-points",
+      "label": "Where the Funnel Leaks",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 71.0,
+      "x2": 49.4,
+      "y2": 98.0,
+      "summary": "Three losses: papers the search never found, claims a summary misread, and references that do not exist. Each has a guard in the pipeline, so speed gains do not become silent errors.",
+      "facts": [
+        "Missed papers: write the strategy down, search at least two databases, log every query, favor recall in a scoping search, and chain citations (Chapter 11).",
+        "Misread claims: ask for a location with every claim, and open the paper to find the sentence before you cite it (Chapter 11).",
+        "Fabricated references: resolve every DOI and look up every entry, because a model can write a well-formatted entry for a paper that does not exist (Chapter 11).",
+        "AI assistance changes the speed of every stage of the literature workflow and none of the standards (Chapter 11)."
+      ]
+    },
+    {
+      "id": "claims-table",
+      "label": "Claims Tied to Sources",
+      "color": "#2A2E3A",
+      "x1": 50.6,
+      "y1": 71.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "A table beside each claim shows its conditions, where it is stated, and whether it was measured or only simulated. Every row can be checked, and the kind of source is recorded.",
+      "facts": [
+        "A claim row holds a value, units, conditions, and where it is stated, such as Section IV, Table II. The chapter's values are illustrative (Chapter 11).",
+        "Source quality is recorded per claim: peer reviewed or preprint, measured on silicon or only simulated, complete conditions, available data or code, and independent replication (Chapter 11).",
+        "A preprint can be excellent and a journal paper can be weak. What matters is recording what kind of source each claim rests on (Chapter 11).",
+        "A comparison table has a row per paper and a column per attribute, with the conditions in the columns (Chapter 11)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "You split a question into concepts, list terms under each, join terms with OR inside a concept, and log every query with its date and count. Which region is this?",
+      "correct_zone": "search-strategy",
+      "explanation": "Writing the question, concepts, terms, databases, and filters down as a repeatable procedure is what separates a search from browsing."
+    },
+    {
+      "question": "An agent sorts a long result list into read closely, skim, and set aside, giving a one-line reason for each decision against your criteria. Which region is this?",
+      "correct_zone": "paper-triage",
+      "explanation": "A rubric that names the criteria and requires a reason makes the first-pass sort auditable. You still review the borderline cases."
+    },
+    {
+      "question": "Instead of asking what a paper is about, you ask for every quantitative result with its units, its conditions, and the table it comes from. Which region is this?",
+      "correct_zone": "claim-extraction",
+      "explanation": "Each claim with a location can be checked in under a minute, which turns a summary you would have to trust into facts you can confirm."
+    },
+    {
+      "question": "Starting from one key paper, you follow its reference list back to older work and the papers that cite it forward to newer work. Which region is this?",
+      "correct_zone": "citation-chaining",
+      "explanation": "Chaining follows influence and not vocabulary, so it finds papers that a keyword query misses."
+    },
+    {
+      "question": "A script resolves every DOI in a BibTeX file and flags entries whose title or authors do not match the registry record. Which region is this?",
+      "correct_zone": "citation-verification",
+      "explanation": "DOI lookup confirms that each entry exists and matches. The one step left for you is checking that the paper supports the sentence it is cited for."
+    },
+    {
+      "question": "Two papers report ENOB at different supply voltages and process nodes, so you put their conditions in columns instead of averaging the headline numbers. Which region is this?",
+      "correct_zone": "evidence-synthesis",
+      "explanation": "Papers are only comparable under like conditions. A table with conditions as columns makes mismatches and research gaps visible."
+    },
+    {
+      "question": "A key paper never appears in the results, a summary states a result the paper does not report, and a formatted reference points to nothing. Which region groups these three losses?",
+      "correct_zone": "leak-points",
+      "explanation": "These are the missed paper, the misread claim, and the fabricated reference. Each has a matching guard earlier in the pipeline."
+    },
+    {
+      "question": "Each row lists a claim, where it is stated, and whether it was measured on silicon or only simulated. Which region shows this?",
+      "correct_zone": "claims-table",
+      "explanation": "Recording the location and the kind of source for every claim lets you check each row and state the strength of the evidence."
+    },
+    {
+      "question": "You cannot afford to miss a relevant paper, so you accept many irrelevant results to be removed later. Which stage sets that choice?",
+      "correct_zone": "search-strategy",
+      "explanation": "Broadening a query raises recall and lowers precision. A scoping search favors recall, and triage removes the extra results."
+    },
+    {
+      "question": "Why can a blank cell in a side-by-side table of papers be useful, and which region produces that table?",
+      "correct_zone": "evidence-synthesis",
+      "explanation": "A cell that is blank for most papers shows what the field has not measured, which is how research gaps are found."
+    }
+  ]
+}

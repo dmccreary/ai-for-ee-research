@@ -102,6 +102,10 @@ let plot = { x: 0, y: 0, s: 300 };  // plot square: left, top, size
 let layoutBottom = 0;     // lowest y used by drawn content (used for layout testing)
 
 // controls
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(45);   // Vector Search
+let lrs = null, qxEv = null, qyEv = null, queryStart = 0;
+
 let firstSelect;
 let secondSelect;
 let markSelect;
@@ -152,6 +156,16 @@ function setup() {
 
   resetSelects();
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Embedding Vector Search Explorer', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Embedding Vector Search Explorer MicroSim', pageDwell: true });
+    qxEv = lrs.slider('query-x-slider', { name: 'Query Vector x', concept: PAGE_CONCEPT(),
+                                          min: -RANGE, max: RANGE, initial: QUERIES[2].v[0], round: 2, deadband: 0.04 });
+    qyEv = lrs.slider('query-y-slider', { name: 'Query Vector y', concept: PAGE_CONCEPT(),
+                                          min: -RANGE, max: RANGE, initial: QUERIES[2].v[1], round: 2, deadband: 0.04 });
+    queryStart = Date.now();
+  }
 
   describe('Embedding Vector Search Explorer. A two-dimensional plot shows six stored passages, D1 to ' +
     'D6, as blue arrows from the origin and the current query as an orange arrow. The vectors are ' +
@@ -205,6 +219,10 @@ function submitAnswer() {
     clears: markSelect.value() === 'clears'
   };
   committed = true;
+  if (lrs) lrs.question(QUERIES[qPos].label.toLowerCase(), { name: QUERIES[qPos].label + ': ' + QUERIES[qPos].text, concept: PAGE_CONCEPT() })
+    .answer({ success: isCorrect(QUERIES[qPos], answer),
+              response: LRS.slug(PASSAGES[answer.first].id + ' ' + PASSAGES[answer.second].id + ' ' + (answer.clears ? 'clears' : 'below')),
+              durationMs: queryStart ? Date.now() - queryStart : undefined });
   if (isCorrect(QUERIES[qPos], answer)) score++;
   updateControls();
   redraw();
@@ -217,6 +235,7 @@ function nextPressed() {
     committed = false;
     answer = null;
     resetSelects();
+    queryStart = Date.now();
   } else {
     exploring = true;              // exploration opens after Q3
     exploreQ = QUERIES[qPos].v.slice();
@@ -280,6 +299,7 @@ function setQueryFromMouse() {
   qy = constrain(qy, -RANGE, RANGE);
   if (Math.hypot(qx, qy) < 0.05) return; // a zero-length query has no direction
   exploreQ = [round2(qx), round2(qy)];
+  if (lrs) { qxEv.input(exploreQ[0]); qyEv.input(exploreQ[1]); }
   redraw();
 }
 
@@ -301,6 +321,7 @@ function mouseDragged() {
 }
 
 function mouseReleased() {
+  if (lrs && dragging) { qxEv.settle(exploreQ[0]); qyEv.settle(exploreQ[1]); }
   dragging = false;
 }
 
@@ -315,7 +336,10 @@ function keyPressed() {
   else return;
   const nx = round2(constrain(exploreQ[0] + dx, -RANGE, RANGE));
   const ny = round2(constrain(exploreQ[1] + dy, -RANGE, RANGE));
-  if (Math.hypot(nx, ny) >= 0.05) exploreQ = [nx, ny];
+  if (Math.hypot(nx, ny) >= 0.05) {
+    exploreQ = [nx, ny];
+    if (lrs) { qxEv.input(nx); qyEv.input(ny); }
+  }
   redraw();
   return false;
 }

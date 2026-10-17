@@ -103,5 +103,15 @@
       "Changing the weights in exploration mode is not evidence"
     ]
   },
-  "chapter": "14-brainstorming-problem-framing"
+  "chapter": "14-brainstorming-problem-framing",
+  "xapi": {
+    "concept": "ai-for-ee-research-264",
+    "objects": {
+      "q1": "ai-for-ee-research-264",
+      "q2": "ai-for-ee-research-264",
+      "q3": "ai-for-ee-research-264",
+      "q4": "ai-for-ee-research-264",
+      "q5": "ai-for-ee-research-264"
+    }
+  }
 }

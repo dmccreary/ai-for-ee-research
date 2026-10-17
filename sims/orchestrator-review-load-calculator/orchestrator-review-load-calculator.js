@@ -107,6 +107,23 @@ let sliderCols = 2;
 let cellW = 190;
 let rowH = 46;                // height of one slider row (label + slider)
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(198);   // Researcher Attention
+const CHALLENGE_KEYS = ['q-default-load-hours', 'q-max-planning-agents', 'q-max-fraction-reviewed'];
+const SLIDER_KEYS = { np: 'planning-agents-slider', ne: 'execution-agents-slider',
+  kp: 'planning-outputs-slider', ke: 'execution-outputs-slider', rp: 'planning-review-time-slider',
+  re: 'execution-review-time-slider', c: 'conflict-resolution-slider', att: 'attention-slider',
+  frac: 'fraction-reviewed-slider' };
+let lrs = null, restoreBtnEv = null, challengeStart = 0;
+const sliderEv = {};
+// (re)create a slider's handle at its current value; call after the sim moves a slider in code
+function makeSliderEv(q) {
+  if (!lrs) return;
+  sliderEv[q.key] = lrs.slider(SLIDER_KEYS[q.key], { name: q.name + ' Slider', concept: PAGE_CONCEPT(),
+    min: q.min, max: q.max, initial: Number(sliders[q.key].value()), deadband: q.step,
+    round: q.step < 1 ? 2 : 0 });
+}
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -145,8 +162,15 @@ function setup() {
     const s = createSlider(q.min, q.max, q.def, q.step);
     s.parent(document.querySelector('main'));
     s.attribute('aria-label', q.name);
-    s.input(() => redraw());
+    s.input(() => { redraw(); if (lrs && sliderEv[q.key]) sliderEv[q.key].input(Number(s.value())); });
+    s.changed(() => { if (lrs && sliderEv[q.key]) sliderEv[q.key].settle(Number(s.value())); });
     sliders[q.key] = s;
+  }
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Orchestrator Review Load Calculator', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Orchestrator Review Load Calculator MicroSim', pageDwell: true });
+    restoreBtnEv = lrs.button('restore-defaults-button', { name: 'Restore Defaults Button', concept: PAGE_CONCEPT() });
   }
 
   startChallenge(0);
@@ -194,6 +218,7 @@ function startChallenge(i) {
   outcome = '';
   invalidNote = false;
   answerInput.value('');
+  challengeStart = Date.now();
   syncSliders();
   updateControls();
   redraw();
@@ -210,6 +235,10 @@ function submitAnswer() {
   }
   invalidNote = false;
   attempts++;
+  if (lrs) lrs.question(CHALLENGE_KEYS[stage], { name: 'Challenge ' + (stage + 1) + ': ' + ch.text, concept: PAGE_CONCEPT() })
+    .answer({ success: isCorrect(ch, val), response: String(val),
+              durationMs: challengeStart ? Date.now() - challengeStart : undefined,
+              extensions: { 'attempt-number': attempts } });
   if (isCorrect(ch, val)) {
     resolved = true;
     outcome = 'correct';
@@ -236,6 +265,7 @@ function nextPressed() {
     // exploration opens with the default values
     stage = CHALLENGES.length;
     for (const q of QUANTITIES) sliders[q.key].value(q.def);
+    if (lrs) QUANTITIES.forEach(makeSliderEv);   // sliders were moved in code
     syncSliders();
     updateControls();
     redraw();
@@ -244,7 +274,9 @@ function nextPressed() {
 }
 
 function restoreDefaults() {
+  if (lrs) restoreBtnEv.press('restore');
   for (const q of QUANTITIES) sliders[q.key].value(q.def);
+  if (lrs) QUANTITIES.forEach(makeSliderEv);   // sliders were moved in code
   redraw();
 }
 

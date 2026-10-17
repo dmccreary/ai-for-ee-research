@@ -95,5 +95,18 @@
       "Learner writes the quick calculation for each result before submitting"
     ]
   },
-  "chapter": "13-simulation-testing-code"
+  "chapter": "13-simulation-testing-code",
+  "xapi": {
+    "concept": "ai-for-ee-research-239",
+    "objects": {
+      "q-enob-17-98": "ai-for-ee-research-239",
+      "q-enob-9-2": "ai-for-ee-research-239",
+      "q-ldo-efficiency-104": "ai-for-ee-research-239",
+      "q-rc-1-59khz": "ai-for-ee-research-239",
+      "q-rc-15-9khz": "ai-for-ee-research-239",
+      "q-sweep-64-points": "ai-for-ee-research-239",
+      "q-linear-scaling": "ai-for-ee-research-239",
+      "q-negative-std-dev": "ai-for-ee-research-239"
+    }
+  }
 }

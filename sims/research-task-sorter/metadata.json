@@ -107,5 +107,20 @@
       "Learner explains each missed card using the Why sentence and the three group definitions"
     ]
   },
-  "chapter": "01-research-workflows-orchestrator"
+  "chapter": "01-research-workflows-orchestrator",
+  "xapi": {
+    "concept": "ai-for-ee-research-15",
+    "objects": {
+      "q-card-1": "ai-for-ee-research-15",
+      "q-card-2": "ai-for-ee-research-15",
+      "q-card-3": "ai-for-ee-research-15",
+      "q-card-4": "ai-for-ee-research-15",
+      "q-card-5": "ai-for-ee-research-15",
+      "q-card-6": "ai-for-ee-research-15",
+      "q-card-7": "ai-for-ee-research-15",
+      "q-card-8": "ai-for-ee-research-15",
+      "q-card-9": "ai-for-ee-research-15",
+      "q-card-10": "ai-for-ee-research-15"
+    }
+  }
 }

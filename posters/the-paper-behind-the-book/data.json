@@ -1,0 +1,145 @@
+{
+  "title": "The Paper Behind the Book",
+  "orientation": "landscape",
+  "image": "the-paper-behind-the-book.png",
+  "layout": "top-bottom",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Course Description",
+      "panel": "top",
+      "x": 9.0,
+      "y": 17.0,
+      "radius": 4,
+      "color": "#8E5A3C",
+      "hint": "Find the first workshop on the left, with a clipboard and a small gauge by its door.",
+      "description": "Stage 1 of the textbook workflow. The course description analyzer writes a course description file with a score. The check is completeness against the required elements (Chapter 20).",
+      "tip": "Every stage leaves a file, and every file has a check."
+    },
+    {
+      "id": 2,
+      "label": "Learning Graph",
+      "panel": "top",
+      "x": 25.0,
+      "y": 17.0,
+      "radius": 4,
+      "color": "#2F6DB5",
+      "hint": "Find the workshop whose window shows dots joined by arrows.",
+      "description": "Stage 2. The learning graph generator writes a concept list and a dependency graph, 379 concepts for this book. The checks are edge direction, a cycle check, and quality metrics (Chapter 20)."
+    },
+    {
+      "id": 3,
+      "label": "Chapter Structure",
+      "panel": "top",
+      "x": 41.0,
+      "y": 17.0,
+      "radius": 4,
+      "color": "#7A5AA6",
+      "hint": "Find the workshop with stacked outline blocks of different heights in its window.",
+      "description": "Stage 3. The chapter structure designer writes twenty chapter outlines with concept impact scores. The check is the dependency order of the chapters, which the learning graph determines (Chapter 20)."
+    },
+    {
+      "id": 4,
+      "label": "Chapter Content",
+      "panel": "top",
+      "x": 57.0,
+      "y": 17.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the workshop with a tall page and a tiny window-shaped inset beside it.",
+      "description": "Stage 4. The chapter content generator writes chapter text with MicroSim specifications. The checks are concept coverage, the mascot rules, and a strict site build (Chapter 20)."
+    },
+    {
+      "id": 5,
+      "label": "MicroSims",
+      "panel": "top",
+      "x": 73.0,
+      "y": 17.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the workshop with a slider and a small curve on its front screen.",
+      "description": "Stage 5. The MicroSim generator writes interactive sims. Each is reviewed against its specification, then given a status. Agents may mark a sim scaffolded, built, or instrumented, and only the human author marks it approved (Chapter 20)."
+    },
+    {
+      "id": 6,
+      "label": "Supporting Pages",
+      "panel": "top",
+      "x": 89.0,
+      "y": 17.0,
+      "radius": 4,
+      "color": "#3C8D5A",
+      "hint": "Find the last workshop on the right, with a small fan of cards on its counter.",
+      "description": "Stage 6. The glossary, FAQ, quiz, and reference generators write the supporting pages. The check is consistency with the chapter content (Chapter 20)."
+    },
+    {
+      "id": 7,
+      "label": "Source Material and Structure",
+      "panel": "bottom",
+      "x": 8.0,
+      "y": 52.0,
+      "radius": 4,
+      "color": "#8E5A3C",
+      "hint": "Find the pile of papers and folders where the road begins, beside a half-built page outline.",
+      "description": "The MicroSims paper was not written from nothing. A status file maps each section to existing documentation, about 19,000 words to extract. Structure came before prose: the abstract, introduction, related work, and conclusion were completed first, and the other sections stood as placeholders (Chapter 20)."
+    },
+    {
+      "id": 8,
+      "label": "Wrong Number Caught",
+      "panel": "bottom",
+      "x": 14.0,
+      "y": 84.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the small scene in the lower left with a pencil and calculator beside a crossed-out value.",
+      "description": "A draft criterion said that adding noise of 2 LSB to an ideal 10-bit record would lower ENOB by 1.0 to 1.5 bits. A hand calculation showed a drop of about 2.8 bits, leaving a result near 7.2. A model wrote a plausible, wrong number, and a sanity check caught it (Chapter 20).",
+      "tip": "Work the arithmetic by hand."
+    },
+    {
+      "id": 9,
+      "label": "Claim Table",
+      "panel": "bottom",
+      "x": 30.0,
+      "y": 48.0,
+      "radius": 4,
+      "color": "#D9A400",
+      "hint": "Find the small card above the road with three different tag icons beside one bar.",
+      "description": "The working abstract cited gains of up to 30 to 40 percent from simulations, while a figure showed expected benefits. A reviewer will ask which numbers are measured, which are cited, and which are projections. Trace every number to a source and label it measured, cited, or expected (Chapter 20).",
+      "tip": "Measured, cited, or expected: name which one."
+    },
+    {
+      "id": 10,
+      "label": "Stray Markup Caught",
+      "panel": "bottom",
+      "x": 38.0,
+      "y": 84.0,
+      "radius": 4,
+      "color": "#7A5AA6",
+      "hint": "Find the small scene with a counting tool tallying small angled bracket shapes.",
+      "description": "Several chapter drafts left stray closing tags after note blocks. The site still built, so nothing looked broken. A validation script that counted opening and closing tags found the defect, a mechanical check in place of a careful reading (Chapter 20)."
+    },
+    {
+      "id": 11,
+      "label": "Short Chapters Accepted",
+      "panel": "bottom",
+      "x": 62.0,
+      "y": 84.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the small scene with a short stack of pages beside a tall empty shelf.",
+      "description": "The chapter generator sets a word target for each concept from its importance score, and several chapters came out well below the summed targets. The recorded decision was to accept shorter chapters with worked examples and specified simulations, and not to pad with restatement (Chapter 20)."
+    },
+    {
+      "id": 12,
+      "label": "Unbuilt Sims Marked",
+      "panel": "bottom",
+      "x": 86.0,
+      "y": 84.0,
+      "radius": 4,
+      "color": "#2F6DB5",
+      "hint": "Find the small scene in the lower right with dashed outline windows and a red marker flag.",
+      "description": "The chapters specify many simulations. Until they are built, verified, and reviewed, the pages show specifications only, and the status field says so. The honest state of the work is part of its documentation (Chapter 20).",
+      "tip": "Agents mark a sim built. Only the human author marks it approved."
+    }
+  ]
+}

@@ -109,5 +109,18 @@
       "Learner explains each missed step using the Why sentence and the three criteria"
     ]
   },
-  "chapter": "01-research-workflows-orchestrator"
+  "chapter": "01-research-workflows-orchestrator",
+  "xapi": {
+    "concept": "ai-for-ee-research-193",
+    "objects": {
+      "q-step-1": "ai-for-ee-research-193",
+      "q-step-2": "ai-for-ee-research-193",
+      "q-step-3": "ai-for-ee-research-193",
+      "q-step-4": "ai-for-ee-research-193",
+      "q-step-5": "ai-for-ee-research-193",
+      "q-step-6": "ai-for-ee-research-193",
+      "q-step-7": "ai-for-ee-research-193",
+      "q-step-8": "ai-for-ee-research-193"
+    }
+  }
 }

@@ -1,0 +1,211 @@
+{
+  "title": "Vague Prompt, Engineered Context",
+  "image": "vague-prompt-engineered-context.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#C0392B", "#B8860B", "#C0392B", "#1F7A8C", "#2A2E3A", "#7A0019", "#B8860B", "#3C8D5A", "#3C8D5A"],
+  "zones": [
+    {
+      "id": "one-line-prompt",
+      "label": "One-Line Prompt",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 48.5,
+      "y2": 34.0,
+      "summary": "The same laptop and the same input file, but the request is a single short line. Everything else the model needed was in the researcher's head.",
+      "facts": [
+        "A prompt is everything the model receives, not what you typed. If a fact is not in the prompt, it is not in the room (Chapter 2).",
+        "The weak prompt 'Summarize this paper.' leaves the length, the audience, the content to prioritize, and what to do when the paper does not say something. The model must guess all four (Chapter 3).",
+        "Test an instruction by handing it to a colleague who has not seen the project. If two colleagues would produce visibly different outputs, it underdetermines the task (Chapter 3).",
+        "Early prompts are often vague because you know the context so well it feels obvious (Chapter 3)."
+      ]
+    },
+    {
+      "id": "guessed-gaps",
+      "label": "Guessed Gaps",
+      "color": "#B8860B",
+      "x1": 2.0,
+      "y1": 35.0,
+      "x2": 48.5,
+      "y2": 66.0,
+      "summary": "Wherever the prompt is silent, the model chooses for you. It picks whatever its training data makes likely, which may not be what you meant.",
+      "facts": [
+        "When an instruction underdetermines the task, the model resolves the ambiguity in whatever way its training data makes likely, not the way you intended (Chapter 3).",
+        "Without your definition, a model chooses the most common sense of a term. 'Resolution' may mean nominal bits or effective bits, and 'noise' may be input-referred or output-referred (Chapter 4).",
+        "Without constraints, the model fills every unspecified dimension with defaults tuned for a generic reader (Chapter 3).",
+        "A model that must answer and has no permitted way to say 'unknown' will produce a plausible answer (Chapter 3)."
+      ]
+    },
+    {
+      "id": "vague-result",
+      "label": "Vague Result",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 67.0,
+      "x2": 48.5,
+      "y2": 98.0,
+      "summary": "The answer is fluent and unusable: a loose paragraph, a vague chart, and no way to tell whether it answers the question you meant.",
+      "facts": [
+        "In Chapter 4's example, only Section 4 was pasted. The model produced a fluent paragraph on what ENOB means and whether 9.5 bits is plausible, which answered a different question (Chapter 4).",
+        "A single weak component, such as a missing definition or a stale instruction, produces a wrong answer that no rewording of the request can repair (Chapter 4).",
+        "Without an output format, the usual failure is an unparseable or inconsistent result (Chapter 3).",
+        "If a result surprises you, ask which input was missing, stale, or misleading before you blame the model (Chapter 4)."
+      ]
+    },
+    {
+      "id": "task-and-inputs",
+      "label": "Task and Inputs",
+      "color": "#1F7A8C",
+      "x1": 51.5,
+      "y1": 2.0,
+      "x2": 74.3,
+      "y2": 34.0,
+      "summary": "The engineered prompt starts by stating the job and supplying what the job needs: a role, a clear task, the source material, and the definitions that matter.",
+      "facts": [
+        "Context engineering decides everything the model sees. Typical components are standing instructions, task specification, domain vocabulary, source material, examples, history, and the request (Chapter 4).",
+        "A task specification has five parts: goal, inputs, outputs, constraints, and definition of done (Chapter 4).",
+        "Clear instructions state one task, in terms of an observable outcome, with a stated audience (Chapter 3).",
+        "A role sets viewpoint and tone. Telling a model it is a world expert does not give it expertise it lacks (Chapter 3).",
+        "Define each load-bearing term once, in the sense and units you intend (Chapter 4)."
+      ]
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "color": "#2A2E3A",
+      "x1": 75.2,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 34.0,
+      "summary": "A fence around what the model may use and do. The most valuable fence is a sanctioned way out: a legal answer of 'not stated'.",
+      "facts": [
+        "Constraints fall into four families: source, scope, length and style, and escape (Chapter 3).",
+        "An escape constraint such as 'if the text does not state it, write not stated' is the cheapest defense against hallucination (Chapter 3).",
+        "Pair a negative instruction with its replacement: 'do not estimate missing values; write not stated' (Chapter 4).",
+        "Source grounding ties each claim to a passage and drops any claim no sentence supports (Chapter 4).",
+        "In the chapter's ENOB specification, constraints include NumPy only, no modification of the input array, and a stated window function (Chapter 4)."
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "label": "Acceptance Criteria",
+      "color": "#7A0019",
+      "x1": 51.5,
+      "y1": 35.0,
+      "x2": 74.3,
+      "y2": 66.0,
+      "summary": "A checklist of testable conditions, written before the prompt is run. This is what turns a request into something you can check.",
+      "facts": [
+        "Acceptance criteria are the definition of done made concrete. A criterion is testable if two people applying it to the same output reach the same verdict (Chapter 4).",
+        "Write the criteria before you run the prompt, because once you have seen an output it is easy to rationalize it (Chapter 4).",
+        "In Chapter 4's example, an ideal 10-bit record must give an ENOB within 0.1 bit of 10, and added noise of 2 LSB must lower it to between 7.0 and 7.5 bits.",
+        "A function that fails the noise criterion can be rejected without anyone reading it closely (Chapter 4).",
+        "If you cannot write a criterion, you do not yet know what you want (Chapter 4)."
+      ]
+    },
+    {
+      "id": "output-format",
+      "label": "Output Format",
+      "color": "#B8860B",
+      "x1": 75.2,
+      "y1": 35.0,
+      "x2": 98.0,
+      "y2": 66.0,
+      "summary": "The shape of the answer is part of the prompt: named columns or named fields, so a script or a glance can tell whether the result is valid.",
+      "facts": [
+        "An output format states the shape of the response, such as a table with named columns, a JSON object with named fields, or a numbered list (Chapter 3).",
+        "A response in a known shape can be parsed by a script, compared across runs, and checked at a glance (Chapter 3).",
+        "Once the answer has a named structure, 'is this output valid?' becomes a question a script can answer (Chapter 3).",
+        "Structured output lets the next step consume the result without interpretation, and a validator can reject a malformed answer immediately (Chapter 4).",
+        "Few-shot examples are the strongest single way to communicate a format, at the cost of context (Chapter 3)."
+      ]
+    },
+    {
+      "id": "prompt-test-plate",
+      "label": "Prompt Test Plate",
+      "color": "#3C8D5A",
+      "x1": 51.5,
+      "y1": 67.0,
+      "x2": 74.3,
+      "y2": 98.0,
+      "summary": "A small fixed set of sample inputs run through the prompt, each with an expected result. It shows whether a change helped or broke something.",
+      "facts": [
+        "Prompt testing runs a prompt over a fixed set of representative inputs with expected properties or answers, and records the results (Chapter 4).",
+        "Begin with five to ten inputs, including a hard case, an edge case such as a missing value, and one that should produce 'not stated' (Chapter 4).",
+        "Rerun the set after every change to the prompt and after every change of the model (Chapter 4).",
+        "Hosted models are updated, so the same prompt run six months apart can return different results. Rerun a small fixed test set whenever the model changes (Chapter 3).",
+        "A prompt library records each prompt's purpose, tested model and settings, date, and acceptance criteria (Chapter 4)."
+      ]
+    },
+    {
+      "id": "checked-result",
+      "label": "Checked Result",
+      "color": "#3C8D5A",
+      "x1": 75.2,
+      "y1": 67.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "A clean chart, a short table, and a note on limits and assumptions. The model did not get smarter. The context did.",
+      "facts": [
+        "In Chapter 4's example, adding Section 3, a definition of ENOB, the record length, and a standing instruction let the same model point to the sentence where the claim and the procedure disagree.",
+        "'Nothing about the model changed. Only the input did' (Chapter 4).",
+        "Source grounding turns a claim you would have to trust into a quotation you can find. It does not make the model correct (Chapter 4).",
+        "Chain of thought and self critique help but do not replace an external check such as a test or a human reader (Chapter 4).",
+        "Explicit uncertainty belongs in the work: a range, not a point, and a list of the assumptions a number depends on (Chapter 17)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which region shows a request of a few words, sent with the right file attached, where the length, audience, and priorities were all left in the researcher's head?",
+      "correct_zone": "one-line-prompt",
+      "explanation": "The model has only what is sent. A short request leaves the length, audience, priorities, and missing-value behavior for the model to guess."
+    },
+    {
+      "question": "A prompt never says whether 'resolution' means nominal bits or effective bits, and the model uses the more common meaning. Which region is about choices made because the prompt left them open?",
+      "correct_zone": "guessed-gaps",
+      "explanation": "Where a prompt is silent, the model resolves the ambiguity with whatever its training data makes likely, which may not be your meaning."
+    },
+    {
+      "question": "Which region shows a fluent answer to a different question than the researcher meant, produced after the key section was left out of the input?",
+      "correct_zone": "vague-result",
+      "explanation": "A missing definition or section cannot be repaired by rewording the request. The answer sounds right and addresses the wrong thing."
+    },
+    {
+      "question": "Which region holds the job description: a goal, the source file, a viewpoint for the model to take, and the definitions of the terms it must use?",
+      "correct_zone": "task-and-inputs",
+      "explanation": "A specification names the goal and inputs, a role sets viewpoint, and domain vocabulary is defined in context."
+    },
+    {
+      "question": "A prompt says to use only the attached file and to write 'not stated' when a value is missing. Which region do these lines belong to?",
+      "correct_zone": "constraints",
+      "explanation": "These are a source constraint and an escape constraint. The escape is the cheapest defense against invented values."
+    },
+    {
+      "question": "Which region shows testable conditions, such as a result within 0.1 bit of the true value for a synthetic ideal record, written before the prompt is run?",
+      "correct_zone": "acceptance-criteria",
+      "explanation": "A criterion is testable when two people reach the same verdict. Writing it first stops you from rationalizing an output you have already seen."
+    },
+    {
+      "question": "Which region shows a result in a known shape, such as named columns or named fields, that a script can validate without anyone reading it?",
+      "correct_zone": "output-format",
+      "explanation": "A named structure turns 'is this valid?' into a question a script can answer."
+    },
+    {
+      "question": "Which region shows the same prompt run over several fixed samples, including a hard one and one that should answer 'not stated', and rerun after each change?",
+      "correct_zone": "prompt-test-plate",
+      "explanation": "A small fixed set with expected results is how you learn that a change helped or that something broke."
+    },
+    {
+      "question": "A hosted model is updated and the same prompt now returns different results. Which region shows the habit that would have caught it?",
+      "correct_zone": "prompt-test-plate",
+      "explanation": "Model version drift silently changes results. Rerunning a fixed test set after any model change exposes it."
+    },
+    {
+      "question": "Which region makes the point that the model stayed the same and only the input changed?",
+      "correct_zone": "checked-result",
+      "explanation": "In Chapter 4's example, the same model and request gave a useful answer once the context was assembled deliberately."
+    }
+  ]
+}

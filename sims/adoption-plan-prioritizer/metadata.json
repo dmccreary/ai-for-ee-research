@@ -105,5 +105,11 @@
       "Reading the step descriptions and later practice submissions are exploration and are not evidence"
     ]
   },
-  "chapter": "20-case-studies-capstone"
+  "chapter": "20-case-studies-capstone",
+  "xapi": {
+    "concept": "ai-for-ee-research-350",
+    "objects": {
+      "q-adoption-order": "ai-for-ee-research-350"
+    }
+  }
 }

@@ -92,5 +92,11 @@
       "Learner explains why test 2 exposes no bug and why typical values miss bugs B and C"
     ]
   },
-  "chapter": "13-simulation-testing-code"
+  "chapter": "13-simulation-testing-code",
+  "xapi": {
+    "concept": "ai-for-ee-research-234",
+    "objects": {
+      "q-select-tests": "ai-for-ee-research-234"
+    }
+  }
 }

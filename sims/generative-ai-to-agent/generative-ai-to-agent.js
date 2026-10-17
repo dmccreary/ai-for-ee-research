@@ -438,3 +438,50 @@ document.addEventListener('DOMContentLoaded', function () {
         b.addEventListener('click', () => openNode(Number(b.dataset.node)));
     });
 });
+
+// ===========================================
+// xAPI (docs/js/lrs-sim.js). Without the runtime the sim runs unchanged.
+// ===========================================
+(function () {
+    if (!window.LRSSim) return;
+    // Node ids 1..4 are the book's concepts 9..12 (Generative AI, LLM, AI Assistant, AI Agent).
+    const NODE_KEY = { 1: 'generative-ai', 2: 'large-language-model', 3: 'ai-assistant', 4: 'ai-agent' };
+    const NODE_CONCEPT = { 1: 9, 2: 10, 3: 11, 4: 12 };
+    const lrs = LRSSim.create({ name: 'From Generative AI to Agent', concept: LRS.conceptId(12),
+                                mount: '#xapi-slot', source: 'the From Generative AI to Agent MicroSim',
+                                pageDwell: true });
+    const nodeItems = {}, attempts = {};
+    function nodeItem(id) {
+        return nodeItems[id] || (nodeItems[id] = lrs.item('node-' + NODE_KEY[id],
+            { name: NODES.find(n => n.id === id).name, concept: LRS.conceptId(NODE_CONCEPT[id]) }));
+    }
+    let shownAt = Date.now();
+
+    const origOpen = openNode;
+    openNode = function (id) {
+        const changed = id !== openNodeId;
+        origOpen(id);
+        if (changed) nodeItem(id).study('click');
+    };
+
+    // Each link asks what its second term adds to the first: it tests the second term's concept.
+    const origCommit = commit;
+    commit = function () {
+        const i = currentLink, had = !!results[i];
+        const chosen = (i < LINKS.length && selectedIndex !== null) ? shuffled[i][selectedIndex] : null;
+        origCommit();
+        if (!had && chosen && results[i]) {
+            const to = LINKS[i].to, key = 'q-link-' + NODE_KEY[to];
+            attempts[key] = (attempts[key] || 0) + 1;
+            lrs.question(key, { name: NODES.find(n => n.id === LINKS[i].from).name + ' to ' +
+                                      NODES.find(n => n.id === to).name,
+                                concept: LRS.conceptId(NODE_CONCEPT[to]) })
+               .answer({ success: results[i].correct, response: LRS.slug(chosen.text).slice(0, 80),
+                         durationMs: Date.now() - shownAt, extensions: { 'attempt-number': attempts[key] } });
+        }
+    };
+    const origNext = nextLink;
+    nextLink = function () { origNext(); shownAt = Date.now(); };
+    const origRestart = restart;
+    restart = function () { origRestart(); shownAt = Date.now(); };
+})();

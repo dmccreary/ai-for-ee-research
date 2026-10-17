@@ -1,0 +1,2534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/chapters/12-data-analysis-scripting/quiz/">
+      
+      
+        <link rel="prev" href="../references/">
+      
+      
+        <link rel="next" href="../../13-simulation-testing-code/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-ai-assisted-data-analysis-and-scripting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-research-workflows-orchestrator/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Research Workflows and the Researcher as Orchestrator
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-how-language-models-work/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. How Language Models Work
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-models-and-prompt-basics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Choosing Models and Writing Clear Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-context-engineering-prompting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Context Engineering and Advanced Prompting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-markdown-and-version-control/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Markdown Project Files and Version Control
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-knowledge-bases-skill-anatomy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-designing-testing-skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Designing, Testing, and Sharing Agent Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-agents-tool-use-subagents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. Agents, Tool Use, and Subagents
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-supervising-agents-roles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Supervising Agents and Defining Agent Roles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-orchestrating-agent-teams/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Orchestrating Teams of Planning and Execution Agents
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-literature-search-synthesis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. AI-Assisted Literature Search and Synthesis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    12. AI-Assisted Data Analysis and Scripting
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            12. AI-Assisted Data Analysis and Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-recommended-pattern-for-storing-measurement-values-together-with-their-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is the recommended pattern for storing measurement values together with their metadata?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-when-reading-a-python-traceback-where-should-you-look-first-for-the-cause-of-the-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. When reading a Python traceback, where should you look first for the cause of the error?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-is-it-important-to-keep-raw-measurement-data-files-read-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Why is it important to keep raw measurement data files read-only?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-is-the-main-danger-of-a-catch-all-exception-handler-in-an-analysis-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What is the main danger of a catch-all exception handler in an analysis script?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-is-exploratory-analysis-performed-before-computing-final-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why is exploratory analysis performed before computing final statistics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-cleaning-script-encounters-a-value-that-is-far-from-the-others-but-has-no-documented-cause-what-should-the-script-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A cleaning script encounters a value that is far from the others but has no documented cause. What should the script do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-python-script-fails-with-filenotfounderror-datarawcapture-7csv-but-the-directory-contains-datarawcapture-07csv-what-is-the-most-likely-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A Python script fails with FileNotFoundError: data/raw/capture-7.csv, but the directory contains data/raw/capture-07.csv. What is the most likely cause?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-notebook-produces-results-that-look-correct-but-restarting-the-kernel-and-running-all-cells-changes-the-numbers-what-does-this-indicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A notebook produces results that look correct, but restarting the kernel and running all cells changes the numbers. What does this indicate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-cleaning-step-removes-several-data-points-and-improves-the-headline-enob-what-is-the-most-responsible-way-to-report-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A cleaning step removes several data points and improves the headline ENOB. What is the most responsible way to report this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-script-reads-adc-codes-from-a-csv-but-then-raises-typeerror-unsupported-operand-types-for-str-and-float-what-is-the-most-likely-root-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A script reads ADC codes from a CSV but then raises TypeError: unsupported operand type(s) for -: 'str' and 'float'. What is the most likely root cause?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-simulation-testing-code/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Simulation, Testing, and Reproducible Code
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-brainstorming-problem-framing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Brainstorming and Problem Framing
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-manuscript-preparation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. AI-Assisted Manuscript Preparation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-microsims-communication/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. MicroSims and Research Communication
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../17-verification-reproducibility/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Verification and Reproducibility
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../18-responsible-ethical-use/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Responsible and Ethical Use of AI
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../19-always-on-personal-agents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Always-On Personal Agents for Research
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../20-case-studies-capstone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. Case Studies and Capstone Project
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../posters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Posters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../appendices/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-recommended-pattern-for-storing-measurement-values-together-with-their-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is the recommended pattern for storing measurement values together with their metadata?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-when-reading-a-python-traceback-where-should-you-look-first-for-the-cause-of-the-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. When reading a Python traceback, where should you look first for the cause of the error?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-is-it-important-to-keep-raw-measurement-data-files-read-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Why is it important to keep raw measurement data files read-only?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-is-the-main-danger-of-a-catch-all-exception-handler-in-an-analysis-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What is the main danger of a catch-all exception handler in an analysis script?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-is-exploratory-analysis-performed-before-computing-final-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why is exploratory analysis performed before computing final statistics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-cleaning-script-encounters-a-value-that-is-far-from-the-others-but-has-no-documented-cause-what-should-the-script-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A cleaning script encounters a value that is far from the others but has no documented cause. What should the script do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-python-script-fails-with-filenotfounderror-datarawcapture-7csv-but-the-directory-contains-datarawcapture-07csv-what-is-the-most-likely-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A Python script fails with FileNotFoundError: data/raw/capture-7.csv, but the directory contains data/raw/capture-07.csv. What is the most likely cause?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-notebook-produces-results-that-look-correct-but-restarting-the-kernel-and-running-all-cells-changes-the-numbers-what-does-this-indicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A notebook produces results that look correct, but restarting the kernel and running all cells changes the numbers. What does this indicate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-cleaning-step-removes-several-data-points-and-improves-the-headline-enob-what-is-the-most-responsible-way-to-report-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A cleaning step removes several data points and improves the headline ENOB. What is the most responsible way to report this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-script-reads-adc-codes-from-a-csv-but-then-raises-typeerror-unsupported-operand-types-for-str-and-float-what-is-the-most-likely-root-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A script reads ADC codes from a CSV but then raises TypeError: unsupported operand type(s) for -: 'str' and 'float'. What is the most likely root cause?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/chapters/12-data-analysis-scripting/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-ai-assisted-data-analysis-and-scripting">Quiz: AI-Assisted Data Analysis and Scripting<a class="headerlink" href="#quiz-ai-assisted-data-analysis-and-scripting" title="Permanent link">&para;</a></h1>
+<p>Test your understanding of measurement data formats, cleaning, exploratory analysis, Python scripts, error messages, and reproducibility with these 10 review questions.</p>
+<hr />
+<h4 id="1-what-is-the-recommended-pattern-for-storing-measurement-values-together-with-their-metadata">1. What is the recommended pattern for storing measurement values together with their metadata?<a class="headerlink" href="#1-what-is-the-recommended-pattern-for-storing-measurement-values-together-with-their-metadata" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>An image file showing the plotted data</li>
+<li>A single binary file for both values and metadata</li>
+<li>A Word document with embedded tables</li>
+<li>A CSV file for values with a JSON sidecar for metadata</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. CSV stores tabular values in a readable, diffable form, while JSON's nested structure suits metadata such as sampling rate, supply, and date. Binary files are not diffable, and images or Word documents cannot be read by analysis scripts.</p>
+<p><strong>Concept Tested:</strong> Data Formats</p>
+<p><strong>See:</strong> ./index.md#data-and-its-formats</p>
+</details>
+<hr />
+<h4 id="2-when-reading-a-python-traceback-where-should-you-look-first-for-the-cause-of-the-error">2. When reading a Python traceback, where should you look first for the cause of the error?<a class="headerlink" href="#2-when-reading-a-python-traceback-where-should-you-look-first-for-the-cause-of-the-error" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>At the very first line of the traceback</li>
+<li>In the middle of the call stack</li>
+<li>At the import statements near the top</li>
+<li>At the bottom, especially the last line and the nearest line in your code</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. The bottom of the traceback names the exception and the failing statement. The entry nearest the bottom that is in your own code is usually where the mistake lives. The top lines show the chain of calls that led there.</p>
+<p><strong>Concept Tested:</strong> Error Messages</p>
+<p><strong>See:</strong> ./index.md#reading-error-messages</p>
+</details>
+<hr />
+<h4 id="3-why-is-it-important-to-keep-raw-measurement-data-files-read-only">3. Why is it important to keep raw measurement data files read-only?<a class="headerlink" href="#3-why-is-it-important-to-keep-raw-measurement-data-files-read-only" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>To prevent the agent from reading them</li>
+<li>Because raw data cannot be regenerated and must be protected</li>
+<li>To make the files smaller on disk</li>
+<li>Because agents cannot read read-only files</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Raw measurements are the one thing a prompt cannot recreate, so they must be preserved. Read-only status ensures cleaning scripts write to <code>data/processed/</code> and never overwrite the original capture.</p>
+<p><strong>Concept Tested:</strong> Measurement Data</p>
+<p><strong>See:</strong> ./index.md#data-and-its-formats</p>
+</details>
+<hr />
+<h4 id="4-what-is-the-main-danger-of-a-catch-all-exception-handler-in-an-analysis-script">4. What is the main danger of a catch-all exception handler in an analysis script?<a class="headerlink" href="#4-what-is-the-main-danger-of-a-catch-all-exception-handler-in-an-analysis-script" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It makes the script run too slowly</li>
+<li>It prevents the script from loading data</li>
+<li>It can hide errors and let the script produce wrong results silently</li>
+<li>It always causes the script to crash</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. A catch-all handler that swallows exceptions can make a script appear to succeed while it uses default values, skips data, or computes incorrectly. Errors should be allowed to stop the script unless they are logged and re-raised.</p>
+<p><strong>Concept Tested:</strong> Error Messages</p>
+<p><strong>See:</strong> ./index.md#reading-error-messages</p>
+</details>
+<hr />
+<h4 id="5-why-is-exploratory-analysis-performed-before-computing-final-statistics">5. Why is exploratory analysis performed before computing final statistics?<a class="headerlink" href="#5-why-is-exploratory-analysis-performed-before-computing-final-statistics" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>It catches problems like clipping, short records, and wrong frequencies that would make downstream numbers meaningless</li>
+<li>It replaces the need for data cleaning</li>
+<li>It is required by all journals before submission</li>
+<li>It eliminates the need for uncertainty estimates</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. Exploratory checks such as range, clipping fraction, and spectrum shape reveal data problems early. They do not replace cleaning, journal requirements, or uncertainty analysis.</p>
+<p><strong>Concept Tested:</strong> Exploratory Analysis</p>
+<p><strong>See:</strong> ./index.md#exploring-analyzing-and-plotting</p>
+</details>
+<hr />
+<h4 id="6-a-cleaning-script-encounters-a-value-that-is-far-from-the-others-but-has-no-documented-cause-what-should-the-script-do">6. A cleaning script encounters a value that is far from the others but has no documented cause. What should the script do?<a class="headerlink" href="#6-a-cleaning-script-encounters-a-value-that-is-far-from-the-others-but-has-no-documented-cause-what-should-the-script-do" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Remove it because it is an outlier</li>
+<li>Keep it, report it, and investigate it</li>
+<li>Replace it with the mean of the other values</li>
+<li>Stop and ask for a new measurement</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. An undocumented outlier is information, not necessarily an artifact. It should be kept, reported, and investigated. Removal needs a documented cause such as a known fault or duplicate.</p>
+<p><strong>Concept Tested:</strong> Data Cleaning</p>
+<p><strong>See:</strong> ./index.md#cleaning-without-hiding</p>
+</details>
+<hr />
+<h4 id="7-a-python-script-fails-with-filenotfounderror-datarawcapture-7csv-but-the-directory-contains-datarawcapture-07csv-what-is-the-most-likely-cause">7. A Python script fails with <code>FileNotFoundError: data/raw/capture-7.csv</code>, but the directory contains <code>data/raw/capture-07.csv</code>. What is the most likely cause?<a class="headerlink" href="#7-a-python-script-fails-with-filenotfounderror-datarawcapture-7csv-but-the-directory-contains-datarawcapture-07csv-what-is-the-most-likely-cause" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>NumPy is not installed</li>
+<li>The CSV file is corrupted</li>
+<li>The script has the wrong filename</li>
+<li>The script needs more memory</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. The error names a file that does not exist while a similarly named file does, so the path in the script is likely wrong. Module installation, corruption, and memory issues produce different error messages.</p>
+<p><strong>Concept Tested:</strong> Error Messages</p>
+<p><strong>See:</strong> ./index.md#reading-error-messages</p>
+</details>
+<hr />
+<h4 id="8-a-notebook-produces-results-that-look-correct-but-restarting-the-kernel-and-running-all-cells-changes-the-numbers-what-does-this-indicate">8. A notebook produces results that look correct, but restarting the kernel and running all cells changes the numbers. What does this indicate?<a class="headerlink" href="#8-a-notebook-produces-results-that-look-correct-but-restarting-the-kernel-and-running-all-cells-changes-the-numbers-what-does-this-indicate" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The notebook should be published as-is</li>
+<li>The code is correct but the kernel is faulty</li>
+<li>The results are not reproducible from the notebook's code alone</li>
+<li>The data files have changed</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Jupyter notebooks can have hidden state from cells run out of order. Restart-and-run-all is the standard reproducibility test, and a changed result means the notebook's visible code does not determine the output.</p>
+<p><strong>Concept Tested:</strong> Notebook Environment</p>
+<p><strong>See:</strong> ./index.md#environments-and-notebooks</p>
+</details>
+<hr />
+<h4 id="9-a-cleaning-step-removes-several-data-points-and-improves-the-headline-enob-what-is-the-most-responsible-way-to-report-this">9. A cleaning step removes several data points and improves the headline ENOB. What is the most responsible way to report this?<a class="headerlink" href="#9-a-cleaning-step-removes-several-data-points-and-improves-the-headline-enob-what-is-the-most-responsible-way-to-report-this" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Report the result both with and without the cleaning step, and document the cause for each removed point</li>
+<li>Report only the improved result because the cleaning was justified</li>
+<li>Remove the step from the script to avoid complexity</li>
+<li>Report only the un-cleaned result to be conservative</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. Transparency about the effect of cleaning and the documented cause for each removal keeps the analysis honest. Reporting only one side, or removing the step, hides the sensitivity of the result to the decision.</p>
+<p><strong>Concept Tested:</strong> Data Cleaning</p>
+<p><strong>See:</strong> ./index.md#cleaning-without-hiding</p>
+</details>
+<hr />
+<h4 id="10-a-script-reads-adc-codes-from-a-csv-but-then-raises-typeerror-unsupported-operand-types-for-str-and-float-what-is-the-most-likely-root-cause">10. A script reads ADC codes from a CSV but then raises <code>TypeError: unsupported operand type(s) for -: 'str' and 'float'</code>. What is the most likely root cause?<a class="headerlink" href="#10-a-script-reads-adc-codes-from-a-csv-but-then-raises-typeerror-unsupported-operand-types-for-str-and-float-what-is-the-most-likely-root-cause" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The FFT length is not a power of two</li>
+<li>The Hann window is missing</li>
+<li>The sampling rate in the sidecar is wrong</li>
+<li>The CSV has a header line that was not skipped, so the codes were loaded as strings</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. A string cannot be subtracted from a float, which means the numeric data were read as strings, often because a header row was treated as data. FFT length, window choice, and sampling rate affect the computation but not the data type.</p>
+<p><strong>Concept Tested:</strong> Analysis Script</p>
+<p><strong>See:</strong> ./index.md#analysis-scripts-in-python</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../13-simulation-testing-code/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

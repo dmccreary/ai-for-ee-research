@@ -1,0 +1,113 @@
+{
+  "title": "Inside an Agent Skill",
+  "orientation": "landscape",
+  "image": "inside-an-agent-skill.png",
+  "layout": "top-bottom",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "A Task Request",
+      "panel": "top",
+      "x": 11.0,
+      "y": 30.0,
+      "radius": 4,
+      "color": "#C99700",
+      "hint": "Find the card on the far left with an arrow flying from it toward a small badge.",
+      "description": "Triggering starts with a request. The agent compares it with the descriptions of the skills it has and loads the skill whose description matches. 'What is the ENOB of capture-07.csv?' loads an ENOB skill. 'Plot the spectrum of capture-07.csv' names the same file but asks for a different task, so it should not (Chapter 6)."
+    },
+    {
+      "id": 2,
+      "label": "Layer 1: The Front Door",
+      "panel": "top",
+      "x": 27.0,
+      "y": 28.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the small teal badge floating above the open folder on a thin beam of light.",
+      "description": "The skill name and description are the only part always in the agent's context. The name is a short, lowercase, hyphenated identifier. The description says what the skill does and when to use it, and the agent chooses from it alone, which makes it the most important line in the file (Chapter 6).",
+      "tip": "Write the description last, and test it (Chapter 7)."
+    },
+    {
+      "id": 3,
+      "label": "The Context Scale",
+      "panel": "top",
+      "x": 38.0,
+      "y": 36.0,
+      "radius": 4,
+      "color": "#2A2E3A",
+      "hint": "Find the little balance beside the badge, tipped toward the light side.",
+      "description": "Keeping everything except the name and description out of the always-loaded text keeps its cost small. A skill with a long reference table, a large template, and a library script pays for none of them until the step that uses them. This design principle is progressive disclosure (Chapter 7)."
+    },
+    {
+      "id": 4,
+      "label": "Layer 2: The Instruction Sheet",
+      "panel": "top",
+      "x": 52.0,
+      "y": 28.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the single sheet unrolling above the middle of the scene, with numbered-looking steps.",
+      "description": "The body of SKILL.md loads when the skill triggers. It holds the numbered procedure, the constraints, and the output format, written once. Aim for five to ten numbered steps with each constraint stated once. If it grows beyond a page, move material to a reference document (Chapters 6 and 7).",
+      "tip": "A step the agent cannot check is a step it may skip."
+    },
+    {
+      "id": 5,
+      "label": "The Trigger Tests",
+      "panel": "top",
+      "x": 85.0,
+      "y": 28.0,
+      "radius": 4,
+      "color": "#3C8D5A",
+      "hint": "Find the upper tray on the right bench, full of request cards with green check icons.",
+      "description": "Trigger tests check the description. This list holds realistic requests that should load the skill, in different phrasings of the same task. A skill that misses one has an undertriggering problem, and the cause is almost always the description (Chapter 7)."
+    },
+    {
+      "id": 6,
+      "label": "The Overstuffed Binder",
+      "panel": "bottom",
+      "x": 10.0,
+      "y": 84.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the bulging binder in the lower-left corner, with papers spilling out and a blank spine.",
+      "description": "A skill that handles all the analysis for a project fails four ways at once: the description is vague, the instructions are long and steps get skipped, the output is many things, and a failure could be anywhere. Split it into single-purpose skills and compose them (Chapter 7).",
+      "tip": "Given X, produce Y, checked by Z. If you need 'and' to join two outputs, you probably have two skills."
+    },
+    {
+      "id": 7,
+      "label": "The Skill Folder",
+      "panel": "bottom",
+      "x": 24.0,
+      "y": 64.0,
+      "radius": 4,
+      "color": "#2A2E3A",
+      "hint": "Find the large open folder at lower left whose lid is lifted like a hangar door.",
+      "description": "A skill is a directory built around SKILL.md. The chapter's enob-report example holds SKILL.md, scripts/enob.py, references/targets.md, and templates/report.md. It teaches the agent to carry out one kind of task the same way each time (Chapter 6)."
+    },
+    {
+      "id": 8,
+      "label": "Layer 3: The Supporting Files",
+      "panel": "bottom",
+      "x": 62.0,
+      "y": 64.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the wooden shelf with a table sheet, a form, and a script card sliding halfway off.",
+      "description": "Scripts, reference documents, and templates sit outside SKILL.md and are opened only when an instruction points to them, such as 'If the target venue is IEEE, read references/ieee-checklist.md.' Exact work, like a formula, belongs in a tested script and not in prose (Chapters 6 and 7).",
+      "tip": "The one sentence that names the file and says when to read it is the whole cost of making it available."
+    },
+    {
+      "id": 9,
+      "label": "The Near-Miss Tests",
+      "panel": "bottom",
+      "x": 86.0,
+      "y": 64.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the lower tray on the right bench, with request cards that have red outlines and crossed icons.",
+      "description": "Near misses share vocabulary with the skill but ask for something else, such as plotting the same file the skill reports on. None of them should load the skill. Few people test that a skill stays quiet, and this one list catches most description problems (Chapter 7).",
+      "tip": "Write the should-not-trigger tests first."
+    }
+  ]
+}

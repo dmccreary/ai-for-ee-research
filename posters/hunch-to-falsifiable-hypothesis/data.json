@@ -1,0 +1,164 @@
+{
+  "title": "From Hunch to Falsifiable Hypothesis",
+  "image": "hunch-to-falsifiable-hypothesis.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#E0A800", "#3C8D5A", "#5B6C8F", "#1F7A8C", "#7A0019", "#8E5BA8", "#2A2E3A"],
+  "zones": [
+    {
+      "id": "loose-brainstorm",
+      "label": "Loose Brainstorm",
+      "color": "#E0A800",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 48.5,
+      "y2": 50.0,
+      "summary": "A wide, cloudy staircase of sticky-note ideas that never reaches a summit. Ideas are plentiful, and none of them can be tested yet.",
+      "facts": [
+        "Idea generation keeps two phases apart: the divergent phase aims at quantity and range with no judgment, and the convergent phase evaluates and selects (Chapter 14).",
+        "A model suits the divergent phase. It has absorbed a very wide literature and produces variations without social cost (Chapter 14).",
+        "Problem framing turns a topic into a question that can be investigated. One topic such as low-power ADCs can be framed five ways, and each framing implies different work (Chapter 14).",
+        "Ask for ideas that differ along named axes, in a table with a column for the key assumption, so the list spans the space and shows what each idea depends on (Chapter 14)."
+      ]
+    },
+    {
+      "id": "hypothesis-staircase",
+      "label": "Hypothesis Staircase",
+      "color": "#3C8D5A",
+      "x1": 51.5,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 50.0,
+      "summary": "A narrower, sharper staircase: problem framed, claim stated, prediction written, measurement chosen, and the refuting result identified. A magnifier flag marks the summit.",
+      "facts": [
+        "A hypothesis states that under stated conditions a stated change produces a stated effect of at least a stated size (Chapter 14).",
+        "Example: foreground calibration of the comparator offset raises the ENOB of a 10-bit SAR ADC from 8.6 to at least 9.5 bits at 1 MS/s and 1.0 V in 65 nm CMOS (Chapter 14).",
+        "\"Calibration makes the ADC better\" is not a hypothesis, because no result could contradict it (Chapter 14).",
+        "Test each framing against the question tests of Chapter 1: is it specific, measurable, bounded, and falsifiable? (Chapter 14)"
+      ]
+    },
+    {
+      "id": "ranking-mat",
+      "label": "Ranking Mat",
+      "color": "#5B6C8F",
+      "x1": 2.0,
+      "y1": 52.0,
+      "x2": 48.5,
+      "y2": 75.0,
+      "summary": "Candidate ideas are scored on impact, feasibility, novelty, and risk. The weights are the real decision, and a gold marker sits on whichever idea wins under them.",
+      "facts": [
+        "Idea ranking orders ideas by weighted criteria. The weighted score is the sum of each weight times its score, and the weights sum to 1 (Chapter 14).",
+        "The rank depends on the weights, so the weights are the real decision (Chapter 14).",
+        "In Chapter 14's illustrative example, an exploratory-thesis profile ranks learned redundancy first at 3.8, and a three-month-deadline profile ranks foreground calibration first at 4.3.",
+        "Feasibility assessment: ask an agent to list what the idea requires and mark each item in hand, obtainable, or missing. Then check for what only you know about your lab (Chapter 14)."
+      ]
+    },
+    {
+      "id": "devils-advocate",
+      "label": "Devil's Advocate",
+      "color": "#1F7A8C",
+      "x1": 51.5,
+      "y1": 52.0,
+      "x2": 74.0,
+      "y2": 75.0,
+      "summary": "A challenger agent stands on the third step with a card that asks what would make the idea wrong. Models agree by default, so the objection has to be requested.",
+      "facts": [
+        "A devil's advocate prompt asks the model to argue against an idea: the strongest reasons it will fail, the assumptions it depends on, and the result that would show it wrong (Chapter 14).",
+        "A neutral \"what do you think of this idea?\" returns encouragement. A request for specific objections returns something useful (Chapter 14).",
+        "Ask for objections ranked by severity, and for the cheapest experiment that tests the most serious one (Chapter 14).",
+        "A response with no specific objections is a sign that the prompt, and not the idea, was weak (Chapter 14)."
+      ]
+    },
+    {
+      "id": "criterion-in-advance",
+      "label": "Criterion Set in Advance",
+      "color": "#7A0019",
+      "x1": 75.5,
+      "y1": 52.0,
+      "x2": 98.0,
+      "y2": 75.0,
+      "summary": "The result that would count as refutation is written down before any data arrive, so the interpretation cannot be fitted to the outcome.",
+      "facts": [
+        "Experiment design fixes the independent and dependent variables, the controlled variables, a baseline, and enough repetitions to separate the effect from noise (Chapter 14).",
+        "Writing the criterion in advance is the protection against fitting the interpretation to the result (Chapter 14).",
+        "An agent asked for \"a good result\" will help you find a reading that makes one acceptable. A criterion written first cannot be adjusted (Chapter 17).",
+        "An agent drafts a protocol quickly. You supply what it lacks: confounds such as temperature drift, corner cases, and the limits of the instrument (Chapter 14)."
+      ]
+    },
+    {
+      "id": "novelty-check",
+      "label": "Novelty Check",
+      "color": "#8E5BA8",
+      "x1": 2.0,
+      "y1": 77.0,
+      "x2": 48.5,
+      "y2": 98.0,
+      "summary": "A magnifier over a stack of prior papers. A model saying an idea is new is not evidence, because it reflects what the model does not remember.",
+      "facts": [
+        "A model's statement that an idea is novel is not evidence. It reflects what the model does not remember, not what the literature contains (Chapter 14).",
+        "Run the search pipeline of Chapter 11 on the core of the idea, with several phrasings and in more than one database (Chapter 14).",
+        "Record the five closest prior works, and for each write one sentence on what you would do differently (Chapter 14).",
+        "A novelty claim that rests on that table is one you can defend to a reviewer (Chapter 14)."
+      ]
+    },
+    {
+      "id": "research-roadmap",
+      "label": "Research Roadmap",
+      "color": "#2A2E3A",
+      "x1": 51.5,
+      "y1": 77.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "A ribbon runs on from the summit as a short roadmap with milestones. Each decision point states what result means continue, change direction, or stop.",
+      "facts": [
+        "A research roadmap connects the framed problem to a sequence of hypotheses, experiments, order, dependencies, and decision points (Chapter 14).",
+        "At each decision point it states what result would lead to continuing, to changing direction, or to stopping (Chapter 14).",
+        "Chapter 14's fragment has four stages, feasibility, prototype, characterization, and write up, each with a go criterion and an action if it is not met. Its numbers are illustrative.",
+        "Explicit go criteria protect against continuing a line of work because of the effort already spent (Chapter 14).",
+        "An agent can draft the roadmap. You add what it cannot supply: how long measurements and fabrication really take in your lab (Chapter 14)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A student pins forty ideas to a wall, none of them testable yet, and the stack has no clear top. Which region shows this stage?",
+      "correct_zone": "loose-brainstorm",
+      "explanation": "The divergent phase aims at quantity and range with no judgment, so it produces many ideas but no testable claim."
+    },
+    {
+      "question": "A statement names the change, an effect of at least 9.5 bits, and the conditions, so a measurement could contradict it. Which region shows this?",
+      "correct_zone": "hypothesis-staircase",
+      "explanation": "A hypothesis states conditions, a change, and an effect size, which is what makes it possible for a result to show it wrong."
+    },
+    {
+      "question": "A model replies \"great idea!\" to a proposal. Which region shows the prompt that asks for specific objections instead?",
+      "correct_zone": "devils-advocate",
+      "explanation": "Models tend to agree, so an explicit request for the strongest reasons the idea will fail is needed to get a useful answer."
+    },
+    {
+      "question": "Which region shows deciding before taking any data which result would count against the claim?",
+      "correct_zone": "criterion-in-advance",
+      "explanation": "A criterion written first cannot be adjusted to fit the outcome, which protects the interpretation."
+    },
+    {
+      "question": "Two groups score the same four ideas on the same criteria but weight them differently and pick different winners. Which region shows this?",
+      "correct_zone": "ranking-mat",
+      "explanation": "The rank depends on the weights, so a thesis emphasizing novelty and a three-month deadline can pick different projects from one list."
+    },
+    {
+      "question": "An assistant says an idea has never been tried. Which region shows what you should do before believing it?",
+      "correct_zone": "novelty-check",
+      "explanation": "The statement reflects what the model does not remember. A search with several phrasings, and a table of the five closest prior works, is the evidence."
+    },
+    {
+      "question": "Which region shows a plan that states, at each milestone, what result means continue, change direction, or stop?",
+      "correct_zone": "research-roadmap",
+      "explanation": "A roadmap with go criteria guards against continuing only because of effort already spent."
+    },
+    {
+      "question": "Which region shows protection against reading an acceptable meaning into an agent's \"good result\" after the fact?",
+      "correct_zone": "criterion-in-advance",
+      "explanation": "Once a result is visible it is easy to rationalize it. A criterion set beforehand removes that room."
+    }
+  ]
+}

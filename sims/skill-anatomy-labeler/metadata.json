@@ -100,5 +100,18 @@
       "Write a description line for a skill of your own that says what it does and when to use it"
     ]
   },
-  "chapter": "06-knowledge-bases-skill-anatomy"
+  "chapter": "06-knowledge-bases-skill-anatomy",
+  "xapi": {
+    "concept": "ai-for-ee-research-112",
+    "objects": {
+      "q-item-1": "ai-for-ee-research-113",
+      "q-item-2": "ai-for-ee-research-114",
+      "q-item-3": "ai-for-ee-research-115",
+      "q-item-4": "ai-for-ee-research-115",
+      "q-item-5": "ai-for-ee-research-117",
+      "q-item-6": "ai-for-ee-research-117",
+      "q-item-7": "ai-for-ee-research-117",
+      "q-item-8": "ai-for-ee-research-115"
+    }
+  }
 }

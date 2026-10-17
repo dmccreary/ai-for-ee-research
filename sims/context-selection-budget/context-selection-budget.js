@@ -145,6 +145,10 @@ let resultPage = 0;
 let resultPageCount = 1;
 let layoutBottom = 0;      // lowest y used by drawn content (used for layout testing)
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(66);   // Context Selection
+let lrs = null, startedAt = 0;
+
 // controls
 let itemSelect;
 let verdictButtons = [];
@@ -180,6 +184,12 @@ function setup() {
   });
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Context Selection Budget', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Context Selection Budget MicroSim', pageDwell: true });
+    startedAt = Date.now();
+  }
 
   describe('Context Selection Budget. The task is: ' + TASK + ' Nine candidate context items are ' +
     'listed with their size as is and, for three of them, a compressed size. Choose an item in the ' +
@@ -231,6 +241,14 @@ function submitPressed() {
   }
   const s = scoreVerdicts(verdicts);
   result = { correct: s.correct, perItem: s.perItem, total: check.total };
+  if (lrs) {
+    const dur = startedAt ? Date.now() - startedAt : undefined;
+    ITEMS.forEach((it, i) => {
+      lrs.question('q-item-' + it.n, { name: 'Item ' + it.n + ': ' + it.item, concept: PAGE_CONCEPT() })
+        .answer({ success: s.perItem[i], response: LRS.slug(verdicts[i]), durationMs: dur,
+                  extensions: { 'total-tokens': check.total } });
+    });
+  }
   submitted = true;
   refusal = '';
   resultPage = 0;

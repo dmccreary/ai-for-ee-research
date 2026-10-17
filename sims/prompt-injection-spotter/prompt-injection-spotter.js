@@ -138,6 +138,9 @@ let ordinaryButton;
 let nextButton;
 let moreButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+let lrs = null, snippetStart = 0;   // concept: Prompt Injection
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -154,6 +157,12 @@ function setup() {
   });
 
   updateControls();
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Prompt Injection Spotter', concept: LRS.conceptId(71), mount: '#xapi-slot',
+                          source: 'the Prompt Injection Spotter MicroSim', pageDwell: true });
+    snippetStart = Date.now();
+  }
 
   describe('Prompt Injection Spotter. Eight text snippets that an agent has been asked to read ' +
     'are shown one at a time in a fixed order, each with its source label. For each one, press ' +
@@ -179,6 +188,10 @@ function makeButton(label, handler) {
 // One attempt per snippet: the classification is committed at once
 function classify(choice) {
   if (finished || committed) return;
+  if (lrs) lrs.question('q' + SNIPPETS[pos].n, { name: 'Snippet ' + SNIPPETS[pos].n + ': ' + SNIPPETS[pos].source,
+                                               concept: LRS.conceptId(71) })
+    .answer({ success: isCorrect(SNIPPETS[pos], choice), response: LRS.slug(choice),
+              durationMs: snippetStart ? Date.now() - snippetStart : undefined });
   choices[pos] = choice;
   committed = true;
   updateControls();
@@ -190,6 +203,7 @@ function nextPressed() {
   if (pos < SNIPPETS.length - 1) {
     pos++;
     committed = false;
+    snippetStart = Date.now();
   } else {
     finished = true;
     summaryPage = 0;

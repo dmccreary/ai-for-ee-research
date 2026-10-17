@@ -497,4 +497,63 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// ===========================================
+// xAPI (docs/js/lrs-sim.js). Inside the browser block so the wrapped functions are the ones the
+// sim calls. Without the runtime nothing here runs and the sim is unchanged.
+// ===========================================
+if (window.LRSSim) {
+    const CONCEPT = LRS.conceptId(189);   // Task Dependencies (the chapter's stated prerequisite for this sim)
+    const lrs = LRSSim.create({ name: 'Task Dependency Critical Path Scheduler', concept: CONCEPT,
+                                mount: '#xapi-slot', source: 'the Task Dependency Critical Path Scheduler MicroSim',
+                                pageDwell: true });
+    // Keys name what is asked (fixed order, but never positional).
+    const QKEYS = ['q-earliest-finish-t5', 'q-critical-path', 'q-slack-t4', 'q-project-duration', 'q-t3-reduced-duration'];
+    const attempts = {};
+    let shownAt = Date.now();
+    const origSubmit = submit;
+    submit = function () {
+        const i = qIndex, had = !!results[i];
+        const q = QUESTIONS[i];
+        const response = !q ? '' : (q.kind === 'number'
+            ? String(el('answer-input').value).trim() : [...picks].sort().join(','));
+        origSubmit();
+        if (!had && q && results[i]) {
+            attempts[i] = (attempts[i] || 0) + 1;
+            lrs.question(QKEYS[i], { name: q.text, concept: CONCEPT }).answer({
+                success: results[i].correct, response: response,
+                durationMs: Date.now() - shownAt, extensions: { 'attempt-number': attempts[i] }
+            });
+        }
+    };
+    const origNext = nextQuestion;
+    nextQuestion = function () { origNext(); shownAt = Date.now(); };
+    const origRestart = restart;
+    restart = function () { origRestart(); shownAt = Date.now(); };
+
+    // Reading a task's details (exploration): a click on a node or a choice in the select.
+    // showDetail() is also called by the sim itself on re-render, so it is not wrapped.
+    const taskItems = {};
+    function taskItem(id) {
+        return taskItems[id] || (taskItems[id] = lrs.item('task-' + LRS.slug(id),
+            { name: id + ' ' + task(id).name, concept: CONCEPT }));
+    }
+    const origInit = initializeNetwork;
+    initializeNetwork = function () {
+        origInit();
+        network.on('click', params => {
+            if (params.nodes.length > 0) taskItem(params.nodes[0]).study('click');
+        });
+    };
+    document.addEventListener('DOMContentLoaded', function () {
+        el('detail-select').addEventListener('change', function () {
+            if (this.value) taskItem(this.value).study('select');
+        });
+        // T3 duration slider (after question 5): what-if exploration.
+        const t3 = lrs.slider('t3-duration-slider', { name: 'T3 duration', concept: CONCEPT,
+                                min: 1, max: 6, initial: T3_REDUCED, round: 0, deadband: 1 });
+        el('t3-slider').addEventListener('input', () => t3.input(Number(el('t3-slider').value)));
+        el('t3-slider').addEventListener('change', () => t3.settle(Number(el('t3-slider').value)));
+    });
+}
 }

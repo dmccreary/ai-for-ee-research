@@ -105,6 +105,9 @@ let layoutBottom = 0;    // lowest y used by drawn content (used for layout test
 let optionButtons = [];
 let primaryButton;       // Submit / Next Traceback / See Score
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+let lrs = null, tbStart = 0;   // concept: Error Messages (237)
+
 // ---------------------------------------------------------------
 // Pure logic (no drawing) - also used by the node tests
 // ---------------------------------------------------------------
@@ -200,6 +203,12 @@ function setup() {
 
   updateControls();
 
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Python Traceback Reader', concept: LRS.conceptId(237), mount: '#xapi-slot',
+                          source: 'the Python Traceback Reader MicroSim', pageDwell: true });
+    tbStart = Date.now();
+  }
+
   describe('Python Traceback Reader. Five illustrative Python tracebacks are shown one at a time, ' +
     'each condensed to the file, line, function, and exception message, with three possible ' +
     'diagnoses labeled A, B and C. Choose a diagnosis with the buttons and press Submit. The sim ' +
@@ -233,11 +242,16 @@ function primaryPressed() {
     committed = true;  // one attempt
     const ok = isCorrectChoice(current, orders[current], selected);
     results[current] = ok;
+    if (lrs) lrs.question('q' + TRACEBACKS[current].id, { name: 'Traceback ' + TRACEBACKS[current].id + ': ' +
+                            TRACEBACKS[current].exception.split(':')[0], concept: LRS.conceptId(237) })
+      .answer({ success: ok, response: 'option-' + LETTERS[orders[current][selected]].toLowerCase(),
+                durationMs: tbStart ? Date.now() - tbStart : undefined });
     if (ok) score++;
   } else if (current < TRACEBACKS.length - 1) {
     current++;
     selected = -1;
     committed = false;
+    tbStart = Date.now();
   } else {
     finished = true;
   }

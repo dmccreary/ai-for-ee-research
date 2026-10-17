@@ -95,5 +95,16 @@
       "Reading the definitions is exploration and is not evidence"
     ]
   },
-  "chapter": "09-supervising-agents-roles"
+  "chapter": "09-supervising-agents-roles",
+  "xapi": {
+    "concept": "ai-for-ee-research-161",
+    "objects": {
+      "q-excerpt-1": "ai-for-ee-research-161",
+      "q-excerpt-2": "ai-for-ee-research-161",
+      "q-excerpt-3": "ai-for-ee-research-161",
+      "q-excerpt-4": "ai-for-ee-research-162",
+      "q-excerpt-5": "ai-for-ee-research-161",
+      "q-excerpt-6": "ai-for-ee-research-161"
+    }
+  }
 }

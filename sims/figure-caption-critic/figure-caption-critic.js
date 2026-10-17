@@ -96,6 +96,10 @@ let judgmentButtons = [];
 let submitButton;
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(274);   // Figure Captions
+let lrs = null, capStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -120,6 +124,12 @@ function setup() {
   nextButton.parent(document.querySelector('main'));
   styleButton(nextButton);
   onActivate(nextButton, nextPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Figure Caption Critic', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Figure Caption Critic MicroSim', pageDwell: true });
+  }
+  capStart = Date.now();
 
   updateControls();
 
@@ -163,6 +173,14 @@ function chooseJudgment(j) {
 // One attempt per caption: the submitted judgment cannot be changed
 function submitChoice() {
   if (finished || committed || chosen < 0) return;
+  if (lrs) {
+    // keyed by the figure number printed in the caption ("Figure 3."), never by position
+    const cap = CAPTIONS[pos];
+    const fig = (cap.text.match(/^Figure (\d+)/) || [])[1] || String(pos + 1);
+    lrs.question('q-figure-' + fig, { name: cap.text, concept: PAGE_CONCEPT() })
+      .answer({ success: chosen === cap.judgment, response: LRS.slug(JUDGMENTS[chosen].name),
+                durationMs: capStart ? Date.now() - capStart : undefined });
+  }
   committed = true;
   answers[pos] = chosen;
   if (chosen === CAPTIONS[pos].judgment) score++;
@@ -178,6 +196,7 @@ function nextPressed() {
     pos++;
     chosen = -1;
     committed = false;
+    capStart = Date.now();
   } else {
     finished = true;
   }

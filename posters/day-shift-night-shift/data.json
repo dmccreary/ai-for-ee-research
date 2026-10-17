@@ -1,0 +1,168 @@
+{
+  "title": "Day Shift, Night Shift",
+  "image": "day-shift-night-shift.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#D9A400", "#7A0019", "#1F4E6B", "#2F6DB5", "#D98E04", "#3C8D5A", "#C0392B"],
+  "zones": [
+    {
+      "id": "day-shift-lab",
+      "label": "Day Shift Lab",
+      "color": "#D9A400",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 48.5,
+      "y2": 62.0,
+      "summary": "In daylight the researcher watches three agents work, sees every action as it happens, and answers each request before the next step runs.",
+      "facts": [
+        "Chapters 8 to 10 treated agents as tools you start, supervise, and stop. A session agent had the permissions you gave it for an afternoon (Chapter 19).",
+        "The remedies for a risky agent are least privilege, separate accounts or machines for separate risks, and approval for consequential actions (Chapter 19).",
+        "Begin new work at a low autonomy level from Chapter 9, and widen scope only on evidence (Chapter 19).",
+        "'Always-on' describes where the process runs and how long it lives, not how capable the model is (Chapter 19)."
+      ]
+    },
+    {
+      "id": "approval-requests",
+      "label": "Approval Requests",
+      "color": "#7A0019",
+      "x1": 2.0,
+      "y1": 64.0,
+      "x2": 48.5,
+      "y2": 98.0,
+      "summary": "While you are present, requests arrive for your decision. An approval model sets which actions run alone, which are asked about, and which are blocked.",
+      "facts": [
+        "The approval model is the policy that decides which actions the agent takes alone, which it asks about, and whether you can add your own rules (Chapter 19).",
+        "Some products document a permission layer that allows, blocks, or sends each action for approval. These are vendor-stated claims (Chapter 19).",
+        "To test an approval claim, create a harmless sensitive action and see whether the agent asks (Chapter 19).",
+        "In Chapter 19's illustrative audit, a purchase is out of scope because it leaves your control."
+      ]
+    },
+    {
+      "id": "night-shift-lab",
+      "label": "Night Shift Lab",
+      "color": "#1F4E6B",
+      "x1": 51.5,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 50.0,
+      "summary": "After dark the chair is empty, but a cloud computer glows teal. Agents read mail, run a sweep, file a ticket, and draft a summary with nobody watching.",
+      "facts": [
+        "An always-on agent is a personal agent that continues to run when you are not present (Chapter 19).",
+        "A cloud agent computer sits in the vendor's data center with its own browser, files, and terminal, and keeps running when your computer is off (Chapter 19).",
+        "Delegated sign-in lets the agent log in to services as you, which means it holds the keys to your accounts (Chapter 19).",
+        "An always-on agent holds standing access to your accounts, remembers across weeks, and acts when nobody is looking (Chapter 19)."
+      ]
+    },
+    {
+      "id": "reach-and-control",
+      "label": "Reach and Control",
+      "color": "#2F6DB5",
+      "x1": 51.5,
+      "y1": 52.0,
+      "x2": 66.0,
+      "y2": 73.0,
+      "summary": "Three of the eight criteria: where the agent runs, how far its failure can spread, and which actions need a human.",
+      "facts": [
+        "Where it runs: on your laptop, in the vendor's cloud, or on a server you manage. This decides where the computation and the data are (Chapter 19).",
+        "Blast radius is the extent of what an agent can read, change, or send if it is compromised, misdirected by injected text, or simply wrong (Chapter 19).",
+        "If all of a user's bots share one computer and one set of logins, the blast radius is everything that computer can reach (Chapter 19).",
+        "Approval model: which actions run alone, which are asked about, and whether you can add your own rules (Chapter 19)."
+      ]
+    },
+    {
+      "id": "cost-and-data",
+      "label": "Cost and Data",
+      "color": "#D98E04",
+      "x1": 67.5,
+      "y1": 52.0,
+      "x2": 82.0,
+      "y2": 73.0,
+      "summary": "Three more criteria: how usage is counted and capped, what happens to the data you give the agent, and what it remembers.",
+      "facts": [
+        "Usage metering: ask how usage is counted, what the cap is, what happens at the cap, and whether you can see consumption as it accrues (Chapter 19).",
+        "Agentic work uses far more tokens than chat, and a routine that runs hourly multiplies it (Chapter 19).",
+        "Data exposure covers training use, retention, who can see the data, where it is processed, and whether memory can be inspected and deleted (Chapter 19).",
+        "Memory: keep the master knowledge graph where you control it, and treat what an agent writes into memory as a proposal you review (Chapter 19)."
+      ]
+    },
+    {
+      "id": "proof-and-record",
+      "label": "Proof and Record",
+      "color": "#3C8D5A",
+      "x1": 83.5,
+      "y1": 52.0,
+      "x2": 98.0,
+      "y2": 73.0,
+      "summary": "The last two criteria: whether anyone has tested the vendor's claims, and what record of last night's actions you will have in the morning.",
+      "facts": [
+        "Claim verification: find the vendor's documentation for the claim, then test it hands-on with synthetic data and a throwaway account (Chapter 19).",
+        "Nearly all claims about these products are vendor-stated or from the press, and the research notes found no independent benchmarks or controlled tests (Chapter 19).",
+        "Activity audit: ask what record of last night's actions you will have in the morning (Chapter 19).",
+        "Prices, tiers, and features changed within weeks of launch, so the criteria outlast the product facts (Chapter 19)."
+      ]
+    },
+    {
+      "id": "morning-audit",
+      "label": "Morning Audit",
+      "color": "#C0392B",
+      "x1": 51.5,
+      "y1": 75.0,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "Next morning the researcher reads the log against the task the agent was given and marks what was approved, what was unexpected, and what left their control.",
+      "facts": [
+        "The overnight activity audit is the morning review of what the agent did while you were away (Chapter 19).",
+        "Its questions: what did it do, was each action within the task it was given, what did it spend, and did anything leave your control (Chapter 19).",
+        "An agent whose activity you cannot review is one you should not leave alone with anything that matters (Chapter 19).",
+        "In the illustrative log, reading one unrelated data file is out of scope even if it is harmless: scope, not apparent harm, is the test (Chapter 19)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A researcher watches three agents on screen, sees each action as it happens, and approves a step before it runs. Which region shows this?",
+      "correct_zone": "day-shift-lab",
+      "explanation": "A session agent works under your eyes with the permissions you gave it, so every action can be seen and stopped."
+    },
+    {
+      "question": "The lights are off and the chair is empty, yet a cloud computer reads email and runs a sweep using the researcher's sign-ins. Which region shows this?",
+      "correct_zone": "night-shift-lab",
+      "explanation": "An always-on agent keeps working on its own cloud computer with delegated sign-in while you are away."
+    },
+    {
+      "question": "Which region shows the policy that decides which actions an agent takes alone, which it asks about, and which it may not take?",
+      "correct_zone": "approval-requests",
+      "explanation": "This is the approval model, with approval requests reaching the researcher while they are present."
+    },
+    {
+      "question": "All of one user's bots share one computer and one set of logins, so one fooled bot acts with every credential. Which region shows the criteria that name this danger?",
+      "correct_zone": "reach-and-control",
+      "explanation": "Blast radius and where the agent runs describe how far a single failure can spread."
+    },
+    {
+      "question": "An hourly routine will run all week, and you also want to know whether your inputs are used for training. Which region shows the criteria to check?",
+      "correct_zone": "cost-and-data",
+      "explanation": "Usage metering covers how consumption is counted and capped, and data exposure covers training use and retention."
+    },
+    {
+      "question": "A vendor says the agent always asks before sensitive actions, and no outsider has tested it. Which region shows how to treat that claim?",
+      "correct_zone": "proof-and-record",
+      "explanation": "Claim verification means testing the claim yourself with synthetic data and a throwaway account, and the activity record is how you check what happened."
+    },
+    {
+      "question": "At 8 a.m. you compare each logged action with the task the agent was given. Which region shows this routine?",
+      "correct_zone": "morning-audit",
+      "explanation": "The overnight activity audit checks each action against the task, what was spent, and whether anything left your control."
+    },
+    {
+      "question": "An agent read one data file that was not part of its task. It looked harmless. Which region shows where that is judged?",
+      "correct_zone": "morning-audit",
+      "explanation": "Scope is the test, not apparent harm, so reading any file outside the allowed list counts as out of scope."
+    },
+    {
+      "question": "The research notes found no independent benchmarks of these products, only vendor statements. Which region shows what to do about that?",
+      "correct_zone": "proof-and-record",
+      "explanation": "Without independent evidence, you verify the claims that matter yourself and keep a record you can review."
+    }
+  ]
+}

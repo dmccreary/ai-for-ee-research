@@ -436,3 +436,43 @@ document.addEventListener('DOMContentLoaded', () => {
     el('next-btn').addEventListener('click', nextQuestion);
     render();
 });
+
+// ===========================================
+// xAPI (docs/js/lrs-sim.js). Without the runtime the sim runs unchanged.
+// ===========================================
+(function () {
+    if (!window.LRSSim) return;
+    const CONCEPT = LRS.conceptId(209);   // Citation Chaining
+    const lrs = LRSSim.create({ name: 'Citation Chaining Explorer', concept: CONCEPT, mount: '#xapi-slot',
+                                source: 'the Citation Chaining Explorer MicroSim', pageDwell: true });
+    // Question keys name what is asked, not the position (questions are in a fixed order).
+    const QKEYS = ['q-backward-one-step', 'q-forward-one-step', 'q-shared-reference',
+                   'q-forward-two-steps', 'q-cites-seed-and-c'];
+    const papers = {};
+    function paperItem(id) {
+        return papers[id] || (papers[id] = lrs.item('paper-' + LRS.slug(id),
+            { name: 'Paper ' + id, concept: CONCEPT }));
+    }
+    let shownAt = Date.now();
+    const origOpen = openPaper;
+    openPaper = function (id) {
+        const changed = id !== openPaperId;
+        origOpen(id);
+        if (changed) paperItem(id).study('click');
+    };
+    const origSubmit = submit;
+    submit = function () {
+        const i = qIndex, chosen = selected.slice();
+        const had = !!results[i];
+        origSubmit();
+        if (!had && results[i] && i < QKEYS.length) {
+            const r = results[i];
+            lrs.question(QKEYS[i], { name: QUESTIONS[i].text, concept: CONCEPT }).answer({
+                success: r.correct, response: chosen.slice().sort().join(','),
+                durationMs: Date.now() - shownAt
+            });
+        }
+    };
+    const origNext = nextQuestion;
+    nextQuestion = function () { origNext(); shownAt = Date.now(); };
+})();

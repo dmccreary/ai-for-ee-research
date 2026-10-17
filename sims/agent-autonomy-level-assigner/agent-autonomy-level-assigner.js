@@ -127,6 +127,10 @@ let submitButton;
 let nextButton;
 let startOverButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(158);   // Agent Autonomy
+let lrs = null, taskStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -157,6 +161,11 @@ function setup() {
   startOverButton.parent(document.querySelector('main'));
   styleButton(startOverButton);
   onActivate(startOverButton, startOver);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Agent Autonomy Level Assigner', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Agent Autonomy Level Assigner MicroSim', pageDwell: true });
+  }
 
   checkAnswerKey();
   startOver();
@@ -192,6 +201,7 @@ function startOver() {
   score = 0;
   answers = [];
   finished = false;
+  taskStart = Date.now();
   updateControls();
   redraw();
 }
@@ -211,6 +221,9 @@ function chooseLevel(n) {
 // One attempt per task
 function submitPressed() {
   if (finished || submitted || selected < 0) return;
+  if (lrs) lrs.question('q-task-' + currentTask().id, { name: 'Task ' + currentTask().id + ': ' + currentTask().task, concept: PAGE_CONCEPT() })
+    .answer({ success: selected === currentTask().level, response: 'level-' + selected,
+              durationMs: taskStart ? Date.now() - taskStart : undefined });
   submitted = true;
   answers.push(selected);
   if (selected === currentTask().level) score++;
@@ -224,6 +237,7 @@ function nextPressed() {
     taskPos++;
     selected = -1;
     submitted = false;
+    taskStart = Date.now();
   } else {
     finished = true;
   }

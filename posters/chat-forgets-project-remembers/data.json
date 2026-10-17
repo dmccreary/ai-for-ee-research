@@ -1,0 +1,190 @@
+{
+  "title": "The Chat That Forgets, the Project That Remembers",
+  "image": "chat-forgets-project-remembers.png",
+  "layout": "grid",
+  "showLabels": true,
+  "palette": ["#B8860B", "#C0392B", "#C0392B", "#C0392B", "#7A0019", "#1F7A8C", "#2A2E3A", "#3C8D5A"],
+  "zones": [
+    {
+      "id": "days-go-by",
+      "label": "Days Go By",
+      "color": "#B8860B",
+      "x1": 2.0,
+      "y1": 2.0,
+      "x2": 98.0,
+      "y2": 10.5,
+      "summary": "A calendar runs across both halves. Over days and weeks, sessions end, models are updated, and anything not written down stays behind.",
+      "facts": [
+        "The model has no memory of previous conversations beyond what is in the assembled prompt. A chat appears to remember only because it sends earlier turns again (Chapter 2).",
+        "A long session accumulates tokens, so it gets slower and costlier and eventually pushes the oldest content out (Chapter 4).",
+        "Three remedies: summarize the history, start a fresh session seeded with a short summary, or keep durable facts in a file you reload (Chapter 4).",
+        "Hosted models are updated, so the same prompt run six months apart can return different results (Chapter 3)."
+      ]
+    },
+    {
+      "id": "three-chats",
+      "label": "Three Chats, Three Resets",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 11.5,
+      "x2": 48.5,
+      "y2": 44.5,
+      "summary": "Three separate conversations, each ending in a puff of smoke. Each new chat starts from nothing and has to be told the same things again.",
+      "facts": [
+        "Treat each response as a new reader handed a folder. If a fact is not in the folder, it is not in the room (Chapter 2).",
+        "A chat conversation lives in the application, so it is hard to reproduce exactly. Files are uploaded by hand, and the model version is often not visible in the transcript (Chapter 2).",
+        "An agent that opens a project for the first time knows nothing about it (Chapter 5).",
+        "Many chat tools drop the oldest content instead of failing, so first instructions can quietly fall off the window (Chapter 2)."
+      ]
+    },
+    {
+      "id": "same-mistake-again",
+      "label": "The Same Mistake Again",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 45.5,
+      "x2": 48.5,
+      "y2": 75.5,
+      "summary": "The same question is asked again and the same wrong assumption is made again. The sticky note of corrections is crossed out each time, because it was never saved anywhere the next session reads.",
+      "facts": [
+        "A project instruction file is context engineering done once and reused every time. Without one, goals, conventions, and constraints must be restated in every session (Chapter 5).",
+        "Conventions state how work is done here, such as naming, formats, units, and where files go. They make an agent's output look like your own (Chapter 5).",
+        "A constraint is a boundary, and it is the section you will most wish you had written after an agent crosses one (Chapter 5).",
+        "Keep durable facts in a file you reload on demand, not in the chat (Chapter 4)."
+      ]
+    },
+    {
+      "id": "nothing-to-roll-back-to",
+      "label": "Nothing to Roll Back To",
+      "color": "#C0392B",
+      "x1": 2.0,
+      "y1": 76.5,
+      "x2": 48.5,
+      "y2": 98.0,
+      "summary": "A bare timeline with no snapshots. When a result or an edit goes wrong, there is no earlier state to compare against or return to.",
+      "facts": [
+        "Chat interfaces have low reproducibility: the transcript lives in the app, while command-line work puts commands and files in your repository (Chapter 2).",
+        "Version control records every change, with who made it, when, and why, so any earlier state can be recovered and any two compared (Chapter 5).",
+        "Record the exact model identifier, the date, and the settings with every result (Chapter 3).",
+        "Before an agent edits files, commit your work so its changes are the only ones in the diff and one command can discard them (Chapter 5)."
+      ]
+    },
+    {
+      "id": "instruction-file",
+      "label": "The Instruction File",
+      "color": "#7A0019",
+      "x1": 51.5,
+      "y1": 11.5,
+      "x2": 98.0,
+      "y2": 44.5,
+      "summary": "A gold-edged document at the top of the project, read first in every session. Its tabs hold the project's goals, conventions, and constraints.",
+      "facts": [
+        "A project instruction file is a Markdown file at the project root that an agent reads automatically at the start of a session (Chapter 5).",
+        "It holds three kinds of content: goals (what success means), conventions (how work is done), and constraints (what must not happen) (Chapter 5).",
+        "This book's repository puts instructions in AGENTS.md. CLAUDE.md holds a single line, @AGENTS.md, so every tool reads one source of truth (Chapter 5).",
+        "Twenty checkable lines are followed more reliably than two hundred hopeful ones, and they cost less context on every turn (Chapter 5).",
+        "It contains no secrets and no yesterday's debugging notes (Chapter 5)."
+      ]
+    },
+    {
+      "id": "project-layout",
+      "label": "Project Layout",
+      "color": "#1F7A8C",
+      "x1": 51.5,
+      "y1": 45.5,
+      "x2": 74.5,
+      "y2": 75.5,
+      "summary": "The repository drawn as a filing cabinet. Predictable drawers let an agent find things, and raw data sits in a drawer it may read but never change.",
+      "facts": [
+        "A consistent layout lets an agent find things without being told where, and lets you find your own work after a year (Chapter 5).",
+        "Raw data are read-only inputs. Processed data and results are generated by scripts, so they can be regenerated and checked (Chapter 5).",
+        "Naming conventions: lowercase words with hyphens, no spaces, and ISO dates (year-month-day) so files sort chronologically (Chapter 5).",
+        "Documentation as code keeps the specification, decisions log, and README in the same repository, changed in the same commit as the work (Chapter 5)."
+      ]
+    },
+    {
+      "id": "plain-text-files",
+      "label": "Plain Text Files",
+      "color": "#2A2E3A",
+      "x1": 75.5,
+      "y1": 45.5,
+      "x2": 98.0,
+      "y2": 75.5,
+      "summary": "A Markdown note, a notebook, and a script, all plain documents that a person and an agent can read the same way.",
+      "facts": [
+        "Plain text is readable by anything, comparable line by line, searchable and scriptable, and durable (Chapter 5).",
+        "Markdown is plain text with just enough structure for a human to scan and a model to parse (Chapter 5).",
+        "Keep the source of your project in plain text, and treat rich formats such as PDFs as outputs generated from it (Chapter 5).",
+        "YAML frontmatter carries machine-readable metadata at the top of a Markdown file. A value that contains a colon must be wrapped in double quotes (Chapter 5)."
+      ]
+    },
+    {
+      "id": "commit-history",
+      "label": "Commit History",
+      "color": "#3C8D5A",
+      "x1": 51.5,
+      "y1": 76.5,
+      "x2": 98.0,
+      "y2": 98.0,
+      "summary": "A branching history of gold commits, with a marked rollback point and an agent experiment that was merged only after its diff was reviewed.",
+      "facts": [
+        "A Git commit is a saved snapshot with a message. Commit small, coherent changes in the imperative mood, with a subject line of about 72 characters or fewer (Chapter 5).",
+        "A branch lets you try a change in isolation and merge it back only if it works (Chapter 5).",
+        "In Chapter 5's example, an agent asked only to fix a typo changed a measured ENOB from 9.2 to 9.6 and deleted a qualification. Only the diff showed it.",
+        "Prompt versioning ties each result to the exact prompt that made it. Record the short commit identifier in the output (Chapter 5)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which region shows weeks passing between sessions, so that a stale instruction or an updated hosted model can change what the next result looks like?",
+      "correct_zone": "days-go-by",
+      "explanation": "The model carries nothing between conversations, and hosted models change over time, so time itself is a risk to repeatability."
+    },
+    {
+      "question": "Which region shows each new conversation starting like a new reader handed an empty folder?",
+      "correct_zone": "three-chats",
+      "explanation": "The model has only what is sent in this prompt. A new chat sends none of the previous ones."
+    },
+    {
+      "question": "Which region shows the same correction being made by hand in every session because nothing carried over?",
+      "correct_zone": "same-mistake-again",
+      "explanation": "Goals, conventions, and constraints have to be restated each time unless they are saved where the next session reads them first."
+    },
+    {
+      "question": "Which region shows work that cannot be compared with an earlier state or undone, because the only record lives inside an application?",
+      "correct_zone": "nothing-to-roll-back-to",
+      "explanation": "Without a version history there are no snapshots to compare or restore, and the transcript alone is hard to reproduce."
+    },
+    {
+      "question": "Which region shows a top document, read first in every session, that states what the project is for, how work is done, and what must never happen?",
+      "correct_zone": "instruction-file",
+      "explanation": "Goals, conventions, and constraints are the three kinds of content a project instruction file holds."
+    },
+    {
+      "question": "One line in CLAUDE.md imports AGENTS.md so that every tool reads a single source of truth. Which region does this belong to?",
+      "correct_zone": "instruction-file",
+      "explanation": "This is how the book's own repository arranges its project instructions for different tools."
+    },
+    {
+      "question": "Which region shows raw data kept read-only and separated from the processed data and results that scripts generate?",
+      "correct_zone": "project-layout",
+      "explanation": "The raw, processed, and results separation gives an agent a clear boundary to respect and lets outputs be regenerated."
+    },
+    {
+      "question": "Which region explains why a CSV file, a Markdown note, and a script suit both a person and an agent better than a word-processor file or a PDF?",
+      "correct_zone": "plain-text-files",
+      "explanation": "Plain text is readable by anything, comparable line by line, searchable, and durable."
+    },
+    {
+      "question": "Which region shows an experiment tried on a separate line of work and merged only after its changes were reviewed?",
+      "correct_zone": "commit-history",
+      "explanation": "A branch isolates the experiment, and diff review checks what the agent actually changed before it joins the main line."
+    },
+    {
+      "question": "Which region ties a result back to the exact prompt and script that produced it, using a short identifier?",
+      "correct_zone": "commit-history",
+      "explanation": "Recording the short commit identifier with a result lets you recover the prompt, script, and data later."
+    }
+  ]
+}

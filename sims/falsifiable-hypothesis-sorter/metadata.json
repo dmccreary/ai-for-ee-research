@@ -94,5 +94,18 @@
       "Reading the checklist of properties is exploration and is not evidence"
     ]
   },
-  "chapter": "14-brainstorming-problem-framing"
+  "chapter": "14-brainstorming-problem-framing",
+  "xapi": {
+    "concept": "ai-for-ee-research-258",
+    "objects": {
+      "q-statement-1": "ai-for-ee-research-258",
+      "q-statement-2": "ai-for-ee-research-258",
+      "q-statement-3": "ai-for-ee-research-258",
+      "q-statement-4": "ai-for-ee-research-258",
+      "q-statement-5": "ai-for-ee-research-258",
+      "q-statement-6": "ai-for-ee-research-258",
+      "q-statement-7": "ai-for-ee-research-258",
+      "q-statement-8": "ai-for-ee-research-258"
+    }
+  }
 }

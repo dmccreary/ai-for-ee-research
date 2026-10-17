@@ -561,3 +561,35 @@ if (typeof module !== 'undefined') {
     module.exports = { ENTITIES, RELATIONSHIPS, QUESTIONS, MASTERY, traverse, answerIds,
                        isCorrectSelection, masteryMet, entityByName };
 }
+
+// ===========================================
+// xAPI (docs/js/lrs-sim.js). Browser only; without the runtime the sim runs unchanged.
+// ===========================================
+if (typeof window !== 'undefined' && window.LRSSim) (function () {
+    const CONCEPT = LRS.conceptId(376);   // Graph Querying
+    const lrs = LRSSim.create({ name: 'Personal Knowledge Graph Query Explorer', concept: CONCEPT,
+                                mount: '#xapi-slot', source: 'the Personal Knowledge Graph Query Explorer MicroSim',
+                                pageDwell: true });
+    // Keys name what is asked (the questions are in a fixed order).
+    const QKEYS = ['q-experiments-using-dataset-a', 'q-designs-tested-with-dataset-b',
+                   'q-papers-reporting-revised-design', 'q-papers-cited-by-rivera-paper',
+                   'q-papers-to-recheck-dataset-a'];
+    const attempts = {};
+    let shownAt = Date.now();
+    const origSubmit = submit;
+    submit = function () {
+        const i = currentQ, had = !!results[i], ids = Array.from(selected);
+        origSubmit();
+        if (!had && results[i] && QKEYS[i]) {
+            attempts[i] = (attempts[i] || 0) + 1;
+            lrs.question(QKEYS[i], { name: QUESTIONS[i].text, concept: CONCEPT }).answer({
+                success: results[i].correct, response: ids.slice().sort().join(','),
+                durationMs: Date.now() - shownAt, extensions: { 'attempt-number': attempts[i] }
+            });
+        }
+    };
+    const origNext = nextQuestion;
+    nextQuestion = function () { origNext(); shownAt = Date.now(); };
+    const origRestart = restart;
+    restart = function () { origRestart(); shownAt = Date.now(); };
+})();

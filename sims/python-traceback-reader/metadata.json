@@ -89,5 +89,15 @@
       "At least 4 of 5 diagnoses matching the answer key on the first attempt is evidence of mastery"
     ]
   },
-  "chapter": "12-data-analysis-scripting"
+  "chapter": "12-data-analysis-scripting",
+  "xapi": {
+    "concept": "ai-for-ee-research-237",
+    "objects": {
+      "q1": "ai-for-ee-research-237",
+      "q2": "ai-for-ee-research-237",
+      "q3": "ai-for-ee-research-237",
+      "q4": "ai-for-ee-research-237",
+      "q5": "ai-for-ee-research-237"
+    }
+  }
 }

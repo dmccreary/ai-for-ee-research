@@ -1,0 +1,2534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for researchers in electrical engineering and computer design. A hands-on guide with practical demonstrations of how AI tools and agents can support everyday research tasks, such as literature searches, data analysis, brainstorming, coding, and manuscript preparation.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/chapters/10-orchestrating-agent-teams/quiz/">
+      
+      
+        <link rel="prev" href="../references/">
+      
+      
+        <link rel="next" href="../../11-literature-search-synthesis/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-orchestrating-teams-of-planning-and-execution-agents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-research-workflows-orchestrator/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Research Workflows and the Researcher as Orchestrator
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-how-language-models-work/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. How Language Models Work
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-models-and-prompt-basics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Choosing Models and Writing Clear Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-context-engineering-prompting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Context Engineering and Advanced Prompting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-markdown-and-version-control/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Markdown Project Files and Version Control
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-knowledge-bases-skill-anatomy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Knowledge Bases, Personal Knowledge Graphs, and the Anatomy of an Agent Skill
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-designing-testing-skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Designing, Testing, and Sharing Agent Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-agents-tool-use-subagents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. Agents, Tool Use, and Subagents
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-supervising-agents-roles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Supervising Agents and Defining Agent Roles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    10. Orchestrating Teams of Planning and Execution Agents
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            10. Orchestrating Teams of Planning and Execution Agents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-in-the-books-working-model-what-is-the-approximate-ratio-of-planning-agents-to-execution-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. In the book's working model, what is the approximate ratio of planning agents to execution agents?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-term-for-the-longest-chain-of-dependent-tasks-in-a-project-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is the term for the longest chain of dependent tasks in a project schedule?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-does-the-book-recommend-more-planning-agents-than-execution-agents-on-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Why does the book recommend more planning agents than execution agents on a team?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-is-the-main-purpose-of-a-handoff-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What is the main purpose of a handoff protocol?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-is-plan-review-considered-the-highest-leverage-review-in-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why is plan review considered the highest-leverage review in the workflow?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-task-queue-contains-tasks-t1-t2-t3-and-t4-t2-needs-t1-t3-needs-t1-and-t4-needs-both-t2-and-t3-which-task-must-start-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A task queue contains tasks T1, T2, T3, and T4. T2 needs T1, T3 needs T1, and T4 needs both T2 and T3. Which task must start first?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-planning-agent-finishes-a-draft-plan-that-it-wants-the-researcher-to-examine-which-handoff-status-should-the-agent-assign-to-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A planning agent finishes a draft plan that it wants the researcher to examine. Which handoff status should the agent assign to the output?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-team-produces-20-planning-outputs-at-6-minutes-each-and-10-execution-outputs-at-15-minutes-each-with-30-minutes-for-conflict-resolution-how-many-hours-of-daily-review-does-it-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A team produces 20 planning outputs at 6 minutes each and 10 execution outputs at 15 minutes each, with 30 minutes for conflict resolution. How many hours of daily review does it need?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-two-execution-agents-report-different-enob-values-for-the-same-data-record-what-should-the-conflict-resolution-procedure-do-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Two execution agents report different ENOB values for the same data record. What should the conflict resolution procedure do first?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-researcher-doubles-the-number-of-execution-agents-on-a-project-but-the-project-duration-does-not-decrease-what-is-the-most-likely-reason" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A researcher doubles the number of execution agents on a project, but the project duration does not decrease. What is the most likely reason?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-literature-search-synthesis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. AI-Assisted Literature Search and Synthesis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-data-analysis-scripting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. AI-Assisted Data Analysis and Scripting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-simulation-testing-code/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Simulation, Testing, and Reproducible Code
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-brainstorming-problem-framing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Brainstorming and Problem Framing
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-manuscript-preparation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. AI-Assisted Manuscript Preparation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-microsims-communication/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. MicroSims and Research Communication
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../17-verification-reproducibility/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Verification and Reproducibility
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../18-responsible-ethical-use/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Responsible and Ethical Use of AI
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../19-always-on-personal-agents/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Always-On Personal Agents for Research
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../20-case-studies-capstone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. Case Studies and Capstone Project
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../posters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Posters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../appendices/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-in-the-books-working-model-what-is-the-approximate-ratio-of-planning-agents-to-execution-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. In the book's working model, what is the approximate ratio of planning agents to execution agents?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-term-for-the-longest-chain-of-dependent-tasks-in-a-project-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is the term for the longest chain of dependent tasks in a project schedule?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-does-the-book-recommend-more-planning-agents-than-execution-agents-on-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Why does the book recommend more planning agents than execution agents on a team?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-is-the-main-purpose-of-a-handoff-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What is the main purpose of a handoff protocol?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-is-plan-review-considered-the-highest-leverage-review-in-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why is plan review considered the highest-leverage review in the workflow?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-task-queue-contains-tasks-t1-t2-t3-and-t4-t2-needs-t1-t3-needs-t1-and-t4-needs-both-t2-and-t3-which-task-must-start-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A task queue contains tasks T1, T2, T3, and T4. T2 needs T1, T3 needs T1, and T4 needs both T2 and T3. Which task must start first?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-planning-agent-finishes-a-draft-plan-that-it-wants-the-researcher-to-examine-which-handoff-status-should-the-agent-assign-to-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A planning agent finishes a draft plan that it wants the researcher to examine. Which handoff status should the agent assign to the output?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-team-produces-20-planning-outputs-at-6-minutes-each-and-10-execution-outputs-at-15-minutes-each-with-30-minutes-for-conflict-resolution-how-many-hours-of-daily-review-does-it-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A team produces 20 planning outputs at 6 minutes each and 10 execution outputs at 15 minutes each, with 30 minutes for conflict resolution. How many hours of daily review does it need?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-two-execution-agents-report-different-enob-values-for-the-same-data-record-what-should-the-conflict-resolution-procedure-do-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Two execution agents report different ENOB values for the same data record. What should the conflict resolution procedure do first?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-researcher-doubles-the-number-of-execution-agents-on-a-project-but-the-project-duration-does-not-decrease-what-is-the-most-likely-reason" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A researcher doubles the number of execution agents on a project, but the project duration does not decrease. What is the most likely reason?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/chapters/10-orchestrating-agent-teams/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-orchestrating-teams-of-planning-and-execution-agents">Quiz: Orchestrating Teams of Planning and Execution Agents<a class="headerlink" href="#quiz-orchestrating-teams-of-planning-and-execution-agents" title="Permanent link">&para;</a></h1>
+<p>Test your understanding of agent teams, work breakdown, task dependencies, handoffs, review checkpoints, attention budgets, and scaling limits with these 10 review questions.</p>
+<hr />
+<h4 id="1-in-the-books-working-model-what-is-the-approximate-ratio-of-planning-agents-to-execution-agents">1. In the book's working model, what is the approximate ratio of planning agents to execution agents?<a class="headerlink" href="#1-in-the-books-working-model-what-is-the-approximate-ratio-of-planning-agents-to-execution-agents" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>20 planning agents to 10 execution agents</li>
+<li>10 planning agents to 20 execution agents</li>
+<li>1 planning agent to 1 execution agent</li>
+<li>5 planning agents to 1 execution agent</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. The book uses roughly 20 planning agents to 10 execution agents as a design target, because planning outputs are cheap to review or discard while execution outputs change files and need more careful checking.</p>
+<p><strong>Concept Tested:</strong> Agent Ratio</p>
+<p><strong>See:</strong> ./index.md#the-team-and-the-orchestrator</p>
+</details>
+<hr />
+<h4 id="2-what-is-the-term-for-the-longest-chain-of-dependent-tasks-in-a-project-schedule">2. What is the term for the longest chain of dependent tasks in a project schedule?<a class="headerlink" href="#2-what-is-the-term-for-the-longest-chain-of-dependent-tasks-in-a-project-schedule" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Shared workspace</li>
+<li>Handoff protocol</li>
+<li>Review checkpoint</li>
+<li>Critical path</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. The critical path is the longest sequence of dependent tasks and sets the minimum project duration. Adding agents cannot shorten it; only shortening a task on it can, and even then another path may become critical.</p>
+<p><strong>Concept Tested:</strong> Task Dependencies</p>
+<p><strong>See:</strong> ./index.md#breaking-work-down</p>
+</details>
+<hr />
+<h4 id="3-why-does-the-book-recommend-more-planning-agents-than-execution-agents-on-a-team">3. Why does the book recommend more planning agents than execution agents on a team?<a class="headerlink" href="#3-why-does-the-book-recommend-more-planning-agents-than-execution-agents-on-a-team" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Because planning agents are always more accurate</li>
+<li>Because planning outputs are cheap to discard while execution outputs are expensive to check</li>
+<li>Because execution agents cannot run in parallel</li>
+<li>Because planning agents require more compute resources</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Plans are documents that can be revised or discarded at low cost, so producing many candidates in parallel is efficient. Execution changes files and consumes attention to verify, so the execution side is kept smaller.</p>
+<p><strong>Concept Tested:</strong> Agent Team</p>
+<p><strong>See:</strong> ./index.md#the-team-and-the-orchestrator</p>
+</details>
+<hr />
+<h4 id="4-what-is-the-main-purpose-of-a-handoff-protocol">4. What is the main purpose of a handoff protocol?<a class="headerlink" href="#4-what-is-the-main-purpose-of-a-handoff-protocol" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>To let agents share the same context window</li>
+<li>To eliminate the need for review checkpoints</li>
+<li>To define a uniform way work passes from one agent to another</li>
+<li>To increase the number of agents in the team</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. A handoff protocol specifies the format, location, and status values used when one agent passes work to another, reducing information loss. It does not remove the need for review, and it is not about team size or shared context windows.</p>
+<p><strong>Concept Tested:</strong> Handoff Protocol</p>
+<p><strong>See:</strong> ./index.md#handoffs-shared-workspaces-and-conflicts</p>
+</details>
+<hr />
+<h4 id="5-why-is-plan-review-considered-the-highest-leverage-review-in-the-workflow">5. Why is plan review considered the highest-leverage review in the workflow?<a class="headerlink" href="#5-why-is-plan-review-considered-the-highest-leverage-review-in-the-workflow" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>A defect found in a plan costs minutes, while the same defect found after execution costs a rerun</li>
+<li>Plans are the only output that can be reviewed by a human</li>
+<li>Plans do not need acceptance criteria</li>
+<li>Execution outputs cannot be reviewed at all</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. Catching a problem in the plan avoids the much larger cost of executing a flawed plan and then redoing the work. Plans should have acceptance criteria, and execution outputs can and should be reviewed.</p>
+<p><strong>Concept Tested:</strong> Plan Review</p>
+<p><strong>See:</strong> ./index.md#specifying-prioritizing-and-reporting</p>
+</details>
+<hr />
+<h4 id="6-a-task-queue-contains-tasks-t1-t2-t3-and-t4-t2-needs-t1-t3-needs-t1-and-t4-needs-both-t2-and-t3-which-task-must-start-first">6. A task queue contains tasks T1, T2, T3, and T4. T2 needs T1, T3 needs T1, and T4 needs both T2 and T3. Which task must start first?<a class="headerlink" href="#6-a-task-queue-contains-tasks-t1-t2-t3-and-t4-t2-needs-t1-t3-needs-t1-and-t4-needs-both-t2-and-t3-which-task-must-start-first" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>T2</li>
+<li>T1</li>
+<li>T4</li>
+<li>T3</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. T1 has no prerequisites, while T2, T3, and T4 all depend directly or indirectly on T1. Nothing else can start until T1 finishes.</p>
+<p><strong>Concept Tested:</strong> Task Queue</p>
+<p><strong>See:</strong> ./index.md#breaking-work-down</p>
+</details>
+<hr />
+<h4 id="7-a-planning-agent-finishes-a-draft-plan-that-it-wants-the-researcher-to-examine-which-handoff-status-should-the-agent-assign-to-the-output">7. A planning agent finishes a draft plan that it wants the researcher to examine. Which handoff status should the agent assign to the output?<a class="headerlink" href="#7-a-planning-agent-finishes-a-draft-plan-that-it-wants-the-researcher-to-examine-which-handoff-status-should-the-agent-assign-to-the-output" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>accepted</li>
+<li>running</li>
+<li>needs-review</li>
+<li>rejected</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. An agent never marks its own work as accepted; <code>accepted</code> belongs to a reviewer agent, a script, or the researcher. <code>needs-review</code> correctly signals that the output is ready for the next checkpoint.</p>
+<p><strong>Concept Tested:</strong> Review Checkpoint</p>
+<p><strong>See:</strong> ./index.md#handoffs-shared-workspaces-and-conflicts</p>
+</details>
+<hr />
+<h4 id="8-a-team-produces-20-planning-outputs-at-6-minutes-each-and-10-execution-outputs-at-15-minutes-each-with-30-minutes-for-conflict-resolution-how-many-hours-of-daily-review-does-it-need">8. A team produces 20 planning outputs at 6 minutes each and 10 execution outputs at 15 minutes each, with 30 minutes for conflict resolution. How many hours of daily review does it need?<a class="headerlink" href="#8-a-team-produces-20-planning-outputs-at-6-minutes-each-and-10-execution-outputs-at-15-minutes-each-with-30-minutes-for-conflict-resolution-how-many-hours-of-daily-review-does-it-need" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>3 hours</li>
+<li>4 hours</li>
+<li>4.5 hours</li>
+<li>5 hours</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. The load is 20 × 6 + 10 × 15 + 30 = 120 + 150 + 30 = 300 minutes, which is 5 hours. If the researcher has only 4 hours of attention, the team is too large.</p>
+<p><strong>Concept Tested:</strong> Researcher Attention</p>
+<p><strong>See:</strong> ./index.md#review-approval-and-researcher-attention</p>
+</details>
+<hr />
+<h4 id="9-two-execution-agents-report-different-enob-values-for-the-same-data-record-what-should-the-conflict-resolution-procedure-do-first">9. Two execution agents report different ENOB values for the same data record. What should the conflict resolution procedure do first?<a class="headerlink" href="#9-two-execution-agents-report-different-enob-values-for-the-same-data-record-what-should-the-conflict-resolution-procedure-do-first" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Establish whether the disagreement is about facts or judgment, then trace each result to its inputs and method</li>
+<li>Average the two values and report the mean</li>
+<li>Ask a third agent to pick the more confident report</li>
+<li>Reject both reports and rerun the analysis blindly</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. Sound conflict resolution separates factual disagreements from judgment calls, traces each result to its inputs and method, and finds the first divergence. Averaging unrelated values or rerunning without understanding the cause can hide the real problem.</p>
+<p><strong>Concept Tested:</strong> Conflict Resolution</p>
+<p><strong>See:</strong> ./index.md#handoffs-shared-workspaces-and-conflicts</p>
+</details>
+<hr />
+<h4 id="10-a-researcher-doubles-the-number-of-execution-agents-on-a-project-but-the-project-duration-does-not-decrease-what-is-the-most-likely-reason">10. A researcher doubles the number of execution agents on a project, but the project duration does not decrease. What is the most likely reason?<a class="headerlink" href="#10-a-researcher-doubles-the-number-of-execution-agents-on-a-project-but-the-project-duration-does-not-decrease-what-is-the-most-likely-reason" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The planning agents are not producing enough plans</li>
+<li>The agents are not sharing a workspace</li>
+<li>The new agents are slower than the old ones</li>
+<li>The agents are blocked by dependencies on the critical path</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>. Parallelism cannot shorten the critical path; added agents will sit idle waiting for prerequisite tasks. A shared workspace and plan production affect coordination but do not explain why more agents fail to speed up a dependency-bound schedule.</p>
+<p><strong>Concept Tested:</strong> Scaling Agent Teams</p>
+<p><strong>See:</strong> ./index.md#cost-benefit-and-the-limits-of-scaling</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../11-literature-search-synthesis/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

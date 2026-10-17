@@ -1,0 +1,134 @@
+{
+  "title": "The Window That Fills Up",
+  "orientation": "landscape",
+  "image": "the-window-that-fills-up.png",
+  "layout": "top-bottom",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Budget Ruler",
+      "panel": "top",
+      "x": 12.3,
+      "y": 15.4,
+      "radius": 4,
+      "color": "#FFCC33",
+      "hint": "Find the long wooden ruler with plain tick marks held in the border collie's mouth at the upper left.",
+      "description": "The window is one shared budget: tokens left for the answer equal the window minus the system prompt, history, attachments, and your message. In the worked example, 32,000 minus 16,000 leaves 16,000 tokens for the completion (Chapter 2).",
+      "tip": "Subtract before you paste."
+    },
+    {
+      "id": 2,
+      "label": "System Prompt",
+      "panel": "top",
+      "x": 27.2,
+      "y": 22.8,
+      "radius": 4,
+      "color": "#2A2E3A",
+      "hint": "Find the teal block with a gear icon at the very left end of the top tube.",
+      "description": "Standing instructions placed before the conversation and resent with every turn. One paragraph of discipline changes every later response, but it spends budget each time: a 3,000-token system prompt on a 32,000-token window costs about a tenth of the budget before you say anything (Chapter 2).",
+      "tip": "A system prompt is also not a security boundary (Chapter 2)."
+    },
+    {
+      "id": 3,
+      "label": "The Paper Block",
+      "panel": "top",
+      "x": 32.7,
+      "y": 22.8,
+      "radius": 4,
+      "color": "#7A0019",
+      "hint": "Find the maroon block with a stack-of-pages icon, just right of the gear block in the top tube.",
+      "description": "A pasted or attached document counts as prompt tokens. Estimate prose tokens as words divided by 0.75: an 8,250-word paper is about 11,000 tokens. That is good to roughly twenty percent for prose and an under-estimate for equation-heavy or code-heavy text (Chapter 2)."
+    },
+    {
+      "id": 4,
+      "label": "Token Meter",
+      "panel": "top",
+      "x": 43.1,
+      "y": 22.8,
+      "radius": 4,
+      "color": "#B8860B",
+      "hint": "Find the yellow block with a waveform icon at the right end of the short run of blocks in the top tube.",
+      "description": "Tokens are the unit of billing and capacity. Equations, code, part numbers, units, and acronyms cost more tokens per word than ordinary prose, so multiply a prose estimate by about 1.3 for such text, and count with the provider's own tokenizer when it matters (Chapter 2)."
+    },
+    {
+      "id": 5,
+      "label": "Middle Gets Overlooked",
+      "panel": "top",
+      "x": 45.5,
+      "y": 46.0,
+      "radius": 4,
+      "color": "#E67E22",
+      "hint": "Find the run of three yellow waveform blocks in the middle of the second tube, between the first pages and the speech bubbles.",
+      "description": "A model does not use every position in a long context equally well. Material in the middle of a very long prompt is more often overlooked than material at the start or end, so a document that fits is not a document that was read with equal care (Chapter 2). The glow is a schematic, not a measurement."
+    },
+    {
+      "id": 6,
+      "label": "Room for the Answer",
+      "panel": "top",
+      "x": 60.0,
+      "y": 22.8,
+      "radius": 4,
+      "color": "#3C8D5A",
+      "hint": "Find the long empty stretch of the top tube, tinted pale green with a double-headed arrow along it.",
+      "description": "The completion draws from the same pool as the prompt. With 16,000 tokens left in the worked example, a 6,000-token literature summary fits with room to spare (Chapter 2). Free space is not guaranteed; it is whatever the prompt leaves behind."
+    },
+    {
+      "id": 7,
+      "label": "Silent Overflow",
+      "panel": "bottom",
+      "x": 23.0,
+      "y": 69.0,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the faded gray, see-through blocks at the left end of the bottom tube, spilling out of the pipe toward a wire waste basket.",
+      "description": "When a prompt exceeds the limit, the request is rejected, the oldest content is dropped, or the completion is cut off. Dropping is the dangerous case: nothing looks wrong, and the model carries on without the instructions that fell off the front (Chapter 2).",
+      "tip": "Restate constraints near the end of the prompt, or start fresh with a short summary (Chapter 2)."
+    },
+    {
+      "id": 8,
+      "label": "Conversation History",
+      "panel": "bottom",
+      "x": 55.6,
+      "y": 46.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the pair of teal blocks with speech-bubble icons in the middle of the second tube.",
+      "description": "The earlier turns, sent again with every request, because the model has no memory beyond the assembled prompt. History accumulates: each turn adds tokens, so a long session grows slower and costlier and eventually pushes the oldest content out (Chapters 2 and 4).",
+      "tip": "Summarize at intervals, restart with a short summary, or keep durable facts in a file (Chapter 4)."
+    },
+    {
+      "id": 9,
+      "label": "The Second Paste",
+      "panel": "bottom",
+      "x": 67.3,
+      "y": 46.0,
+      "radius": 4,
+      "color": "#7A0019",
+      "hint": "Find the pair of maroon page-stack blocks added near the right of the second tube, after the speech bubbles.",
+      "description": "A second paper of the same length raises the prompt from 16,000 to 27,000 tokens and leaves only 5,000 in a 32,000-token window. The step that went wrong was not the second paste but not doing the subtraction first (Chapter 2)."
+    },
+    {
+      "id": 10,
+      "label": "Cut-Off Answer",
+      "panel": "bottom",
+      "x": 88.5,
+      "y": 46.2,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the glowing pale speech-bubble block at the open right end of the second tube, crackling with gold light.",
+      "description": "A request for a 6,000-token literature summary cannot be completed in full when only 5,000 tokens remain. The reply stops partway because the window is full, not because the model gave up (Chapter 2)."
+    },
+    {
+      "id": 11,
+      "label": "Model Working Unaware",
+      "panel": "bottom",
+      "x": 89.4,
+      "y": 68.0,
+      "radius": 4,
+      "color": "#1F7A8C",
+      "hint": "Find the brass-and-teal machine with a glowing gear at the right end of the bottom tube.",
+      "description": "The model has no separate channel for what it is missing or how sure it is. Confident and uncertain statements come from the same mechanism, so an answer built without your first instructions looks like any other answer (Chapter 2)."
+    }
+  ]
+}

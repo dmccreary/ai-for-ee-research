@@ -117,6 +117,10 @@ let causeSelect;
 let submitButton;
 let nextButton;
 
+// ---- xAPI (docs/js/lrs-sim.js). Without it (p5.js editor) the sim still runs, silently. ----
+const PAGE_CONCEPT = () => LRS.conceptId(343);   // Failure Case
+let lrs = null, caseStart = 0;
+
 function setup() {
   updateCanvasSize(); // get the container width first
   const canvas = createCanvas(containerWidth, containerHeight);
@@ -135,6 +139,12 @@ function setup() {
 
   submitButton = makeButton('Submit', submitChoice);
   nextButton = makeButton('Next Case', nextPressed);
+
+  if (window.LRSSim) {
+    lrs = LRSSim.create({ name: 'Failure Case Root Cause Analyzer', concept: PAGE_CONCEPT(), mount: '#xapi-slot',
+                          source: 'the Failure Case Root Cause Analyzer MicroSim', pageDwell: true });
+  }
+  caseStart = Date.now();
 
   updateControls();
 
@@ -177,6 +187,13 @@ function submitChoice() {
   if (finished || committed) return;
   const c = selectedCause();
   if (c < 0) return;
+  if (lrs) {
+    // keyed by the case's correct root cause (stable, unique per case), never by position
+    const cs = CASES[caseIndex];
+    lrs.question('q-' + LRS.slug(CAUSES[cs.cause]), { name: 'Case ' + (caseIndex + 1) + ': ' + cs.text, concept: PAGE_CONCEPT() })
+      .answer({ success: isCorrect(caseIndex, c), response: LRS.slug(CAUSES[c]),
+                durationMs: caseStart ? Date.now() - caseStart : undefined });
+  }
   choices.push(c);
   committed = true;
   updateControls();
@@ -188,6 +205,7 @@ function nextPressed() {
   if (caseIndex < CASES.length - 1) {
     caseIndex++;
     committed = false;
+    caseStart = Date.now();
     causeSelect.selected('-1');
   } else {
     finished = true;
