@@ -309,6 +309,7 @@ exclude_docs: |
   **/cover-prompt.md
   **/TODO.md
   **/seed-prompt.md
+  img/mascot/character-sheet.md
 
 # Rebuild on changes during `mkdocs serve`
 watch:
