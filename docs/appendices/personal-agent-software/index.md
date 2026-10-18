@@ -12,6 +12,9 @@ description: Research notes on always-on personal agent software — SpaceXAI's 
     Prices, tiers, and features changed several times within weeks of launch,
     so verify against each vendor's own pages before relying on a number.
 
+For a one-page picture of the four commercial products, see the interactive
+poster [Four Personal Agents, Side by Side](../../posters/personal-agent-software/index.md).
+
 ## Why this matters for EE research
 
 A *personal agent* is an AI system that does not just answer a question but
@@ -23,6 +26,8 @@ The products below all arrived within roughly two months of each other in
 mid-2026, so the category is moving fast.
 
 ## Grok Bot (SpaceXAI)
+
+![Grok Bot app icon](./logos/grok-bot.png){ align=right width="110" }
 
 SpaceXAI announced Grok Bot on August 11, 2026, as an early-beta, cloud-based
 agent service. "Bot" is the product name; it is not the ordinary Grok chatbot.
@@ -86,6 +91,8 @@ Open questions raised by analysts:
 
 ## Dots (OpenAI)
 
+![ChatGPT app icon, the app that hosts Dots](./logos/chatgpt.png){ align=right width="110" }
+
 OpenAI introduced Dots at DevDay on September 29, 2026, as a personal agent
 inside ChatGPT, powered by GPT-6 Astra.
 
@@ -121,6 +128,8 @@ action.
 
 ## Muse (Meta)
 
+![Muse from Meta app icon](./logos/muse.png){ align=right width="110" }
+
 Meta launched Muse on September 8, 2026, in the U.S. for users 18 and older,
 as a separate app that also runs inside WhatsApp. It is aimed at everyday
 tasks: schedules, shopping, travel, and turning long-term goals into plans.
@@ -141,6 +150,8 @@ tasks: schedules, shopping, travel, and turning long-term goals into plans.
   developer-oriented tools.
 
 ## Claude Cowork (Anthropic)
+
+![Claude app icon](./logos/claude.png){ align=right width="110" }
 
 Cowork launched in January 2026 and became generally available on
 April 9, 2026. It lives in a tab inside Claude Desktop, where Claude reads your
@@ -163,11 +174,15 @@ files, runs multi-step tasks, and uses plugins and MCP connectors.
 
 ## Open-source alternatives: OpenClaw and Hermes Agent
 
+![OpenClaw lobster mascot](./logos/openclaw.png){ align=right width="90" }
+
 - **OpenClaw** is an MIT-licensed, self-hosted agent that lives in chat apps
   such as WhatsApp, Telegram, and Discord. You choose the model (Claude, GPT,
   Gemini, or a local model through Ollama). Model usage is the main cost —
   one estimate is $5–50/month. Reviews report reliability problems: runaway
   loops, malicious skills, and unattended deletions.
+![Hermes Agent wordmark from the project README](./logos/hermes-agent.png){ width="360" }
+
 - **Hermes Agent** (Nous Research, public since February 25, 2026) is also
   MIT-licensed. It runs on a laptop, server, or cloud sandbox, supports many
   model providers, and has a learning loop that writes its own skills. The
@@ -232,6 +247,8 @@ and managed, in exchange for openness and control.
 4. Which claims can the author verify first-hand with a hands-on trial?
 
 ## Sources
+
+Logos are the vendors' own app icons or project artwork and belong to their owners. The Muse icon is the App Store artwork for [Muse from Meta](https://apps.apple.com/us/app/muse-from-meta/id6760173601), the OpenClaw icon is from [openclaw.ai](https://openclaw.ai), and the Hermes Agent wordmark is the banner from the [Hermes Agent repository](https://github.com/NousResearch/hermes-agent). The Grok Bot, ChatGPT, and Claude icons are cropped from a screenshot of the author's dock. Dots has no icon of its own that we found, so the ChatGPT icon stands in for the app that hosts it.
 
 - [The Information — SpaceXAI announces Grok Bot](https://www.theinformation.com/briefings/spacexai-announces-ai-agents-product-grok-bot)
 - [MacRumors — Grok Bot brings always-on AI agents to macOS and iOS](https://www.macrumors.com/2026/08/11/grok-bot-macos-ios/)

@@ -1,6 +1,6 @@
 ---
 title: Interactive Infographic Posters
-description: Twenty-two full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.
+description: Twenty-three full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.
 hide:
   - toc
 ---
@@ -144,5 +144,11 @@ The original concepts and their sources are in [Infographic Poster Ideas](./post
     **[Meet Your Agent Team](./your-agent-team/index.md)**
 
     Seven agent personas side by side, from Ada the chief of staff to six specialists, with each one's role, title, and detailed task list. *Grid overlay, 7 regions.*
+
+-   [![Four Personal Agents, Side by Side](./personal-agent-software/personal-agent-software-thumb.jpg)](./personal-agent-software/index.md)
+
+    **[Four Personal Agents, Side by Side](./personal-agent-software/index.md)**
+
+    Grok Bot, Dots, Muse, and Claude Cowork compared on launch date, where each runs, whether it is always on, its safety model, and its price. *Grid overlay, 4 regions.*
 
 </div>
