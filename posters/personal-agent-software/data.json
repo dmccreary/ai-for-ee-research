@@ -1,0 +1,110 @@
+{
+  "title": "Four Personal Agents, Side by Side",
+  "image": "personal-agent-software.png",
+  "layout": "grid",
+  "showLabels": false,
+  "palette": [
+    "#8A8F98",
+    "#2A2E3A",
+    "#0A7CFF",
+    "#D97757"
+  ],
+  "zones": [
+    {
+      "id": "grok-bot",
+      "label": "Grok Bot (SpaceXAI)",
+      "color": "#8A8F98",
+      "x1": 15.7,
+      "y1": 16.7,
+      "x2": 35.8,
+      "y2": 94.4,
+      "summary": "Grok Bot is a hosted, always-on agent whose bots share one cloud computer, which makes it the only one here built around a manager bot directing specialists.",
+      "facts": [
+        "Launched August 11, 2026 as an early-beta cloud agent service.",
+        "Each user gets one cloud computer with a browser, files, and a terminal, and every one of that user's bots shares it, including its logins.",
+        "Safety claims include an Auto Review step for sensitive actions; analysts note that one compromised bot exposes the rest.",
+        "Entry price is about $20 a month (Cursor) or $30 (SuperGrok), plus usage billed at token cost; the allowance is unpublished."
+      ]
+    },
+    {
+      "id": "dots",
+      "label": "Dots (OpenAI)",
+      "color": "#2A2E3A",
+      "x1": 36.4,
+      "y1": 16.7,
+      "x2": 56.5,
+      "y2": 94.4,
+      "summary": "Dots is a personal agent inside ChatGPT that works in the background with its own cloud computer, and it limits what it can do without asking.",
+      "facts": [
+        "Introduced at DevDay on September 29, 2026, powered by GPT-6 Astra.",
+        "Each dot has its own cloud computer and browser, and you can open it at any time to watch what it is doing.",
+        "Sign-in passwords are not exposed to the model, background research uses read-only access, and you can write custom approval rules.",
+        "Reports conflict on price: Engadget says the first dot is free for Pro and Business Premium, while AIMultiple lists $100 a month."
+      ]
+    },
+    {
+      "id": "muse",
+      "label": "Muse (Meta)",
+      "color": "#0A7CFF",
+      "x1": 57.1,
+      "y1": 16.7,
+      "x2": 77.1,
+      "y2": 94.4,
+      "summary": "Muse is Meta's consumer agent, with the most explicit purchase-approval story and the narrowest work-tool integrations.",
+      "facts": [
+        "Launched September 8, 2026 in the U.S. for users 18 and older, as an app and inside WhatsApp.",
+        "Each user's agent runs in its own cloud virtual machine, and you can watch its browser and review an activity log.",
+        "A layer called Sentinel allows, blocks, or sends for approval each action, and each purchase needs approval that shows the exact details.",
+        "Pricing is a free tier, $20 a month (Power), and $100 a month (Maximum). Training on user data is on by default, with an opt-out."
+      ]
+    },
+    {
+      "id": "claude-cowork",
+      "label": "Claude Cowork (Anthropic)",
+      "color": "#D97757",
+      "x1": 77.8,
+      "y1": 16.7,
+      "x2": 97.8,
+      "y2": 94.4,
+      "summary": "Cowork is the most mature knowledge-work tool here, but it is session-oriented and the least always-on.",
+      "facts": [
+        "Launched in January 2026 and became generally available on April 9, 2026, as a tab inside Claude Desktop.",
+        "It works mostly in a local sandbox plus plugins and MCP connectors. A March 2026 source says scheduled tasks need the computer awake and Claude Desktop open.",
+        "There is no separate price: it is included in Claude Pro ($20), Max ($100 or $200), Team, and Enterprise plans, sharing one usage pool with chat and Claude Code.",
+        "Enterprise adds role-based access control and spend limits, but one source notes Cowork activity is not yet in audit logs."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which agent has every one of a user's bots sharing a single cloud computer and its logins?",
+      "correct_zone": "grok-bot",
+      "explanation": "Grok Bot gives each user one cloud computer, so one compromised bot exposes the rest."
+    },
+    {
+      "question": "Which agent introduced at DevDay hides sign-in passwords from the model and lets you write your own approval rules?",
+      "correct_zone": "dots",
+      "explanation": "Dots keeps passwords away from the underlying model and supports custom approval rules."
+    },
+    {
+      "question": "Which agent uses a layer called Sentinel and needs approval showing exact details for each purchase?",
+      "correct_zone": "muse",
+      "explanation": "Muse's Sentinel layer allows, blocks, or sends each action for approval."
+    },
+    {
+      "question": "Which agent is the least always-on, because one source says scheduled tasks need the computer awake?",
+      "correct_zone": "claude-cowork",
+      "explanation": "Cowork lives in Claude Desktop, so a March 2026 source says it needs the computer awake."
+    },
+    {
+      "question": "Which agent's price is reported inconsistently, from free to $100 a month?",
+      "correct_zone": "dots",
+      "explanation": "Engadget and AIMultiple disagree, so check OpenAI's own announcement."
+    },
+    {
+      "question": "Which agent is included in the $20 to $200 Claude plans rather than sold separately?",
+      "correct_zone": "claude-cowork",
+      "explanation": "Cowork has no separate SKU and draws on the same usage pool as Claude chat and Claude Code."
+    }
+  ]
+}

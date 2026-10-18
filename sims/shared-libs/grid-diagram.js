@@ -8,6 +8,7 @@
 //   "image":   "../../chapters/.../image.png",
 //   "layout":  "grid",
 //   "palette": ["#hex", ...],          // optional accent colors
+//   "exploreConfetti": true,           // optional: confetti explosion when every zone has been clicked in Explore mode
 //   "zones": [
 //     { "id": "zone-id", "label": "Label", "color": "#hex",
 //       "x1": 5, "y1": 10, "x2": 37, "y2": 90,  // % of image
@@ -26,6 +27,10 @@ class GridDiagramSim {
     this.editMode    = false;
     this.zoneEls     = new Map();   // id → zone <div>
     this.activeId    = null;
+
+    // Explore-all state (only used when data.exploreConfetti is true)
+    this.visited     = new Set();
+    this.progressEl  = null;
 
     // Quiz state
     this.quizQueue   = [];
@@ -52,6 +57,8 @@ class GridDiagramSim {
       // overlay label chip is hidden by default (it would overlap the real title).
       // Set "showLabels": true in data.json only for images with no built-in titles.
       this.showLabels = this.data.showLabels === true;
+      // Opt-in: celebrate when the reader has clicked every zone in Explore mode.
+      this.exploreConfetti = this.data.exploreConfetti === true;
     } catch (err) {
       this._fatalError('Could not load data.json: ' + err.message);
       return;
@@ -178,6 +185,14 @@ class GridDiagramSim {
 
     if (this.btnExplore) this.btnExplore.addEventListener('click', () => this.setMode('explore'));
     if (this.btnQuiz)    this.btnQuiz.addEventListener('click',    () => this.setMode('quiz'));
+
+    if (this.exploreConfetti && this.scoreEl && this.scoreEl.parentNode) {
+      this.progressEl = document.createElement('span');
+      this.progressEl.className = 'explore-progress';
+      this.progressEl.setAttribute('aria-live', 'polite');
+      this.scoreEl.parentNode.insertBefore(this.progressEl, this.scoreEl);
+      this._updateProgress();
+    }
   }
 
   // ── Mode switching ─────────────────────────────────────────────────────────
@@ -197,8 +212,10 @@ class GridDiagramSim {
     if (mode === 'explore') {
       this._showPrompt('Click on any column to learn about it.');
       if (this.scoreEl) this.scoreEl.style.display = 'none';
+      this._updateProgress();
     } else if (mode === 'quiz') {
       this._startQuiz();
+      if (this.progressEl) this.progressEl.style.display = 'none';
     }
   }
 
@@ -254,7 +271,33 @@ class GridDiagramSim {
 
     if (this.quizQuestionEl) this.quizQuestionEl.style.display = 'none';
 
+    this._trackVisit(id);
     this._reportHeight();
+  }
+
+  // ── Explore-all celebration ────────────────────────────────────────────────
+
+  _trackVisit(id) {
+    if (!this.exploreConfetti || this.mode !== 'explore') return;
+    const total = (this.data.zones || []).length;
+    const wasComplete = this.visited.size === total;
+    this.visited.add(id);
+    this._updateProgress();
+    if (!wasComplete && this.visited.size === total) {
+      const el = this.zoneEls.get(id);
+      this._confettiExplosion(el ? el.getBoundingClientRect() : null);
+    }
+  }
+
+  _updateProgress() {
+    if (!this.progressEl) return;
+    const total = (this.data.zones || []).length;
+    const n = this.visited.size;
+    this.progressEl.style.display = 'inline';
+    this.progressEl.textContent = n === total
+      ? 'All ' + total + ' explored!'
+      : 'Explored ' + n + ' of ' + total;
+    this.progressEl.classList.toggle('explore-complete', n === total);
   }
 
   _showPrompt(text) {
@@ -550,6 +593,71 @@ class GridDiagramSim {
       }
       frame++;
       if (frame < 100) requestAnimationFrame(tick);
+      else canvas.remove();
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // Confetti explosion: particles burst outward from the last-clicked zone
+  // (and a second wave from the center of the poster), then fall with gravity.
+  // Skipped when the reader prefers reduced motion; the progress chip still updates.
+  _confettiExplosion(originRect) {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const palette = (this.data.palette || ['#2D8A4E', '#6A3FB5', '#E07B39', '#1389A6']).concat('#FFCC33', '#FFFFFF');
+    const canvas  = document.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+    const o1 = originRect
+      ? { x: clamp(originRect.left + originRect.width / 2, 0, canvas.width),
+          y: clamp(originRect.top  + originRect.height / 2, 0, canvas.height) }
+      : { x: canvas.width / 2, y: canvas.height / 2 };
+    const o2 = { x: canvas.width / 2, y: canvas.height * 0.4 };
+
+    const burst = (o, count, delay) => Array.from({ length: count }, () => {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 12 + 4;
+      return {
+        x: o.x, y: o.y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 3,
+        r: Math.random() * 5 + 3,
+        color: palette[Math.floor(Math.random() * palette.length)],
+        round: Math.random() < 0.3,
+        rot: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.35,
+        delay,
+        life: 0
+      };
+    });
+    const particles = burst(o1, 140, 0).concat(burst(o2, 90, 12));
+
+    const LIFE = 130;
+    let frame = 0;
+    const tick = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const p of particles) {
+        if (frame < p.delay) continue;
+        p.life++;
+        p.x += p.vx; p.y += p.vy;
+        p.vx *= 0.97; p.vy = p.vy * 0.97 + 0.22;
+        p.rot += p.spin;
+        ctx.save();
+        ctx.globalAlpha = clamp(1 - (p.life - LIFE * 0.6) / (LIFE * 0.4), 0, 1);
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (p.round) { ctx.beginPath(); ctx.arc(0, 0, p.r * 0.8, 0, Math.PI * 2); ctx.fill(); }
+        else         { ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r); }
+        ctx.restore();
+      }
+      frame++;
+      if (frame < LIFE + 12) requestAnimationFrame(tick);
       else canvas.remove();
     };
     requestAnimationFrame(tick);

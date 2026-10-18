@@ -2,622 +2,666 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/about/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/contact/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/course-description/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/glossary/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/license/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/personal-agents/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/ada-chief-of-staff/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/kai-conferences/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/marisol-events-speakers/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/penny-budget-finance/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/pixel-presentations-web/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/rosa-grant-writing/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/agent-personas/scout-novelty-search/</loc>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/personal-agent-software/</loc>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/appendices/pkg/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/01-research-workflows-orchestrator/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/01-research-workflows-orchestrator/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/01-research-workflows-orchestrator/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/02-how-language-models-work/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/02-how-language-models-work/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/02-how-language-models-work/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/03-models-and-prompt-basics/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/03-models-and-prompt-basics/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/03-models-and-prompt-basics/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/04-context-engineering-prompting/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/04-context-engineering-prompting/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/04-context-engineering-prompting/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/05-markdown-and-version-control/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/05-markdown-and-version-control/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/05-markdown-and-version-control/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/06-knowledge-bases-skill-anatomy/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/06-knowledge-bases-skill-anatomy/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/06-knowledge-bases-skill-anatomy/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/07-designing-testing-skills/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/07-designing-testing-skills/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/07-designing-testing-skills/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/08-agents-tool-use-subagents/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/08-agents-tool-use-subagents/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/08-agents-tool-use-subagents/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/09-supervising-agents-roles/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/09-supervising-agents-roles/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/09-supervising-agents-roles/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/10-orchestrating-agent-teams/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/10-orchestrating-agent-teams/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/10-orchestrating-agent-teams/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/11-literature-search-synthesis/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/11-literature-search-synthesis/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/11-literature-search-synthesis/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/12-data-analysis-scripting/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/12-data-analysis-scripting/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/12-data-analysis-scripting/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/13-simulation-testing-code/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/13-simulation-testing-code/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/13-simulation-testing-code/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/14-brainstorming-problem-framing/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/14-brainstorming-problem-framing/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/14-brainstorming-problem-framing/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/15-manuscript-preparation/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/15-manuscript-preparation/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/15-manuscript-preparation/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/16-microsims-communication/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/16-microsims-communication/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/16-microsims-communication/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/17-verification-reproducibility/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/17-verification-reproducibility/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/17-verification-reproducibility/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/18-responsible-ethical-use/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/18-responsible-ethical-use/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/18-responsible-ethical-use/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/19-always-on-personal-agents/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/19-always-on-personal-agents/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/19-always-on-personal-agents/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/20-case-studies-capstone/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/20-case-studies-capstone/quiz/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/chapters/20-case-studies-capstone/references/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/concept-list/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/glossary-quality-report/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/mascot-test/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/quiz-generation-report/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/poster-ideas/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/agent-loop-inside-its-sandbox/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/chat-forgets-project-remembers/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/cleaning-without-hiding/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/code-that-runs-code-that-is-right/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/dans-desktop/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/day-shift-night-shift/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/figure-you-read-simulation-you-explore/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/folder-of-files-graph-of-knowledge/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/from-doing-to-directing/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/hunch-to-falsifiable-hypothesis/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/inside-an-agent-skill/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/posters/personal-agent-software/</loc>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/real-citation-fluent-fake/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/the-autonomy-dial/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/the-literature-funnel/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/the-manuscript-line/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/the-paper-behind-the-book/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/the-window-that-fills-up/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/twenty-planners-ten-doers/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/vague-prompt-engineered-context/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/verified-is-not-validated/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/posters/where-does-your-data-go/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/posters/your-agent-team/</loc>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/adoption-plan-prioritizer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/agent-autonomy-level-assigner/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/agent-comparison-criteria-matcher/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/agent-failure-log-triage/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/agent-loop-stepper/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/agent-permission-boundary-judge/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/ai-use-disclosure-decision-helper/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/citation-chaining-explorer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/citation-verification-judge/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/context-selection-budget/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/context-window-budget-calculator/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/data-cleaning-decision-simulator/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/data-sensitivity-sorter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/ai-for-ee-research/sims/desktop-setup/</loc>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/embedding-vector-search-explorer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/failure-case-root-cause-analyzer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/falsifiable-hypothesis-sorter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/figure-caption-critic/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/generative-ai-to-agent/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/graph-viewer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/markdown-syntax-matcher/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/microsim-suitability-judge/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/model-choice-scenario-sorter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/numerical-sanity-check-judge/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/orchestrator-review-load-calculator/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/overnight-activity-audit/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/paper-section-sorter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/pkg-graph-query-explorer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/project-instruction-file-triage/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/prompt-chain-builder/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/prompt-component-sorter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/prompt-injection-spotter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/python-traceback-reader/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-funnel/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-idea-ranking-matrix/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-task-decomposition-builder/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-task-sorter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/research-workflow-handoffs/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/review-checkpoint-judge/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/search-precision-recall-explorer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/skill-anatomy-labeler/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/skill-description-trigger-tester/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/skill-failure-mode-classifier/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/sycophancy-spotter/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/task-dependency-critical-path/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/temperature-next-token-explorer/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/unit-test-selector-seeded-bugs/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/sims/verification-method-matcher/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/slides/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/slides/overview/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/slides/overview/slides/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/</loc>
-         <lastmod>2026-10-17</lastmod>
+         <lastmod>2026-10-18</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,167 @@
+{
+  "title": "Meet Your Agent Team",
+  "image": "your-agent-team.png",
+  "layout": "grid",
+  "showLabels": false,
+  "palette": [
+    "#6B3FA0",
+    "#F27C1E",
+    "#0E9AA7",
+    "#2E9E5B",
+    "#D62839",
+    "#FF5FA2",
+    "#F5B800"
+  ],
+  "exploreConfetti": true,
+  "zones": [
+    {
+      "id": "ada",
+      "label": "Ada: Chief of Staff",
+      "color": "#6B3FA0",
+      "x1": 2.1,
+      "y1": 12.0,
+      "x2": 15.2,
+      "y2": 94.1,
+      "summary": "Ada is your chief of staff: the one agent every other agent reports to, and the one that decides what reaches you.",
+      "facts": [
+        "Keeps your personal knowledge graph and answers \"what do I already know about X?\" from it.",
+        "Reads, labels, and summarizes your email, and drafts replies for you to send.",
+        "Owns your personal calendar, so any event that needs your time goes through Ada.",
+        "Never sends mail, accepts invitations, or spends money without your approval."
+      ]
+    },
+    {
+      "id": "scout",
+      "label": "Scout: Novelty and Prior-Art Search",
+      "color": "#F27C1E",
+      "x1": 15.9,
+      "y1": 12.0,
+      "x2": 29.0,
+      "y2": 94.1,
+      "summary": "Scout searches the literature, patents, and public code and tells you what was and was not found for each claim in your idea.",
+      "facts": [
+        "Reports one of three verdicts: no close match found, partially covered, or already published.",
+        "Never says an idea is novel; it lists the sources it searched instead.",
+        "Feeds a prior-art summary to Rosa for the significance section of a proposal.",
+        "Never reports a citation it has not opened."
+      ]
+    },
+    {
+      "id": "marisol",
+      "label": "Marisol: Events and Speakers",
+      "color": "#0E9AA7",
+      "x1": 29.6,
+      "y1": 12.0,
+      "x2": 42.8,
+      "y2": 94.1,
+      "summary": "Marisol turns a speaker idea into a confirmed seminar with a room, a host, and a reminder trail.",
+      "facts": [
+        "Owns the department's event calendar; Ada owns your personal one.",
+        "Re-confirms each speaker a week before the visit.",
+        "Passes honoraria, travel, and catering costs to Penny.",
+        "Asks before sending the first invitation to any new speaker."
+      ]
+    },
+    {
+      "id": "penny",
+      "label": "Penny: Lab Budgets and Finance",
+      "color": "#2E9E5B",
+      "x1": 43.4,
+      "y1": 12.0,
+      "x2": 56.6,
+      "y2": 94.1,
+      "summary": "Penny shows what each grant has spent, what remains, and what is about to go wrong, and prepares the paperwork so you only approve it.",
+      "facts": [
+        "Reconciles each account against the university ledger by budget line.",
+        "Projects spending to the end of the award, so a line that runs out early is flagged months ahead.",
+        "Builds the budget tables and justification that Rosa needs for a proposal.",
+        "Never moves money, makes purchases, or enters card details."
+      ]
+    },
+    {
+      "id": "rosa",
+      "label": "Rosa: Grant Writing",
+      "color": "#D62839",
+      "x1": 57.2,
+      "y1": 12.0,
+      "x2": 70.4,
+      "y2": 94.1,
+      "summary": "Rosa finds the funding call, builds the proposal skeleton, and drafts and tightens the text until the point is clear in the first paragraph.",
+      "facts": [
+        "Ranks funding opportunities by fit with your research and lists deadlines and eligibility.",
+        "Runs a mock review that lists the weakest points before real reviewers find them.",
+        "Tracks the university's sponsored-programs deadline, which comes days before the sponsor's.",
+        "Never submits a proposal or invents preliminary results; a human submits."
+      ]
+    },
+    {
+      "id": "pixel",
+      "label": "Pixel: Presentations and Web",
+      "color": "#FF5FA2",
+      "x1": 71.0,
+      "y1": 12.0,
+      "x2": 84.1,
+      "y2": 94.1,
+      "summary": "Pixel makes your work easy to present and easy to find, with clear decks for talks and a web profile that stays as current as your last paper.",
+      "facts": [
+        "Adds alt text, checks color contrast, and recolors figures for color-blind readers.",
+        "Edits a staging copy of your web page and asks before anything goes live.",
+        "Compares every number and citation on a slide to its source before handing over a deck.",
+        "Never puts unpublished results on a public page."
+      ]
+    },
+    {
+      "id": "kai",
+      "label": "Kai: Conferences and Proposals",
+      "color": "#F5B800",
+      "x1": 84.8,
+      "y1": 12.0,
+      "x2": 97.9,
+      "y2": 94.1,
+      "summary": "Kai finds the conferences worth your time, gets strong proposals in on time, and drafts the travel so you can focus on the talk.",
+      "facts": [
+        "Checks sponsor, indexing, and program-committee quality for every venue.",
+        "Tracks each submission through review, rebuttal, and camera-ready dates.",
+        "Sends cost estimates to Penny and accepted-talk details to Pixel.",
+        "Never pays a registration fee, books travel, or submits without your approval."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which agent decides what reaches you and coordinates all the others?",
+      "correct_zone": "ada",
+      "explanation": "Ada is the chief of staff. Every other agent reports its results to Ada."
+    },
+    {
+      "question": "Which agent checks whether a research idea has already been published?",
+      "correct_zone": "scout",
+      "explanation": "Scout searches papers, patents, and code and reports the closest prior art for each claim."
+    },
+    {
+      "question": "Which agent finds, invites, and confirms seminar speakers?",
+      "correct_zone": "marisol",
+      "explanation": "Marisol runs the department's event calendar and the speaker pipeline."
+    },
+    {
+      "question": "Which agent warns you that the equipment line of a grant will run out early?",
+      "correct_zone": "penny",
+      "explanation": "Penny forecasts the burn rate on each budget line and flags overruns."
+    },
+    {
+      "question": "Which agent runs a mock review and lists the weakest points of a proposal?",
+      "correct_zone": "rosa",
+      "explanation": "Rosa plays the skeptical reviewer before the real reviewers see the proposal."
+    },
+    {
+      "question": "Which agent keeps your university web page current and checks slide numbers against their sources?",
+      "correct_zone": "pixel",
+      "explanation": "Pixel builds decks and figures and edits a staging copy of your web page."
+    },
+    {
+      "question": "Which agent tracks calls for papers and flags predatory venues?",
+      "correct_zone": "kai",
+      "explanation": "Kai vets the sponsor, indexing, and program committee of each conference."
+    }
+  ]
+}

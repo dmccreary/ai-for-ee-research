@@ -48,6 +48,14 @@ body {
 }
 #quiz-score strong { color: #1a1a1a; }
 
+/* Explore-all progress chip (only created when data.json sets exploreConfetti) */
+.explore-progress {
+  margin-left: auto;
+  font-size: 13px;
+  color: #555;
+}
+.explore-progress.explore-complete { color: #2D8A4E; font-weight: 700; }
+
 /* ── Image wrapper + overlay ─────────────────────────────────────────────── */
 #image-wrapper {
   position: relative;
