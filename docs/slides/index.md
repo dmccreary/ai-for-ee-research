@@ -11,10 +11,19 @@ Slide decks built with MARP (Markdown Presentation Ecosystem).
 
 <div class="grid cards" markdown>
 
--   **[AI for EE Research — Book Overview Deck](./overview/index.md)**
+-   **[AI for EE Research — Static Overview](./overview/index.md)**
 
     ![AI for EE Research — Book Overview Deck](./overview/thumbnail.png)
 
     A 20-slide overview of the whole textbook: the researcher-as-orchestrator idea, the five parts of the book, and the key takeaways of all 20 chapters.
+
+-   **[AI for EE Research — MicroSims](./overview-microsims/index.md)**
+
+    ![AI for EE Research — Book Overview Deck](./overview-microsims/thumbnail.png)
+
+    A 20-slide overview of the whole textbook: the researcher-as-orchestrator idea, the five parts of the book, and the key takeaways of all 20 chapters.
+
+
+## Overview MicroSims
 
 </div>
