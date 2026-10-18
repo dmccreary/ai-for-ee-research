@@ -121,8 +121,10 @@ and [quality analysis](learning-graph/quality-metrics.md) behind it.
 ### Appendices
 
 The **[Appendices](appendices/index.md)** hold supporting research that is not
-yet part of a chapter: [Personal Agents](appendices/personal-agents/index.md), a
-comparison of always-on personal AI agents, and
+yet part of a chapter: [Agent Personas](appendices/agent-personas/index.md), a
+sample team of seven agent characters for a researcher's dashboard;
+[Personal Agent Software](appendices/personal-agent-software/index.md), a
+comparison of always-on personal AI agent products; and
 [Personal Knowledge Graphs](appendices/pkg/index.md), a summary of research on
 integrating personal knowledge graphs securely into an organization.
 

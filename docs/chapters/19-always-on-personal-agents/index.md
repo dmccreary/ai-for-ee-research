@@ -58,7 +58,7 @@ This chapter builds on concepts from:
     The agents in this chapter are the ones that keep working after you close the laptop, with sign-ins to your accounts. That is exactly why they deserve a flock-dog's suspicion. You will leave with criteria that outlast any product name, and a way to audit what happened last night. Trust, but verify!
 
 !!! warning "Read this as a snapshot of October 2026"
-    The product facts in this chapter come from the research notes in the [Personal Agents appendix](../../appendices/personal-agents/index.md), gathered on October 15, 2026. Nearly all claims are stated by vendors or reported in the press, and the notes found no independent benchmarks or controlled tests of these products. Prices, tiers, and features changed within weeks of launch. The chapter's purpose is the criteria for comparing agents, which will outlast the facts. Check each vendor's own pages before relying on any detail here.
+    The product facts in this chapter come from the research notes in the [Personal Agent Software appendix](../../appendices/personal-agent-software/index.md), gathered on October 15, 2026. Nearly all claims are stated by vendors or reported in the press, and the notes found no independent benchmarks or controlled tests of these products. Prices, tiers, and features changed within weeks of launch. The chapter's purpose is the criteria for comparing agents, which will outlast the facts. Check each vendor's own pages before relying on any detail here.
 
 ## What Makes an Agent Personal and Always-On
 

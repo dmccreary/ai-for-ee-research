@@ -47,6 +47,6 @@ The three traffic-light lanes simplify the four data classes of Chapter 18, and 
 
 ## Source
 
-The poster draws on Chapters 18 and 19 of this book. Chapter 19 draws its product facts from the [Personal Agents appendix](../../appendices/personal-agents/index.md), which records vendor-stated claims and press reports and found no independent tests.
+The poster draws on Chapters 18 and 19 of this book. Chapter 19 draws its product facts from the [Personal Agent Software appendix](../../appendices/personal-agent-software/index.md), which records vendor-stated claims and press reports and found no independent tests.
 
 Teachers and editors can open [calibration mode](./main.html?edit=true) to adjust zone positions after the artwork is generated. Copy only the `x1`, `y1`, `x2`, and `y2` numbers back into `data.json`, because the calibration export omits `showLabels` and `palette`.

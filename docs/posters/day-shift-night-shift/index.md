@@ -45,6 +45,6 @@ The poster teaches criteria and names no product, price, or ranking. The product
 
 ## Source
 
-The poster draws on Chapter 19 of this book and on the [Personal Agents appendix](../../appendices/personal-agents/index.md) that Chapter 19 cites. It uses the appendix for criteria only, not for prices or rankings.
+The poster draws on Chapter 19 of this book and on the [Personal Agent Software appendix](../../appendices/personal-agent-software/index.md) that Chapter 19 cites. It uses the appendix for criteria only, not for prices or rankings.
 
 Teachers and editors can open [calibration mode](./main.html?edit=true) to adjust zone positions after the artwork is generated. Copy only the `x1`, `y1`, `x2`, and `y2` numbers back into `data.json`, because the calibration export omits `showLabels` and `palette`.

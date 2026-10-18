@@ -39,12 +39,12 @@ One general-purpose assistant that does everything is hard to check, because you
 
 ## Where the Content Comes From
 
-The team is a sample, not a product. The roles, tasks, and approval rules come from the character sheets in the [Personal Agents appendix](../../appendices/personal-agents/index.md), which the author wrote as a design for a researcher's dashboard. Nothing on this poster describes a tested system, and the sample tasks and numbers in the sheets are illustrative. The avatars are AI-generated illustrations made from the image prompts in those sheets.
+The team is a sample, not a product. The roles, tasks, and approval rules come from the character sheets in the [Agent Personas appendix](../../appendices/agent-personas/index.md), which the author wrote as a design for a researcher's dashboard. Nothing on this poster describes a tested system, and the sample tasks and numbers in the sheets are illustrative. The avatars are AI-generated illustrations made from the image prompts in those sheets.
 
 ## Connects to
 
 - [Chapter 19: Always-On Personal Agents for Research](../../chapters/19-always-on-personal-agents/index.md)
-- [Personal Agents appendix](../../appendices/personal-agents/index.md)
+- [Agent Personas appendix](../../appendices/agent-personas/index.md)
 
 ## Source
 

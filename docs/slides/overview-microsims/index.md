@@ -20,18 +20,23 @@ hide:
 - Knowledge representation strategies for education
 - Using GenAI to create MicroSims and Intelligent Textbooks
 
-*The key to artificial intelligent is knowledge representation*
+*The key to artificial intelligence is knowledge representation*
+
+---
+## Thinking About Personal Agents Since 2008
+
+![](./advocate-agents-paper.png)
 
 ---
 ## The Seed Email
 
 ![Seed Email](./seed-email.png){ width="300px" align="right"}
 
+**From:** Gang Qiu<br/>
 Prof. Katie Zhao and I are organizing a monthly departmental workshop on AI for Research Productivity. Our goal is to build a community where graduate students can exchange ideas and explore how to use AI effectively, creatively, responsibly, and ethically in research.
 
 Would you be available to give a 40-minute presentation at our upcoming workshop?
-
-
+...
 ---
 
 ## My Response
@@ -47,7 +52,7 @@ I will make this concrete with case studies from my own work, including interact
 
 ## The Problem: Research Funnel
 
-<iframe src="../../sims/research-funnel/main.html" height="582px" width="100%"></iframe>
+<iframe src="../../sims/research-funnel/main.html" height="582px" width="100%" scrolling="no"></iframe>
 
 ---
 
@@ -69,16 +74,7 @@ I will make this concrete with case studies from my own work, including interact
 ---
 ## Using Agent Personas to Divide Tasks
 
-
-
-
-
-
----
-## How Much Does it Cost Per Month?
-
-<iframe src="../../posters/dans-desktop/main.html" height="750px" width="100%" scrolling="no"></iframe>
-
+<iframe src="../../posters/your-agent-team/main.html" height="760px" width="100%" scrolling="no"></iframe>
 
 
 ---
@@ -87,18 +83,20 @@ I will make this concrete with case studies from my own work, including interact
 How do you efficiency get all your Bots to communicate together as well as communicate with
 the agents in your department and at the University of Minnesota?
 
+**Recall:** *The key to artificial intelligence is knowledge representation*
 
 ---
 
 ## The Key: Personal Knowledge Graph
 
-A central "ground truth" data structure to keep your content aligned with your goals
+A central "ground truth" data structure to keep your content aligned with your goals.
 
 ![](./dans-pkg.png)
+
 ---
 ## Generating a Publishing Quality Paper
 
-![](./microsims-paper.png){ width="300px" align="right"}
+![](./microsims-paper.png){ width="500px" align="right"}
 
 - Ask your GenAI tool what the best practices are
     - Length of paper
@@ -110,4 +108,19 @@ A central "ground truth" data structure to keep your content aligned with your g
     - `build.sh` produces a `main.pdf`
 
 ---
-## Sample GitHub Repo
+## Types of Chats
+
+1. One off cloud based prompt/response pairs - no access to desktop
+2. Disconnected personal agent with access to desktop tools (gmail, calendar etc.)
+3. Full desktop file access with github backup for long running tasks
+
+--
+## Sample Agent Architecture
+
+<iframe src="../../sims/desktop-setup/main.html" height="750px" width="100%" scrolling="no"></iframe>
+
+---
+## How Much Does it Cost Per Month?
+
+<iframe src="../../posters/dans-desktop/main.html" height="750px" width="100%" scrolling="no"></iframe>
+

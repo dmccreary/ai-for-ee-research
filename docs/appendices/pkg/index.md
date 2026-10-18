@@ -209,7 +209,7 @@ in [Chapter 6](../../chapters/06-knowledge-bases-skill-anatomy/index.md) and
 
 - **Written before LLM agents.** The chapter expects BERT and GPT-3 to make
   ML-assisted PKGs practical. Retrieval over graphs and agent memory are the
-  natural updates, and this book's [Personal Agents](../personal-agents/index.md)
+  natural updates, and this book's [Personal Agent Software](../personal-agent-software/index.md)
   appendix covers the agent side.
 - **Blogs not re-read.** The four blog posts were not fetched, so details that
   exist only in the blogs are missing from this summary.

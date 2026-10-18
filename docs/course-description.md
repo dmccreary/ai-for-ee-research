@@ -69,7 +69,7 @@ writing the survey covers SpaceXAI's **Grok Bot**, OpenAI's **Dots**, Meta's
 to give researchers durable criteria for choosing and supervising any of them:
 where the agent runs, what it can reach, how permissions and approvals work,
 what it costs, and what happens to research data. The current research notes
-are collected in the appendix [Personal Agents](appendices/personal-agents/index.md).
+are collected in the appendix [Personal Agent Software](appendices/personal-agent-software/index.md).
 
 ## Main Topics Covered
 

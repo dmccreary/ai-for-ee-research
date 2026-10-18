@@ -106,7 +106,7 @@ persistent cloud computers, delegated sign-in, taught routines, the individual
 products (Grok Bot, Dots, Muse, Claude Cowork, OpenClaw, and Hermes Agent),
 blast radius, usage metering, comparison criteria, vendor-claim verification,
 research-data exposure, overnight audits, and agent selection. See the
-appendix [Personal Agents](../appendices/personal-agents/index.md).
+appendix [Personal Agent Software](../appendices/personal-agent-software/index.md).
 
 ### PKG — Personal Knowledge Graphs
 
