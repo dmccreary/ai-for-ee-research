@@ -211,7 +211,15 @@ nav:
 
   - Appendices:
       - List of Appendices: appendices/index.md
-      - Personal Agents: appendices/personal-agents/index.md
+      - Personal Agents:
+          - appendices/personal-agents/index.md
+          - Ada, Chief of Staff: appendices/personal-agents/ada-chief-of-staff.md
+          - Scout, Novelty Search: appendices/personal-agents/scout-novelty-search.md
+          - Marisol, Events and Speakers: appendices/personal-agents/marisol-events-speakers.md
+          - Penny, Budget and Finance: appendices/personal-agents/penny-budget-finance.md
+          - Rosa, Grant Writing: appendices/personal-agents/rosa-grant-writing.md
+          - Pixel, Presentations and Web: appendices/personal-agents/pixel-presentations-web.md
+          - Kai, Conferences: appendices/personal-agents/kai-conferences.md
       - Personal Knowledge Graphs: appendices/pkg/index.md
 
   - Glossary: glossary.md
