@@ -591,6 +591,8 @@ ORDER = [
     "where-does-your-data-go",
     "day-shift-night-shift",
     "the-paper-behind-the-book",
+    "dans-desktop",
+    "your-agent-team",
 ]
 
 
@@ -648,7 +650,7 @@ def gallery() -> None:
     body = (
         "---\n"
         "title: Interactive Infographic Posters\n"
-        "description: Twenty-one full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.\n"
+        "description: Twenty-two full-width interactive infographic posters, most built as side-by-side comparisons, that teach the judgment behind AI-assisted electrical engineering research.\n"
         "hide:\n  - toc\n---\n\n"
         "# Interactive Infographic Posters\n\n"
         "These posters turn the book's biggest ideas into full-width, classroom-ready pictures. Most set a risky way of working beside a controlled one, so the difference is visible at a glance. "

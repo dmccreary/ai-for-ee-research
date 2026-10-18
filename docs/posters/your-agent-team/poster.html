@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+  Source for your-agent-team.png. Rendered from HTML (real text, avatar images) because the
+  names, roles, and task lists are author-supplied text, not art.
+  Re-render from the repo root:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
+      --hide-scrollbars --window-size=1920,1080 --screenshot=docs/posters/your-agent-team/your-agent-team.png \
+      file://$PWD/docs/posters/your-agent-team/poster.html
+  Avatars in avatars/ are 420 px copies of docs/appendices/personal-agents/img/.
+  Zone coordinates in data.json come from the grid below (see the comment at the bottom).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meet Your Agent Team</title>
+<style>
+  :root { --bg:#FAF7F2; --ink:#2A2E3A; --maroon:#7A0019; --gold:#FFCC33; --line:#D9D2C5; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width:1920px; height:1080px; background:var(--bg); overflow:hidden; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--ink);
+    background-image: linear-gradient(rgba(122,0,25,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(122,0,25,.045) 1px, transparent 1px);
+    background-size: 40px 40px; position: relative;
+  }
+  header { position:absolute; left:40px; top:18px; width:1840px; }
+  header h1 { font-size:54px; font-weight:800; letter-spacing:-1px; color:var(--maroon); line-height:1.05; }
+  header p  { font-size:27px; margin-top:6px; color:#4a4f5c; }
+  .table { position:absolute; left:40px; top:130px; width:1840px; display:grid;
+           grid-template-columns: repeat(7, 1fr); column-gap:12px; }
+  .col { display:flex; flex-direction:column; background:#fff; border:2px solid var(--line); border-radius:22px; overflow:hidden; }
+  .name { height:80px; display:flex; align-items:center; justify-content:center; background:var(--c); color:var(--ink);
+          font-size:44px; font-weight:800; letter-spacing:-.5px; }
+  .icon { height:215px; background:var(--tint); display:flex; align-items:flex-end; justify-content:center; padding-top:8px; }
+  .icon img { height:207px; width:auto; max-width:100%; object-fit:contain; display:block; }
+  .role { height:165px; padding:12px 14px 8px; text-align:center; border-top:6px solid var(--c); display:flex; flex-direction:column; justify-content:center; }
+  .role .title { font-size:26px; font-weight:800; line-height:1.15; }
+  .role .sub { font-size:20px; font-weight:600; color:#5b606c; margin-top:6px; line-height:1.25; }
+  .tasks { height:426px; border-top:1px solid var(--line); padding:14px 14px 10px 12px; }
+  .tasks ul { list-style:none; }
+  .tasks li { position:relative; padding-left:20px; font-size:20.5px; line-height:1.27; margin-bottom:12px; }
+  .tasks li::before { content:""; position:absolute; left:0; top:.5em; width:11px; height:11px; border-radius:50%; background:var(--c); }
+  footer { position:absolute; left:40px; top:1032px; width:1840px; font-size:22px; color:#5b606c; }
+</style>
+<style>
+  .col:nth-child(1) .name { color:#fff; }
+  .col:nth-child(2) .name { color:#1d1f27; }
+  .col:nth-child(3) .name { color:#1d1f27; }
+  .col:nth-child(4) .name { color:#1d1f27; }
+  .col:nth-child(5) .name { color:#fff; }
+  .col:nth-child(6) .name { color:#1d1f27; }
+  .col:nth-child(7) .name { color:#1d1f27; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Meet Your Agent Team: Seven Specialists, One Chief of Staff</h1>
+  <p>Each agent has a color, a role, and a task list. Ada coordinates the rest, and you approve what leaves the building.</p>
+</header>
+
+<div class="table">
+  <div class="col" style="--c:#6B3FA0;--tint:#E6DCF3;--ink:#fff">
+    <div class="name">Ada</div>
+    <div class="icon"><img src="avatars/ada.png" alt="Ada"></div>
+    <div class="role"><div class="title">Chief of Staff</div><div class="sub">Your assistant and coordinator of all six agents</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Links papers, people, and notes into your knowledge graph</li>
+        <li>Triages email and drafts replies in your voice</li>
+        <li>Guards your calendar and flags conflicts</li>
+        <li>Hands work to the other six agents and merges results</li>
+        <li>Writes your morning briefing</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="--c:#F27C1E;--tint:#FCE3CC;--ink:#1d1f27">
+    <div class="name">Scout</div>
+    <div class="icon"><img src="avatars/scout.png" alt="Scout"></div>
+    <div class="role"><div class="title">Novelty and Prior-Art Search</div><div class="sub">Is this idea really new?</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Searches papers, patents, and code</li>
+        <li>Reports the closest prior art, with a link</li>
+        <li>Watches your topics and sends a weekly digest</li>
+        <li>Finds missing citations before you submit</li>
+        <li>Logs every query so it can be rerun</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="--c:#0E9AA7;--tint:#CBEBEE;--ink:#1d1f27">
+    <div class="name">Marisol</div>
+    <div class="icon"><img src="avatars/marisol.png" alt="Marisol"></div>
+    <div class="role"><div class="title">Events and Speakers</div><div class="sub">From invitation to confirmed seminar</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Runs the department seminar and event calendar</li>
+        <li>Proposes, invites, and confirms speakers</li>
+        <li>Books rooms, catering, and a host</li>
+        <li>Collects titles, abstracts, bios, and A/V needs</li>
+        <li>Sends reminders and thank-you notes</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="--c:#2E9E5B;--tint:#CDEBD8;--ink:#1d1f27">
+    <div class="name">Penny</div>
+    <div class="icon"><img src="avatars/penny.png" alt="Penny"></div>
+    <div class="role"><div class="title">Lab Budgets and Finance</div><div class="sub">Every penny accounted for</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Tracks grant spending line by line</li>
+        <li>Forecasts burn rate and flags overruns</li>
+        <li>Drafts purchase requisitions for your signature</li>
+        <li>Prepares travel expense reports</li>
+        <li>Builds proposal budgets with Rosa</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="--c:#D62839;--tint:#F6CDD2;--ink:#fff">
+    <div class="name">Rosa</div>
+    <div class="icon"><img src="avatars/rosa.png" alt="Rosa"></div>
+    <div class="role"><div class="title">Grant Writing</div><div class="sub">Funding calls to finished proposals</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Finds funding calls that fit your research</li>
+        <li>Builds the outline and compliance checklist</li>
+        <li>Drafts aims, approach, and broader impacts</li>
+        <li>Plays skeptical reviewer on your draft</li>
+        <li>Tracks internal and sponsor deadlines</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="--c:#FF5FA2;--tint:#FFD6E7;--ink:#1d1f27">
+    <div class="name">Pixel</div>
+    <div class="icon"><img src="avatars/pixel.png" alt="Pixel"></div>
+    <div class="role"><div class="title">Presentations and Web</div><div class="sub">Clear slides, current web page</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Builds slide decks and speaker notes from a paper</li>
+        <li>Redraws figures in one consistent style</li>
+        <li>Lays out conference posters</li>
+        <li>Keeps your university web page current</li>
+        <li>Checks every slide number against its source</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="--c:#F5B800;--tint:#FCEBB0;--ink:#1d1f27">
+    <div class="name">Kai</div>
+    <div class="icon"><img src="avatars/kai.png" alt="Kai"></div>
+    <div class="role"><div class="title">Conferences and Proposals</div><div class="sub">Deadlines met, talks accepted</div></div>
+    <div class="tasks">
+      <ul>
+        <li>Tracks calls for papers and deadlines</li>
+        <li>Vets venues and flags predatory ones</li>
+        <li>Drafts abstracts and talk proposals</li>
+        <li>Tracks submissions, reviews, and rebuttals</li>
+        <li>Plans registration and travel</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>An illustrative team from the Personal Agents appendix. Agents draft and prepare; you send, submit, sign, and pay.</footer>
+</body>
+</html>
+<!--
+  ZONES (px on the 1920x1080 canvas): table top y=130, bottom y=1016.
+  Column width 252.571px, gap 12px, first column left 40px.
+-->
