@@ -137,6 +137,7 @@ nav:
       - Prompt Injection Spotter: sims/prompt-injection-spotter/index.md
       - Prompt Chain Builder: sims/prompt-chain-builder/index.md
       - Markdown Syntax Matcher: sims/markdown-syntax-matcher/index.md
+      - Desktop Setup: sims/desktop-setup/index.md
       - Project Instruction File Triage: sims/project-instruction-file-triage/index.md
       - Personal Knowledge Graph Query Explorer: sims/pkg-graph-query-explorer/index.md
       - Skill Anatomy Labeler: sims/skill-anatomy-labeler/index.md

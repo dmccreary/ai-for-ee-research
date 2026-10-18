@@ -79,6 +79,12 @@ Interactive MicroSimulations that let you practice the ideas in each chapter: so
 
     Judge which class of AI tool each of eight items of research data may be given to under a four-class illustrative data classification, with immediate feedback and the items grouped by class at the end.
 
+-   **[Desktop Setup](./desktop-setup/index.md)**
+
+    ![Desktop Setup](./desktop-setup/desktop-setup.png)
+
+    Explore the four tools wired together before working with an AI agent (Desktop, GitHub, VS Code, and the Unix shell) and the six labeled ways they control or talk to each other, including why GitHub is the required undo button.
+
 -   **[Embedding Vector Search Explorer](./embedding-vector-search-explorer/index.md)**
 
     ![Embedding Vector Search Explorer](./embedding-vector-search-explorer/embedding-vector-search-explorer.png)
