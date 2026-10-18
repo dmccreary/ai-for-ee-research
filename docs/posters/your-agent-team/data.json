@@ -12,6 +12,7 @@
     "#FF5FA2",
     "#F5B800"
   ],
+  "exploreConfetti": true,
   "zones": [
     {
       "id": "ada",

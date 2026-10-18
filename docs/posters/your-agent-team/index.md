@@ -13,7 +13,7 @@ hide:
 [Open the interactive poster full screen](./main.html){ .md-button .md-button--primary }
 <!-- poster-art:end -->
 
-Use **Explore** mode to hover over or click a column and read what that agent does and where it stops. Use **Quiz** mode to read a job description and click the agent who does it.
+Use **Explore** mode to hover over or click a column and read what that agent does and where it stops. Use **Quiz** mode to read a job description and click the agent who does it. Click all seven agents in Explore mode for a confetti surprise.
 
 The seven columns are:
 
