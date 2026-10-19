@@ -9,6 +9,7 @@ hide:
 - University of Minnesota
 - Department of Electrical Engineering and Computer Design
 - October 23rd, 2026
+- LinkedIn: [https://www.linkedin.com/in/danmccreary/](https://www.linkedin.com/in/danmccreary/)
 
 ---
 ## About Dan McCreary
@@ -39,6 +40,8 @@ hide:
 ![Seed Email](./seed-email.png){ width="300px" align="right"}
 
 **From:** Gang Qiu<br/>
+**Date:** October 9th, 2026<br/>
+
 Prof. Katie Zhao and I are organizing a monthly departmental workshop on AI for Research Productivity. Our goal is to build a community where graduate students can exchange ideas and explore how to use AI effectively, creatively, responsibly, and ethically in research.
 
 Would you be available to give a 40-minute presentation at our upcoming workshop?
@@ -111,9 +114,10 @@ The length of task, measured by how long a human expert needs to do it, that an 
 5. Helping build my Coding Club hand-on kits (Smart Clock)
 6. Promoting books, microsims and interactive infographic posters
 7. Scheduling and calendaring
-8. Designing signal process using DSP algorithms on Microcontrollers
-9. Ordering low-costs parts for STEM Kits
-10. Assisting local friends start their own companies
+8. Summarize research papers on knowledge representation
+9. Designing signal process using DSP algorithms on Microcontrollers
+10. Ordering low-costs parts for STEM Kits
+11. Assisting local friends start their own companies
 
 ---
 ## Using Agent Personas to Divide Tasks
@@ -197,3 +201,15 @@ A **skill** is a reusable package of instructions that lets an agent do one defi
 8. How much additional environmental damage will agents cause?
 9. Will swarms of agents cause unemployment for grad students?
 10. When do we shut down rogue agent swarms?
+
+---
+## Conclusion
+
+1. Agent power is doubling every 4-5 months (Agentic Horizon)
+2. Researchers that use agents can be 100x more productive
+3. Many new options for agent software and more on the way
+4. Designing agents and their roles can be fun (and scary)
+5. Some training on desktop setup is skill needed (~6 hours)
+6. Research agents open up many security, ethics, and legal issues
+
+**Thank You!**
