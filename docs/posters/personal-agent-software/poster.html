@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Four Personal Agents, Side by Side</title>
+<title>Five Personal Agents, Side by Side</title>
 <style>
   :root {
     --bg: #FAF7F2;
@@ -39,48 +39,53 @@
   header p  { font-size: 28px; margin-top: 8px; color: #4a4f5c; }
   header .rule { height: 8px; width: 160px; background: var(--gold); margin-top: 12px; border-radius: 4px; }
 
-  /* label | 4 product columns */
+  /* label | 5 product columns */
   .table {
     position: absolute; left: 40px; top: 180px; width: 1838px;
     display: grid;
-    grid-template-columns: 250px repeat(4, 385px);
-    grid-template-rows: 230px 100px 130px 120px 150px 110px;
+    grid-template-columns: 250px repeat(5, 305px);
+    grid-template-rows: 210px 80px 110px 100px 90px 160px 90px;
     column-gap: 12px; row-gap: 0;
   }
-  .cell { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8px 18px; }
+  .cell { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8px 12px; }
   .label {
     align-items: flex-start; text-align: left; font-size: 30px; font-weight: 700; color: var(--maroon);
     border-left: 8px solid var(--gold); padding-left: 18px; line-height: 1.2;
   }
-  .card { background: #fff; border: 2px solid var(--line); border-top: 1px solid var(--line); border-bottom: 0; font-size: 27px; font-weight: 600; line-height: 1.25; }
+  .card { background: #fff; border: 2px solid var(--line); border-top: 1px solid var(--line); border-bottom: 0; font-size: 24px; font-weight: 600; line-height: 1.25; }
   .r1 { border-radius: 24px 24px 0 0; border-top-width: 10px; }
   .r6 { border-radius: 0 0 24px 24px; border-bottom: 2px solid var(--line); }
   .a-grok   { border-top-color: #8A8F98; }
   .a-dots   { border-top-color: #2A2E3A; }
   .a-muse   { border-top-color: #0A7CFF; }
   .a-cowork { border-top-color: #D97757; }
+  .a-spark  { border-top-color: #7E57C2; }
 
-  .icon img { width: 130px; height: 130px; display: block; filter: drop-shadow(0 3px 7px rgba(0,0,0,.28)); }
-  .name { font-size: 38px; font-weight: 800; line-height: 1.1; margin-top: 10px; }
-  .name small { display: block; font-size: 24px; font-weight: 600; color: #5b606c; margin-top: 4px; }
-  .strong { font-size: 31px; font-weight: 800; }
+  .icon img { width: 120px; height: 120px; display: block; filter: drop-shadow(0 3px 7px rgba(0,0,0,.28)); }
+  .name { font-size: 34px; font-weight: 800; line-height: 1.1; margin-top: 10px; }
+  .name small { display: block; font-size: 22px; font-weight: 600; color: #5b606c; margin-top: 4px; }
+  .strong { font-size: 28px; font-weight: 800; }
   .muted { font-size: 23px; font-weight: 600; color: #5b606c; margin-top: 4px; }
-  .badge { display: flex; align-items: center; gap: 14px; font-size: 38px; font-weight: 800; }
+  .badge { display: flex; align-items: center; gap: 12px; font-size: 32px; line-height: 1.1; font-weight: 800; }
   .badge .mark {
-    width: 64px; height: 64px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center;
-    font-size: 40px; font-weight: 800; line-height: 1;
+    width: 54px; height: 54px; flex: none; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 34px; font-weight: 800; line-height: 1;
   }
   .yes { color: var(--yes); } .yes .mark { background: var(--yes); }
   .maybe { color: var(--maybe); } .maybe .mark { background: var(--maybe); }
-  .price { font-size: 44px; font-weight: 800; line-height: 1; letter-spacing: -1px; }
-  .price span { font-size: 24px; font-weight: 600; letter-spacing: 0; color: #5b606c; }
+  .unknown { color: #6b717d; } .unknown .mark { background: #8A8F98; }
+  .stack { display: flex; flex-direction: column; align-items: center; }
+  .stack .badge { font-size: 28px; } .stack .badge .mark { width: 46px; height: 46px; font-size: 30px; }
+  .stack .muted { font-size: 20px; margin-top: 2px; }
+  .price { font-size: 36px; font-weight: 800; line-height: 1; letter-spacing: -1px; }
+  .price span { font-size: 21px; font-weight: 600; letter-spacing: 0; color: #5b606c; }
 
   footer { position: absolute; left: 40px; top: 1038px; width: 1840px; font-size: 21px; color: #5b606c; }
 </style>
 </head>
 <body>
 <header>
-  <h1>Four Personal Agents, Side by Side</h1>
+  <h1>Five Personal Agents, Side by Side</h1>
   <p>Where each one runs, whether it works while you sleep, how it is kept in check, and what it costs.</p>
   <div class="rule"></div>
 </header>
@@ -92,13 +97,15 @@
   <div class="cell card r1 a-dots icon"><img src="../../appendices/personal-agent-software/logos/chatgpt.png" alt="ChatGPT, which hosts Dots"><div class="name">Dots<small>OpenAI</small></div></div>
   <div class="cell card r1 a-muse icon"><img src="../../appendices/personal-agent-software/logos/muse.png" alt="Muse from Meta"><div class="name">Muse<small>Meta</small></div></div>
   <div class="cell card r1 a-cowork icon"><img src="../../appendices/personal-agent-software/logos/claude.png" alt="Claude"><div class="name">Claude Cowork<small>Anthropic</small></div></div>
+  <div class="cell card r1 a-spark icon"><img src="../../appendices/personal-agent-software/logos/gemini-spark.svg" alt="Gemini Spark from Google"><div class="name">Gemini Spark<small>Google</small></div></div>
 
   <!-- Row 2: launch -->
   <div class="cell label">Launched:</div>
   <div class="cell card r2"><div class="strong">Aug 11, 2026</div></div>
   <div class="cell card r2"><div class="strong">Sep 29, 2026</div></div>
   <div class="cell card r2"><div class="strong">Sep 8, 2026</div></div>
-  <div class="cell card r2"><div class="strong">Apr 9, 2026 <span style="font-size:24px;color:#5b606c">(GA)</span></div></div>
+  <div class="cell card r2"><div class="strong">Apr 9, 2026 <span style="font-size:20px;color:#5b606c">(GA)</span></div></div>
+  <div class="cell card r2"><div class="strong">May 19, 2026 <span style="font-size:20px;color:#5b606c">(beta)</span></div></div>
 
   <!-- Row 3: runs where -->
   <div class="cell label">Runs Where:</div>
@@ -106,6 +113,7 @@
   <div class="cell card r3">Its own cloud computer and browser</div>
   <div class="cell card r3">A dedicated cloud VM per user</div>
   <div class="cell card r3">A local sandbox on your computer, plus connectors</div>
+  <div class="cell card r3">A dedicated Google Cloud VM, plus Workspace apps</div>
 
   <!-- Row 4: always on -->
   <div class="cell label">Always On?</div>
@@ -113,26 +121,37 @@
   <div class="cell card r4"><div class="badge yes"><div class="mark">✓</div>Yes</div></div>
   <div class="cell card r4"><div class="badge yes"><div class="mark">✓</div>Yes</div></div>
   <div class="cell card r4"><div class="badge maybe"><div class="mark">!</div>Only while awake</div></div>
+  <div class="cell card r4"><div class="badge yes"><div class="mark">✓</div>Yes</div></div>
 
-  <!-- Row 5: safety model -->
+  <!-- Row 5: own email address -->
+  <div class="cell label">Own Email?</div>
+  <div class="cell card r4b"><div class="stack"><div class="badge yes"><div class="mark">✓</div>Yes</div><div class="muted">its own address</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge unknown"><div class="mark">?</div>Unknown</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge unknown"><div class="mark">?</div>Unknown</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge unknown"><div class="mark">?</div>Unknown</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge yes"><div class="mark">✓</div>Yes</div><div class="muted">its own Gmail address</div></div></div>
+
+  <!-- Row 6: safety model -->
   <div class="cell label">Safety Model:</div>
   <div class="cell card r5">Auto Review for sensitive actions; one set of logins for every bot</div>
   <div class="cell card r5">Read-only background access; passwords hidden from the model; your own approval rules</div>
   <div class="cell card r5">Sentinel permission layer; approval for each purchase; activity log</div>
   <div class="cell card r5">Local sandbox; enterprise role-based access control</div>
+  <div class="cell card r5">Asks before high-stakes actions; connectors off until you enable them</div>
 
-  <!-- Row 6: price -->
+  <!-- Row 7: price -->
   <div class="cell label">Price per Month:</div>
   <div class="cell card r6"><div class="price">From $20 <span>+ usage</span></div></div>
-  <div class="cell card r6"><div class="price" style="font-size:36px">Reports conflict</div></div>
+  <div class="cell card r6"><div class="price" style="font-size:30px">Reports conflict</div></div>
   <div class="cell card r6"><div class="price">$0 / $20 / $100</div></div>
-  <div class="cell card r6"><div class="price" style="font-size:34px">In $20–$200 plans</div></div>
+  <div class="cell card r6"><div class="price" style="font-size:28px">In $20–$200 plans</div></div>
+  <div class="cell card r6"><div class="price">$100 <span>Ultra plan</span></div></div>
 </div>
 
 <footer>Vendor-stated and press-reported details gathered October 15, 2026. No independent testing, and prices changed within weeks of launch, so check each vendor before you rely on a number.</footer>
 </body>
 </html>
 <!--
-  ZONES (px on the 1920x1080 canvas): table top y=180, bottom y=180+230+100+130+120+150+110=1020.
-  Column lefts: grok 40+250+12=302, then +397 each (699, 1096, 1493); each column 385 wide.
+  ZONES (px on the 1920x1080 canvas): table top y=180, rows sum 210+80+110+100+90+160+90=840, bottom y=1020.
+  Column lefts: grok 40+250+12=302, then +317 each (619, 936, 1253, 1570); each column 305 wide.
 -->

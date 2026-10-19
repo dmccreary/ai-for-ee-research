@@ -187,6 +187,12 @@ Interactive MicroSimulations that let you practice the ideas in each chapter: so
 
     Judge each of eleven lines of an illustrative draft AGENTS.md or CLAUDE.md file as a goal, a convention, a constraint, or a line that does not belong, with immediate feedback on each judgment.
 
+-   **[Projecting AI Task Completion to 2030](./projecting-ai/index.md)**
+
+    ![Projecting AI Task Completion to 2030](./projecting-ai/projecting-ai.png)
+
+    Explore METR's measured 50% and 80% task-completion time horizons for 26 AI models from 2019 to April 2026, with an exponential trend to 2030 under two fitted doubling times.
+
 -   **[Prompt Chain Builder](./prompt-chain-builder/index.md)**
 
     ![Prompt Chain Builder](./prompt-chain-builder/prompt-chain-builder.png)

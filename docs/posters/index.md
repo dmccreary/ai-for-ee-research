@@ -145,10 +145,22 @@ The original concepts and their sources are in [Infographic Poster Ideas](./post
 
     Seven agent personas side by side, from Ada the chief of staff to six specialists, with each one's role, title, and detailed task list. *Grid overlay, 7 regions.*
 
--   [![Four Personal Agents, Side by Side](./personal-agent-software/personal-agent-software-thumb.jpg)](./personal-agent-software/index.md)
+-   [![Five Personal Agents, Side by Side](./personal-agent-software/personal-agent-software-thumb.jpg)](./personal-agent-software/index.md)
 
-    **[Four Personal Agents, Side by Side](./personal-agent-software/index.md)**
+    **[Five Personal Agents, Side by Side](./personal-agent-software/index.md)**
 
-    Grok Bot, Dots, Muse, and Claude Cowork compared on launch date, where each runs, whether it is always on, its safety model, and its price. *Grid overlay, 4 regions.*
+    Grok Bot, Dots, Muse, Claude Cowork, and Gemini Spark compared on launch date, where each runs, whether it is always on, its safety model, and its price. *Grid overlay, 5 regions.*
+
+-   [![Many Types of “Chat” Agents](./many-types-of-chat-agents/many-types-of-chat-agents-thumb.jpg)](./many-types-of-chat-agents/index.md)
+
+    **[Many Types of “Chat” Agents](./many-types-of-chat-agents/index.md)**
+
+    Eight ways an agent like Volt can differ, from a one-shot prompt and response to an always-on cloud agent with its own browser access, credentials, and email address. *Callout overlay, 8 markers.*
+
+-   [![Hub and Spoke: How Your Agents Communicate](./communication-hub/communication-hub-thumb.jpg)](./communication-hub/index.md)
+
+    **[Hub and Spoke: How Your Agents Communicate](./communication-hub/index.md)**
+
+    You talk to Ada, the chief of staff, and Ada talks to six specialist agents and to the agents at the University of Minnesota, so one hub replaces a tangle of agent-to-agent links. *Callout overlay, 9 markers.*
 
 </div>

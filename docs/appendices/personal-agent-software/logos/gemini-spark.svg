@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8EEFB"/>
+    </linearGradient>
+    <linearGradient id="star" x1="0.15" y1="0.1" x2="0.85" y2="0.9">
+      <stop offset="0" stop-color="#4285F4"/>
+      <stop offset="0.55" stop-color="#7E57C2"/>
+      <stop offset="1" stop-color="#D96570"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="url(#bg)"/>
+  <!-- generic four-point spark; a stand-in, not Google's own artwork -->
+  <path fill="url(#star)" d="M128 28 C136 88 168 120 228 128 C168 136 136 168 128 228 C120 168 88 136 28 128 C88 120 120 88 128 28 Z"/>
+</svg>

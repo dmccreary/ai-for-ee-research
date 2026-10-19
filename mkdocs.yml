@@ -19,6 +19,7 @@ site_url: 'https://dmccreary.github.io/ai-for-ee-research/'
 # declared cover image. Verify the result with `bk-check-social-cover`.
 hooks:
   - plugins/social_override.py
+  - plugins/copy_slide_sources.py
 
 # Repository
 repo_name: 'GitHub Repo'
@@ -169,6 +170,8 @@ nav:
       - Overnight Activity Audit: sims/overnight-activity-audit/index.md
       - Failure Case Root Cause Analyzer: sims/failure-case-root-cause-analyzer/index.md
       - Adoption Plan Prioritizer: sims/adoption-plan-prioritizer/index.md
+      - Agent Knowledge Graph Update Architecture: sims/agent-knowledge-graph-updates/index.md
+      - Projecting AI Task Completion to 2030: sims/projecting-ai/index.md
 
   - Posters:
       - Poster Gallery: posters/index.md
@@ -195,7 +198,9 @@ nav:
       - The Paper Behind the Book: posters/the-paper-behind-the-book/index.md
       - Dan's Desktop: posters/dans-desktop/index.md
       - Meet Your Agent Team: posters/your-agent-team/index.md
-      - Four Personal Agents, Side by Side: posters/personal-agent-software/index.md
+      - Five Personal Agents, Side by Side: posters/personal-agent-software/index.md
+      - Many Types of "Chat" Agents: posters/many-types-of-chat-agents/index.md
+      - "Hub and Spoke: How Your Agents Communicate": posters/communication-hub/index.md
 
   - Slides:
       - List of Slide Decks: slides/index.md
@@ -326,6 +331,10 @@ exclude_docs: |
   **/TODO.md
   **/seed-prompt.md
   img/mascot/character-sheet.md
+
+# Slide-deck markdown sources (rendered one slide at a time by slides/slide-viewer.html)
+not_in_nav: |
+  /slides/*/slides.md
 
 # Rebuild on changes during `mkdocs serve`
 watch:

@@ -1,6 +1,6 @@
 ---
 title: Personal Agent Software
-description: Research notes on always-on personal agent software — SpaceXAI's Grok Bot, OpenAI's Dots, Meta's Muse, Anthropic's Claude Cowork, and the open-source OpenClaw and Hermes agents.
+description: Research notes on always-on personal agent software — SpaceXAI's Grok Bot, OpenAI's Dots, Meta's Muse, Anthropic's Claude Cowork, Google's Gemini Spark, and the open-source OpenClaw and Hermes agents.
 ---
 
 # Appendix: Personal Agent Software
@@ -12,7 +12,7 @@ description: Research notes on always-on personal agent software — SpaceXAI's 
     Prices, tiers, and features changed several times within weeks of launch,
     so verify against each vendor's own pages before relying on a number.
 
-For a one-page picture of the four commercial products, see the interactive
+For a one-page picture of the five personal-agent products, see the interactive
 poster [Four Personal Agents, Side by Side](../../posters/personal-agent-software/index.md).
 
 ## Why this matters for EE research
@@ -22,8 +22,8 @@ carries out multi-step work on your behalf — signing in to tools, running
 routines, and coming back when it is done or needs a decision. For a
 researcher, that could mean overnight literature sweeps, rerunning an analysis
 when new lab data lands, or filing bug tickets against a simulation toolchain.
-The products below all arrived within roughly two months of each other in
-mid-2026, so the category is moving fast.
+The commercial products below all arrived within roughly six months of each
+other in 2026 (counting Cowork's April general availability), so the category is moving fast.
 
 ## Grok Bot (SpaceXAI)
 
@@ -51,6 +51,10 @@ $60 billion acquisition), so treat the deal terms as unsettled.
   you need to ask," per SpaceXAI.
 - **Interface.** Work is assigned in a chat window on desktop or iOS. The bot
   returns a result or asks for approval.
+- **Its own email address.** A bot can have its own inbox on the
+  `mail.grokbot.com` domain. The author verified this first-hand in October
+  2026: a test message to a bot's address was received, and the bot replied
+  from that same address.
 
 SpaceXAI's own example uses include updating a CRM from call transcripts,
 onboarding new hires and processing invoices in Gmail, and reproducing a bug,
@@ -172,6 +176,51 @@ files, runs multi-step tasks, and uses plugins and MCP connectors.
   analytics. One source notes Cowork activity is not yet captured in audit
   logs or the Compliance API.
 
+## Gemini Spark (Google)
+
+![Gemini Spark stand-in icon](./logos/gemini-spark.svg){ align=right width="110" }
+
+Google announced Gemini Spark at Google I/O on May 19, 2026, as a personal
+agent for consumers. It is the product Google describes as running "24/7"; a
+separate work-oriented product, the Gemini Agent, is covered below.
+
+- **Always-on.** Spark runs on dedicated virtual machines on Google Cloud, so
+  long tasks keep going when the user's own device is off.
+- **Integrations.** It has its own Gmail address that users can email like a
+  colleague, and it reaches Gmail, Docs, Calendar, and other Workspace apps
+  without manual setup. It browses through Chrome and supports MCP for outside
+  services. Press lists Canva, OpenTable, and Instacart among launch partners.
+- **Model and harness.** The Next Web reports it is built on Gemini 3.5 and
+  powered by the Antigravity agent harness.
+- **Safety model.** Press coverage says Spark asks before high-stakes actions
+  such as spending money or sending email, that Google connectors are off until
+  enabled, and that permissions are set per app. Autonomous purchases through
+  the Agents Payment Protocol, within user-set limits, are described as coming
+  later in 2026. On Android, a "Halo" overlay for live status is expected with
+  Android 17. We found no first-party documentation of these controls.
+- **Availability.** A U.S. beta for Google AI Ultra subscribers aged 18 and
+  older, plus some business users, with expansion planned over the following
+  weeks. Reports differ on whether it was "next week" or already rolling out,
+  so the exact launch date is unsettled; the poster uses the May 19
+  announcement date.
+
+!!! warning "Conflicting price reports"
+    Spark has no separate price; it comes with the Google AI Ultra tier. The
+    Next Web reports Google cut that tier from $250 to $100 a month at I/O,
+    while some outlets still cite $250. The poster shows $100.
+
+### Gemini Agent (Google, for work)
+
+At Google's Gemini at Work 2026 event, Google introduced a separate Gemini
+Agent for knowledge work. It accepts high-level objectives, plans multi-step
+workflows, writes and runs code, and creates media. Reporting says it can route
+work between Google's Gemini models and Anthropic's Claude models, works across
+Google Workspace, Microsoft 365, Slack, Jira, Salesforce, and developer
+command lines, and lets each agent have its own identity, corporate email
+address, activity log, and IT-enforced spending limits. We have not
+read Google's announcement directly, and the poster leaves this product out
+because it targets organizations rather than individuals.
+
 ## Open-source alternatives: OpenClaw and Hermes Agent
 
 ![OpenClaw lobster mascot](./logos/openclaw.png){ align=right width="90" }
@@ -193,18 +242,19 @@ and managed, in exchange for openness and control.
 
 ## Side-by-side comparison
 
-| | **Grok Bot** | **Dots** | **Muse** | **Claude Cowork** | **OpenClaw / Hermes** |
-|---|---|---|---|---|---|
-| Vendor | SpaceXAI / Cursor | OpenAI | Meta | Anthropic | Community / Nous Research |
-| Announced | Aug 11, 2026 | Sep 29, 2026 | Sep 8, 2026 | GA Apr 9, 2026 | Hermes public Feb 2026 |
-| Runs where | Cloud computer shared by your bots | Own cloud computer and browser | Dedicated cloud VM per user | Mostly local sandbox plus connectors | Your laptop, server, or cloud |
-| Model | Undisclosed | GPT-6 Astra | Muse Spark | Claude | Any |
-| Multi-agent | Yes: many bots, group chats | One dot now; teams planned | One agent | Single session | Build your own |
-| Always-on | Yes | Yes | Yes | Needs computer awake (Mar 2026 source) | Yes, if you host it |
-| Integrations | Browser/computer use, Slack, connected apps | 4,000+ ChatGPT apps, Codex, Slack/Teams | Email, calendar, payments, WhatsApp | MCP connectors, plugins | Chat apps, skills, your own tools |
-| Safety model | Auto Review model; shared logins | Read-only background access; approval rules | Sentinel layer; per-purchase approval; activity log | Local sandbox; enterprise RBAC | You manage it |
-| Price | From $20/mo plus usage | Conflicting reports | Free, $20, $100/mo | Included in $20–$200/mo plans | Free software plus API costs |
-| Open source | No | No | No | No | Yes (MIT) |
+| | **Grok Bot** | **Dots** | **Muse** | **Claude Cowork** | **Gemini Spark** | **OpenClaw / Hermes** |
+|---|---|---|---|---|---|---|
+| Vendor | SpaceXAI / Cursor | OpenAI | Meta | Anthropic | Google | Community / Nous Research |
+| Announced | Aug 11, 2026 | Sep 29, 2026 | Sep 8, 2026 | GA Apr 9, 2026 | May 19, 2026 (beta) | Hermes public Feb 2026 |
+| Runs where | Cloud computer shared by your bots | Own cloud computer and browser | Dedicated cloud VM per user | Mostly local sandbox plus connectors | Dedicated Google Cloud VM | Your laptop, server, or cloud |
+| Model | Undisclosed | GPT-6 Astra | Muse Spark | Claude | Gemini 3.5 (per The Next Web) | Any |
+| Multi-agent | Yes: many bots, group chats | One dot now; teams planned | One agent | Single session | Not reported | Build your own |
+| Always-on | Yes | Yes | Yes | Needs computer awake (Mar 2026 source) | Yes | Yes, if you host it |
+| Integrations | Browser/computer use, Slack, connected apps | 4,000+ ChatGPT apps, Codex, Slack/Teams | Email, calendar, payments, WhatsApp | MCP connectors, plugins | Gmail, Docs, Calendar, Chrome, MCP | Chat apps, skills, your own tools |
+| Safety model | Auto Review model; shared logins | Read-only background access; approval rules | Sentinel layer; per-purchase approval; activity log | Local sandbox; enterprise RBAC | Asks before high-stakes actions; connectors opt-in | You manage it |
+| Price | From $20/mo plus usage | Conflicting reports | Free, $20, $100/mo | Included in $20–$200/mo plans | Included in Google AI Ultra, about $100/mo | Free software plus API costs |
+| Own email address | Yes (author-tested) | Unknown | Unknown | Unknown | Yes (press-reported) | Unknown |
+| Open source | No | No | No | No | No | Yes (MIT) |
 
 ## Contrast: what actually differs
 
@@ -220,6 +270,9 @@ and managed, in exchange for openness and control.
   the narrowest work-tool integrations.
 - **Cowork is session-oriented** and the most mature knowledge-work tool, but
   the least autonomous.
+- **Spark is the Workspace-native option.** It lives inside Google's mail and
+  document tools and can be emailed directly, but it is bundled with a single
+  premium consumer tier and its safety controls are documented mostly by press.
 - **OpenClaw and Hermes trade convenience for control**: you pick the model and
   own the security.
 
@@ -227,7 +280,10 @@ and managed, in exchange for openness and control.
 
 - **No independent testing.** AIMultiple's comparison reports no benchmarks or
   controlled tests of Dots, Grok Bot, or Muse; the only first-hand evidence is
-  the author's anecdotal use of Grok Bot.
+  the author's anecdotal use of Grok Bot, including the email test above.
+- **Email unknown.** We have not checked whether Dots, Muse, or Cowork can have
+  their own email address, so the poster marks them Unknown. Spark's address is
+  press-reported, not author-tested.
 - **Moving prices.** Tiers and prices changed within weeks of each launch.
 - **Beta status.** SpaceXAI's October 12 pages checked by Kingy.ai do not say
   whether Grok Bot is still in beta.
@@ -248,7 +304,7 @@ and managed, in exchange for openness and control.
 
 ## Sources
 
-Logos are the vendors' own app icons or project artwork and belong to their owners. The Muse icon is the App Store artwork for [Muse from Meta](https://apps.apple.com/us/app/muse-from-meta/id6760173601), the OpenClaw icon is from [openclaw.ai](https://openclaw.ai), and the Hermes Agent wordmark is the banner from the [Hermes Agent repository](https://github.com/NousResearch/hermes-agent). The Grok Bot, ChatGPT, and Claude icons are cropped from a screenshot of the author's dock. Dots has no icon of its own that we found, so the ChatGPT icon stands in for the app that hosts it.
+Logos are the vendors' own app icons or project artwork and belong to their owners. The Muse icon is the App Store artwork for [Muse from Meta](https://apps.apple.com/us/app/muse-from-meta/id6760173601), the OpenClaw icon is from [openclaw.ai](https://openclaw.ai), and the Hermes Agent wordmark is the banner from the [Hermes Agent repository](https://github.com/NousResearch/hermes-agent). The Grok Bot, ChatGPT, and Claude icons are cropped from a screenshot of the author's dock. Dots has no icon of its own that we found, so the ChatGPT icon stands in for the app that hosts it. The Gemini Spark icon is a generic four-point spark drawn for this book as a stand-in; it is not Google's artwork.
 
 - [The Information — SpaceXAI announces Grok Bot](https://www.theinformation.com/briefings/spacexai-announces-ai-agents-product-grok-bot)
 - [MacRumors — Grok Bot brings always-on AI agents to macOS and iOS](https://www.macrumors.com/2026/08/11/grok-bot-macos-ios/)
@@ -261,3 +317,8 @@ Logos are the vendors' own app icons or project artwork and belong to their owne
 - [AIMultiple — Always-on agents: Dots vs Grok Bot vs Muse](https://aimultiple.com/always-on-agents)
 - [Zenken — Claude Cowork guide](https://ai.zenken.co.jp/en/post/claude-cowork-howto/)
 - [Softr — Claude Cowork vs OpenClaw](https://softr.io/blog/claude-cowork-vs-openclaw)
+- [The Next Web — Gemini Spark, a 24/7 agentic assistant you can email like a colleague](https://thenextweb.com/news/google-gemini-spark-agentic-assistant-gmail-io-2026)
+- [PCWorld — Google's new Spark AI agent will run your digital life for $100 a month](https://www.pcworld.com/article/3143445/googles-new-spark-ai-agent-will-run-your-digital-life-for-100-month.html)
+- [Quartz — Google Gemini Spark personal AI agent](https://qz.com/google-gemini-spark-personal-ai-agent-io-051926) (returned HTTP 403; not read directly)
+- [Google Cloud — Welcome to Gemini at Work 2026](https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026) (Gemini Agent; not read directly)
+- [Reworked — Google debuts its all-purpose Gemini Agent for work](https://www.reworked.co/collaboration-productivity/google-debuts-its-all-purpose-gemini-agent-for-work/) (not read directly)

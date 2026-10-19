@@ -1,0 +1,70 @@
+{
+  "title": "Agent Knowledge Graph Update Architecture",
+  "creator": "Dan McCreary",
+  "subject": "AI for EE Research",
+  "description": "A vis-network graph of four agent levels (Personal Researcher, EECD Department, CSE, University of Minnesota), each with its own knowledge graph of Annual Budget, AI Usage Policy, and NSF Grant Award nodes. Three buttons send a Budget Information update top-down, an NSF Grant Award update bottom-up, and an AI Usage Policy Change from the CSE level in both directions, updating the matching node at each level it reaches.",
+  "date": "2026-10-18",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "https://dmccreary.github.io/ai-for-ee-research/sims/agent-knowledge-graph-updates/",
+  "educational": {
+    "gradeLevel": [
+      "Graduate"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "Agent Knowledge Graph Update Architecture",
+    "learningObjectives": [
+      "Explain how a knowledge update travels through a four-level agent hierarchy",
+      "Identify which agents originate an update and which only relay it, for top-down, bottom-up, and mid-level events"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "bloomsVerb": "explain",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "AI agent",
+      "knowledge base"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 530
+    },
+    "canvasHeight": 530,
+    "responsive": true,
+    "dependencies": [
+      "vis-network 9.1.9"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration with predict-then-observe",
+    "keyQuestions": [
+      "Which agent originates this update, and which agents only relay it?",
+      "Why does the CSE agent send the AI policy change in two directions?",
+      "Why must every level update its own knowledge graph?"
+    ],
+    "commonMisconceptions": [
+      "A change at one level is automatically visible at every other level"
+    ],
+    "assessmentOpportunities": [
+      "Predict the order of node updates before pressing a button",
+      "Sketch a new event and state where it starts and which nodes change"
+    ]
+  },
+  "controls": [
+    "Budget Information: top-down update of the Annual Budget nodes",
+    "NSF Grant Award: bottom-up update of the NSF Grant Award nodes",
+    "AI Usage Policy Change: update starting at CSE and flowing up and down",
+    "Reset: return all nodes to their starting values"
+  ],
+  "chapter": ""
+}

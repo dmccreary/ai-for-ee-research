@@ -1,8 +1,14 @@
 ---
+title: AI for EE Research Productivity
 hide:
-    toc
+  - toc
 ---
 # AI for EE Research Productivity
+
+- Dan McCreary (class of '83)
+- University of Minnesota
+- Department of Electrical Engineering and Computer Design
+- October 23rd, 2026
 
 ---
 ## About Dan McCreary
@@ -50,6 +56,16 @@ I will make this concrete with case studies from my own work, including interact
 
 ---
 
+## Meet Volt: Your Guide to Research Agents
+
+![Volt the Border Collie](../../img/mascot/neutral.png){ width="280px" align="right" }
+
+**Volt** is our session mascot. This border collie herds a flock of agents, and will guide us through setting up and using agents for EE research.
+
+*"Sorry Goldie (the gopher), not today."*
+
+---
+
 ## The Problem: Research Funnel
 
 <iframe src="../../sims/research-funnel/main.html" height="582px" width="100%" scrolling="no"></iframe>
@@ -61,15 +77,49 @@ I will make this concrete with case studies from my own work, including interact
 <iframe src="../../posters/twenty-planners-ten-doers/main.html" height="900px" width="100%" scrolling="no"></iframe>
 
 ---
+
+## Many Types of "Chat" Agents
+
+<iframe src="../../posters/many-types-of-chat-agents/main.html" height="800px" width="100%" scrolling="no"></iframe>
+
+---
+## Important New Term
+
+**Task Completion Time Horizon**
+
+The length of task, measured by how long a human expert needs to do it, that an AI agent completes successfully at a stated reliability.
+
+- **50% time horizon:** tasks of this length succeed half the time
+- **80% time horizon:** tasks of this length succeed four times out of five
+- It measures the task's length in human time, not how long the agent runs
+- Example (METR, April 2026): Claude Opus 4.6 is about 12 hours at 50% and about 70 minutes at 80%
+- Similar to Moore's Law, but for agentic capability: the horizon keeps doubling every few months
+
+---
+
+## Projecting AI Task Completion to 2030
+
+<iframe src="../../sims/projecting-ai/main.html" height="762px" width="100%" scrolling="no"></iframe>
+
+---
+
+## Increasing Agent Success on Long Running Tasks
+
+
+
+---
 ## What Does Dan Use His Agents For?
 
 1. Generation of interactive intelligent textbooks from a course description (10,000 hour task in 10 hours)
 2. Generating simulations that live within these textbooks (MicroSims)
-3. Generating reports, presentations and papers
-4. Helping my mentorship program
+3. Generating reports, presentations and papers on EdTech topics
+4. Helping my mentorship program - 12 active mentees doing six week crash course in AI
 5. Helping build my Coding Club hand-on kits (Smart Clock)
 6. Promoting books, microsims and interactive infographic posters
 7. Scheduling and calendaring
+8. Designing signal process using DSP algorithms on Microcontrollers
+9. Ordering low-costs parts for STEM Kits
+10. Assisting local friends start their own companies
 
 ---
 ## Using Agent Personas to Divide Tasks
@@ -84,6 +134,8 @@ How do you efficiency get all your Bots to communicate together as well as commu
 the agents in your department and at the University of Minnesota?
 
 **Recall:** *The key to artificial intelligence is knowledge representation*
+
+<iframe src="../../posters/communication-hub/main.html" height="800px" width="100%" scrolling="no"></iframe>
 
 ---
 
@@ -108,13 +160,6 @@ A central "ground truth" data structure to keep your content aligned with your g
     - `build.sh` produces a `main.pdf`
 
 ---
-## Types of Chats
-
-1. One off cloud based prompt/response pairs - no access to desktop
-2. Disconnected personal agent with access to desktop tools (gmail, calendar etc.)
-3. Full desktop file access with github backup for long running tasks
-
---
 ## Sample Agent Architecture
 
 <iframe src="../../sims/desktop-setup/main.html" height="750px" width="100%" scrolling="no"></iframe>
@@ -124,3 +169,23 @@ A central "ground truth" data structure to keep your content aligned with your g
 
 <iframe src="../../posters/dans-desktop/main.html" height="750px" width="100%" scrolling="no"></iframe>
 
+
+---
+## Agent Knowledge Graph Update Architecture
+
+<iframe src="../../sims/agent-knowledge-graph-updates/main.html" height="532px" width="100%" scrolling="no"></iframe>
+
+
+---
+## Security/Ethics/Legal Issues
+
+1. What security risks are introduced by agents?
+2. Who is responsible for agent accountability?
+3. What is the liability of the person that created the agents vs. the LLM vendor?
+4. What are the ethics of agents using your credentials?
+5. Who owns the Intellectual Property created by agents running "at the edge"? (Researcher, Software Developer, University)
+6. What are the current policies about disclosing agents were used to generate the first draft of a paper?
+7. How will increased agent activities strain university resources?
+8. How much additional environmental damage will agents cause?
+9. Will swarms of agents cause unemployment for grad students?
+10. When do we shut down rogue agent swarms?
