@@ -1,5 +1,5 @@
 {
-  "title": "Four Personal Agents, Side by Side",
+  "title": "Five Personal Agents, Side by Side",
   "image": "personal-agent-software.png",
   "layout": "grid",
   "showLabels": false,
@@ -7,7 +7,8 @@
     "#8A8F98",
     "#2A2E3A",
     "#0A7CFF",
-    "#D97757"
+    "#D97757",
+    "#7E57C2"
   ],
   "zones": [
     {
@@ -16,62 +17,83 @@
       "color": "#8A8F98",
       "x1": 15.7,
       "y1": 16.7,
-      "x2": 35.8,
+      "x2": 31.6,
       "y2": 94.4,
       "summary": "Grok Bot is a hosted, always-on agent whose bots share one cloud computer, which makes it the only one here built around a manager bot directing specialists.",
       "facts": [
         "Launched August 11, 2026 as an early-beta cloud agent service.",
         "Each user gets one cloud computer with a browser, files, and a terminal, and every one of that user's bots shares it, including its logins.",
         "Safety claims include an Auto Review step for sensitive actions; analysts note that one compromised bot exposes the rest.",
-        "Entry price is about $20 a month (Cursor) or $30 (SuperGrok), plus usage billed at token cost; the allowance is unpublished."
+        "Entry price is about $20 a month (Cursor) or $30 (SuperGrok), plus usage billed at token cost; the allowance is unpublished.",
+        "A bot can have its own email address on the mail.grokbot.com domain; the author confirmed it by sending a test message and getting a reply from the bot."
       ]
     },
     {
       "id": "dots",
       "label": "Dots (OpenAI)",
       "color": "#2A2E3A",
-      "x1": 36.4,
+      "x1": 32.2,
       "y1": 16.7,
-      "x2": 56.5,
+      "x2": 48.1,
       "y2": 94.4,
       "summary": "Dots is a personal agent inside ChatGPT that works in the background with its own cloud computer, and it limits what it can do without asking.",
       "facts": [
         "Introduced at DevDay on September 29, 2026, powered by GPT-6 Astra.",
         "Each dot has its own cloud computer and browser, and you can open it at any time to watch what it is doing.",
         "Sign-in passwords are not exposed to the model, background research uses read-only access, and you can write custom approval rules.",
-        "Reports conflict on price: Engadget says the first dot is free for Pro and Business Premium, while AIMultiple lists $100 a month."
+        "Reports conflict on price: Engadget says the first dot is free for Pro and Business Premium, while AIMultiple lists $100 a month.",
+        "Whether it can have its own email address is unknown; we have not checked."
       ]
     },
     {
       "id": "muse",
       "label": "Muse (Meta)",
       "color": "#0A7CFF",
-      "x1": 57.1,
+      "x1": 48.8,
       "y1": 16.7,
-      "x2": 77.1,
+      "x2": 64.6,
       "y2": 94.4,
       "summary": "Muse is Meta's consumer agent, with the most explicit purchase-approval story and the narrowest work-tool integrations.",
       "facts": [
         "Launched September 8, 2026 in the U.S. for users 18 and older, as an app and inside WhatsApp.",
         "Each user's agent runs in its own cloud virtual machine, and you can watch its browser and review an activity log.",
         "A layer called Sentinel allows, blocks, or sends for approval each action, and each purchase needs approval that shows the exact details.",
-        "Pricing is a free tier, $20 a month (Power), and $100 a month (Maximum). Training on user data is on by default, with an opt-out."
+        "Pricing is a free tier, $20 a month (Power), and $100 a month (Maximum). Training on user data is on by default, with an opt-out.",
+        "Whether it can have its own email address is unknown; we have not checked."
       ]
     },
     {
       "id": "claude-cowork",
       "label": "Claude Cowork (Anthropic)",
       "color": "#D97757",
-      "x1": 77.8,
+      "x1": 65.3,
       "y1": 16.7,
-      "x2": 97.8,
+      "x2": 81.1,
       "y2": 94.4,
       "summary": "Cowork is the most mature knowledge-work tool here, but it is session-oriented and the least always-on.",
       "facts": [
         "Launched in January 2026 and became generally available on April 9, 2026, as a tab inside Claude Desktop.",
         "It works mostly in a local sandbox plus plugins and MCP connectors. A March 2026 source says scheduled tasks need the computer awake and Claude Desktop open.",
         "There is no separate price: it is included in Claude Pro ($20), Max ($100 or $200), Team, and Enterprise plans, sharing one usage pool with chat and Claude Code.",
-        "Enterprise adds role-based access control and spend limits, but one source notes Cowork activity is not yet in audit logs."
+        "Enterprise adds role-based access control and spend limits, but one source notes Cowork activity is not yet in audit logs.",
+        "Whether it can have its own email address is unknown; we have not checked."
+      ]
+    },
+    {
+      "id": "gemini-spark",
+      "label": "Gemini Spark (Google)",
+      "color": "#7E57C2",
+      "x1": 81.8,
+      "y1": 16.7,
+      "x2": 97.7,
+      "y2": 94.4,
+      "summary": "Spark is Google's consumer agent: it runs on Google Cloud around the clock, works inside Gmail and Workspace, and is the only one here you can email like a colleague.",
+      "facts": [
+        "Announced at Google I/O on May 19, 2026, as a U.S. beta for Google AI Ultra subscribers aged 18 and older.",
+        "It runs on dedicated virtual machines on Google Cloud, so it keeps working when your own devices are off.",
+        "It has its own Gmail address that you can email like a colleague, reaches Gmail, Docs, and Calendar without manual setup, and supports MCP connections to outside services.",
+        "Press reports say it asks before high-stakes actions such as spending money or sending email, and that Google connectors are off until you enable them.",
+        "It comes with the Google AI Ultra tier, reported at $100 a month after a cut from $250; sources differ on which price applies."
       ]
     }
   ],
@@ -105,6 +127,21 @@
       "question": "Which agent is included in the $20 to $200 Claude plans rather than sold separately?",
       "correct_zone": "claude-cowork",
       "explanation": "Cowork has no separate SKU and draws on the same usage pool as Claude chat and Claude Code."
+    },
+    {
+      "question": "Which agent can you email at its own Gmail address, like a colleague, and is bundled with the Google AI Ultra tier?",
+      "correct_zone": "gemini-spark",
+      "explanation": "Gemini Spark has its own Gmail address and ships with Google AI Ultra, reported at $100 a month."
+    },
+    {
+      "question": "Which agent was announced at Google I/O and runs on Google Cloud virtual machines so it works while your devices are off?",
+      "correct_zone": "gemini-spark",
+      "explanation": "Spark runs on dedicated Google Cloud VMs rather than on your computer."
+    },
+    {
+      "question": "Which agent did the author test by emailing a bot at its own address on the mail.grokbot.com domain?",
+      "correct_zone": "grok-bot",
+      "explanation": "A Grok Bot agent received the test message and replied from its own inbox."
     }
   ]
 }

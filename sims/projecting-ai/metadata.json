@@ -1,0 +1,76 @@
+{
+  "title": "Projecting AI Task Completion to 2030",
+  "description": "Interactive chart of METR's measured AI task-completion time horizons from 2019 to April 2026 (Time Horizon 1.1), with an exponential trend projected to 2030.",
+  "creator": "Dan McCreary",
+  "date": "2026-10-19",
+  "subject": [
+    "AI Capabilities",
+    "Exponential Growth",
+    "AI Benchmarks",
+    "Future Projections",
+    "METR Research"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "publisher": "Dan McCreary",
+  "educationalLevel": "Professional",
+  "learningResourceType": "simulation",
+  "audience": "AI Researchers, Strategists, Policy Makers",
+  "version": "2.0.0",
+  "bloomLevel": [
+    "Understand",
+    "Analyze",
+    "Evaluate"
+  ],
+  "concepts": [
+    "Task Completion Horizons",
+    "Exponential Growth",
+    "AI Benchmarking",
+    "Future Projections"
+  ],
+  "prerequisites": [
+    "Understanding of AI capabilities",
+    "Basic statistics"
+  ],
+  "library": "Chart.js",
+  "visualizationType": [
+    "chart",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Interpret METR's 50% and 80% time horizons for frontier AI models",
+    "Compare the all-time and since-2023 doubling times and the trend lines they imply",
+    "Evaluate the limits of extrapolating an exponential trend to 2030"
+  ],
+  "bloomsTaxonomy": [
+    "Understand",
+    "Analyze",
+    "Evaluate"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "interpret",
+      "summarize",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
+}

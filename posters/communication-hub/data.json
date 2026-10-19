@@ -1,0 +1,117 @@
+{
+  "title": "Hub and Spoke: How Your Agents Communicate",
+  "orientation": "landscape",
+  "image": "communication-hub.png",
+  "layout": "dual-panel",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Marisol: Events and Speakers",
+      "panel": "left",
+      "x": 45.7,
+      "y": 9.1,
+      "radius": 4,
+      "color": "#0E9AA7",
+      "hint": "Find the teal circle at the top, with a woman with curly hair holding a clipboard with a calendar grid.",
+      "description": "Marisol runs the department seminar calendar and the speaker pipeline. She does not email you; she reports to Ada, who tells you which speaker needs a decision and holds the confirmed seminar, room, and host in the shared record.",
+      "tip": "A specialist that talks only to the hub cannot flood your inbox."
+    },
+    {
+      "id": 2,
+      "label": "Scout: Novelty and Prior-Art Search",
+      "panel": "left",
+      "x": 20.9,
+      "y": 19.1,
+      "radius": 4,
+      "color": "#F27C1E",
+      "hint": "Find the orange circle at the upper left, with a fox holding a magnifying glass.",
+      "description": "Scout searches papers, patents, and code and hands Ada the closest prior art for each claim, with links. Ada merges that result with everything else, so the novelty check shows up in your morning briefing instead of in a separate message.",
+      "tip": "Every message Scout sends is logged, so a search can be rerun."
+    },
+    {
+      "id": 3,
+      "label": "You",
+      "panel": "left",
+      "x": 10.1,
+      "y": 42.2,
+      "radius": 4,
+      "color": "#3F5F9A",
+      "hint": "Find the blue circle at the far left, with a simple person silhouette and a thick two-way arrow pointing to the center.",
+      "description": "You talk to one agent, not seven. The thick two-way spoke to Ada is the only channel you have to watch: instructions go in, and a single briefing and a short list of decisions come back. Agents draft and prepare; you send, submit, sign, and pay.",
+      "tip": "The spoke carries decisions to you, never actions on your behalf that you did not approve."
+    },
+    {
+      "id": 4,
+      "label": "Kai: Conferences and Proposals",
+      "panel": "left",
+      "x": 20.9,
+      "y": 67.1,
+      "radius": 4,
+      "color": "#F5B800",
+      "hint": "Find the yellow circle at the lower left, with a smiling traveler in a yellow jacket pulling a suitcase.",
+      "description": "Kai tracks calls for papers and deadlines, vets venues, and drafts abstracts and travel. Deadlines and draft status go to Ada, who adds them to your calendar and flags conflicts with the rest of your commitments.",
+      "tip": "The hub sees the whole calendar. A specialist sees only its own slice."
+    },
+    {
+      "id": 5,
+      "label": "Penny: Lab Budgets and Finance",
+      "panel": "right",
+      "x": 79.1,
+      "y": 19.1,
+      "radius": 4,
+      "color": "#2E9E5B",
+      "hint": "Find the green circle at the upper right, with a penguin in a green visor and bow tie holding an abacus.",
+      "description": "Penny tracks grant spending line by line and forecasts overruns. She reports balances and warnings to Ada, and prepares purchase requisitions for your signature, so the money never moves without you.",
+      "tip": "Penny and Rosa share budget numbers through Ada, so a proposal budget and the grant ledger cannot quietly disagree."
+    },
+    {
+      "id": 6,
+      "label": "Ada: Chief of Staff (the Hub)",
+      "panel": "right",
+      "x": 56.6,
+      "y": 39.4,
+      "radius": 4,
+      "color": "#6B3FA0",
+      "hint": "Find the large purple circle in the center, with a silver-haired woman in a purple blazer.",
+      "description": "Ada is the hub: every other agent reports to her, and she decides what reaches you. A hub needs one spoke per agent, six here, where letting agents message each other directly among seven would need 21 separate links. She keeps the knowledge graph, email, and calendar, and writes your morning briefing.",
+      "tip": "The hub is also the single point to check. If Ada's picture of the work is wrong, every briefing is wrong."
+    },
+    {
+      "id": 7,
+      "label": "University of Minnesota Agents",
+      "panel": "right",
+      "x": 89.3,
+      "y": 43.1,
+      "radius": 4,
+      "color": "#7A0019",
+      "hint": "Find the maroon circle at the far right with a gold M, joined to the center by a dashed two-way arrow.",
+      "description": "This spoke reaches the agents in your department and at the University of Minnesota. It is dashed because it crosses a boundary: messages leave your own team, so Ada sends and receives them under your approval instead of every agent opening its own line to outside systems.",
+      "tip": "Agree on a shared format for what crosses the boundary. The next slide covers the knowledge graph that supplies it."
+    },
+    {
+      "id": 8,
+      "label": "Rosa: Grant Writing",
+      "panel": "right",
+      "x": 79.1,
+      "y": 67.1,
+      "radius": 4,
+      "color": "#D62839",
+      "hint": "Find the red circle at the lower right, with a red-haired woman in glasses holding a pen and papers.",
+      "description": "Rosa finds funding calls, builds the proposal outline, and plays the skeptical reviewer on your draft. Her findings go to Ada, who merges them with Penny's budget and Kai's deadlines before you see a single list of what needs your attention.",
+      "tip": "Drafts and critiques travel as files; the final submission is still yours."
+    },
+    {
+      "id": 9,
+      "label": "Pixel: Presentations and Web",
+      "panel": "right",
+      "x": 54.3,
+      "y": 77.1,
+      "radius": 4,
+      "color": "#FF5FA2",
+      "hint": "Find the pink circle at the bottom, with a pink axolotl wearing a beret and holding a pen.",
+      "description": "Pixel builds slide decks, figures, and posters and keeps your university web page current. It pulls the facts it needs, such as paper titles and dates, from the shared record through Ada instead of keeping its own copy that can go stale.",
+      "tip": "One shared source of facts means a changed deadline is changed everywhere."
+    }
+  ]
+}

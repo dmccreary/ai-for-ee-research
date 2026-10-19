@@ -1,0 +1,105 @@
+{
+  "title": "Many Types of “Chat” Agents",
+  "orientation": "landscape",
+  "image": "many-types-of-chat-agents.png",
+  "layout": "dual-panel",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Simple Prompt/Response",
+      "panel": "left",
+      "x": 5.0,
+      "y": 9.0,
+      "radius": 4,
+      "color": "#4A90D9",
+      "hint": "Find the top-left tile: two speech bubbles, one white and one blue, passing a single message back and forth.",
+      "description": "Just like the original ChatGPT: you type one prompt, the model sends one response, and that is the whole transaction. Nothing is carried forward and nothing is done outside the chat window. It is good for a quick question, a definition, or a rewrite.",
+      "tip": "Every new chat starts from zero, so paste in whatever context the model needs."
+    },
+    {
+      "id": 2,
+      "label": "Multiple Questions",
+      "panel": "left",
+      "x": 5.0,
+      "y": 32.5,
+      "radius": 4,
+      "color": "#2E9E8F",
+      "hint": "Find the teal tile with three stacked chat bubbles and a curved arrow looping back along the right side.",
+      "description": "Session management lets the agent keep the earlier turns of a conversation, so a follow-up like “now plot the second one” makes sense. The session holds the context: what you asked, what it answered, and which files it has read.",
+      "tip": "A session is bounded by the context window. Long sessions can lose early details, so start a fresh one for a new task."
+    },
+    {
+      "id": 3,
+      "label": "Always On",
+      "panel": "left",
+      "x": 5.0,
+      "y": 56.0,
+      "radius": 4,
+      "color": "#6A5ACD",
+      "hint": "Find the indigo tile with a glowing power button above a closed laptop and a small crescent moon.",
+      "description": "The agent does not depend on your laptop being open. It keeps running while you sleep, travel, or close the lid: it can answer messages, run scheduled jobs, and finish long tasks, and the results are waiting when you return.",
+      "tip": "Always on also means unattended. Decide in advance what it may do when nobody is watching."
+    },
+    {
+      "id": 4,
+      "label": "Disconnected from Desktop",
+      "panel": "left",
+      "x": 5.0,
+      "y": 79.5,
+      "radius": 4,
+      "color": "#8E44AD",
+      "hint": "Find the purple tile with a cloud holding a small server box and a cable that has been unplugged beneath it.",
+      "description": "The agent runs in a virtual machine in the cloud instead of on your desktop. It has its own files, installed tools, and network access, and it cannot see anything on your computer unless you send it. A mistake is contained inside that machine.",
+      "tip": "A separate machine is a sandbox: you decide which files and accounts go in."
+    },
+    {
+      "id": 5,
+      "label": "Browser Takeover",
+      "panel": "right",
+      "x": 74.5,
+      "y": 9.0,
+      "radius": 4,
+      "color": "#E67E22",
+      "hint": "Find the orange tile with a browser window, a mouse pointer clicking on it, and a small signed-in profile icon.",
+      "description": "The agent can drive your real browser: read pages, click, scroll, and fill in forms. Because it uses your browser, it also inherits your login state, so it can act on any site where you are already signed in, as you.",
+      "tip": "Text on a web page can contain instructions aimed at the agent. Watch what it does on sites you did not choose."
+    },
+    {
+      "id": 6,
+      "label": "More Credential Access",
+      "panel": "right",
+      "x": 74.5,
+      "y": 32.5,
+      "radius": 4,
+      "color": "#C0392B",
+      "hint": "Find the red tile with a padlock and a gold key lying in front of it.",
+      "description": "The agent holds credentials: passwords, API keys, or access tokens that let it sign in to services without you. That makes it far more useful and raises the stakes, because anything it can reach, a mistake or a stolen key can reach too.",
+      "tip": "Give each agent its own least-privilege account or key that you can revoke, never your master login."
+    },
+    {
+      "id": 7,
+      "label": "Email",
+      "panel": "right",
+      "x": 74.5,
+      "y": 56.0,
+      "radius": 4,
+      "color": "#D9A400",
+      "hint": "Find the gold tile with an envelope and a pencil, showing a message being written but not yet sent.",
+      "description": "The agent can work in your mailbox and add drafts to your email. It writes the reply, and you read it and press send. This keeps a person in the loop for anything that leaves your name, while saving the time spent composing.",
+      "tip": "A draft is a proposal. You are still accountable for what you send."
+    },
+    {
+      "id": 8,
+      "label": "Agent Email",
+      "panel": "right",
+      "x": 74.5,
+      "y": 79.5,
+      "radius": 4,
+      "color": "#7A0019",
+      "hint": "Find the maroon tile with a small robot head above an envelope that carries Volt's gold lightning bolt.",
+      "description": "Each agent can have its own email address. Your agents can write to you, to other agents, and to outside people from their own address, keeping their traffic separate from your inbox and leaving a record of who said what.",
+      "tip": "An agent with its own address should say it is an agent, so recipients know who they are dealing with."
+    }
+  ]
+}

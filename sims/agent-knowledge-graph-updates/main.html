@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Agent Knowledge Graph Update Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="title-bar">
+            <h1 class="title">Agent Knowledge Graph Update Architecture</h1>
+        </header>
+
+        <!-- vis-network replaces the children of #network, so overlays must be siblings -->
+        <div id="network" role="img"
+             aria-label="Four horizontal bands, top to bottom: University of Minnesota agents, College of Science and Engineering agents, EECD Department agents, and Personal Researcher agents. Each band has an agent node and three knowledge nodes: Annual Budget, AI Usage Policy, and NSF Grant Award."></div>
+
+        <div id="status" class="status" role="status" aria-live="polite">
+            Press a button to send a knowledge update through the four agent levels.
+        </div>
+
+        <div class="controls">
+            <button id="btn-budget" class="evt evt-budget" type="button">Budget Information <span class="dir">&#8595; top-down</span></button>
+            <button id="btn-nsf" class="evt evt-nsf" type="button">NSF Grant Award <span class="dir">&#8593; bottom-up</span></button>
+            <button id="btn-policy" class="evt evt-policy" type="button">AI Usage Policy Change <span class="dir">&#8597; from CSE</span></button>
+            <button id="btn-reset" class="reset" type="button">Reset</button>
+        </div>
+    </div>
+    <script src="agent-knowledge-graph-updates.js"></script>
+</body>
+</html>
