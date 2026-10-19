@@ -80,7 +80,7 @@ I will make this concrete with case studies from my own work, including interact
 
 ## Many Types of "Chat" Agents
 
-<iframe src="../../posters/many-types-of-chat-agents/main.html" height="800px" width="100%" scrolling="no"></iframe>
+<iframe src="../../posters/many-types-of-chat-agents/main.html" height="900px" width="100%" scrolling="no"></iframe>
 
 ---
 ## Important New Term
@@ -100,12 +100,6 @@ The length of task, measured by how long a human expert needs to do it, that an 
 ## Projecting AI Task Completion to 2030
 
 <iframe src="../../sims/projecting-ai/main.html" height="762px" width="100%" scrolling="no"></iframe>
-
----
-
-## Increasing Agent Success on Long Running Tasks
-
-
 
 ---
 ## What Does Dan Use His Agents For?
@@ -144,6 +138,20 @@ the agents in your department and at the University of Minnesota?
 A central "ground truth" data structure to keep your content aligned with your goals.
 
 ![](./dans-pkg.png)
+
+---
+## Agent Skills: Teach Your Agent a Repeatable Task
+
+A **skill** is a reusable package of instructions that lets an agent do one defined task the same way every time.
+
+- A folder with a `SKILL.md` file: a name, a one-line description, and step-by-step instructions
+- Optional scripts, reference files, and templates in the same folder
+- The agent keeps only the name and description in context, and loads the rest when a request matches
+- Turns a repeatable research task into a one-line command
+- Example: a skill that extracts Bode-plot features from measurement files
+- Dan's experience: 100x quality improvement in textbook generation
+
+<iframe src="../../posters/inside-an-agent-skill/main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 ---
 ## Generating a Publishing Quality Paper
