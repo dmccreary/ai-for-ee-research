@@ -37,7 +37,7 @@ All five products arrived within about six months of each other in 2026, and the
 
 ## Where the Numbers Come From
 
-Every value on this poster comes from the [Personal Agent Software appendix](../../appendices/personal-agent-software/index.md), which is built from vendor announcements and press coverage gathered on October 15, 2026. We found no independent benchmarks or controlled tests of any of these products. Prices and tiers changed several times within weeks of launch, and the Dots price is reported two different ways, so confirm each number with the vendor. Open-source alternatives OpenClaw and Hermes Agent are covered in the appendix but are not on the poster, and so is Google's separate work-oriented Gemini Agent. The logos belong to their owners, except the Gemini Spark icon, which is a generic stand-in; the appendix lists where each one came from.
+Every value on this poster comes from the [Personal Agent Software appendix](../../appendices/personal-agent-software/index.md), which is built from vendor announcements and press coverage gathered on October 15, 2026. We found no independent benchmarks or controlled tests of any of these products. Prices and tiers changed several times within weeks of launch, and the Dots price of $100 a month is an estimate because reports conflict, so confirm each number with the vendor. Open-source alternatives OpenClaw and Hermes Agent are covered in the appendix but are not on the poster, and so is Google's separate work-oriented Gemini Agent. The logos belong to their owners, except the Gemini Spark icon, which is a generic stand-in; the appendix lists where each one came from.
 
 ## Connects to
 
