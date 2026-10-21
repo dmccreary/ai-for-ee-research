@@ -5,11 +5,12 @@ description: Primary and supporting references for AI for EE Research, starting 
 
 # References
 
-This page collects the references for the book. It is a working list: more
-references will be added as chapters are written. The first entry is the
-primary reference.
+This page collects some of the general references for this interactive intelligent textbook.
+Each chapter also includes a detailed list of annotated references you can use to explore more about that chapter's topic.
 
 ## Primary Reference
+
+### A Semantic Web Architecture for Advocate Agents to Determine Preferences and Facilitate Decision Making
 
 1. Ketter, W., Batchu, A., Berosik, G., and McCreary, D. (2008).
    [A semantic web architecture for advocate agents to determine preferences
@@ -38,14 +39,11 @@ primary reference.
 reference for the author's research on semantic web architectures for software
 agents that act on a person's behalf.
 
-!!! note "Annotation to be added"
-    This entry was added from the publication's bibliographic record. A
-    relevance annotation will be written after the paper is reviewed for this
-    book.
 
-## Supporting References
 
-2. McCreary, D. (2023).
+
+### Integrating Personal Knowledge Graphs Into The Enterprise
+McCreary, D. (2023).
    [Integrating personal knowledge graphs into the enterprise](https://digital-library.theiet.org/doi/abs/10.1049/PBPC063E_ch14).
    Chapter 14 in *Personal Knowledge Graphs (PKGs): Methodology, Tools and
    Applications*. Institution of Engineering and Technology (IET),
@@ -69,3 +67,9 @@ agents that act on a person's behalf.
 [Personal Knowledge Graphs appendix](appendices/pkg/index.md) summarizes this
 chapter, which consolidates and reformats the author's four 2022 blog posts on
 personal knowledge graphs.
+
+### MicroSims
+[MicroSims: A Framework for AI-Generated, Scalable Educational Simulations with Universal Embedding and Adaptive Learning Support](https://arxiv.org/abs/2511.19864) 25 Nov 2025
+
+### Five Levels of Intelligent Textbooks
+[A Five-Level Classification Framework for Intelligent Textbooks:Lessons from Autonomous Vehicle Standards](https://www.researchgate.net/publication/398830915_A_Five-Level_Classification_Framework_for_Intelligent_Textbooks_Lessons_from_Autonomous_Vehicle_Standards) - Dec 18, 2025
