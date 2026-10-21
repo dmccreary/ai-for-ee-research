@@ -19,3 +19,5 @@
 9. [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) - arXiv - Introduces tiered memory management that lets a model operate beyond its context window. Relevant to how always-on agents keep durable memory across weeks, with document-analysis and long-chat experiments.
 
 10. [Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173) - arXiv - Shows how hidden instructions in retrieved content can hijack LLM-integrated applications. Explains why delegated sign-in and shared logins enlarge blast radius, with concrete attack demonstrations against real applications.
+
+11. [Google Trends: "personal AI agent" (US, June 2025 to June 2026)](https://trends.google.com/explore?q=personal%2520AI%2520agent&date=2025-06-01%202026-06-01&geo=US) - Google Trends - Charts relative US search interest in the phrase "personal AI agent" over the year this chapter's products emerged. A quick, independent signal of how fast public attention to always-on personal agents grew, useful context for weighing vendor claims about adoption.
