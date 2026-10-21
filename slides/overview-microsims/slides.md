@@ -155,6 +155,14 @@ A central "ground truth" data structure to keep your content aligned with your g
 ![](./dans-pkg.png)
 
 ---
+## Enterprise Knowledge and the RBAC Rules
+![](./dans-chapter-on-pkg.png){ align="right" width="300"}
+
+1. Getting agents access to the minimal data they need to do their work is complex
+2. Integrating personal knowledge into a research community is complex
+3. PKG/EKG integration opens many questions about intellectual property (IP) ownership
+4. See [references](../../references.md) for details
+---
 ## Agent Skills: Teach Your Agent a Repeatable Task
 
 A **skill** is a reusable package of instructions that lets an agent do one defined task the same way every time.
