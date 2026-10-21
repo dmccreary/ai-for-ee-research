@@ -41,7 +41,7 @@
         "Introduced at DevDay on September 29, 2026, powered by GPT-6 Astra.",
         "Each dot has its own cloud computer and browser, and you can open it at any time to watch what it is doing.",
         "Sign-in passwords are not exposed to the model, background research uses read-only access, and you can write custom approval rules.",
-        "Reports conflict on price: Engadget says the first dot is free for Pro and Business Premium, while AIMultiple lists $100 a month.",
+        "Price is shown as $100 a month, an estimate: reports conflict, with Engadget saying the first dot is free for Pro and Business Premium and AIMultiple listing $100.",
         "Whether it can have its own email address is unknown; we have not checked."
       ]
     },
@@ -119,9 +119,9 @@
       "explanation": "Cowork lives in Claude Desktop, so a March 2026 source says it needs the computer awake."
     },
     {
-      "question": "Which agent's price is reported inconsistently, from free to $100 a month?",
+      "question": "Which agent's $100 a month price on the poster is only an estimate, because reports conflict?",
       "correct_zone": "dots",
-      "explanation": "Engadget and AIMultiple disagree, so check OpenAI's own announcement."
+      "explanation": "Engadget and AIMultiple disagree, so the poster shows $100 as an estimate; check OpenAI's own announcement."
     },
     {
       "question": "Which agent is included in the $20 to $200 Claude plans rather than sold separately?",
