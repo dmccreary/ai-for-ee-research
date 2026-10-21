@@ -1176,9 +1176,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#number-one-question-communication" class="md-nav__link">
+  <a href="#agent-agent-communication-strategies" class="md-nav__link">
     <span class="md-ellipsis">
-      Number One Question: Communication
+      Agent-Agent Communication Strategies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-one-question-sharing-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number One Question: Sharing Knowledge
     </span>
   </a>
   
@@ -1373,7 +1382,17 @@
 <iframe src="../../posters/your-agent-team/main.html" height="760px" width="100%" scrolling="no"></iframe>
 
 <hr />
-<h2 id="number-one-question-communication">Number One Question: Communication<a class="headerlink" href="#number-one-question-communication" title="Permanent link">&para;</a></h2>
+<h2 id="agent-agent-communication-strategies">Agent-Agent Communication Strategies<a class="headerlink" href="#agent-agent-communication-strategies" title="Permanent link">&para;</a></h2>
+<p><strong>Start simple:</strong> have agents communicate through shared files or a structured message format (Markdown), with <strong>one</strong> orchestrator (aka nexus agent) coordinating.  Only add complex protocols only when you outgrow that.</p>
+<p>A practical progression:</p>
+<ol>
+<li><strong>Orchestrator + subagents</strong> - One lead agent delegates tasks and collects results. This is the easiest to debug and covers most use cases.</li>
+<li><strong>Shared workspace</strong> - Agents read and write files (Markdown or JSON) in a common folder or repo. It leaves an audit trail and needs no special infrastructure.
+Structured messages. Agree on a small schema, such as {from, to, task, status, payload}, so agents don’t parse free-form prose from each other.</li>
+<li><strong>Standard protocols as you scale</strong> Use MCP, Publish/Subscribe messaging, or MQTT (hardware protocol notification from devices) to give agents shared tools and data. Use A2A (agent-to-agent) when agents from different systems or vendors must discover and call each other.</li>
+</ol>
+<hr />
+<h2 id="number-one-question-sharing-knowledge">Number One Question: Sharing Knowledge<a class="headerlink" href="#number-one-question-sharing-knowledge" title="Permanent link">&para;</a></h2>
 <p>How do you efficiency get all your Bots to communicate together as well as communicate with
 the agents in your department and at the University of Minnesota?</p>
 <p><strong>Recall:</strong> <em>The key to artificial intelligence is knowledge representation</em></p>

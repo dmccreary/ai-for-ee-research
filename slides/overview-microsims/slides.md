@@ -126,7 +126,18 @@ The length of task, measured by how long a human expert needs to do it, that an 
 
 
 ---
-## Number One Question: Communication
+## Agent-Agent Communication Strategies
+
+**Start simple:** have agents communicate through shared files or a structured message format (Markdown), with **one** orchestrator (aka nexus agent) coordinating.  Only add complex protocols only when you outgrow that.
+
+A practical progression:
+
+1. **Orchestrator + subagents** - One lead agent delegates tasks and collects results. This is the easiest to debug and covers most use cases.
+2. **Shared workspace** - Agents read and write files (Markdown or JSON) in a common folder or repo. It leaves an audit trail and needs no special infrastructure.
+Structured messages. Agree on a small schema, such as {from, to, task, status, payload}, so agents don’t parse free-form prose from each other.
+3. **Standard protocols as you scale** Use MCP, Publish/Subscribe messaging, or MQTT (hardware protocol notification from devices) to give agents shared tools and data. Use A2A (agent-to-agent) when agents from different systems or vendors must discover and call each other.
+---
+## Number One Question: Sharing Knowledge
 
 How do you efficiency get all your Bots to communicate together as well as communicate with
 the agents in your department and at the University of Minnesota?
