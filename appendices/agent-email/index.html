@@ -1,0 +1,2402 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Research notes on whether Grok Bot, Dots, Muse, Claude Cowork, and Gemini Spark can have their own email address or text messaging channel, and which third-party services can add one.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/appendices/agent-email/">
+      
+      
+        <link rel="prev" href="../personal-agent-software/">
+      
+      
+        <link rel="next" href="../pkg/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Agent Email - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#appendix-agent-email" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agent Email
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../posters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posters
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../slides/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../agent-personas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Personas
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personal-agent-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Agent Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Email
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-an-agents-own-address-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why an agent's own address matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grok-bot-spacexai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grok Bot (SpaceXAI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grok Bot (SpaceXAI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dots-openai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dots (OpenAI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dots (OpenAI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muse-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muse (Meta)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Muse (Meta)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-cowork-anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude Cowork (Anthropic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Cowork (Anthropic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini-spark-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemini Spark (Google)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gemini Spark (Google)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-email-or-texting-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding email or texting yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats-and-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caveats and gaps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-to-resolve-before-this-becomes-a-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions to resolve before this becomes a chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Knowledge Graphs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph Admin
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-an-agents-own-address-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why an agent's own address matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grok-bot-spacexai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grok Bot (SpaceXAI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grok Bot (SpaceXAI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dots-openai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dots (OpenAI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dots (OpenAI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muse-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Muse (Meta)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Muse (Meta)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-cowork-anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude Cowork (Anthropic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Cowork (Anthropic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini-spark-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemini Spark (Google)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gemini Spark (Google)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-messaging_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text messaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-on-options_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolt-on options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-email-or-texting-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding email or texting yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats-and-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caveats and gaps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-to-resolve-before-this-becomes-a-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions to resolve before this becomes a chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/appendices/agent-email.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="appendix-agent-email">Appendix: Agent Email<a class="headerlink" href="#appendix-agent-email" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Research notes — not yet a finished chapter</p>
+<p>This appendix holds research gathered on <strong>October 21, 2026</strong>, as a
+follow-up to <a href="../personal-agent-software/">Personal Agent Software</a>.
+Most claims are vendor-stated or come from press and vendor blogs. Only the
+Grok Bot inbox was tested first-hand (by the author, in October 2026), and
+every other entry is untested. Features in this area changed within days of
+announcement, so verify against each vendor's own pages before relying on
+anything here.</p>
+</div>
+<h2 id="why-an-agents-own-address-matters">Why an agent's own address matters<a class="headerlink" href="#why-an-agents-own-address-matters" title="Permanent link">&para;</a></h2>
+<p>An always-on agent that can only use <em>your</em> mailbox acts as you. That has two
+costs for a research group:</p>
+<ul>
+<li><strong>No separation.</strong> Mail the agent sends comes from your address, and mail it
+  reads is your private mail, including anything unpublished.</li>
+<li><strong>Stalled sign-ups.</strong> Several products filter one-time codes, password-reset
+  links, and magic links out of the connected mailbox, so an agent cannot finish
+  creating an account on a service for you.</li>
+</ul>
+<p>An address of the agent's own fixes both problems. People can also email the
+agent like a colleague, forward it a message, or add it to a thread. The cost is
+a new way in for attackers: any message sent to that address is untrusted input
+the agent will read.</p>
+<div class="admonition warning">
+<p class="admonition-title">Prompt injection through the inbox</p>
+<p>A malicious email can carry hidden instructions aimed at the agent. Treat
+anything that arrives at an agent-owned address as untrusted data, keep
+approval rules on for sending and spending, and do not give the agent
+standing access to unpublished research data it does not need.</p>
+</div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Three terms recur below. A <strong>built-in address</strong> is one the vendor provisions.
+A <strong>bolt-on address</strong> comes from a separate service you connect yourself. A
+<strong>text channel</strong> is any way to message the agent from a phone, such as SMS,
+iMessage, or WhatsApp.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Built-in own email</th>
+<th>Text messaging</th>
+<th>Bolt-on option</th>
+<th>Evidence quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grok Bot</strong></td>
+<td><strong>Yes</strong>, <code>@mail.grokbot.com</code>, since Oct 9, 2026</td>
+<td>None found</td>
+<td>AgentMail plugin (email only)</td>
+<td>Author-tested; vendor post on X</td>
+</tr>
+<tr>
+<td><strong>Dots</strong></td>
+<td><strong>No</strong> at launch</td>
+<td>SMS reported as limited beta or "coming"; sources conflict</td>
+<td>AgentMail (vendor claim)</td>
+<td>Help-center text via search summary; secondary press</td>
+</tr>
+<tr>
+<td><strong>Muse</strong></td>
+<td><strong>Announced, not shipped</strong></td>
+<td>WhatsApp (confirmed); SMS none found</td>
+<td>AgentMail via Secrets tab (vendor claim)</td>
+<td>Meta launch post; TechCrunch</td>
+</tr>
+<tr>
+<td><strong>Claude Cowork</strong></td>
+<td><strong>No</strong></td>
+<td>Phone app only (Dispatch); no SMS found</td>
+<td>Third-party inboxes (vendor claims)</td>
+<td>Anthropic help article; vendor blogs</td>
+</tr>
+<tr>
+<td><strong>Gemini Spark</strong></td>
+<td><strong>Yes</strong>, its own Gmail address (press-reported)</td>
+<td>Texting announced, not shipped</td>
+<td>None needed for email</td>
+<td>Press; no first-party page read</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grok-bot-spacexai">Grok Bot (SpaceXAI)<a class="headerlink" href="#grok-bot-spacexai" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="Grok Bot app icon" src="../personal-agent-software/logos/grok-bot.png" width="90" /></p>
+<p>Grok Bot is the one product here that has shipped a built-in inbox for its
+bots, and it is the only one the author has tested.</p>
+<h3 id="email">Email<a class="headerlink" href="#email" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Announcement.</strong> The official <code>@bot</code> account on X announced on October 9,
+  2026 that a bot can now have its own inbox. Elon Musk replied "Yes" when asked
+  if it was real; that one-word reply is the only executive confirmation we
+  found. SpaceXAI posted it on X and we found no help page or release notes.</li>
+<li><strong>Address.</strong> Every address ends in <code>@mail.grokbot.com</code>, and the user chooses
+  the name in front of the <code>@</code>. You claim it by asking the bot in chat or by
+  tagging <code>@bot</code> on X. The bot checks that the name is free and asks for your
+  approval first.</li>
+<li><strong>Permanent names.</strong> One write-up says addresses are unique and are never
+  reissued, even after you delete them, so choose carefully.</li>
+<li><strong>What it is for.</strong> The stated uses are signing up for services (receiving the
+  confirmation link or one-time code and finishing the sign-up), contacting
+  businesses to book or request quotes, and arranging meeting times by email.</li>
+<li><strong>Team plans.</strong> An admin must switch the feature on before members can use it.</li>
+<li><strong>Author test.</strong> The author sent a test message to a bot's address and the
+  bot replied from that same address.</li>
+</ul>
+<h3 id="text-messaging">Text messaging<a class="headerlink" href="#text-messaging" title="Permanent link">&para;</a></h3>
+<p>We found no reporting of SMS, iMessage, or a phone number for Grok Bot. Work is
+assigned in a chat window on desktop or iOS. Because each bot has a cloud
+computer that signs in to websites, it could in principle register for a
+third-party phone-number service, but we did not test that and found no
+documentation of it.</p>
+<h3 id="bolt-on-options">Bolt-on options<a class="headerlink" href="#bolt-on-options" title="Permanent link">&para;</a></h3>
+<ul>
+<li>An <strong>AgentMail</strong> plugin has been available to Grok Bot users since August 2026,
+  before the built-in address. Install it from Settings → Plugins, or add AgentMail
+  as a custom MCP connector with an API key. The AgentMail page covers email only
+  and says Grok Bot access for it is limited to the higher plans.</li>
+<li>Out of the box, Grok Bot can read a mailbox you connect through Gmail or
+  Outlook, but that mailbox is yours, not the bot's.</li>
+</ul>
+<h3 id="open-questions">Open questions<a class="headerlink" href="#open-questions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Pricing, sending limits, and country restrictions for the inbox are unpublished.</li>
+<li>It is not documented whether each outgoing email or sign-up needs approval.</li>
+<li>SpaceXAI's terms make the user responsible for "agentic actions," and those
+  include sending communications. A bot that emails the wrong business is the
+  user's problem.</li>
+<li>Practical limits of about 50 bots per account and six per group chat were
+  reported with the announcement.</li>
+</ul>
+<h2 id="dots-openai">Dots (OpenAI)<a class="headerlink" href="#dots-openai" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="ChatGPT app icon, the app that hosts Dots" src="../personal-agent-software/logos/chatgpt.png" width="90" /></p>
+<h3 id="email_1">Email<a class="headerlink" href="#email_1" title="Permanent link">&para;</a></h3>
+<p><strong>No, not at launch.</strong> OpenAI's help article "Getting started with your dot" is
+quoted by a search tool as saying a dot cannot have its own standalone email
+address at launch. A dot can instead use your personal email account, which you
+connect for your tasks. Custom rules can restrict that use, for example telling
+a dot never to send email.</p>
+<p>A follow-up report dated October 1, 2026 said OpenAI had not changed dots'
+pricing, regions, or email addresses since the September 29 launch. We found
+nothing newer.</p>
+<div class="admonition warning">
+<p class="admonition-title">Source limit</p>
+<p>OpenAI's help pages returned HTTP 403 to our fetches, so we did not read
+them ourselves. The quoted wording above reaches us through a search
+summary. Open the <a href="https://help.openai.com/en/articles/20001530-getting-started-with-your-dot">OpenAI help article</a>
+yourself before relying on it.</p>
+</div>
+<h3 id="text-messaging_1">Text messaging<a class="headerlink" href="#text-messaging_1" title="Permanent link">&para;</a></h3>
+<p>Sources conflict, so treat all of this as unconfirmed:</p>
+<ul>
+<li>OpenAI said dots will "soon" be available on other messaging apps and over the
+  phone, without naming apps or dates.</li>
+<li>Agent Sonic, a competing product vendor, lists SMS as a <strong>limited beta for
+  U.S. Pro users</strong>, with carrier charges possible, and says WhatsApp is not a
+  launch channel. It cites no OpenAI page.</li>
+<li>Tom's Guide and MarkTechPost describe texting as planned.</li>
+<li>OpenAI's Enterprise help page is reported to say phone messaging through
+  iMessage, RCS, or WhatsApp is unavailable for Enterprise at launch.</li>
+<li>A dot cannot place phone calls to the user at launch, and setup is
+  desktop-only.</li>
+<li>Slack and Microsoft Teams integrations were announced.</li>
+</ul>
+<h3 id="bolt-on-options_1">Bolt-on options<a class="headerlink" href="#bolt-on-options_1" title="Permanent link">&para;</a></h3>
+<p>AgentMail publishes a guide for giving a dot its own address: connect AgentMail
+in the conversation and the dot creates an inbox it can send from and receive
+at. That is vendor marketing for a product the vendor sells, and we did not
+test it.</p>
+<h2 id="muse-meta">Muse (Meta)<a class="headerlink" href="#muse-meta" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="Muse from Meta app icon" src="../personal-agent-software/logos/muse.png" width="90" /></p>
+<h3 id="email_2">Email<a class="headerlink" href="#email_2" title="Permanent link">&para;</a></h3>
+<p><strong>Announced, not shipped.</strong> At Meta Connect on September 23, 2026, Alexandr
+Wang said each Muse agent will get its own email address "soon," giving no date.
+TechCrunch reports it is still in development and quotes the reasoning that an
+agent running in the background will naturally need one. Users will be able to
+forward messages to the agent or add it to a thread.</p>
+<ul>
+<li><strong>Domain unknown.</strong> TechCrunch does not say what the address will look like.
+  One outlet describes it as an <code>@muse.ai</code> inbox, which we could not confirm.</li>
+<li><strong>Why it matters here.</strong> Muse's Gmail connector filters out one-time tokens,
+  password-reset links, and login magic links, so account sign-ups can stall.
+  That is the gap a separate inbox would fill.</li>
+<li><strong>Today.</strong> Meta's own launch post describes only connecting your existing
+  email, and lets you choose whether Muse reads your mail or can also send on
+  your behalf.</li>
+</ul>
+<h3 id="text-messaging_2">Text messaging<a class="headerlink" href="#text-messaging_2" title="Permanent link">&para;</a></h3>
+<p>Meta's launch post says talking to Muse "works just like messaging another
+person," in the Muse app or directly in <strong>WhatsApp</strong>. You link WhatsApp under
+Settings → Messaging channels. Muse is separate from the free Meta AI assistant
+already inside WhatsApp. We found no SMS channel and no dedicated phone number
+for Muse; results about WhatsApp numbers concerned Meta's business agents, a
+different product.</p>
+<h3 id="bolt-on-options_2">Bolt-on options<a class="headerlink" href="#bolt-on-options_2" title="Permanent link">&para;</a></h3>
+<p>AgentMail publishes a setup guide that works today: create an API key, paste it
+into the Secrets tab Muse opens (not into the chat), and approve the connection.
+Muse then creates its own inbox, by default on <code>agentmail.to</code>, or on a custom
+domain with a paid AgentMail plan. This is vendor material and we did not test
+it. The Secrets-tab design is a useful detail: the key never passes through the
+model's chat context.</p>
+<h2 id="claude-cowork-anthropic">Claude Cowork (Anthropic)<a class="headerlink" href="#claude-cowork-anthropic" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="Claude app icon" src="../personal-agent-software/logos/claude.png" width="90" /></p>
+<h3 id="email_3">Email<a class="headerlink" href="#email_3" title="Permanent link">&para;</a></h3>
+<p><strong>No.</strong> Anthropic's <a href="https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude">Cowork help article</a>
+mentions no agent address, no inbox others can email, and no agent email
+feature. Cowork reaches mail only through the same connectors as Claude chat,
+such as Gmail and Microsoft 365, and those act on <strong>your</strong> account.</p>
+<ul>
+<li><strong>Sending is supervised.</strong> Anthropic's help center says the Gmail connector
+  can send, reply to, and forward, and asks for approval before each action by
+  default. Team and Enterprise owners decide whether members can let those
+  actions run without asking.</li>
+<li><strong>Conflicting claims.</strong> One Claude docs page describes the Gmail connector as
+  read-only, and a third-party blog says Cowork sends only through Microsoft</li>
+<li>These conflict with the help center, which was updated most recently.</li>
+<li><strong>No inbound work.</strong> One comparison says nobody outside your Claude account
+  can send Cowork work, and every task, including scheduled ones, starts with
+  you.</li>
+<li><strong>A hint, not a feature.</strong> A RuntimeWire report from October 19, 2026 says
+  Claude's web code contains a new organization-level setting for CC'ing Claude
+  on email. The report found no address, workflow, or rollout date, and
+  Anthropic has confirmed nothing.</li>
+</ul>
+<h3 id="text-messaging_3">Text messaging<a class="headerlink" href="#text-messaging_3" title="Permanent link">&para;</a></h3>
+<p>Cowork's phone channel is <strong>Dispatch</strong>, which gives you one persistent thread
+between the Claude mobile app and Claude Desktop. Your computer does the work
+and must stay awake and online. Dispatch launched as a research preview on
+March 17, 2026, and Anthropic's current article lists it as unavailable to new
+users. We found no SMS, iMessage, or Telegram support.</p>
+<h3 id="bolt-on-options_3">Bolt-on options<a class="headerlink" href="#bolt-on-options_3" title="Permanent link">&para;</a></h3>
+<p>AgentMail, Email Bump, and Carly each sell dedicated agent inboxes that connect
+to Cowork through connectors or MCP. We saw them only in search results, which
+call out Email Bump addresses on <code>misomail.co</code>. All three are commercial claims
+that we did not verify. Cowork supports MCP connectors, which is the extension
+point that makes these workable.</p>
+<h2 id="gemini-spark-google">Gemini Spark (Google)<a class="headerlink" href="#gemini-spark-google" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="Gemini Spark stand-in icon" src="../personal-agent-software/logos/gemini-spark.svg" width="90" /></p>
+<h3 id="email_4">Email<a class="headerlink" href="#email_4" title="Permanent link">&para;</a></h3>
+<p><strong>Yes, press-reported.</strong> The Next Web says users "can email Spark directly
+through a dedicated Gmail address, much as they would message a human
+colleague." Other sources describe Spark as a teammate with its own Gmail
+address. None gave the address itself or the setup steps, and we read no Google
+page on it. It is the only mainstream product here where the address is part of
+the original launch, announced May 19, 2026 at Google I/O.</p>
+<p>Google's Workspace tie-in helps here: Spark already reaches Gmail, Docs, and
+Calendar without manual setup. Press says it asks before high-stakes actions
+such as sending email, and that Google connectors are off until you enable them.</p>
+<h3 id="text-messaging_4">Text messaging<a class="headerlink" href="#text-messaging_4" title="Permanent link">&para;</a></h3>
+<p><strong>Announced, not shipped.</strong> Google's I/O materials list texting Spark, along
+with emailing it, creating custom sub-agents, and operating your local browser,
+among abilities coming later. We found no report that texting was live. The
+Next Web article does not mention texting at all.</p>
+<h3 id="bolt-on-options_4">Bolt-on options<a class="headerlink" href="#bolt-on-options_4" title="Permanent link">&para;</a></h3>
+<p>None are needed for email. We did not look for a bolt-on text service for Spark.</p>
+<h2 id="adding-email-or-texting-yourself">Adding email or texting yourself<a class="headerlink" href="#adding-email-or-texting-yourself" title="Permanent link">&para;</a></h2>
+<p>A growing set of services give any agent a mailbox or a phone number, provided
+the agent can call tools. Which products allow this differs:</p>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Service</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email inbox</td>
+<td><strong>AgentMail</strong></td>
+<td>Gives an agent a real inbox with threading and webhooks. Guides exist for Grok Bot, Dots, Muse, and Claude. Vendor-published.</td>
+</tr>
+<tr>
+<td>Email inbox</td>
+<td>Email Bump, Carly</td>
+<td>Named in search results for Cowork. Not examined.</td>
+</tr>
+<tr>
+<td>SMS and voice</td>
+<td><strong>AgentPhone</strong></td>
+<td>Y Combinator-backed. Provisions a U.S. or Canadian number per agent through one API call. Vendor claims.</td>
+</tr>
+<tr>
+<td>SMS and voice</td>
+<td>Dial</td>
+<td>Claims a number in about ten seconds and says it can read inbound codes for phone-gated sign-ups. Names Grok Bot and Claude Code as clients. Vendor claims.</td>
+</tr>
+<tr>
+<td>SMS and voice</td>
+<td>Twilio</td>
+<td>The do-it-yourself route. Hermes Agent ships a telephony skill that can buy a Twilio number and send and receive SMS.</td>
+</tr>
+</tbody>
+</table>
+<p>None of the text services above were tested, and our search found no
+Muse- or Dots-specific SMS guide. Two cautions apply to all of them:</p>
+<ul>
+<li><strong>Cost and abuse.</strong> An agent with a purchasable number can spend money and
+  message strangers. Keep spending limits and require approval to send.</li>
+<li><strong>Verification codes.</strong> A number that receives sign-up codes lets the agent
+  create accounts on its own. Decide whether that is something you want an
+  unattended agent to do.</li>
+</ul>
+<h2 id="caveats-and-gaps">Caveats and gaps<a class="headerlink" href="#caveats-and-gaps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>No first-party reading for Dots or Spark.</strong> OpenAI's help pages returned
+  HTTP 403, and no Google page on Spark's address was read.</li>
+<li><strong>Vendor-heavy sources.</strong> Most "how to add email" guides are published by the
+  companies that sell the inbox, and they rank their own product.</li>
+<li><strong>One tested claim.</strong> Only the Grok Bot inbox was verified first-hand. The
+  author has not tried any bolt-on service.</li>
+<li><strong>Fast-moving.</strong> The Grok Bot announcement was twelve days old and the Claude
+  CC report two days old when this was written.</li>
+<li><strong>Text channels differ in kind.</strong> WhatsApp, Dispatch, Slack, and SMS differ in
+  who can message the agent and who pays. We did not compare them in detail.</li>
+</ul>
+<h2 id="questions-to-resolve-before-this-becomes-a-chapter">Questions to resolve before this becomes a chapter<a class="headerlink" href="#questions-to-resolve-before-this-becomes-a-chapter" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Does each agent require approval before sending an email or signing up for a
+   service, and can that be set per recipient?</li>
+<li>How does each vendor treat mail the agent receives: logged, retained, used
+   for training, or visible to admins?</li>
+<li>Which agent could safely hold a lab-group address that collaborators email
+   with data requests?</li>
+<li>What should a research group's rule be for an agent that can sign up for
+   outside services on its own?</li>
+</ol>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
+<p>Product names and logos belong to their owners; see the
+<a href="../personal-agent-software/">Personal Agent Software appendix</a> for where
+each icon came from. Items marked "not read directly" reached us only through a
+search summary.</p>
+<ul>
+<li><a href="https://x.com/bot/status/2108609764766908772">Grok Bot on X — email announcement, Oct 9, 2026</a> (cited by a secondary write-up; not read directly)</li>
+<li><a href="https://madrobot.blog/2026/10/09/grok-bot-own-email-address-mail-grokbot/">Mad Robot — Grok Bot now has its own email address</a></li>
+<li><a href="https://docs.agentmail.to/integrations/grokbot">AgentMail — Grok Bot integration</a></li>
+<li><a href="https://help.openai.com/en/articles/20001530-getting-started-with-your-dot">OpenAI help — Getting started with your dot</a> (HTTP 403; not read directly)</li>
+<li><a href="https://help.openai.com/en/articles/20001554-manage-dots-in-chatgpt-workspaces">OpenAI help — Manage dots in ChatGPT workspaces</a> (not read directly)</li>
+<li><a href="https://www.tryagentsonic.com/articles/openai-dots-whatsapp">Agent Sonic — Can OpenAI Dots work on WhatsApp?</a> (competing vendor)</li>
+<li><a href="https://www.agentmail.to/blog/give-dot-email-address">AgentMail — How to give your dot its own email address</a> (vendor; not read directly)</li>
+<li><a href="https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/">TechCrunch — Everything new coming to Meta's AI agent Muse</a></li>
+<li><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">Meta — Introducing Muse</a></li>
+<li><a href="https://www.agentmail.to/blog/give-muse-email-address">AgentMail — How to give Meta Muse its own email address</a> (vendor)</li>
+<li><a href="https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude">Anthropic — Claude Cowork and chat are one Claude</a></li>
+<li><a href="https://support.claude.com/en/articles/10166901-use-google-workspace-connectors">Anthropic — Use Google Workspace connectors</a> (not read directly)</li>
+<li><a href="https://runtimewire.com/article/exclusive-anthropic-s-code-hints-at-a-gated-way-to-cc-claude-on-email">RuntimeWire — Anthropic's code hints at a gated way to CC Claude on email</a> (not read directly)</li>
+<li><a href="https://www.datacamp.com/tutorial/claude-cowork-dispatch">DataCamp — Claude Cowork Dispatch 101</a> (not read directly)</li>
+<li><a href="https://thenextweb.com/news/google-gemini-spark-agentic-assistant-gmail-io-2026">The Next Web — Google launches Gemini Spark</a></li>
+<li><a href="https://blog.google/intl/fr-fr/nouveautes-produits/io-evolution-gemini-app/">Google — The Gemini app becomes more agentic</a> (French edition; not read directly)</li>
+<li><a href="https://ycombinator.com/companies/agentphone">AgentPhone on Y Combinator</a> (vendor; not read directly)</li>
+<li><a href="https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/productivity/productivity-telephony">Hermes Agent — telephony skill</a> (not read directly)</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../personal-agent-software/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Personal Agent Software">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Personal Agent Software
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pkg/" class="md-footer__link md-footer__link--next" aria-label="Next: Personal Knowledge Graphs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Personal Knowledge Graphs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -42,7 +42,7 @@
         "Each dot has its own cloud computer and browser, and you can open it at any time to watch what it is doing.",
         "Sign-in passwords are not exposed to the model, background research uses read-only access, and you can write custom approval rules.",
         "Price is shown as $100 a month, an estimate: reports conflict, with Engadget saying the first dot is free for Pro and Business Premium and AIMultiple listing $100.",
-        "Whether it can have its own email address is unknown; we have not checked."
+        "It cannot have its own email address at launch; it can only use the personal email account you connect. Texting is reported as a limited beta, but sources conflict."
       ]
     },
     {
@@ -59,7 +59,7 @@
         "Each user's agent runs in its own cloud virtual machine, and you can watch its browser and review an activity log.",
         "A layer called Sentinel allows, blocks, or sends for approval each action, and each purchase needs approval that shows the exact details.",
         "Pricing is a free tier, $20 a month (Power), and $100 a month (Maximum). Training on user data is on by default, with an opt-out.",
-        "Whether it can have its own email address is unknown; we have not checked."
+        "Meta announced on September 23 that each agent will get its own email address \"soon\", but it has not shipped. You can already message Muse in WhatsApp."
       ]
     },
     {
@@ -76,7 +76,7 @@
         "It works mostly in a local sandbox plus plugins and MCP connectors. A March 2026 source says scheduled tasks need the computer awake and Claude Desktop open.",
         "There is no separate price: it is included in Claude Pro ($20), Max ($100 or $200), Team, and Enterprise plans, sharing one usage pool with chat and Claude Code.",
         "Enterprise adds role-based access control and spend limits, but one source notes Cowork activity is not yet in audit logs.",
-        "Whether it can have its own email address is unknown; we have not checked."
+        "It has no email address of its own; it uses your Gmail or Microsoft 365 through connectors. Its phone channel, Dispatch, is the Claude mobile app, not text messages."
       ]
     },
     {
@@ -87,7 +87,7 @@
       "y1": 16.7,
       "x2": 97.7,
       "y2": 94.4,
-      "summary": "Spark is Google's consumer agent: it runs on Google Cloud around the clock, works inside Gmail and Workspace, and is the only one here you can email like a colleague.",
+      "summary": "Spark is Google's consumer agent: it runs on Google Cloud around the clock, works inside Gmail and Workspace, and, with Grok Bot, is one of only two here with its own email address.",
       "facts": [
         "Announced at Google I/O on May 19, 2026, as a U.S. beta for Google AI Ultra subscribers aged 18 and older.",
         "It runs on dedicated virtual machines on Google Cloud, so it keeps working when your own devices are off.",

@@ -74,6 +74,7 @@
   .yes { color: var(--yes); } .yes .mark { background: var(--yes); }
   .maybe { color: var(--maybe); } .maybe .mark { background: var(--maybe); }
   .unknown { color: #6b717d; } .unknown .mark { background: #8A8F98; }
+  .no { color: #A33A3A; } .no .mark { background: #A33A3A; }
   .stack { display: flex; flex-direction: column; align-items: center; }
   .stack .badge { font-size: 28px; } .stack .badge .mark { width: 46px; height: 46px; font-size: 30px; }
   .stack .muted { font-size: 20px; margin-top: 2px; }
@@ -126,9 +127,9 @@
   <!-- Row 5: own email address -->
   <div class="cell label">Own Email?</div>
   <div class="cell card r4b"><div class="stack"><div class="badge yes"><div class="mark">✓</div>Yes</div><div class="muted">its own address</div></div></div>
-  <div class="cell card r4b"><div class="stack"><div class="badge unknown"><div class="mark">?</div>Unknown</div></div></div>
-  <div class="cell card r4b"><div class="stack"><div class="badge unknown"><div class="mark">?</div>Unknown</div></div></div>
-  <div class="cell card r4b"><div class="stack"><div class="badge unknown"><div class="mark">?</div>Unknown</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge no"><div class="mark">✕</div>No</div><div class="muted">not at launch</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge maybe"><div class="mark">!</div>Not yet</div><div class="muted">announced, not shipped</div></div></div>
+  <div class="cell card r4b"><div class="stack"><div class="badge no"><div class="mark">✕</div>No</div><div class="muted">uses your mailbox</div></div></div>
   <div class="cell card r4b"><div class="stack"><div class="badge yes"><div class="mark">✓</div>Yes</div><div class="muted">its own Gmail address</div></div></div>
 
   <!-- Row 6: safety model -->
