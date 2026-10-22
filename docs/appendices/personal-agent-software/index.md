@@ -114,6 +114,9 @@ inside ChatGPT, powered by GPT-6 Astra.
   Dots have built-in rules for when to act versus ask, and users can write
   custom approval rules. OpenAI says it is working with Microsoft to bring
   Dots under Agent 365 security controls.
+- **No email address of its own.** At launch a dot can use your connected
+  personal email account but cannot have its own address. See
+  [Agent Email](../agent-email.md).
 - **One dot for now.** Each eligible user gets one primary dot they can name
   and customize. OpenAI says it expects "teams of Dots working together," but
   multi-dot control is not available at launch.
@@ -146,6 +149,9 @@ tasks: schedules, shopping, travel, and turning long-term goals into plans.
 - **Visibility.** Users can watch the agent's browser as it works and review an
   activity log.
 - **Memory.** Stored as editable text files.
+- **Email address.** Meta announced on September 23 that each agent will get
+  its own address "soon"; it has not shipped. Muse can already be messaged in
+  WhatsApp. See [Agent Email](../agent-email.md).
 - **Pricing.** Free tier, plus $20/mo (Power) and $100/mo (Maximum) tiers with
   weekly token allowances.
 - **Privacy.** Training on user data is on by default, with an opt-out.
@@ -168,6 +174,8 @@ files, runs multi-step tasks, and uses plugins and MCP connectors.
   Cowork the least "always-on" of the commercial products. That may have
   changed since.
 - **Dispatch.** Lets you assign a task from your phone.
+- **No email address of its own.** Cowork uses your Gmail or Microsoft 365
+  through connectors. See [Agent Email](../agent-email.md).
 - **Pricing.** No separate SKU: it is included in Claude Pro ($20/mo), Max
   ($100 or $200/mo), Team, and Enterprise plans. Agentic tasks reportedly burn
   usage allowances five to twenty times faster than ordinary chat, and the
@@ -253,7 +261,7 @@ and managed, in exchange for openness and control.
 | Integrations | Browser/computer use, Slack, connected apps | 4,000+ ChatGPT apps, Codex, Slack/Teams | Email, calendar, payments, WhatsApp | MCP connectors, plugins | Gmail, Docs, Calendar, Chrome, MCP | Chat apps, skills, your own tools |
 | Safety model | Auto Review model; shared logins | Read-only background access; approval rules | Sentinel layer; per-purchase approval; activity log | Local sandbox; enterprise RBAC | Asks before high-stakes actions; connectors opt-in | You manage it |
 | Price | From $20/mo plus usage | Conflicting reports | Free, $20, $100/mo | Included in $20–$200/mo plans | Included in Google AI Ultra, about $100/mo | Free software plus API costs |
-| Own email address | Yes (author-tested) | Unknown | Unknown | Unknown | Yes (press-reported) | Unknown |
+| Own email address | Yes (author-tested) | No, not at launch | Announced, not shipped | No | Yes (press-reported) | Unknown |
 | Open source | No | No | No | No | No | Yes (MIT) |
 
 ## Contrast: what actually differs
@@ -281,9 +289,11 @@ and managed, in exchange for openness and control.
 - **No independent testing.** AIMultiple's comparison reports no benchmarks or
   controlled tests of Dots, Grok Bot, or Muse; the only first-hand evidence is
   the author's anecdotal use of Grok Bot, including the email test above.
-- **Email unknown.** We have not checked whether Dots, Muse, or Cowork can have
-  their own email address, so the poster marks them Unknown. Spark's address is
-  press-reported, not author-tested.
+- **Email status moves fast.** Dots and Cowork have no address of their own,
+  and Muse's is announced but not shipped; the poster shows all three. The
+  evidence is secondary and some of it is vendor-written, so see
+  [Agent Email](../agent-email.md). Spark's address is press-reported, not
+  author-tested.
 - **Moving prices.** Tiers and prices changed within weeks of each launch.
 - **Beta status.** SpaceXAI's October 12 pages checked by Kingy.ai do not say
   whether Grok Bot is still in beta.

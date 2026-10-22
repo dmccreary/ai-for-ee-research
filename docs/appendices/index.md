@@ -14,7 +14,11 @@ They are working notes and will be revised as the book develops.
    architecture, permission models, multi-agent features, pricing, and open
    questions, and notes that most claims are vendor-stated with no independent
    testing.
-3. [Personal Knowledge Graphs](pkg/index.md) - A summary of Dan McCreary's prior
+3. [Agent Email](agent-email.md) - Research notes, gathered in October 2026, on
+   whether Grok Bot, Dots, Muse, Claude Cowork, and Gemini Spark can have their
+   own email address or text messaging channel, and which third-party inbox and
+   phone-number services can add one.
+4. [Personal Knowledge Graphs](pkg/index.md) - A summary of Dan McCreary's prior
    research on personal knowledge graphs (PKGs) and how to integrate them
    securely into an organization's collective knowledge. It covers where PKGs
    came from, why people use them, the tension between free-form notes and

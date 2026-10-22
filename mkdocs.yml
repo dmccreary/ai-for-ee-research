@@ -219,6 +219,7 @@ nav:
           - Pixel, Presentations and Web: appendices/agent-personas/pixel-presentations-web.md
           - Kai, Conferences: appendices/agent-personas/kai-conferences.md
       - Personal Agent Software: appendices/personal-agent-software/index.md
+      - Agent Email: appendices/agent-email.md
       - Personal Knowledge Graphs: appendices/pkg/index.md
 
   - Learning Graph Admin:
