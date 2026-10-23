@@ -382,7 +382,7 @@ extra:
   textbook_name: 'AI for EE Research'
   textbook_version: '0.1'
 
-  # Google Analytics — uncomment once a property ID exists:
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
+  # Google Analytics — uncomment once a property ID Measurement ID exists: G-70VCLJNV6Q
+  analytics:
+     provider: google
+     property: G-70VCLJNV6Q
