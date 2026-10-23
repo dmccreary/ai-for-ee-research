@@ -224,6 +224,19 @@ A **skill** is a reusable package of instructions that lets an agent do one defi
 
 ---
 
+## How Many Rules Are in the Paper Skill?
+
+- **~140** rules for generating the paper
+- **~60** rules for testing quality
+- **~200** rules in total
+
+*Rough estimate from the arxiv-paper-generator skill*
+
+![Figure 1 of the ArXiV Paper](./arxiv-paper-figure-1.png){ width="500px" align="right" }
+
+
+---
+
 ## Trend: Personal AI Agents
 
 ![Google Trends chart for the search term "Personal AI Agents"](../../appendices/personal-agent-software/google-trends-for-personal-ai-agents.png)
