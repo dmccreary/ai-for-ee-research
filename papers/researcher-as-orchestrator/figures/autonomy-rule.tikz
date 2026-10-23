@@ -1,0 +1,28 @@
+% Figure: the autonomy assignment rule, Equation (1), as a decision tree read left to right
+% (Section 4.3).
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oivermillion}{HTML}{D55E00}
+\begin{tikzpicture}[
+    font=\footnotesize,
+    q/.style={draw, rounded corners=2pt, align=center, fill=gray!10, text width=25mm, minimum height=9mm, inner sep=2pt},
+    leaf/.style={draw, align=center, text width=24mm, minimum height=8.5mm, inner sep=2pt},
+    arrow/.style={-{Latex[length=2mm]}, thick},
+    yes/.style={font=\scriptsize, fill=white, inner sep=1pt}]
+  \node[q] (X) at (0, 0) {Result leaves your control? (reach $X$)};
+  \node[q] (V1) at (3.9, 1.6) {Verifiable? ($V$)};
+  \node[q] (Rv) at (3.9, -1.3) {Reversible? ($R$)};
+  \node[leaf, fill=oivermillion!22] (L0) at (8.0, 2.3) {\textbf{Level 0}\\Suggest only};
+  \node[leaf, fill=oivermillion!8] (L1a) at (8.0, 0.95) {\textbf{Level 1}\\Approve each step};
+  \node[leaf, fill=oivermillion!8] (L1b) at (8.0, -0.4) {\textbf{Level 1}\\Approve each step};
+  \node[q] (V2) at (8.0, -2.2) {Verifiable? ($V$)};
+  \node[leaf, fill=oiblue!8] (L2) at (12.1, -1.55) {\textbf{Level 2}\\Act within boundary};
+  \node[leaf, fill=oiblue!22] (L3) at (12.1, -2.85) {\textbf{Level 3}\\Act and report};
+  \draw[arrow] (X.east) -- node[yes]{yes} (V1.west);
+  \draw[arrow] (X.east) -- node[yes]{no} (Rv.west);
+  \draw[arrow] (V1.east) -- node[yes]{no} (L0.west);
+  \draw[arrow] (V1.east) -- node[yes]{yes} (L1a.west);
+  \draw[arrow] (Rv.east) -- node[yes]{no} (L1b.west);
+  \draw[arrow] (Rv.east) -- node[yes]{yes} (V2.west);
+  \draw[arrow] (V2.east) -- node[yes]{no} (L2.west);
+  \draw[arrow] (V2.east) -- node[yes]{yes} (L3.west);
+\end{tikzpicture}

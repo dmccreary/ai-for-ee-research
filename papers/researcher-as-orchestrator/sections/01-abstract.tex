@@ -1,0 +1,25 @@
+\begin{abstract}
+Researchers in electrical and computer engineering increasingly delegate literature
+search, coding, data analysis and drafting to AI agents, yet practices for supervising
+several agents at once lag behind adoption, and the researcher remains accountable for
+every claim. Existing multi-agent frameworks and levels-of-automation models do not tell a
+researcher how much autonomy to grant a task, how work should pass between agents, or how
+many agents one person can supervise. This paper presents an orchestration framework that
+answers these questions. Each task's autonomy level is set from three properties of its
+effects (reversibility, reach and verifiability) by a rule that is complete and
+monotone. Work passes between agents as version-controlled files that no agent may mark
+as accepted when it produced them, and every reported number must name the computation
+that produced it. A review-load model bounds team size by the researcher's daily
+attention and shows that the ratio of planning to execution agents follows from their
+review costs rather than being fixed. We apply the framework to an illustrative
+analog-to-digital converter characterization task and to two AI-assisted publication
+projects, a 20-chapter textbook and an arXiv paper, whose logs and repositories record 13
+defects. Mechanical checks caught every defect for which one existed, errors of meaning
+were caught only when someone recomputed or read the work, and a quality score that no
+computation had produced escaped every control and was published. The results suggest
+measuring review load and escaped defects before enlarging an agent team.
+\end{abstract}
+
+\noindent\textbf{Keywords:} AI agents, human supervisory control, levels of autonomy,
+multi-agent systems, research workflows, verification, reproducibility, electrical
+engineering

@@ -1,0 +1,39 @@
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+
+Agents can now perform much of the procedural work of engineering research, but they
+cannot carry its accountability, and the researcher who does carry it has a fixed number
+of hours in which to check what the agents produce. This paper turned that observation
+into a working framework. Autonomy is granted per task from what the task can do to the
+world---whether its result escapes, whether it can be undone, whether it can be
+checked---and the rule that does so never penalizes making a task safer. Work moves as
+files whose acceptance belongs to someone other than their producer, and numbers must
+show where they came from. Team size is set by the review budget, from which the
+familiar two-to-one ratio of planners to executors falls out as a consequence of review
+costs. Applied to an illustrative converter characterization and to two real
+publication projects, the framework's controls matched where the recorded defects were caught,
+and the one defect that reached publication unchecked fell exactly where the original
+framework had no control.
+
+Five directions would turn the framework's illustrative parameters into measured ones.
+\begin{enumerate}[leftmargin=*]
+  \item \textit{Measure review load in a working group.} Instrument an agent harness to
+    record, for each artifact, its producer, its waiting time, the reviewer's time and the
+    acceptance decision, over a semester in a research group; estimate $k_j$, $r_j$, $s_j$
+    and $E$, and test whether the span of control of Equation~\eqref{eq:span} predicts the
+    observed review backlog.
+  \item \textit{Test the reliability of the assignment rule.} Ask several engineering
+    researchers to code the same set of tasks for reach, reversibility and verifiability
+    independently, report inter-rater agreement, and replace binary properties with graded
+    ones where agreement is low.
+  \item \textit{Implement the provenance rule as a validator.} Build a check that rejects
+    any agent report containing a number without a producing call, and evaluate it on
+    reports with seeded defects of the kind of D12.
+  \item \textit{Apply the framework to physical measurement.} Run the characterization of
+    Case~A on a real converter, with test methods from the ADC test
+    standard~\cite{ieee1241}, and compare escaped defects with and without the claim gate.
+  \item \textit{Represent handoffs as a knowledge graph.} Store tasks, artifacts, checks
+    and acceptances as linked entities, so that a query can list every claim that depends
+    on an artifact later found to be wrong, building on work on personal knowledge
+    graphs~\cite{mccreary2023pkg}.
+\end{enumerate}

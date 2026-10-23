@@ -1,0 +1,32 @@
+% Figure: overview of the orchestration framework (Section 4).
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oiorange}{HTML}{E69F00}
+\definecolor{oigreen}{HTML}{009E73}
+\definecolor{oipurple}{HTML}{CC79A7}
+\begin{tikzpicture}[
+    font=\footnotesize,
+    box/.style={draw, rounded corners=2pt, align=center, minimum height=11mm, inner sep=3pt},
+    arrow/.style={-{Latex[length=2mm]}, thick},
+    lab/.style={font=\scriptsize, align=center, fill=white, inner sep=1pt}]
+  \node[box, fill=gray!12, text width=80mm] (R)
+    {\textbf{Researcher (orchestrator)}\\question and acceptance criteria $\cdot$ gates\\
+     acceptance of claims $\cdot$ daily review budget $B$};
+  \node[box, fill=oigreen!10, text width=50mm, below=17mm of R] (W)
+    {\textbf{Shared workspace} (version-controlled files)\\each artifact carries a status:\\
+     \textsf{queued} $\rightarrow$ \textsf{running} $\rightarrow$ \textsf{needs-review}\\
+     $\rightarrow$ \textsf{accepted} / \textsf{rejected}};
+  \node[box, fill=oiblue!10, text width=25mm, left=17mm of W] (P)
+    {\textbf{Planning agents}\\($n_p$): survey,\\decompose, specify};
+  \node[box, fill=oiorange!15, text width=25mm, right=19mm of W] (E)
+    {\textbf{Execution agents}\\($n_e$): code,\\analysis,\\figures, text};
+  \node[box, fill=oipurple!12, text width=50mm, below=11mm of W] (C)
+    {\textbf{Checks}: tests, validators, strict build, reviewer agent};
+  \draw[arrow] (R.west) -| node[lab, pos=0.78]{question,\\constraints} (P.north);
+  \draw[arrow] (P.east) -- node[lab, above=1pt]{plans,\\specs} (W.west);
+  \draw[arrow] ([yshift=2.5mm]W.east) -- node[lab, above=1pt]{tasks} ([yshift=2.5mm]E.west);
+  \draw[arrow] ([yshift=-2.5mm]E.west) -- node[lab, below=1pt]{artifacts,\\checks run} ([yshift=-2.5mm]W.east);
+  \draw[arrow] ([xshift=-9mm]W.south) -- node[lab, left=1pt]{needs-review} ([xshift=-9mm]C.north);
+  \draw[arrow] ([xshift=9mm]C.north) -- node[lab, right=1pt]{pass / defects} ([xshift=9mm]W.south);
+  \draw[arrow, very thick, densely dashed] (W.north) -- node[lab, right=2pt]{gate: claims, irreversible\\or outward-bound actions} (R.south);
+  \draw[arrow] (R.east) -| node[lab, pos=0.78]{approve\\level-1 steps} (E.north);
+\end{tikzpicture}

@@ -1,0 +1,106 @@
+% main.tex -- arXiv paper source
+% Build locally with ./build.sh (Tectonic). arXiv recompiles this source with pdfLaTeX
+% (TeX Live 2025), so keep the preamble pdfLaTeX-compatible: no fontspec, no \pdfoutput,
+% no raw Unicode symbols in the text.
+\documentclass[11pt]{article}
+
+% Fonts and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{microtype}
+
+% Math, figures, tables, lists, code
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+
+% Page geometry
+\usepackage[margin=1in]{geometry}
+
+% Allow slight stretch to avoid overfull boxes from long compound terms and URLs
+\setlength{\emergencystretch}{2em}
+
+% Table column types that wrap text: L{3cm} left-aligned, C{2cm} centered
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Code listing style (add language=Python etc. per listing)
+\lstdefinestyle{paper}{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!8},
+  columns=flexible,
+  keepspaces=true,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  captionpos=b,
+}
+\lstset{style=paper}
+
+% Paper version: printed under the title and used by ./build.sh release
+\newcommand{\paperversion}{0.01}
+
+% Title and authors
+\title{From Researcher to Orchestrator: Attention-Bounded Supervision of AI Agent Teams in Engineering Research}
+
+\author{
+    Dan McCreary \\
+    Independent Researcher, Minnesota, USA \\
+    \small\url{https://www.linkedin.com/in/danmccreary/} \\
+    \small ORCID: \href{https://orcid.org/0009-0009-3542-8828}{0009-0009-3542-8828}
+}
+
+\date{Version \paperversion \\ \today}
+
+\begin{document}
+
+\maketitle
+
+% Abstract (write it last)
+\input{sections/01-abstract}
+
+% Main content sections -- one file per section, in reading order
+\input{sections/02-introduction}
+\input{sections/03-related-work}
+\input{sections/04-framework}
+\input{sections/05-case-studies}
+\input{sections/06-discussion}
+\input{sections/07-conclusion}
+
+\section*{Acknowledgments}
+The MicroSims case study in Section~\ref{sec:case-c} draws on a paper the author wrote
+with Valerie Lockhart and Troy A. Peterson. The textbook case study in
+Section~\ref{sec:case-b} uses the public repository of the book and its session logs.
+
+\paragraph{Use of generative AI.}
+Generative AI was used in two ways, and both are reported here. First, the textbook and
+the MicroSims paper studied in Section~\ref{sec:cases} were produced with AI agents, as
+those sections describe. Second, this paper was drafted with Claude Opus 5.5 (Anthropic),
+running in Claude Code with an agent skill for arXiv paper preparation. The model
+condensed the author's textbook and project records into the sections, wrote the figure
+scripts and TikZ diagrams, and retrieved and formatted bibliographic metadata; every
+reference was checked against Crossref, DataCite, or the publisher's page. The author
+reviewed, edited and verified all content, including every citation and every number
+drawn from the project logs, and takes full responsibility for this paper.
+
+% References
+\bibliographystyle{ieeetr}
+\bibliography{sections/references}
+
+\end{document}

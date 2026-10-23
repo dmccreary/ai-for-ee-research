@@ -1,0 +1,31 @@
+% Figure: the textbook skill pipeline of Case B (Section 5.3), with the check at each
+% handoff and the defects (Table 7) recorded at each stage. Counts are from the repository.
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oiorange}{HTML}{E69F00}
+\definecolor{oigreen}{HTML}{009E73}
+\definecolor{oivermillion}{HTML}{D55E00}
+\begin{tikzpicture}[
+    font=\scriptsize,
+    stage/.style={draw, rounded corners=2pt, align=center, text width=21.5mm, minimum height=17mm, fill=oiblue!8, inner sep=2pt},
+    chk/.style={draw, align=center, text width=21.5mm, minimum height=10mm, fill=gray!10, inner sep=2pt},
+    dft/.style={align=center, text width=21.5mm, text=oivermillion, inner sep=1pt},
+    arrow/.style={-{Latex[length=1.6mm]}, thick},
+    node distance=3.2mm]
+  \node[stage] (S1) {\textbf{1 Course}\\\textbf{description}\\scored outcomes and topics};
+  \node[stage, right=of S1] (S2) {\textbf{2 Learning}\\\textbf{graph}\\379 concepts,\\670 edges};
+  \node[stage, right=of S2] (S3) {\textbf{3 Chapter}\\\textbf{structure}\\20 chapters in\\dependency order};
+  \node[stage, right=of S3] (S4) {\textbf{4 Chapter}\\\textbf{content}\\text and sim\\specifications};
+  \node[stage, right=of S4, fill=oiorange!15] (S5) {\textbf{5 MicroSims}\\40 built by 19\\parallel agents};
+  \node[stage, right=of S5] (S6) {\textbf{6 Supporting}\\\textbf{pages}\\379 terms, 200 quiz\\items, 200 refs};
+  \foreach \i/\c in {1/{completeness\\score},2/{graph check:\\0 cycles, 0 orphans},3/{concept\\dependency order},4/{strict build, tag\\validator, budget},5/{spec check;\\status field},6/{strict build;\\answer balance}} {
+    \node[chk, below=2.5mm of S\i] (C\i) {\c};
+  }
+  \foreach \i/\d in {1/{},2/{},3/{},4/{D1 D2 D3},5/{D4 D5 D6 D7},6/{D8 D9 D10 D11 \textbf{D12}}} {
+    \node[dft, below=1.2mm of C\i] (D\i) {\d};
+  }
+  \foreach \a/\b in {1/2,2/3,3/4,4/5,5/6} { \draw[arrow] (S\a) -- (S\b); }
+  \foreach \i in {1,...,6} { \draw[gray!60, thick] (S\i) -- (C\i); }
+  \node[draw, dashed, rounded corners=2pt, fit=(S1)(S6), inner sep=2.2mm,
+        label={[font=\scriptsize]above:{Every stage reads the project instruction file
+        (\texttt{AGENTS.md}) and the files written by the stage before it}}] {};
+\end{tikzpicture}

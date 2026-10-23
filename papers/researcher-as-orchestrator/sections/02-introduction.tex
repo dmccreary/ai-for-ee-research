@@ -1,0 +1,84 @@
+\section{Introduction}
+\label{sec:intro}
+
+Large language model (LLM) agents now carry out multi-step research tasks rather than
+answering single questions. An agent interleaves reasoning with tool calls---searching,
+reading files, running code---and observes the results before choosing its next
+action~\cite{yao2023react,wang2024survey,xi2025rise}. Researchers have adopted these tools
+quickly. In a 2025 survey of 2,430 researchers, 84\% reported using AI tools, up from
+57\% a year earlier~\cite{wiley2025explanaitions}; earlier surveys and corpus studies
+found the same trend in attitudes and in the text of published
+papers~\cite{vannoorden2023ai,liang2024mapping}. Electrical and computer engineering is
+no exception: LLMs already generate and debug register-transfer-level hardware
+descriptions~\cite{thakur2023benchmarking,blocklove2023chipchat,liu2023verilogeval}, and
+domain-adapted models assist chip-design engineers~\cite{liu2023chipnemo}.
+
+Practice has not kept pace with adoption. In the same survey, 57\% of researchers named a
+lack of guidelines and training as a barrier, and the share concerned about inaccurate
+output rose from 51\% to 64\%~\cite{wiley2025explanaitions}. The concern is well
+founded. Language models produce fluent but false statements~\cite{ji2023survey};
+in one study, 55\% of the bibliographic citations produced by GPT-3.5 and 18\% of those
+produced by GPT-4 were fabricated~\cite{walters2023fabrication}. Models tend to agree with
+their users~\cite{sharma2023sycophancy}, coding agents can satisfy tests by exploiting
+them instead of meeting the specification~\cite{zhong2025impossiblebench}, and an
+analysis of more than 1,600 execution traces from seven multi-agent frameworks
+identified 14 distinct failure modes~\cite{cemri2025multiagent}. Meanwhile, venues and
+funders agree that an AI tool cannot be an author and that the human authors take full
+responsibility for everything a paper
+contains~\cite{arxiv2025genai,thorp2023chatgpt,nature2023tools,ec2025living}. The
+researcher therefore remains accountable for work that is increasingly performed by
+systems that act on their own.
+
+Two bodies of work bracket this problem without solving it. Multi-agent frameworks and
+``AI scientist'' systems coordinate agents with each other and push toward greater
+autonomy~\cite{wu2023autogen,hong2023metagpt,qian2024chatdev,lu2024aiscientist,schmidgall2025agentlab};
+the human, where present, is an approver of last resort, and work passes between agents
+as conversation. Research on levels of automation and human supervisory control models
+exactly the quantity that matters---how much a human operator can oversee---but it was
+developed for operators of vehicles and robots, not for agents that deliver asynchronous
+documents and code whose cost lies in
+verification~\cite{sheridan1978human,parasuraman2000model,crandall2005validating,cummings2008predicting}.
+Recent proposals grade the autonomy of AI agents by the role the user
+plays~\cite{feng2025levels}, but they do not say how to assign a level to a given task or
+how many agents a single person can responsibly supervise. What is missing is an
+operational framework that tells a researcher three things: how much autonomy to grant
+each task, how work should pass between agents so that it stays reviewable, and how
+large a team their attention can support.
+
+This paper develops such a framework and examines it against three cases. It condenses
+and formalizes the central argument of the author's open textbook \textit{AI for EE
+Research}~\cite{mccreary2026aiforee}: that the researcher's role shifts from performing
+each task to \textit{orchestrating} a team of planning and execution agents, while
+remaining accountable for what is claimed. Our thesis is that the binding constraint on
+such a team is not the number of agents that can be launched but the researcher's review
+attention, and that a framework which makes this constraint explicit also places checks
+where the defects that matter occur.
+
+This paper makes the following contributions:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{An orchestration framework for research agent teams}
+        (Section~\ref{sec:framework}): defined roles, a four-level autonomy scale, and an
+        assignment rule that sets each task's level from three properties of its
+        effects---reversibility, reach and verifiability. We show that the rule is
+        complete and monotone.
+  \item \textbf{A file-based handoff protocol} with five statuses and a
+        separation-of-acceptance invariant, under which no agent may accept its own
+        output, together with a provenance rule for reported numbers that the case
+        analysis showed to be necessary.
+  \item \textbf{An attention-budget model of review load} that yields the span of control
+        of one researcher, shows that the ratio of planning to execution agents follows
+        from their review costs rather than being a constant, and relates both to the
+        fan-out models of human supervisory control.
+  \item \textbf{A three-case evaluation}: an illustrative characterization task from
+        analog-to-digital converter (ADC) research, and two real AI-assisted publication
+        projects---a 20-chapter textbook and an arXiv paper---whose logs and
+        repositories record 13 defects, analyzed by the control that caught each one or
+        failed to.
+\end{enumerate}
+
+Section~\ref{sec:related} reviews related work on agents, automated science, LLMs in
+hardware design, supervisory control and verification. Section~\ref{sec:framework}
+presents the framework. Section~\ref{sec:cases} states the research questions and the
+case-study method and reports the three cases and the cross-case analysis.
+Section~\ref{sec:discussion} discusses implications and limitations, and
+Section~\ref{sec:conclusion} concludes with directions for measurement.

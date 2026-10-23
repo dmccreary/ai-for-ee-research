@@ -1,0 +1,86 @@
+\section{Discussion}
+\label{sec:discussion}
+
+The cases support the paper's central claim in a specific form. Where a mechanical check
+existed it worked, and where the plan was handed to a separate executor the handoff
+exposed errors in the plan. What failed was what the original framework left implicit:
+nobody recorded the reviewer's time, and nothing tied a reported number to the
+computation that should have produced it. Both gaps concern the researcher's attention,
+which is the quantity the framework puts at the center.
+
+\subsection{Implications}
+\label{sec:implications}
+
+\paragraph{For researchers.} The assignment rule turns a vague question---how much should
+I trust this agent?---into three questions about the task that can be answered before
+any agent runs. Its monotonicity suggests the cheapest route to more delegation: change
+the task rather than the model, by writing outputs to new files, adding a known-answer
+test or keeping results local until they are accepted. Before a team is enlarged, the
+review load $L$ and the number of defects found after acceptance $E$ should be measured on
+a small pilot, because Equation~\eqref{eq:escape} shows that reading less is paid for in
+escaped defects unless mechanical checks take up the difference. The source textbook
+orders adoption accordingly: a group policy and a repository with an instruction file
+come first, then one skill piloted at level 1 or 2, then checks and a reproducibility
+package, and only then a small team, reviewed after 90 days on time saved, review time
+and errors that escaped~\cite{mccreary2026aiforee}.
+
+\paragraph{For advisors and research groups.} Most of the framework is a set of
+conventions that a group can share: an instruction file, a vocabulary of statuses with
+\textsf{accepted} reserved for people, a template for handoff records and a short record
+of each acceptance before a result enters a paper. Case~B shows a side benefit: a status
+field that agents cannot advance makes the review backlog visible, here as 50 simulations
+awaiting approval. A backlog that is visible can be managed; one hidden in agents'
+reports cannot. Because reviewers tend to accept automated output with less scrutiny
+over time~\cite{parasuraman2010complacency,goddard2012automation}, a group can also ask
+reviewers to state the expected value before reading an artifact or to check a random
+sample rather than the first few items.
+
+\paragraph{For builders of agent tools.} Four of the case findings point to features
+of the harness rather than of the model. The harness, not the agent, should write
+timestamps and record how long each artifact waited for and received review, so that
+$k_j$, $r_j$ and $s_j$ can be measured. It should make \textsf{accepted} impossible for the
+producing agent to set (I1). It should enforce step, time and spending limits and confirm
+that a terminated process has stopped, which D11 shows an agent cannot be trusted to
+report. And it should support the provenance rule by linking each number in a report to
+the call that produced it, in the spirit of activity logging for
+agents~\cite{chan2024visibility}.
+
+\paragraph{For venues.} Current policies ask authors to disclose substantial use of
+generative AI and to take responsibility for the
+result~\cite{arxiv2025genai,nature2023tools,ec2025living}. A disclosure that named which
+tasks were delegated, at which autonomy level, and which claims passed a human gate would
+tell reviewers more than a statement that a tool was used. This is a suggestion that
+follows from the framework, not a finding of this study.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\begin{enumerate}[leftmargin=*]
+  \item \textit{Author bias.} The framework, the textbook it comes from and both real
+    cases are the author's own, and one person coded the defects. An independent coder
+    might classify some defects differently, particularly the boundary between agent
+    checks and self-reports.
+  \item \textit{Case selection.} Cases~B and~C are publication pipelines---a textbook and
+    a paper---not laboratory research with instruments. The engineering case is
+    illustrative. That the framework transfers to measurement-heavy research is argued
+    from its structure, not shown.
+  \item \textit{Unmeasured parameters.} Review times, the attention budget, the
+    planning-to-execution ratio and the detection probabilities in
+    Equations~\eqref{eq:load}--\eqref{eq:pipeline} are illustrative. The model's
+    predictions, such as the span of control, have not been tested against observed
+    teams.
+  \item \textit{Binary task properties.} In practice reversibility, reach and
+    verifiability are matters of degree: an action can be partly reversible, and a check
+    can be cheap for one reviewer and expensive for another. The rule is a first cut that
+    graded or probabilistic versions could refine.
+  \item \textit{Incomplete records.} The logs were partly narrated by the agents
+    themselves, timestamps were missing, and one log contained a number that no
+    computation produced. Defects that were never recorded cannot be counted, so the 13
+    defects are a lower bound, not a rate.
+  \item \textit{One orchestrator.} The model assumes a single researcher. Groups with
+    several reviewers, delegated review and shared queues raise coordination questions it
+    does not address.
+  \item \textit{Pace of change.} Agent products and models change within months. The
+    framework is stated without reference to any product, but the parameter values that
+    make it useful will drift and must be re-measured.
+\end{enumerate}

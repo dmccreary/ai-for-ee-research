@@ -1,0 +1,31 @@
+% Figure: illustrative task graph for the ADC characterization case (Section 5.2).
+% Durations and dependencies are from the worked example in Chapter 10 of the source book.
+\definecolor{oivermillion}{HTML}{D55E00}
+\definecolor{oiblue}{HTML}{0072B2}
+\begin{tikzpicture}[
+    font=\scriptsize,
+    t/.style={draw, rounded corners=2pt, align=center, minimum width=15mm, minimum height=10mm, inner sep=2pt, fill=white},
+    crit/.style={t, draw=oivermillion, very thick, fill=oivermillion!8},
+    arrow/.style={-{Latex[length=1.8mm]}, thick, gray!70},
+    carrow/.style={-{Latex[length=1.8mm]}, very thick, oivermillion},
+    node distance=4mm and 3.5mm]
+  \node[crit] (T1) {T1 Literature\\survey\\3 h $\cdot$ L2};
+  \node[crit, right=of T1] (T2) {T2 Measurement\\procedure\\2 h $\cdot$ L2};
+  \node[crit, above right=1mm and 3.5mm of T2] (T3) {T3 ENOB\\script\\3 h $\cdot$ L3};
+  \node[t, below right=1mm and 3.5mm of T2] (T4) {T4 Test\\suite\\2 h $\cdot$ L2};
+  \node[crit, below right=1mm and 3.5mm of T3] (T5) {T5 Simulation\\runs\\4 h $\cdot$ L3};
+  \node[crit, right=of T5] (T6) {T6 Analysis\\of records\\2 h $\cdot$ L3};
+  \node[crit, above right=1mm and 3.5mm of T6] (T8) {T8 Report\\draft\\3 h $\cdot$ L2};
+  \node[t, below right=1mm and 3.5mm of T6] (T7) {T7\\Figures\\1 h $\cdot$ L2};
+  \node[crit, below right=1mm and 3.5mm of T8] (T9) {T9 Assembly\\and sending\\1 h $\cdot$ L1};
+  \draw[carrow] (T1) -- (T2);
+  \draw[carrow] (T2) -- (T3);
+  \draw[arrow] (T2) -- (T4);
+  \draw[carrow] (T3) -- (T5);
+  \draw[arrow] (T4) -- (T5);
+  \draw[carrow] (T5) -- (T6);
+  \draw[carrow] (T6) -- (T8);
+  \draw[arrow] (T6) -- (T7);
+  \draw[carrow] (T8) -- (T9);
+  \draw[arrow] (T7) -- (T9);
+\end{tikzpicture}

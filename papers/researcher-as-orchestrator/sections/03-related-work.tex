@@ -1,0 +1,164 @@
+\section{Background and Related Work}
+\label{sec:related}
+
+Five strands of prior work bear on how a researcher should supervise a team of agents.
+Each subsection summarizes one strand and states how this paper builds on it or departs
+from it. Table~\ref{tab:related} summarizes the comparison.
+
+\subsection{LLM agents and multi-agent frameworks}
+\label{sec:rw-agents}
+
+An LLM agent couples a language model with tools and a loop: it decides on an action,
+calls a tool, observes the result and decides again~\cite{yao2023react}. Surveys
+organize the design space of single agents, for example into profile, memory, planning
+and action modules~\cite{wang2024survey}, and of societies of cooperating
+agents~\cite{xi2025rise}. Multi-agent frameworks compose several such
+agents. AutoGen builds applications from conversable agents that exchange
+messages~\cite{wu2023autogen}; MetaGPT encodes standardized operating procedures and
+assigns software-company roles to agents~\cite{hong2023metagpt}; ChatDev organizes
+role-playing agents into chat-based development phases~\cite{qian2024chatdev}; CAMEL
+studies cooperation between role-playing agents~\cite{li2023camel}; and HuggingGPT uses
+one model as a controller that plans tasks and dispatches them to specialist
+models~\cite{shen2023hugginggpt}. Separating planning from execution also helps at the
+level of a single prompt~\cite{wang2023planandsolve}. Practitioner reports distinguish
+\textit{workflows}, whose steps are fixed in code, from \textit{agents}, which direct
+their own tool use, and recommend an orchestrator--worker pattern for tasks that cannot
+be decomposed in advance~\cite{schluntz2024building}; a production research system built
+this way used roughly fifteen times the tokens of a chat interaction~\cite{hadfield2025multiagent}.
+Agent behavior is increasingly configured through plain files---project instruction files
+such as \texttt{AGENTS.md}~\cite{agentsmd2025} and packaged \textit{skills} with a
+\texttt{SKILL.md} entry point~\cite{agentskills2025spec}---and coding agents are evaluated
+on real repository tasks~\cite{jimenez2023swebench}. The failures of multi-agent systems
+cluster into system-design issues, inter-agent misalignment and inadequate task
+verification~\cite{cemri2025multiagent}.
+
+This paper adopts the planner--executor and orchestrator--worker patterns and the use of
+plain files as configuration. It departs from the frameworks above in two respects. The
+orchestrator is the human researcher, whose review time is treated as the scarce
+resource, and work passes between agents as versioned files with an explicit status,
+not as conversation, so that every handoff can be read, diffed and accepted or rejected.
+
+\subsection{AI systems that automate science}
+\label{sec:rw-science}
+
+A parallel line of work aims to automate research itself. The AI Scientist generates
+ideas, runs experiments, writes papers and reviews them automatically~\cite{lu2024aiscientist}.
+Coscientist designs, plans and executes chemistry experiments through laboratory
+automation~\cite{boiko2023autonomous}, and ChemCrow augments a model with expert chemistry
+tools~\cite{bran2024chemcrow}. Agent Laboratory takes a human-provided idea through
+literature review, experimentation and report writing~\cite{schmidgall2025agentlab}, and
+Co-Scientist uses a multi-agent system to generate and refine
+hypotheses~\cite{gottweis2025coscientist}. Critics warn that such tools can produce
+illusions of understanding, in which scientists believe they understand more than they
+do, and can narrow the questions a field asks~\cite{messeri2024illusions}. Others argue
+that risk to people grows with an agent's autonomy and that fully autonomous agents should
+not be built~\cite{mitchell2025fully}.
+
+Our framework sits at the opposite end of the autonomy range. It keeps the framing of the
+question, the choice between approaches and the acceptance of every reported claim with
+the researcher, consistent with the accountability required by venues and
+funders~\cite{arxiv2025genai,thorp2023chatgpt,nature2023tools,ec2025living}. It also
+starts from a constraint specific to engineering: much of the evidence is a physical
+measurement, which an agent can analyze but must never be allowed to stand in for.
+
+\subsection{LLMs in hardware design}
+\label{sec:rw-eda}
+
+In electrical and computer engineering, work on LLMs has concentrated on design
+artifacts. Benchmarks measure the quality of generated Verilog~\cite{thakur2023benchmarking,liu2023verilogeval};
+conversational design studies show an engineer and a model co-designing hardware
+through dialogue~\cite{blocklove2023chipchat}; and domain-adapted models support
+engineering assistance, script generation and bug summarization in chip
+design~\cite{liu2023chipnemo}. These studies ask how capable a model is on a design task.
+This paper asks a complementary question: given capable models, how should the
+researcher who uses them divide, supervise and verify the work of several at once.
+
+\subsection{Levels of automation and human supervisory control}
+\label{sec:rw-loa}
+
+Sheridan and Verplank's ten-level scale for supervisory control of teleoperators is the
+origin of most \textit{levels of automation}~\cite{sheridan1978human}. Parasuraman,
+Sheridan and Wickens separated the type of function automated (information acquisition,
+analysis, decision and action) from the level of automation, and proposed that the level
+be chosen by evaluating human-performance consequences together with automation
+reliability and the costs of decision and action outcomes~\cite{parasuraman2000model}.
+Mixed-initiative interfaces weigh the expected value of acting autonomously against that
+of asking the user~\cite{horvitz1999principles}; design guidelines for human--AI
+interaction~\cite{amershi2019guidelines} and human-centered AI~\cite{shneiderman2020hcai}
+argue that high automation and high human control can coexist. For AI agents, Feng,
+McDonald and Zhang define five levels by the role the user plays---operator,
+collaborator, consultant, approver and observer---and propose autonomy certificates;
+they treat autonomy as a design decision separate from capability~\cite{feng2025levels}.
+Visibility measures such as agent identifiers, real-time monitoring and activity logs
+make agents' actions inspectable after the fact~\cite{chan2024visibility}. Our own
+earlier work described advocate agents that act on a person's behalf using explicit,
+machine-readable preferences~\cite{ketter2008advocate}.
+
+A second tradition asks how many semi-autonomous systems one person can supervise.
+Crandall et al.\ characterized each robot by its \textit{neglect tolerance}---how long
+it can be left unattended before its performance degrades---and by the interaction time
+needed to restore it, and used the two to estimate the maximum number of robots one
+person can manage, a quantity often called \textit{fan-out}~\cite{crandall2005validating}.
+Cummings and Mitchell added the wait times that accrue from cognitive reorientation,
+from vehicles queueing for the operator, and from lost situation awareness; including
+them lowered predicted operator capacity by up to 67\% in their
+simulation~\cite{cummings2008predicting}.
+
+We borrow two ideas from this strand: that the level of automation should follow from the
+consequences of the action, and that a supervisor's capacity can be computed from the
+attention each subordinate system demands. We depart from it in the object being
+supervised. A research agent does not need continuous control; it delivers discrete
+artifacts---a reading list, a script, a table, a paragraph---whose cost to the human is
+the time needed to verify them. Our assignment rule (Section~\ref{sec:autonomy}) makes the
+consequence criterion concrete for research tasks, and our review-load model
+(Section~\ref{sec:attention}) is a fan-out model for asynchronous artifacts.
+
+\subsection{Automation bias, LLM failure modes and verification}
+\label{sec:rw-verification}
+
+People supervising automation tend toward complacency and automation bias: they monitor
+less and accept automated recommendations with less scrutiny, especially when the
+automation is usually right~\cite{parasuraman2010complacency,goddard2012automation}. LLM
+output adds failure modes of its own: hallucination~\cite{ji2023survey}, fabricated and
+erroneous citations~\cite{walters2023fabrication}, sycophancy~\cite{sharma2023sycophancy},
+degraded use of information in the middle of long contexts~\cite{liu2024lost},
+susceptibility to instructions injected through retrieved content~\cite{greshake2023injection},
+and, for coding agents, a propensity to exploit test cases~\cite{zhong2025impossiblebench}.
+Using one model to judge another scales review but brings biases of its
+own~\cite{zheng2023judging}. Against these, scientific computing has long recommended
+version control, scripted analysis, recorded provenance and tests~\cite{sandve2013ten,wilson2014best,wilson2017good},
+and computational science distinguishes \textit{verification} (solving the equations
+right) from \textit{validation} (solving the right equations)~\cite{oberkampf2010vv}.
+
+The framework turns these findings into controls placed at specific handoffs, and ties
+the human share of review to each task's autonomy level. Where the literature treats
+reviewer bias as a property of the person, the framework treats it as a design input:
+review that has become habitual is assumed to catch little, so the human gates are
+reserved for the outputs that cannot be checked mechanically.
+
+\begin{table}[htbp]
+  \centering
+  \caption{How this paper relates to the main strands of prior work. ``Capacity'' asks
+  whether the approach models how much a single human can supervise.}
+  \label{tab:related}
+  \small
+  \begin{tabular}{L{3.0cm}L{2.5cm}L{2.7cm}L{2.5cm}L{2.6cm}}
+    \toprule
+    Approach & Unit supervised & Human role & Autonomy set by & Capacity \\
+    \midrule
+    Multi-agent LLM frameworks~\cite{wu2023autogen,hong2023metagpt,qian2024chatdev} &
+      Agent conversation & Optional participant or approver & System configuration &
+      Not a design variable \\
+    Automated-science systems~\cite{lu2024aiscientist,schmidgall2025agentlab,gottweis2025coscientist} &
+      Research pipeline & Supplies idea; reads output & High by design &
+      Not a design variable \\
+    Supervisory control~\cite{sheridan1978human,parasuraman2000model,crandall2005validating} &
+      Vehicle or robot & Supervisor & Level scale; consequences & Fan-out from neglect and interaction time \\
+    Agent autonomy levels~\cite{feng2025levels} &
+      Agent & One of five user roles & Design decision; certificates & Not modelled \\
+    \textbf{This paper} &
+      Research task and its artifact & Orchestrator; sole acceptor of claims &
+      Reversibility, reach, verifiability & Daily review-attention budget \\
+    \bottomrule
+  \end{tabular}
+\end{table}
