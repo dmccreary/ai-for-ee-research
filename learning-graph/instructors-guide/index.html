@@ -1,0 +1,3614 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How to teach with AI for EE Research — course planning, pacing, tools and data policy, chapters, MicroSims, posters, quizzes, references, the capstone, licensing, customization, and learning analytics.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/learning-graph/instructors-guide/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../course-description-assessment/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Instructor's Guide - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instructors-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instructor's Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../posters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posters
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../slides/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../appendices/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph Admin
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning Graph Admin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor's Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor's Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About This Intelligent Textbook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About This Intelligent Textbook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is an Intelligent Textbook?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-five-levels-of-intelligent-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Five Levels of Intelligent Textbooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-this-textbook-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Makes This Textbook Different
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-your-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning Your Course
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning Your Course">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-accounts-students-will-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Accounts Students Will Need
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-a-course-ai-use-and-data-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting a Course AI-Use and Data Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggested-pacing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested Pacing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Chapters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Chapters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-each-chapter-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Each Chapter Contains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggested-class-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested Class Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the MicroSims
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the MicroSims">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a MicroSim?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-microsims-are-embedded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How MicroSims Are Embedded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinds-of-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kinds of MicroSims
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lesson Plans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-using-microsims-in-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Using MicroSims in Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-infographic-posters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Infographic Posters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-slide-decks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Slide Decks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-quizzes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Quizzes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Quizzes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-quizzes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Quizzes Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blooms-taxonomy-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloom's Taxonomy Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-annotated-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Annotated References
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Annotated References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-note-about-link-rot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Note About Link Rot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-appendices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Appendices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Capstone Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Capstone Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-sample-skill-creation-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Sample Skill-Creation Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-learning-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Learning Graph
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Learning Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-learning-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Learning Graph?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-instructors-can-use-the-learning-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Instructors Can Use the Learning Graph
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volt-the-books-pedagogical-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volt: The Book's Pedagogical Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volt: The Book&#39;s Pedagogical Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-pedagogical-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Pedagogical Agent?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-volt-appears" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Volt Appears
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-instructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Instructors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reporting-problems-and-suggestions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting Problems and Suggestions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the License
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-creative-commons-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Creative Commons License?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this-textbooks-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        This Textbook's License
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Can Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-cannot-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Cannot Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-your-own-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing Your Own Copy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Your Own Copy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-technical-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Technical Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-fork-or-clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Fork or Clone the Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-make-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Make Your Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-preview-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Preview Your Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-publish-your-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Publish Your Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-and-learning-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics and Learning Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytics and Learning Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xapi-learning-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xAPI Learning Records
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-and-regulatory-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privacy and Regulatory Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-a-progress-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a Progress Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Enumeration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graph Quality Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taxonomy-distribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomy Distribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mascot-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mascot Rendering Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary-quality-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary Quality Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz-generation-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quiz Generation Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Book Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About This Intelligent Textbook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About This Intelligent Textbook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is an Intelligent Textbook?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-five-levels-of-intelligent-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Five Levels of Intelligent Textbooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-this-textbook-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Makes This Textbook Different
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-your-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning Your Course
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning Your Course">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-accounts-students-will-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Accounts Students Will Need
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-a-course-ai-use-and-data-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting a Course AI-Use and Data Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggested-pacing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested Pacing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Chapters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Chapters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-each-chapter-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Each Chapter Contains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggested-class-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested Class Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the MicroSims
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the MicroSims">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a MicroSim?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-microsims-are-embedded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How MicroSims Are Embedded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinds-of-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kinds of MicroSims
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lesson Plans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-using-microsims-in-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Using MicroSims in Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-infographic-posters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Infographic Posters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-slide-decks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Slide Decks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-quizzes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Quizzes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Quizzes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-quizzes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Quizzes Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blooms-taxonomy-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloom's Taxonomy Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-annotated-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Annotated References
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Annotated References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-note-about-link-rot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Note About Link Rot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-appendices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Appendices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Capstone Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Capstone Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-sample-skill-creation-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Sample Skill-Creation Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-learning-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Learning Graph
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Learning Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-learning-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Learning Graph?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-instructors-can-use-the-learning-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Instructors Can Use the Learning Graph
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volt-the-books-pedagogical-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volt: The Book's Pedagogical Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Volt: The Book&#39;s Pedagogical Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-pedagogical-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Pedagogical Agent?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-volt-appears" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Volt Appears
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-instructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Instructors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reporting-problems-and-suggestions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting Problems and Suggestions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the License
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-creative-commons-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Creative Commons License?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this-textbooks-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        This Textbook's License
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Can Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-cannot-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Cannot Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-your-own-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing Your Own Copy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Your Own Copy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-technical-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Technical Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-fork-or-clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Fork or Clone the Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-make-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Make Your Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-preview-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Preview Your Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-publish-your-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Publish Your Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-and-learning-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics and Learning Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytics and Learning Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xapi-learning-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xAPI Learning Records
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-and-regulatory-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privacy and Regulatory Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-a-progress-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a Progress Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Learning Graph Admin
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/learning-graph/instructors-guide/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="instructors-guide">Instructor's Guide<a class="headerlink" href="#instructors-guide" title="Permanent link">&para;</a></h1>
+<p>Welcome to the instructor's guide for <em>AI for EE Research: From Researcher to Orchestrator</em>. This guide explains every part of the textbook, how to use each part in a graduate course, seminar, or workshop series, and how to adapt the book for your own students. No prior knowledge of web publishing or learning analytics is assumed. Each technical term is defined before it is used.</p>
+<p>The book is written for graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, and for postdocs and faculty who want practical AI skills for everyday research. You may be teaching it as a for-credit course, running it as a lab-group reading series, or working through it yourself before you introduce it to your group. The guide covers all three.</p>
+<h2 id="about-this-intelligent-textbook">About This Intelligent Textbook<a class="headerlink" href="#about-this-intelligent-textbook" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-an-intelligent-textbook">What Is an Intelligent Textbook?<a class="headerlink" href="#what-is-an-intelligent-textbook" title="Permanent link">&para;</a></h3>
+<p>An <strong>intelligent textbook</strong> is a digital textbook that goes beyond static text and images. It includes interactive simulations, self-check quizzes, a searchable glossary, and a structured map of how concepts depend on each other. The aim is to let students practice the judgments a subject requires, not only read about them.</p>
+<h3 id="the-five-levels-of-intelligent-textbooks">The Five Levels of Intelligent Textbooks<a class="headerlink" href="#the-five-levels-of-intelligent-textbooks" title="Permanent link">&para;</a></h3>
+<p>Intelligent textbooks are grouped into five levels by how interactive and adaptive they are:</p>
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/book-levels/main.html" width="100%" height="500px" scrolling="no" style="overflow: hidden;"></iframe>
+
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Description</th>
+<th>Example Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level 1</strong></td>
+<td>Static Digital</td>
+<td>A PDF or basic web version of a print textbook</td>
+<td>Text and images only, no interactivity</td>
+</tr>
+<tr>
+<td><strong>Level 2</strong></td>
+<td>Interactive</td>
+<td>Adds simulations, quizzes, and searchable glossaries</td>
+<td>MicroSims, self-check quizzes, concept search</td>
+</tr>
+<tr>
+<td><strong>Level 3</strong></td>
+<td>Adaptive</td>
+<td>Adjusts content based on student performance</td>
+<td>Personalized learning paths, difficulty adjustment</td>
+</tr>
+<tr>
+<td><strong>Level 4</strong></td>
+<td>AI-Assisted</td>
+<td>Includes an AI tutor that answers student questions</td>
+<td>Chatbot integration, automated feedback</td>
+</tr>
+<tr>
+<td><strong>Level 5</strong></td>
+<td>Fully Adaptive AI</td>
+<td>Learns from student interactions and optimizes the experience</td>
+<td>Real-time content generation, predictive analytics</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This textbook is a Level 2 intelligent textbook.</strong> It has 50 MicroSims, 20 chapter quizzes, a 379-term glossary, and an interactive learning graph. It also lays groundwork for Level 3: 47 of its MicroSims are instrumented to record learning events in a standard format (see <a href="#analytics-and-learning-records">Analytics and Learning Records</a>), although the book does not yet adapt itself to each learner.</p>
+<h3 id="what-makes-this-textbook-different">What Makes This Textbook Different<a class="headerlink" href="#what-makes-this-textbook-different" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The researcher as orchestrator.</strong> The book is organized around one idea: the researcher's job is shifting from doing every task personally to directing a team of roughly 20 planning agents and 10 execution agents, while staying accountable for the science.</li>
+<li><strong>Verification on every page.</strong> Every chapter trains students to check AI output before trusting it: citations against primary sources, numbers against sanity checks, code against tests. The book's catchphrase is "Trust, but verify!"</li>
+<li><strong>Two concrete building blocks.</strong> Students learn to capture project knowledge in plain Markdown files and to turn repeatable research tasks into tested <strong>agent skills</strong>, which are packaged instructions an AI agent can load and follow as a single command.</li>
+<li><strong>Practice, not only reading.</strong> 50 MicroSims and 25 interactive infographic posters let students sort, judge, calculate, and explore. Most of them train decisions, such as whether a citation is real or whether an agent should be allowed to act without approval.</li>
+<li><strong>A learning graph</strong> maps all 379 concepts and the 670 dependencies between them, so every concept is introduced after its prerequisites.</li>
+<li><strong>Volt the Border Collie</strong>, a mascot character (a "pedagogical agent"), guides students through each chapter with insights, tips, warnings, and encouragement.</li>
+<li><strong>Free and open.</strong> The book is licensed under Creative Commons for non-commercial use. There are no paywalls or access codes.</li>
+</ul>
+<h2 id="planning-your-course">Planning Your Course<a class="headerlink" href="#planning-your-course" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>The <a href="../../course-description/">course description</a> assumes students have:</p>
+<ul>
+<li>Graduate standing, or equivalent research experience, in electrical engineering, computer engineering, or a related field</li>
+<li>Working knowledge of at least one programming language, preferably Python</li>
+<li>Basic comfort with a command line, a text editor, and Git</li>
+<li>Experience writing a technical paper or report</li>
+</ul>
+<p>No prior machine learning, prompt engineering, or agent experience is required. The book does not teach model training, machine learning theory, or EE domain theory. It assumes students bring their own research problems and domain knowledge.</p>
+<p>If some students are new to Git or the command line, schedule a short lab session before Chapter 5. Chapter 5 teaches the Git practices the rest of the book relies on, but it moves quickly for someone who has never opened a terminal.</p>
+<h3 id="tools-and-accounts-students-will-need">Tools and Accounts Students Will Need<a class="headerlink" href="#tools-and-accounts-students-will-need" title="Permanent link">&para;</a></h3>
+<p>The tools students need grow as the book progresses.</p>
+<table>
+<thead>
+<tr>
+<th>Chapters</th>
+<th>What students need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td>A chat interface to at least one large language model. API access (programmatic access to a model from a script) is useful from Chapter 3 onward, where students price a batch job.</td>
+</tr>
+<tr>
+<td>5–7</td>
+<td>Git, a GitHub account, a text editor, and an <strong>AI coding agent</strong>: a tool that reads project files and runs commands on the student's behalf, such as Claude Code or OpenAI Codex. Agents read the project instruction files (<code>AGENTS.md</code>, <code>CLAUDE.md</code>) taught in Chapter 5.</td>
+</tr>
+<tr>
+<td>8–15</td>
+<td>The same coding agent, plus Python with the usual scientific libraries for Chapters 12–13.</td>
+</tr>
+<tr>
+<td>16–20</td>
+<td>A browser for MicroSims. Chapter 19's always-on personal agents are best demonstrated by the instructor rather than required of every student.</td>
+</tr>
+</tbody>
+</table>
+<p>Before the term starts, decide three things:</p>
+<ol>
+<li><strong>Which tools are approved.</strong> Many universities license specific AI tools with data-protection terms that consumer accounts lack. Check what your institution provides before you ask students to sign up for anything.</li>
+<li><strong>Who pays.</strong> Paid subscriptions and API usage cost money. Chapter 3 shows how to estimate the cost of a batch from token counts. Set a per-student budget, or provide shared credits, so that no student is disadvantaged by the tool they can afford.</li>
+<li><strong>What data may go where.</strong> See the next section.</li>
+</ol>
+<h3 id="setting-a-course-ai-use-and-data-policy">Setting a Course AI-Use and Data Policy<a class="headerlink" href="#setting-a-course-ai-use-and-data-policy" title="Permanent link">&para;</a></h3>
+<p>A course that teaches AI use needs its own written policy on day one. Base it on <a href="../../chapters/18-responsible-ethical-use/">Chapter 18: Responsible and Ethical Use of AI</a> and your institution's rules, and cover at least:</p>
+<ul>
+<li><strong>Data classes.</strong> Which kinds of data students may send to which tools. Unpublished results, collaborators' data, data under a non-disclosure agreement, export-controlled designs, and personal data about human subjects usually belong in the most restricted class. The <a href="../../sims/data-sensitivity-sorter/">Data Sensitivity Sorter</a> MicroSim is a good first-week exercise for this.</li>
+<li><strong>Disclosure.</strong> Ask for a short AI-use disclosure statement on every assignment, in the form Chapter 18 teaches.</li>
+<li><strong>Evidence of verification.</strong> Ask students to keep agent logs or a decision log, and to show at least one independent check for each AI-assisted result they submit.</li>
+<li><strong>Authorship.</strong> The researcher stays accountable. AI output a student submits is the student's responsibility, including any fabricated citation it contains.</li>
+</ul>
+<h3 id="suggested-pacing">Suggested Pacing<a class="headerlink" href="#suggested-pacing" title="Permanent link">&para;</a></h3>
+<p>The book has 20 chapters in five parts:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Chapters</th>
+<th>Topic Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Foundations</td>
+<td>1–4</td>
+<td>Research workflows and the orchestrator idea, how language models work, choosing models and writing prompts, context engineering</td>
+</tr>
+<tr>
+<td>2. Memory and skills</td>
+<td>5–7</td>
+<td>Markdown project files and Git, knowledge bases and personal knowledge graphs, designing and testing agent skills</td>
+</tr>
+<tr>
+<td>3. Agents and teams</td>
+<td>8–10</td>
+<td>Agents and tool use, supervising agents and defining roles, orchestrating planning and execution agents</td>
+</tr>
+<tr>
+<td>4. Research tasks</td>
+<td>11–15</td>
+<td>Literature search, data analysis, simulation and testing, brainstorming and problem framing, manuscript preparation</td>
+</tr>
+<tr>
+<td>5. Communicate and trust</td>
+<td>16–20</td>
+<td>MicroSims and research communication, verification and reproducibility, responsible use, always-on personal agents, case studies and capstone</td>
+</tr>
+</tbody>
+</table>
+<p>Most chapters run 4,000 to 5,000 words including their MicroSim specifications. Chapter 1 is about twice that length, because it introduces the vocabulary the rest of the book uses.</p>
+<p>A 15-week semester fits the book well, with capstone milestones placed so that each one uses what the class has just learned:</p>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Chapters</th>
+<th>Capstone milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Each student picks a small, real research task from their own work</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2–3</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>Research question with a metric, a threshold, and acceptance criteria</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>Version-controlled repository with a project instruction file</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>Knowledge base and decision log</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7</td>
+<td>One tested agent skill</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>9–10</td>
+<td>One-page agent team design with roles, autonomy levels, and review points</td>
+</tr>
+<tr>
+<td>9</td>
+<td>11</td>
+<td>Annotated reading list with verified citations</td>
+</tr>
+<tr>
+<td>10</td>
+<td>12–13</td>
+<td>Analysis or simulation code with tests</td>
+</tr>
+<tr>
+<td>11</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>15</td>
+<td>Draft paper section in the student's own voice</td>
+</tr>
+<tr>
+<td>13</td>
+<td>16–17</td>
+<td>Reproducibility package checked on a clean machine</td>
+</tr>
+<tr>
+<td>14</td>
+<td>18–19</td>
+<td>Data classification and disclosure statement</td>
+</tr>
+<tr>
+<td>15</td>
+<td>20</td>
+<td>Capstone presentations</td>
+</tr>
+</tbody>
+</table>
+<p>For a <strong>10-week quarter</strong>, cover one part every two weeks and drop Chapter 19 or assign it as reading. For a <strong>five-session workshop</strong>, give one session to each part, demonstrate the MicroSims live, and replace the capstone with a single skill that each participant builds for their own work.</p>
+<h2 id="using-the-chapters">Using the Chapters<a class="headerlink" href="#using-the-chapters" title="Permanent link">&para;</a></h2>
+<h3 id="what-each-chapter-contains">What Each Chapter Contains<a class="headerlink" href="#what-each-chapter-contains" title="Permanent link">&para;</a></h3>
+<p>Every chapter follows the same structure:</p>
+<ol>
+<li><strong>Front matter.</strong> Metadata at the top of the file (title, description, version). Students don't see it; the website builder and search engines use it.</li>
+<li><strong>Summary.</strong> A short overview of what the chapter covers and what students will be able to do afterward.</li>
+<li><strong>Concepts Covered.</strong> A table of the learning-graph concepts the chapter teaches, each with a <strong>Concept Impact Score</strong>. The score measures how much of the rest of the learning graph builds on that concept, directly or through other concepts. A high score marks a foundational concept that deserves extra class time.</li>
+<li><strong>Prerequisites.</strong> Links to the earlier chapters the chapter depends on.</li>
+<li><strong>Welcome from Volt.</strong> A short opening that tells students why the chapter matters to their research.</li>
+<li><strong>Main content.</strong> The instruction itself, with worked examples drawn from EE research, tables, equations, and embedded MicroSims.</li>
+<li><strong>Volt's admonitions.</strong> Colored callout boxes that highlight key ideas, practical tips, common mistakes, and encouragement on harder passages.</li>
+<li><strong>Summary and Key Takeaways.</strong> A bulleted list of the points to carry forward, followed by a closing celebration from Volt.</li>
+<li><strong>Annotated References</strong> and <strong>Quiz.</strong> Each chapter has a separate references page and a separate quiz page, listed under the chapter in the left navigation.</li>
+</ol>
+<p>The chapters do not include end-of-chapter exercises. The MicroSims, the quizzes, and the capstone milestones fill that role. Add your own discussion questions where your students need them.</p>
+<h3 id="suggested-class-use">Suggested Class Use<a class="headerlink" href="#suggested-class-use" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Before class.</strong> Assign the chapter and ask students to run its MicroSims, which are interleaved with the reading. Ask them to bring one question and one place where they would want to verify the chapter's advice on their own work.</li>
+<li><strong>During class.</strong> Do live demonstrations with a real agent on a real task from the chapter. The most useful demonstrations include a failure: a fabricated citation, a script that runs but gives the wrong answer, or a prompt that the model misreads. Then have students apply the chapter to their own research task in pairs.</li>
+<li><strong>After class.</strong> Assign the quiz as a self-check and the week's capstone milestone as the graded work.</li>
+</ul>
+<h2 id="using-the-microsims">Using the MicroSims<a class="headerlink" href="#using-the-microsims" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-microsim">What Is a MicroSim?<a class="headerlink" href="#what-is-a-microsim" title="Permanent link">&para;</a></h3>
+<p>A <strong>MicroSim</strong> (short for "micro-simulation") is a small, interactive program that runs directly in a web browser. Students install nothing; any modern browser (Chrome, Firefox, Safari, Edge) will do.</p>
+<p>Most MicroSims in this book train judgment rather than simulate physics. They present a realistic research scenario, ask the student to make a decision, and then explain the right answer and why. The list of all 50 is on the <a href="../../sims/">MicroSims page</a>.</p>
+<h3 id="how-microsims-are-embedded">How MicroSims Are Embedded<a class="headerlink" href="#how-microsims-are-embedded" title="Permanent link">&para;</a></h3>
+<p>MicroSims appear inside chapter pages as rectangular interactive areas. They are embedded with an <strong>iframe</strong>, a web feature that displays one web page inside another. Below each one is a link to open it fullscreen, which is the better choice on a projector.</p>
+<p>Just above each MicroSim in a chapter is a collapsible block labeled with the MicroSim's name. Click it to see the full specification: the learning objective, the scenario content and where it came from, the rules, the learner activity, the feedback, and the starting state. These specifications are useful for lesson planning and for understanding why the MicroSim asks what it asks.</p>
+<h3 id="kinds-of-microsims">Kinds of MicroSims<a class="headerlink" href="#kinds-of-microsims" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>What students do</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sorters</td>
+<td>Place items into categories</td>
+<td><a href="../../sims/research-task-sorter/">Research Task Sorter</a>, <a href="../../sims/prompt-component-sorter/">Prompt Component Sorter</a>, <a href="../../sims/falsifiable-hypothesis-sorter/">Falsifiable Hypothesis Sorter</a></td>
+</tr>
+<tr>
+<td>Judges and spotters</td>
+<td>Decide whether something is acceptable, and why</td>
+<td><a href="../../sims/citation-verification-judge/">Citation Verification Judge</a>, <a href="../../sims/agent-permission-boundary-judge/">Agent Permission Boundary Judge</a>, <a href="../../sims/sycophancy-spotter/">Sycophancy Spotter</a></td>
+</tr>
+<tr>
+<td>Calculators</td>
+<td>Change inputs and watch a budget or load respond</td>
+<td><a href="../../sims/context-window-budget-calculator/">Context Window Budget Calculator</a>, <a href="../../sims/orchestrator-review-load-calculator/">Orchestrator Review Load Calculator</a></td>
+</tr>
+<tr>
+<td>Explorers</td>
+<td>Adjust a parameter and observe a model's behavior</td>
+<td><a href="../../sims/temperature-next-token-explorer/">Temperature Next-Token Explorer</a>, <a href="../../sims/search-precision-recall-explorer/">Search Precision and Recall Explorer</a></td>
+</tr>
+<tr>
+<td>Builders and steppers</td>
+<td>Assemble a plan or step through a process</td>
+<td><a href="../../sims/research-task-decomposition-builder/">Research Task Decomposition Builder</a>, <a href="../../sims/agent-loop-stepper/">Agent Loop Stepper</a></td>
+</tr>
+<tr>
+<td>Graphs</td>
+<td>Explore connected entities</td>
+<td><a href="../../sims/graph-viewer/">Learning Graph Viewer</a>, <a href="../../sims/citation-chaining-explorer/">Citation Chaining Explorer</a>, <a href="../../sims/pkg-graph-query-explorer/">Personal Knowledge Graph Query Explorer</a></td>
+</tr>
+</tbody>
+</table>
+<p>The MicroSims are built with four JavaScript libraries. 41 use <strong>p5.js</strong>, a library for interactive drawings with sliders and buttons. 7 use <strong>vis-network</strong>, a library for network diagrams. One uses <strong>Chart.js</strong> for charts (<a href="../../sims/projecting-ai/">Projecting AI Task Completion to 2030</a>) and one uses <strong>Mermaid</strong> for flow diagrams (<a href="../../sims/research-workflow-handoffs/">Research Workflow Handoffs</a>). You don't need to know any of these libraries to use the MicroSims in class.</p>
+<h3 id="lesson-plans">Lesson Plans<a class="headerlink" href="#lesson-plans" title="Permanent link">&para;</a></h3>
+<p>Each MicroSim's own page (reach it from the MicroSims list) has a <strong>Lesson Plan</strong> section with a learning objective, the Bloom's Taxonomy level it targets, the intended audience, a suggested duration, prerequisites, activities, and an assessment. Most of the lesson plans that state a Bloom level target Analyze or Evaluate, the levels the quizzes cover least.</p>
+<h3 id="tips-for-using-microsims-in-class">Tips for Using MicroSims in Class<a class="headerlink" href="#tips-for-using-microsims-in-class" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ask for predictions first.</strong> Before revealing an answer, have students commit to theirs and say why. The explanations are more useful to a student who has just been wrong.</li>
+<li><strong>Argue the hard items.</strong> In the judge and sorter MicroSims, some items are deliberately borderline. Pause on an item the class splits on and have each side make its case before you reveal the answer.</li>
+<li><strong>Connect to the student's own work.</strong> After a MicroSim, ask students to find one example of the same judgment in their own research.</li>
+<li><strong>Let students explore on their own.</strong> After a demonstration, give students five to ten minutes on their own devices. Use the MicroSim's restart control, or reload the page, to run it again.</li>
+<li><strong>Plan for an internet connection.</strong> MicroSims load from the published website. If your room has unreliable internet, build a local copy of the site (see <a href="#customizing-your-own-copy">Customizing Your Own Copy</a>).</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Embed MicroSims in Your LMS or Course Page</p>
+<p>You can add any MicroSim to any web page you control, such as a Canvas or Moodle page, a Google Site, or a plain HTML file, by pasting one iframe:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/ai-for-ee-research/sims/YOUR-MICROSIM-NAME/main.html"</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span> <span class="na">height</span><span class="o">=</span><span class="s">"600px"</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>Replace <code>YOUR-MICROSIM-NAME</code> with the folder name of any MicroSim from the <a href="../../sims/">MicroSims list</a>, such as <code>citation-verification-judge</code>. MicroSims differ in height, so copy the exact code from the <strong>Iframe Embed Code</strong> section on the MicroSim's own page.</p>
+</div>
+<h2 id="using-the-infographic-posters">Using the Infographic Posters<a class="headerlink" href="#using-the-infographic-posters" title="Permanent link">&para;</a></h2>
+<p>The <a href="../../posters/">Posters</a> section has 25 full-width interactive infographics. Most set a risky way of working beside a controlled one, so the difference is visible at a glance: "The Real Citation and the Fluent Fake", "Verified Is Not Validated", "Where Does Your Data Go?". Students hover over or click a region to read what it shows, then switch to <strong>Quiz</strong> mode to test themselves.</p>
+<p>Posters work well as the first slide of a class, as a prompt for a five-minute discussion, or as a review before a quiz. Several posters, such as "Meet Your Agent Team" and "Five Personal Agents, Side by Side", summarize material from the appendices.</p>
+<h2 id="using-the-slide-decks">Using the Slide Decks<a class="headerlink" href="#using-the-slide-decks" title="Permanent link">&para;</a></h2>
+<p>The <a href="../../slides/">Slides</a> section has two decks built with MARP, a tool that turns Markdown files into presentations:</p>
+<ul>
+<li><strong>Overview (Static)</strong> is a 20-slide tour of the whole book: the orchestrator idea, the five parts, and the key takeaways of all 20 chapters. Use it on the first day of class.</li>
+<li><strong>Overview (MicroSims)</strong> is a talk on AI for research productivity that embeds live MicroSims and posters. Use it to introduce the course to a department or a lab group.</li>
+</ul>
+<h2 id="using-the-glossary">Using the Glossary<a class="headerlink" href="#using-the-glossary" title="Permanent link">&para;</a></h2>
+<p>The <a href="../../glossary/">Glossary</a> defines all 379 concepts in the learning graph, one term per concept, in alphabetical order. Definitions follow the ISO 11179 standard for good definitions: precise, concise, distinct from one another, and never circular. Every entry includes a short example, and most include "See also" links to related terms.</p>
+<p>Students can find a term by clicking <strong>Glossary</strong> in the left navigation and using the browser's find command (Ctrl+F on Windows and Linux, Cmd+F on Mac), or by using the search bar at the top of any page.</p>
+<p>Ways to use the glossary in class:</p>
+<ul>
+<li><strong>Vocabulary preview.</strong> Before a chapter, have students read the glossary entries for the concepts in its Concepts Covered table.</li>
+<li><strong>Definitions in their own words.</strong> After a chapter, have students write their own definitions and compare them with the glossary. Differences often expose a misunderstanding.</li>
+<li><strong>Shared language for a lab.</strong> Research groups adopting agents often use the same words for different things. The glossary gives the group a common vocabulary for terms such as <em>subagent</em>, <em>skill</em>, and <em>approval gate</em>.</li>
+</ul>
+<h2 id="using-the-quizzes">Using the Quizzes<a class="headerlink" href="#using-the-quizzes" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-quizzes-work">How the Quizzes Work<a class="headerlink" href="#how-the-quizzes-work" title="Permanent link">&para;</a></h3>
+<p>Each chapter has a quiz page with 10 multiple-choice questions, 200 in all. Students open a quiz from the <strong>Quiz</strong> link under each chapter in the left navigation. Each question has a collapsible <strong>Show Answer</strong> block that reveals the correct answer, an explanation of the choices, the concept being tested, and a link back to the section of the chapter that teaches it.</p>
+<p>The quizzes are self-check tools. They are not graded automatically and do not record scores. Use them for formative assessment, meaning feedback during learning, rather than for grades.</p>
+<p>Ways to use the quizzes:</p>
+<ul>
+<li><strong>Exit ticket.</strong> Use a few questions at the end of class as a quick check for understanding.</li>
+<li><strong>Diagnostic.</strong> Give the quiz before the chapter to find out what students already know.</li>
+<li><strong>Re-teaching guide.</strong> The "See" link in each answer points to the section to revisit.</li>
+<li><strong>Question bank.</strong> All 200 questions are also in one machine-readable file, <a href="../quiz-bank.json">quiz-bank.json</a>, which is a convenient starting point for building your own exams or importing questions into your learning management system. The questions are openly licensed (see <a href="#understanding-the-license">Understanding the License</a>).</li>
+</ul>
+<h3 id="blooms-taxonomy-levels">Bloom's Taxonomy Levels<a class="headerlink" href="#blooms-taxonomy-levels" title="Permanent link">&para;</a></h3>
+<p><strong>Bloom's Taxonomy</strong> is a framework that classifies thinking skills from simple to complex. The 2001 revision, which this book uses, has six levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>What It Means</th>
+<th>Example Verbs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td>Remember</td>
+<td>Recall facts and definitions</td>
+<td>Define, list, name</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>Understand</td>
+<td>Explain ideas in your own words</td>
+<td>Explain, describe, summarize</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>Apply</td>
+<td>Use a procedure in a new situation</td>
+<td>Calculate, write, use</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>Analyze</td>
+<td>Break material into parts and see how they relate</td>
+<td>Distinguish, compare, trace</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>Evaluate</td>
+<td>Make judgments against criteria</td>
+<td>Verify, judge, critique</td>
+</tr>
+<tr>
+<td>L6</td>
+<td>Create</td>
+<td>Put parts together into something new</td>
+<td>Design, build, develop</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="../quiz-generation-report/">quiz generation report</a> shows the quiz questions spread across the first four levels: 31.5% Remember, 31.5% Understand, 27% Apply, and 10% Analyze. The higher levels are assessed elsewhere. The judge MicroSims target Evaluate, and the capstone project targets Create. A complete assessment plan uses all three: quizzes for vocabulary and mechanics, MicroSims for judgment, and the capstone for synthesis.</p>
+<h2 id="using-the-annotated-references">Using the Annotated References<a class="headerlink" href="#using-the-annotated-references" title="Permanent link">&para;</a></h2>
+<p>Each chapter has an <strong>Annotated References</strong> page with 10 curated sources, 200 in all. Each entry gives the title, a link where one exists, and a short note on why the source is useful and how it connects to the chapter. The sources mix Wikipedia articles (stable and accessible), textbooks known for clear explanations, foundational research papers on arXiv, and official documentation from AI tool vendors.</p>
+<h3 id="a-note-about-link-rot">A Note About Link Rot<a class="headerlink" href="#a-note-about-link-rot" title="Permanent link">&para;</a></h3>
+<p><strong>Link rot</strong> is when a web link stops working because the page has been moved, renamed, or deleted. Wikipedia and arXiv links are very stable. Vendor documentation is not: AI companies reorganize their documentation sites often. If you or your students find a broken link:</p>
+<ol>
+<li>Search for the article title on the source website.</li>
+<li>Look for an archived copy on the <a href="https://web.archive.org/">Wayback Machine</a>.</li>
+<li>Report the broken link (see <a href="#feedback">Feedback</a>).</li>
+</ol>
+<h2 id="using-the-appendices">Using the Appendices<a class="headerlink" href="#using-the-appendices" title="Permanent link">&para;</a></h2>
+<p>The <a href="../../appendices/">Appendices</a> hold reference material that supports several chapters:</p>
+<ul>
+<li><strong><a href="../../appendices/agent-personas/">Agent Personas</a></strong> describes seven sample agents a researcher might direct, from Ada the chief of staff to specialists for grant writing, budgets, and conferences. Use them as models when students write the team design for their capstone.</li>
+<li><strong><a href="../../appendices/personal-agent-software/">Personal Agent Software</a></strong> collects research notes on the always-on personal agents surveyed in Chapter 19.</li>
+<li><strong><a href="../../appendices/agent-email/">Agent Email</a></strong> collects research notes on whether personal agents can have their own email address or text-messaging channel.</li>
+<li><strong><a href="../../appendices/pkg/">Personal Knowledge Graphs</a></strong> summarizes the author's earlier research on personal knowledge graphs and on integrating them into an organization, background for Chapters 6 and 19.</li>
+</ul>
+<p>The two personal-agent appendices are dated research notes, built mostly from vendor announcements and press coverage rather than independent tests. Present them to students that way.</p>
+<div class="admonition warning">
+<p class="admonition-title">Check Chapter 19 Before You Teach It</p>
+<p>Personal agent products change monthly. Chapter 19 teaches durable criteria for choosing and supervising any personal agent: where it runs, what it can reach, how approvals work, what it costs, and what happens to research data. The product details are a snapshot. Before teaching the chapter, check the current state of each product and tell students which details have changed.</p>
+</div>
+<h2 id="the-capstone-project">The Capstone Project<a class="headerlink" href="#the-capstone-project" title="Permanent link">&para;</a></h2>
+<p>The capstone, described in <a href="../../chapters/20-case-studies-capstone/#the-capstone-project">Chapter 20</a>, asks each student to plan and run a real research task from their own work with a coordinated team of agents, then present the verified results with an honest account of where human judgment was needed. Its eight deliverables are a question with acceptance criteria, a version-controlled project with memory, a team design, at least one tested skill, verified results, a reproducibility package, a responsible-use statement, and an account of judgment.</p>
+<p>Chapter 20 includes a rubric with seven criteria and leaves the weights to you. Three suggestions from teaching this kind of project:</p>
+<ul>
+<li><strong>Keep the task small.</strong> A good capstone task is one the student could finish by hand in about a week. The point is the process, not the size of the result.</li>
+<li><strong>Stage it across the term.</strong> Each deliverable maps to earlier chapters. The milestones in the <a href="#suggested-pacing">pacing table</a> let students build the capstone one piece at a time instead of all at the end.</li>
+<li><strong>Require a rejected output.</strong> Ask each student to show at least one agent output they rejected and explain why. It is the most direct evidence that the student is judging the work rather than accepting it.</li>
+</ul>
+<h3 id="a-sample-skill-creation-prompt">A Sample Skill-Creation Prompt<a class="headerlink" href="#a-sample-skill-creation-prompt" title="Permanent link">&para;</a></h3>
+<p><a href="sample-skill-prompt/">Sample Skill Creation Prompt</a> shows a prompt the author used to have an agent build a skill that produces an arXiv paper as LaTeX source with a PDF build process. The prompt points the agent at sample papers, tells it to keep asking clarifying questions until it has enough material, and asks it to create a 1-to-100 scoring rubric for judging whether a paper is ready. Show it alongside <a href="../../chapters/07-designing-testing-skills/">Chapter 7</a>, then have students write a prompt of the same shape for a repeatable task from their own research.</p>
+<h2 id="the-learning-graph">The Learning Graph<a class="headerlink" href="#the-learning-graph" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-learning-graph">What Is a Learning Graph?<a class="headerlink" href="#what-is-a-learning-graph" title="Permanent link">&para;</a></h3>
+<p>A <strong>learning graph</strong> is a map of how the concepts in a book depend on each other. It is a <strong>directed acyclic graph (DAG)</strong>: a network in which each arrow points from a concept to a concept it depends on, and in which no chain of arrows ever loops back to where it started. This book's graph has 379 concepts, 670 dependencies, and 17 taxonomy categories, such as Prompting and Context Engineering, Agent Skills, and Verification and Reproducibility.</p>
+<p>The <a href="../../sims/graph-viewer/">Learning Graph Viewer</a> shows the whole graph. You can search for a concept, filter by category, and see how each concept connects to the others. The <a href="../">Learning Graph introduction</a> explains how the graph was built from the course description.</p>
+<h3 id="how-instructors-can-use-the-learning-graph">How Instructors Can Use the Learning Graph<a class="headerlink" href="#how-instructors-can-use-the-learning-graph" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Check prerequisites.</strong> Before teaching a concept, confirm that students have covered the concepts it depends on.</li>
+<li><strong>Diagnose gaps.</strong> When a student struggles with a concept, follow its dependencies back to find the missing foundation.</li>
+<li><strong>Map your curriculum.</strong> Compare the <a href="../concept-list/">concept list</a> with your existing syllabus to find what each covers that the other does not.</li>
+<li><strong>Reorder with care.</strong> If you teach chapters in a different order, use the graph to check that you haven't moved a concept ahead of one of its prerequisites.</li>
+</ul>
+<h2 id="volt-the-books-pedagogical-agent">Volt: The Book's Pedagogical Agent<a class="headerlink" href="#volt-the-books-pedagogical-agent" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-pedagogical-agent">What Is a Pedagogical Agent?<a class="headerlink" href="#what-is-a-pedagogical-agent" title="Permanent link">&para;</a></h3>
+<p>A <strong>pedagogical agent</strong> is a character that appears throughout a textbook to guide students. Research on pedagogical agents finds that a well-used character can raise student engagement and students' sense of how much they learned, an effect known as the <strong>persona effect</strong>.</p>
+<p>This book's agent is <strong>Volt</strong>, a black-and-white Border Collie with a maroon bandana and a gold whistle. Border Collies herd, and Volt treats AI agents the same way: as a flock to be directed and checked, never trusted blindly. Volt is patient, precise, curious, and dry-witted, and often closes with a concrete question such as "How would you check that?" Volt has no gender; the book refers to Volt by name or as <em>they</em>.</p>
+<h3 id="how-volt-appears">How Volt Appears<a class="headerlink" href="#how-volt-appears" title="Permanent link">&para;</a></h3>
+<p>Volt appears in colored callout boxes, called <strong>admonitions</strong>, inside the chapters. There are seven kinds:</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Color</th>
+<th>Purpose</th>
+<th>How often</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Welcome</td>
+<td>Maroon</td>
+<td>Tells students why the chapter matters</td>
+<td>Once, at the start of every chapter</td>
+</tr>
+<tr>
+<td>Thinking</td>
+<td>Gold</td>
+<td>Highlights a key idea or mental model</td>
+<td>1 to 4 per chapter</td>
+</tr>
+<tr>
+<td>Tip</td>
+<td>Teal</td>
+<td>Shares a practical shortcut</td>
+<td>Where the material calls for one</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Red</td>
+<td>Flags a common mistake</td>
+<td>Where the material calls for one</td>
+</tr>
+<tr>
+<td>Encourage</td>
+<td>Blue</td>
+<td>Supports students on a hard passage</td>
+<td>Where students may struggle</td>
+</tr>
+<tr>
+<td>Celebration</td>
+<td>Purple</td>
+<td>Marks what students can now do</td>
+<td>At most once, at the end of a chapter</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>Gray</td>
+<td>A general aside</td>
+<td>Rarely</td>
+</tr>
+</tbody>
+</table>
+<p>The number of Volt admonitions in a chapter scales with the number of concepts it covers, and two admonitions never appear back to back. Each one carries a message the surrounding text does not, so none of them are decorative. The <a href="../mascot-test/">Mascot Rendering Test</a> page shows every kind.</p>
+<p>This instructor's guide and other instructor-facing pages do not use Volt.</p>
+<h3 id="tips-for-instructors">Tips for Instructors<a class="headerlink" href="#tips-for-instructors" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Use the thinking admonitions as discussion prompts.</strong> They mark the ideas the chapter considers most important.</li>
+<li><strong>Point students to the warning admonitions before assignments.</strong> They name the mistakes students are most likely to make.</li>
+<li><strong>Use "Trust, but verify!" as a class norm.</strong> When a student reports an AI result, ask Volt's question: "Who checked the output?"</li>
+</ul>
+<h2 id="feedback">Feedback<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
+<h3 id="reporting-problems-and-suggestions">Reporting Problems and Suggestions<a class="headerlink" href="#reporting-problems-and-suggestions" title="Permanent link">&para;</a></h3>
+<p>This book is an open-source project hosted on <strong>GitHub</strong>, a website where software and writing projects are developed in the open. You don't need to know programming to report a problem.</p>
+<p>A <strong>GitHub Issue</strong> is like a support ticket: a numbered, public report of a problem or a suggestion that the author and others can discuss. To submit one:</p>
+<ol>
+<li>Go to the book's repository at <a href="https://github.com/dmccreary/ai-for-ee-research">github.com/dmccreary/ai-for-ee-research</a>.</li>
+<li>Click the <strong>Issues</strong> tab, then the green <strong>New issue</strong> button.</li>
+<li>Give the issue a clear title, such as "Broken link in Chapter 11 references" or "Suggestion: MicroSim for parameter sweeps".</li>
+<li>In the description, say which page has the problem, what you expected to see, what you saw instead, and your browser and device if they matter.</li>
+<li>Click <strong>Submit new issue</strong>.</li>
+</ol>
+<p>You need a free GitHub account to submit an issue. If you would rather not create one, use the <a href="../../contact/">Contact</a> page.</p>
+<p>Feedback that helps most:</p>
+<ul>
+<li><strong>Errors.</strong> Factual mistakes, typos, and broken formatting</li>
+<li><strong>Broken links</strong></li>
+<li><strong>MicroSim bugs.</strong> Simulations that don't load or that behave unexpectedly</li>
+<li><strong>Outdated tool details.</strong> AI products change quickly, and reports of what has changed are especially welcome</li>
+<li><strong>Accessibility problems.</strong> Content that is hard to read or navigate for students with disabilities</li>
+<li><strong>Teaching reports.</strong> What worked and what didn't when you taught a chapter</li>
+</ul>
+<h2 id="understanding-the-license">Understanding the License<a class="headerlink" href="#understanding-the-license" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-creative-commons-license">What Is a Creative Commons License?<a class="headerlink" href="#what-is-a-creative-commons-license" title="Permanent link">&para;</a></h3>
+<p>A <strong>license</strong> is a legal document that says what others may do with a work. A <strong>Creative Commons (CC) license</strong> is a standard, widely used license for educational and creative work that states those permissions in plain terms.</p>
+<h3 id="this-textbooks-license">This Textbook's License<a class="headerlink" href="#this-textbooks-license" title="Permanent link">&para;</a></h3>
+<p>This textbook uses the <strong>CC BY-NC-SA 4.0</strong> license:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Full Name</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CC</strong></td>
+<td>Creative Commons</td>
+<td>A standard open license</td>
+</tr>
+<tr>
+<td><strong>BY</strong></td>
+<td>Attribution</td>
+<td>You must credit the original author</td>
+</tr>
+<tr>
+<td><strong>NC</strong></td>
+<td>NonCommercial</td>
+<td>You may not use the material for commercial purposes</td>
+</tr>
+<tr>
+<td><strong>SA</strong></td>
+<td>ShareAlike</td>
+<td>If you adapt the material, you must share your version under the same license</td>
+</tr>
+<tr>
+<td><strong>4.0</strong></td>
+<td>Version 4.0</td>
+<td>The current version of the license</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-you-can-do">What You Can Do<a class="headerlink" href="#what-you-can-do" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Copy</strong> the whole book or individual chapters for your students</li>
+<li><strong>Share</strong> the book with colleagues, students, and lab members</li>
+<li><strong>Print</strong> chapters for classroom use</li>
+<li><strong>Adapt</strong> the content: add your own examples, remove sections, or reorder chapters</li>
+<li><strong>Translate</strong> the content into other languages</li>
+<li><strong>Build a derivative course</strong>, such as a version focused on your own subfield</li>
+</ul>
+<h3 id="what-you-cannot-do">What You Cannot Do<a class="headerlink" href="#what-you-cannot-do" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sell</strong> the book or charge students for access to it</li>
+<li><strong>Remove the attribution</strong> to the original author, Dan McCreary</li>
+<li><strong>Change the license</strong> of a version you adapt and share: it must stay CC BY-NC-SA 4.0</li>
+<li><strong>Present it as your own work</strong></li>
+</ul>
+<p>For the full terms, see the <a href="../../license/">License</a> page. Commercial rights are reserved by the author; the License page explains how to ask about commercial use.</p>
+<h2 id="customizing-your-own-copy">Customizing Your Own Copy<a class="headerlink" href="#customizing-your-own-copy" title="Permanent link">&para;</a></h2>
+<p>You can publish your own version of the book, for example with examples from your subfield, a different chapter order, or your institution's AI-use policy added. This section walks through the steps.</p>
+<h3 id="key-technical-terms">Key Technical Terms<a class="headerlink" href="#key-technical-terms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Repository (repo).</strong> A folder on GitHub that holds all of a project's files and their history.</li>
+<li><strong>Git.</strong> A version-control tool that tracks every change to a set of files. Chapter 5 of this book teaches it.</li>
+<li><strong>Fork.</strong> A complete copy of someone else's repository in your own GitHub account.</li>
+<li><strong>Clone.</strong> A complete copy of a repository on your own computer.</li>
+<li><strong>Markdown.</strong> A plain-text formatting language. <code>**bold**</code> makes <strong>bold</strong>, <code># Heading</code> makes a heading, and <code>-</code> starts a bullet point. Every page of this book is a Markdown file.</li>
+<li><strong>MkDocs.</strong> The program that turns the book's Markdown files into a website. The book uses the <strong>Material for MkDocs</strong> theme.</li>
+<li><strong>mkdocs.yml.</strong> The main configuration file for the website. It sets the title, the navigation menu, and which features are on.</li>
+</ul>
+<h3 id="step-1-fork-or-clone-the-repository">Step 1: Fork or Clone the Repository<a class="headerlink" href="#step-1-fork-or-clone-the-repository" title="Permanent link">&para;</a></h3>
+<p>If you don't have a GitHub account, create a free one at <a href="https://github.com">github.com</a>.</p>
+<p><strong>Option A: Fork (stays on GitHub).</strong> Go to <a href="https://github.com/dmccreary/ai-for-ee-research">github.com/dmccreary/ai-for-ee-research</a> and click <strong>Fork</strong> in the upper-right corner. This puts a copy in your account that you can edit in the browser.</p>
+<p><strong>Option B: Clone (works on your computer).</strong> Install Git from <a href="https://git-scm.com/">git-scm.com</a>, open a terminal, and run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/dmccreary/ai-for-ee-research.git
+</span></code></pre></div>
+<h3 id="step-2-make-your-changes">Step 2: Make Your Changes<a class="headerlink" href="#step-2-make-your-changes" title="Permanent link">&para;</a></h3>
+<p>All content is in the <code>docs/</code> folder as Markdown (<code>.md</code>) files, which you can edit in any text editor. Chapters are in <code>docs/chapters/</code>, one folder per chapter. MicroSims are in <code>docs/sims/</code>, one folder per MicroSim.</p>
+<p>If you use an AI agent to help edit, have it read <code>AGENTS.md</code> and <code>CONTENT-GENERATION-GUIDE.md</code> in the repository first. They hold the rules the book was written to, including the formatting rules that keep pages from breaking.</p>
+<p><strong>Title and author.</strong> Edit these lines near the top of <code>mkdocs.yml</code>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="s">'Your</span><span class="nv"> </span><span class="s">Course</span><span class="nv"> </span><span class="s">Title'</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">site_description</span><span class="p">:</span><span class="w"> </span><span class="s">'Your</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">here'</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">site_author</span><span class="p">:</span><span class="w"> </span><span class="s">'Your</span><span class="nv"> </span><span class="s">Name'</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="s">'https://YOUR-USERNAME.github.io/ai-for-ee-research/'</span>
+</span></code></pre></div>
+<p><strong>Colors.</strong> The book uses University of Minnesota maroon and gold. Material for MkDocs has no built-in maroon or gold, so <code>mkdocs.yml</code> sets the palette to <code>custom</code> and the actual colors live at the top of <code>docs/css/extra.css</code>:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">[</span><span class="nt">data-md-color-primary</span><span class="o">=</span><span class="s2">"custom"</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nv">--md-primary-fg-color</span><span class="p">:</span><span class="w">        </span><span class="mh">#7A0019</span><span class="p">;</span><span class="w">   </span><span class="c">/* change to your primary color */</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nv">--md-primary-fg-color--light</span><span class="p">:</span><span class="w"> </span><span class="mh">#9E2A3F</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nv">--md-primary-fg-color--dark</span><span class="p">:</span><span class="w">  </span><span class="mh">#5B0013</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The accent color is set in the same block, and Volt's callout colors are in <code>docs/css/mascot.css</code>.</p>
+<p><strong>Logo.</strong> The header logo is Volt's neutral pose, set by <code>logo: img/mascot/neutral.png</code> in the <code>theme:</code> section of <code>mkdocs.yml</code>. Point it at your own image, about 128 by 128 pixels in PNG format.</p>
+<p><strong>Navigation.</strong> The left-hand menu is the <code>nav:</code> section of <code>mkdocs.yml</code>. A page that is not listed there does not appear in the menu.</p>
+<h3 id="step-3-preview-your-changes">Step 3: Preview Your Changes<a class="headerlink" href="#step-3-preview-your-changes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install Python 3.8 or newer from <a href="https://www.python.org/">python.org</a>.</li>
+<li>
+<p>Install MkDocs and the Material theme:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</span></code></pre></div>
+</li>
+<li>
+<p>In the project folder, start the preview server:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
+</li>
+<li>
+<p>Open <code>http://127.0.0.1:8000/ai-for-ee-research/</code> in your browser.</p>
+</li>
+</ol>
+<p>The preview server watches for changes. When you save a Markdown file, the page refreshes in the browser. A local preview also serves the MicroSims, which is useful in a room with unreliable internet.</p>
+<h3 id="step-4-publish-your-version">Step 4: Publish Your Version<a class="headerlink" href="#step-4-publish-your-version" title="Permanent link">&para;</a></h3>
+<p>To publish your version as a free website on GitHub Pages, run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</span></code></pre></div>
+<p>This builds the site and publishes it at <code>https://YOUR-USERNAME.github.io/ai-for-ee-research/</code>. It usually takes a minute or two to appear.</p>
+<h2 id="analytics-and-learning-records">Analytics and Learning Records<a class="headerlink" href="#analytics-and-learning-records" title="Permanent link">&para;</a></h2>
+<h3 id="web-analytics">Web Analytics<a class="headerlink" href="#web-analytics" title="Permanent link">&para;</a></h3>
+<p><strong>Web analytics</strong> measures how visitors use a website: which pages they visit, how long they stay, and where they come from. For a course, it shows which chapters students actually read and which MicroSims they open.</p>
+<p>The published book does not currently include web analytics. To add <strong>Google Analytics</strong>, Google's free analytics service, to your own copy:</p>
+<ol>
+<li>Sign in at <a href="https://analytics.google.com/">analytics.google.com</a> and create a new <strong>property</strong>, Google's term for a tracked website.</li>
+<li>Copy the <strong>Measurement ID</strong> Google gives you. It looks like <code>G-XXXXXXXXXX</code>.</li>
+<li>
+<p>At the bottom of <code>mkdocs.yml</code>, uncomment the analytics block and add your ID:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">analytics</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">google</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G-XXXXXXXXXX</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Rebuild and publish the site. Data usually starts to appear within a day or two.</p>
+</li>
+</ol>
+<p>What you can learn from it:</p>
+<ul>
+<li><strong>Which chapters and MicroSims get the most and least use</strong>, which shows where students may be skipping content</li>
+<li><strong>Time on page</strong>, where a long time can mean engagement or confusion</li>
+<li><strong>Devices</strong>, such as how many students read on phones</li>
+<li><strong>Site searches</strong>, which show the terms students look for</li>
+</ul>
+<h3 id="xapi-learning-records">xAPI Learning Records<a class="headerlink" href="#xapi-learning-records" title="Permanent link">&para;</a></h3>
+<p><strong>xAPI</strong> (the Experience API, also called Tin Can) is a standard format for recording specific learning activities, not just page views. An xAPI record is a short statement of the form <em>actor, verb, object</em>, such as "a learner answered item 3 of the Prompt Component Sorter correctly". A <strong>Learning Record Store (LRS)</strong> is a database that collects and stores these statements.</p>
+<p>47 of this book's 50 MicroSims are instrumented to produce xAPI statements. By default each MicroSim produces one compact summary statement per session rather than a statement for every click. As published, the book is not connected to an LRS, so the statements are built in the student's browser and go nowhere else. Connecting an LRS is a step for a technical team, and the settings for the whole book live in <code>docs/js/lrs-config.js</code>.</p>
+<p>You can see what a MicroSim records without any of that setup. Add <code>?xapi=teaching</code> to the end of a MicroSim's address, for example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>https://dmccreary.github.io/ai-for-ee-research/sims/prompt-component-sorter/?xapi=teaching
+</span></code></pre></div>
+<p>The MicroSim then shows a panel with each statement as it is produced. This makes a good live demonstration for Chapter 18's discussion of what data tools collect about their users.</p>
+<h3 id="privacy-and-regulatory-considerations">Privacy and Regulatory Considerations<a class="headerlink" href="#privacy-and-regulatory-considerations" title="Permanent link">&para;</a></h3>
+<p>Before collecting learning data that identifies individual students, check the rules that apply to you:</p>
+<ul>
+<li><strong>FERPA</strong> (Family Educational Rights and Privacy Act) is the U.S. federal law that protects student education records. It applies to graduate students as well as undergraduates.</li>
+<li><strong>GDPR</strong> (General Data Protection Regulation) is the European Union's data-protection law. It applies if any of your students are in the EU.</li>
+<li><strong>State and institutional rules.</strong> Many U.S. states and most universities add their own student-privacy requirements.</li>
+<li><strong>Research ethics review.</strong> If you plan to publish findings based on your students' learning data, you will usually need approval from your Institutional Review Board (IRB) before you collect it.</li>
+</ul>
+<p>The safest default is aggregate, anonymous measurement: Google Analytics counts page views, not named students. If you want records for individual students through xAPI, talk to your institution's data privacy officer first.</p>
+<h3 id="building-a-progress-dashboard">Building a Progress Dashboard<a class="headerlink" href="#building-a-progress-dashboard" title="Permanent link">&para;</a></h3>
+<p>With an LRS connected, it becomes possible to build a dashboard of student progress: which chapters each student has completed, MicroSim results over time, and which concepts need re-teaching. Building one takes programming and careful attention to privacy, and it is beyond the scope of this guide. Because the book and its learning graph are open, all the data structures needed for such a dashboard are available to build on.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../course-description-assessment/" class="md-footer__link md-footer__link--next" aria-label="Next: Course Description Assessment">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Course Description Assessment
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

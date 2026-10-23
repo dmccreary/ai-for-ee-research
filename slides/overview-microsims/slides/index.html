@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="../../../css/mascot.css">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -818,6 +820,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1189,10 +1197,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enterprise-knowledge-and-the-rbac-rules" class="md-nav__link">
+  <a href="#enterprise-knowledge-and-role-based-access-rules-rbac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enterprise Knowledge and the RBAC Rules
+        Enterprise Knowledge and Role-Based Access Rules (RBAC)
       
     </span>
   </a>
@@ -1211,10 +1219,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inside-an-agent-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inside an Agent Skill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#generating-a-publishing-quality-paper" class="md-nav__link">
     <span class="md-ellipsis">
       
         Generating a Publishing Quality Paper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trend-personal-ai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trend: Personal AI Agents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#five-personal-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Five Personal Agents
       
     </span>
   </a>
@@ -1318,10 +1359,12 @@
 <li>Dan McCreary (class of '83)</li>
 <li>University of Minnesota</li>
 <li>Department of Electrical Engineering and Computer Design</li>
-<li>October 23rd, 2026</li>
+<li>Friday October 23rd, 2026</li>
 <li>LinkedIn: <a href="https://www.linkedin.com/in/danmccreary/">https://www.linkedin.com/in/danmccreary/</a></li>
+<li>Slides: <a href="https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/">https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/</a></li>
 </ul>
-<p><img src="./qr-code.png" alt="QR code linking to https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: 170px; height: 170px; margin: 0; border-radius: 6px;"></p>
+<p><img src="../../img/mascot/neutral.png" alt="Volt the Border Collie" style="position: fixed; left: 76px; bottom: 72px; width: 100px; height: auto; margin: 0;"></p>
+<p><img src="./qr-code.png" alt="QR code linking to https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: 250px; height: 250px; margin: 0; border-radius: 6px;"></p>
 <hr />
 <h2 id="about-dan-mccreary">About Dan McCreary<a class="headerlink" href="#about-dan-mccreary" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1360,7 +1403,7 @@
 <h2 id="meet-volt-your-guide-to-research-agents">Meet Volt: Your Guide to Research Agents<a class="headerlink" href="#meet-volt-your-guide-to-research-agents" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="Volt the Border Collie" src="../../../img/mascot/neutral.png" width="280px" /></p>
 <p><strong>Volt</strong> is our session mascot. This border collie herds a flock of agents, and will guide us through setting up and using agents for EE research.</p>
-<p><em>"Sorry Goldie (the gopher), not today."</em></p>
+<p><em>"Sorry Goldie (the gopher), my agent does not allow copywrited images."</em></p>
 <hr />
 <h2 id="the-problem-research-funnel">The Problem: Research Funnel<a class="headerlink" href="#the-problem-research-funnel" title="Permanent link">&para;</a></h2>
 <iframe src="../../sims/research-funnel/main.html" height="582px" width="100%" scrolling="no"></iframe>
@@ -1429,11 +1472,14 @@ the agents in your department and at the University of Minnesota?</p>
 <p>A central "ground truth" data structure to keep your content aligned with your goals.</p>
 <p><img alt="" src="../dans-pkg.png" /></p>
 <hr />
-<h2 id="enterprise-knowledge-and-the-rbac-rules">Enterprise Knowledge and the RBAC Rules<a class="headerlink" href="#enterprise-knowledge-and-the-rbac-rules" title="Permanent link">&para;</a></h2>
-<p><img align="right" alt="" src="../dans-chapter-on-pkg.png" width="300" /></p>
+<h2 id="enterprise-knowledge-and-role-based-access-rules-rbac">Enterprise Knowledge and Role-Based Access Rules (RBAC)<a class="headerlink" href="#enterprise-knowledge-and-role-based-access-rules-rbac" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="" src="./" width="300" /></p>
+<p><img src="./dans-chapter-on-pkg.png" alt="Dan's paper on enterprize knowledge graphs" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: auto; height: 300px; margin: 0; border-radius: 6px;"></p>
 <ol>
 <li>Getting agents access to the minimal data they need to do their work is complex</li>
 <li>Integrating personal knowledge into a research community is complex</li>
+<li>Precise assignment of one or more roles to people and agents</li>
+<li>Only allowing specific roles to access a node in the graph</li>
 <li>PKG/EKG integration opens many questions about intellectual property (IP) ownership</li>
 <li>See <a href="../../../references/">references</a> for details</li>
 </ol>
@@ -1443,11 +1489,15 @@ the agents in your department and at the University of Minnesota?</p>
 <ul>
 <li>A folder with a <code>SKILL.md</code> file: a name, a one-line description, and step-by-step instructions</li>
 <li>Optional scripts, reference files, and templates in the same folder</li>
-<li>The agent keeps only the name and description in context, and loads the rest when a request matches</li>
+<li>The <strong>agent keeps only the name and description in context</strong>, and loads the rest when a request matches</li>
 <li>Turns a repeatable research task into a one-line command</li>
 <li>Example: a skill that extracts Bode-plot features from measurement files</li>
 <li>Dan's experience: 100x quality improvement in textbook generation</li>
+<li>A high quality searchable skill library can become the competitive avantage of any organization</li>
 </ul>
+<p><img src="./skill-package.jpg" alt="Dan's paper on enterprize knowledge graphs" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: auto; height: 220px; margin: 0; border-radius: 6px;"></p>
+<hr />
+<h2 id="inside-an-agent-skill">Inside an Agent Skill<a class="headerlink" href="#inside-an-agent-skill" title="Permanent link">&para;</a></h2>
 <iframe src="../../posters/inside-an-agent-skill/main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
 <hr />
@@ -1462,9 +1512,17 @@ the agents in your department and at the University of Minnesota?</p>
 <li>Provide a template</li>
 <li>Create a <code>build.sh</code> script</li>
 <li><code>build.sh</code> produces a <code>main.pdf</code></li>
+<li>Create a Skill for generating a high-quality paper using the /skill-creator skill</li>
 </ul>
 </li>
 </ul>
+<hr />
+<h2 id="trend-personal-ai-agents">Trend: Personal AI Agents<a class="headerlink" href="#trend-personal-ai-agents" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../../appendices/personal-agent-software/google-trends-for-personal-ai-agents.png" />
+Google Trends for "Personal AI Agents" from June 1st, 2025 to June 1st, 2026 showing a x11 increase in the term in Google search.</p>
+<hr />
+<h2 id="five-personal-agents">Five Personal Agents<a class="headerlink" href="#five-personal-agents" title="Permanent link">&para;</a></h2>
+<iframe src="../../posters/personal-agent-software/main.html" height="850px" width="100%" scrolling="no"></iframe>
 <hr />
 <h2 id="sample-agent-architecture">Sample Agent Architecture<a class="headerlink" href="#sample-agent-architecture" title="Permanent link">&para;</a></h2>
 <iframe src="../../sims/desktop-setup/main.html" height="750px" width="100%" scrolling="no"></iframe>
@@ -1567,6 +1625,12 @@ the agents in your department and at the University of Minnesota?</p>
     
     
       <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
