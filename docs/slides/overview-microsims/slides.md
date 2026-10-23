@@ -8,10 +8,13 @@ hide:
 - Dan McCreary (class of '83)
 - University of Minnesota
 - Department of Electrical Engineering and Computer Design
-- October 23rd, 2026
+- Friday October 23rd, 2026
 - LinkedIn: [https://www.linkedin.com/in/danmccreary/](https://www.linkedin.com/in/danmccreary/)
+- Slides: [https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/](https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/)
 
-<img src="./qr-code.png" alt="QR code linking to https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: 170px; height: 170px; margin: 0; border-radius: 6px;">
+<img src="../../img/mascot/neutral.png" alt="Volt the Border Collie" style="position: fixed; left: 76px; bottom: 72px; width: 100px; height: auto; margin: 0;">
+
+<img src="./qr-code.png" alt="QR code linking to https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: 250px; height: 250px; margin: 0; border-radius: 6px;">
 
 ---
 ## About Dan McCreary
@@ -67,7 +70,7 @@ I will make this concrete with case studies from my own work, including interact
 
 **Volt** is our session mascot. This border collie herds a flock of agents, and will guide us through setting up and using agents for EE research.
 
-*"Sorry Goldie (the gopher), not today."*
+*"Sorry Goldie (the gopher), my agent does not allow copywrited images."*
 
 ---
 
@@ -157,13 +160,17 @@ A central "ground truth" data structure to keep your content aligned with your g
 ![](./dans-pkg.png)
 
 ---
-## Enterprise Knowledge and the RBAC Rules
-![](./dans-chapter-on-pkg.png){ align="right" width="300"}
+## Enterprise Knowledge and Role-Based Access Rules (RBAC)
+![](./){ align="right" width="300"}
+
+<img src="./dans-chapter-on-pkg.png" alt="Dan's paper on enterprize knowledge graphs" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: auto; height: 300px; margin: 0; border-radius: 6px;">
 
 1. Getting agents access to the minimal data they need to do their work is complex
 2. Integrating personal knowledge into a research community is complex
-3. PKG/EKG integration opens many questions about intellectual property (IP) ownership
-4. See [references](../../references.md) for details
+3. Precise assignment of one or more roles to people and agents
+4. Only allowing specific roles to access a node in the graph
+5. PKG/EKG integration opens many questions about intellectual property (IP) ownership
+6. See [references](../../references.md) for details
 ---
 ## Agent Skills: Teach Your Agent a Repeatable Task
 
@@ -171,10 +178,16 @@ A **skill** is a reusable package of instructions that lets an agent do one defi
 
 - A folder with a `SKILL.md` file: a name, a one-line description, and step-by-step instructions
 - Optional scripts, reference files, and templates in the same folder
-- The agent keeps only the name and description in context, and loads the rest when a request matches
+- The **agent keeps only the name and description in context**, and loads the rest when a request matches
 - Turns a repeatable research task into a one-line command
 - Example: a skill that extracts Bode-plot features from measurement files
 - Dan's experience: 100x quality improvement in textbook generation
+- A high quality searchable skill library can become the competitive avantage of any organization
+
+<img src="./skill-package.jpg" alt="Dan's paper on enterprize knowledge graphs" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: auto; height: 220px; margin: 0; border-radius: 6px;">
+
+---
+## Inside an Agent Skill
 
 <iframe src="../../posters/inside-an-agent-skill/main.html" height="1000px" width="100%" scrolling="no"></iframe>
 
@@ -191,6 +204,7 @@ A **skill** is a reusable package of instructions that lets an agent do one defi
     - Provide a template
     - Create a `build.sh` script
     - `build.sh` produces a `main.pdf`
+    - Create a Skill for generating a high-quality paper using the /skill-creator skill
 
 ---
 ## Sample Agent Architecture
