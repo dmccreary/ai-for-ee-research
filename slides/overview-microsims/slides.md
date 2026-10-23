@@ -218,6 +218,22 @@ A **skill** is a reusable package of instructions that lets an agent do one defi
 - Provide a template
 - Create a `build.sh` script that produces `main.pdf`
 - Create a skill for generating a high-quality paper using the `/skill-creator` skill
+- Sample ArXiV paper generator skill in the [ibooks-skills/skills/arxiv-paper-generator](https://github.com/dmccreary/ibook-skills/tree/main/skills/arxiv-paper-generator)
+- Note the 14 [quality graders](https://github.com/dmccreary/ibook-skills/tree/main/skills/arxiv-paper-generator/evals/ai-for-ee-book-to-paper/graders)
+- [Sample ArXiV paper](https://github.com/dmccreary/ai-for-ee-research/blob/main/papers/researcher-as-orchestrator/main.pdf) of this textbook
+
+---
+
+## How Many Rules Are in the Paper Skill?
+
+- **~140** rules for generating the paper
+- **~60** rules for testing quality
+- **~200** rules in total
+
+*Rough estimate from the arxiv-paper-generator skill*
+
+![Figure 1 of the ArXiV Paper](./arxiv-paper-figure-1.png){ width="500px" align="right" }
+
 
 ---
 
