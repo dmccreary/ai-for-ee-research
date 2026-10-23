@@ -11,6 +11,8 @@ hide:
 - October 23rd, 2026
 - LinkedIn: [https://www.linkedin.com/in/danmccreary/](https://www.linkedin.com/in/danmccreary/)
 
+<img src="./qr-code.png" alt="QR code linking to https://dmccreary.github.io/ai-for-ee-research/slides/overview-microsims/" title="Scan to open this deck" style="position: fixed; right: 76px; bottom: 72px; width: 170px; height: 170px; margin: 0; border-radius: 6px;">
+
 ---
 ## About Dan McCreary
 
