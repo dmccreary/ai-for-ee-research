@@ -21,7 +21,7 @@ status: built
 Agents communicate through four levels, and each level controls its own knowledge graph:
 
 1. **Personal Researcher Agents** at the bottom, controlled by each researcher.
-2. **EECD Department Agents**, managed by the Electrical Engineering and Computer Design department.
+2. **ECE Department Agents**, managed by the Electrical and Computer Engineering department.
 3. **College of Science and Engineering (CSE) Agents**.
 4. **University of Minnesota Agents** at the top.
 
@@ -31,7 +31,7 @@ Every level holds the same three knowledge nodes: **Annual Budget**, **AI Usage 
 |---|---|---|
 | **Budget Information** | Top-down | A new annual budget is issued at the University level. Each agent updates its Annual Budget node and passes the budget to the agent below. |
 | **NSF Grant Award** | Bottom-up | NSF notifies a researcher that a grant was awarded. The researcher agent updates its node and reports upward, so each level's NSF Grant Award node changes. |
-| **AI Usage Policy Change** | Both ways from CSE | The CSE agent adopts a policy that allows researchers to use Claude Desktop. It informs the University above and the EECD department below, and the change reaches the researcher agents. |
+| **AI Usage Policy Change** | Both ways from CSE | The CSE agent adopts a policy that allows researchers to use Claude Desktop. It informs the University above and the ECE department below, and the change reaches the researcher agents. |
 
 ## How to Use
 
@@ -61,7 +61,7 @@ The learner will explain how a knowledge update travels through a four-level age
 
 ### Grade Level
 
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty (AI for EE Research).
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty (AI for EE Research).
 
 ### Duration
 

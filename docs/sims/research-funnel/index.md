@@ -61,7 +61,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 ## Lesson Plan
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty.
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty.
 
 ### Bloom Level
 Understand (verb: **explain**)

@@ -58,7 +58,7 @@ The learner will distinguish, for each of eight user requests, whether a stated 
 - **Bloom verb:** distinguish
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
 
 ### Duration
 10 minutes

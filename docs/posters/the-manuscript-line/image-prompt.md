@@ -11,7 +11,7 @@ Please generate a new image.
 - **Format:** PNG
 - **Dimensions:** 1920 × 1080 px, landscape, 16:9 ratio. If the model cannot produce this exact size, generate at any 16:9 size, because the overlay uses percentages and not pixels.
 - **Background:** Warm off-white (#FAF7F2) with a very faint blueprint grid
-- **Audience:** Graduate students, postdocs, and faculty in electrical engineering and computer design
+- **Audience:** Graduate students, postdocs, and faculty in electrical and computer engineering
 - **Style:** High-quality polished illustration with soft lighting, rich detail, and a consistent line weight. Light comes from the upper left. Semi-realistic touches are welcome: a real-looking conveyor, brass rivets, paper stacks, a stamp pad. Saturated but professional colors. No glowing brains, no chrome robot hands, no stock-photo clichés. People are faceless or softly stylized, never photoreal faces. Agents are small friendly teal workers or neutral machine icons, never humanoid robots with faces.
 - **Palette (always paired with an icon or pattern, never color alone):** maroon #7A0019 for the human researcher and accountability; gold #FFCC33 for the handrail and focal points; teal #1F7A8C for agents and automation; signal green #3C8D5A for verified or passed; brick red #C0392B for errors and risk; charcoal #2A2E3A for the conveyor and structure; off-white #FAF7F2 for the background.
 

@@ -11,7 +11,7 @@ Please generate a new image.
 - **Format:** PNG
 - **Dimensions:** 1920 × 1080 px, landscape, 16:9 ratio. If the model cannot produce this exact size, generate at any 16:9 size, because the overlay uses percentages and will still line up.
 - **Background:** Warm off-white (#FAF7F2) with a very faint blueprint grid.
-- **Audience:** Graduate students, postdocs, and faculty in electrical engineering and computer design.
+- **Audience:** Graduate students, postdocs, and faculty in electrical and computer engineering.
 - **Style:** High-quality, polished, semi-realistic illustration with soft lighting from the upper left, rich detail, and a consistent line weight. Saturated but professional colors. Faceless or softly stylized people, never photoreal faces. Agents are small friendly teal workers with oval heads and no faces, never humanoid robots with faces. No glowing brains, no chrome robot hands, no stock-photo clichés.
 - **Palette:** maroon #7A0019 for the researcher; gold #FFCC33 for focal points and approval gates; teal #1F7A8C for the agent and automation; signal green #3C8D5A for verified or safe; brick red #C0392B for risk; amber #B9770E for caution; charcoal #2A2E3A for structure. Always pair color with an icon or pattern, never color alone.
 

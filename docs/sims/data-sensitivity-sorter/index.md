@@ -60,7 +60,7 @@ The learner will judge which class of AI tool an item of research data may be gi
 Evaluate (Bloom verb: **judge**)
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research
 
 ### Duration
 10 minutes

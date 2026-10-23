@@ -62,7 +62,7 @@ The learner will judge each of eight model-generated citations as verified, wron
 - **Bloom verb:** judge
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research
 
 ### Duration
 10-15 minutes

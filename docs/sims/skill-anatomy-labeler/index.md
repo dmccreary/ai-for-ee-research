@@ -52,7 +52,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 The learner will identify, for each of eight lines or files of a skill, whether it is the skill name, the skill description, skill instructions, or a supporting file, with at least 7 of 8 correct (Bloom: Remember, verb: identify).
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
 
 ### Duration
 5-10 minutes

@@ -50,7 +50,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 The learner will solve five questions about a twelve-edge personal knowledge graph by following typed, directed relationships, and give each answer as the exact set of entities, with at least 4 of 5 correct (Bloom: Apply, verb: solve).
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
 
 ### Duration
 10-15 minutes

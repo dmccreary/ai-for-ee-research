@@ -11,7 +11,7 @@ Please generate a new image.
 - **Format:** PNG
 - **Dimensions:** 1920 × 1080 px, landscape, 16:9 ratio. If the model cannot produce this exact size, generate at any 16:9 size, because the overlay uses percentages of width and height, not pixels.
 - **Background:** Warm off-white (#FAF7F2) with a very faint blueprint grid
-- **Audience:** Graduate students, postdocs, and faculty in electrical engineering and computer design
+- **Audience:** Graduate students, postdocs, and faculty in electrical and computer engineering
 - **Style:** High-quality polished illustration with soft lighting from the upper left, rich detail, and a consistent line weight. Semi-realistic is welcome: a real-looking wooden desk, a lit lamp, a library shelf, paper with texture. Saturated but professional colors. No glowing brains, no chrome robot hands, no stock-photo clichés. People are not needed. Any agent or model is drawn as a small friendly teal (#1F7A8C) neutral machine icon, never a humanoid robot with a face.
 - **Palette:** maroon #7A0019 (human judgment), gold #FFCC33 (focal points and the lookup thread), teal #1F7A8C (the model), signal green #3C8D5A (verified), brick red #C0392B (failure), charcoal #2A2E3A (structure), off-white #FAF7F2 (background). Never rely on color alone: every meaning below is also carried by an icon, a stamp shape, or a pattern.
 

@@ -65,7 +65,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 The learner will calculate the precision and recall of three search queries run on a corpus of twenty papers with eight known relevant papers, and choose the query that suits a stated purpose (Bloom: Apply, verb: calculate).
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research (AI for EE Research)
 
 ### Duration
 10-15 minutes

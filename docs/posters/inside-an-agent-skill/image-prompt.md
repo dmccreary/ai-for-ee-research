@@ -11,7 +11,7 @@ Please generate a new image.
 - **Format:** PNG
 - **Dimensions:** 1920 × 1080 px, landscape, 16:9 ratio. If the model cannot produce this exact size, generate at any 16:9 size, because the overlay uses percentages.
 - **Background:** Warm off-white (#FAF7F2) with a very faint blueprint grid
-- **Audience:** Graduate students, postdocs, and faculty in electrical engineering and computer design
+- **Audience:** Graduate students, postdocs, and faculty in electrical and computer engineering
 - **Style:** High-quality, polished illustration with soft lighting from the upper left, rich detail, and a consistent line weight. Semi-realistic is welcome: a real-looking manila folder, wooden shelf, printed sheets, a lab bench tray. Saturated but professional colors. No glowing brains, no chrome robot hands, no stock-photo clichés. Any people are faceless or softly stylized. Agents are small friendly teal (#1F7A8C) icons or neutral machine shapes, never humanoid robots with faces.
 - **Palette:** maroon #7A0019 (the human, accountability), gold #FFCC33 (focal points and light beams), teal #1F7A8C (the skill and the agent), signal green #3C8D5A (should trigger, passed), brick red #C0392B (should not trigger, risk), charcoal #2A2E3A (structure), off-white #FAF7F2 (background). Never use color alone: pair each with an icon or pattern.
 

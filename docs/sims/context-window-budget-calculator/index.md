@@ -65,7 +65,7 @@ The learner will calculate the number of tokens left for a completion from a con
 - **Bloom verb:** calculate
 
 ### Grade Level
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research
 
 ### Duration
 10-15 minutes

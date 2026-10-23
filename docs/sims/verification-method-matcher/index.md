@@ -62,7 +62,7 @@ The learner will recommend which of five verification methods best fits each of 
 
 ### Grade Level
 
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research
 
 ### Duration
 

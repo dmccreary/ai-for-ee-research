@@ -61,7 +61,7 @@ The learner will distinguish, among six exchanges between a researcher and a mod
 
 ### Grade Level
 
-Graduate students (MS and PhD) in electrical engineering, computer engineering, and computer design, plus postdocs and faculty who want practical AI skills for everyday research
+Graduate students (MS and PhD) in electrical and computer engineering, plus postdocs and faculty who want practical AI skills for everyday research
 
 ### Duration
 
