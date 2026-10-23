@@ -5,7 +5,11 @@ description: Research notes on always-on personal agent software — SpaceXAI's 
 
 # Appendix: Personal Agent Software
 
-!!! info "Research notes — not yet a finished chapter"
+
+![](./google-trends-for-personal-ai-agents.png)
+Google Trends for "Personal AI Agents" from June 1st, 2025 to June 1st, 2026 showing a x11 increase in the term in Google search.
+
+!!! info "Research notes"
     This appendix holds raw research gathered on **October 15, 2026**. Nearly
     every claim is vendor-stated or comes from press coverage; we found no
     independent benchmarks or controlled tests of any product listed here.

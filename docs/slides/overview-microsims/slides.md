@@ -191,6 +191,15 @@ A **skill** is a reusable package of instructions that lets an agent do one defi
     - `build.sh` produces a `main.pdf`
 
 ---
+## Trend: Personal AI Agents
+
+![](../../appendices/personal-agent-software/google-trends-for-personal-ai-agents.png)
+Google Trends for "Personal AI Agents" from June 1st, 2025 to June 1st, 2026 showing a x11 increase in the term in Google search.
+---
+## Five Personal Agents
+
+<iframe src="../../posters/personal-agent-software/main.html" height="850px" width="100%" scrolling="no"></iframe>
+---
 ## Sample Agent Architecture
 
 <iframe src="../../sims/desktop-setup/main.html" height="750px" width="100%" scrolling="no"></iframe>

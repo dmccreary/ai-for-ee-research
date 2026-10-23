@@ -68,6 +68,25 @@ McCreary, D. (2023).
 chapter, which consolidates and reformats the author's four 2022 blog posts on
 personal knowledge graphs.
 
+### Multi-Agent Research System
+Hadfield, J., Zhang, B., Lien, K., Scholz, F., Fox, J., and Ford, D. (2025).
+   [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system).
+   Anthropic Engineering, June 13, 2025.
+
+**Where it is used in this book:** a case study of a lead agent delegating to parallel
+subagents. It is also cited in the
+[Orchestrating Teams of Planning and Execution Agents](chapters/10-orchestrating-agent-teams/references.md)
+chapter references.
+
+### Agent Skills
+[Agent Skills](https://agentskills.io/home). Open standard, originally developed by
+   Anthropic, for packaging instructions, scripts, and reference materials into a
+   portable folder with a `SKILL.md` file that agents load on demand.
+
+**Where it is used in this book:** the specification behind the skill anatomy and
+skill design chapters (see
+[Knowledge Bases and Skill Anatomy](chapters/06-knowledge-bases-skill-anatomy/references.md)).
+
 ### MicroSims
 [MicroSims: A Framework for AI-Generated, Scalable Educational Simulations with Universal Embedding and Adaptive Learning Support](https://arxiv.org/abs/2511.19864) 25 Nov 2025
 

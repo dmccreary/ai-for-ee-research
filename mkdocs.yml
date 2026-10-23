@@ -233,6 +233,8 @@ nav:
       - Mascot Rendering Test: learning-graph/mascot-test.md
       - Glossary Quality Report: learning-graph/glossary-quality-report.md
       - Quiz Generation Report: learning-graph/quiz-generation-report.md
+      - Book Metrics: learning-graph/book-metrics.md
+      - Chapter Metrics: learning-graph/chapter-metrics.md
 
 
   - Glossary: glossary.md
