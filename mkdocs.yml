@@ -309,8 +309,9 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  # Currency-safe math: inline is \(...\) only, never single $. Run
-  # book-installer feature 5 (KaTeX) to add the renderer.
+  # Currency-safe math: inline is \(...\) only, never single $, so prices like
+  # $20 stay text. Display math is $$...$$ or \[...\]. Rendered in the browser
+  # by KaTeX (see extra_javascript / extra_css below and docs/js/katex.js).
   - pymdownx.arithmatex:
       generic: true
       inline_syntax: ['round']
@@ -320,10 +321,14 @@ markdown_extensions:
 extra_css:
   - css/extra.css
   - css/mascot.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
 
-# Custom JavaScript — uncomment once a corresponding file exists
-# extra_javascript:
-#   - js/extra.js
+# Custom JavaScript — uncomment js/extra.js once a corresponding file exists
+extra_javascript:
+  - js/katex.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
+  # - js/extra.js
 
 # Exclude prompt scratch files and TODOs from build/search/sitemap
 exclude_docs: |
