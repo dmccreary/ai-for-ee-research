@@ -235,8 +235,11 @@ nav:
       - Quiz Generation Report: learning-graph/quiz-generation-report.md
       - Book Metrics: learning-graph/book-metrics.md
       - Chapter Metrics: learning-graph/chapter-metrics.md
+      - FAQ Quality Report: learning-graph/faq-quality-report.md
+      - FAQ Coverage Gaps: learning-graph/faq-coverage-gaps.md
 
 
+  - FAQ: faq.md
   - Glossary: glossary.md
   - References: references.md
   - License: license.md
