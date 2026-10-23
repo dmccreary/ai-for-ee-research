@@ -1,0 +1,3362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Frequently asked questions about AI for EE Research, organized by category and linked to the chapters that answer them.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/ai-for-ee-research/faq/">
+      
+      
+        <link rel="prev" href="../learning-graph/faq-coverage-gaps/">
+      
+      
+        <link rel="next" href="../glossary/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Frequently Asked Questions - AI for EE Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/mascot.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-for-ee-research-faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AI for EE Research" class="md-header__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for EE Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frequently Asked Questions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI for EE Research" class="md-nav__button md-logo" aria-label="AI for EE Research" data-md-component="logo">
+      
+  <img src="../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    AI for EE Research
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/ai-for-ee-research" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../posters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Posters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../slides/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../appendices/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph Admin
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-this-book-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this book about?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-this-book-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is this book for?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-need-to-know-before-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I need to know before starting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-will-i-be-able-to-do-after-finishing-the-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      What will I be able to do after finishing the book?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-the-book-organized" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is the book organized?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-have-to-read-the-chapters-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I have to read the chapters in order?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a MicroSim?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-each-chapter-have-a-quiz-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Does each chapter have a quiz and references?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-volt-and-why-does-the-mascot-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is Volt, and why does the mascot appear?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-topics-does-the-book-deliberately-not-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      What topics does the book deliberately not cover?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-buy-a-particular-ai-product-to-follow-along" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to buy a particular AI product to follow along?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-find-definitions-of-unfamiliar-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can I find definitions of unfamiliar terms?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concept Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concept Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-five-everyday-research-tasks-the-book-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the five everyday research tasks the book targets?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-it-mean-to-be-the-researcher-as-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does it mean to be the researcher as orchestrator?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-an-ai-assistant-and-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between an AI assistant and an AI agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-large-language-model-and-how-does-it-differ-from-generative-ai-in-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a large language model, and how does it differ from generative AI in general?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-can-a-language-model-produce-fluent-but-false-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can a language model produce fluent but false statements?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-token-and-why-does-it-matter-to-a-researcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a token, and why does it matter to a researcher?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-context-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a context window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-context-engineering-and-how-is-it-different-from-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is context engineering, and how is it different from prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-agent-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an agent skill?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-book-use-markdown-and-project-instruction-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the book use Markdown and project instruction files?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-planning-agent-and-what-is-an-execution-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a planning agent, and what is an execution agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-book-say-20-planning-agents-and-10-execution-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the book say 20 planning agents and 10 execution agents?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-personal-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a personal knowledge graph?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-verification-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between verification and validation?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-human-in-the-loop-and-where-should-the-human-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is human in the loop, and where should the human review?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-model-context-protocol-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Model Context Protocol (MCP)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-always-on-personal-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an always-on personal agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-book-insist-that-ai-is-not-an-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the book insist that AI is not an author?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-iterative-refinement-and-how-do-i-do-it-productively" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is iterative refinement, and how do I do it productively?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-reviewer-agent-and-can-it-replace-my-own-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a reviewer agent, and can it replace my own review?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-cloud-agent-computer-and-how-does-it-differ-from-a-self-hosted-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a cloud agent computer, and how does it differ from a self-hosted agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-session-log-and-why-should-i-keep-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a session log, and why should I keep one?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-few-shot-examples-and-when-should-i-use-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are few-shot examples, and when should I use them?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Detail Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Detail Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-temperature-do-and-does-a-low-temperature-make-answers-more-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does temperature do, and does a low temperature make answers more correct?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-system-prompt-and-is-it-a-security-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a system prompt, and is it a security boundary?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-embeddings-vector-search-and-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are embeddings, vector search, and retrieval-augmented generation?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-a-local-open-weight-model-instead-of-a-hosted-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use a local open-weight model instead of a hosted one?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-api-key-and-how-should-i-handle-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an API key, and how should I handle it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt injection?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-task-specification-and-what-are-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a task specification, and what are acceptance criteria?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-agent-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the agent loop?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-sandboxing-and-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between sandboxing and permissions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-subagent-and-why-use-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a subagent, and why use one?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-progressive-disclosure-in-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is progressive disclosure in a skill?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-precision-and-recall-in-a-literature-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between precision and recall in a literature search?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-citation-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is citation chaining?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-silent-error-in-simulation-or-analysis-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a silent error in simulation or analysis code?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-falsifiable-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a falsifiable hypothesis?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-reproducibility-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a reproducibility package?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-sycophancy-in-a-language-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is sycophancy in a language model?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-summaries-of-papers-need-a-spot-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do summaries of papers need a spot check?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-a-handoff-between-two-agents-contain" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should a handoff between two agents contain?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenge-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Challenge Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenge Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-tell-whether-an-ai-generated-citation-is-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I tell whether an AI-generated citation is real?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-agent-says-the-task-is-done-but-i-do-not-trust-it-what-should-i-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      My agent says the task is done, but I do not trust it. What should I do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-long-task-keeps-losing-information-partway-through-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      My long task keeps losing information partway through. Why?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-my-agents-analysis-code-run-without-errors-but-give-a-suspicious-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does my agent's analysis code run without errors but give a suspicious answer?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-did-my-prompt-work-yesterday-but-not-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why did my prompt work yesterday but not today?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-skill-never-triggers-or-it-triggers-at-the-wrong-time-how-do-i-fix-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      My skill never triggers, or it triggers at the wrong time. How do I fix it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-i-do-when-two-agents-give-different-answers-to-the-same-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should I do when two agents give different answers to the same question?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-stop-an-agent-from-running-up-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I stop an agent from running up costs?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-clean-data-without-hiding-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I clean data without hiding problems?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-using-ai-weaken-my-own-research-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Will using AI weaken my own research skills?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-paste-unpublished-results-or-confidential-data-into-a-hosted-ai-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I paste unpublished results or confidential data into a hosted AI tool?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-handle-a-reviewer-comment-when-an-ai-helped-draft-my-reply" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I handle a reviewer comment when an AI helped draft my reply?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-generating-ideas-and-judging-them-in-the-same-pass-a-mistake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is generating ideas and judging them in the same pass a mistake?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-can-a-ranking-of-research-ideas-change-when-i-change-my-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can a ranking of research ideas change when I change my priorities?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-need-to-identify-the-failure-that-a-log-line-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I need to identify the failure that a log line shows?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-judge-whether-an-ai-assisted-result-is-trustworthy-enough-to-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I judge whether an AI-assisted result is trustworthy enough to publish?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practice Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-write-a-research-question-when-working-with-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I write a research question when working with AI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-go-in-a-project-instruction-file-such-as-agentsmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should go in a project instruction file such as AGENTS.md?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-use-git-when-an-agent-edits-my-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I use Git when an agent edits my project?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-decide-how-much-autonomy-to-give-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I decide how much autonomy to give an agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-a-role-for-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write a role for an agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-set-up-a-search-strategy-for-a-literature-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I set up a search strategy for a literature review?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-test-an-analysis-script-before-trusting-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I test an analysis script before trusting it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-keep-my-own-voice-when-ai-helps-draft-a-paper" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I keep my own voice when AI helps draft a paper?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-disclose-ai-use-in-a-paper" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I disclose AI use in a paper?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-choose-among-ai-models-for-a-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I choose among AI models for a task?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-a-lab-ai-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write a lab AI policy?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-responsible-ai-use-look-like-in-a-research-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does responsible AI use look like in a research group?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-organize-files-so-an-agent-can-work-safely-in-my-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I organize files so an agent can work safely in my project?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-prepare-a-figure-and-caption-for-a-manuscript-with-ai-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I prepare a figure and caption for a manuscript with AI help?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-decide-between-a-chat-interface-and-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I decide between a chat interface and the command line?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topic-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topic Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topic Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-know-when-adding-more-agents-stops-paying-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I know when adding more agents stops paying off?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-design-a-team-of-agents-for-my-own-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I design a team of agents for my own project?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-evaluate-a-personal-agent-product-that-i-might-adopt" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I evaluate a personal agent product that I might adopt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-much-of-my-knowledge-graph-should-an-agent-be-allowed-to-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      How much of my knowledge graph should an agent be allowed to read?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-verification-check-independent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes a verification check independent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-turn-a-research-result-into-an-interactive-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I turn a research result into an interactive MicroSim?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-capstone-project-ask-me-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does the capstone project ask me to do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-introduce-these-practices-into-my-research-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I introduce these practices into my research group?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-agreement-between-two-models-good-evidence-that-an-answer-is-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is agreement between two models good evidence that an answer is right?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-cost-of-an-agent-loop-grow-faster-than-its-number-of-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the cost of an agent loop grow faster than its number of steps?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-would-i-design-a-skill-pipeline-like-the-one-behind-this-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      How would I design a skill pipeline like the one behind this book?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-this-book-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this book about?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-this-book-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is this book for?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-need-to-know-before-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I need to know before starting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-will-i-be-able-to-do-after-finishing-the-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      What will I be able to do after finishing the book?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-the-book-organized" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is the book organized?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-have-to-read-the-chapters-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I have to read the chapters in order?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a MicroSim?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-each-chapter-have-a-quiz-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Does each chapter have a quiz and references?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-volt-and-why-does-the-mascot-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is Volt, and why does the mascot appear?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-topics-does-the-book-deliberately-not-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      What topics does the book deliberately not cover?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-buy-a-particular-ai-product-to-follow-along" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to buy a particular AI product to follow along?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-find-definitions-of-unfamiliar-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can I find definitions of unfamiliar terms?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concept Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concept Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-five-everyday-research-tasks-the-book-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the five everyday research tasks the book targets?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-it-mean-to-be-the-researcher-as-orchestrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does it mean to be the researcher as orchestrator?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-an-ai-assistant-and-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between an AI assistant and an AI agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-large-language-model-and-how-does-it-differ-from-generative-ai-in-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a large language model, and how does it differ from generative AI in general?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-can-a-language-model-produce-fluent-but-false-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can a language model produce fluent but false statements?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-token-and-why-does-it-matter-to-a-researcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a token, and why does it matter to a researcher?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-context-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a context window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-context-engineering-and-how-is-it-different-from-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is context engineering, and how is it different from prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-agent-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an agent skill?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-book-use-markdown-and-project-instruction-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the book use Markdown and project instruction files?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-planning-agent-and-what-is-an-execution-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a planning agent, and what is an execution agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-book-say-20-planning-agents-and-10-execution-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the book say 20 planning agents and 10 execution agents?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-personal-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a personal knowledge graph?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-verification-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between verification and validation?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-human-in-the-loop-and-where-should-the-human-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is human in the loop, and where should the human review?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-model-context-protocol-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Model Context Protocol (MCP)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-always-on-personal-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an always-on personal agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-book-insist-that-ai-is-not-an-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the book insist that AI is not an author?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-iterative-refinement-and-how-do-i-do-it-productively" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is iterative refinement, and how do I do it productively?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-reviewer-agent-and-can-it-replace-my-own-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a reviewer agent, and can it replace my own review?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-cloud-agent-computer-and-how-does-it-differ-from-a-self-hosted-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a cloud agent computer, and how does it differ from a self-hosted agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-session-log-and-why-should-i-keep-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a session log, and why should I keep one?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-few-shot-examples-and-when-should-i-use-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are few-shot examples, and when should I use them?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Detail Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Detail Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-temperature-do-and-does-a-low-temperature-make-answers-more-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does temperature do, and does a low temperature make answers more correct?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-system-prompt-and-is-it-a-security-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a system prompt, and is it a security boundary?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-embeddings-vector-search-and-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are embeddings, vector search, and retrieval-augmented generation?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-a-local-open-weight-model-instead-of-a-hosted-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use a local open-weight model instead of a hosted one?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-api-key-and-how-should-i-handle-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an API key, and how should I handle it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt injection?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-task-specification-and-what-are-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a task specification, and what are acceptance criteria?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-agent-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the agent loop?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-sandboxing-and-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between sandboxing and permissions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-subagent-and-why-use-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a subagent, and why use one?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-progressive-disclosure-in-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is progressive disclosure in a skill?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-precision-and-recall-in-a-literature-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between precision and recall in a literature search?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-citation-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is citation chaining?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-silent-error-in-simulation-or-analysis-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a silent error in simulation or analysis code?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-falsifiable-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a falsifiable hypothesis?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-reproducibility-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a reproducibility package?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-sycophancy-in-a-language-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is sycophancy in a language model?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-summaries-of-papers-need-a-spot-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do summaries of papers need a spot check?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-a-handoff-between-two-agents-contain" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should a handoff between two agents contain?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenge-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Challenge Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenge Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-tell-whether-an-ai-generated-citation-is-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I tell whether an AI-generated citation is real?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-agent-says-the-task-is-done-but-i-do-not-trust-it-what-should-i-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      My agent says the task is done, but I do not trust it. What should I do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-long-task-keeps-losing-information-partway-through-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      My long task keeps losing information partway through. Why?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-my-agents-analysis-code-run-without-errors-but-give-a-suspicious-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does my agent's analysis code run without errors but give a suspicious answer?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-did-my-prompt-work-yesterday-but-not-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why did my prompt work yesterday but not today?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-skill-never-triggers-or-it-triggers-at-the-wrong-time-how-do-i-fix-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      My skill never triggers, or it triggers at the wrong time. How do I fix it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-i-do-when-two-agents-give-different-answers-to-the-same-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should I do when two agents give different answers to the same question?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-stop-an-agent-from-running-up-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I stop an agent from running up costs?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-clean-data-without-hiding-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I clean data without hiding problems?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-using-ai-weaken-my-own-research-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Will using AI weaken my own research skills?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-paste-unpublished-results-or-confidential-data-into-a-hosted-ai-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I paste unpublished results or confidential data into a hosted AI tool?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-handle-a-reviewer-comment-when-an-ai-helped-draft-my-reply" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I handle a reviewer comment when an AI helped draft my reply?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-generating-ideas-and-judging-them-in-the-same-pass-a-mistake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is generating ideas and judging them in the same pass a mistake?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-can-a-ranking-of-research-ideas-change-when-i-change-my-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can a ranking of research ideas change when I change my priorities?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-need-to-identify-the-failure-that-a-log-line-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I need to identify the failure that a log line shows?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-judge-whether-an-ai-assisted-result-is-trustworthy-enough-to-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I judge whether an AI-assisted result is trustworthy enough to publish?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practice Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-write-a-research-question-when-working-with-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I write a research question when working with AI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-go-in-a-project-instruction-file-such-as-agentsmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should go in a project instruction file such as AGENTS.md?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-use-git-when-an-agent-edits-my-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I use Git when an agent edits my project?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-decide-how-much-autonomy-to-give-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I decide how much autonomy to give an agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-a-role-for-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write a role for an agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-set-up-a-search-strategy-for-a-literature-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I set up a search strategy for a literature review?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-test-an-analysis-script-before-trusting-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I test an analysis script before trusting it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-keep-my-own-voice-when-ai-helps-draft-a-paper" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I keep my own voice when AI helps draft a paper?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-disclose-ai-use-in-a-paper" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I disclose AI use in a paper?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-choose-among-ai-models-for-a-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I choose among AI models for a task?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-a-lab-ai-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write a lab AI policy?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-responsible-ai-use-look-like-in-a-research-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does responsible AI use look like in a research group?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-organize-files-so-an-agent-can-work-safely-in-my-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I organize files so an agent can work safely in my project?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-prepare-a-figure-and-caption-for-a-manuscript-with-ai-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I prepare a figure and caption for a manuscript with AI help?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-decide-between-a-chat-interface-and-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I decide between a chat interface and the command line?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topic-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topic Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topic Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-know-when-adding-more-agents-stops-paying-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I know when adding more agents stops paying off?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-design-a-team-of-agents-for-my-own-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I design a team of agents for my own project?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-evaluate-a-personal-agent-product-that-i-might-adopt" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I evaluate a personal agent product that I might adopt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-much-of-my-knowledge-graph-should-an-agent-be-allowed-to-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      How much of my knowledge graph should an agent be allowed to read?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-verification-check-independent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes a verification check independent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-turn-a-research-result-into-an-interactive-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I turn a research result into an interactive MicroSim?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-capstone-project-ask-me-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does the capstone project ask me to do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-introduce-these-practices-into-my-research-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I introduce these practices into my research group?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-agreement-between-two-models-good-evidence-that-an-answer-is-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is agreement between two models good evidence that an answer is right?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-cost-of-an-agent-loop-grow-faster-than-its-number-of-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the cost of an agent loop grow faster than its number of steps?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-would-i-design-a-skill-pipeline-like-the-one-behind-this-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      How would I design a skill pipeline like the one behind this book?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/ai-for-ee-research/blob/main/docs/faq.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ai-for-ee-research-faq">AI for EE Research FAQ<a class="headerlink" href="#ai-for-ee-research-faq" title="Permanent link">&para;</a></h1>
+<p>This FAQ answers the questions readers ask most often about the book, its ideas, and how to apply them. Answers link to the chapters, MicroSims, and glossary entries where each topic is developed.</p>
+<h2 id="getting-started-questions">Getting Started Questions<a class="headerlink" href="#getting-started-questions" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-this-book-about">What is this book about?<a class="headerlink" href="#what-is-this-book-about" title="Permanent link">&para;</a></h3>
+<p>This book is a hands-on guide to using AI tools and agents for the everyday tasks of research in electrical engineering and computer design: literature search, data analysis, brainstorming, coding, and manuscript preparation. Its central idea is a change of role. Instead of doing every task by hand, you become an <strong>orchestrator</strong> who directs a team of agents, checks what they produce, and stays accountable for the science. The book is practical rather than theoretical, and it works from case studies of real work, including an arXiv paper and an intelligent textbook. See the <a href="../course-description/">course description</a> and <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a> for the full picture. For example, instead of running a search by hand, you might direct an agent to propose a search strategy, then verify every citation it returns yourself.</p>
+<h3 id="who-is-this-book-for">Who is this book for?<a class="headerlink" href="#who-is-this-book-for" title="Permanent link">&para;</a></h3>
+<p>The book is written for graduate students (MS and PhD), postdoctoral researchers, faculty, and practicing engineers in electrical engineering, computer engineering, and computer design. You need graduate standing or equivalent research experience, but you do not need a background in machine learning or prompt engineering. The only ingredients assumed are curiosity and the habit of checking your results. Instructors can also use the book as the text for a course, because every chapter has a quiz and annotated references. The <a href="../about/">about page</a> describes the audience and the design of the book in more detail.</p>
+<h3 id="what-do-i-need-to-know-before-starting">What do I need to know before starting?<a class="headerlink" href="#what-do-i-need-to-know-before-starting" title="Permanent link">&para;</a></h3>
+<p>The course description lists four prerequisites: graduate standing or equivalent research experience, working knowledge of at least one programming language (preferably Python), basic comfort with a command line, a text editor, and Git, and experience writing a technical paper or report. No prior machine learning, prompt engineering, or agent experience is required. If Git is new to you, <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a> introduces commits and branches, and the <a href="../glossary/">glossary</a> defines terms as they appear. For example, if you can run a Python script from a terminal and commit a file to Git, you are ready for Chapter 1.</p>
+<h3 id="what-will-i-be-able-to-do-after-finishing-the-book">What will I be able to do after finishing the book?<a class="headerlink" href="#what-will-i-be-able-to-do-after-finishing-the-book" title="Permanent link">&para;</a></h3>
+<p>The learning outcomes span all six levels of Bloom's Taxonomy. You will be able to define key terms such as token and context window, explain why fluent output can be false, write a project instruction file, run a literature search that ends in verified citations, have an agent write and debug an analysis script, create a reusable agent skill, and generate an interactive simulation. At the higher levels you will verify results against independent checks, decide when to disclose AI use, and design a team of planning and execution agents. The capstone ties these together. The full list is in the <a href="../course-description/">course description</a>.</p>
+<h3 id="how-is-the-book-organized">How is the book organized?<a class="headerlink" href="#how-is-the-book-organized" title="Permanent link">&para;</a></h3>
+<p>The 20 chapters build from foundations to application to trust. Chapters 1 to 4 cover research workflows, how language models work, model choice, and context engineering. Chapters 5 to 7 cover Markdown, version control, knowledge bases, and agent skills. Chapters 8 to 10 cover agents, supervision, and orchestration. Chapters 11 to 16 apply these to literature, data, code, brainstorming, manuscripts, and communication. Chapters 17 to 20 cover verification, responsible use, always-on personal agents, and the capstone. Each concept is introduced after the concepts it depends on. Start at the <a href="../chapters/">chapter list</a>. For example, if your immediate need is a manuscript, read Chapters 1 to 4 for the vocabulary and then jump to Chapter 15.</p>
+<h3 id="do-i-have-to-read-the-chapters-in-order">Do I have to read the chapters in order?<a class="headerlink" href="#do-i-have-to-read-the-chapters-in-order" title="Permanent link">&para;</a></h3>
+<p>Reading in order is the safest path, because the learning graph arranges the 379 concepts so that each one comes after the concepts it depends on. Chapters 1 to 10 are the foundation, and the later chapters assume them. If you have a specific need, you can jump ahead: Chapter 11 for literature search, Chapter 12 for data analysis, or Chapter 15 for manuscripts. Each chapter lists its prerequisites near the top, so you can see what to read first. The <a href="../glossary/">glossary</a> helps when you meet a term you have not seen yet.</p>
+<h3 id="what-is-a-microsim">What is a MicroSim?<a class="headerlink" href="#what-is-a-microsim" title="Permanent link">&para;</a></h3>
+<p>A <strong>MicroSim</strong> is a small, single-concept, embeddable interactive simulation, usually written with p5.js and built-in controls such as sliders and buttons. This book includes dozens of them, from a context-window budget calculator to a critical-path explorer. They let you move a parameter and watch the dependence change, which a static figure cannot show. Chapter 16 explains how to specify one and have an agent build it. Browse the <a href="../sims/">MicroSim index</a> or read <a href="../chapters/16-microsims-communication/">Chapter 16</a>.</p>
+<h3 id="does-each-chapter-have-a-quiz-and-references">Does each chapter have a quiz and references?<a class="headerlink" href="#does-each-chapter-have-a-quiz-and-references" title="Permanent link">&para;</a></h3>
+<p>Yes. Every one of the 20 chapters has a self-check quiz and an annotated reference list. The quizzes use multiple-choice questions spread across the levels of Bloom's Taxonomy, and the references are curated rather than exhaustive. Both are linked under each chapter in the left-hand navigation, next to the chapter content. Use the quiz after reading a chapter to find the concepts you should revisit. The <a href="../chapters/">chapter list</a> links to all of them.</p>
+<h3 id="who-is-volt-and-why-does-the-mascot-appear">Who is Volt, and why does the mascot appear?<a class="headerlink" href="#who-is-volt-and-why-does-the-mascot-appear" title="Permanent link">&para;</a></h3>
+<p>Volt is a Border Collie who serves as the book's learning mascot, rounding up the key ideas. Volt appears in short callout boxes at points where a welcome, a tip, a warning, or a moment of encouragement helps, and in a celebration box at the end of each chapter. The mascot never replaces the content. Volt's recurring message is a short one: agents can do a great deal of your research legwork, but you stay accountable for the science, so trust but verify. You meet Volt on the <a href="../">home page</a> and in <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a>.</p>
+<h3 id="what-topics-does-the-book-deliberately-not-cover">What topics does the book deliberately not cover?<a class="headerlink" href="#what-topics-does-the-book-deliberately-not-cover" title="Permanent link">&para;</a></h3>
+<p>The scope is deliberately about using AI in research, not building it. The course description excludes training or fine-tuning language models, machine learning theory and neural network mathematics, AI hardware and accelerator design, vendor-specific EDA flows, and domain EE theory such as circuit analysis or device physics, which readers bring with them. It also excludes legal advice on copyright and data protection, benchmark rankings of commercial AI products, and any use of AI that replaces the researcher's judgment, authorship, or accountability. See the "Topics Not Covered" list in the <a href="../course-description/">course description</a>.</p>
+<h3 id="do-i-need-to-buy-a-particular-ai-product-to-follow-along">Do I need to buy a particular AI product to follow along?<a class="headerlink" href="#do-i-need-to-buy-a-particular-ai-product-to-follow-along" title="Permanent link">&para;</a></h3>
+<p>No. The book teaches durable practices rather than a single product, because products change faster than a book can. The techniques work with a chat interface, a hosted API, a command-line coding agent, or a local open-weight model. <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a> shows how to choose among them for a stated scenario, and <a href="../chapters/19-always-on-personal-agents/">Chapter 19</a> deliberately teaches criteria that outlast product names. Where particular products are discussed, the book labels their claims as vendor-stated and untested by independent parties.</p>
+<h3 id="where-can-i-find-definitions-of-unfamiliar-terms">Where can I find definitions of unfamiliar terms?<a class="headerlink" href="#where-can-i-find-definitions-of-unfamiliar-terms" title="Permanent link">&para;</a></h3>
+<p>The <a href="../glossary/">glossary</a> defines all 379 concepts in the learning graph. Each entry has a precise definition, an example from research practice, and cross-references to related terms. The definitions follow ISO 11179 style: concise, precise, and non-circular. Every chapter also begins with a list of the concepts it covers, so you can scan the vocabulary before reading. If a term in a quiz or chapter is unfamiliar, look it up in the glossary first.</p>
+<h2 id="core-concept-questions">Core Concept Questions<a class="headerlink" href="#core-concept-questions" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-the-five-everyday-research-tasks-the-book-targets">What are the five everyday research tasks the book targets?<a class="headerlink" href="#what-are-the-five-everyday-research-tasks-the-book-targets" title="Permanent link">&para;</a></h3>
+<p>The book targets literature search, data analysis, brainstorming, scientific coding, and manuscript preparation. Chapter 1 shows them as stages of a pipeline, and the pipeline is only as trustworthy as its weakest stage. A fast literature search does not help if the data analysis hides errors, and a polished manuscript does not rescue an unverified result. Chapters 11 to 15 take the tasks one at a time. Chapter 1 also explains where each task is a good candidate for AI help and where the researcher's direct judgment is still required. Start with <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a>.</p>
+<h3 id="what-does-it-mean-to-be-the-researcher-as-orchestrator">What does it mean to be the researcher as orchestrator?<a class="headerlink" href="#what-does-it-mean-to-be-the-researcher-as-orchestrator" title="Permanent link">&para;</a></h3>
+<p>It means your role shifts from performing every task personally to directing a team of agents, supplying domain judgment, resolving conflicts between their results, and deciding what is true. You set the question and the acceptance criteria, you place review points where errors would be costly, and you remain accountable for the science. The agents supply speed and volume. The orchestrator idea is the thread running from <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a> through the team design of <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a> and the capstone.</p>
+<h3 id="what-is-the-difference-between-an-ai-assistant-and-an-ai-agent">What is the difference between an AI assistant and an AI agent?<a class="headerlink" href="#what-is-the-difference-between-an-ai-assistant-and-an-ai-agent" title="Permanent link">&para;</a></h3>
+<p>An <strong>assistant</strong> answers a request and stops, and you act on the answer. An <strong>agent</strong> adds tools and a loop: it decides on an action, calls a tool, observes the result, and repeats until it judges the task done. The loop is the key difference, because the agent takes actions you did not individually approve, and early errors can compound across steps. That is why agents need permissions, logs, and review points that a chat assistant does not. For example, an assistant can suggest a script, while an agent can write the script, run it, read the traceback, and fix it. See <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a> and <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>.</p>
+<h3 id="what-is-a-large-language-model-and-how-does-it-differ-from-generative-ai-in-general">What is a large language model, and how does it differ from generative AI in general?<a class="headerlink" href="#what-is-a-large-language-model-and-how-does-it-differ-from-generative-ai-in-general" title="Permanent link">&para;</a></h3>
+<p><strong>Generative AI</strong> is the broad category of systems that produce new text, images, code, or other content. A <strong>large language model</strong> is the kind of generative AI that works on text: it turns a prompt into a completion one token at a time. Chapter 1 presents a chain: generative AI contains language models, an assistant wraps a model in an interface, and an agent adds tools and a loop to an assistant. A model optimizes plausibility rather than truth, which is why its output has to be treated as a hypothesis until checked. See <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a> and <a href="../chapters/02-how-language-models-work/">Chapter 2</a>.</p>
+<h3 id="why-can-a-language-model-produce-fluent-but-false-statements">Why can a language model produce fluent but false statements?<a class="headerlink" href="#why-can-a-language-model-produce-fluent-but-false-statements" title="Permanent link">&para;</a></h3>
+<p>A model is trained to continue text plausibly, and plausibility is not truth. Its training data is broad but not authoritative, and it ends at a knowledge cutoff, so the model can only produce what looks like a likely continuation of your prompt. When it lacks the facts, it still produces fluent text, and that is what a <strong>hallucination</strong> is. Fabricated citations are the model working as designed. The defense is a lookup that you run yourself, not another request to the same model. For example, a citation with a believable author list and journal can still not exist. See <a href="../chapters/02-how-language-models-work/">Chapter 2</a>.</p>
+<h3 id="what-is-a-token-and-why-does-it-matter-to-a-researcher">What is a token, and why does it matter to a researcher?<a class="headerlink" href="#what-is-a-token-and-why-does-it-matter-to-a-researcher" title="Permanent link">&para;</a></h3>
+<p>A <strong>token</strong> is the unit of text a model reads and writes, roughly a word or a piece of a word. Tokens matter because they are the unit of both billing and capacity. Every prompt and completion is counted in tokens, which sets the cost of a batch and fills the context window. Technical text costs more tokens per word than ordinary prose, because equations, identifiers, and units split into many pieces. Estimating the token count before running a large job avoids surprises. The <a href="../sims/context-window-budget-calculator/">context window budget calculator</a> lets you try this. See <a href="../chapters/02-how-language-models-work/">Chapter 2</a>.</p>
+<h3 id="what-is-a-context-window">What is a context window?<a class="headerlink" href="#what-is-a-context-window" title="Permanent link">&para;</a></h3>
+<p>The <strong>context window</strong> is the maximum number of tokens a model can consider at once, shared between everything sent in and everything generated back. It holds the system prompt, the conversation history, attached files, tool output, and the completion itself. When a task exceeds it, older material may be dropped, and the overflow can be silent. Everything the model uses must be present in the window, because the model does not remember anything from outside it. Long research tasks therefore need selection, summarization, or splitting. See <a href="../chapters/02-how-language-models-work/">Chapter 2</a> and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>.</p>
+<h3 id="what-is-context-engineering-and-how-is-it-different-from-prompt-engineering">What is context engineering, and how is it different from prompt engineering?<a class="headerlink" href="#what-is-context-engineering-and-how-is-it-different-from-prompt-engineering" title="Permanent link">&para;</a></h3>
+<p><strong>Prompt engineering</strong> is writing a good request. <strong>Context engineering</strong> is deciding everything the model sees: the task specification, selected documents, defined domain vocabulary, examples, constraints, and the results of earlier steps. For research tasks, reliability comes less from clever wording than from complete specification, grounded context, checks between steps, and prompts that are tested and versioned. For example, defining what "resolution" means in your measurement setup prevents a silent misreading. <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a> introduces prompting and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a> builds the larger discipline.</p>
+<h3 id="what-is-an-agent-skill">What is an agent skill?<a class="headerlink" href="#what-is-an-agent-skill" title="Permanent link">&para;</a></h3>
+<p>An <strong>agent skill</strong> is a directory built around a file named SKILL.md. The file has a name, a description that drives when the skill triggers, instructions, and supporting files such as scripts and reference documents that load only when needed. A skill packages one repeatable task so it is done the same way each time. A skill is worth the effort when the task recurs and the result can be checked. For example, a skill could turn a monthly literature scan into one command. See <a href="../chapters/06-knowledge-bases-skill-anatomy/">Chapter 6</a> for the anatomy and <a href="../chapters/07-designing-testing-skills/">Chapter 7</a> for design and testing.</p>
+<h3 id="why-does-the-book-use-markdown-and-project-instruction-files">Why does the book use Markdown and project instruction files?<a class="headerlink" href="#why-does-the-book-use-markdown-and-project-instruction-files" title="Permanent link">&para;</a></h3>
+<p>Plain text is readable by agents and humans, comparable line by line, searchable, and durable, and <strong>Markdown</strong> adds just enough structure with headings, lists, tables, and code blocks. A <strong>project instruction file</strong> such as AGENTS.md or CLAUDE.md states the project's goals, conventions, and constraints, so an agent reads them before it works. Keeping this knowledge in files under version control means an agent has memory, boundaries, and a means of recovery. An agent is only as reliable as the project it works in. See <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a>.</p>
+<h3 id="what-is-a-planning-agent-and-what-is-an-execution-agent">What is a planning agent, and what is an execution agent?<a class="headerlink" href="#what-is-a-planning-agent-and-what-is-an-execution-agent" title="Permanent link">&para;</a></h3>
+<p>A <strong>planning agent</strong> explores, decomposes problems, reads literature, and drafts specifications and plans. An <strong>execution agent</strong> carries out a plan: it writes code, runs analyses, builds simulations, and prepares figures and manuscripts. The split matters because plans are cheap to discard, while executions are expensive to check. Making the plan a readable handoff lets you catch a defect before any execution cost is paid. The book's design target is about 20 planning agents and 10 execution agents per researcher. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a> and <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>. For example, a planning agent drafts three ways to test a hypothesis, and you pick one before an execution agent writes the script.</p>
+<h3 id="why-does-the-book-say-20-planning-agents-and-10-execution-agents">Why does the book say 20 planning agents and 10 execution agents?<a class="headerlink" href="#why-does-the-book-say-20-planning-agents-and-10-execution-agents" title="Permanent link">&para;</a></h3>
+<p>The ratio reflects the fact that plans are cheap to discard and executions are expensive to check, so you want many exploratory plans for each execution you commit to. Chapter 10 treats 20 to 10 as a design target, not a law. The number of agents is the least important parameter, because dependencies, review cost, and the quality of handoffs set what a team can deliver. Your own attention is the real limit: review load grows with team size, and you should stop adding agents when they add more review than they remove work. See <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>.</p>
+<h3 id="what-is-a-personal-knowledge-graph">What is a personal knowledge graph?<a class="headerlink" href="#what-is-a-personal-knowledge-graph" title="Permanent link">&para;</a></h3>
+<p>A <strong>personal knowledge graph</strong> represents one researcher's notes, papers, experiments, people, and projects as entities joined by typed, directed relationships, governed by a small schema. Unlike a folder of files, it can answer multi-hop questions, such as which papers support the claim behind a given experiment, by following relationships rather than matching text similarity. An agent can build it through entity extraction, but the extracted links must be reviewed. It can also ground an agent's answers as memory that you own. See <a href="../chapters/06-knowledge-bases-skill-anatomy/">Chapter 6</a> and the <a href="../appendices/pkg/">appendix on personal knowledge graphs</a>.</p>
+<h3 id="what-is-the-difference-between-verification-and-validation">What is the difference between verification and validation?<a class="headerlink" href="#what-is-the-difference-between-verification-and-validation" title="Permanent link">&para;</a></h3>
+<p><strong>Verification</strong> asks whether the work was done right: does the code compute what it was meant to compute, and does the citation exist? <strong>Validation</strong> asks whether it was the right work: does the model or result represent the real situation? Both can fail independently, so a correct implementation of the wrong model passes verification and fails validation. Chapter 17 argues that verification is not a stage at the end but a set of independent checks, records, and habits throughout. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a>. For example, a correct filter implementation that models the wrong sensor passes verification and fails validation.</p>
+<h3 id="what-is-human-in-the-loop-and-where-should-the-human-review">What is human in the loop, and where should the human review?<a class="headerlink" href="#what-is-human-in-the-loop-and-where-should-the-human-review" title="Permanent link">&para;</a></h3>
+<p><strong>Human in the loop</strong> means a person reviews or approves an agent's work at defined points. Chapter 1 puts review where an action is irreversible, leaves your control, or becomes a reported result. Examples include deleting data, sending an email, spending money, or putting a number into a draft. Reviewing everything defeats the purpose of delegation, and reviewing nothing removes accountability. The skill is placing a small number of approval gates where they prevent the most damage. See <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a> and <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>.</p>
+<h3 id="what-is-the-model-context-protocol-mcp">What is the Model Context Protocol (MCP)?<a class="headerlink" href="#what-is-the-model-context-protocol-mcp" title="Permanent link">&para;</a></h3>
+<p>The <strong>Model Context Protocol</strong> is a standard way to connect an agent to external systems such as databases, research data sources, and APIs through servers that expose tools. Instead of building a custom integration for each system, you connect an MCP server and the agent can call its tools. Because these tools reach real systems, the book recommends least-privilege credentials, so a server that only needs to read a database is not given write access. See <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>. For example, a database server might expose a read-only query tool, so the agent can look up measurements but cannot change them.</p>
+<h3 id="what-is-an-always-on-personal-agent">What is an always-on personal agent?<a class="headerlink" href="#what-is-an-always-on-personal-agent" title="Permanent link">&para;</a></h3>
+<p>An <strong>always-on personal agent</strong> keeps its own cloud computer or runs on your own host, signs in to tools on your behalf, remembers context across sessions, and works while you are away. It differs from a session-based assistant in standing access and unattended work. Chapter 19 surveys Grok Bot, Dots, Muse, Claude Cowork, OpenClaw, and Hermes Agent, but its emphasis is on criteria that outlast the products. The three risks that most distinguish the class are blast radius, usage metering, and data exposure. See <a href="../chapters/19-always-on-personal-agents/">Chapter 19</a> and <a href="../appendices/personal-agent-software/">the software appendix</a>.</p>
+<h3 id="why-does-the-book-insist-that-ai-is-not-an-author">Why does the book insist that AI is not an author?<a class="headerlink" href="#why-does-the-book-insist-that-ai-is-not-an-author" title="Permanent link">&para;</a></h3>
+<p>Authorship requires accountability, and a model cannot take responsibility for a claim, answer a reviewer, or correct the record. Chapter 15 therefore treats AI as a tool whose use is disclosed, not as a co-author. Chapter 18 adds that disclosure follows venue and institutional policy, and that a log kept as you work makes the statement accurate. The humans on the paper remain answerable for every number, citation, and figure. See <a href="../chapters/15-manuscript-preparation/">Chapter 15</a> and <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a>.</p>
+<h3 id="what-is-iterative-refinement-and-how-do-i-do-it-productively">What is iterative refinement, and how do I do it productively?<a class="headerlink" href="#what-is-iterative-refinement-and-how-do-i-do-it-productively" title="Permanent link">&para;</a></h3>
+<p><strong>Iterative refinement</strong> is the loop of running a prompt, reading the result against your acceptance criteria, changing one thing, and running again. Nearly every prompt reaches its final form this way. Two habits make it productive. Change one component at a time, so you know which change caused an improvement, and keep each version, so you can return to one that worked. For example, if a summary keeps omitting units, add a single constraint requiring units and rerun before touching the role or the examples. Version control makes the history cheap to keep. See <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a> and <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a>.</p>
+<h3 id="what-is-a-reviewer-agent-and-can-it-replace-my-own-review">What is a reviewer agent, and can it replace my own review?<a class="headerlink" href="#what-is-a-reviewer-agent-and-can-it-replace-my-own-review" title="Permanent link">&para;</a></h3>
+<p>A <strong>reviewer agent</strong> checks another agent's output against stated criteria and reports defects. It earns its keep because it works from the criteria rather than from the producer's intentions, and it can run on a different model, which gives some independence. It does not replace a human or a script. A reviewer shares the weaknesses of language models in general, so it complements tests and your own sampling instead of substituting for them. For example, a reviewer can flag a missing unit in every table of a draft, while you still spot-check the numbers against the data. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a> and <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>.</p>
+<h3 id="what-is-a-cloud-agent-computer-and-how-does-it-differ-from-a-self-hosted-agent">What is a cloud agent computer, and how does it differ from a self-hosted agent?<a class="headerlink" href="#what-is-a-cloud-agent-computer-and-how-does-it-differ-from-a-self-hosted-agent" title="Permanent link">&para;</a></h3>
+<p>A <strong>cloud agent computer</strong> is a machine in the vendor's data center, assigned to you or your agent, with its own browser, files, and terminal. It keeps running when your own computer is off, which is why the agent can work in your absence. It also means your files and sessions live on someone else's hardware. A <strong>self-hosted agent</strong> runs on a machine you control, such as a laptop, a server, or your own cloud account. You gain control over where the data go, and you take on the work of setup, security, and upkeep. For example, a group that handles vendor files under NDA may prefer self-hosting for that reason. See <a href="../chapters/19-always-on-personal-agents/">Chapter 19</a>.</p>
+<h3 id="what-is-a-session-log-and-why-should-i-keep-one">What is a session log, and why should I keep one?<a class="headerlink" href="#what-is-a-session-log-and-why-should-i-keep-one" title="Permanent link">&para;</a></h3>
+<p>A <strong>session log</strong> is a dated record of what was done, decided, and left open in a working session with an agent. A model has no memory of its own, so memory is implemented as files, and the session log is the bridge between sessions: the next session loads it and resumes where the last one ended. Chapter 6 lists it alongside research notes, specifications, glossaries, and decision logs, each with one job. For example, an entry might record that a capture buffer limit was found and which specification it changes. Because the log is a file, you can read it, correct it, and put it under version control. See <a href="../chapters/06-knowledge-bases-skill-anatomy/">Chapter 6</a> and <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>.</p>
+<h3 id="what-are-few-shot-examples-and-when-should-i-use-them">What are few-shot examples, and when should I use them?<a class="headerlink" href="#what-are-few-shot-examples-and-when-should-i-use-them" title="Permanent link">&para;</a></h3>
+<p><strong>Few-shot examples</strong> are sample inputs and the outputs you want, placed in the prompt so the model can copy the format and the kind of judgment. They communicate what is hard to describe in words, such as how terse a summary should be or which defects count as serious. They cost context, so use as many as you need and no more, and make sure they cover the cases the model might get wrong. For example, two sample paper summaries in your preferred structure will usually shape the output better than a paragraph of description. Roles set viewpoint, and constraints bound sources, scope, and length. See <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a> and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>.</p>
+<h2 id="technical-detail-questions">Technical Detail Questions<a class="headerlink" href="#technical-detail-questions" title="Permanent link">&para;</a></h2>
+<h3 id="what-does-temperature-do-and-does-a-low-temperature-make-answers-more-correct">What does temperature do, and does a low temperature make answers more correct?<a class="headerlink" href="#what-does-temperature-do-and-does-a-low-temperature-make-answers-more-correct" title="Permanent link">&para;</a></h3>
+<p><strong>Temperature</strong> reshapes the probabilities a model assigns to its next token without changing their ranking. A low temperature makes output more repeatable and a high temperature makes it more varied. It does not make the output more correct: a model that is confidently wrong at temperature zero will repeat the same wrong answer every time. Use low temperature when you want repeatable, comparable runs, and treat correctness as a separate question that only a check can answer. See <a href="../chapters/02-how-language-models-work/">Chapter 2</a>. For example, running the same prompt five times at low temperature gives nearly identical text, and all five can contain the same error.</p>
+<h3 id="what-is-a-system-prompt-and-is-it-a-security-boundary">What is a system prompt, and is it a security boundary?<a class="headerlink" href="#what-is-a-system-prompt-and-is-it-a-security-boundary" title="Permanent link">&para;</a></h3>
+<p>A <strong>system prompt</strong> is standing instruction text that sets a model's behavior across a conversation. It uses part of the token budget on every turn, because it is sent each time. It is not a security boundary: a model can be talked or tricked into ignoring it, and instructions hidden in a document can compete with it. Do not put secrets in a system prompt and do not rely on its wording alone to prevent harm. Use permissions, sandboxing, and approval gates instead. See <a href="../chapters/02-how-language-models-work/">Chapter 2</a> and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>. For example, a system prompt that says never reveal the key does not protect a key that is sitting in the context.</p>
+<h3 id="what-are-embeddings-vector-search-and-retrieval-augmented-generation">What are embeddings, vector search, and retrieval-augmented generation?<a class="headerlink" href="#what-are-embeddings-vector-search-and-retrieval-augmented-generation" title="Permanent link">&para;</a></h3>
+<p>An <strong>embedding</strong> turns a piece of text into a list of numbers so that similar meanings land near each other. <strong>Vector search</strong> finds the stored passages closest to a query, and <strong>retrieval-augmented generation</strong> (RAG) places those passages in the prompt so the model can answer from your own documents. It is how you bring private, recent, or rare material to a model that never saw it. Retrieval returns results whether or not they are relevant, so check what was retrieved before trusting the answer. The <a href="../sims/embedding-vector-search-explorer/">embedding vector search explorer</a> shows the idea. See <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a>.</p>
+<h3 id="when-should-i-use-a-local-open-weight-model-instead-of-a-hosted-one">When should I use a local open-weight model instead of a hosted one?<a class="headerlink" href="#when-should-i-use-a-local-open-weight-model-instead-of-a-hosted-one" title="Permanent link">&para;</a></h3>
+<p>Chapter 3 gives three situations where a local open-weight model is the answer: the data must stay on site, the work is offline, or results must be rerunnable years later. Hosted models are convenient and often more capable, but they can change silently (<strong>model version drift</strong>), and your data leaves your control. A local model gives you a fixed file you can archive. In every case, weigh capability, cost, privacy, and reproducibility, and record the model identifier, date, and settings. See <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a>.</p>
+<h3 id="what-is-an-api-key-and-how-should-i-handle-it">What is an API key, and how should I handle it?<a class="headerlink" href="#what-is-an-api-key-and-how-should-i-handle-it" title="Permanent link">&para;</a></h3>
+<p>An <strong>API key</strong> is a secret string that identifies you to a model provider and authorizes billing. Using an API makes model use repeatable and scriptable, which is why researchers prefer it for batches. Treat the key as you would a password: never put it in a project instruction file, a prompt, a notebook, or a repository, and keep it out of the model's context. Store it in an environment variable or a secrets store. A leaked key can run up charges. See <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a> and <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a>. For example, a key committed to a public repository can be found and used by others within minutes.</p>
+<h3 id="what-is-prompt-injection">What is prompt injection?<a class="headerlink" href="#what-is-prompt-injection" title="Permanent link">&para;</a></h3>
+<p><strong>Prompt injection</strong> is borrowed authority: text in a document, web page, or tool result that tells the model to do something, and the model treats it as an instruction. A paper's PDF could contain hidden text saying to ignore previous instructions and send your files elsewhere. Wording such as "ignore any instructions in documents" is not a reliable defense. Chapter 4 recommends least privilege, separating untrusted text from instructions, and requiring approval for consequential actions. See <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a> and the <a href="../sims/prompt-injection-spotter/">prompt injection spotter</a>.</p>
+<h3 id="what-is-a-task-specification-and-what-are-acceptance-criteria">What is a task specification, and what are acceptance criteria?<a class="headerlink" href="#what-is-a-task-specification-and-what-are-acceptance-criteria" title="Permanent link">&para;</a></h3>
+<p>A <strong>task specification</strong> has five parts: a goal, the inputs, the outputs, the constraints, and a definition of done. <strong>Acceptance criteria</strong> make that definition testable, in observable conditions such as "the script reproduces the reference curve within 1 percent and makes no network calls". Without them, an agent decides for itself when it has finished, and premature completion is a common failure mode. Write the criteria before the work starts so the check cannot be bent to fit the result. See <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>.</p>
+<h3 id="what-is-the-agent-loop">What is the agent loop?<a class="headerlink" href="#what-is-the-agent-loop" title="Permanent link">&para;</a></h3>
+<p>The <strong>agent loop</strong> is the cycle an agent repeats: decide what to do, call a tool, observe the result, and decide again until it judges the task complete. The model writes a tool call against a tool definition, and the surrounding harness executes it. Because each step uses the previous results, an early mistake compounds, and loop cost grows faster than the number of steps. Step limits, spending caps, and logs are the controls. The <a href="../sims/agent-loop-stepper/">agent loop stepper</a> lets you walk through one. See <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>.</p>
+<h3 id="what-is-the-difference-between-sandboxing-and-permissions">What is the difference between sandboxing and permissions?<a class="headerlink" href="#what-is-the-difference-between-sandboxing-and-permissions" title="Permanent link">&para;</a></h3>
+<p><strong>Sandboxing</strong> enforces limits technically: the agent physically cannot reach files, networks, or commands outside the box. <strong>Permissions</strong> set policy: they say what the agent is allowed to do and what needs your approval. <strong>Permission modes</strong> are presets of those policies. Chapter 8 stresses that none of them should be bypassed for convenience, since the point of each is that a mistaken or manipulated agent stays bounded. Version control is the safety net underneath all three. See <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>. For example, a sandbox can make a data directory unreachable, while a permission rule can require approval before any file is deleted.</p>
+<h3 id="what-is-a-subagent-and-why-use-one">What is a subagent, and why use one?<a class="headerlink" href="#what-is-a-subagent-and-why-use-one" title="Permanent link">&para;</a></h3>
+<p>A <strong>subagent</strong> is an agent started by another agent to do a bounded piece of work with its own isolated context. Subagents let work run in parallel and keep a long investigation from filling the main agent's context window. The cost is extra tokens, and their results must be checked like any other output. Context isolation also helps with privacy, because a subagent sees only what it was given. See <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a> and <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a>. For example, a subagent can read forty papers and return a one-page table, so the main context never holds the full text.</p>
+<h3 id="what-is-progressive-disclosure-in-a-skill">What is progressive disclosure in a skill?<a class="headerlink" href="#what-is-progressive-disclosure-in-a-skill" title="Permanent link">&para;</a></h3>
+<p><strong>Progressive disclosure</strong> means a skill loads only what it needs, when it needs it. The short description is always visible to the agent so it can decide whether the skill applies. The full instructions load when the skill triggers. Reference documents and scripts load only when the instructions point to them. This keeps the context window free for the actual task and lets a skill hold a lot of knowledge without paying for it on every turn. See <a href="../chapters/07-designing-testing-skills/">Chapter 7</a>. For example, a literature skill might keep its search-syntax reference in a separate file that loads only when the agent writes a query.</p>
+<h3 id="what-is-the-difference-between-precision-and-recall-in-a-literature-search">What is the difference between precision and recall in a literature search?<a class="headerlink" href="#what-is-the-difference-between-precision-and-recall-in-a-literature-search" title="Permanent link">&para;</a></h3>
+<p><strong>Precision</strong> is the fraction of returned papers that are relevant, and <strong>recall</strong> is the fraction of all relevant papers that were returned. They trade off: a broad query raises recall and lowers precision. Chapter 11 advises that a scoping search should favor recall, since a missed paper is harder to notice than an irrelevant one that you can discard at triage. For example, if a query returns 40 papers and 10 are relevant out of 20 that exist, precision is 25 percent and recall is 50 percent. Try the <a href="../sims/search-precision-recall-explorer/">search precision and recall explorer</a>. See <a href="../chapters/11-literature-search-synthesis/">Chapter 11</a>.</p>
+<h3 id="what-is-citation-chaining">What is citation chaining?<a class="headerlink" href="#what-is-citation-chaining" title="Permanent link">&para;</a></h3>
+<p><strong>Citation chaining</strong> follows the citation links of a known paper to find related work. Backward chaining reads a paper's reference list for earlier work. Forward chaining finds the later papers that cite it. Together they find what keyword search misses, such as papers that use different terminology for the same idea. Because agents can fabricate references, every paper you add through chaining should be looked up by DOI or in a database before you cite it. See <a href="../chapters/11-literature-search-synthesis/">Chapter 11</a> and the <a href="../sims/citation-chaining-explorer/">citation chaining explorer</a>. For example, a 2019 paper's reference list can lead you to a 2012 paper that uses different terms for the same method.</p>
+<h3 id="what-is-a-silent-error-in-simulation-or-analysis-code">What is a silent error in simulation or analysis code?<a class="headerlink" href="#what-is-a-silent-error-in-simulation-or-analysis-code" title="Permanent link">&para;</a></h3>
+<p>A <strong>silent error</strong> is a bug that runs cleanly and returns a wrong number, so no traceback warns you. Chapter 13 gives a concrete case: using 10 log10 where 20 log10 was needed turned a 10-bit converter into an apparent 18-bit one. Because an agent tests what it imagined, silent errors survive its own tests. The defenses are known-answer unit tests built independently of the code, and numerical sanity checks against physical limits and hand calculations. See <a href="../chapters/13-simulation-testing-code/">Chapter 13</a> and the <a href="../sims/numerical-sanity-check-judge/">numerical sanity check judge</a>.</p>
+<h3 id="what-is-a-falsifiable-hypothesis">What is a falsifiable hypothesis?<a class="headerlink" href="#what-is-a-falsifiable-hypothesis" title="Permanent link">&para;</a></h3>
+<p>A <strong>falsifiable hypothesis</strong> states a change, an effect size, and conditions, so that some result could show it wrong. "Adding a guard ring improves the design" cannot be wrong; "adding a guard ring reduces substrate noise coupling by at least 6 dB between 1 and 100 MHz" can. Chapter 14 also asks you to fix the variables, the baseline, and the support criterion before seeing the data. Try sorting examples with the <a href="../sims/falsifiable-hypothesis-sorter/">falsifiable hypothesis sorter</a>. See <a href="../chapters/14-brainstorming-problem-framing/">Chapter 14</a>.</p>
+<h3 id="what-is-a-reproducibility-package">What is a reproducibility package?<a class="headerlink" href="#what-is-a-reproducibility-package" title="Permanent link">&para;</a></h3>
+<p>A <strong>reproducibility package</strong> gives someone else everything needed to rerun your work: the code, the data or its provenance, the environment, the prompts, the model identifier and settings, and a run manifest tying each result to the code and data that made it. Chapter 17 uses a clean-room run, rerunning from scratch on a fresh machine, as the test. With AI assistance, reproducibility also means recording the prompts, models, and settings, since hosted models change. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a> and <a href="../chapters/13-simulation-testing-code/">Chapter 13</a>. For example, a folder with the code, a lock file of dependencies, the raw data, the prompts, and a README with the exact commands.</p>
+<h3 id="what-is-sycophancy-in-a-language-model">What is sycophancy in a language model?<a class="headerlink" href="#what-is-sycophancy-in-a-language-model" title="Permanent link">&para;</a></h3>
+<p><strong>Sycophancy</strong> is a model's tendency to agree with you rather than with the evidence. If you state a belief, the model often finds support for it. It undermines checks, because a model asked "is my result right?" may say yes. Chapter 17 recommends neutral and flipped framings, explicit evidence requirements, and requests for alternatives. Chapter 14 uses a devil's advocate prompt to counter the same tendency when judging ideas. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a> and the <a href="../sims/sycophancy-spotter/">sycophancy spotter</a>. For example, asking whether your result is correct tends to get a yes, while asking for the strongest argument against it gets a more useful answer.</p>
+<h3 id="why-do-summaries-of-papers-need-a-spot-check">Why do summaries of papers need a spot check?<a class="headerlink" href="#why-do-summaries-of-papers-need-a-spot-check" title="Permanent link">&para;</a></h3>
+<p>Paper summarization is among the strongest uses of a language model, and it has one characteristic failure: the summary may be built from the abstract and the model's expectations about the field rather than from the paper's body. A summary that sounds right can state a result the paper does not contain. The defenses are to supply the full text, ask for a structured summary with the section for each statement, and spot-check. For example, pick three numbers from a summary and find each one in the paper's tables. Claims should be extracted with their locations so you can verify them. See <a href="../chapters/11-literature-search-synthesis/">Chapter 11</a> and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>.</p>
+<h3 id="what-should-a-handoff-between-two-agents-contain">What should a handoff between two agents contain?<a class="headerlink" href="#what-should-a-handoff-between-two-agents-contain" title="Permanent link">&para;</a></h3>
+<p>Chapter 9 lists six things: the goal, the inputs, the constraints, the acceptance criteria, the work done, and the open questions. Chapter 10 turns this into a <strong>handoff protocol</strong>: one file format, one location, and a small fixed set of status values. A minimal protocol uses five statuses: queued, running, needs-review, accepted, and rejected. An agent never marks its own work accepted, which keeps the approval with a reviewer or with you. For example, a planning agent's plan file could end at needs-review, and the execution agent starts only after you move it to accepted. See <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a> and <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a>.</p>
+<h2 id="common-challenge-questions">Common Challenge Questions<a class="headerlink" href="#common-challenge-questions" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-tell-whether-an-ai-generated-citation-is-real">How do I tell whether an AI-generated citation is real?<a class="headerlink" href="#how-do-i-tell-whether-an-ai-generated-citation-is-real" title="Permanent link">&para;</a></h3>
+<p>Treat every citation as unverified until you have looked it up yourself. Chapter 2 asks you to sort each one into four classes: verified, wrong detail, unsupported, or fabricated. Look the DOI up in a bibliographic database, confirm that the authors, title, and venue match, and then confirm that the paper actually supports the claim attached to it. Keep verified entries in BibTeX under version control and never hand-type them. Agreement from a second model is not verification. Practice with the <a href="../sims/citation-verification-judge/">citation verification judge</a>. See <a href="../chapters/11-literature-search-synthesis/">Chapter 11</a>.</p>
+<h3 id="my-agent-says-the-task-is-done-but-i-do-not-trust-it-what-should-i-do">My agent says the task is done, but I do not trust it. What should I do?<a class="headerlink" href="#my-agent-says-the-task-is-done-but-i-do-not-trust-it-what-should-i-do" title="Permanent link">&para;</a></h3>
+<p>Premature completion is a documented agent failure mode, so distrust is reasonable. Give the agent acceptance criteria before it starts, then run the checks yourself or with an independent script: known-answer tests, the diff of what changed, and the log of what it ran. Read the log for the failure patterns of Chapter 9, which include hallucinated results, scope drift, test weakening, and wrong arguments. If a test now passes, check that the test was not edited to pass. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a> and <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a>. For example, if a failing test suddenly passes, open the diff and check whether the test itself was edited.</p>
+<h3 id="my-long-task-keeps-losing-information-partway-through-why">My long task keeps losing information partway through. Why?<a class="headerlink" href="#my-long-task-keeps-losing-information-partway-through-why" title="Permanent link">&para;</a></h3>
+<p>Probably the context window overflowed. Because the window is a shared budget for the prompt and the completion, a long task can silently push out earlier material, including your own instructions. Chapter 4 offers remedies: select only the relevant material, summarize for a purpose and spot-check the numbers, ground claims in quotations that can be found, and split the job into a chain with a checked result at each step. Writing intermediate results to files lets a fresh context pick up where the last one stopped. Use the <a href="../sims/context-selection-budget/">context selection budget</a> to practice. See <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>. For example, a forty-page spec pasted in full leaves little room for the agent's work, whereas the three relevant sections leave plenty.</p>
+<h3 id="why-does-my-agents-analysis-code-run-without-errors-but-give-a-suspicious-answer">Why does my agent's analysis code run without errors but give a suspicious answer?<a class="headerlink" href="#why-does-my-agents-analysis-code-run-without-errors-but-give-a-suspicious-answer" title="Permanent link">&para;</a></h3>
+<p>Code that runs is not code that is right. Check it first on a known-answer record, where you can compute the correct result by hand. Then compare against definitional and physical limits, scaling behavior, and limit cases. Chapter 12 also warns that a catch-all error handler that hides exceptions is a defect, and that a script should fail loudly and print the quantities it used. Read tracebacks from the bottom. If the answer still looks wrong, reduce the problem until the first divergence is visible. See <a href="../chapters/12-data-analysis-scripting/">Chapter 12</a> and <a href="../chapters/13-simulation-testing-code/">Chapter 13</a>.</p>
+<h3 id="why-did-my-prompt-work-yesterday-but-not-today">Why did my prompt work yesterday but not today?<a class="headerlink" href="#why-did-my-prompt-work-yesterday-but-not-today" title="Permanent link">&para;</a></h3>
+<p>Hosted models change: a provider can update the model behind a name, which is <strong>model version drift</strong>. Sampling randomness can also change a result between runs. Record the model identifier, the date, the settings, and the exact prompt for every result that matters, and keep prompts under version control. For anything that must be rerun years later, a local open-weight model gives you a fixed file. Prompt tests, run again after any change, turn a surprise into a failing test. See <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a> and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>. For example, record the model identifier and the date next to each figure in your lab notebook.</p>
+<h3 id="my-skill-never-triggers-or-it-triggers-at-the-wrong-time-how-do-i-fix-it">My skill never triggers, or it triggers at the wrong time. How do I fix it?<a class="headerlink" href="#my-skill-never-triggers-or-it-triggers-at-the-wrong-time-how-do-i-fix-it" title="Permanent link">&para;</a></h3>
+<p>Chapter 7 names the skill failure modes: undertriggering, overtriggering, instruction drift, a missing dependency, a stale reference, and scope creep. Each points to a different fix. Because the description drives triggering, rewrite it so it says exactly when to use the skill and when not to. Test with prompts that should fire it and near misses that should not. If one skill does several jobs, split it into single-purpose skills. Rerun the tests whenever the model, the tools, or the skill change. The <a href="../sims/skill-description-trigger-tester/">skill description trigger tester</a> helps. See <a href="../chapters/07-designing-testing-skills/">Chapter 7</a>.</p>
+<h3 id="what-should-i-do-when-two-agents-give-different-answers-to-the-same-question">What should I do when two agents give different answers to the same question?<a class="headerlink" href="#what-should-i-do-when-two-agents-give-different-answers-to-the-same-question" title="Permanent link">&para;</a></h3>
+<p>Treat disagreement as information. Chapter 17 says agreement between models is weak evidence, but disagreement is a flag worth tracing. Compare the two outputs to find where they first diverge, then check that point against a primary source or an independent calculation. Chapter 10 recommends tracing a conflict to its first divergence, and keeping separate outputs for each agent so neither overwrites the other. Do not settle it by asking one agent to judge the other without evidence. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a> and <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>. For example, if two agents report different bandwidths, check the measurement setting and the formula each one used.</p>
+<h3 id="how-can-i-stop-an-agent-from-running-up-costs">How can I stop an agent from running up costs?<a class="headerlink" href="#how-can-i-stop-an-agent-from-running-up-costs" title="Permanent link">&para;</a></h3>
+<p>Chapter 9 recommends step limits, spending caps, and context resets, because the cost of a loop grows faster than the number of steps. Estimate the cost of a whole batch before running it, not just one call, and price the entire loop including retries and subagents. For scheduled or background tasks, give narrow scope and limits before they run unattended. Always-on agents add usage metering as a distinguishing risk, so check how a product bills before granting standing access. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a> and <a href="../chapters/19-always-on-personal-agents/">Chapter 19</a>. For example, set a ceiling of fifty steps and a daily spending limit before launching an overnight run.</p>
+<h3 id="how-do-i-clean-data-without-hiding-problems">How do I clean data without hiding problems?<a class="headerlink" href="#how-do-i-clean-data-without-hiding-problems" title="Permanent link">&para;</a></h3>
+<p>Keep the raw files read-only and do all cleaning in a logged script, so every change is visible and reversible. Removing a point needs a documented cause, because outliers are information, not noise. Record the measurement settings alongside the data, preferably in a sidecar file next to a CSV or JSON. Explore the data before computing anything, which catches clipping, short records, and wrong frequencies. The <a href="../sims/data-cleaning-decision-simulator/">data cleaning decision simulator</a> practices these choices. See <a href="../chapters/12-data-analysis-scripting/">Chapter 12</a>.</p>
+<h3 id="will-using-ai-weaken-my-own-research-skills">Will using AI weaken my own research skills?<a class="headerlink" href="#will-using-ai-weaken-my-own-research-skills" title="Permanent link">&para;</a></h3>
+<p>It can, which Chapter 18 calls over-reliance and skill atrophy. The countermeasures are to do core work yourself, to draft the argument-bearing sections of a paper in your own words, and to explain what you accept from an agent before you accept it. If you cannot explain a result, you cannot defend it, and accountability stays with you. Treat the agent as a source of volume and range, and keep the choices that matter. See <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a> and <a href="../chapters/15-manuscript-preparation/">Chapter 15</a>. For example, derive a result by hand once before asking an agent to automate it.</p>
+<h3 id="can-i-paste-unpublished-results-or-confidential-data-into-a-hosted-ai-tool">Can I paste unpublished results or confidential data into a hosted AI tool?<a class="headerlink" href="#can-i-paste-unpublished-results-or-confidential-data-into-a-hosted-ai-tool" title="Permanent link">&para;</a></h3>
+<p>Chapter 18 warns that unpublished results pasted into a hosted tool are disclosed to a third party. Participants' data and vendor files under NDA carry the same concern. The practical answer is a small data classification that maps each class to the tools allowed for it, for example open data to any tool and confidential data to a local model only. Check your institution's and funder's policy first. The <a href="../sims/data-sensitivity-sorter/">data sensitivity sorter</a> practices classifying. See <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a>.</p>
+<h3 id="how-do-i-handle-a-reviewer-comment-when-an-ai-helped-draft-my-reply">How do I handle a reviewer comment when an AI helped draft my reply?<a class="headerlink" href="#how-do-i-handle-a-reviewer-comment-when-an-ai-helped-draft-my-reply" title="Permanent link">&para;</a></h3>
+<p>You answer for every word. Chapter 15 says to write a response that claims only what changed: never state a change you did not make, and check the revised manuscript against the reply. Check that numbers match the new results, since silent changes are a known risk of AI revision. Disclose AI assistance as the venue requires. See <a href="../chapters/15-manuscript-preparation/">Chapter 15</a> and <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a>.</p>
+<h3 id="why-is-generating-ideas-and-judging-them-in-the-same-pass-a-mistake">Why is generating ideas and judging them in the same pass a mistake?<a class="headerlink" href="#why-is-generating-ideas-and-judging-them-in-the-same-pass-a-mistake" title="Permanent link">&para;</a></h3>
+<p><strong>Idea generation</strong> has two phases that are best kept apart. The divergent phase aims at quantity and range with no judgment. The convergent phase evaluates and selects. Mixing them hurts both: judging ideas while generating them stops the supply, and generating while judging blurs the criteria. Chapter 14 also warns that a model tends to agree with you, so ask for a table with assumptions and failure conditions, add a devil's advocate prompt, and check any analogy's mapping. For example, ask for twenty approaches first, then rank them in a separate pass with weights you chose. See <a href="../chapters/14-brainstorming-problem-framing/">Chapter 14</a>.</p>
+<h3 id="why-can-a-ranking-of-research-ideas-change-when-i-change-my-priorities">Why can a ranking of research ideas change when I change my priorities?<a class="headerlink" href="#why-can-a-ranking-of-research-ideas-change-when-i-change-my-priorities" title="Permanent link">&para;</a></h3>
+<p>A ranking is a weighted sum, so the weights are the decision. If you weight feasibility heavily, a safe incremental idea wins; if you weight novelty heavily, a risky one wins. Chapter 14 asks you to make the weights explicit and to compute how the ranking moves when they change, so the choice is yours rather than hidden in the agent's answer. A novelty claim rests on a search, not on the model's impression. For example, an idea that ranks first at equal weights may drop to third when novelty counts double. Use the <a href="../sims/research-idea-ranking-matrix/">research idea ranking matrix</a>. See <a href="../chapters/14-brainstorming-problem-framing/">Chapter 14</a>.</p>
+<h3 id="why-do-i-need-to-identify-the-failure-that-a-log-line-shows">Why do I need to identify the failure that a log line shows?<a class="headerlink" href="#why-do-i-need-to-identify-the-failure-that-a-log-line-shows" title="Permanent link">&para;</a></h3>
+<p>Logs make agent work auditable, and each failure mode leaves a recognizable trace. Chapter 9 names premature completion, hallucinated results, scope drift, test weakening, wrong arguments, and runaway loops, and each has a mechanical defense. For example, a test that suddenly passes after the agent edited the test file is test weakening, and the defense is to make tests read-only to the agent. A loop that repeats the same call is a runaway, and a step limit stops it. Reading logs against this list is faster than reading everything. Try the <a href="../sims/agent-failure-log-triage/">agent failure log triage</a>. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a>.</p>
+<h3 id="how-do-i-judge-whether-an-ai-assisted-result-is-trustworthy-enough-to-publish">How do I judge whether an AI-assisted result is trustworthy enough to publish?<a class="headerlink" href="#how-do-i-judge-whether-an-ai-assisted-result-is-trustworthy-enough-to-publish" title="Permanent link">&para;</a></h3>
+<p>Chapter 17 frames this as meeting the standard of your field with evidence. Ask whether the work was done right (verification) and whether it was the right work (validation). Check the result with an independent method, a primary source, or a known-answer test. Look for model behaviors that undermine checks, such as overconfidence and sycophancy. Confirm that someone else can rerun it from your reproducibility package in a clean-room run. If a number cannot be traced upstream to its source and downstream to every result that uses it, it is not ready. For example, a figure that regenerates from raw data in one command is much easier to defend. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a>.</p>
+<h2 id="best-practice-questions">Best Practice Questions<a class="headerlink" href="#best-practice-questions" title="Permanent link">&para;</a></h2>
+<h3 id="how-should-i-write-a-research-question-when-working-with-ai">How should I write a research question when working with AI?<a class="headerlink" href="#how-should-i-write-a-research-question-when-working-with-ai" title="Permanent link">&para;</a></h3>
+<p>State it with a metric and a threshold. Chapter 1 calls a precise research question the cheapest quality control available, because it gives both you and the agent a way to tell whether an answer is good. For example, "improve ADC performance" is vague, while "raise the effective number of bits above 9.5 at 100 MHz input" can be checked. A precise question also drives the acceptance criteria you write for each task. See <a href="../chapters/01-research-workflows-orchestrator/">Chapter 1</a> and <a href="../chapters/04-context-engineering-prompting/">Chapter 4</a>.</p>
+<h3 id="what-should-go-in-a-project-instruction-file-such-as-agentsmd">What should go in a project instruction file such as AGENTS.md?<a class="headerlink" href="#what-should-go-in-a-project-instruction-file-such-as-agentsmd" title="Permanent link">&para;</a></h3>
+<p>Chapter 5 says it states goals, conventions, and constraints, in lines you could check. Goals tell the agent what the project is for, conventions cover naming, layout, and style, and constraints list what the agent must not do, such as editing raw data. Keep it short, make each line checkable, and do not put secrets in it. Review changes to it like code, since it governs an agent's behavior. Keep raw data and generated results in separate directories so the boundary is clear. See <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a>.</p>
+<h3 id="how-should-i-use-git-when-an-agent-edits-my-project">How should I use Git when an agent edits my project?<a class="headerlink" href="#how-should-i-use-git-when-an-agent-edits-my-project" title="Permanent link">&para;</a></h3>
+<p>Commit before you start so you have a recovery point, and make small, named commits so each change is recoverable. Use a branch for agent work, and review the diff before you accept anything: the diff is the check on what an agent actually did. Chapter 5 also recommends versioning your prompts so each result ties to the prompt that produced it. Pushing to a GitHub repository backs the work up and supports review. See <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a>.</p>
+<h3 id="how-do-i-decide-how-much-autonomy-to-give-an-agent">How do I decide how much autonomy to give an agent?<a class="headerlink" href="#how-do-i-decide-how-much-autonomy-to-give-an-agent" title="Permanent link">&para;</a></h3>
+<p>Chapter 9 describes autonomy as a dial set per task, not by how capable the model seems. Three questions set it: is the action reversible, how far does it reach, and can the result be verified? A read-only literature scan can run with high autonomy. An email to a collaborator or an overwrite of raw data should need approval. Try the <a href="../sims/agent-autonomy-level-assigner/">agent autonomy level assigner</a> and the <a href="../sims/agent-permission-boundary-judge/">permission boundary judge</a>. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a>. For example, a nightly web search is reversible and low reach, so it can run with little supervision.</p>
+<h3 id="how-do-i-write-a-role-for-an-agent">How do I write a role for an agent?<a class="headerlink" href="#how-do-i-write-a-role-for-an-agent" title="Permanent link">&para;</a></h3>
+<p>Write it like a job description with a stopping rule. Chapter 9 lists roles such as planning, execution, reviewer, literature, analysis, coding, and writing agents. A good role says what the agent does, what inputs it takes, what it produces, what it must not touch, and when it stops and reports. Make handoffs files, so information is not lost or leaked between agents, and keep each agent's context isolated. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a> and <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>. For example, a reviewer role might read only the output folder, apply a five-item checklist, and stop after writing a report.</p>
+<h3 id="how-do-i-set-up-a-search-strategy-for-a-literature-review">How do I set up a search strategy for a literature review?<a class="headerlink" href="#how-do-i-set-up-a-search-strategy-for-a-literature-review" title="Permanent link">&para;</a></h3>
+<p>Write it down as a repeatable procedure. Chapter 11 recommends listing the research question, the databases and preprint servers to search, the keywords (an agent can help generate them for breadth), and the dates. Log each query, database, and date so someone else can repeat it. Search more than one source and record whether each is peer reviewed. Triage with a rubric, extract claims with their locations, and chain citations in both directions. See <a href="../chapters/11-literature-search-synthesis/">Chapter 11</a>. For example, a log entry such as database, query string, date, and number of hits lets a collaborator repeat the search exactly.</p>
+<h3 id="how-do-i-test-an-analysis-script-before-trusting-it">How do I test an analysis script before trusting it?<a class="headerlink" href="#how-do-i-test-an-analysis-script-before-trusting-it" title="Permanent link">&para;</a></h3>
+<p>Run it first on a known-answer record, one where you can compute the right result independently. Write unit tests before the code when you can, and build the expected values separately from the code under test. Have the script print the quantities it used and fail loudly. Finish with a restart-and-run-all of any notebook, which is the test that results do not depend on hidden state. See <a href="../chapters/12-data-analysis-scripting/">Chapter 12</a>, <a href="../chapters/13-simulation-testing-code/">Chapter 13</a>, and the <a href="../sims/unit-test-selector-seeded-bugs/">unit test selector</a>. For example, generate a sine wave of known amplitude and check that the script reports that amplitude.</p>
+<h3 id="how-do-i-keep-my-own-voice-when-ai-helps-draft-a-paper">How do I keep my own voice when AI helps draft a paper?<a class="headerlink" href="#how-do-i-keep-my-own-voice-when-ai-helps-draft-a-paper" title="Permanent link">&para;</a></h3>
+<p>Chapter 15 gives four practices. Draft the argument-bearing sections yourself, and let the agent draft from claims you have evidenced. Supply samples of your own writing as a style guide. Read the result aloud. Run a number check on every revision so no figure changes silently. Write the abstract last, with numbers. Request proposed changes rather than silent rewrites, and regenerate every figure from data and every reference from verified BibTeX. See <a href="../chapters/15-manuscript-preparation/">Chapter 15</a>.</p>
+<h3 id="how-should-i-disclose-ai-use-in-a-paper">How should I disclose AI use in a paper?<a class="headerlink" href="#how-should-i-disclose-ai-use-in-a-paper" title="Permanent link">&para;</a></h3>
+<p>Follow the venue's and your institution's policy, which differs from place to place. Chapter 18 recommends keeping a log as you work, so the disclosure is accurate rather than reconstructed from memory. State which tools you used, what for, and which parts you verified. AI is not listed as an author, because authorship carries accountability a model cannot take. The <a href="../sims/ai-use-disclosure-decision-helper/">AI use disclosure decision helper</a> walks through scenarios. See <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a>.</p>
+<h3 id="how-do-i-choose-among-ai-models-for-a-task">How do I choose among AI models for a task?<a class="headerlink" href="#how-do-i-choose-among-ai-models-for-a-task" title="Permanent link">&para;</a></h3>
+<p>Treat it as a constrained trade-off among capability, cost, latency, privacy, and reproducibility. Chapter 2 notes that size, reasoning, and modality are trade-offs to match to a task, and that your own small benchmark beats a public score. Write down the task, build a handful of test cases with known answers, try two or three models, and price the whole batch. Record the choice. The <a href="../sims/model-choice-scenario-sorter/">model choice scenario sorter</a> practices this. See <a href="../chapters/03-models-and-prompt-basics/">Chapter 3</a>.</p>
+<h3 id="how-do-i-write-a-lab-ai-policy">How do I write a lab AI policy?<a class="headerlink" href="#how-do-i-write-a-lab-ai-policy" title="Permanent link">&para;</a></h3>
+<p>Chapter 18 recommends a one-page file in the repository that is reviewed regularly. The example in the chapter has sections for purpose and scope, accountability, data classes and the tools permitted for each, and disclosure. Add the review schedule, who approves exceptions, and what to do when something goes wrong. Keeping it in version control means that the policy has a history, and new students can read it on their first day. See <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a> and <a href="../chapters/20-case-studies-capstone/">Chapter 20</a>.</p>
+<h3 id="what-does-responsible-ai-use-look-like-in-a-research-group">What does responsible AI use look like in a research group?<a class="headerlink" href="#what-does-responsible-ai-use-look-like-in-a-research-group" title="Permanent link">&para;</a></h3>
+<p>Chapter 18 summarizes it as the same research integrity as before, applied to a tool that produces output fast enough to make lapses easy. In practice it means accountability that cannot be delegated, disclosure of AI use, protection of data entrusted to you, respect for ownership and licenses, checks for bias, and keeping your own skill. For example, a group might classify data into classes, allow only a local model for confidential data, keep an AI-use log, and review the policy each term. Put it in a one-page file in the repository so every member sees it. See <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a> and the <a href="../sims/data-sensitivity-sorter/">data sensitivity sorter</a>.</p>
+<h3 id="how-should-i-organize-files-so-an-agent-can-work-safely-in-my-project">How should I organize files so an agent can work safely in my project?<a class="headerlink" href="#how-should-i-organize-files-so-an-agent-can-work-safely-in-my-project" title="Permanent link">&para;</a></h3>
+<p>Make the layout predictable and the boundaries clear. Chapter 5 recommends naming conventions, documentation kept in the same history as the work, and a separation between raw data and generated results, so an agent has an obvious line it must not cross. Keep source in plain text, record conventions in the instruction file, and commit early. For example, a data directory for raw measurements that is read-only to the agent, a results directory the agent may write to, and a notes directory for decisions. See <a href="../chapters/05-markdown-and-version-control/">Chapter 5</a> and <a href="../chapters/12-data-analysis-scripting/">Chapter 12</a>.</p>
+<h3 id="how-do-i-prepare-a-figure-and-caption-for-a-manuscript-with-ai-help">How do I prepare a figure and caption for a manuscript with AI help?<a class="headerlink" href="#how-do-i-prepare-a-figure-and-caption-for-a-manuscript-with-ai-help" title="Permanent link">&para;</a></h3>
+<p>Generate figures from source and data so they can be regenerated, not edited by hand. Chapter 15 asks that a caption stand alone with its figure, naming what is plotted, the units, the conditions, and the takeaway. Use LaTeX for consistent figures and references, and run a number check on any revised text. For example, if a plot of ENOB against input frequency changes after a rerun, the caption numbers must change with it. The <a href="../sims/figure-caption-critic/">figure caption critic</a> practices judging a caption against a checklist. See <a href="../chapters/15-manuscript-preparation/">Chapter 15</a>.</p>
+<h3 id="how-do-i-decide-between-a-chat-interface-and-the-command-line">How do I decide between a chat interface and the command line?<a class="headerlink" href="#how-do-i-decide-between-a-chat-interface-and-the-command-line" title="Permanent link">&para;</a></h3>
+<p>Chapter 2 says chat interfaces suit exploration and command lines suit repeatable, file-touching, reproducible work. If you are trying out an idea or asking a question, chat is quick. If the task will run again, touch files, or need a record of exactly what was run, use a command-line tool or API so the prompt, model, and settings can be saved. For example, a one-off question about a datasheet fits chat, while a nightly literature scan belongs in a script. See <a href="../chapters/02-how-language-models-work/">Chapter 2</a> and <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>.</p>
+<h2 id="advanced-topic-questions">Advanced Topic Questions<a class="headerlink" href="#advanced-topic-questions" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-know-when-adding-more-agents-stops-paying-off">How do I know when adding more agents stops paying off?<a class="headerlink" href="#how-do-i-know-when-adding-more-agents-stops-paying-off" title="Permanent link">&para;</a></h3>
+<p>Chapter 10 gives three limits: your attention, task dependencies, and coordination cost. Review load grows with team size, so estimate how many outputs per day you must check and fit that to the time you have. Task dependencies set the critical path, and parallelism cannot shorten it. Stop adding agents when they add more review than they remove work. The <a href="../sims/orchestrator-review-load-calculator/">orchestrator review load calculator</a> and <a href="../sims/task-dependency-critical-path/">task dependency critical path</a> let you try the arithmetic. See <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a>.</p>
+<h3 id="how-do-i-design-a-team-of-agents-for-my-own-project">How do I design a team of agents for my own project?<a class="headerlink" href="#how-do-i-design-a-team-of-agents-for-my-own-project" title="Permanent link">&para;</a></h3>
+<p>Start from the research question and its acceptance criteria. Break the work into tasks with owners, outputs, and checks, and map the dependencies to find the critical path. Assign planning and execution roles, define handoffs as files, and put review checkpoints and human approval gates where actions are irreversible or outward-bound. Write each agent's specification so it is reproducible, review the plan before execution, and revise it as you learn. Chapter 20's capstone asks you to do this end to end. See <a href="../chapters/10-orchestrating-agent-teams/">Chapter 10</a> and <a href="../chapters/20-case-studies-capstone/">Chapter 20</a>. For example, a small team might have one planning agent for literature, one for data analysis, and one execution agent for the figures.</p>
+<h3 id="how-should-i-evaluate-a-personal-agent-product-that-i-might-adopt">How should I evaluate a personal agent product that I might adopt?<a class="headerlink" href="#how-should-i-evaluate-a-personal-agent-product-that-i-might-adopt" title="Permanent link">&para;</a></h3>
+<p>Use the durable criteria of Chapter 19 rather than a ranking. Ask where it runs, what its blast radius is, how its approval model works, how it meters usage, what data it exposes, where its memory lives, and which of its claims have been verified independently, since almost all are vendor-stated. Check its reach before you grant it, start small, and audit its overnight activity against the task you gave it. Keep memory in files you own. The <a href="../sims/agent-comparison-criteria-matcher/">agent comparison criteria matcher</a> and <a href="../sims/overnight-activity-audit/">overnight activity audit</a> practice this. See <a href="../chapters/19-always-on-personal-agents/">Chapter 19</a>. For example, ask what happens to your files if you cancel the subscription, and who can read the agent's memory.</p>
+<h3 id="how-much-of-my-knowledge-graph-should-an-agent-be-allowed-to-read">How much of my knowledge graph should an agent be allowed to read?<a class="headerlink" href="#how-much-of-my-knowledge-graph-should-an-agent-be-allowed-to-read" title="Permanent link">&para;</a></h3>
+<p>Only what its job needs. Chapter 19 recommends partitioning the graph by data class and giving each agent a view, not the master copy. A literature agent may need public papers and notes, while a manuscript agent may need results, and neither needs confidential vendor data. Keep the graph in files you own so the agent's memory is portable and auditable. This is least privilege applied to memory. See <a href="../chapters/19-always-on-personal-agents/">Chapter 19</a>, <a href="../chapters/06-knowledge-bases-skill-anatomy/">Chapter 6</a>, and the <a href="../appendices/pkg/">knowledge graph appendix</a>.</p>
+<h3 id="what-makes-a-verification-check-independent">What makes a verification check independent?<a class="headerlink" href="#what-makes-a-verification-check-independent" title="Permanent link">&para;</a></h3>
+<p>An <strong>independent check</strong> has different failure causes from the thing it checks. Rerunning the same code or asking the same model to confirm its own answer shares the original's flaws, so it proves little. Chapter 17 lists checks that are independent: known-answer tests built separately from the code, a different method for the same quantity, a primary source check, and a cross-model check where disagreement is a flag. Choose the check by what it guards against. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a> and the <a href="../sims/verification-method-matcher/">verification method matcher</a>. For example, a known-answer test computed by hand shares no failure cause with the script it checks.</p>
+<h3 id="how-do-i-turn-a-research-result-into-an-interactive-microsim">How do I turn a research result into an interactive MicroSim?<a class="headerlink" href="#how-do-i-turn-a-research-result-into-an-interactive-microsim" title="Permanent link">&para;</a></h3>
+<p>Chapter 16 says to work specification first: write the evidence of mastery, the content, and the rules, then search for similar sims, generate, verify, and approve. A MicroSim suits a dependence or a process, not a single fact, so decide what parameter the reader should move. The agent writes the p5.js code with built-in controls, you check it against your own calculation, and only a human marks it approved. Embed it with an iframe and a relative path so decks, pages, and papers can reuse it. See <a href="../chapters/16-microsims-communication/">Chapter 16</a>, the <a href="../sims/">MicroSim index</a>, and the <a href="../sims/microsim-suitability-judge/">MicroSim suitability judge</a>. For example, a slider for oversampling ratio that moves the noise floor of a converter shows a dependence that a static plot cannot.</p>
+<h3 id="what-does-the-capstone-project-ask-me-to-do">What does the capstone project ask me to do?<a class="headerlink" href="#what-does-the-capstone-project-ask-me-to-do" title="Permanent link">&para;</a></h3>
+<p>The capstone is an end-to-end research task that you plan and run with a coordinated team of agents. Chapter 20 says to write the criteria in advance, verify the results, build a reproducibility package, disclose AI use, and give an honest account of where human judgment decided the outcome. The case studies of the MicroSims paper and the intelligent textbook project show the pattern: start from source material, hand files between single-purpose stages, check each handoff, and record failures. See <a href="../chapters/20-case-studies-capstone/">Chapter 20</a>. For example, a capstone might build a verified literature review on a topic from your own thesis.</p>
+<h3 id="how-can-i-introduce-these-practices-into-my-research-group">How can I introduce these practices into my research group?<a class="headerlink" href="#how-can-i-introduce-these-practices-into-my-research-group" title="Permanent link">&para;</a></h3>
+<p>Chapter 20 gives an ordering: policy, repository, pilot, checks, then team. Start with a one-page lab AI policy and a shared repository with an instruction file. Pilot on one task whose result can be checked, add independent checks, and then build a shared skill library and a documented group workflow. Decide at 90 days by measured results, not enthusiasm. The <a href="../sims/adoption-plan-prioritizer/">adoption plan prioritizer</a> helps order the steps. See <a href="../chapters/20-case-studies-capstone/">Chapter 20</a> and <a href="../chapters/18-responsible-ethical-use/">Chapter 18</a>.</p>
+<h3 id="is-agreement-between-two-models-good-evidence-that-an-answer-is-right">Is agreement between two models good evidence that an answer is right?<a class="headerlink" href="#is-agreement-between-two-models-good-evidence-that-an-answer-is-right" title="Permanent link">&para;</a></h3>
+<p>Not strongly. Chapter 17 says agreement in a cross-model check is weak evidence, because models share training data and tendencies, so they can be wrong in the same way. Disagreement, in contrast, is a flag worth tracing. A reviewer on a different model gives some independence but does not replace a known-answer test, a different method for the same quantity, or a primary source. For example, two models can both repeat the same fabricated citation. Choose the check by what it guards against. See <a href="../chapters/17-verification-reproducibility/">Chapter 17</a> and the <a href="../sims/verification-method-matcher/">verification method matcher</a>.</p>
+<h3 id="why-does-the-cost-of-an-agent-loop-grow-faster-than-its-number-of-steps">Why does the cost of an agent loop grow faster than its number of steps?<a class="headerlink" href="#why-does-the-cost-of-an-agent-loop-grow-faster-than-its-number-of-steps" title="Permanent link">&para;</a></h3>
+<p>Each step in an agent loop carries the earlier steps in its context, so every new call re-reads more and costs more tokens than the last. Retries, tool output, and subagents add further volume. Chapter 9 therefore recommends step limits, spending caps, and context resets rather than trusting a rough per-step figure. For example, a thirty-step run does not cost thirty times a one-step run; it costs far more, because the thirtieth call includes the whole history. See <a href="../chapters/09-supervising-agents-roles/">Chapter 9</a>, <a href="../chapters/08-agents-tool-use-subagents/">Chapter 8</a>, and the <a href="../sims/context-window-budget-calculator/">context window budget calculator</a>.</p>
+<h3 id="how-would-i-design-a-skill-pipeline-like-the-one-behind-this-book">How would I design a skill pipeline like the one behind this book?<a class="headerlink" href="#how-would-i-design-a-skill-pipeline-like-the-one-behind-this-book" title="Permanent link">&para;</a></h3>
+<p>Chapter 20 describes the intelligent textbook project as a <strong>skill pipeline</strong>: single-purpose stages that hand files to one another, with a check at each handoff and a status field acting as the autonomy boundary. To design your own, pick a repeatable job with checkable outputs, split it into stages that each have one input and one output file, write a skill for each stage, and define the status values that gate the next stage. Record failures with cause, detection, control, and change. For example, a literature pipeline could go from search strategy to candidate list to verified references to annotated reading list. See <a href="../chapters/20-case-studies-capstone/">Chapter 20</a> and <a href="../chapters/07-designing-testing-skills/">Chapter 7</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../learning-graph/faq-coverage-gaps/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FAQ Coverage Gaps">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                FAQ Coverage Gaps
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../js/katex.js"></script>
+      
+        <script src="../js/giscus.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
