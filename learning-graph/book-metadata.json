@@ -6,20 +6,20 @@
     "stories": 0,
     "labs": 0,
     "glossaryTerms": 379,
-    "faqs": 0,
+    "faqs": 96,
     "quizQuestions": 200,
     "chapterQuizzes": 20,
     "chapterReferences": 20,
     "references": 200,
     "diagrams": 48,
-    "equations": 1,
-    "words": 279238,
-    "links": 1270,
+    "equations": 96,
+    "words": 290862,
+    "links": 1445,
     "appendices": 4,
     "mascotImages": 7,
     "developmentStage": "Not specified",
-    "equivalentPages": 1153
+    "equivalentPages": 1200
   },
-  "metricsGeneratedBy": "Book Metrics Python Program v0.09",
-  "metricsGeneratedOn": "October 23, 2026 at 06:33 AM"
+  "metricsGeneratedBy": "Book Metrics Python Program v0.10",
+  "metricsGeneratedOn": "October 23, 2026 at 07:37 AM"
 }
