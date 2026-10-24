@@ -34,6 +34,7 @@ researcher-as-orchestrator/
 ├── build.sh             # build, package and release script
 ├── brief.md             # content brief, assumptions and readiness score
 ├── arxiv-metadata.md    # arXiv submission form fields
+├── posting-guide.md     # step-by-step Zenodo and TechRxiv posting process
 ├── quality-report.md    # rubric score and open issues
 ├── arxiv-upload.zip     # self-contained arXiv package (sources, figures, main.bbl)
 └── main.pdf             # latest build (26 pages)
@@ -75,3 +76,6 @@ python3 -m venv .venv && .venv/bin/pip install matplotlib
 
 See [arxiv-metadata.md](arxiv-metadata.md) for the form fields and the checklist.
 Upload `arxiv-upload.zip` at https://arxiv.org/submit.
+
+To post without arXiv, see [posting-guide.md](posting-guide.md) for the Zenodo and TechRxiv
+steps and for getting the paper picked up by Google Scholar.

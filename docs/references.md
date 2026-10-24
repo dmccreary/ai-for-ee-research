@@ -92,3 +92,29 @@ skill design chapters (see
 
 ### Five Levels of Intelligent Textbooks
 [A Five-Level Classification Framework for Intelligent Textbooks:Lessons from Autonomous Vehicle Standards](https://www.researchgate.net/publication/398830915_A_Five-Level_Classification_Framework_for_Intelligent_Textbooks_Lessons_from_Autonomous_Vehicle_Standards) - Dec 18, 2025
+
+### From Researcher to Orchestrator
+McCreary, D. (2026).
+   [From Researcher to Orchestrator: Attention-Bounded Supervision of AI Agent Teams
+   in Engineering Research](https://zenodo.org/records/23607348).
+   Preprint, Zenodo, v1. DOI: [10.5281/zenodo.23607348](https://doi.org/10.5281/zenodo.23607348).
+   Licensed CC BY 4.0.
+
+??? note "BibTeX"
+    ```bibtex
+    @misc{mccreary2026orchestrator,
+      author    = {McCreary, Dan},
+      title     = {From Researcher to Orchestrator: Attention-Bounded Supervision of AI Agent Teams in Engineering Research},
+      year      = {2026},
+      publisher = {Zenodo},
+      version   = {v1},
+      doi       = {10.5281/zenodo.23607348},
+      url       = {https://zenodo.org/records/23607348}
+    }
+    ```
+
+**Where it is used in this book:** the research paper drawn from this book. It presents
+the autonomy-assignment rule, the separation-of-acceptance protocol, and the review-load
+model behind the
+[Orchestrating Teams of Planning and Execution Agents](chapters/10-orchestrating-agent-teams/references.md)
+chapter.
