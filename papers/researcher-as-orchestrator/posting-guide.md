@@ -16,6 +16,14 @@ disagree, follow the form and update this file.
    TechRxiv *does* screen submissions before posting, so it can decline a paper. The
    paper is already public on Zenodo by then, so a decline costs you nothing.
 
+> **Status (as of 24 Oct 2026): TechRxiv submissions are closed.** Its home page says it is
+> preparing a transition to a new platform and that submissions are temporarily closed.
+> The most recent update notice is dated 6 March 2026, so the closure has already lasted
+> about seven months with no reopening date. Existing content and DOIs keep working.
+> Do not wait for it. Part B is kept for if it reopens. In the meantime, Zenodo alone is
+> enough to get indexed. If you want a second, EE-oriented home now, see "Alternatives
+> while TechRxiv is closed" in Part B.
+
 Why this order: a Zenodo or TechRxiv DOI is permanent the moment you publish. Neither site
 lets you swap the file under the same DOI or cleanly remove the record. Post only after
 the PDF is final.
@@ -130,6 +138,29 @@ This is separate from the paper record. Keep the two DOIs distinct.
 
 ## Part B: TechRxiv
 
+**On hold: submissions are closed while TechRxiv moves to a new platform.** Check the
+notice on https://www.techrxiv.org before starting. The steps below describe the old
+platform (Figshare). The new one may change the form, so treat them as a rough outline
+and follow what the live form shows.
+
+### Alternatives while TechRxiv is closed
+
+These are options, not recommendations. Check each site's current scope and rules first.
+
+- **engrXiv** (https://engrxiv.org): an engineering preprint server run on the OSF
+  platform. Free, DOI-issuing and indexed by Google Scholar. It is the closest match to
+  TechRxiv's audience.
+- **OSF Preprints** (https://osf.io/preprints/): a general server with light
+  moderation, for use if engrXiv is not suitable.
+- **Skip it.** Zenodo already gives you a DOI and Scholar indexing. A second server mainly
+  adds visibility to engineers, not a better chance of being indexed.
+
+If you use one of these, follow the same pattern as Zenodo: paste the shared metadata,
+use CC BY 4.0, and add the Zenodo DOI as a related link. Then add the new DOI to the
+Zenodo record as **Is identical to**.
+
+### Original TechRxiv steps
+
 TechRxiv is IEEE's preprint server for engineering and computer science. It runs on the
 Figshare platform. Submissions are screened but not peer-reviewed. Posts get a DOI and
 are indexed by Google Scholar.
@@ -208,7 +239,8 @@ are indexed by Google Scholar.
 
 - [ ] Step 0 pre-flight complete, PDF final
 - [ ] Zenodo published, version DOI recorded: `__________`
-- [ ] TechRxiv approved, DOI recorded: `__________` (optional)
+- [ ] TechRxiv (on hold, submissions closed) or an alternative such as engrXiv, DOI
+      recorded: `__________` (optional)
 - [ ] DOIs added to `README.md`
 - [ ] Scholar profile created, duplicate records merged
 - [ ] Semantic Scholar author page claimed
